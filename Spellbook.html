@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow of the Demon Lord - Spell Database</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #121212; color: #e0e0e0; margin: 20px; }
+        .controls { background: #1e1e1e; padding: 20px; border-radius: 8px; margin-bottom: 20px; display: flex; gap: 15px; flex-wrap: wrap; position: sticky; top: 10px; z-index: 100; border: 1px solid #333; }
+        input, select { padding: 10px; border-radius: 4px; border: 1px solid #444; background: #2d2d2d; color: white; min-width: 150px; }
+        
+        .spell-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
+        .spell-card { background: #1e1e1e; border-radius: 6px; padding: 18px; border-top: 4px solid #555; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+        
+        /* Specific coloring for types */
+        .card-attack { border-top-color: #b30000; }
+        .card-utility { border-top-color: #0066cc; }
+        
+        .spell-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+        .spell-name { font-size: 1.25em; font-weight: bold; color: #fff; }
+        .type-tag { font-size: 0.75em; padding: 2px 8px; border-radius: 10px; text-transform: uppercase; background: #333; }
+        
+        .spell-meta { font-size: 0.9em; color: #ffa500; margin-bottom: 12px; font-weight: 600; }
+        .spell-desc { font-size: 0.95em; line-height: 1.5; color: #ccc; }
+    </style>
+</head>
+<body>
+
+    <h1 style="color: #b30000;">Grimoire: Shadow of the Demon Lord</h1>
+
+    <div class="controls">
+        <input type="text" id="searchInput" placeholder="Search names..." onkeyup="filterSpells()">
+        
+        <select id="traditionFilter" onchange="filterSpells()">
+            <option value="All">All Traditions</option>
+            <option value="Air">Air</option>
+            <option value="Battle">Battle</option>
+            <option value="Destruction">Destruction</option>
+            <option value="Divination">Divination</option>
+            <option value="Life">Life</option>
+        </select>
+
+        <select id="rankFilter" onchange="filterSpells()">
+            <option value="All">All Ranks</option>
+            <option value="0">Rank 0</option>
+            <option value="1">Rank 1</option>
+            <option value="2">Rank 2</option>
+            <option value="3">Rank 3</option>
+            <option value="4">Rank 4</option>
+            <option value="5">Rank 5</option>
+        </select>
+
+        <select id="typeFilter" onchange="filterSpells()">
+            <option value="All">All Types</option>
+            <option value="Attack">Attack</option>
+            <option value="Utility">Utility</option>
+        </select>
+    </div>
+
+    <div class="spell-grid" id="spellGrid"></div>
+
+    <script>
+        // DATA ENTRIES
+        // Add your spreadsheet rows here following this exact format.
+        const spells = [
+            { 
+        name: "Stir the Air", 
+        tradition: "Air", 
+        rank: 0, 
+        type: "Utility", 
+        desc: "Creates a light breeze in a 2-yard radius sphere for 1 minute that clears odors and dust, and imposes 1 bane on ranged/thrown attacks against you." 
+    },
+ 
+        ];
+
+        function displaySpells(data) {
+            const grid = document.getElementById('spellGrid');
+            grid.innerHTML = '';
+            
+            data.forEach(spell => {
+                const typeClass = spell.type === "Attack" ? "card-attack" : "card-utility";
+                const card = document.createElement('div');
+                card.className = `spell-card ${typeClass}`;
+                
+                card.innerHTML = `
+                    <div class="spell-header">
+                        <div class="spell-name">${spell.name}</div>
+                        <div class="type-tag">${spell.type}</div>
+                    </div>
+                    <div class="spell-meta">${spell.tradition.toUpperCase()} / RANK ${spell.rank}</div>
+                    <div class="spell-desc">${spell.desc}</div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterSpells() {
+            const search = document.getElementById('searchInput').value.toLowerCase();
+            const trad = document.getElementById('traditionFilter').value;
+            const rank = document.getElementById('rankFilter').value;
+            const type = document.getElementById('typeFilter').value;
+
+            const filtered = spells.filter(s => {
+                const matchesSearch = s.name.toLowerCase().includes(search);
+                const matchesTrad = (trad === "All" || s.tradition === trad);
+                const matchesRank = (rank === "All" || s.rank.toString() === rank);
+                const matchesType = (type === "All" || s.type === type);
+                return matchesSearch && matchesTrad && matchesRank && matchesType;
+            });
+
+            displaySpells(filtered);
+        }
+
+        // Initial render
+        displaySpells(spells);
+    </script>
+</body>
+</html>

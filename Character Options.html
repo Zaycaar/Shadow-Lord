@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SotDL: Character Options Master List</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        :root { --dark: #121212; --card: #1e1e1e; --accent: #9b2226; --text: #e0e0e0; --grey: #888; --positive: #2a9d8f; --negative: #e76f51; }
+        body { font-family: system-ui, -apple-system, sans-serif; background: var(--dark); color: var(--text); margin: 0; padding: 20px; line-height: 1.5; }
+        .container { max-width: 1100px; margin: auto; }
+        header { border-bottom: 2px solid var(--accent); margin-bottom: 20px; padding-bottom: 10px; }
+        
+        /* Updated Controls Layout */
+        .controls { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; background: var(--card); padding: 15px; border-radius: 8px; align-items: center; }
+        input, select { background: #333; color: white; border: 1px solid #444; padding: 10px; border-radius: 4px; }
+        .search-input { flex-grow: 2; }
+        .mode-select { font-weight: bold; border: 2px solid #444; }
+        .mode-in { color: var(--positive); border-color: var(--positive); }
+        .mode-out { color: var(--negative); border-color: var(--negative); }
+
+        table { width: 100%; border-collapse: collapse; background: var(--card); border-radius: 8px; overflow: hidden; }
+        th { background: #2a2a2a; text-align: left; padding: 12px; border-bottom: 2px solid var(--accent); font-size: 0.9rem; }
+        td { padding: 12px; border-bottom: 1px solid #333; vertical-align: top; }
+        tr:hover { background: #252525; }
+        .cat-badge { font-size: 0.7rem; font-weight: bold; padding: 3px 6px; border-radius: 4px; background: var(--accent); color: white; text-transform: uppercase; }
+        .tag-pill { display: inline-block; background: #444; font-size: 0.75rem; padding: 2px 8px; border-radius: 12px; margin: 2px; color: #ccc; }
+        .source-text { font-size: 0.85rem; color: var(--grey); white-space: nowrap; }
+    </style>
+</head>
+<body>
+
+<div id="app" class="container">
+    <header>
+        <h1>Shadow of the Demon Lord <small style="color:var(--grey); font-weight:normal;">| Compendium</small></h1>
+    </header>
+
+    <div class="controls">
+        <select v-model="filterMode" :class="filterMode === 'IN' ? 'mode-in' : 'mode-out'" class="mode-select">
+            <option value="IN">SHOW TAGS:</option>
+            <option value="OUT">HIDE TAGS:</option>
+        </select>
+
+        <input type="text" v-model="search" placeholder="Type tags here (e.g. Magic, Fire)..." class="search-input">
+        
+        <select v-model="filterCat">
+            <option value="All">All Categories</option>
+            <option v-for="c in categories" :value="c">{{c}}</option>
+        </select>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Name</th>
+                <th>Summary/Tags</th>
+                <th>Source</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="item in filtered" :key="item.name">
+                <td data-label="Category"><span class="cat-badge">{{item.cat}}</span></td>
+                <td data-label="Name"><strong>{{item.name}}</strong></td>
+                <td>
+                    <div style="font-size: 0.9rem;">{{item.desc}}</div>
+                    <div style="margin-top:5px">
+                        <span class="tag-pill" v-for="t in item.tags">{{t}}</span>
+                    </div>
+                </td>
+                <td class="source-text">{{item.src}} <br> pg. {{item.pg}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+const { createApp } = Vue
+createApp({
+    data() {
+        return {
+            search: '',
+            filterCat: 'All',
+            filterMode: 'IN', // Default to showing results
+            categories: ['Background', 'Ancestry', 'Novice Path', 'Expert Path', 'Master Path', 'Science', 'Roguery Talent', 'Applied Ancestry', 'Religion'],
+            database: [
+    { cat: 'Background', name: 'Ancestry', desc: 'See your ancestry\'s associated table.', tags: ['Reference'], src: 'Various', pg: 'N/A' },
+{ cat: 'Ancestry', name: 'Human', desc: 'Determined and versatile.', tags: ['Common', 'Mortal'], src: 'Core', pg: 12 },
+{ cat: 'Ancestry', name: 'Changeling', desc: 'Faerie creations who mimic mortals.', tags: ['Common', 'Faerie'], src: 'Core', pg: 13 },
+{ cat: 'Ancestry', name: 'Clockwork', desc: 'Mechanical bodies with trapped souls. Options in Path of Iron.', tags: ['Common'], src: 'Core', pg: 15 },
+{ cat: 'Ancestry', name: 'Dwarf', desc: 'Short, Stocky, and gruff. From underground.', tags: ['Common', 'Mortal'], src: 'Core', pg: 15 },
+{ cat: 'Ancestry', name: 'Goblin', desc: 'Small and bizarre exiled faeries.', tags: ['Common', 'Faerie'], src: 'Core', pg: 15 },
+{ cat: 'Ancestry', name: 'Orc', desc: 'Grotesque creations. Slaves born to kill.', tags: ['Common'], src: 'Core', pg: 15 },
+{ cat: 'Ancestry', name: 'Faun', desc: 'Human-Faerie hybrids with goat-like features.', tags: ['Faerie', 'Mortal', 'Common'], src: 'Companion 1', pg: 5 },
+{ cat: 'Ancestry', name: 'Halfling', desc: 'Small, nimble folk known for their incredible luck and simple lives.', tags: ['Mortal', 'Common'], src: 'Companion 1', pg: 7 },
+{ cat: 'Novice Path', name: 'Magician', desc: 'Learned practitioners of the arcane.', tags: ['Magic', 'Versatile'], src: 'Pursuit of Power', pg: 5 },
+{ cat: 'Novice Path', name: 'Priest', desc: 'Religious spellcaster. Bless and Heal.', tags: ['Magic', 'Support', 'Religious'], src: 'Called to Serve', pg: 3 },
+{ cat: 'Novice Path', name: 'Rogue', desc: 'Cunning, adaptable trickster. Can customize with Roguish Talents.', tags: ['Combat', 'Versatile', 'Social'], src: 'Natural Born Scoundrels', pg: 5 },
+{ cat: 'Novice Path', name: 'Warrior', desc: 'Skilled weapon user.', tags: ['Weapon'], src: 'Core', pg: 58 },
+{ cat: 'Expert Path', name: 'Artificer', desc: 'Craft items and equipment. Imbue them with magic.', tags: ['Magic', 'Tech', 'Minion'], src: 'Core', pg: 61 },
+{ cat: 'Expert Path', name: 'Assassin', desc: 'Sneak, hide, disguise, poison. Chance to instant kill.', tags: ['Combat', 'Stealth'], src: 'Core', pg: 62 },
+{ cat: 'Expert Path', name: 'Berserker', desc: 'Enter berserk state. Uncontrolled aggression.', tags: ['Combat', 'Weapon'], src: 'Core', pg: 63 },
+{ cat: 'Expert Path', name: 'Cleric', desc: 'Attack with spells. Bonus healing.', tags: ['Magic', 'Support', 'Religious'], src: 'Core', pg: 64 },
+{ cat: 'Expert Path', name: 'Druid', desc: 'Nature mage. Traverse the wilds.', tags: ['Magic', 'Nature'], src: 'Core', pg: 65 },
+{ cat: 'Expert Path', name: 'Fighter', desc: 'Specialize into fighting stlyes. Enhanced survivability', tags: ['Combat', 'Weapon'], src: 'Core', pg: 66 },
+{ cat: 'Expert Path', name: 'Oracle', desc: 'Host of supernatural entity. Magical trance state.', tags: ['Magic', 'Religious'], src: 'Core', pg: 67 },
+{ cat: 'Expert Path', name: 'Paladin', desc: 'Holy warrior. Use spells for damage, healing, and defense.', tags: ['Magic', 'Religious', 'Weapon'], src: 'Core', pg: 68 },
+{ cat: 'Expert Path', name: 'Ranger', desc: 'Nature Expert. Mark target, hunt and track', tags: ['Nature'], src: 'Core', pg: 69 },
+{ cat: 'Expert Path', name: 'Scout', desc: 'Hide and sneak. Mark target for allies.', tags: ['Stealth', 'Support'], src: 'Core', pg: 70  },
+{ cat: 'Expert Path', name: 'Sorcerer', desc: 'Take on physical strain to enhance spells.', tags: ['Magic'], src: 'Core', pg: 71  },
+{ cat: 'Expert Path', name: 'Spellbinder', desc: 'Empower weapons with magic.', tags: ['Magic', 'Weapon', 'Combat'], src: 'Core', pg: 72 },
+{ cat: 'Expert Path', name: 'Thief', desc: 'Break in, evade, hide, escape.', tags: ['Stealth'], src: 'Core', pg: 73 },
+{ cat: 'Expert Path', name: 'Warlock', desc: 'Steal spell and turn invisible.', tags: ['Stealth', 'Magic'], src: 'Core', pg: 74 },
+{ cat: 'Expert Path', name: 'Witch', desc: 'Middle Path Witchcraft. Able to help and harm. Flying broom.', tags: ['Magic', 'Support'], src: 'Core', pg: 75 },
+{ cat: 'Expert Path', name: 'Wizard', desc: 'Gain grimnoires to hold extra spells. Magic Expert.', tags: ['Magic'], src: 'Core', pg: 76 },
+{ cat: 'Expert Path', name: 'Elementalist', desc: 'Elemental spell caster. Switch stances to harness the elements.', tags: ['Magic', 'Combat'], src: 'Companion 1', pg: 11 },
+{ cat: 'Expert Path', name: 'Mountebank', desc: 'Charletan and trickster. ', tags: ['Social'], src: 'Companion 1', pg: 12 },
+{ cat: 'Expert Path', name: 'Mystic', desc: 'Unarmed spiritual warrior. Harness Qi for attack and defense.', tags: ['Unarmed', 'Combat'], src: 'Companion 1', pg: 13 },
+{ cat: 'Expert Path', name: 'Psychic', desc: 'Psychic spell caster. Use mental power to cast spells.', tags: ['Magic', 'Psychic'], src: 'Companion 1', pg: 14 },
+{ cat: 'Expert Path', name: 'Sage', desc: 'Wise and knowledgeable. Decipher and uncover secrets.', tags: ['Knowledge'], src: 'Companion 1', pg: 15 },
+{ cat: 'Expert Path', name: 'Shaman', desc: 'Bound spirit to extend spells and scout.', tags: ['Magic', 'Spiritualism'], src: 'Companion 1', pg: 16 },
+{ cat: 'Expert Path', name: 'Swashbuckler', desc: 'Mobile and agile warrior.', tags: ['Weapon', 'Combat'], src: 'Companion 1', pg: 17 },
+{ cat: 'Expert Path', name: 'Warden', desc: 'Guardian of nature. Unique nature combat magic.', tags: ['Magic','Nature', 'Weapon', 'Combat'], src: 'Companion 1', pg: 18 },
+{ cat: 'Master Path', name: 'Alchemist', desc: 'Alchemy. Homunculus minion. Better alchemy attacks.', tags: ['Magic', 'Minion'], src: 'Companion 1', pg: 80 },
+{ cat: 'Master Path', name: 'Blackguard', desc: 'Frightening, soul-stealing warrior.', tags: ['Evil', 'Weapon', 'Combat'], src: 'Companion 1', pg: 19 },
+{ cat: 'Master Path', name: 'Corsair', desc: 'Agile warrior. Better combat maneuvers', tags: ['Weapon', 'Combat'], src: 'Companion 1', pg: 19 },
+{ cat: 'Master Path', name: 'Demonologist', desc: 'Demon dwells within. Better demon summoning.', tags: ['Evil', 'Magic', 'Minion', 'Demonology'], src: 'Companion 1', pg: 20 },
+{ cat: 'Master Path', name: 'Entropist', desc: 'Death magic.', tags: ['Magic', 'Death'], src: 'Companion 1', pg: 20 },
+{ cat: 'Master Path', name: 'Martial Artist', desc: 'Unarmed master. Learn special martial arts attacks.', tags: ['Unarmed', 'Combat'], src: 'Companion 1', pg: 21 },
+{ cat: 'Master Path', name: 'Medium', desc: 'Spiritualism. Spirits give secrets to aid you.', tags: ['Magic', 'Spiritualism'], src: 'Companion 1', pg: 21 },
+{ cat: 'Master Path', name: 'Telepath', desc: 'Telepathy. Invade the mind.', tags: ['Psychic', 'Magic', 'Telepathy'], src: 'Companion 1', pg: 22 },
+{ cat: 'Master Path', name: 'Psychokinetic', desc: 'Telekinesis. Psychic shield.', tags: ['Magic', 'Psychic', 'Telekinesis'], src: 'Companion 1', pg: 22 },
+{ cat: 'Master Path', name: 'Reaver', desc: 'Fearless and savage warrior.', tags: ['Weapon', 'Unarmed', 'Combat'], src: 'Companion 1', pg: 23 },
+{ cat: 'Master Path', name: 'Sapper', desc: 'Make and throw grenades.', tags: ['Tech', 'Combat'], src: 'Companion 1', pg: 23 },
+{ cat: 'Master Path', name: 'Seeker', desc: 'Psychic magic. Mental focus.', tags: ['Magic', 'Psychic'], src: 'Companion 1', pg: 23 },
+{ cat: 'Background', name: 'Hidden Kingdom', desc: 'Non-fairy from the faerie lands.', tags: ['Reference'], src: 'Terrible Beauty', pg: '6' },
+{ cat: 'Ancestry', name: 'Elf', desc: 'True faeries. Strong presence and magic resistance.', tags: ['Faerie'], src: 'Terrible Beauty', pg: 7 },
+{ cat: 'Ancestry', name: 'Hobgoblin', desc: 'Clone soldiers and servant. Prone to frenzy.', tags: ['Faerie'], src: 'Terrible Beauty', pg: 9 },
+{ cat: 'Ancestry', name: 'Pixie', desc: 'Small mischevious winged faeries. Invisible.', tags: ['Faerie'], src: 'Terrible Beauty', pg: 11 },
+{ cat: 'Expert Path', name: 'Avowed', desc: 'Servant of a Great Fey. ', tags: ['Magic', 'Faerie', 'Fey'], src: 'Terrible Beauty', pg: 13 },
+{ cat: 'Master Path', name: 'Beguiler', desc: 'Fey magic. Charm and manipulate.', tags: ['Magic', 'Social', 'Faerie', 'Fey'], src: 'Terrible Beauty', pg: 14 },
+{ cat: 'Master Path', name: 'Cait Sith', desc: 'Tranform into a black cat to spread curse.', tags: ['Faerie', 'Transform'], src: 'Terrible Beauty', pg: 15 },
+{ cat: 'Master Path', name: 'Enternal Guardian', desc: 'Faerie bodyguard. Teleport to your ward.', tags: ['Faerie', 'Weapon', 'Combat'], src: 'Terrible Beauty', pg: 15 },
+{ cat: 'Master Path', name: 'Harbinger', desc: 'Teleport strike, teleport dodge.', tags: ['Faerie', 'Weapon', 'Combat'], src: 'Terrible Beauty', pg: 15 },
+{ cat: 'Master Path', name: 'Keeper of the Flame', desc: 'Fire magic. Control fire. Unique spell.', tags: ['Faerie', 'Magic', 'Fire'], src: 'Terrible Beauty', pg: 16 },
+{ cat: 'Master Path', name: 'Morrigan', desc: 'Spread fear and doom with two crows.', tags: ['Faerie', 'Minion'], src: 'Terrible Beauty', pg: 16 },
+{ cat: 'Master Path', name: 'Muse', desc: 'Inspire allies.', tags: ['Faerie', 'Magic'], src: 'Terrible Beauty', pg: 17 },
+{ cat: 'Master Path', name: 'Nightstalker', desc: 'Move silently, hide in shadows. Perfect stealth.', tags: ['Faerie', 'Stealth'], src: 'Terrible Beauty', pg: 17 },
+{ cat: 'Master Path', name: 'Spellweaver', desc: 'Craft magical ammunition. Bind spells to bullets and arrows.', tags: ['Magic'], src: 'Terrible Beauty', pg: 18 },
+{ cat: 'Master Path', name: 'Troll hunter', desc: 'Maneuver around and fight large opponents.', tags: ['Faerie', 'Combat'], src: 'Terrible Beauty', pg: 18 },
+{ cat: 'Roguery Talent', name: 'Leech', desc: 'Medic. Heal afflictions.', tags: ['Support'], src: 'Paths of Science', pg: 2 },
+{ cat: 'Roguery Talent', name: 'Chemist', desc: 'Make useful drugs.', tags: ['Support'], src: 'Paths of Science', pg: 2 },
+{ cat: 'Roguery Talent', name: 'Toxicologist', desc: 'Poison your weapons.', tags: ['weapon'], src: 'Paths of Science', pg: 2 },
+{ cat: 'Expert Path', name: 'Biologist', desc: 'Nature expert. Command Nature Friends.', tags: ['Minion', 'Combat'], src: 'Paths of Science', pg: 3 },
+{ cat: 'Expert Path', name: 'Gunsmith', desc: 'Build a custom rifle. Craft ammunition', tags: ['weapon', 'Tech', 'Combat'], src: 'Paths of Science', pg: 4 },
+{ cat: 'Expert Path', name: 'Maker of Monsters', desc: 'Craft and customize your monster in your laboratory.', tags: ['Minion', 'Combat'], src: 'Paths of Science', pg: 5 },
+{ cat: 'Expert Path', name: 'Plague Doctor', desc: 'Heal and fight with advanced medicine.', tags: ['Support', 'Weapon', 'Combat'], src: 'Paths of Science', pg: 6 },
+{ cat: 'Master Path', name: 'Reanimator', desc: 'Make zombies with the power of science.', tags: ['Evil', 'Minion'], src: 'Paths of Science', pg: 6 },
+{ cat: 'Novice Path', name: 'Scientist', desc: 'Apply knowledge and science. Customize with sciences.', tags: ['Support'], src: 'Scientific Method', pg: 2 },
+{ cat: 'Science', name: 'Botany', desc: 'Defoliant, Fertilizer, Herbal Concoctions', tags: ['Nature', 'Support'], src: 'Scientific Method', pg: 2 },
+{ cat: 'Science', name: 'Chemistry', desc: 'Corrosives and Poisons, Explosives, Pharmaceuticals.', tags: ['Tech', 'Poison', 'Support'], src: 'Scientific Method', pg: 4 },
+{ cat: 'Science', name: 'Entomology', desc: 'Command and grow insects. Spray poison', tags: ['Minion'], src: 'Scientific Method', pg: 5 },
+{ cat: 'Science', name: 'Geology', desc: 'Robot to dig, bulldoze, and cause tremors.', tags: ['Minion'], src: 'Scientific Method', pg: 5 },
+{ cat: 'Science', name: 'Metaphysics', desc: 'Gravity, lightning, portals', tags: ['Tech'], src: 'Scientific Method', pg: 6 },
+{ cat: 'Science', name: 'Physiology', desc: 'Analyze creature, apply make-up, medical.', tags: ['Support'], src: 'Scientific Method', pg: 7 },
+{ cat: 'Science', name: 'Psychology', desc: 'Heal the mind. Overcome Fear.', tags: ['Support'], src: 'Scientific Method', pg: 8 },
+{ cat: 'Science', name: 'Technology', desc: 'Craft items, gun, Robot minion.', tags: ['Tech', 'Weapon', 'Minion'], src: 'Scientific Method', pg: 8 },
+{ cat: 'Science', name: 'Zoology', desc: 'Tame and augment animals.', tags: ['Minion'], src: 'Scientific Method', pg: 8 },
+{ cat: 'Ancestry', name: 'Molekin', desc: 'Small clawed tunnelers. Might makes right. ', tags: ['Exotic, Mortal'], src: 'Companion 2', pg: 9 },
+{ cat: 'Ancestry', name: 'Naga', desc: 'Serpentine Humanoids. Magically inclined.', tags: ['Exotic', 'Mortal'], src: 'Companion 2', pg: 11 },
+{ cat: 'Ancestry', name: 'Yerath', desc: 'Insectoids. Caste based. Extra arms and wings.', tags: ['Exotic'], src: 'Companion 2', pg: 16 },
+{ cat: 'Expert Path', name: 'Auspex', desc: 'Divination. Briefly glimpse the future.', tags: ['Magic', 'Divination'], src: 'Companion 2', pg: 27 },
+{ cat: 'Expert Path', name: 'Silhouette', desc: 'Shadow magic. Assassin and spy.', tags: ['Magic', 'Weapon', 'Shadow', 'Combat'], src: 'Companion 2', pg: 28 },
+{ cat: 'Expert Path', name: 'Wangateur', desc: 'Curse, Life, Spiritualism. Ensare and release spirits.', tags: ['Magic', 'Curse', 'Life', 'Spiritualism'], src: 'Companion 2', pg: 29 },
+{ cat: 'Expert Path', name: 'Wardscribe', desc: 'Rune, Protection. Draw sigils as magical traps.', tags: ['Magic', 'Rune', 'Protection'], src: 'Companion 2', pg: 30 },
+{ cat: 'Master Path', name: 'Cenobite', desc: 'Remember Past lives. Perfected soul.', tags: ['Magic', 'Soul'], src: 'Companion 2', pg: 32 },
+{ cat: 'Master Path', name: 'Fencer', desc: 'Swift weapon master.', tags: ['Weapon', 'Swift', 'Combat'], src: 'Companion 2', pg: 32 },
+{ cat: 'Master Path', name: 'Halberdier', desc: 'Polarm expert. Extra triggered action.', tags: ['Weapon', 'Combat'], src: 'Companion 2', pg: 32 },
+{ cat: 'Master Path', name: 'Invoker', desc: 'Improved ability to use invocation.', tags: ['Magic', 'Invocation'], src: 'Companion 2', pg: 33 },
+{ cat: 'Master Path', name: 'Legalist', desc: 'Perfected body. Immune to poison, disease, and age.', tags: ['Magic', 'Order'], src: 'Companion 2', pg: 33 },
+{ cat: 'Master Path', name: 'Metallurgist', desc: 'Infused with metal.', tags: ['Magic', 'Metal'], src: 'Companion 2', pg: 34 },
+{ cat: 'Master Path', name: 'Sleuth', desc: 'Detective. Focused analysis.', tags: ['Knowledge'], src: 'Companion 2', pg: 34 },
+{ cat: 'Master Path', name: 'Tormentor', desc: 'Bonus against frightened oponents.', tags: ['Social'], src: 'Companion 2', pg: 34 },
+{ cat: 'Applied Ancestry', name: 'Revenant', desc: 'Undead. Heal slowly. Cannot die.', tags: ['Undead'], src: 'Tombs of the Desolation', pg: 5 },
+{ cat: 'Ancestry', name: 'Salamander', desc: 'Fire elementals. Horned and spiked.', tags: ['Elemental'], src: 'Tombs of the Desolation', pg: 7 },
+{ cat: 'Applied Ancestry', name: 'Vampire', desc: 'Thirsty for blood, burned by sunlight.', tags: ['Undead'], src: 'Tombs of the Desolation', pg: 9 },
+{ cat: 'Expert Path', name: 'Prince of Darkness', desc: 'Devolop upon vampire abilities.', tags: ['Undead'], src: 'Tombs of the Desolation', pg: 12 },
+{ cat: 'Master Path', name: 'Blighter', desc: 'Environmental destruction. Drain life and magic from area.', tags: ['Magic', 'Evil'], src: 'Tombs of the Desolation', pg: 13 },
+{ cat: 'Master Path', name: 'Dust Walker', desc: 'Sand and desert mage.', tags: ['Magic', 'Weapon', 'Air', 'Earth', 'Combat'], src: 'Tombs of the Desolation', pg: 14 },
+{ cat: 'Master Path', name: 'Slayer of the Dead', desc: 'Bonuses to fighting undead. Resilient.', tags: ['Combat'], src: 'Tombs of the Desolation', pg: 14 },
+{ cat: 'Expert Path', name: 'Voidblade', desc: 'Transform arm into weapon. Mark target and insta-kill.', tags: ['Evil', 'Weapon', 'Combat', 'Swift'], src: 'Way of the Summoned Blade', pg: 2 },
+{ cat: 'Expert Path', name: 'Voidcursed', desc: 'Choose Dark magic tradition. Use it to empower a summoned weapon.', tags: ['Evil', 'Weapon', 'Combat', 'Magic'], src: 'Way of the Summoned Blade', pg: 2 },
+{ cat: 'Expert Path', name: 'Shadowblade', desc: 'Shadow blades. Fight in darkness.', tags: ['Shadow', 'Weapon', 'Combat', 'Magic', 'Swift'], src: 'Way of the Summoned Blade', pg: 3 },
+{ cat: 'Expert Path', name: 'Celestial Blade', desc: 'Turn sunlight into weapons and shields.', tags: ['Celestial', 'Weapon', 'Combat', 'Magic', 'Heavy'], src: 'Way of the Summoned Blade', pg: 4 },
+{ cat: 'Master Path', name: 'Hexblade', desc: 'Magic weapon. Curse-Mark enemies.', tags: ['Weapon', 'Combat'], src: 'Way of the Summoned Blade', pg: 5 },
+{ cat: 'Master Path', name: 'Soul Sword', desc: 'Magical unarmed strikes. Suicide bomber.', tags: ['Unarmed', 'Combat', 'Soul', 'Magic'], src: 'Way of the Summoned Blade', pg: 6 },
+{ cat: 'Expert Path', name: 'Bulwark', desc: 'Wear custom improved and modified armor.', tags: ['Combat'], src: 'Paths of Iron', pg: 5 },
+{ cat: 'Expert Path', name: 'Reen Scavenger', desc: 'Customizable alien laser gun. Bio-mech integration.', tags: ['Combat', 'Tech'], src: 'Paths of Iron', pg: 6 },
+{ cat: 'Master Path', name: 'Fae Scourge', desc: 'Faerie expert. Infuse magic with iron to fight faeries.', tags: ['Knowledge', 'Combat', 'Magic'], src: 'Paths of Iron', pg: 6 },
+{ cat: 'Master Path', name: 'Forgehammer', desc: 'Apply magical seals to equipment.', tags: ['Rune', 'Magic', 'Weapon', 'Combat'], src: 'Paths of Iron', pg: 7 },
+{ cat: 'Master Path', name: 'Magnet', desc: 'Attract and repel metal objects and cratures.', tags: ['Magic', 'Metal', 'Combat', 'Weapon'], src: 'Paths of Iron', pg: 8 },
+{ cat: 'Master Path', name: 'Thresher', desc: 'Fight with dual flails.', tags: ['Weapon', 'Combat'], src: 'Paths of Iron', pg: 8 },
+{ cat: 'Expert Path', name: 'Combater', desc: 'Store and expend tactical actions.', tags: ['Weapon', 'Combat'], src: 'Paths of Conflict', pg: 2 },
+{ cat: 'Expert Path', name: 'Enlightened Blade', desc: 'Switch stances to match opponent.', tags: ['Weapon', 'Combat'], src: 'Paths of Conflict', pg: 2 },
+{ cat: 'Expert Path', name: 'Man-At-Arms', desc: '', tags: ['Combat', 'Mount'], src: 'Paths of Conflict', pg: 3 },
+{ cat: 'Expert Path', name: 'Marine', desc: 'Close quarters ship fighter.', tags: ['Weapon', 'Combat', 'Unarmed'], src: 'Paths of Conflict', pg: 3 },
+{ cat: 'Expert Path', name: 'Pistoleer', desc: 'Gun fighter. Rapidly shoot several pistols.', tags: ['Tech', 'Weapon', 'Combat'], src: 'Paths of Conflict', pg: 4 },
+{ cat: 'Expert Path', name: 'Slayer', desc: 'Brutal, psychotic warrior.', tags: ['Weapon', 'Combat'], src: 'Paths of Conflict', pg: 4 },
+{ cat: 'Expert Path', name: 'Warmaster', desc: 'Accumulate bonuses over the course of battle.', tags: ['Combat'], src: 'Paths of Conflict', pg: 5 },
+{ cat: 'Expert Path', name: 'Warrior Sage', desc: 'Learn from failures to amplify success.', tags: ['Combat'], src: 'Paths of Conflict', pg: 6 },
+{ cat: 'Roguery Talent', name: 'Academic', desc: 'Gain and use insights to augment rolls.', tags: ['Combat'], src: 'Natural Born Scoundrels', pg: 6 },
+{ cat: 'Roguery Talent', name: 'Adventurer', desc: 'Utilize luck to stay alive.', tags: ['Combat'], src: 'Natural Born Scoundrels', pg: 7 },
+{ cat: 'Roguery Talent', name: 'Dabbler', desc: 'Learn magic.', tags: ['Magic'], src: 'Natural Born Scoundrels', pg: 8 },
+{ cat: 'Roguery Talent', name: 'Darksoul', desc: 'Make a deal with The Devil.', tags: ['Magic', 'Evil'], src: 'Natural Born Scoundrels', pg: 8 },
+{ cat: 'Roguery Talent', name: 'Dogmatist', desc: 'Religious Magic.', tags: ['Magic', 'Religious', 'Support'], src: 'Natural Born Scoundrels', pg: 9 },
+{ cat: 'Roguery Talent', name: 'Factotum', desc: 'Solve problems and help using generalist experience.', tags: ['Support'], src: 'Natural Born Scoundrels', pg: 10 },
+{ cat: 'Roguery Talent', name: 'Inciter', desc: 'Help an ally fight better and hit harder,', tags: ['Support'], src: 'Natural Born Scoundrels', pg: 10 },
+{ cat: 'Roguery Talent', name: 'Killer', desc: 'Damage bonus from trickery.', tags: ['Combat', 'Weapon'], src: 'Natural Born Scoundrels', pg: 10 },
+{ cat: 'Roguery Talent', name: 'Knave', desc: 'Fight dirty. Impair and brutalize.', tags: ['Combat', 'Weapon'], src: 'Natural Born Scoundrels', pg: 11 },
+{ cat: 'Roguery Talent', name: 'Ruffian', desc: 'Threaten violence and make good on them.', tags: ['Social', 'Combat', 'Weapon'], src: 'Natural Born Scoundrels', pg: 11 },
+{ cat: 'Roguery Talent', name: 'Scoundrel', desc: 'Charming rogue.', tags: ['Social'], src: 'Natural Born Scoundrels', pg: 12 },
+{ cat: 'Roguery Talent', name: 'Skirmisher', desc: 'Mobile fighter.', tags: ['Combat'], src: 'Natural Born Scoundrels', pg: 12 },
+{ cat: 'Roguery Talent', name: 'Specialist', desc: 'Specialize into attributes of your choice', tags: ['Combat', 'Social'], src: 'Natural Born Scoundrels', pg: 13 },
+{ cat: 'Roguery Talent', name: 'Trickster', desc: 'Improved melee attack options.', tags: ['Combat'], src: 'Natural Born Scoundrels', pg: 13 },
+{ cat: 'Expert Path', name: 'Commando', desc: 'Aggressive stealth fighter.', tags: ['Combat', 'Weapon', 'Stealth'], src: 'Natural Born Scoundrels', pg: 14 },
+{ cat: 'Expert Path', name: 'Emissary', desc: 'Religious agent. Special prayer grants enhancements.', tags: ['Religious', 'Magic', 'Comabt'], src: 'Natural Born Scoundrels', pg: 15 },
+{ cat: 'Expert Path', name: 'Lawbreaker', desc: 'Frighten and beat down opponents', tags: ['Combat', 'Social'], src: 'Natural Born Scoundrels', pg: 16 },
+{ cat: 'Expert Path', name: 'Mask', desc: 'Disguise with magic. Infiltrate and betray.', tags: ['Magic', 'Social', 'Weapon', 'Combat'], src: 'Natural Born Scoundrels', pg: 17 },
+{ cat: 'Expert Path', name: 'Mastermind', desc: 'Hire agents. Run an organization of spies.', tags: ['Versatile'], src: 'Natural Born Scoundrels', pg: 18 },
+{ cat: 'Expert Path', name: 'Tinker', desc: 'Craft enchanted objects', tags: ['Technomancy', 'Magic'], src: 'Natural Born Scoundrels', pg: 19 },
+{ cat: 'Novice Path', name: 'Priest of the Demon Lord', desc: 'Join demonic cult. Choose cult instead of Religion', tags: ['Evil', 'Religious', 'Magic'], src: 'Hunger in the Void', pg: 37 },
+{ cat: 'Cult', name: 'Brothers of the Eternal Shadow', desc: 'Corrupt aristocracy', tags: ['Demonology', 'Forbidden', 'Shadow', 'Evil'], src: 'Hunger in the Void', pg: 24/37 },
+{ cat: 'Cult', name: 'Knights of the One True God', desc: 'Apocalyptic zealots. Distorted view of the New God', tags: ['Demonology', 'Celestial', 'Fire', 'Evil'], src: 'Hunger in the Void', pg: 26/37 },
+{ cat: 'Cult', name: 'The Mother\'s Children', desc: 'Worship the Mother of Monsters.', tags: ['Demonology', 'Forbidden', 'Chaos', 'Evil'], src: 'Hunger in the Void', pg: 27/37 },
+{ cat: 'Cult', name: 'Nameless', desc: 'Atheists practicing a parody of religion.', tags: ['Demonology', 'Chaos', 'Destruction', 'Evil'], src: 'Hunger in the Void', pg: 29/37 },
+{ cat: 'Cult', name: 'Philosophers of the Glistening Prince', desc: 'Reality is a lie. The senses are a cage. Self-mutilation.', tags: ['Demonology', 'Forbidden', 'Illusion', 'Evil'], src: 'Hunger in the Void', pg: 30/37 },
+{ cat: 'Cult', name: 'Reavers of the Skull King', desc: 'Crazed violent raiders.', tags: ['Demonology', 'Battle', 'Destruction', 'Evil'], src: 'Hunger in the Void', pg: 31/37 },
+{ cat: 'Cult', name: 'Seekers of the Wandering Star', desc: 'Astrologers. Want a comet to destroy the world.', tags: ['Demonology', 'Celestial', 'Fire', 'Evil'], src: 'Hunger in the Void', pg: 33/37 },
+{ cat: 'Cult', name: 'Sisters of the Blue Hand', desc: 'Subversive element. Consume a drug to "see God"', tags: ['Demonology', 'Divination', 'Telepathy', 'Evil'], src: 'Hunger in the Void', pg: 35/37 },
+{ cat: 'Expert Path', name: 'Chronicler', desc: 'Tattooed dwarf priest.', tags: ['Battle', 'life', 'Rune','Religious', 'Magic', 'Weapon', 'Combat'], src: 'Called to Serve', pg: 8 },
+{ cat: 'Expert Path', name: 'Crusader', desc: 'Warrior of the New God.', tags: ['Religious', 'Celestial', 'Life', 'Theurgy', 'Magic', 'Support', 'Combat'], src: 'Called to Serve', pg: 10 },
+{ cat: 'Expert Path', name: 'Daughter of the Moon', desc: 'Priestess of the Goddess of Magic.', tags: ['Magic', 'Religious', 'Arcana', 'Celestial', 'Time', 'Combat'], src: 'Called to Serve', pg: 11 },
+{ cat: 'Expert Path', name: 'Guardian', desc: 'Transform into animals. Protector of the Old Faith.', tags: ['Religious', 'Magic', 'Life', 'Nature', 'Primal'], src: 'Called to Serve', pg: 11 },
+{ cat: 'Expert Path', name: 'Holy Matron', desc: 'Wisest of World Mother worshippers.', tags: ['Earth', 'Life', 'Nature', 'Religious', 'Magic', 'Support'], src: 'Called to Serve', pg: 12 },
+{ cat: 'Expert Path', name: 'Horned One', desc: 'Devotee of the Horned King. Animal Friend', tags: ['Stealth', 'Religious', 'Magic', 'Combat', 'Primal', 'Transformation', 'Spiritualism'], src: 'Called to Serve', pg: 14 },
+{ cat: 'Expert Path', name: 'Ice Apostle', desc: 'Servant of Old Man Winter', tags: ['Weapon', 'Combat', 'Magic', 'Religious', 'Water', 'Battle', 'Storm'], src: 'Called to Serve', pg: 15 },
+{ cat: 'Expert Path', name: 'Justiciar', desc: 'Servant of the Seer. Weigh guilt. Pronounce Justice.', tags: ['Magic', 'Religious', 'Curse', 'Divination', 'Telepathy', 'Combat'], src: 'Called to Serve', pg: 16 },
+{ cat: 'Expert Path', name: 'Maleficant', desc: 'Left Path Witch. Control dolls to curse and control enemies.', tags: ['Witchcraft', 'Curse', 'Enchantment', 'Magic'], src: 'Called to Serve', pg: 18 },
+{ cat: 'Expert Path', name: 'Reveler', desc: 'Drunken priest. Inflict drunkeness. Resilient mind.', tags: ['Fey', 'Illusion', 'Enchantment', 'Magic', 'Religious', 'Combat'], src: 'Called to Serve', pg: 19 },
+{ cat: 'Expert Path', name: 'Ruiner', desc: 'Warrior of the Dark Gods. Destructive berserker.', tags: ['Magic', 'Religious', 'Combat', 'Weapon', 'Battle', 'Destruction', 'Rune'], src: 'Called to Serve', pg: 20 },
+{ cat: 'Expert Path', name: 'Solemn One', desc: 'Priest of Father Death. Resist death. Figth undead with magic.', tags: ['Magic', 'Religious', 'Death', 'Protection', 'Shadow', 'Combat'], src: 'Called to Serve', pg: 22 },
+{ cat: 'Expert Path', name: 'Summer Child', desc: '', tags: ['Social', 'Combat', 'Religious', 'Magic', 'Combat', 'Fire', 'Enchantment', 'Fey'], src: 'Called to Serve', pg: 23 },
+{ cat: 'Expert Path', name: 'Wisdom', desc: 'Right Path Witch.', tags: ['Witchcraft', 'Divination', 'Life', 'Support', 'Magic', 'Combat'], src: 'Called to Serve', pg: 25 },
+{ cat: 'Expert Path', name: 'Cutter', desc: 'Fight with light weapons. Daggers, knives and hatchets.', tags: ['Weapon', 'Combat', 'Dual-weapon'], src: 'Paths of Purpose', pg: 2 },
+{ cat: 'Expert Path', name: 'Doomseeker', desc: 'Cursed to complete an impossible quest. Empowered by fate.', tags: ['Combat'], src: 'Paths of Purpose', pg: 2 },
+{ cat: 'Expert Path', name: 'Exalted', desc: 'Chosen One of a god. Preach the good word. Invoke miracles.', tags: ['Religious', 'Magic', 'Combat', 'Support'], src: 'Paths of Purpose', pg: 3 },
+{ cat: 'Expert Path', name: 'Fractured', desc: 'Mental flexibility through trauma.', tags: ['Weapon', 'Combat'], src: 'Paths of Purpose', pg: 4 },
+{ cat: 'Expert Path', name: 'Highlander', desc: 'Heavy weapon fighter.', tags: ['Weapon', 'Combat', 'Heavy'], src: 'Paths of Purpose', pg: 4 },
+{ cat: 'Expert Path', name: 'Magnate', desc: 'Wealthy investor. Money is your power.', tags: ['Minion', 'Combat'], src: 'Paths of Purpose', pg: 5 },
+{ cat: 'Expert Path', name: 'Nomad', desc: 'Fast and elusive warrior. Hit and run.', tags: ['Combat'], src: 'Paths of Purpose', pg: 6 },
+{ cat: 'Expert Path', name: 'Outlander', desc: 'Survival expert. Hermit warrior.', tags: ['Weapon', 'Nature', 'combat'], src: 'Paths of Purpose', pg: 7 },
+{ cat: 'Expert Path', name: 'Philosopher', desc: 'Persuasive speech. Powerful intellect', tags: ['Knowledge', 'Social', 'Support'], src: 'Paths of Purpose', pg: 8 },
+{ cat: 'Novice Path', name: 'Armiger', desc: 'Fight from horseback. Free warhorse. Lance, Sword, Shield.', tags: ['Weapon', 'Combat', 'Mount'], src: 'Bred for Battle', pg: 3 },
+{ cat: 'Novice Path', name: 'Barbarian', desc: 'Basic weapons. Boosted defense from light armor or no.', tags: ['Weapon', 'Combat'], src: 'Bred for Battle', pg: 4 },
+{ cat: 'Novice Path', name: 'Brawler', desc: 'Vicious fighter. Extra damage.', tags: ['Weapon', 'Combat', 'Finesse'], src: 'Bred for Battle', pg: 6 },
+{ cat: 'Novice Path', name: 'Enforcer', desc: 'Afflict and frighten enemies. Finesse weapons.', tags: ['Weapon', 'Combat', 'Social', 'Finesse'], src: 'Bred for Battle', pg: 7 },
+{ cat: 'Novice Path', name: 'Gallant', desc: 'Agile warrior. Light armor. Move and attack.', tags: ['Weapon', 'Combat', 'Finesse'], src: 'Bred for Battle', pg: 9 },
+{ cat: 'Novice Path', name: 'Hunter', desc: 'Ranged and light weapons. Nimble. Bleed enemies.', tags: ['Weapon', 'Combat', 'Stealth', 'Ranged'], src: 'Bred for Battle', pg: 10 },
+{ cat: 'Novice Path', name: 'Monk', desc: 'Unarmed fighter. Martial arts. Stunning strike.', tags: ['Unarmed', 'Combat'], src: 'Bred for Battle', pg: 12 },
+{ cat: 'Novice Path', name: 'Soldier', desc: 'Heal, motivate, and defend allies. ', tags: ['Weapon', 'Combat', 'Support'], src: 'Bred for Battle', pg: 13 },
+{ cat: 'Novice Path', name: 'Spellguard', desc: 'Combine magic with armed combat.', tags: ['Weapon', 'Combat', 'Magic'], src: 'Bred for Battle', pg: 14 },
+{ cat: 'Novice Path', name: 'Veteran', desc: 'Good fighter, well equiped.', tags: ['Weapon', 'Combat'], src: 'Bred for Battle', pg: 16 },
+{ cat: 'Applied Ancestry', name: 'Skinchanger', desc: 'Cursed to become animal on full moon. Learn to control it.', tags: ['Mortal, Exotic'], src: 'Tooth and Claw', pg: 3 },
+{ cat: 'Master Path', name: 'Greater Skinchanger', desc: 'Master the curse. Full control.', tags: ['Combat'], src: 'Tooth and Claw', pg: 5 },
+{ cat: 'Master Path', name: 'Exalted Gardener', desc: 'Implant seed into foes. Death becomes plants.', tags: ['Weapon', 'Magic', 'Nature', 'Combat'], src: 'Scions of Nature', pg: 11 },
+{ cat: 'Master Path', name: 'Dread Forester', desc: 'Produce trees. The forest is your weapon.', tags: ['Magic', 'Nature', 'Combat'], src: 'Scions of Nature', pg: 11 },
+{ cat: 'Master Path', name: 'Shambler', desc: 'Transform into tree monster. Overgrowth.', tags: ['Weapon', 'Magic', 'Nature', 'Combat'], src: 'Scions of Nature', pg: 12 },
+{ cat: 'Master Path', name: 'Disciple of Old Man Cat', desc: 'Supernatural feline powers. Nine lives.', tags: ['Magic'], src: 'In Plain Sight', pg: 13 },
+{ cat: 'Master Path', name: 'Razor Claw', desc: 'Claw fighter. Cut through stone and steel.', tags: ['Combat', 'Unarmed'], src: 'In Plain Sight', pg: 13 },
+{ cat: 'Ancestry', name: 'Ferren', desc: 'Cats who become human, or humans who become cats?', tags: ['Mortal', 'Exotic'], src: 'In Plain Sight', pg: 5 },
+{ cat: 'Ancestry', name: 'Hamadryad', desc: 'Humanoid tree-folk. Aligned with World Mother.', tags : ['Exotic'], src: 'Scions of Nature', pg: 3 },
+{ cat: 'Ancestry', name: 'Sylph', desc: 'Air Elemental. Become the wind and fly.', tags: ['Elemental'], src: 'Heaven\'s Sent', pg: 4 },
+{ cat: 'Master Path', name: 'Raven Rider', desc: 'Fly upon a giant raven.', tags: ['Combat', 'Mount'], src: 'Heaven\'s Sent', pg: 11 },
+{ cat: 'Master Path', name: 'Zephyr', desc: 'Become the wind.', tags: ['Air', 'Magic'], src: 'Heaven\'s Sent', pg: 12 },
+{ cat: 'Applied Ancestry', name: 'Ghoul', desc: 'Disfigured horrific cannibal.', tags: ['Powerful', 'Magic', 'Weapon'], src: 'Flesh of the Fallen', pg: 2 },
+{ cat: 'Expert Path', name: 'Consumer', desc: 'Resist ghoul curse. Eat flesh and organs for power.', tags: ['Magic', 'Social'], src: 'Flesh of the Fallen', pg: 3 },
+{ cat: 'Expert Path', name: 'Collector', desc: 'Empowered by harvested trophies.', tags: ['Weapon', 'Unarmed', 'Combat'], src: 'Flesh of the Fallen', pg: 4 },
+{ cat: 'Expert Path', name: 'Bloodletter', desc: 'Bloodlust. Endure and kill.', tags: ['Combat', 'Weapon'], src: 'Soldiers of Fortune', pg: 2 },
+{ cat: 'Expert Path', name: 'Commander', desc: 'Make battle plans. Guide allies.', tags: ['Support'], src: 'Soldiers of Fortune', pg: 2 },
+{ cat: 'Expert Path', name: 'Targeter', desc: 'Skilled archer. Arrow Stab.', tags: ['Weapon', 'Combat', 'Ranged'], src: 'Soldiers of Fortune', pg: 3 },
+           ]
+        }
+    },
+    computed: {
+        filtered() {
+            return this.database.filter(i => {
+                const s = this.search.toLowerCase().trim();
+                const matchCat = this.filterCat === 'All' || i.cat === this.filterCat;
+                
+                // If search is empty, just filter by Category
+                if (!s) return matchCat;
+
+                // Check if any tag or name matches the search
+                const hasMatch = i.name.toLowerCase().includes(s) || 
+                                i.tags.some(t => t.toLowerCase().includes(s)) ||
+                                i.src.toLowerCase().includes(s);
+
+                // LOGIC: If Mode is IN, return items that have the match.
+                // If Mode is OUT, return items that DO NOT have the match.
+                const matchSearch = this.filterMode === 'IN' ? hasMatch : !hasMatch;
+
+                return matchSearch && matchCat;
+            }).sort((a, b) => a.name.localeCompare(b.name));
+        }
+    }
+}).mount('#app')
+</script>
+
+</body>
+</html>
