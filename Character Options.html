@@ -82,7 +82,7 @@ createApp({
             search: '',
             filterCat: 'All',
             filterMode: 'IN', // Default to showing results
-            categories: ['Background', 'Ancestry', 'Novice Path', 'Expert Path', 'Master Path', 'Science', 'Roguery Talent', 'Applied Ancestry', 'Religion'],
+            categories: ['Background', 'Ancestry', 'Novice Path', 'Expert Path', 'Master Path', 'Science', 'Roguery Talent', 'Applied Ancestry', 'Religion', 'Power Source'],
             database: [
     { cat: 'Background', name: 'Ancestry', desc: 'See your ancestry\'s associated table.', tags: ['Reference'], src: 'Various', pg: 'N/A' },
 { cat: 'Ancestry', name: 'Human', desc: 'Determined and versatile.', tags: ['Common', 'Mortal'], src: 'Core', pg: 12 },
@@ -302,6 +302,18 @@ createApp({
 { cat: 'Expert Path', name: 'Corpse Caller', desc: 'Necromancer. Undead minions.', tags: ['Necromancy', 'Minion', 'Magic', 'Combat'], src: 'Kingdom of Skulls', pg: 25 },
 { cat: 'Expert Path', name: 'Harrower', desc: 'Dark magic user. Empowered my darkness.', tags: ['Magic', 'Combat'], src: 'Kingdom of Skulls', pg: 26 },
 { cat: 'Expert Path', name: 'Silencer', desc: 'Magical assassin.', tags: ['Magic', 'Weapon', 'Combat', 'Shadow', 'Death'], src: 'Kingdom of Skulls', pg: 26 },
+{ cat: 'Novice Path', name: 'Adept', desc: 'Magical power from within or a deal. Choose Power Source', tags: ['Magic', 'Combat'], src: 'Path of the Adept', pg: 2 },
+{ cat: 'Power Source', name: 'Celstial Madness', desc: 'Light and darkness from outer space.', tags: ['Celestial', 'Support'], src: 'Path of the Adept', pg: 3 },
+{ cat: 'Power Source', name: 'Demonic Influence', desc: 'Demonic hunger and darkness.', tags: ['Demonology', 'Combat'], src: 'Path of the Adept', pg: 3 },
+{ cat: 'Power Source', name: 'Devilish Pact', desc: 'Hellfire. Favor from hell.', tags: ['Curse', 'Evil', 'Combat'], src: 'Path of the Adept', pg: 4 },
+{ cat: 'Power Source', name: 'Divine Decree', desc: 'Divine protection, weapon, and form.', tags: ['Weapon', 'Combat'], src: 'Path of the Adept', pg: 4 },
+{ cat: 'Power Source', name: 'Elemental Mark', desc: 'Free elemental spells.', tags: ['Air', 'Water', 'Fire', 'Earth', 'Combat', 'Weapon'], src: 'Path of the Adept', pg: 5 },
+{ cat: 'Power Source', name: 'Faerie Pledge', desc: 'Teleport, turn invisible. Mind control.', tags: ['Fey', 'Social', 'Stealth'], src: 'Path of the Adept', pg: 5 },
+{ cat: 'Power Source', name: 'Magical heritage', desc: 'Flexible magical combatant.', tags: ['Chaos', 'Weapon', 'Combat'], src: 'Path of the Adept', pg: 5 },
+{ cat: 'Power Source', name: 'Nature Chosen', desc: 'Restrain opponents with vines. Rest in nature.', tags: ['Nature'], src: 'Path of the Adept', pg: 6 },
+{ cat: 'Power Source', name: 'Spiritual Possession', desc: 'Use a spirit to act from a distance. Become ghostly.', tags: ['Spiritualism'], src: 'Path of the Adept', pg: 6 },
+{ cat: 'Power Source', name: 'Unspeakable Knowledge', desc: 'Magical madness. Spread insanity.', tags: ['Madness'], src: 'Path of the Adept', pg: 6 },
+                
            ]
         }
     },
