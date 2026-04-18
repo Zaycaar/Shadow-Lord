@@ -71,6 +71,105 @@
         // Add your spreadsheet rows here following this exact format.
       const spells = [
           { 
+        name: "Eavesdrop", 
+        tradition: "Divination", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "A point in space you can see within long range",
+        duration: "Concentration, up to 1 minute",
+        desc: "Choose a point in space you can see within long range. For the duration, you hear as if you were at the chosen point." 
+    },
+    { 
+        name: "Epiphany", 
+        tradition: "Divination", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "Instantaneous",
+        desc: "Triggered: You use a triggered action to cast this spell when you make a challenge roll or an attack roll. You roll the d20 twice and use the higher number on the die." 
+    },
+    { 
+        name: "Augur", 
+        tradition: "Divination", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "Concentration, up to 1 minute",
+        desc: "Requirement: You must use implements of divination such as cards, dice, tea leaves, or notched sticks. While you concentrate, you use your divination tools to gain an insight into the future. At the end of this time, ask the Game Master one question that can be answered “yes” or “no.” The GM must answer the question truthfully." 
+    },
+    { 
+        name: "Foretell", 
+        tradition: "Divination", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "One creature you can see within short range",
+        duration: "Concentration, up to 1 minute",
+        desc: "For the duration, whenever the target makes an attack roll or challenge roll and can hear you, it makes the roll with 3 boons." 
+    },
+    { 
+        name: "Psychometry", 
+        tradition: "Divination", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "One object you can reach",
+        duration: "Instantaneous",
+        desc: "You touch the target and learn 1d6 facts about it, such as the identity of its previous owner; whether or not the object is cursed, possessed, or magical; how a previous owner gained or lost the object; and where it was made." 
+    },
+    { 
+        name: "Reading", 
+        tradition: "Divination", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "Concentration, up to 1 minute",
+        desc: "While you concentrate, you read the target’s palm. At the end of the duration, you reveal hints about the target’s future. The target gains six insights, which it retains for 1 hour or until it expends the last one. When it makes an attack roll or challenge roll, it can expend one insight to make the roll with 2 boons." 
+    },
+    { 
+        name: "Truth Ear", 
+        tradition: "Divination", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 hour",
+        desc: "For the duration, you understand all spoken languages you hear and you recognize the truth when you hear it." 
+    },
+    { 
+        name: "See the Future", 
+        tradition: "Divination", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "For the duration, your movement does not trigger free attacks, you impose 2 banes on attack rolls made against you, and you make Agility challenge rolls with 2 boons to resist attacks and other harmful effects." 
+    },
+    { 
+        name: "Locate", 
+        tradition: "Divination", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 hour; see effect",
+        desc: "You concentrate for 1 minute, during which time you visualize one creature or object. You can visualize a specific thing, such as the goblet from which the monarch last drank, or a general category, such as a trap. When you finish, for the duration you know the location of the creature or object you chose whenever you are within medium range of it. It cannot become hidden from you for the duration. This knowledge also reveals the path you need to take to reach the creature or object. If multiple subjects match the same description, you know the location of each." 
+    },
+    { 
+        name: "Vision", 
+        tradition: "Divination", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 hour; see effect",
+        desc: "For the duration, you enjoy the following benefits: You see into areas obscured by shadows and darkness as if those areas were lit; You see through anything that conceals, disguises, or renders things invisible; You see auras around objects under the effects of magic and you automatically recognize anything created by an Illusion spell for what it is; You see creatures under the effects of Transformation spells as they truly are; You can use an action to focus your sight to see through solid obstacles as long as you concentrate. You can see through 1 yard of wood, 1 foot of stone, or 1 inch of metal." 
+    },
+    { 
+        name: "Clairvoyance", 
+        tradition: "Divination", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "One crystal ball you can reach",
+        duration: "Concentration, up to 1 hour; see effect",
+        desc: "You touch the target and concentrate for 1 minute, during which time you visualize a place you have seen at least once, that fits inside a cube roughly 10 yards on each side, and that is within 1 mile of you. At the end of this time, the crystal ball fills with mist, then clears to reveal the place you visualized. The crystal ball shows the place to everyone that can see it for the duration." 
+    },
+          { 
         name: "Break", 
         tradition: "Destruction", 
         rank: 0, 
