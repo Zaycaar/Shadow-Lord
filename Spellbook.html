@@ -1453,29 +1453,6 @@
     }
 ];
 
-        function displaySpells(data) {
-            const grid = document.getElementById('spellGrid');
-            grid.innerHTML = '';
-            
-            data.forEach(spell => {
-                const typeClass = spell.type === "Attack" ? "card-attack" : "card-utility";
-                const card = document.createElement('div');
-                card.className = `spell-card ${typeClass}`;
-                
-                card.innerHTML = `
-    <div class="spell-header">
-        <div class="spell-name">${spell.name}</div>
-        <div class="type-tag">${spell.type}</div>
-    </div>
-    <div class="spell-meta">${spell.tradition.toUpperCase()} / RANK ${spell.rank}</div>
-    <div class="spell-detail"><strong>Target/Area:</strong> ${spell.targetArea}</div>
-    <div class="spell-detail"><strong>Duration:</strong> ${spell.duration}</div>
-    <hr>
-    <div class="spell-desc">${spell.desc}</div>
-                `;
-                grid.appendChild(card);
-            });
-        }
 function displaySpells(data) {
     const grid = document.getElementById('spellGrid');
     grid.innerHTML = '';
@@ -1527,31 +1504,6 @@ function organizeSpells(spellList) {
         return a.name.localeCompare(b.name);
     });
 }
-
-        // Initial render
-        displaySpells(spells);
-        // Function to sort any tradition by Rank (0-5) then by Name (A-Z)
-function organizeSpells(spellList) {
-    return spellList.sort((a, b) => {
-        // First, compare the ranks
-        if (a.rank !== b.rank) {
-            return a.rank - b.rank;
-        }
-        // If ranks are the same, compare the names alphabetically
-        return a.name.localeCompare(b.name);
-    });
-}
-
-// Apply the sorting to each of your tradition arrays
-organizeSpells(chaosSpells);
-organizeSpells(conjurationSpells);
-organizeSpells(curseSpells);
-organizeSpells(destructionSpells);
-organizeSpells(divinationSpells);
-organizeSpells(earthSpells);
-organizeSpells(enchantmentSpells);
-organizeSpells(fireSpells);
-organizeSpells(forbiddenSpells);
     </script>
 </body>
 </html>
