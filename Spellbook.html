@@ -1476,23 +1476,57 @@
                 grid.appendChild(card);
             });
         }
+function displaySpells(data) {
+    const grid = document.getElementById('spellGrid');
+    grid.innerHTML = '';
+    
+    data.forEach(spell => {
+        const typeClass = spell.type === "Attack" ? "card-attack" : "card-utility";
+        const card = document.createElement('div');
+        card.className = `spell-card ${typeClass}`;
+        
+        card.innerHTML = `
+            <div class="spell-header">
+                <div class="spell-name">${spell.name}</div>
+                <div class="type-tag">${spell.type}</div>
+            </div>
+            <div class="spell-meta">${spell.tradition.toUpperCase()} / RANK ${spell.rank}</div>
+            <div class="spell-detail"><strong>Target/Area:</strong> ${spell.targetArea}</div>
+            <div class="spell-detail"><strong>Duration:</strong> ${spell.duration}</div>
+            <hr>
+            <div class="spell-desc">${spell.desc}</div>
+        `;
+        grid.appendChild(card);
+    });
+}
 
-        function filterSpells() {
-            const search = document.getElementById('searchInput').value.toLowerCase();
-            const trad = document.getElementById('traditionFilter').value;
-            const rank = document.getElementById('rankFilter').value;
-            const type = document.getElementById('typeFilter').value;
+function filterSpells() {
+    const search = document.getElementById('searchInput').value.toLowerCase();
+    const trad = document.getElementById('traditionFilter').value;
+    const rank = document.getElementById('rankFilter').value;
+    const type = document.getElementById('typeFilter').value;
 
-            const filtered = spells.filter(s => {
-                const matchesSearch = s.name.toLowerCase().includes(search);
-                const matchesTrad = (trad === "All" || s.tradition === trad);
-                const matchesRank = (rank === "All" || s.rank.toString() === rank);
-                const matchesType = (type === "All" || s.type === type);
-                return matchesSearch && matchesTrad && matchesRank && matchesType;
-            });
+    const filtered = spells.filter(s => {
+        const matchesSearch = s.name.toLowerCase().includes(search);
+        const matchesTrad = (trad === "All" || s.tradition === trad);
+        const matchesRank = (rank === "All" || s.rank.toString() === rank);
+        const matchesType = (type === "All" || s.type === type);
+        return matchesSearch && matchesTrad && matchesRank && matchesType;
+    });
 
-            displaySpells(filtered);
+    displaySpells(filtered);
+}
+
+// --- SORTING LOGIC ---
+
+function organizeSpells(spellList) {
+    return spellList.sort((a, b) => {
+        if (a.rank !== b.rank) {
+            return a.rank - b.rank;
         }
+        return a.name.localeCompare(b.name);
+    });
+}
 
         // Initial render
         displaySpells(spells);
