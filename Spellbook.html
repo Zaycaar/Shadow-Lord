@@ -171,7 +171,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 hour",
-        desc: "For the duration, you can read and understand any language you can see, and you can understand any spoken language you can hear." 
+        desc: "You touch the target. Provided it knows at least one language, you can communicate with the target for the duration while you maintain physical contact with it, regardless of whether you share any languages." 
     },
     { 
         name: "Distort Appearance", 
@@ -180,7 +180,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 minute",
-        desc: "You ripple and shimmer as your appearance constantly shifts and changes. For the duration, creatures make attack rolls against your Defense or Agility with 1 bane." 
+        desc: "You touch the target, causing it to appear indistinct. For the duration, when the target attempts to hide, it makes the Agility challenge roll with 1 boon and creatures that can see the target and attack its Defense or Agility make their attack rolls with 1 bane.." 
     },
     { 
         name: "Enhance Senses", 
@@ -189,7 +189,7 @@
         type: "Utility", 
         targetArea: "One creature you can reach",
         duration: "1 hour",
-        desc: "You touch the target. For the duration, the target makes Perception challenge rolls with 1 boon. In addition, the target ignores banes imposed by shadows or darkness, and it can see into areas obscured by shadows or darkness as if those areas were lit." 
+        desc: "You touch the target. For the duration, it gains a +5 bonus to Perception and can see in areas obscured by shadows or darkness as if those areas were lit; however, it makes challenge rolls with 1 bane to resist becoming blinded or deafened." 
     },
     { 
         name: "Spider Climb", 
@@ -198,7 +198,7 @@
         type: "Utility", 
         targetArea: "One creature you can reach",
         duration: "1 hour",
-        desc: "You touch the target. For the duration, the target can move across vertical surfaces and along ceilings at its normal Speed, leaving its hands free." 
+        desc: "You touch the target. For the duration, it can move at its Speed across walls, ceilings, and overhangs, and it never needs to make a challenge roll to climb." 
     },
     { 
         name: "Underwater Adaptation", 
@@ -206,8 +206,8 @@
         rank: 1, 
         type: "Utility", 
         targetArea: "One creature you can reach",
-        duration: "8 hours",
-        desc: "You touch the target. For the duration, the target can breathe underwater as easily as it breathes air and it ignores banes imposed by moving and fighting underwater." 
+        duration: "1 hours",
+        desc: "You touch the target. For the duration, it can breathe water as easily as it breathes air, moves at full Speed while swimming, and never needs to make a challenge roll to swim." 
     },
     { 
         name: "Bolster Attribute", 
@@ -216,7 +216,7 @@
         type: "Utility", 
         targetArea: "One creature you can reach",
         duration: "1 minute",
-        desc: "You touch the target and choose one attribute: Strength, Agility, Intellect, or Will. For the duration, the target makes attack rolls and challenge rolls using that attribute with 1 boon." 
+        desc: "You touch the target. Choose Strength, Agility, Intellect, or Will. For the duration, when the target makes an attack roll or challenge roll using the chosen attribute, it makes the roll with  1 boon." 
     },
     { 
         name: "Bolster Defense", 
@@ -225,7 +225,7 @@
         type: "Utility", 
         targetArea: "One creature you can reach",
         duration: "1 minute",
-        desc: "You touch the target. For the duration, the target gains a +2 bonus to Defense." 
+        desc: "You touch the target. For the duration, the target gains a +5 bonus to Health, and attack rolls against the target are made with 1 bane." 
     },
     { 
         name: "Alter Size", 
@@ -234,7 +234,7 @@
         type: "Utility", 
         targetArea: "One creature you can reach",
         duration: "1 minute",
-        desc: "You touch the target. Choose whether you increase or decrease the target’s Size. If you increase it, the target’s Size becomes 2 (if it was less than 2). For the duration, the target makes Strength attack rolls and challenge rolls with 1 boon and its weapon attacks deal 1d6 extra damage. If you decrease it, the target’s Size becomes 1/4 (if it was greater than 1/4). For the duration, the target makes Agility attack rolls and challenge rolls with 1 boon, but its weapon attacks deal 1d6 less damage (minimum 1 damage)." 
+        desc: "You touch the target, which grows or shrinks and remains at its new Size for the duration. Everything the target wears and carries also grows or shrinks to accommodate the new form, though if such an object leaves the target’s possession it immediately returns to its normal size.If the target grows, its Size doubles and it gains a +10 bonus to Health. Its weapon attacks deal 1d6 extra damage if its new Size is 3 or less, or 2d6 extra damage if its new Size is 4 or more. If the space the target occupies is not large enough to accommodate its new Size, the target takes 5d6 damage and the effect ends immediately.If the target shrinks, its Size is halved. It deals half damage with weapon attacks, makes Strength attack rolls and challenge rolls with 1 bane, and makes Agility attack rolls and challenge rolls with 1 boon."
     },
     { 
         name: "Regeneration", 
@@ -243,7 +243,7 @@
         type: "Utility", 
         targetArea: "One creature you can reach",
         duration: "1 minute",
-        desc: "You touch the target. For the duration, the target heals 5 damage at the end of each round." 
+        desc: "You touch the target. At the end of each round for the duration, the target heals damage equal to half its healing rate." 
     },
     { 
         name: "Malleability", 
@@ -252,7 +252,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 minute",
-        desc: "For the duration, your body becomes soft and pliable. You take half damage from bludgeoning weapons. You can move through a space as small as 1 inch wide without squeezing." 
+        desc: "You touch the target. For the duration, it can move at its full Speed across difficult terrain, move through spaces occupied by other creatures regardless of their Size, and move freely through openings at least 1 inch wide. As well, for the duration, the target cannot fall prone and is immune to the grabbed, immobilized, and slowed afflictions." 
     },
     { 
         name: "Awaken Potential", 
@@ -261,7 +261,7 @@
         type: "Utility", 
         targetArea: "One creature you can reach",
         duration: "1 minute",
-        desc: "You touch the target. For the duration, the target makes all attack rolls and challenge rolls with 1 boon and its attacks deal 1d6 extra damage." 
+        desc: "You touch the target. Choose Strength, Agility, Intellect, or Will and roll 1d6. The target gains a bonus to the chosen attribute score equal to the number rolled, up to a maximum score of 20, for the duration. The increase also affects any characteristic associated with the attribute." 
     }
 ];
 
