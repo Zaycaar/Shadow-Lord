@@ -63,16 +63,107 @@
     <script>
         // DATA ENTRIES
         // Add your spreadsheet rows here following this exact format.
-        const spells = [
-            { 
+      const spells = [
+    { 
         name: "Stir the Air", 
         tradition: "Air", 
         rank: 0, 
         type: "Utility", 
-        desc: "Creates a light breeze in a 2-yard radius sphere for 1 minute that clears odors and dust, and imposes 1 bane on ranged/thrown attacks against you." 
+        targetArea: "Sphere with a 2-yard radius centered on a point in your space",
+        duration: "1 minute",
+        desc: "You create a light breeze in the area, which moves with you for the duration. The breeze clears away odors and dust, scatters lightweight objects such as papers, extinguishes candles, and causes larger flames to flicker and dance. Creatures in the area that attack you with thrown or ranged weapons make their attack rolls with 1 bane" 
     },
- 
-        ];
+    { 
+        name: "Wind Blast", 
+        tradition: "Air", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "One creature or object within medium range",
+        duration: "Instantaneous",
+        desc: "A powerful wind assails the target. Make a Will attack roll against the target’s Strength. On a success, the wind moves the target 1d6 yards away from you.Attack Roll 20+ The target falls prone at the end of this movement." 
+    },
+    { 
+        name: "Evoke Gale", 
+        tradition: "Air", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "Cone, 3 yards long, originating from a point in your space",
+        duration: "Instantaneous",
+        desc: "A howling wind disperses vapors, fog, smoke, and gas from the area. Unprotected flames gutter out, and lightweight objects are blown to the nearest edge of the area. Each creature in the area must get a success on a Strength challenge roll or be moved 1d6 yards away from the origin point. Flying creatures make the roll with 1 bane." 
+    },
+    { 
+        name: "Flense", 
+        tradition: "Air", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One creature within medium range",
+        duration: "Instantaneous",
+        desc: "Windborne grit scours your target. Make a Will attack roll against the target’s Strength. On a success, the target takes 2d6 + 3 damage. A living creature that becomes incapacitated by this damage dies instantly, its flesh (if any) stripped from its bones.Attack Roll 20+ The target takes 2d6 extra damage." 
+    },
+    { 
+        name: "Glide", 
+        tradition: "Air", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "One creature within long range",
+        duration: "1 minute",
+        desc: "Triggered You use a triggered action to cast this spell when you see the target fall. For the duration, the target takes no damage from landing after a fall. If it continues to fall after the effect ends, it takes damage based on where it continues falling from." 
+    },
+    { 
+        name: "Still the Air", 
+        tradition: "Air", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "Sphere with a 4-yard radius centered on a point you can reach",
+        duration: "1 hour",
+        desc: "For the duration, no sound emanates from or reaches into the area. Creatures in the area are deafened and are immune to any sound-based attack, such as the thunderclap spell." 
+    },
+    { 
+        name: "Thunderclap", 
+        tradition: "Air", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "Sphere with a 10-yard radius centered on a point within medium range",
+        duration: "Instantaneous",
+        desc: "A wave of thunderous noise spreads out from the center of the area, dealing 1d6 + 1 damage to everything in it. Each creature in the area must make a Strength challenge roll, taking half the damage on a success. On a failure, the creature also becomes deafened for 1 minute." 
+    },
+    { 
+        name: "Bestow Flight", 
+        tradition: "Air", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "1 hour",
+        desc: "You touch the target. It can fly at its normal Speed for the duration." 
+    },
+    { 
+        name: "Fling", 
+        tradition: "Air", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "A line, 20 yards long, 10 yards high, and 2 yards wide originating from a point within long rangee",
+        duration: "Instantaneous",
+        desc: "A powerful blast of wind erupts from the origin point. Each creature in the area must make a Strength challenge roll; Size 1 or smaller creatures make the roll with 1 bane. On a failure, it falls prone and is moved 5d6 yards away from  the origin point. If it encounters a solid surface before  moving the full distance, it and the surface it strikes each  take 1d6 damage plus 1d6 extra damage per 5 yards remaining in this movement (round down)." 
+    },
+    { 
+        name: "Create Cyclone", 
+        tradition: "Air", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "Sphere with a 1-mile radius centered on you",
+        duration: "8 hours",
+        desc: "A powerful whirlwind appears at one end of the area and moves along and through it, dealing 3d6 damage to anything whose space it enters. Each unsecured object damaged in this way is moved 1d6 yards in a direction you choose. Each creature damaged in this way must make a Strength challenge roll. On a failure, it is moved 1d6 yards in a direction you choose and falls prone. On a success, it just takes half the damage." 
+    },
+    { 
+        name: "Bine Wind Genie", 
+        tradition: "Air", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "A cube of air, 2 yards on a side, originating from a point within long range",
+        duration: "1 minute",
+        desc: "At the end of the round in which you cast this spell, the target cube becomes a Size 2 wind genie. You cannot voluntarily end this spell. When the genie appears, make a Will attack roll against its Will. The genie becomes compelled for the duration on a success, or becomes hostile to you on a failure." 
+    },
+];
 
         function displaySpells(data) {
             const grid = document.getElementById('spellGrid');
@@ -84,12 +175,15 @@
                 card.className = `spell-card ${typeClass}`;
                 
                 card.innerHTML = `
-                    <div class="spell-header">
-                        <div class="spell-name">${spell.name}</div>
-                        <div class="type-tag">${spell.type}</div>
-                    </div>
-                    <div class="spell-meta">${spell.tradition.toUpperCase()} / RANK ${spell.rank}</div>
-                    <div class="spell-desc">${spell.desc}</div>
+    <div class="spell-header">
+        <div class="spell-name">${spell.name}</div>
+        <div class="type-tag">${spell.type}</div>
+    </div>
+    <div class="spell-meta">${spell.tradition.toUpperCase()} / RANK ${spell.rank}</div>
+    <div class="spell-detail"><strong>Target/Area:</strong> ${spell.targetArea}</div>
+    <div class="spell-detail"><strong>Duration:</strong> ${spell.duration}</div>
+    <hr>
+    <div class="spell-desc">${spell.desc}</div>
                 `;
                 grid.appendChild(card);
             });
