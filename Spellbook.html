@@ -1496,6 +1496,28 @@
 
         // Initial render
         displaySpells(spells);
+        // Function to sort any tradition by Rank (0-5) then by Name (A-Z)
+function organizeSpells(spellList) {
+    return spellList.sort((a, b) => {
+        // First, compare the ranks
+        if (a.rank !== b.rank) {
+            return a.rank - b.rank;
+        }
+        // If ranks are the same, compare the names alphabetically
+        return a.name.localeCompare(b.name);
+    });
+}
+
+// Apply the sorting to each of your tradition arrays
+organizeSpells(chaosSpells);
+organizeSpells(conjurationSpells);
+organizeSpells(curseSpells);
+organizeSpells(destructionSpells);
+organizeSpells(divinationSpells);
+organizeSpells(earthSpells);
+organizeSpells(enchantmentSpells);
+organizeSpells(fireSpells);
+organizeSpells(forbiddenSpells);
     </script>
 </body>
 </html>
