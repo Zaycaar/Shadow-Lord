@@ -45,6 +45,7 @@
             <option value="Destruction">Destruction</option>
             <option value="Divination">Divination</option>
              <option value="Earth">Earth</option>
+            <option value="Enchantment">Enchantment</option>
             <option value="Life">Life</option>
         </select>
 
@@ -71,6 +72,96 @@
         // DATA ENTRIES
         // Add your spreadsheet rows here following this exact format.
       const spells = [
+          { 
+        name: "Presence", 
+        tradition: "Enchantment", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "For the duration, creatures that are ordinarily attracted to members of your kind make attack rolls against you with 1 bane." 
+    },
+    { 
+        name: "Charm", 
+        tradition: "Enchantment", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One creature within short range that can see you",
+        duration: "1 hour or until damage is taken",
+        desc: "Make an Intellect attack roll against the target’s Will. If you or members of your group attacked the target since you last completed a rest, you make the attack roll with 1 bane. On a success, the target becomes charmed for 1 hour or until it takes any damage. Attack Roll 20+ The target instead becomes charmed for 1d6 hours or until it takes any damage." 
+    },
+    { 
+        name: "Command", 
+        tradition: "Enchantment", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One creature within short range that can hear you",
+        duration: "1 round",
+        desc: "Make an Intellect attack roll against the target’s Will. If the target is charmed, you make the attack roll with 1 boon. On a success, the target becomes compelled for 1 round. Attack Roll 20+ You regain the casting of this spell." 
+    },
+    { 
+        name: "Question", 
+        tradition: "Enchantment", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One creature within short range that can see, hear, and understand you",
+        duration: "Instantaneous",
+        desc: "You ask the target a question and make an Intellect attack roll against its Will. On a success, the target must answer you truthfully and to the best of its knowledge. Attack Roll 20+ The target becomes frightened for 1 round." 
+    },
+    { 
+        name: "Compel", 
+        tradition: "Enchantment", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "One creature within medium range that can see you",
+        duration: "1 minute or until damage is taken",
+        desc: "Make an Intellect attack roll against the target’s Will. If you or members of your group attacked the target since you last completed a rest, you make the attack roll with 1 bane. On a success, the target becomes compelled for 1 minute or until it takes any damage. Attack Roll 20+ The target instead becomes compelled for 1 hour or until it takes any damage." 
+    },
+    { 
+        name: "Mind Bondage", 
+        tradition: "Enchantment", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "One creature within medium range that can see and hear you",
+        duration: "1 minute or until damage is taken",
+        desc: "Make an Intellect attack roll against the target’s Will. If you or members of your group attacked the target since you last completed a rest, you make the attack roll with 1 bane. On a success, the target becomes dazed for 1 minute or until it takes any damage. While the target is dazed in this way, you make attack rolls with 1 boon to interact socially with it. Attack Roll 20+ The target becomes stunned while it is dazed in this way." 
+    },
+    { 
+        name: "Cower", 
+        tradition: "Enchantment", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "One creature within medium range",
+        duration: "1 minute",
+        desc: "Make an Intellect attack roll against the target’s Will. On a success, the target becomes immobilized for 1 minute; while immobilized in this way, it is also frightened. Once per round when the target takes damage, it can make a Will challenge roll, removing this immobilized affliction on a success. Attack Roll 20+ The target also falls prone and cannot stand up while immobilized in this way." 
+    },
+    { 
+        name: "Implant Suggestion", 
+        tradition: "Enchantment", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "One creature within short range that can see and hear you",
+        duration: "Concentration, up to 1 minute; see effect",
+        desc: "Make an Intellect attack roll against the target’s Will. On a success, the target becomes stunned for the duration or until it takes any damage. If you concentrate for the full minute, describe a course of activity that is obviously not suicidal and that can be summarized in a sentence or two. Then describe what triggers the activity. If the suggested activity would be potentially harmful to the target’s self, loved ones, or property, the target can make a Will challenge roll and is not affected on a success. Otherwise, it must perform the described activity if the trigger occurs within 8 hours." 
+    },
+    { 
+        name: "Allure", 
+        tradition: "Enchantment", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "Any number of creatures within short range",
+        duration: "Until you attack it or complete a rest",
+        desc: "Each target must make a Will challenge roll with 1 bane. On a failure, it becomes charmed until you attack it or until you complete a rest. While charmed in this way, the creature becomes impaired if it is beyond short range of you." 
+    },
+    { 
+        name: "Enslave", 
+        tradition: "Enchantment", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "One creature within medium range",
+        duration: "Special",
+        desc: "Make an Intellect attack roll against the target’s Will. If you or members of your group attacked the target since you last completed a rest, you make the attack roll with 1 bane. On a success, the target becomes charmed. The target does not age while charmed in this way. When it takes damage, it can make a Will challenge roll, removing the affliction on a success. While you are within long range of the target, you can use an action to make an Intellect attack against its Will to compel it for 1 minute. Attack Roll 20+ If the total was 20+ and exceeds the target by 5, you make secondary attacks with 2 boons." 
+    },
           { 
         name: "Earth Spike", 
         tradition: "Earth", 
