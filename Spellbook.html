@@ -47,6 +47,7 @@
              <option value="Earth">Earth</option>
             <option value="Enchantment">Enchantment</option>
             <option value="Fire">Fire</option>
+            <option value="Forbidden">Forbidden</option>
             <option value="Life">Life</option>
         </select>
 
@@ -73,6 +74,105 @@
         // DATA ENTRIES
         // Add your spreadsheet rows here following this exact format.
       const spells = [
+          { 
+        name: "Black Tongue", 
+        tradition: "Forbidden", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "For the duration, you make Intellect and Will attack rolls with 1 boon against demons, devils, spirits, and undead." 
+    },
+    { 
+        name: "Harm", 
+        tradition: "Forbidden", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "One creature you can see within short range",
+        duration: "1 minute",
+        desc: "Invisible barbs tear at the target’s body. Make an Intellect attack roll against its Strength. On a success, the target takes a –5 penalty to Health for 1 minute. Attack Roll 20+ The penalty to Health is –10 instead." 
+    },
+    { 
+        name: "Obedience", 
+        tradition: "Forbidden", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One living creature within short range",
+        duration: "1 minute",
+        desc: "You hook the target’s soul. Make an Intellect attack roll against its Will. On a success, for the next 1 minute, the target must choose at the end of each round whether to take 1d6 damage or to become compelled for 1 round." 
+    },
+    { 
+        name: "Hateful Defecation", 
+        tradition: "Forbidden", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One living creature with a physical body within medium range",
+        duration: "Instantaneous",
+        desc: "If the target’s Health is 10 or less, it dies instantly. If higher, make an Intellect attack roll against its Strength. On a success, the target takes 1d6 + 2 damage and becomes dazed for 1 round. If incapacitated by this damage, it dies instantly and explodes. Each creature within 2 yards of the target must make a Will challenge roll or become impaired for 1 round. Attack Roll 20+ The target takes 1d6 extra damage." 
+    },
+    { 
+        name: "Tongue Rip", 
+        tradition: "Forbidden", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One creature capable of speech within short range",
+        duration: "Concentration, up to 1 hour; see effect",
+        desc: "Make an Intellect attack roll against the target’s Will. On a success, your tongue forks and you take over the target’s mouth for as long as you concentrate. You can speak from your mouth or the target’s mouth (within 1 mile). Attack Roll 20+ The effect does not require you to concentrate." 
+    },
+    { 
+        name: "Ravenous Maggots", 
+        tradition: "Forbidden", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "One living creature within medium range",
+        duration: "1 minute",
+        desc: "Maggots fill the target’s belly, dealing 2d6 damage. At the end of each round, the target must make a Strength challenge roll or take 1d6 damage and become impaired. Three successes end the effect. If incapacitated by this damage, the target dies and a cloud of black flies (5-yard radius) heavily obscures the area for 1 minute." 
+    },
+    { 
+        name: "Vision's End", 
+        tradition: "Forbidden", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "One sighted creature within short range",
+        duration: "Concentration, up to 1 minute; see effect",
+        desc: "If Health is 15 or less, target takes 2d6 damage and is blinded as eyes explode. If 15+, make an Intellect attack against Strength (1 bane if Health 30+). Success blinds the target for the duration. Each round, target must make a Strength challenge roll or take 1d6 damage. Three failures make the blindness permanent. Attack Roll 20+ Concentration not required." 
+    },
+    { 
+        name: "Desire's End", 
+        tradition: "Forbidden", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "One living creature within short range",
+        duration: "Instantaneous",
+        desc: "Make an Intellect attack roll against Strength. On a success, the target takes 3d6 damage and is dazed for 1d6 rounds. Attack Roll 20+ The target takes 3d6 extra damage and falls prone; it cannot stand up while dazed." 
+    },
+    { 
+        name: "Part Bone from Flesh", 
+        tradition: "Forbidden", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "One creature that has bones in its body within medium range",
+        duration: "Instantaneous",
+        desc: "Make an Intellect attack roll against Strength. On a success, the target takes 6d6 damage. If incapacitated, it dies instantly and its bones become an animated corpse that attacks the nearest creature. Attack Roll 20+ The target takes 2d6 extra damage." 
+    },
+    { 
+        name: "Soul Exchange", 
+        tradition: "Forbidden", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "Two living mortal creatures within medium range",
+        duration: "Permanent",
+        desc: "Make an Intellect attack roll against each target’s Will. Success dazes the target for 1 minute (Stunned if 20+). Special: If both fail, souls swap bodies permanently. Each gains 1d6 Insanity. Souls retain languages, professions, Intellect, Will, Insanity, Corruption, path talents, and magic." 
+    },
+    { 
+        name: "Horrid Joining", 
+        tradition: "Forbidden", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "Two creatures within short range of each other and medium range of you",
+        duration: "Permanent",
+        desc: "Make an Intellect attack roll against each target’s Strength. Success deals 3d6 damage and impairs for 1 round. Special: If both fail, bodies merge permanently. Merged creature has higher Strength, lower Agility, combined Size, and combined Health (higher + half lower). It gains 2d6 Insanity and the horrifying trait. Each target takes a turn (one fast, one slow)." 
+    },
           { 
         name: "Control Flame", 
         tradition: "Fire", 
