@@ -40,6 +40,7 @@
             <option value="Battle">Battle</option>
              <option value="Celestial">Celestial</option>
             <option value="Chaos">Chaos</option>
+            <option value="Conjuration">Conjuration</option>
             <option value="Destruction">Destruction</option>
             <option value="Divination">Divination</option>
             <option value="Life">Life</option>
@@ -68,6 +69,105 @@
         // DATA ENTRIES
         // Add your spreadsheet rows here following this exact format.
       const spells = [
+          { 
+        name: "Conjure Useful Item", 
+        tradition: "Conjuration", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "A cube of space, 1 yard on a side, originating from a point you can reach",
+        duration: "1 minute",
+        desc: "A Size 1 or smaller object that is neither magical nor worth more than 1 ss appears in the area." 
+    },
+    { 
+        name: "Direct Conjuration", 
+        tradition: "Conjuration", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "One creature within short range created by your casting of a Conjuration spell",
+        duration: "Instantaneous",
+        desc: "You move the target up to half its Speed." 
+    },
+    { 
+        name: "Conjure Feast", 
+        tradition: "Conjuration", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "A cube of space, 2 yards on a side, originating from a point you can reach",
+        duration: "1 hour; see effect",
+        desc: "A sumptuous, wholesome feast appears on horizontal surfaces in the area, enough to sustain up to five creatures for one day. Anything not consumed vanishes when the effect ends." 
+    },
+    { 
+        name: "Conjure Small Monster", 
+        tradition: "Conjuration", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "A cube of space, 1 yard on a side, originating from a point within medium range and resting on a solid surface",
+        duration: "1 minute",
+        desc: "One compelled small monster appears in the area." 
+    },
+    { 
+        name: "Conjure Weapon", 
+        tradition: "Conjuration", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 hour",
+        desc: "A weapon or bundle of ammunition appears in your hand or hands, or at your feet if you don’t have a hand free." 
+    },
+    { 
+        name: "Conjure Steeds", 
+        tradition: "Conjuration", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "A cube, 10 yards on a side, originating from a point within medium range and resting on a solid surface",
+        duration: "2 hours",
+        desc: "A group of 1d6 steeds (as horse) appear in the area. They can have any appearance you choose. The conjured steeds are friendly to you and become compelled by any creature that rides them. Sacrifice: You can expend a casting of this spell to cast conjure small monster." 
+    },
+    { 
+        name: "Conjure Medium Monster", 
+        tradition: "Conjuration", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "A cube of space, 2 yards on a side, originating from a point within medium range and resting on a solid surface",
+        duration: "1 minute",
+        desc: "Either one compelled medium monster or two compelled small monsters appear in the area." 
+    },
+    { 
+        name: "Conjure Large Monster", 
+        tradition: "Conjuration", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "A cube of space, 2 yards on a side, originating from a point within medium range and resting on a solid surface",
+        duration: "1 minute",
+        desc: "Either one compelled large monster or two compelled medium monsters appear in the area." 
+    },
+    { 
+        name: "Conjure Wall", 
+        tradition: "Conjuration", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "A shapeable line, 10 yards long, 5 yards high, and 2 yards wide, originating from a point within long range with any orientation, provided at least two sides rest on solid surfaces",
+        duration: "1 hour; see effect",
+        desc: "A wall made from stone fills the area and remains for the duration or until destroyed. The wall totally covers everything behind it. Each 1-yard cube of wall has Defense 5 and Health 50 and disappears when destroyed." 
+    },
+    { 
+        name: "Conjure Shelter", 
+        tradition: "Conjuration", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "A cube of space, 20 yards on a side, originating from a point within long range and resting on a solid or liquid surface",
+        duration: "12 hours; see effect",
+        desc: "You must concentrate for 1 minute, during which time you visualize a building or island. At the end of this time, the building or island you visualized appears in the area and remains for the duration. If you conjure a building, you make all decisions about what it looks like, such as entrances, windows, and the number of rooms. It includes beds for up to ten people, chairs, tables, enough food and drink to sustain up to ten people, and a hearth complete with a burning fire. If you conjure an island, you provide accommodations for up to ten people as if you had created a building, but in the form of bungalows or huts. Sacrifice: You can expend a casting of this spell to cast conjure large monster." 
+    },
+    { 
+        name: "Conjure Huge Monster", 
+        tradition: "Conjuration", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "A cube of space, 4 yards on a side, originating from a point within medium range and resting on a solid surface",
+        duration: "1 minute",
+        desc: "Either one compelled huge monster or two compelled large monsters appear in the area." 
+    }
           { 
         name: "Chaos Boon", 
         tradition: "Chaos", 
