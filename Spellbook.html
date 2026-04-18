@@ -1494,36 +1494,21 @@ function filterSpells() {
     displaySpells(filtered);
 }
 
-// --- SORTING LOGIC ---
+// --- THE FIX ---
 
-function organizeSpells(spellList) {
-    if (!spellList) return; 
-    
-    return spellList.sort((a, b) => {
-        if (a.rank !== b.rank) {
-            return a.rank - b.rank;
-        }
-        return a.name.localeCompare(b.name);
-    });
-}
-        // 1. Actually run the sorting on your lists
-// Note: If you haven't added Alteration yet, you can remove that line
-if (typeof alterationSpells !== 'undefined') organizeSpells(alterationSpells);
-organizeSpells(chaosSpells);
-organizeSpells(conjurationSpells);
-organizeSpells(curseSpells);
-organizeSpells(destructionSpells);
-organizeSpells(divinationSpells);
-organizeSpells(earthSpells);
-organizeSpells(enchantmentSpells);
-organizeSpells(fireSpells);
-organizeSpells(forbiddenSpells);
+// 1. Sort the master list immediately
+spells.sort((a, b) => {
+    // Sort by Rank first (0, 1, 2...)
+    if (a.rank !== b.rank) {
+        return a.rank - b.rank;
+    }
+    // Then sort by Name alphabetically (A-Z)
+    return a.name.localeCompare(b.name);
+});
 
-// 2. Sort the master spells array
-organizeSpells(spells);
-
-// 3. This line is the "Power Button"—it draws the cards on the screen
+// 2. Initial render - show the sorted list
 displaySpells(spells);
-    </script>
+
+</script>
 </body>
 </html>
