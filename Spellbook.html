@@ -1497,6 +1497,9 @@ function filterSpells() {
 // --- SORTING LOGIC ---
 
 function organizeSpells(spellList) {
+    // We check if the list exists first so it doesn't error out
+    if (!spellList) return; 
+    
     return spellList.sort((a, b) => {
         if (a.rank !== b.rank) {
             return a.rank - b.rank;
