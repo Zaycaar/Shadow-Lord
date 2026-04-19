@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SotDL: Item Master List</title>
+    <title>SotDL: Item and Equipment Index</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <style>
         :root { --dark: #121212; --card: #1e1e1e; --accent: #9b2226; --text: #e0e0e0; --grey: #888; --gold: #daa520; }
@@ -73,12 +73,16 @@ createApp({
         return {
             search: '',
             filterCat: 'All',
-            categories: ['Weapon', 'Armor', 'Gear', 'Potion', 'Relic', 'Enchanted'],
+            categories: ['Weapon', 'Armor'],
             database: [
-                { cat: 'Weapon', rarity: 'Common', name: 'Longsword', desc: '1d6+2 damage. 1 handed.', cost: '2 ss', src: 'Core', pg: 102 },
-                { cat: 'Armor', rarity: 'Common', name: 'Mail', desc: 'Defense 15. Str 11 req.', cost: '5 ss', src: 'Core', pg: 105 },
-                { cat: 'Potion', rarity: 'Uncommon', name: 'Healing Potion', desc: 'Heals damage equal to healing rate.', cost: '1 gc', src: 'Core', pg: 108 },
-                { cat: 'Relic', rarity: 'Rare', name: 'Eye of the Void', desc: 'Cast Darkness 1/day.', cost: '-', src: 'Custom', pg: 0 }
+                { cat: 'Armor', rarity: 'Common', name: 'Clothing', desc: 'Defense: Agi.', cost: 'Varies', src: 'Core', pg: 101 },
+                { cat: 'Armor', rarity: 'Common', name: 'Soft Leather', desc: 'Defense: Agi+1.', cost: '2 SS', src: 'Core', pg: 101 },
+                   { cat: 'Armor', rarity: 'Common', name: 'Hard Leather', desc: 'Defense: Agi+2. Light Armor: Str 11.', cost: '5 SS', src: 'Core', pg: 101 },
+                   { cat: 'Armor', rarity: 'Common', name: 'Brigandine', desc: 'Defense:13. Light Armor: Str 11.', cost: '5 SS', src: 'Core', pg: 101 },
+                   { cat: 'Armor', rarity: 'Uncommon', name: 'Mail', desc: 'Defense:15. Medium Armor: str 13.', cost: '1 GC', src: 'Core', pg: 101 },
+                   { cat: 'Armor', rarity: 'Uncommon', name: 'Scale', desc: 'Defense:16. Medium Armor: str 13.', cost: '2 GC', src: 'Core', pg: 101 },
+                   { cat: 'Armor', rarity: 'Rare', name: 'Plate and Mail', desc: 'Defense:17. Heavy Armor: Str 15.', cost: '5 GC', src: 'Core', pg: 101 },
+                   { cat: 'Armor', rarity: 'Exotic', name: 'Full Plate', desc: 'Defense:18. Heavy Armor: Str 15.', cost: '25 GC', src: 'Core', pg: 101 },
             ]
         }
     },
