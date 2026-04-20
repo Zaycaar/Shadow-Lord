@@ -74,6 +74,112 @@
         // DATA ENTRIES
         // Add your spreadsheet rows here following this exact format.
       const spells = [
+          The Illusion tradition is ready. This tradition features some of the most complex "Triggered" and "Permanent" effects we've seen so far, like Decoy and Mirage.
+
+I have formatted these to include all the specific interaction rules (like the teleportation in Decoy or the d20 roll mechanics in Thimblerig).
+Illusion Tradition Database Entries
+JavaScript
+
+const illusionSpells = [
+    { 
+        name: "Clamor", 
+        tradition: "Illusion", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "One point in space within medium range",
+        duration: "1 minute",
+        desc: "The target point emits sound you choose for the duration (noise or speech in a language you know). Volume ranges from whisper to thunder. You can change the sound as you wish to mimic effects like clashing blades or footsteps." 
+    },
+    { 
+        name: "Disguise", 
+        tradition: "Illusion", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "1 hour",
+        desc: "You touch the target and confer an illusory disguise. You decide the appearance. You can change height/weight by up to 25% and change the appearance of clothing and equipment. Does not mask sounds." 
+    },
+    { 
+        name: "Figment", 
+        tradition: "Illusion", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "A cube, 2 yards on a side, within short range",
+        duration: "1 hour; see effect",
+        desc: "A silent visual illusion of a creature, object, or force appears. Creatures behave in a lifelike manner. The effect ends immediately if the illusion is attacked or if you cannot see it at the end of a round." 
+    },
+    { 
+        name: "Thimblerig", 
+        tradition: "Illusion", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 hour; see effect",
+        desc: "Four illusory duplicates spring into existence. When a creature hits your Defense, Strength, or Agility, roll a d20. If the result matches the table, the attack hits and destroys a duplicate instead: [4 Duplicates: 16 or less] [3 Duplicates: 15 or less] [2 Duplicates: 14 or less] [1 Duplicate: 10 or less]. The effect ends when the last duplicate disappears." 
+    },
+    { 
+        name: "Vertigo", 
+        tradition: "Illusion", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One creature within short range",
+        duration: "1 minute",
+        desc: "Make an Intellect attack roll against the target’s Perception. On a success, the target has vertigo. If it moves more than 2 yards on its turn, it must make an Agility challenge roll or fall prone and end its turn. Attack Roll 20+ Target also falls prone when taking damage." 
+    },
+    { 
+        name: "Glamer", 
+        tradition: "Illusion", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "A cube, 2 yards on a side, within short range",
+        duration: "1 hour; see effect",
+        desc: "A visual and auditory illusion appears. Ends if you cannot see it at the end of a round. Dangerous forces (fire/water) deal 2d6 damage on a failed Perception challenge roll. Illusory creatures use your Intellect for stats. You can use an action to move it 10 yards and attack (Intellect vs Perception) for 2d6 damage. Attack Roll 20+ 2d6 extra damage." 
+    },
+    { 
+        name: "Invisibility", 
+        tradition: "Illusion", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "One creature or object you can reach",
+        duration: "1 minute",
+        desc: "You touch the target, which becomes invisible for the duration." 
+    },
+    { 
+        name: "Decoy", 
+        tradition: "Illusion", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "Instantaneous",
+        desc: "Triggered: Use when a creature hits you with an attack. The success becomes a failure, and you teleport to an open space of your choice within short range." 
+    },
+    { 
+        name: "Phantasm", 
+        tradition: "Illusion", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "A cube, 4 yards on a side, within long range",
+        duration: "1 hour; see effect",
+        desc: "An illusion that looks, sounds, and feels real appears. Ends if unseen at end of round. Dangerous forces deal 3d6 damage (Perception challenge). Creatures use your Intellect for stats. You can use an action to move it 10 yards and attack (Intellect vs Perception) for 4d6 damage. Attack Roll 20+ 2d6 extra damage." 
+    },
+    { 
+        name: "Mirage", 
+        tradition: "Illusion", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "A cylinder, 5 yards tall with a 10-yard radius, within long range",
+        duration: "Until rest; see effect",
+        desc: "Illusory terrain appears that looks, sounds, smells, and feels real. Can conceal existing features (like making a fire invisible). Sacrifice: Expend this to cast Phantasm. Permanence: Cast in the same area for 31 days to make it permanent." 
+    },
+    { 
+        name: "Illusory Double", 
+        tradition: "Illusion", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "A cube, Size of your creature, within short range",
+        duration: "1 hour; see effect",
+        desc: "An identical copy of you appears. It uses your attributes. You can move it your Speed when you move and cast spells from its space. Triggered: When hit, use a triggered action to swap positions with the copy, making it the target instead." 
+    }
           { 
         name: "Black Tongue", 
         tradition: "Forbidden", 
