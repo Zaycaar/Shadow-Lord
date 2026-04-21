@@ -54,6 +54,9 @@
             <option value="Necromancy">Necromancy</option>
             <option value="Primal">Primal</option>
             <option value="Protection">Protection</option>
+            <option value="Rune">Rune</option>
+            <option value="Shadow">Shadow</option>
+            <option value="Song">Song</option>
         </select>
 
         <select id="rankFilter" onchange="filterSpells()">
@@ -79,6 +82,303 @@
         // DATA ENTRIES
         // Add your spreadsheet rows here following this exact format.
       const spells = [
+          { 
+        name: "Project Voice", 
+        tradition: "Song", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "For the duration, anything you say or sing can be heard up to 1 mile away." 
+    },
+    { 
+        name: "Song of Friendship", 
+        tradition: "Song", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "Each chosen creature within short range that can hear you",
+        duration: "1 hour; see effect",
+        desc: "Concentrate for 1 minute while singing. Targets must make a Will challenge roll or become charmed for 1 hour or until they take damage." 
+    },
+    { 
+        name: "Song of Courage", 
+        tradition: "Song", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "Each chosen creature within short range that can hear you",
+        duration: "1 minute",
+        desc: "Targets cannot be charmed, compelled, or frightened while within short range and able to hear you. Ends if you stop singing or cast another spell." 
+    },
+    { 
+        name: "Song of Inspiration", 
+        tradition: "Song", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "One creature within short range per turn",
+        duration: "1 minute",
+        desc: "Choose one creature each turn to make its next attack or challenge roll with 2 boons. Ends if you stop singing or cast another spell." 
+    },
+    { 
+        name: "Song of Valor", 
+        tradition: "Song", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "One creature within short range per turn",
+        duration: "1 minute",
+        desc: "Choose one creature each turn to deal 1d6 extra damage with weapon attacks for 1 round. Ends if you stop singing or cast another spell." 
+    },
+    { 
+        name: "Song of Captivation", 
+        tradition: "Song", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "One creature within short range per concentration action",
+        duration: "Concentration, up to 1 minute",
+        desc: "Target must succeed on a Will challenge roll or be charmed. Charmed targets take only slow turns and must move toward you. Ends if you stop singing or cast another spell." 
+    },
+    { 
+        name: "Song of Healing", 
+        tradition: "Song", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "Each chosen creature within short range for the full duration",
+        duration: "Instantaneous",
+        desc: "Concentrate for 1 minute while singing. Each target within short range for the entire performance heals damage equal to its healing rate." 
+    },
+    { 
+        name: "Song of Dread", 
+        tradition: "Song", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "One creature within short range per concentration action",
+        duration: "Concentration, up to 1 minute",
+        desc: "Target must make a Will challenge roll (success confers immunity). On failure, target is frightened and must rush away. Ends if you stop singing, cast another spell, or the target cannot hear you." 
+    },
+    { 
+        name: "Song of Ribaldry", 
+        tradition: "Song", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "One creature within short range per concentration action",
+        duration: "Concentration, up to 1 minute",
+        desc: "Target must make a Will challenge roll (success confers immunity). On failure, target is impaired and slowed. Ends if you stop singing or cast another spell." 
+    },
+    { 
+        name: "Song of Slumber", 
+        tradition: "Song", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "One creature within short range per concentration action",
+        duration: "Concentration, up to 1 minute",
+        desc: "Target must make a Will challenge roll (success confers immunity). Failure: Slowed and fatigued. If already slowed, falls asleep for 1 hour. Ends if you stop singing, cast another spell, or the target cannot hear you." 
+    },
+    { 
+        name: "Song of Heroes", 
+        tradition: "Song", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "Up to three creatures within short range that can hear you",
+        duration: "1 minute",
+        desc: "Targets gain +20 Health, +2 Speed, and 2 boons on attack/challenge rolls. Ends if you stop singing, cast another spell, or the target cannot hear you." 
+    },
+          { 
+        name: "Nightfall Blade", 
+        tradition: "Shadow", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute; see effect",
+        desc: "Creates a solid blade (off-hand swift weapon, finesse, 1d6 damage). Deals 1d6 extra damage if the target is in shadows/darkness. You can make an attack with it as part of casting." 
+    },
+    { 
+        name: "Wall of Darkness", 
+        tradition: "Shadow", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "A circle with a 2-yard radius within medium range",
+        duration: "1 minute",
+        desc: "The area becomes opaque, totally obscuring everything within or behind it and blocking all natural light." 
+    },
+    { 
+        name: "Darkness", 
+        tradition: "Shadow", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "A sphere with a 5-yard radius within short range",
+        duration: "1 minute",
+        desc: "Inky darkness totally obscures the area, canceling natural light and Rank 0 spells. If cast on an object, the darkness moves with it. Blocks all nonmagical vision except truesight." 
+    },
+    { 
+        name: "Darksight", 
+        tradition: "Shadow", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "One creature you can touch",
+        duration: "1 hour",
+        desc: "Target gains darksight for the duration." 
+    },
+    { 
+        name: "Shadow Dart", 
+        tradition: "Shadow", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One creature within medium range",
+        duration: "1 minute",
+        desc: "Make an Intellect attack roll against the target's Agility. Success: 2d6 damage and the target makes Perception challenge rolls with 3 banes for 1 minute." 
+    },
+    { 
+        name: "Shadow Monster", 
+        tradition: "Shadow", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "A cube, 1 yard on a side, within medium range",
+        duration: "1 minute",
+        desc: "Creates a compelled medium monster with the flier trait. It can have any appearance. The effect ends if it is incapacitated." 
+    },
+    { 
+        name: "Shadow Stride", 
+        tradition: "Shadow", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Once per round, when you enter a space obscured by shadows or darkness, you can instantly exit from another such space within medium range." 
+    },
+    { 
+        name: "Black Bolts of the Underworld", 
+        tradition: "Shadow", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "Up to three creatures within medium range",
+        duration: "Instantaneous",
+        desc: "Fire three missiles (divided as you choose). For each, make an Intellect attack vs Agility. Success: 2d6 damage and target is moved 1d6 yards away. Attack Roll 20+ 1d6 extra damage." 
+    },
+    { 
+        name: "Shadow Magic", 
+        tradition: "Shadow", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "Instantaneous",
+        desc: "Choose a Rank 2 or lower spell you know from another tradition. You cast it without expending a casting." 
+    },
+    { 
+        name: "Dark Portals", 
+        tradition: "Shadow", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "Six cubes, 1 yard each, within long range",
+        duration: "1 minute",
+        desc: "Cubes (numbered 1-6) totally obscure space. Entering a cube requires an Intellect challenge roll; on success, choose the exit cube. On failure, roll a d6 to determine the exit cube." 
+    },
+    { 
+        name: "Enervation", 
+        tradition: "Shadow", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "One living creature within long range",
+        duration: "1 hour",
+        desc: "Make an Intellect attack roll against the target's Agility. Success: Target takes a –20 penalty to Health and is impaired for 1 hour. Attack Roll 20+ The penalty is –30 Health." 
+    },
+          { 
+        name: "Rune of Finding", 
+        tradition: "Rune", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "One creature or object you can reach",
+        duration: "1 hour",
+        desc: "You leave a sigil on the target. For the duration, you always know the exact location of the creature or object bearing the sigil." 
+    },
+    { 
+        name: "Translate Anything", 
+        tradition: "Rune", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "For the duration, you can read any writing you see." 
+    },
+    { 
+        name: "Brand of Doom", 
+        tradition: "Rune", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One creature within short range",
+        duration: "1 minute",
+        desc: "Make an Intellect attack roll against the target’s Agility. On a success, once per round when the target takes damage, it takes 1d6 extra damage from the rune." 
+    },
+    { 
+        name: "Glyph of Fire", 
+        tradition: "Rune", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "A point in space within short range",
+        duration: "1 minute",
+        desc: "A fiery glyph appears. When cast and at the end of each round, it deals 1d6 + 2 damage to everything in a 2-yard-radius sphere. Creatures must make an Agility challenge roll with 1 bane to take no damage." 
+    },
+    { 
+        name: "Runic Shield", 
+        tradition: "Rune", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "One shield you can reach",
+        duration: "1 minute",
+        desc: "Creatures making attacks with weapons against the shield's bearer make the attack rolls with 1 bane." 
+    },
+    { 
+        name: "Glyphic Prison", 
+        tradition: "Rune", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "One creature you can see within medium range",
+        duration: "1 minute",
+        desc: "A ring of blazing glyphs surrounds the target. If the target leaves its space through the runes, it must make a Strength challenge roll with 1 bane. It takes 6d6 damage on a failure, or half on a success." 
+    },
+    { 
+        name: "Rune of Concealment", 
+        tradition: "Rune", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "1 hour",
+        desc: "Target cannot be perceived by magic. If the target is in an obscured area at the end of a round, it automatically becomes hidden until it acts or moves." 
+    },
+    { 
+        name: "Rune of Might", 
+        tradition: "Rune", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "1 minute",
+        desc: "Target makes Strength attack/challenge rolls with 2 boons, and melee attacks deal 2d6 extra damage." 
+    },
+    { 
+        name: "Sigil Trap", 
+        tradition: "Rune", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "A circle with a 4-yard radius centered on a point within medium range",
+        duration: "1 minute",
+        desc: "Lightning strikes when a creature enters or at the end of a round, dealing 2d6 damage to everything in the area. Success on an Agility challenge roll results in half damage; failure results in being immobilized for 1 round." 
+    },
+    { 
+        name: "Runic Weapon", 
+        tradition: "Rune", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "One weapon you can reach",
+        duration: "1 minute",
+        desc: "Attacks using the target weapon deal 3d6 extra damage." 
+    },
+    { 
+        name: "Rune of Power", 
+        tradition: "Rune", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "1 hour",
+        desc: "Target makes attack/challenge rolls with 2 boons, gains +20 Health, and deals 1d6 extra damage on any attack that deals damage." 
+    },
           { 
         name: "Magic Lock", 
         tradition: "Protection", 
