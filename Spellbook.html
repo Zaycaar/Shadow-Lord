@@ -50,6 +50,10 @@
             <option value="Forbidden">Forbidden</option>
             <option value="Illusion">Illusion</option>
             <option value="Life">Life</option>
+            <option value="Nature">Nature</option>
+            <option value="Necromancy">Necromancy</option>
+            <option value="Primal">Primal</option>
+            <option value="Protection">Protection</option>
         </select>
 
         <select id="rankFilter" onchange="filterSpells()">
@@ -75,6 +79,366 @@
         // DATA ENTRIES
         // Add your spreadsheet rows here following this exact format.
       const spells = [
+          { 
+        name: "Magic Lock", 
+        tradition: "Protection", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "One object within short range (door, chest, etc.)",
+        duration: "1 minute",
+        desc: "The target closes and locks. It cannot be opened by nonmagical means by anyone but you, though it can still be destroyed." 
+    },
+    { 
+        name: "Secure Site", 
+        tradition: "Protection", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "A sphere with a 10-yard radius centered on a point you can reach",
+        duration: "6 hours",
+        desc: "An invisible field alerts you whenever a Size 1/2 or larger creature enters the area from the outside. This knowledge wakes you if you are asleep." 
+    },
+    { 
+        name: "Evade", 
+        tradition: "Protection", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "Instantaneous",
+        desc: "Move up to four times your Speed without triggering free attacks. Triggered: Use when you take damage; you instead move up to twice your Speed without triggering free attacks." 
+    },
+    { 
+        name: "Force Field", 
+        tradition: "Protection", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute; see effect",
+        desc: "An invisible field surrounds you with 10 Health. When you would take damage, the field takes it instead. The effect ends if the field's Health is reduced to 0." 
+    },
+    { 
+        name: "Sanctuary", 
+        tradition: "Protection", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "1 minute; see effect",
+        desc: "Touch a target to hide it from all creatures. The effect ends immediately if the target attacks." 
+    },
+    { 
+        name: "Vigilance", 
+        tradition: "Protection", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "4 hours",
+        desc: "Target makes Perception challenge rolls with 1 boon and cannot be charmed, compelled, frightened, surprised, or put to sleep by magic." 
+    },
+    { 
+        name: "Vigor", 
+        tradition: "Protection", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "1 hour",
+        desc: "Target gains a +10 bonus to Health for the duration." 
+    },
+    { 
+        name: "Protection from Spells", 
+        tradition: "Protection", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "1 hour",
+        desc: "Spell attacks against the target have 1 bane. The target makes challenge rolls to resist spells with 1 boon." 
+    },
+    { 
+        name: "Protective Field", 
+        tradition: "Protection", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "A sphere with a 3-yard radius centered on a point you can reach",
+        duration: "1 minute",
+        desc: "Designate any number of creatures to move and attack through this barrier. No other creature can move through it or make melee attacks against targets on the other side." 
+    },
+    { 
+        name: "Invulnerability", 
+        tradition: "Protection", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "Concentration, up to 1 minute",
+        desc: "Touch a target to make it immune to all damage for the duration." 
+    },
+    { 
+        name: "Globe of Negation", 
+        tradition: "Protection", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "A sphere with a 5-yard radius centered on a point you can reach",
+        duration: "1 minute",
+        desc: "Spell attacks of Rank 5 or lower against targets behind the barrier automatically fail. The area is excluded from Rank 5 or lower spell areas. Spells cast from inside cannot have origin points outside." 
+    },
+          { 
+        name: "Beast Within", 
+        tradition: "Primal", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "You take on bestial features. Gain darksight, +2 Speed, and deal 1d6 extra damage with unarmed strikes and natural weapons." 
+    },
+    { 
+        name: "Hide from Animals", 
+        tradition: "Primal", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute; see effect",
+        desc: "You become hidden from all animals. The effect ends immediately if you make an attack." 
+    },
+    { 
+        name: "Beast Tongue", 
+        tradition: "Primal", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "You can communicate with any animal that can hear you." 
+    },
+    { 
+        name: "Befriend Animal", 
+        tradition: "Primal", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One animal you can see within short range",
+        duration: "Until rest; see effect",
+        desc: "Make a Will attack roll vs target's Will (1 boon if Beast Tongue is active). If target Health > yours, it fails. Success: Target is charmed and helps you. Limit: Power score. Attack Roll 20+ Permanently charmed." 
+    },
+    { 
+        name: "Call Small Animal", 
+        tradition: "Primal", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "1-yard cube within medium range",
+        duration: "1 hour",
+        desc: "A compelled small or tiny animal appears. A tiny animal can have one trait: climber, flier, poisonous, or swimmer." 
+    },
+    { 
+        name: "Call Medium Animal", 
+        tradition: "Primal", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "1-yard cube within medium range",
+        duration: "1 hour",
+        desc: "A compelled medium, small, or tiny animal appears. Small/tiny animals can have one trait: climber, flier, poisonous, or swimmer." 
+    },
+    { 
+        name: "Dire Beast", 
+        tradition: "Primal", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "You or one animal within short range",
+        duration: "1 minute",
+        desc: "Target's Size increases by 1 (minimum Size 1). Attacks with unarmed strikes and natural weapons deal 1d6 extra damage." 
+    },
+    { 
+        name: "Call Large Animal", 
+        tradition: "Primal", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "2-yard cube within medium range",
+        duration: "1 hour",
+        desc: "A compelled large, medium, or small animal appears. Medium/small animals can have one trait: climber, flier, poisonous, or swimmer." 
+    },
+    { 
+        name: "Pounce", 
+        tradition: "Primal", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "Self",
+        duration: "Instantaneous",
+        desc: "Req: Beast Within. Move up to twice Speed. Make an unarmed/natural attack using Will. Success: Attack damage + 4d6 extra damage and target falls prone." 
+    },
+    { 
+        name: "Call of the Wild", 
+        tradition: "Primal", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "Up to five creatures within short range",
+        duration: "1 minute",
+        desc: "Targets gain bestial traits: +10 Health, +2 Speed, and 1d6 extra damage with unarmed strikes and natural weapons." 
+    },
+    { 
+        name: "Call Huge Animal", 
+        tradition: "Primal", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "3-yard cube within medium range",
+        duration: "1 hour",
+        desc: "A compelled huge, large, or medium animal appears. Large/medium animals can have one trait: climber, flier, poisonous, or swimmer." 
+    },
+          { 
+        name: "Hide from Undead", 
+        tradition: "Necromancy", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute; see effect",
+        desc: "You become hidden from undead creatures. The effect ends immediately if you make an attack." 
+    },
+    { 
+        name: "Spectral Grasp", 
+        tradition: "Necromancy", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "One creature within medium range",
+        duration: "1 round",
+        desc: "Make an Intellect attack roll against the target's Agility. On a success, the target takes 1d3 damage and makes attack rolls with 1 bane for 1 round. Attack Roll 20+ The target takes 1d6 extra damage." 
+    },
+    { 
+        name: "Animate Corpse", 
+        tradition: "Necromancy", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "One Size 1/2 or 1 corpse you can reach",
+        duration: "Concentration, up to 1 minute",
+        desc: "Touch the target. If you concentrate and maintain contact for 1 minute, it becomes a compelled animated corpse of its Size. Sacrifice: Expend this to cast Spectral Grasp." 
+    },
+    { 
+        name: "Grave Grasp", 
+        tradition: "Necromancy", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "A circle on the ground with a 5-yard radius within short range",
+        duration: "1 minute",
+        desc: "Bony claws and rotting hands make the area difficult terrain. Creatures in the area initially or at the end of a round must make an Agility challenge roll or take 1d6 damage and become immobilized. If already immobilized, they take 1d6 extra damage. A creature can use an action to tear free." 
+    },
+    { 
+        name: "Harvest Soul", 
+        tradition: "Necromancy", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One creature, killed no longer than 1 round ago, within short range",
+        duration: "4 hours; see effect",
+        desc: "A ball of light orbits you. You can use an action to end the effect and heal damage equal to your healing rate. While active, the target cannot be restored to life by any means." 
+    },
+    { 
+        name: "Bone Splinters", 
+        tradition: "Necromancy", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "One creature with bones within medium range",
+        duration: "Instantaneous",
+        desc: "Make an Intellect attack roll against the target’s Strength. Success: 3d6 + 5 damage. If incapacitated, it dies and bones explode in a 3-yard cone from its space; everything in the cone takes 2d6 damage (Agility challenge for half)." 
+    },
+    { 
+        name: "Army of the Dead", 
+        tradition: "Necromancy", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "Up to five Size 1/2 or 1 corpses within short range",
+        duration: "Until destroyed",
+        desc: "Animated corpses claw free from the ground and stand up. All corpses created by this spell count as a single creature for the purpose of your control limit. The effect ends when the last of these animated corpses is destroyed." 
+    },
+          { 
+        name: "Magic Acorns", 
+        tradition: "Nature", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "Up to five acorns, nuts, or seeds you can reach",
+        duration: "1 hour; see effect",
+        desc: "Imbue items with magic. A creature can throw an acorn (short range, Agility vs Agility). Success: 1d3 damage and slowed for 1 round. If incapacitated by this damage, the target permanently transforms into a sapling. Attack Roll 20+ 1d6 extra damage." 
+    },
+    { 
+        name: "Oak Hide", 
+        tradition: "Nature", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 hour",
+        desc: "Gain a +2 bonus to Defense. While in forest settings, you make Agility challenge rolls to hide with 1 boon." 
+    },
+    { 
+        name: "Healing Berries", 
+        tradition: "Nature", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "Up to three fresh berries you can reach",
+        duration: "8 hours; see effect",
+        desc: "Imbue berries with magic. A living creature can use an action to consume a berry to heal damage equal to half its healing rate." 
+    },
+    { 
+        name: "Overgrowth", 
+        tradition: "Nature", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "A circle on the ground with a 10-yard radius within medium range",
+        duration: "1 hour",
+        desc: "Creepers and weeds make the area difficult terrain for the duration." 
+    },
+    { 
+        name: "Shillelagh", 
+        tradition: "Nature", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "One club or staff you are holding",
+        duration: "1 hour; see effect",
+        desc: "While holding the imbued weapon, you gain a +2 bonus to Speed and attacks with it deal 1d6 extra damage. Effect ends if dropped." 
+    },
+    { 
+        name: "Ensnaring Vines", 
+        tradition: "Nature", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "Up to five creatures within medium range",
+        duration: "1 minute",
+        desc: "Vines erupt under targets. Each must succeed on an Agility challenge roll or become immobilized. A target can use an action to tear off the vine and remove the affliction." 
+    },
+    { 
+        name: "Fiery Pinecones", 
+        tradition: "Nature", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "Up to five pinecones, nuts, or seeds you can reach",
+        duration: "8 hours; see effect",
+        desc: "Imbued items shed light (5-yard radius). Throwing an item (medium range, Agility vs Agility) deals 1d6 damage on a success, and sparks deal 1d3 damage to everything within 1 yard of the target. Attack Roll 20+ 1d6 extra damage." 
+    },
+    { 
+        name: "Brambles", 
+        tradition: "Nature", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "A circle on the ground with a 10-yard radius within medium range",
+        duration: "1 minute",
+        desc: "Area becomes difficult terrain. Any creature entering or moving across must make an Agility challenge roll with 1 bane or take 1d6 damage." 
+    },
+    { 
+        name: "Forest Walk", 
+        tradition: "Nature", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Turn bright green. You can enter a space occupied by a plant of your Size or larger and instantly exit into an open space from another such plant within medium range." 
+    },
+    { 
+        name: "Wrath of Nature", 
+        tradition: "Nature", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "Up to five creatures within medium range",
+        duration: "1 minute",
+        desc: "Vines deal 3d6 damage to each target. Targets must make an Agility challenge roll; on failure, the target is moved 6 yards and immobilized. A target can use an action to make a Strength challenge roll with 1 bane to end the effect." 
+    },
+    { 
+        name: "Form of the Oak Guardian", 
+        tradition: "Nature", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Transform into an animated tree. You cannot cast spells, but Size doubles and you gain: +3 Defense, +15 Health, 1 boon on Strength rolls, and branches (3d6 damage weapon). Triggered: Expend a Nature spell to extend this effect by [Rank] minutes." 
+    },
           { 
         name: "Life Sense", 
         tradition: "Life", 
