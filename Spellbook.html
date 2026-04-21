@@ -75,13 +75,105 @@
         // DATA ENTRIES
         // Add your spreadsheet rows here following this exact format.
       const spells = [
-          The Illusion tradition is ready. This tradition features some of the most complex "Triggered" and "Permanent" effects we've seen so far, like Decoy and Mirage.
-
-I have formatted these to include all the specific interaction rules (like the teleportation in Decoy or the d20 roll mechanics in Thimblerig).
-Illusion Tradition Database Entries
-JavaScript
-
-const illusionSpells = [
+          { 
+        name: "Life Sense", 
+        tradition: "Life", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "A sphere with a 5-yard radius centered on you",
+        duration: "1 minute",
+        desc: "You know the locations of any living creatures in the area. Such creatures cannot become hidden from you for the duration." 
+    },
+    { 
+        name: "Minor Healing", 
+        tradition: "Life", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "Instantaneous",
+        desc: "You touch the target, which heals damage equal to half its healing rate." 
+    },
+    { 
+        name: "Cure", 
+        tradition: "Life", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "Instantaneous",
+        desc: "Touch a target to: Remove diseased, fatigued, impaired, or poisoned; OR remove 1 Insanity; OR remove any penalty to Health; OR heal damage equal to half its healing rate." 
+    },
+    { 
+        name: "Fount of Life", 
+        tradition: "Life", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "A sphere with a 2-yard radius centered on you",
+        duration: "1 minute",
+        desc: "Healing energies move with you. Whenever a living creature in the area heals damage, it heals extra damage equal to your Power." 
+    },
+    { 
+        name: "Light Healing", 
+        tradition: "Life", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "Instantaneous",
+        desc: "You touch the target, which heals damage equal to its healing rate." 
+    },
+    { 
+        name: "Moderate Healing", 
+        tradition: "Life", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "Instantaneous",
+        desc: "You touch the target, which heals damage equal to twice its healing rate." 
+    },
+    { 
+        name: "Vitality Burst", 
+        tradition: "Life", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "Up to three living creatures within short range",
+        duration: "Instantaneous",
+        desc: "Each target heals damage equal to its healing rate." 
+    },
+    { 
+        name: "Greater Cure", 
+        tradition: "Life", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "Up to three creatures you can reach",
+        duration: "Instantaneous",
+        desc: "For each target, choose: Remove diseased, fatigued, impaired, or poisoned; OR remove 1 Insanity; OR remove any Health penalty; OR heal damage equal to its healing rate." 
+    },
+    { 
+        name: "Major Healing", 
+        tradition: "Life", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "Instantaneous",
+        desc: "You touch the target, which heals damage equal to three times its healing rate." 
+    },
+    { 
+        name: "Total Healing", 
+        tradition: "Life", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "Instantaneous",
+        desc: "You touch the target, which heals all damage." 
+    },
+    { 
+        name: "Resurrect", 
+        tradition: "Life", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "One creature killed no longer than 24 hours ago you can reach",
+        duration: "Concentration, up to 1 hour",
+        desc: "If concentration is maintained for 1 hour, target may return to life. If soul is in Underworld, it returns (heals 1, becomes fatigued/impaired until rest). If soul is in Hell, make a Will challenge roll (banes = Corruption); success restores life, failure means the soul is lost. Sacrifice: Expend this to cast Total Healing." 
+    },
     { 
         name: "Clamor", 
         tradition: "Illusion", 
