@@ -90,6 +90,105 @@
         // Add your spreadsheet rows here following this exact format.
       const spells = [
           { 
+        name: "Create Holy Symbol", 
+        tradition: "Theurgy", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute; see effect",
+        desc: "A gleaming holy symbol appears in your hand. While held, you gain 1 boon on attack rolls with Theurgy spells. Ends if dropped." 
+    },
+    { 
+        name: "Denounce", 
+        tradition: "Theurgy", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "One creature within short range that can see/hear you",
+        duration: "1 round",
+        desc: "Will vs Will attack. Success: Target is frightened for 1 round. Attack Roll 20+: Target also falls prone." 
+    },
+    { 
+        name: "Blessing", 
+        tradition: "Theurgy", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "Any number of creatures you can reach",
+        duration: "1 minute",
+        desc: "Targets make attack/challenge rolls with 1 boon and cannot be frightened." 
+    },
+    { 
+        name: "Censure", 
+        tradition: "Theurgy", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "A sphere with a 5-yard radius centered on a point you can reach",
+        duration: "1 minute",
+        desc: "Release holy power. Each demon, devil, faerie, spirit, or undead must succeed on a Will challenge roll or become impaired. While impaired, they cannot take fast turns." 
+    },
+    { 
+        name: "Hallowed Ground", 
+        tradition: "Theurgy", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "A hemisphere with a 3-yard radius centered on a point within short range",
+        duration: "Concentration, up to 1 minute; see effect",
+        desc: "A dome blocks passage and spell effects. Creatures inside are hidden from those outside. Leaving is possible, but reentering is not. Ends if a creature inside makes an attack." 
+    },
+    { 
+        name: "God Hammer", 
+        tradition: "Theurgy", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "A point in space within medium range",
+        duration: "1 minute",
+        desc: "Golden hammer appears. Triggered: Move hammer 10 yards and attack (Will vs Defense with 1 boon). Success: 2d6 damage. Attack Roll 20+: 2d6 extra damage." 
+    },
+    { 
+        name: "Revelation", 
+        tradition: "Theurgy", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "1 minute; see effect",
+        desc: "Grant target 7 revelations. Target can expend any number on a roll; each revelation expended adds 2 boons." 
+    },
+    { 
+        name: "Divine Aid", 
+        tradition: "Theurgy", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "Each chosen creature within short range",
+        duration: "1 hour",
+        desc: "Each target gains a +15 bonus to Health for the duration." 
+    },
+    { 
+        name: "Wrath of God", 
+        tradition: "Theurgy", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "A point on the ground within medium range",
+        duration: "Instantaneous",
+        desc: "Lightning deals 2d6 + 2 damage to each creature within 1d6 yards of the point. Agility challenge roll: half damage on success, dazed for 1 round on failure." 
+    },
+    { 
+        name: "Avatar", 
+        tradition: "Theurgy", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Take half damage from all sources, make attack rolls with 1 boon, and deal 2d6 extra damage with weapon attacks." 
+    },
+    { 
+        name: "Fire from Heaven", 
+        tradition: "Theurgy", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "Vertical cylinder, 25yd tall, 5yd radius, within extreme range",
+        duration: "Instantaneous",
+        desc: "Flames deal 7d6 damage. Will challenge roll for half. Any creature incapacitated by this damage is erased from reality." 
+    },
+          { 
         name: "Dismiss", 
         tradition: "Teleportation", 
         rank: 0, 
