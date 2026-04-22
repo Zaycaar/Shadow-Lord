@@ -91,6 +91,105 @@
         // Add your spreadsheet rows here following this exact format.
       const spells = [
           { 
+        name: "Freeze Water", 
+        tradition: "Water", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "One creature within short range",
+        duration: "1 round",
+        desc: "Will vs Agility attack. Success: 1d3 damage and target is immobilized for 1 round. Attack Roll 20+: +1d3 extra damage." 
+    },
+    { 
+        name: "Produce Water", 
+        tradition: "Water", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "One container you can reach",
+        duration: "Instantaneous",
+        desc: "You touch a cup, bowl, or similar container and it fills with fresh, clean water." 
+    },
+    { 
+        name: "Drown", 
+        tradition: "Water", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One air-breathing creature within short range",
+        duration: "Special",
+        desc: "Strength challenge roll: Failure = 1d6+2 damage and impaired. Target must repeat the roll each round with 1 boon. After three failures total, the target suffocates and dies." 
+    },
+    { 
+        name: "Ice Blast", 
+        tradition: "Water", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "3-yard cone from you",
+        duration: "1 round",
+        desc: "Deals 2d6+2 damage (Agility challenge for half). Ground becomes difficult terrain for 1 round." 
+    },
+    { 
+        name: "Wellspring of Life", 
+        tradition: "Water", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "2-yard radius hemisphere within short range",
+        duration: "1 minute",
+        desc: "Healing waters partially obscure area. Living creatures inside don't need to drink until after a rest. When a creature in the area heals, they heal 1d3 extra damage." 
+    },
+    { 
+        name: "Geyser", 
+        tradition: "Water", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "5-yard radius circle within medium range",
+        duration: "Instantaneous",
+        desc: "Scalding water erupts, dealing 2d6+2 damage and moving Size 1 or smaller objects 1d6 yards. Agility challenge roll: half damage on success, prone on failure." 
+    },
+    { 
+        name: "Wave", 
+        tradition: "Water", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "10yd long, 10yd tall, 1yd wide line",
+        duration: "1 round",
+        desc: "Provides partial obscurement and half cover. At end of round, it tips to cover a 10x10yd area. Creatures take 1d6 damage and fall prone (Strength challenge for half and no prone). Water then spreads 10yds further." 
+    },
+    { 
+        name: "Sphere of Water", 
+        tradition: "Water", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "3-yard radius sphere within medium range",
+        duration: "Concentration, up to 1 minute",
+        desc: "Air-breathing creatures trapped inside must succeed on a Strength challenge roll each round or take 2d6 damage. Action: Move the sphere 5 yards. Trapped creatures can use an action to swim free with a Strength challenge roll." 
+    },
+    { 
+        name: "Tidal Forces", 
+        tradition: "Water", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "Any number of creatures within medium range",
+        duration: "1 round",
+        desc: "Strength challenge roll with 1 bane. Failure: Moved 2d6 yards toward/away and dazed. Success: Moved half distance." 
+    },
+    { 
+        name: "Cold Snap", 
+        tradition: "Water", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "8-yard cone from you",
+        duration: "Instantaneous",
+        desc: "Deals 7d6 damage (Strength challenge for half). Water/liquids freeze. If incapacitated by this damage, target freezes solid and dies." 
+    },
+    { 
+        name: "Bind Water Genie", 
+        tradition: "Water", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "2-yard cube of ice, snow, or water within long range",
+        duration: "1 minute",
+        desc: "Creates a Size 2 water genie. Will vs Will attack. Success: Genie is compelled. Failure: Genie is hostile." 
+    },
+          { 
         name: "Flowing Form", 
         tradition: "Transformation", 
         rank: 0, 
