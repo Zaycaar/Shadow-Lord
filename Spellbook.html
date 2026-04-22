@@ -58,7 +58,11 @@
             <option value="Shadow">Shadow</option>
             <option value="Song">Song</option>
             <option value="Storm">Storm</option>
-            <option value="Technomancy"Technomancy</option>
+            <option value="Technomancy">Technomancy</option>
+            <option value="Theurgy">Theurgy</option>
+            <option value="Time">Time</option>
+            <option value="Transformation">Transformation</option>
+            <option value="Water">Water</option>
         </select>
 
         <select id="rankFilter" onchange="filterSpells()">
@@ -84,6 +88,105 @@
         // DATA ENTRIES
         // Add your spreadsheet rows here following this exact format.
       const spells = [
+          { 
+        name: "Dismiss", 
+        tradition: "Teleportation", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "One Size 1 or smaller object you are holding",
+        duration: "Instantaneous",
+        desc: "The target teleports to an open space within medium range." 
+    },
+    { 
+        name: "Fetch", 
+        tradition: "Teleportation", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "One object you could hold in one hand within medium range",
+        duration: "Instantaneous",
+        desc: "The target teleports to your hand (or your feet if hands are full)." 
+    },
+    { 
+        name: "Division", 
+        tradition: "Teleportation", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One creature within short range",
+        duration: "Instantaneous",
+        desc: "Intellect vs Strength. Success: 3d6 damage. If incapacitated, the target flies apart and dies instantly. Attack Roll 20+: 1d6 extra damage." 
+    },
+    { 
+        name: "Hole of Glory", 
+        tradition: "Teleportation", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "Two 1-yard cubes within medium range",
+        duration: "1 minute",
+        desc: "Creates two 1-foot-wide portals. Anything in one comes out the other. Closing portals may sever objects inside (GM discretion)." 
+    },
+    { 
+        name: "Swap", 
+        tradition: "Teleportation", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "One creature within long range",
+        duration: "Instantaneous",
+        desc: "You and target exchange positions. Unwilling targets can make a Will challenge roll to negate. Triggered: Use on your turn if target is within short range." 
+    },
+    { 
+        name: "Remove", 
+        tradition: "Teleportation", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "One creature you can reach",
+        duration: "Instantaneous",
+        desc: "Intellect vs Agility. Success: Target teleports to an open space on a solid surface you can see within medium range. Attack Roll 20+: Range is extreme." 
+    },
+    { 
+        name: "Shortcut", 
+        tradition: "Teleportation", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "Instantaneous",
+        desc: "Teleport to an open space you can see within long range. Triggered: Use on your turn to teleport within medium range instead." 
+    },
+    { 
+        name: "Boundless Step", 
+        tradition: "Teleportation", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "On each of your turns, you can use a triggered action to teleport to an open space you can see within medium range." 
+    },
+    { 
+        name: "Fuse", 
+        tradition: "Teleportation", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "One creature within medium range",
+        duration: "Instantaneous",
+        desc: "Intellect vs Will. Success: Target teleports to a solid surface near you, fusing with it. Deals 6d6 damage and target is immobilized. Target must saw off a limb (2x healing rate in damage) or destroy the object to free themselves. Attack Roll 20+: +2d6 damage and stunned 1 round." 
+    },
+    { 
+        name: "Portals", 
+        tradition: "Teleportation", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "Two 2-yard cubes (one within reach, one within extreme range)",
+        duration: "1 minute",
+        desc: "Creates two portals (1yd x 2yd). Entering the front of one exits the back of the other and vice versa." 
+    },
+    { 
+        name: "Travel", 
+        tradition: "Teleportation", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "Up to five willing creatures you can reach",
+        duration: "Instantaneous",
+        desc: "Intellect challenge roll to reach a destination. Failure: Teleport to a random spot within 1d20 miles. Roll of 0 or less: 10d6 damage and 1 Insanity. If destination is occupied/solid: 5d6 damage and 1 Insanity or instant death if fused with material." 
+    },
           { 
         name: "Jury-Rig", 
         tradition: "Technomancy", 
