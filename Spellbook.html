@@ -57,6 +57,7 @@
             <option value="Rune">Rune</option>
             <option value="Shadow">Shadow</option>
             <option value="Song">Song</option>
+            <option value="Storm">Storm</option>
         </select>
 
         <select id="rankFilter" onchange="filterSpells()">
@@ -82,6 +83,105 @@
         // DATA ENTRIES
         // Add your spreadsheet rows here following this exact format.
       const spells = [
+          { 
+        name: "Fog", 
+        tradition: "Storm", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "Cylinder, 3yd tall, 5yd radius, within medium range",
+        duration: "1 hour; see effect",
+        desc: "Fog spreads through and partially obscures the area for the duration or until dispersed by wind." 
+    },
+    { 
+        name: "Shock", 
+        tradition: "Storm", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "One creature within short range",
+        duration: "Instantaneous",
+        desc: "Will vs Agility attack. 1 boon if target is metal/wearing metal. Success: 1d6 damage. Attack Roll 20+: Target also dazed until end of round." 
+    },
+    { 
+        name: "Forked Lightning", 
+        tradition: "Storm", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "Up to two creatures/objects within short range of each other",
+        duration: "Instantaneous",
+        desc: "Will vs Agility attack. 1 boon if target is metal/wearing metal. Success: 1d6+2 damage. Attack Roll 20+: Target takes 1d6 extra damage." 
+    },
+    { 
+        name: "Freezing Fog", 
+        tradition: "Storm", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "Cylinder, 3yd tall, 5yd radius, within medium range",
+        duration: "1 minute; see effect",
+        desc: "Fog partially obscures area; ground is slippery difficult terrain. Creatures in area must make Strength challenge rolls at end of rounds or take 1d3 damage and become slowed." 
+    },
+    { 
+        name: "Saint Astrid’s Flame", 
+        tradition: "Storm", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "Up to three creatures or objects within short range",
+        duration: "1 minute",
+        desc: "Harmless green flames shed light (1yd radius). Target cannot become invisible/hidden; attacks against target have 1 boon." 
+    },
+    { 
+        name: "Call Lightning", 
+        tradition: "Storm", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "Point on ground within long range",
+        duration: "Instantaneous",
+        desc: "Req: Outdoors. Bolt deals 3d6+5 damage within 3 yards of point. Strength challenge roll: Failure = deafened for 1 hour; Success = half damage. Sacrifice: Expend to cast Forked Lightning." 
+    },
+    { 
+        name: "Poisonous Fog", 
+        tradition: "Storm", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "Cylinder, 2yd tall, 5yd radius, within medium range",
+        duration: "1 minute; see effect",
+        desc: "Heavily obscures area. Moves away from you at end of rounds. Creatures must make Strength challenge rolls or take 1d6 damage and become poisoned/immobilized for 1 round." 
+    },
+    { 
+        name: "Hailstorm", 
+        tradition: "Storm", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "Cylinder, 2yd tall, 5yd radius, within long range",
+        duration: "1 minute",
+        desc: "Partially obscures area and deafens creatures in/near it. Ground is difficult terrain. Hail deals 3d6 damage (Agility challenge roll for half damage and to avoid falling prone)." 
+    },
+    { 
+        name: "Lightning Bolt", 
+        tradition: "Storm", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "Line, 30yd long, 1yd wide, from your point",
+        duration: "Instantaneous",
+        desc: "Deals 5d6 damage. Rebounds if hitting solid object. Agility challenge roll for half damage (1 bane if target is metal/heavy armor). Rebounding bolt makes creatures roll twice." 
+    },
+    { 
+        name: "Acid Rain", 
+        tradition: "Storm", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "Cylinder, 2yd tall, 5yd radius, within long range",
+        duration: "1 minute",
+        desc: "Rain deals 5d6 damage to creatures without shelter at casting and at end of rounds. Strength challenge roll for half damage." 
+    },
+    { 
+        name: "Leaping Lightning", 
+        tradition: "Storm", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "One creature within long range",
+        duration: "Instantaneous",
+        desc: "Will vs Agility attack. Success: 8d6 damage. Can repeat against different targets, reducing damage by 2d6 each time. Ends when damage dice reach 0." 
+    },
           { 
         name: "Project Voice", 
         tradition: "Song", 
