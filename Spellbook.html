@@ -90,6 +90,105 @@
         // Add your spreadsheet rows here following this exact format.
       const spells = [
           { 
+        name: "Delay Time", 
+        tradition: "Time", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "One creature you can see within short range",
+        duration: "1 minute",
+        desc: "Make an Intellect attack roll against the target’s Will. On a success, the target is slowed. Attack Roll 20+: The target is also impaired while slowed." 
+    },
+    { 
+        name: "Swiftness", 
+        tradition: "Time", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "One non-fatigued creature you can reach",
+        duration: "1 minute",
+        desc: "Target gains a +10 bonus to Speed. When the effect ends, the target becomes fatigued for 1 minute." 
+    },
+    { 
+        name: "Minor Paradox", 
+        tradition: "Time", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One creature you can see within short range",
+        duration: "1 round",
+        desc: "Intellect vs Intellect attack. Success: Target ceases to exist for 1 round. Attack Roll 20+: You regain the casting of this spell." 
+    },
+    { 
+        name: "Rewrite Moment", 
+        tradition: "Time", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Once per round, when you roll a die, you can discard the result and reroll. You must use the second result." 
+    },
+    { 
+        name: "Slow Time", 
+        tradition: "Time", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "Up to five creatures within medium range",
+        duration: "1 minute",
+        desc: "Targets must make a Will challenge roll or become slowed for 1 minute." 
+    },
+    { 
+        name: "Precognition", 
+        tradition: "Time", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Attack rolls against you are made with 1 bane. You make challenge rolls to resist attacks with 1 boon." 
+    },
+    { 
+        name: "Time Jump", 
+        tradition: "Time", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "You disappear from time. You can reappear in your original space at any time during the duration, or automatically when it ends." 
+    },
+    { 
+        name: "Accelerate Time", 
+        tradition: "Time", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "1 minute",
+        desc: "Target can take both a fast and a slow turn each round. When the effect ends, target is fatigued for 1d6 minutes." 
+    },
+    { 
+        name: "Decelerate Time", 
+        tradition: "Time", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "A sphere with a 3-yard radius within medium range",
+        duration: "1 minute",
+        desc: "Creatures in area must succeed on a Will challenge roll or be slowed. While slowed this way, a slow turn allows either an action or movement, but not both." 
+    },
+    { 
+        name: "Twain Self", 
+        tradition: "Time", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "Special (Self and Future Self)",
+        duration: "1 minute; see effect",
+        desc: "Summon your future self. Both take a turn each round but take 1 bane on all rolls. You share all resources (Health, Spells, Items, Afflictions). When the effect ends, you both disappear and you reappear 1 minute later where your future self was." 
+    },
+    { 
+        name: "Time Travel", 
+        tradition: "Time", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "Up to 100 years",
+        desc: "Choose a moment up to 100 years in the future. You disappear from existence until that time catches up, then reappear in your original space." 
+    },
+          { 
         name: "Create Holy Symbol", 
         tradition: "Theurgy", 
         rank: 0, 
