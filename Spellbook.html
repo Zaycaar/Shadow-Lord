@@ -27,7 +27,7 @@
 <body>
 
     <h1 style="color: #b30000;">Grimoire: Shadow of the Demon Lord</h1>
-    <h2 style="color: #b30000;">Verify text in offical sources. Ask adim for clarification, if needed..</h1>
+    <h2 style="color: #b30000;">Verify text in offical sources. Ask adim for clarification, if needed.</h1>
     <a href="index.html" style="color: #888; text-decoration: none;">← Back to Main Menu</a>
 
     <div class="controls">
@@ -90,6 +90,105 @@
         // DATA ENTRIES
         // Add your spreadsheet rows here following this exact format.
       const spells = [
+          { 
+        name: "Flowing Form", 
+        tradition: "Transformation", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "For the duration, you can move through spaces occupied by other creatures regardless of their Size." 
+    },
+    { 
+        name: "Mask", 
+        tradition: "Transformation", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 hour; see effect",
+        desc: "Alter your appearance (height +/- 12 inches, weight +/- 25%). No attributes or ancestry change. Ends if you become unconscious." 
+    },
+    { 
+        name: "Animal Shape", 
+        tradition: "Transformation", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Assume the form of a medium, small, or tiny animal. Tiny forms can gain one trait: climber, flier, or swimmer." 
+    },
+    { 
+        name: "Bounding Step", 
+        tradition: "Transformation", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Gain +4 Speed and can use an action to jump 3d6 yards and land safely." 
+    },
+    { 
+        name: "Murmuration", 
+        tradition: "Transformation", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "Instantaneous",
+        desc: "Become a cloud of starlings and fly up to twice Speed (can move through occupied spaces). Triggered: Use when taking damage to take half damage and move up to half Speed." 
+    },
+    { 
+        name: "Improved Animal Shape", 
+        tradition: "Transformation", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 hour",
+        desc: "Assume form of a large, medium, small, or tiny animal. Small/tiny forms can gain one trait: climber, flier, or swimmer." 
+    },
+    { 
+        name: "Object Form", 
+        tradition: "Transformation", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "Concentration, up to 8 hours",
+        desc: "Become an object of your Size or smaller. You cannot talk and actions are limited to concentration, but you retain normal senses. Ends if you take damage." 
+    },
+    { 
+        name: "Mist Form", 
+        tradition: "Transformation", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "Concentration, up to 1 hour",
+        desc: "Become a cloud of mist. Immune to damage and several afflictions (grabbed, immobilized, etc.). Cannot speak/act/cast. Wind moves you 2d6 yards and deals cumulative -5 Health penalty." 
+    },
+    { 
+        name: "Speed Healing", 
+        tradition: "Transformation", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "Instantaneous",
+        desc: "Concentrate for 1 minute. At the end, heal twice your healing rate and remove diseased, fatigued, and poisoned afflictions." 
+    },
+    { 
+        name: "Metallicus", 
+        tradition: "Transformation", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Body becomes metal (Defense 20, +10 Health). Immune to many afflictions; half damage from cold, fire, and weapons. You are slowed and cannot drink, eat, or swim." 
+    },
+    { 
+        name: "Greater Animal Shape", 
+        tradition: "Transformation", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 hour",
+        desc: "Assume form of a huge, large, medium, small, or tiny animal. Medium/small/tiny forms can gain one trait: climber, flier, or swimmer." 
+    },
           { 
         name: "Delay Time", 
         tradition: "Time", 
