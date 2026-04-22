@@ -58,6 +58,7 @@
             <option value="Shadow">Shadow</option>
             <option value="Song">Song</option>
             <option value="Storm">Storm</option>
+            <option value="Technomancy"Technomancy</option>
         </select>
 
         <select id="rankFilter" onchange="filterSpells()">
@@ -83,6 +84,105 @@
         // DATA ENTRIES
         // Add your spreadsheet rows here following this exact format.
       const spells = [
+          { 
+        name: "Jury-Rig", 
+        tradition: "Technomancy", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "One Size 2 or smaller damaged object you can reach",
+        duration: "Instantaneous",
+        desc: "You touch the object and remove 1d6 damage from it. Cannot be used on destroyed objects." 
+    },
+    { 
+        name: "Magic Wrench", 
+        tradition: "Technomancy", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "One creature or object within short range",
+        duration: "Instantaneous",
+        desc: "Make an Intellect attack roll against Defense. Success: 1d6 + 1 damage and the target falls prone. Attack Roll 20+: Target is impaired until the end of the round." 
+    },
+    { 
+        name: "Bolt Thrower", 
+        tradition: "Technomancy", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "1-yard cube within reach on a solid surface",
+        duration: "1 minute",
+        desc: "Create a Size 1 crossbow turret (Defense 5, Health = your Intellect). At the end of each round, it attacks a target within long range (Intellect vs Defense) for 2d6 damage. Attack Roll 20+: 1d6 extra damage." 
+    },
+    { 
+        name: "Caltrops", 
+        tradition: "Technomancy", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "5-yard radius circle on the ground within medium range",
+        duration: "1 minute",
+        desc: "Metal bits cover the area. Moving through requires an Agility challenge roll or take 1d6 + 1 damage and become slowed. If already slowed by this, target falls prone and becomes immobilized. Afflictions end when target heals." 
+    },
+    { 
+        name: "Sparking Shield", 
+        tradition: "Technomancy", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Once per round, when a melee attack hits you, the attacker must make an Agility challenge roll. Failure: 1d6 damage, moved 1d3 yards away, and falls prone." 
+    },
+    { 
+        name: "Flamethrower", 
+        tradition: "Technomancy", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "Self (creates an item)",
+        duration: "Until 6 uses expended; see effect",
+        desc: "Creates a weapon with 6 uses. Action: 5yd line deals 2d6 damage (Agility challenge for half). Warning: If wielder takes fire/lightning damage, it explodes (5yd sphere) for 1d6 damage per remaining use." 
+    },
+    { 
+        name: "Grenades", 
+        tradition: "Technomancy", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "Up to three points within short range",
+        duration: "Instantaneous",
+        desc: "Throw three grenades. Each deals 1d6 + 1 fire damage in a 1-yard radius (Agility challenge for half)." 
+    },
+    { 
+        name: "Flying Blades", 
+        tradition: "Technomancy", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "Up to three creatures or objects within medium range",
+        duration: "Instantaneous",
+        desc: "Five blades are divided among targets. For each, make an Intellect attack vs Defense. Success: 2d6 damage. Attack Roll 20+: 1d6 extra damage." 
+    },
+    { 
+        name: "Mend", 
+        tradition: "Technomancy", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "One Size 3 or smaller damaged object you can reach",
+        duration: "Instantaneous",
+        desc: "You touch the target and remove all damage from it." 
+    },
+    { 
+        name: "Powered Suit", 
+        tradition: "Technomancy", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "3-yard cube within reach",
+        duration: "Until rest; see effect",
+        desc: "Concentrate for 1 hour to build a Huge construct. Inside the cockpit, you use its Defense, Health, Speed, and actions. Ends if incapacitated." 
+    },
+    { 
+        name: "Magic Item", 
+        tradition: "Technomancy", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "One object you can reach",
+        duration: "1 hour; see effect",
+        desc: "Tasks with the object have 1 boon. Weapons deal +1d6 damage; Armor grants +1 Defense. Permanence: Spend 1 gc for 'Until Rest'. Cast daily for 40 days to make permanent." 
+    },
           { 
         name: "Fog", 
         tradition: "Storm", 
