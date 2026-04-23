@@ -44,6 +44,7 @@
             <option value="Chaos">Chaos</option>
             <option value="Conjuration">Conjuration</option>
              <option value="Curse">Curse</option>
+            <option value="Death">Death</option>
             <option value="Destruction">Destruction</option>
             <option value="Divination">Divination</option>
              <option value="Earth">Earth</option>
@@ -91,6 +92,105 @@
         // DATA ENTRIES
         // Add your spreadsheet rows here following this exact format.
       const spells = [
+          { 
+        name: "Killing Touch", 
+        tradition: "Death", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "One living creature within reach",
+        duration: "Instantaneous",
+        desc: "Will vs Agility attack. Success: Roll 3d6. If total >= target's Health, it dies. Otherwise, target is fatigued for 1 round." 
+    },
+    { 
+        name: "Protection from Death", 
+        tradition: "Death", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "One living creature within reach",
+        duration: "1 hour",
+        desc: "Target makes challenge rolls vs Death spells with 1 boon; attacks vs target with Death spells have 1 bane. Target rolls fate rolls twice and uses higher result." 
+    },
+    { 
+        name: "Injure", 
+        tradition: "Death", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One living creature within short range",
+        duration: "Instantaneous",
+        desc: "Will vs Strength attack. Success: 2d6 + 3 damage. Attack Roll 20+: 1d6 extra damage." 
+    },
+    { 
+        name: "Life Drain", 
+        tradition: "Death", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One living creature within short range",
+        duration: "Instantaneous",
+        desc: "Will vs Strength attack. Success: 1d6 + 3 damage and you heal an equal amount. Attack Roll 20+: 1d6 extra damage (heals you as well)." 
+    },
+    { 
+        name: "Stasis", 
+        tradition: "Death", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "One willing living creature within reach",
+        duration: "8 hours",
+        desc: "Target falls prone, becomes defenseless, and appears dead. Immune to diseased/poisoned, cannot gain Insanity, takes half damage. Aware of time/sound but cannot see." 
+    },
+    { 
+        name: "Decay", 
+        tradition: "Death", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "One creature/object with physical body within reach",
+        duration: "Concentration, up to 1 minute",
+        desc: "Will vs Agility attack. Success: 2d6 damage. While concentrating, target takes 1d6 damage each round. Incapacitated targets dissolve into slime; objects crumble to dust. Attack Roll 20+: 1d6 extra damage." 
+    },
+    { 
+        name: "Poisonous Breath", 
+        tradition: "Death", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "5-yard cone from you",
+        duration: "Special",
+        desc: "Strength challenge roll. Failure: 2d6 damage and poisoned. Success: 1d6 damage. Poisoned targets must succeed on Strength challenge rolls each round or take 1d6 damage; 3 successes remove the affliction." 
+    },
+    { 
+        name: "Feast of Souls", 
+        tradition: "Death", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "3-yard radius sphere within medium range",
+        duration: "Instantaneous",
+        desc: "Living creatures must make Strength challenge rolls. Failure: 5d6 damage. Success: half damage. If any creature dies, you gain a 2d6 Health bonus for 1 hour." 
+    },
+    { 
+        name: "Leprous Touch", 
+        tradition: "Death", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Unarmed strikes have 1 boon. Success: Target becomes diseased (cannot heal damage, takes 3d6 damage each round until 3 successful Strength challenge rolls). Disease spreads to others via physical contact." 
+    },
+    { 
+        name: "Death Fog", 
+        tradition: "Death", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "8-yard cube within long range",
+        duration: "Concentration, up to 1 minute",
+        desc: "Heavily obscures area. Can move fog 5 yards on concentration. Strength challenge roll (1 bane if injured): 3d6 damage and poisoned for 1 round (Success = half damage)." 
+    },
+    { 
+        name: "Stop Heart", 
+        tradition: "Death", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "One living creature within medium range",
+        duration: "Instantaneous",
+        desc: "The target takes 30 damage." 
+    },
           { 
         name: "Acidic Glob", 
         tradition: "Alchemy", 
