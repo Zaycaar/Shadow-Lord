@@ -3699,62 +3699,47 @@
     }
 ];
 
-function displaySpells(data) {
-    const grid = document.getElementById('spellGrid');
-    grid.innerHTML = '';
-    
-    data.forEach(spell => {
-        const typeClass = spell.type === "Attack" ? "card-attack" : "card-utility";
-        const card = document.createElement('div');
-        card.className = `spell-card ${typeClass}`;
-        
-        card.innerHTML = `
-            <div class="spell-header">
-                <div class="spell-name">${spell.name}</div>
-                <div class="type-tag">${spell.type}</div>
-            </div>
-            <div class="spell-meta">${spell.tradition.toUpperCase()} / RANK ${spell.rank}</div>
-            <div class="spell-detail"><strong>Target/Area:</strong> ${spell.targetArea}</div>
-            <div class="spell-detail"><strong>Duration:</strong> ${spell.duration}</div>
-            <hr>
-            <div class="spell-desc">${spell.desc}</div>
-        `;
-        grid.appendChild(card);
-    });
-}
+    function filterSpells() {
+        const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+        const tradition = document.getElementById('traditionFilter').value;
+        const rank = document.getElementById('rankFilter').value;
+        const type = document.getElementById('typeFilter').value;
 
-function filterSpells() {
-    const search = document.getElementById('searchInput').value.toLowerCase();
-    const trad = document.getElementById('traditionFilter').value;
-    const rank = document.getElementById('rankFilter').value;
-    const type = document.getElementById('typeFilter').value;
+        const filtered = spells.filter(spell => {
+            return (spell.name.toLowerCase().includes(searchTerm) || searchTerm === '') &&
+                   (tradition === 'All' || spell.tradition === tradition) &&
+                   (rank === 'All' || spell.rank.toString() === rank) &&
+                   (type === 'All' || spell.type === type);
+        });
 
-    const filtered = spells.filter(s => {
-        const matchesSearch = s.name.toLowerCase().includes(search);
-        const matchesTrad = (trad === "All" || s.tradition === trad);
-        const matchesRank = (rank === "All" || s.rank.toString() === rank);
-        const matchesType = (type === "All" || s.type === type);
-        return matchesSearch && matchesTrad && matchesRank && matchesType;
-    });
-
-    displaySpells(filtered);
-}
-
-// --- THE FIX ---
-
-// 1. Sort the master list immediately
-spells.sort((a, b) => {
-    // Sort by Rank first (0, 1, 2...)
-    if (a.rank !== b.rank) {
-        return a.rank - b.rank;
+        displaySpells(filtered);
     }
-    // Then sort by Name alphabetically (A-Z)
-    return a.name.localeCompare(b.name);
-});
 
-// 2. Initial render - show the sorted list
-displaySpells(spells);
+    function displaySpells(spellsToDisplay) {
+        const grid = document.getElementById('spellGrid');
+        grid.innerHTML = '';
 
+        spellsToDisplay.forEach(spell => {
+            const card = document.createElement('div');
+            card.className = `spell-card card-${spell.type.toLowerCase()}`;
+            card.innerHTML = `
+                <div class="spell-header">
+                    <div class="spell-name">${spell.name}</div>
+                    <div class="type-tag">${spell.type}</div>
+                </div>
+                <div class="spell-meta">
+                    ${spell.tradition} • Rank ${spell.rank}
+                </div>
+                <div class="spell-meta">Target: ${spell.targetArea}</div>
+                <div class="spell-meta">Duration: ${spell.duration}</div>
+                <div class="spell-desc">${spell.desc}</div>
+            `;
+            grid.appendChild(card);
+        });
+    }
+
+    // Initialize display on page load
+    displaySpells(spells);
 </script>
 </body>
 </html>
