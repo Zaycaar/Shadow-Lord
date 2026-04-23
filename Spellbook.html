@@ -36,6 +36,7 @@
         <select id="traditionFilter" onchange="filterSpells()">
                <option value="All">All Traditions</option>
             <option value="Air">Air</option>
+            <option value="Alchemy">Alchemy</option>
             <option value="Alteration">Alteration</option>
             <option value="Arcana">Arcana</option>
             <option value="Battle">Battle</option>
@@ -90,6 +91,105 @@
         // DATA ENTRIES
         // Add your spreadsheet rows here following this exact format.
       const spells = [
+          { 
+        name: "Acidic Glob", 
+        tradition: "Alchemy", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "One creature or object within short range",
+        duration: "Instantaneous",
+        desc: "Intellect vs Agility. Success: 1d6 + 2 damage. Attack Roll 20+: 1d6 extra damage." 
+    },
+    { 
+        name: "Identify Substance", 
+        tradition: "Alchemy", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "One substance within short range",
+        duration: "Instantaneous",
+        desc: "Learn the name and effect of a substance. If it is a potion, you also learn the recipe to make it with the Brew Potion spell." 
+    },
+    { 
+        name: "Brew Potion", 
+        tradition: "Alchemy", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "One small container",
+        duration: "Permanent",
+        desc: "Req: Alchemist's kit and ingredients (half potion price). Concentrate for 1 hour to create one dose of a potion previously identified via Identify Substance." 
+    },
+    { 
+        name: "Brew Remedy", 
+        tradition: "Alchemy", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "One small container",
+        duration: "8 hours or until consumed",
+        desc: "Req: Alchemist's kit. Concentrate for 1 minute to create a potion. Drinker heals half healing rate. If diseased/fatigued/poisoned, Strength challenge roll to remove one affliction." 
+    },
+    { 
+        name: "Brew Superior Glue", 
+        tradition: "Alchemy", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "One small container",
+        duration: "8 hours or until expended",
+        desc: "Req: Alchemist's kit. Concentrate for 1 minute to create a dose of Superior Glue (see Ch. 3)." 
+    },
+    { 
+        name: "Acid Darts", 
+        tradition: "Alchemy", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "Up to three targets within medium range",
+        duration: "1 minute (dot)",
+        desc: "Fling three blobs. For each, Intellect vs Agility. Success: 1d6 damage + 1d3 extra damage at end of round (removed by taking an action). Attack Roll 20+: 1d3 damage repeats every round for 1 minute." 
+    },
+    { 
+        name: "Brew Liquid Smoke", 
+        tradition: "Alchemy", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "One small container",
+        duration: "8 hours or until expended",
+        desc: "Req: Alchemist's kit. Concentrate for 1 minute to create a dose of Liquid Smoke (see Ch. 3)." 
+    },
+    { 
+        name: "Brew Alchemist’s Poison", 
+        tradition: "Alchemy", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "One small container",
+        duration: "8 hours or until expended",
+        desc: "Req: Alchemist's kit. Concentrate for 1 minute to create a toxin. Consuming or being hit by poisoned weapon requires Strength challenge (2 banes) or take 5d6 + 10 damage and be poisoned (1 min). Failures during poisoning deal 1d6 damage." 
+    },
+    { 
+        name: "Brew Wondrous Concoction", 
+        tradition: "Alchemy", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "One small container",
+        duration: "8 hours or until consumed",
+        desc: "Req: Alchemist's kit. Concentrate for 1 minute to create a potion. Drinker heals full healing rate, and for 1 minute gains +2 Speed and 2 boons on all rolls." 
+    },
+    { 
+        name: "Liquefy", 
+        tradition: "Alchemy", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "One creature or object within short range",
+        duration: "1 minute (dot)",
+        desc: "Intellect vs Agility. Success: 3d6 + 5 damage. Target takes 2d6 damage at end of round until action spent to remove acid. Incapacitated targets dissolve into a puddle. Attack Roll 20+: 2d6 extra damage." 
+    },
+    { 
+        name: "Philosopher’s Stone", 
+        tradition: "Alchemy", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "One specially prepared stone (10 gc materials)",
+        duration: "24 hours or until expended",
+        desc: "Touch to target to crumble stone and choose: heal all damage, repair object, remove all afflictions, reduce 1d6 Insanity, resurrect dead (Health -1, impaired), or turn 1lb of object to gold (10 gc)." 
+    },
           { 
         name: "Freeze", 
         tradition: "Water", 
