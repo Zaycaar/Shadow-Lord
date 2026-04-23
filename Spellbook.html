@@ -81,6 +81,7 @@
             <option value="3">Rank 3</option>
             <option value="4">Rank 4</option>
             <option value="5">Rank 5</option>
+             <option value="6">Rank 6</option>
         </select>
 
         <select id="typeFilter" onchange="filterSpells()">
@@ -96,6 +97,87 @@
         // DATA ENTRIES
         // Add your spreadsheet rows here following this exact format.
       const spells = [
+          { 
+        name: "Corpse Sight", 
+        tradition: "Necromancy", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "One undead within long range",
+        duration: "Instantaneous",
+        desc: "Intellect challenge roll. Success: Project mind into target to perceive from its space. If compelled, you can cast spells originating from the target's body. DLC" 
+    },
+    { 
+        name: "Ley Line", 
+        tradition: "Nature", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "Self (Outdoors/Wilderness)",
+        duration: "8 hours",
+        desc: "Name a destination within 64 miles. If valid, a path appears. You and up to 10 followers move at twice normal Speed and tracks are concealed. DLC" 
+    },
+    { 
+        name: "Animal Spy", 
+        tradition: "Primal", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "One Size 1/2 or smaller animal within medium range",
+        duration: "Special",
+        desc: "Mind enters animal. Use animal stats except Int/Will/Insanity/Corruption. Can cast spells with no speech. Every hour, make Will challenge roll or gain 1 Insanity. Sacrifice: Expend to cast rank 0/1 Primal spell. DLC" 
+    },
+    { 
+        name: "Destructive Rune", 
+        tradition: "Rune", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "A point on an object that can open/close",
+        duration: "1 day or triggered",
+        desc: "Req: Writing kit/1 gc ink. Inscribe rune that disappears. Trigger: Another creature opens object. 6-yard cone of flame deals 3d6+5 damage (Agility for half). DLC" 
+    },
+    { 
+        name: "Prophecy", 
+        tradition: "Divination", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "An activity within the next hour",
+        duration: "Instantaneous",
+        desc: "Concentrate for 1 minute. Learn if the outcome of the described activity will be good, bad, or uncertain. DLC" 
+    },
+    { 
+        name: "Recall Soul", 
+        tradition: "Necromancy", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "One corpse (never before targeted)",
+        duration: "1 min or 3 questions",
+        desc: "Ask soul 3 questions. Souls in Hell: Will challenge (bane per Corruption) to summon; onlookers may gain 1 Insanity from its rants. 1-in-6 chance soul becomes a Wraith when spell ends. Sacrifice: Expend to cast rank 0/1 Necromancy spell. DLC" 
+    },
+    { 
+        name: "Entrapping Pentagram", 
+        tradition: "Protection", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "A 1-yard radius circle you drew",
+        duration: "24 hours or triggered",
+        desc: "Req: Writing kit/1 ss materials. Pentagram is invisible until triggered. Creature entering space becomes immobilized and cannot be moved. Intellect challenge every hour to escape. DLC" 
+    },
+    { 
+        name: "Secrets of the Land", 
+        tradition: "Nature", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "A natural landmark",
+        duration: "Instantaneous",
+        desc: "Maintain contact and concentrate for 1 minute. Learn three true things about the area within 10 miles. DLC" 
+    },
+    { 
+        name: "Atonement", 
+        tradition: "Theurgy", 
+        rank: 6, 
+        type: "Utility", 
+        targetArea: "One creature",
+        duration: "Instantaneous",
+        desc: "Req: Holy water/symbol. Concentrate for 1 minute. Target makes Will challenge roll. Success: Reduce Corruption by 1d3. Failure: You and target take 1d6 damage per point of Corruption target has. DLC" 
+    },
            { 
         name: "Sense Thoughts", 
         tradition: "Telepathy", 
