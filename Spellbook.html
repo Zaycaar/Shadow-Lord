@@ -45,6 +45,7 @@
             <option value="Conjuration">Conjuration</option>
              <option value="Curse">Curse</option>
             <option value="Death">Death</option>
+            <option value="Demonology">Demonology</option>
             <option value="Destruction">Destruction</option>
             <option value="Divination">Divination</option>
              <option value="Earth">Earth</option>
@@ -92,6 +93,105 @@
         // DATA ENTRIES
         // Add your spreadsheet rows here following this exact format.
       const spells = [
+          { 
+        name: "Claws of Darkness", 
+        tradition: "Demonology", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "One creature within short range",
+        duration: "Instantaneous",
+        desc: "Take 1 damage. Intellect vs Agility. Success: 1d3 + Corruption damage. Attack Roll 20+: Move target 1yd and it is impaired for 1 round." 
+    },
+    { 
+        name: "Demonic Guidance", 
+        tradition: "Demonology", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Take 1 damage. Gain 1 boon on all rolls. Each failure grants 1 Insanity (no fear from this gain). Triggered: Use for 2 boons on one roll; failure deals 1d6 damage and 1 Insanity." 
+    },
+    { 
+        name: "Compel Demon", 
+        tradition: "Demonology", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One demon within short range",
+        duration: "1 minute",
+        desc: "Take 1d3 damage. Intellect vs Will (1 boon if you summoned it). Success: Demon is compelled. Failure: Demon gains 1 boon vs you and is immune to your Compel." 
+    },
+    { 
+        name: "Favor of the Demon Lord", 
+        tradition: "Demonology", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "Special",
+        desc: "Take 1d3 damage. Gain 1d6 Insanity. If you don't go mad: +4d6 Health and 1 boon on all rolls. Roll d6 at end of each round; 6 ends effect." 
+    },
+    { 
+        name: "Offering of Blood", 
+        tradition: "Demonology", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Take 1d3 damage. Gain 1 boon on attack spell rolls; enemies take 1 bane on challenge rolls against your spells." 
+    },
+    { 
+        name: "Call Lesser Demon", 
+        tradition: "Demonology", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "1-yard cube within short range",
+        duration: "Permanent",
+        desc: "Take 1d6 damage. Roll d6: (6) Medium Demon, (2-5) Small Demon, (1) Nothing. Summoned demons act naturally and stay until destroyed." 
+    },
+    { 
+        name: "Whispers from the Void", 
+        tradition: "Demonology", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "Until rest or expended",
+        desc: "Take 1d6 damage. Gain 'whispers' equal to damage taken. Gain 1 Insanity to expend a whisper and turn a failed roll into a success." 
+    },
+    { 
+        name: "Possession", 
+        tradition: "Demonology", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "One non-demon within short range",
+        duration: "Special",
+        desc: "Take 1d6+1 damage. Intellect vs Will (1 boon if target has Corruption). Success: Target gains 1 Corruption and must attack nearest creature each round. Roll d6 at end of round; 1 ends effect." 
+    },
+    { 
+        name: "Shadow of the Void", 
+        tradition: "Demonology", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "1-yard cube in shadow/darkness within medium range",
+        duration: "1 minute",
+        desc: "Take 1d6+1 damage. Create a compelled Shadow. Creatures seeing it must succeed on a Will challenge roll (1 bane) or become frightened." 
+    },
+    { 
+        name: "Call Demon", 
+        tradition: "Demonology", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "2-yard cube within short range",
+        duration: "Permanent",
+        desc: "Take 1d6+2 damage. Roll d6: (6) Large Demon, (2-5) Medium Demon, (1) Nothing. Summoned demons act naturally and stay until destroyed." 
+    },
+    { 
+        name: "Shadow of the Demon Lord", 
+        tradition: "Demonology", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "3d6-yard radius sphere from you",
+        duration: "3d6 rounds",
+        desc: "Take 2d6 damage. Total darkness. Creatures in area must make Will challenge rolls (bane per Corruption) or gain 1 Insanity (madness = possession). GM deals 2d6+3 damage to 1d6 random creatures; incapacitated = destroyed." 
+    },
           { 
         name: "Killing Touch", 
         tradition: "Death", 
