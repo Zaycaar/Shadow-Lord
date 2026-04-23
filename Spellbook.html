@@ -64,11 +64,112 @@
             <option value="Spiritualism">Spiritualism</option>
             <option value="Storm">Storm</option>
             <option value="Technomancy">Technomancy</option>
+            <option value="Telekinesis">Telekinesis</option>
+            <option value="Telepathy">Telepathy</option>
             <option value="Teleportation">Teleportation</option>
             <option value="Theurgy">Theurgy</option>
             <option value="Time">Time</option>
             <option value="Transformation">Transformation</option>
             <option value="Water">Water</option>
+            { 
+        name: "Sense Thoughts", 
+        tradition: "Telepathy", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "10-yard radius sphere from you",
+        duration: "1 minute",
+        desc: "Detect location of each creature in area with an Intellect score. They cannot be hidden from you. Area moves with you." 
+    },
+    { 
+        name: "Share Thoughts", 
+        tradition: "Telepathy", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "One creature (Int 5+) within medium range",
+        duration: "1 minute",
+        desc: "Communicate telepathically without a shared language. Ends if target moves beyond medium range." 
+    },
+    { 
+        name: "Mental Static", 
+        tradition: "Telepathy", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "3-yard cube within short range",
+        duration: "1 minute",
+        desc: "Creatures in area take 2 banes on Intellect, Will, and Perception rolls. Triggered: Use when attacked (Int/Will/Per); duration becomes 1 round." 
+    },
+    { 
+        name: "Message", 
+        tradition: "Telepathy", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "One creature you have seen within 100 miles",
+        duration: "Instantaneous",
+        desc: "Send a 25-word message or image. Target can reply. Understandable regardless of language. Sacrifice: Expend to cast Share Thoughts." 
+    },
+    { 
+        name: "Mind Stab", 
+        tradition: "Telepathy", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One creature (Int 5+) within medium range",
+        duration: "Instantaneous",
+        desc: "Intellect vs Intellect. Success: 1d6 + 6 damage. Attack Roll 20+: +1d6 extra damage. Triggered: Use on your turn for half damage on success." 
+    },
+    { 
+        name: "Read Minds", 
+        tradition: "Telepathy", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "Self (Medium range scan)",
+        duration: "Concentration, up to 1 minute",
+        desc: "Hear thoughts/emotions (Perception rolls have 1 bane). Penetrates barriers (1yd wood, 1ft rock, 1in metal). Concentration: Intellect vs Will to learn secrets or emotional state." 
+    },
+    { 
+        name: "Repulsion", 
+        tradition: "Telepathy", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "2-yard radius sphere from you",
+        duration: "1 minute",
+        desc: "Hostile thoughts fill area. Enemies in area take 2 banes on all rolls. Area moves with you." 
+    },
+    { 
+        name: "Emotional Barrage", 
+        tradition: "Telepathy", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "One creature within medium range",
+        duration: "1 minute",
+        desc: "Intellect vs Will. Success: Target is dazed. Target makes Intellect challenge roll at end of each round to remove." 
+    },
+    { 
+        name: "Erase Presence", 
+        tradition: "Telepathy", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "Up to five creatures within medium range",
+        duration: "1 minute",
+        desc: "Intellect challenge roll. Failure: Target considers you invisible while you are within medium range of it." 
+    },
+    { 
+        name: "Husk", 
+        tradition: "Telepathy", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "One creature within medium range",
+        duration: "Instantaneous",
+        desc: "Intellect vs Will. Success: 6d6 + 3 damage. If incapacitated, target loses Intellect, professions, and languages forever." 
+    },
+    { 
+        name: "Mind Blast", 
+        tradition: "Telepathy", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "8-yard cone from you",
+        duration: "Instantaneous",
+        desc: "Creatures with 20 Health or less die instantly (head explodes). Creatures with 21+ Health: Will challenge (boon if 40+ Health) or be stunned 1d3+1 rounds." 
+    },
         </select>
 
         <select id="rankFilter" onchange="filterSpells()">
@@ -94,6 +195,105 @@
         // DATA ENTRIES
         // Add your spreadsheet rows here following this exact format.
       const spells = [
+          { 
+        name: "Forceful Push", 
+        tradition: "Telekinesis", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "One creature or object within medium range",
+        duration: "Instantaneous",
+        desc: "Will vs Strength (1 bane if target is larger than you). Success: Move target 1d3 + Power yards away." 
+    },
+    { 
+        name: "Mind Over Matter", 
+        tradition: "Telekinesis", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "One Size 1 or smaller unsecured object within short range",
+        duration: "1 minute",
+        desc: "Action: Move target up to 5 yards. Can suspend objects in air by concentrating." 
+    },
+    { 
+        name: "Crush", 
+        tradition: "Telekinesis", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One creature or object within short range",
+        duration: "Instantaneous",
+        desc: "Will vs Strength attack. Success: 3d6 damage and target must succeed on a Strength challenge roll or be impaired for 1 round. Attack Roll 20+: 1d6 extra damage." 
+    },
+    { 
+        name: "Dancing Weapon", 
+        tradition: "Telekinesis", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "One weapon within short range (not held by another)",
+        duration: "1 minute",
+        desc: "Weapon floats 2 yards up. Cast/Action/Triggered: Move weapon 10 yards and attack (Will attack roll). You attack as if wielding it." 
+    },
+    { 
+        name: "Telekinetic Shield", 
+        tradition: "Telekinesis", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute or until depleted",
+        desc: "Roll 4d6; result is the shield's Health. All damage dealt to you is applied to the shield first." 
+    },
+    { 
+        name: "Hold", 
+        tradition: "Telekinesis", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "One creature within medium range",
+        duration: "Concentration, up to 1 minute",
+        desc: "Will vs Strength. Success: Target is defenseless. Ends if target takes damage." 
+    },
+    { 
+        name: "Levitate", 
+        tradition: "Telekinesis", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "One Size 2 or smaller creature/object within medium range",
+        duration: "Concentration, up to 1 minute",
+        desc: "Lift target 3 yards up (Will vs Strength if unwilling). Target can only move by crawling. Attacks vs target's Defense/Agility have 1 boon. Concentration: move target +/- 3 yards." 
+    },
+    { 
+        name: "Force Barrier", 
+        tradition: "Telekinesis", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "10yd long, 10yd tall, 1in thick line within long range",
+        duration: "1 hour",
+        desc: "Invisible wall. Nothing can pass physically; immune to all damage." 
+    },
+    { 
+        name: "Force Wave", 
+        tradition: "Telekinesis", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "3-yard radius sphere within medium range",
+        duration: "Instantaneous",
+        desc: "Everything in area takes 5d6 damage and moves 1d6 yards away from center. Strength challenge for half damage and no movement." 
+    },
+    { 
+        name: "Force Bubble", 
+        tradition: "Telekinesis", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "One Size 2 or smaller creature/object within long range",
+        duration: "Concentration, up to 1 minute",
+        desc: "Will vs Agility. Success: Target trapped in a sphere immune to damage. Concentration: move sphere 5 yards. Ends if sphere exceeds long range." 
+    },
+    { 
+        name: "Telekinetic Outburst", 
+        tradition: "Telekinesis", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "5-yard radius sphere from you",
+        duration: "Instantaneous",
+        desc: "Everything in area takes 6d6 damage, moves 1d6 yards away, and falls prone. Strength challenge for half damage and no movement/prone. You are immune." 
+    },
           { 
         name: "Spirit Bane", 
         tradition: "Spiritualism", 
