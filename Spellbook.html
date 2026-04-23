@@ -61,6 +61,7 @@
             <option value="Rune">Rune</option>
             <option value="Shadow">Shadow</option>
             <option value="Song">Song</option>
+            <option value="Spiritualism">Spiritualism</option>
             <option value="Storm">Storm</option>
             <option value="Technomancy">Technomancy</option>
             <option value="Teleportation">Teleportation</option>
@@ -93,6 +94,105 @@
         // DATA ENTRIES
         // Add your spreadsheet rows here following this exact format.
       const spells = [
+          { 
+        name: "Spirit Bane", 
+        tradition: "Spiritualism", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "One weapon you can reach",
+        duration: "1 minute",
+        desc: "Successful attacks with the weapon deal full damage to spirits and creatures that normally take half damage from weapons." 
+    },
+    { 
+        name: "Spirit of Vengeance", 
+        tradition: "Spiritualism", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "One creature within short range",
+        duration: "1 minute",
+        desc: "Once per round, when target deals damage, the victim makes a Will challenge roll. Failure: Victim takes 1 extra damage and is frightened for 1 round." 
+    },
+    { 
+        name: "Bear Spirit", 
+        tradition: "Spiritualism", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "One creature within short range",
+        duration: "1 minute",
+        desc: "Target gains +5 Health and 1 boon on Strength attack/challenge rolls." 
+    },
+    { 
+        name: "Control Spirit", 
+        tradition: "Spiritualism", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "One spirit or creature under your Spiritualism spell",
+        duration: "Instantaneous",
+        desc: "Will challenge roll. Success: Move target up to half Speed and target makes an attack against a creature it can reach." 
+    },
+    { 
+        name: "Wolf Spirit", 
+        tradition: "Spiritualism", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "One creature within short range",
+        duration: "1 minute",
+        desc: "Target gains 1 boon on Perception challenge rolls and weapon attacks deal 1d6 extra damage." 
+    },
+    { 
+        name: "Eagle Spirit", 
+        tradition: "Spiritualism", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "One creature within short range",
+        duration: "1 minute",
+        desc: "Target gains +4 Speed, ignores difficult terrain, and gains 1 boon on Agility attack/challenge rolls." 
+    },
+    { 
+        name: "Spirit of Torment", 
+        tradition: "Spiritualism", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "One creature within medium range",
+        duration: "1 minute",
+        desc: "Will vs Will attack. Success: Target has -5 Health (-10 on 20+), and is impaired and slowed." 
+    },
+    { 
+        name: "Spirit of Healing", 
+        tradition: "Spiritualism", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "One creature within medium range",
+        duration: "1 minute",
+        desc: "Target heals damage equal to healing rate. For the duration, target heals +1d6 whenever it heals damage." 
+    },
+    { 
+        name: "Séance", 
+        tradition: "Spiritualism", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "Until rest or expended",
+        desc: "Req: 1 cp powders/small fire. Gain 2d6 spirits. Expend 1 for 1 boon on a roll. Action: Expend 3 to ask GM a truthful Yes/No question." 
+    },
+    { 
+        name: "Howl of the Wendigo", 
+        tradition: "Spiritualism", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "10-yard radius sphere within long range",
+        duration: "1 minute",
+        desc: "Will challenge roll. Failure: 3d6 damage and is deafened/frightened for 1 minute. Success: Half damage." 
+    },
+    { 
+        name: "Hateful Spirits", 
+        tradition: "Spiritualism", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "5-yard radius sphere within long range",
+        duration: "1 round",
+        desc: "Will challenge roll. Failure: 5d6 damage, frightened 1 round, and must move Speed away from center. Success: Half damage." 
+    },
           { 
         name: "Claws of Darkness", 
         tradition: "Demonology", 
