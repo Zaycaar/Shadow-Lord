@@ -3740,6 +3740,55 @@
 
     // Initialize display on page load
     displaySpells(spells);
+        // Render all spells to the grid
+function renderSpells(spellsToRender) {
+    const spellGrid = document.getElementById('spellGrid');
+    spellGrid.innerHTML = ''; // Clear existing content
+    
+    spellsToRender.forEach(spell => {
+        const card = document.createElement('div');
+        card.className = `spell-card card-${spell.type.toLowerCase()}`;
+        card.innerHTML = `
+            <div class="spell-header">
+                <div class="spell-name">${spell.name}</div>
+                <span class="type-tag">${spell.type}</span>
+            </div>
+            <div class="spell-meta">
+                ${spell.tradition} • Rank ${spell.rank}
+            </div>
+            <div style="font-size: 0.85em; color: #aaa; margin-bottom: 8px;">
+                <strong>Target:</strong> ${spell.targetArea}<br>
+                <strong>Duration:</strong> ${spell.duration}
+            </div>
+            <div class="spell-desc">${spell.desc}</div>
+        `;
+        spellGrid.appendChild(card);
+    });
+}
+
+// Filter spells based on search and filter criteria
+function filterSpells() {
+    const searchInput = document.getElementById('searchInput').value.toLowerCase();
+    const traditionFilter = document.getElementById('traditionFilter').value;
+    const rankFilter = document.getElementById('rankFilter').value;
+    const typeFilter = document.getElementById('typeFilter').value;
+    
+    const filtered = spells.filter(spell => {
+        const matchesSearch = spell.name.toLowerCase().includes(searchInput);
+        const matchesTradition = traditionFilter === 'All' || spell.tradition === traditionFilter;
+        const matchesRank = rankFilter === 'All' || spell.rank == rankFilter;
+        const matchesType = typeFilter === 'All' || spell.type === typeFilter;
+        
+        return matchesSearch && matchesTradition && matchesRank && matchesType;
+    });
+    
+    renderSpells(filtered);
+}
+
+// Initial render on page load
+document.addEventListener('DOMContentLoaded', function() {
+    renderSpells(spells);
+});
 </script>
 </body>
 </html>
