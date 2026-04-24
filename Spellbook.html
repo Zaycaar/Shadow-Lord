@@ -54,14 +54,19 @@
             <option value="Fire">Fire</option>
             <option value="Forbidden">Forbidden</option>
             <option value="Illusion">Illusion</option>
+            <option value="Invocation">Invocation</option>
             <option value="Life">Life</option>
+            <option value="Madness">Madness</option>
+            <option value="Metal">Metal</option>
             <option value="Nature">Nature</option>
             <option value="Necromancy">Necromancy</option>
+            <option value="Order">Order</option>
             <option value="Primal">Primal</option>
             <option value="Protection">Protection</option>
             <option value="Rune">Rune</option>
             <option value="Shadow">Shadow</option>
             <option value="Song">Song</option>
+            <option value="Soul">Soul</option>
             <option value="Spiritualism">Spiritualism</option>
             <option value="Storm">Storm</option>
             <option value="Technomancy">Technomancy</option>
@@ -98,6 +103,105 @@
         // DATA ENTRIES
         // Add your spreadsheet rows here following this exact format.
       const spells = [
+          { 
+        name: "Shape Metal", 
+        tradition: "Metal", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "One metal object you can reach/hold",
+        duration: "Instantaneous (while touching)",
+        desc: "Touch target to make it like putty. Mold, twist, or pinch pieces. Pieces regain hardness once you lose contact. Companion 2" 
+    },
+    { 
+        name: "Unbreakable", 
+        tradition: "Metal", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "One object you can reach",
+        duration: "1 minute",
+        desc: "Target's Health is doubled and it takes half damage from weapons. Companion 2" 
+    },
+    { 
+        name: "Barbed Hide", 
+        tradition: "Metal", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Unarmed attacks deal +1d6 extra damage. Creatures that grab you take 1d6 damage. Companion 2" 
+    },
+    { 
+        name: "Rust", 
+        tradition: "Metal", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "One iron object you can reach",
+        duration: "1 minute",
+        desc: "Action/Touch: Target iron object takes 2d6 damage. If held/worn, requires Str/Agi vs Agility attack roll. Disintegrates if destroyed. Companion 2" 
+    },
+    { 
+        name: "Sharpen", 
+        tradition: "Metal", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "One metal-edged/pointed weapon you reach",
+        duration: "1 minute",
+        desc: "Weapon becomes supernaturally sharp. Attack Roll 20+ (exceeding TN by 5): Deal 1d6 extra damage. Companion 2" 
+    },
+    { 
+        name: "Fusillade", 
+        tradition: "Metal", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "5-yard cone from reach",
+        duration: "Instantaneous",
+        desc: "Deals 2d6 + 1 damage (Agility half). Faeries take 1 bane on challenge and +1d6 extra damage regardless of success. Companion 2" 
+    },
+    { 
+        name: "Strength of Steel", 
+        tradition: "Metal", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "1 minute",
+        desc: "Target gains +1 Defense, +5 Health, and +1d6 melee damage. Drawbacks: Speed drops to 2; enemies gain 1 boon to attack target. Companion 2" 
+    },
+    { 
+        name: "Cage of Iron", 
+        tradition: "Metal", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "3-yard cube on ground within short range",
+        duration: "1 hour or until destroyed",
+        desc: "Forms an iron cage (Size 3, Defense 5, Health 60). Targets in area can use triggered action to Agility challenge leap out. Size 1/2 can pass through bars. Companion 2" 
+    },
+    { 
+        name: "Magnetize", 
+        tradition: "Metal", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "One metal object within medium range",
+        duration: "1 minute",
+        desc: "Emits 5yd magnetic field. Unsecured metal objects fly to target. Creatures wearing/made of metal within 10yds move at half Speed. Metal melee attacks within 10yds have 3 banes. Metal ranged attacks vs target automatically succeed. Companion 2" 
+    },
+    { 
+        name: "Repel Metal", 
+        tradition: "Metal", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "3-yard-radius sphere within long range",
+        duration: "Instantaneous",
+        desc: "Creatures in metal armor: Str challenge (3 banes) or shoved 1d6+3 yards (damage on impact). Unsecured metal: Flies 2d6+3 yards away. Carried/Worn items (purses, ammo, jewelry): Str challenge (3 banes) or fly away. Companion 2" 
+    },
+    { 
+        name: "Flesh to Iron", 
+        tradition: "Metal", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Flesh becomes iron. +3 Defense (max 25), Speed 4, take half damage, cannot be moved against will. Unarmed deals +2d6 damage. Drawback: 1 bane on Str/Agi rolls. Companion 2" 
+    },
           { 
         name: "Investiture of the Brute", 
         tradition: "Invocation", 
