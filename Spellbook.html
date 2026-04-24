@@ -104,6 +104,141 @@
         // Add your spreadsheet rows here following this exact format.
       const spells = [
           { 
+        name: "Bleed", 
+        tradition: "Necromancy", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "One living creature within short range",
+        duration: "Special",
+        desc: "Intellect/Will vs Strength. Success: 1d3 damage. Target takes 1 damage each round unless they get three Strength successes or heal. 20+: +1d3 damage. Desolation" 
+    },
+    { 
+        name: "Restore Humors", 
+        tradition: "Necromancy", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "One living creature you can reach",
+        duration: "Instantaneous",
+        desc: "Intellect/Will challenge. Success: Target heals its healing rate. Failure: Target takes damage equal to half its healing rate. Desolation" 
+    },
+    { 
+        name: "Blood to Water", 
+        tradition: "Necromancy", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One living creature within short range",
+        duration: "1 round",
+        desc: "Instant death if Health <= 10. Otherwise, Intellect/Will vs Strength. Success: 1d3 damage and target is dazed/fatigued. Desolation" 
+    },
+    { 
+        name: "Transfusion", 
+        tradition: "Necromancy", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One living creature within short range",
+        duration: "1 minute",
+        desc: "Intellect/Will vs Strength. Success: Target takes 2d6 Health penalty; you gain 2d6 Health bonus (Vampires can choose 1 blood point instead). Desolation" 
+    },
+    { 
+        name: "Boiling Blood", 
+        tradition: "Necromancy", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "One living creature within short range",
+        duration: "Instantaneous",
+        desc: "Instant death if Health <= 15 (explodes for 1d6 damage in 3yd radius). Otherwise, Intellect/Will vs Strength: 2d6+3 damage. 20+: +1d6 damage. Desolation" 
+    },
+    { 
+        name: "Hemorrhage", 
+        tradition: "Necromancy", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "One living creature within medium range",
+        duration: "Special",
+        desc: "Instant death if Health <= 20. Otherwise, Intellect/Will vs Strength: 5d6 damage and starts bleeding (1d6/round). Bleeding ends with healing or Intellect success. 20+: +2d6 damage. Desolation" 
+    },
+          { 
+        name: "Heat Wave", 
+        tradition: "Air", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "3-yard long cone",
+        duration: "1 minute",
+        desc: "Strength challenge roll. Failure: Living creatures become fatigued. While fatigued, take 1 damage each time an attack or challenge roll is made. Desolation" 
+    },
+    { 
+        name: "Shimmer Wall", 
+        tradition: "Air", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "5yd long, 2yd tall, 1yd wide line",
+        duration: "1 minute",
+        desc: "Creatures beyond short range of the wall make attack rolls with 3 banes against targets behind the wall. Desolation" 
+    },
+    { 
+        name: "Bind Dust Devil", 
+        tradition: "Air", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "1-yard cube of sand/dust within medium range",
+        duration: "1 minute",
+        desc: "Target becomes a Dust Devil. Will vs Will: Success = compelled; Failure = hostile. Cannot be voluntarily ended. Desolation" 
+    },
+    { 
+        name: "Sun Hammer", 
+        tradition: "Celestial", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "25yd tall, 2yd radius cylinder within extreme range",
+        duration: "Instantaneous",
+        desc: "Requires sunlight. Deals 2d6 + 3 damage. Strength challenge: Success = half damage; Failure = prone and fatigued for 1 minute. Desolation" 
+    },
+    { 
+        name: "Curse of the Tomb Kings", 
+        tradition: "Curse", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "One living creature within medium range",
+        duration: "1 minute",
+        desc: "Intellect vs Strength & Will. Vs Strength success: 2d6 damage. Vs Will success: Frightened. Both success: Cursed (fatigued and cannot heal). Desolation" 
+    },
+    { 
+        name: "Quicksand", 
+        tradition: "Earth", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "4-yard radius circle on ground",
+        duration: "1 minute",
+        desc: "Difficult terrain. Strength challenge each round: Failure = stuck (immobilized); Second failure = submerged (blinded/immobilized/no breathing). Ending on stone is lethal. Desolation" 
+    },
+    { 
+        name: "Liche", 
+        tradition: "Necromancy", 
+        rank: 6, 
+        type: "Utility", 
+        targetArea: "One dose of poison",
+        duration: "1 hour (Effect is permanent)",
+        desc: "Req: Mortal. Prep: 100gc phylactery (Defense 25, Health = yours) built over 1mo/1wk/1day. Drink poison to die instantly. Soul enters phylactery; 8 hours later, you rise as a Liche. See page Tombs of the Desolation page 17. Desolation" 
+    },
+    { 
+        name: "Elemental Adaptation", 
+        tradition: "Protection", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "Up to five creatures you can reach",
+        duration: "2 hours",
+        desc: "Targets are immune to the effects of deprivation and exposure. Desolation" 
+    },
+    { 
+        name: "Desiccate", 
+        tradition: "Water", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "One living creature within short range",
+        duration: "1 hour",
+        desc: "Will vs Strength. Success: 2d6 damage and fatigued. If already fatigued, take +2d6 extra damage. Fatigued removed by drinking gallons of water = Size. Desolation" 
+    },
+          { 
         name: "Overcome Affliction", 
         tradition: "Soul", 
         rank: 0, 
