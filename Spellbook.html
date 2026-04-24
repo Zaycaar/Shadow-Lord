@@ -99,13 +99,238 @@
         // Add your spreadsheet rows here following this exact format.
       const spells = [
           { 
+        name: "Create Forbidden Item", 
+        tradition: "Alchemy", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "Special ingredients within reach",
+        duration: "Permanent",
+        desc: "Req: 1+ Corruption & Alchemist's Kit. Ingredients must be half the item's price. Concentrate 1 hour to create a non-living forbidden item (price <= 5 gc). Hunger" 
+    },
+    { 
+        name: "Iron Flask", 
+        tradition: "Alchemy", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "One iron bottle you hold",
+        duration: "Instantaneous",
+        desc: "Req: 3+ Corruption & Alchemist's Kit. Prepare: 1 hr concentration. Capture: Intellect vs Will to trap a demon as smoke. Compel: Intellect vs Will to compel a released demon for 1 min. Hunger" 
+    },
+    { 
+        name: "Throwback", 
+        tradition: "Alteration", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "One creature you can reach",
+        duration: "1 minute",
+        desc: "Req: 1+ Corruption. Will vs Agility: Target dazed 1 rd. Then Strength challenge: Failure (auto if Health <= 15) transforms target into a monster (+1d3 Str, +3d6 Health, +2 Speed, Int 5). Hunger" 
+    },
+    { 
+        name: "Invoke the Skull King", 
+        tradition: "Battle", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "Self",
+        duration: "Instantaneous",
+        desc: "Req: Mad Devotion & Reavers of the Skull King cult. Triggered: When creature within short range is incapacitated. Move Speed and attack with 1 boon. Sacrifice: Augmented Attack. Hunger" 
+    },
+    { 
+        name: "Invoke the Wandering Star", 
+        tradition: "Celestial", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "3-yard radius sphere within short range",
+        duration: "1 minute",
+        desc: "Req: Mad Devotion & Seekers of the Wandering Star cult. Will challenge each round: Failure = 1d3 damage and frightened 1 round. Sphere moves randomly each round. Hunger" 
+    },
+    { 
+        name: "Fomor Doom", 
+        tradition: "Curse", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "One human within short range",
+        duration: "Special",
+        desc: "Intellect vs Strength. Success: Frightened while concentrating. Target must attack each turn. Concentrate 1 min: Target gains 1d6 Insanity and permanently becomes a Fomor. Hunger" 
+    },
+    { 
+        name: "Vision of Horror", 
+        tradition: "Curse", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "One creature within medium range",
+        duration: "1 minute",
+        desc: "Intellect vs Will (1 boon if target has 3+ Insanity). Success: Target treats all other creatures as having the Horrifying trait. Attack Roll 20+: Permanent until you die or lift it. Hunger" 
+    },
+    { 
+        name: "Bind Demon", 
+        tradition: "Demonology", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "One demon within short range",
+        duration: "Permanent until object destroyed",
+        desc: "Req: Hold 1+ gc object. Take 1d6+1 damage. Intellect vs Will. Success: Trap demon in object. Object gains magic properties but becomes Corrupted (touch = Will challenge or gain 1 Corruption). Hunger" 
+    },
+    { 
+        name: "Demonic Blessing", 
+        tradition: "Demonology", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Take 1d6+1 damage. Gain a random demonic talent. If you gain 1 Corruption at casting, duration becomes 1 hour. Hunger" 
+    },
+    { 
+        name: "Draw Forth the Soul Screaming", 
+        tradition: "Demonology", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "One living mortal within short range",
+        duration: "Special",
+        desc: "Take 2d6 damage. Intellect vs Will (1 boon if target has 6+ Corruption). Success: Target stunned while concentrating. Concentrate 1 min: Target dies; soul becomes a Shadow. Hunger" 
+    },
+    { 
+        name: "Void Breach", 
+        tradition: "Demonology", 
+        rank: 9, 
+        type: "Utility", 
+        targetArea: "One point within extreme range",
+        duration: "Special",
+        desc: "Take 10d6 damage and gain Insanity = Will. Punch a hole in reality creating a Void Breach (random duration/effects). Hunger" 
+    },
+    { 
+        name: "Invoke the Nameless One", 
+        tradition: "Destruction", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "1d6-yard radius from you",
+        duration: "1 minute",
+        desc: "Req: Mad Devotion & Nameless cult. Take 2 damage. Each round, pulse deals 1 damage to you and 1d6 to everything in area (Agility for no damage). Hunger" 
+    },
+    { 
+        name: "Pleasure from Pain", 
+        tradition: "Enchantment", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "One living creature within medium range",
+        duration: "1 minute",
+        desc: "Req: 1+ Corruption. Intellect vs Will. Success: Whenever target takes damage, it takes 1d6 extra and gains 1 cumulative boon on its next turn. Attack Roll 20+: Target also charmed. Hunger" 
+    },
+    { 
+        name: "Shed the Skin", 
+        tradition: "Fey", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "One living creature with skin",
+        duration: "Permanent",
+        desc: "Req: 1+ Corruption. Intellect vs Strength. Success: Target's skin sloughs off; target becomes a Bloody Bones (loses original stats). Sacrifice: Hallucinations. Hunger" 
+    },
+    { 
+        name: "Invoke the One True God", 
+        tradition: "Fire", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "1-yard radius from you",
+        duration: "1 minute",
+        desc: "Req: Mad Devotion & Knights of the One True God cult. Creatures within 1yd take 1d6 damage. Gain a ball of flame over head; use action to hurl for 1d6 damage (Will vs Agility). Hunger" 
+    },
+    { 
+        name: "Invoke the Glistening Prince", 
+        tradition: "Forbidden", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Req: Mad Devotion & Philosophers of the Glistening Prince cult. Take 1d6 damage and gain half-damage resistance. Each time you take damage, make Will challenge or gain 1 Insanity. Hunger" 
+    },
+    { 
+        name: "Invoke Mother of Monsters", 
+        tradition: "Forbidden", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "Instantaneous",
+        desc: "Req: Mad Devotion & Mother’s Children cult. Take damage = healing rate. Birth a small horrifying monster under your control. You are dazed until it is incapacitated. Hunger" 
+    },
+    { 
+        name: "Create Zombie", 
+        tradition: "Necromancy", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "One Size 1/2 or 1 humanoid corpse",
+        duration: "Permanent",
+        desc: "Maintain contact for 1 minute to imbue corpse with dark power, turning it into a compelled zombie. Hunger" 
+    },
+    { 
+        name: "Exacting Chains", 
+        tradition: "Protection", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "One creature within medium range",
+        duration: "Concentration, up to 1 minute",
+        desc: "Req: 1+ Corruption. Intellect vs Agility. Success: Target defenseless (immune to all damage but yours). Concentration: Intellect vs Will to deal 2d6 damage and apply afflictions. Hunger" 
+    },
+    { 
+        name: "Invoke the Eternal Shadow", 
+        tradition: "Shadow", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Req: Mad Devotion & Brothers of the Eternal Shadow cult. Gain darkvision, 3 boons to hide, and immunity to Celestial attacks. Can extinguish light sources as action/triggered. Hunger" 
+    },
+    { 
+        name: "Screaming Shadows", 
+        tradition: "Shadow", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "10-yard radius sphere within short range",
+        duration: "1 hour",
+        desc: "Req: 1+ Corruption. Area totally obscured. Creatures in area must make Will challenge each round or gain 1 Insanity. Madness = demonic possession. 12 on 2d6 ends spell with a Void Breach. Hunger" 
+    },
+    { 
+        name: "Invoke the Lady of Sighs", 
+        tradition: "Telepathy", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One living creature within short range",
+        duration: "1 round",
+        desc: "Req: Mad Devotion & Sisters of the Blue Hand cult. Intellect vs Will. Success: Target dazed (takes half damage). Target can pass Will challenge (1 bane) to end early. Hunger" 
+    },
+    { 
+        name: "Void Step", 
+        tradition: "Teleportation", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Req: 1+ Corruption. Action/Triggered: Teleport to a space you can see (medium range). Gain 1 Insanity per use. If you roll a 1 on d6 after use, spell ends. Hunger" 
+    },
+    { 
+        name: "Void Gate", 
+        tradition: "Teleportation", 
+        rank: 7, 
+        type: "Utility", 
+        targetArea: "3-yard cube within medium range",
+        duration: "Special",
+        desc: "Concentrate 1 minute to create a portal to the Void. Portal lasts 1 hr + 1 hr per Corruption point. Creatures can pass through to enter the Void. Hunger" 
+    },
+    { 
+        name: "Demonic Apotheosis", 
+        tradition: "Transformation", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 hour",
+        desc: "Req: 4+ Corruption & living mortal. Gain 1 boon to Perception, darksight, +2 Defense, +10 Health, and immunity to Insanity. Take half damage from spells. Unarmed deals +2d6 damage. Hunger" 
+    },
+          { 
         name: "Seeking Missile", 
         tradition: "Battle", 
         rank: 0, 
         type: "Attack", 
         targetArea: "One target of a ranged/thrown attack",
         duration: "Instantaneous",
-        desc: "Make a weapon attack. Ignore banes from cover (except total), invisibility, or obscured areas." 
+        desc: "Make a weapon attack. Ignore banes from cover (except total), invisibility, or obscured areas. Terrible Beauty" 
     },
     { 
         name: "Phasing Missile", 
@@ -114,7 +339,7 @@
         type: "Attack", 
         targetArea: "One target of a ranged/thrown attack",
         duration: "Instantaneous",
-        desc: "Weapon attack with 1 boon. Ignore banes from cover. Can hit totally covered targets (blinded penalties apply if unseen; no cover penalties if seen)." 
+        desc: "Weapon attack with 1 boon. Ignore banes from cover. Can hit totally covered targets (blinded penalties apply if unseen; no cover penalties if seen). Terrible Beauty" 
     },
     { 
         name: "Moon Bridge", 
@@ -123,7 +348,7 @@
         type: "Utility", 
         targetArea: "10yd long, 2yd wide line within medium range",
         duration: "Concentration, up to 1 minute",
-        desc: "Night/Underground only. Area becomes solid and sheds soft light. Sacrifice: Expend to cast Burning Beam." 
+        desc: "Night/Underground only. Area becomes solid and sheds soft light. Sacrifice: Expend to cast Burning Beam. Terrible Beauty" 
     },
     { 
         name: "Create Secret Door", 
@@ -132,7 +357,7 @@
         type: "Utility", 
         targetArea: "1-yard radius circle on a flat surface",
         duration: "1 hour",
-        desc: "Creates an ornate door with a 2-yard space behind it. Can bypass walls <= 2 yards thick. Caution: Anything inside when spell ends is shunted into the Void." 
+        desc: "Creates an ornate door with a 2-yard space behind it. Can bypass walls <= 2 yards thick. Caution: Anything inside when spell ends is shunted into the Void. Terrible Beauty" 
     },
     { 
         name: "Cursed Apple", 
@@ -141,7 +366,7 @@
         type: "Utility", 
         targetArea: "One apple you are holding",
         duration: "24 hours or until consumed",
-        desc: "Concentrate 1 min/spill blood. Creature eating the apple falls asleep (no aging/hunger) until you die or a specific action (stated at casting) lifts the curse." 
+        desc: "Concentrate 1 min/spill blood. Creature eating the apple falls asleep (no aging/hunger) until you die or a specific action (stated at casting) lifts the curse. Terrible Beauty" 
     },
     { 
         name: "Bliss", 
@@ -150,7 +375,7 @@
         type: "Attack", 
         targetArea: "Any number of creatures within short range",
         duration: "1 minute",
-        desc: "Will challenge (bane if charmed). Success: Target is dazed until it takes damage. Immune if you've attacked them since your last rest." 
+        desc: "Will challenge (bane if charmed). Success: Target is dazed until it takes damage. Immune if you've attacked them since your last rest. Terrible Beauty" 
     },
     { 
         name: "Kindred Soul", 
@@ -159,7 +384,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 hour",
-        desc: "Creatures of similar size perceive you as their own ancestry. Your speech is understood by anyone who knows at least one language." 
+        desc: "Creatures of similar size perceive you as their own ancestry. Your speech is understood by anyone who knows at least one language. Terrible Beauty" 
     },
     { 
         name: "Circle of Stones", 
@@ -168,7 +393,7 @@
         type: "Utility", 
         targetArea: "Eight points within short range",
         duration: "Permanent (Stones) / Until Rest (Energy)",
-        desc: "Raise 8 large stones. Imbued: Chosen creatures within 1yd get +1 Defense and 1 boon to attacks. Action: Enter stone; safe until destroyed or energy fades (exit = damage/Insanity)." 
+        desc: "Raise 8 large stones. Imbued: Chosen creatures within 1yd get +1 Defense and 1 boon to attacks. Action: Enter stone; safe until destroyed or energy fades (exit = damage/Insanity). Terrible Beauty" 
     },
     { 
         name: "Call Steeds", 
@@ -177,7 +402,7 @@
         type: "Utility", 
         targetArea: "5-yard radius circle within short range",
         duration: "8 hours",
-        desc: "Summons six horses. They are compelled by anyone riding them until they are incapacitated or duration ends." 
+        desc: "Summons six horses. They are compelled by anyone riding them until they are incapacitated or duration ends. Terrible Beauty" 
     },
     { 
         name: "Imprison", 
@@ -186,7 +411,7 @@
         type: "Attack", 
         targetArea: "One creature on the ground within long range",
         duration: "Special",
-        desc: "Agility challenge (bane for low Health/high Power; boon for high Health). Failure: Immobilized. Concentrate 1 min: Target dragged 3d6 miles underground and hidden from Divination." 
+        desc: "Agility challenge (bane for low Health/high Power; boon for high Health). Failure: Immobilized. Concentrate 1 min: Target dragged 3d6 miles underground and hidden from Divination. Terrible Beauty" 
     },
     { 
         name: "Remove Curse", 
@@ -195,7 +420,7 @@
         type: "Attack", 
         targetArea: "One cursed creature within medium range",
         duration: "Instantaneous",
-        desc: "Intellect challenge roll. Success: Remove one curse. Total 20+: Remove all curses." 
+        desc: "Intellect challenge roll. Success: Remove one curse. Total 20+: Remove all curses. Terrible Beauty" 
     },
     { 
         name: "Song of Revels", 
@@ -204,7 +429,7 @@
         type: "Attack", 
         targetArea: "One creature within short range",
         duration: "Concentration, up to 1 minute",
-        desc: "Will challenge or be impaired (1 min). You choose how impaired targets move. Action: Will challenge to clear (failure = 1 Insanity)." 
+        desc: "Will challenge or be impaired (1 min). You choose how impaired targets move. Action: Will challenge to clear (failure = 1 Insanity). Terrible Beauty" 
     },
     { 
         name: "Enthrolling Song", 
@@ -213,7 +438,7 @@
         type: "Attack", 
         targetArea: "Any living creatures within short range",
         duration: "Concentration, up to 1 hour",
-        desc: "Will challenge or become enthralled (dazed; must move to stay in medium range). Ends if target can't see/hear you." 
+        desc: "Will challenge or become enthralled (dazed; must move to stay in medium range). Ends if target can't see/hear you. Terrible Beauty" 
     },
     { 
         name: "Hidden Space", 
@@ -222,7 +447,7 @@
         type: "Utility", 
         targetArea: "1-yard cube within medium range",
         duration: "8 hours",
-        desc: "Portal to interdimensional cube (size based on Power). Dangerous: When spell ends, odd d6 roll = shunted to Void; even d6 = damage and prone." 
+        desc: "Portal to interdimensional cube (size based on Power). Dangerous: When spell ends, odd d6 roll = shunted to Void; even d6 = damage and prone. Terrible Beauty" 
     },
     { 
         name: "Banish", 
@@ -231,7 +456,7 @@
         type: "Attack", 
         targetArea: "One creature within medium range",
         duration: "Concentration, up to 1 minute",
-        desc: "Will vs Will. Success: Target out of phase (half damage dealt/taken). Concentrate 1 min: Target disappears (returned to home or teleported 5d20 miles away)." 
+        desc: "Will vs Will. Success: Target out of phase (half damage dealt/taken). Concentrate 1 min: Target disappears (returned to home or teleported 5d20 miles away). Terrible Beauty" 
     },
           { 
         name: "Misdirect", 
@@ -240,7 +465,7 @@
         type: "Attack", 
         targetArea: "One creature within short range",
         duration: "1 minute",
-        desc: "Intellect vs Perception. Success: Target makes attack rolls with 1 bane while within short range of you. Attack Roll 20+: Target also impaired for 1 minute." 
+        desc: "Intellect vs Perception. Success: Target makes attack rolls with 1 bane while within short range of you. Attack Roll 20+: Target also impaired for 1 minute. Terrible Beauty" 
     },
     { 
         name: "Shrink Object", 
@@ -249,7 +474,7 @@
         type: "Utility", 
         targetArea: "One Size 1 or smaller object you can reach",
         duration: "Permanent until restored",
-        desc: "Target becomes Size 1/8 or half its Size (whichever is smaller). Action to restore to normal." 
+        desc: "Target becomes Size 1/8 or half its Size (whichever is smaller). Action to restore to normal. Terrible Beauty" 
     },
     { 
         name: "Fade", 
@@ -258,7 +483,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 minute",
-        desc: "You become hidden. Ends if you use an action or triggered action. Triggered: Use when taking damage; duration becomes 1 round." 
+        desc: "You become hidden. Ends if you use an action or triggered action. Triggered: Use when taking damage; duration becomes 1 round. Terrible Beauty" 
     },
     { 
         name: "Drunkenness", 
@@ -267,7 +492,7 @@
         type: "Attack", 
         targetArea: "2-yard radius sphere within medium range",
         duration: "Instantaneous",
-        desc: "Strength challenge roll. Failure: Living creatures become intoxicated (impaired, take half damage, cannot gain Insanity)." 
+        desc: "Strength challenge roll. Failure: Living creatures become intoxicated (impaired, take half damage, cannot gain Insanity). Terrible Beauty" 
     },
     { 
         name: "Will-O’-Wisp", 
@@ -276,7 +501,7 @@
         type: "Attack", 
         targetArea: "A point within medium range",
         duration: "Concentration, up to 1 minute",
-        desc: "Flickering flame sheds 2yd light. Will challenge (1 boon) or be beguiled. Action to concentrate: move flame 5 yards; beguiled targets move half Speed toward it." 
+        desc: "Flickering flame sheds 2yd light. Will challenge (1 boon) or be beguiled. Action to concentrate: move flame 5 yards; beguiled targets move half Speed toward it. Terrible Beauty" 
     },
     { 
         name: "Slumber", 
@@ -285,7 +510,7 @@
         type: "Attack", 
         targetArea: "3-yard radius sphere within medium range",
         duration: "8 hours",
-        desc: "Health 10 or less: Fall prone and sleep. Health 11+: Will challenge (1 bane if injured, 2 if fatigued, 1 boon if 30+ Health) or sleep. Wakes if damaged or shaken." 
+        desc: "Health 10 or less: Fall prone and sleep. Health 11+: Will challenge (1 bane if injured, 2 if fatigued, 1 boon if 30+ Health) or sleep. Wakes if damaged or shaken. Terrible Beauty" 
     },
     { 
         name: "Faerie Gold", 
@@ -294,7 +519,7 @@
         type: "Utility", 
         targetArea: "One leaf you are holding",
         duration: "Until next sunrise",
-        desc: "Leaf becomes a gold coin. If others touch it, Intellect challenge (1 bane if charmed) to end effect. Sacrifice: Expend to heal your healing rate." 
+        desc: "Leaf becomes a gold coin. If others touch it, Intellect challenge (1 bane if charmed) to end effect. Sacrifice: Expend to heal your healing rate. Terrible Beauty" 
     },
     { 
         name: "Bewilder", 
@@ -303,7 +528,7 @@
         type: "Attack", 
         targetArea: "2-yard radius sphere within medium range",
         duration: "1 minute",
-        desc: "Will challenge (2 banes if target has 1+ Insanity). Failure: Confused for 1 min (must take fast turns/roll d6 for behavior). Success: Impaired for 1 round." 
+        desc: "Will challenge (2 banes if target has 1+ Insanity). Failure: Confused for 1 min (must take fast turns/roll d6 for behavior). Success: Impaired for 1 round. Terrible Beauty" 
     },
     { 
         name: "Erase Memory", 
@@ -312,7 +537,7 @@
         type: "Attack", 
         targetArea: "One creature within short range that can hear you",
         duration: "Instantaneous",
-        desc: "Intellect vs Intellect (1 boon if charmed). Success: Erase memories of the previous minute and any Insanity gained in that time. Attack Roll 20+: Target also impaired for 1 minute." 
+        desc: "Intellect vs Intellect (1 boon if charmed). Success: Erase memories of the previous minute and any Insanity gained in that time. Attack Roll 20+: Target also impaired for 1 minute. Terrible Beauty" 
     },
     { 
         name: "Hallucinations", 
@@ -321,7 +546,7 @@
         type: "Attack", 
         targetArea: "One creature within medium range",
         duration: "1 minute",
-        desc: "Intellect vs Perception. Success: Target must pass a Perception challenge (1 bane) before using an action or become dazed for 1 round." 
+        desc: "Intellect vs Perception. Success: Target must pass a Perception challenge (1 bane) before using an action or become dazed for 1 round. Terrible Beauty" 
     },
     { 
         name: "Twisted Crown", 
@@ -330,7 +555,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "Concentration, up to 1 minute",
-        desc: "When cast/concentrated: Creatures within short range make Will challenge. Failure: Stunned 1 round. Success: Immune to this casting." 
+        desc: "When cast/concentrated: Creatures within short range make Will challenge. Failure: Stunned 1 round. Success: Immune to this casting. Terrible Beauty" 
     },
     { 
         name: "Beget Changeling", 
@@ -339,7 +564,7 @@
         type: "Utility", 
         targetArea: "A mud/stick simulacrum you created",
         duration: "1d6 + 1 days (Special)",
-        desc: "Req: 1 hour prep. Transform simulacrum into a changeling (stats start at 1, increase by 1 per hour until 10s). When spell ends, roll d20: on 1, effect is permanent." 
+        desc: "Req: 1 hour prep. Transform simulacrum into a changeling (stats start at 1, increase by 1 per hour until 10s). When spell ends, roll d20: on 1, effect is permanent. Terrible Beauty" 
     },
           { 
         name: "Corpse Sight", 
