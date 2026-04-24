@@ -104,6 +104,105 @@
         // Add your spreadsheet rows here following this exact format.
       const spells = [
           { 
+        name: "Impose Predictability", 
+        tradition: "Order", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "1 minute",
+        desc: "Touch target and choose 1-6. Once per round, if target rolls a boon/bane, replace the result with your chosen number. Companion 2" 
+    },
+    { 
+        name: "Negate Chaos", 
+        tradition: "Order", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "One creature within short range",
+        duration: "1 minute",
+        desc: "Die manipulation: Replace a natural 20 with a 10, or a natural 10 with a 20. Companion 2" 
+    },
+    { 
+        name: "Consistency", 
+        tradition: "Order", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "5-yard-radius sphere from you",
+        duration: "1 minute",
+        desc: "Area moves with you. Choose 1-6. You can replace the result of any d6 rolled by a creature in the area with your chosen number. Companion 2" 
+    },
+    { 
+        name: "Order’s Shield", 
+        tradition: "Order", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "1 minute",
+        desc: "Attack rolls against target have 2 banes (+1 if spell attack, +1 more if Chaos spell). Companion 2" 
+    },
+    { 
+        name: "Rationality", 
+        tradition: "Order", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "1 minute",
+        desc: "Remove Charmed, Compelled, Dazed, Frightened, Surprised, and Madness. Ends emotional talents (like Berserk). Target is immune to extreme emotions for the duration. Companion 2" 
+    },
+    { 
+        name: "Immobility", 
+        tradition: "Order", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "One creature within short range",
+        duration: "1 minute",
+        desc: "Will vs Will (boon if Health <= 15, bane if Health >= 25). Success: Target is immobilized and defenseless, but takes half damage from all sources. Companion 2" 
+    },
+    { 
+        name: "Conformity", 
+        tradition: "Order", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "3-yard-radius sphere from you",
+        duration: "Concentration, up to 1 minute",
+        desc: "Designate an action (e.g., Attack). Creatures in area get 3 boons for that action, but 3 banes for any other action. Companion 2" 
+    },
+    { 
+        name: "Even the Scales", 
+        tradition: "Order", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "3-yard-radius sphere from you",
+        duration: "1 minute",
+        desc: "Area moves with you. Whenever a creature in area takes damage, you can choose a different creature in the area to take an equal amount. Companion 2" 
+    },
+    { 
+        name: "Stillness", 
+        tradition: "Order", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "5-yard-long cone from you",
+        duration: "1 minute",
+        desc: "Will challenge roll. Failure: Immobilized. Immobilized targets grant 1 boon to attackers and take 3 banes on Agility challenges to resist. Companion 2" 
+    },
+    { 
+        name: "Dictum", 
+        tradition: "Order", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "One creature within medium range",
+        duration: "1 minute",
+        desc: "Describe an action. Will vs Will (auto-success if Health <= 30). Target must pass a Will challenge (2 banes) to perform that action; failure wastes the action and deals 1d6 Insanity. Companion 2" 
+    },
+    { 
+        name: "Mantle of Law", 
+        tradition: "Order", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Immune to Insanity, Charmed, Compelled, Dazed, Frightened, Stunned, Surprised, and Chaos spells. Enemies take 1 bane on attacks; you gain 1 boon to resist. Companion 2" 
+    },
+          { 
         name: "Shape Metal", 
         tradition: "Metal", 
         rank: 0, 
