@@ -104,6 +104,105 @@
         // Add your spreadsheet rows here following this exact format.
       const spells = [
           { 
+        name: "Overcome Affliction", 
+        tradition: "Soul", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "Instantaneous",
+        desc: "Will challenge roll to remove one affliction. Triggered: Use when about to gain an affliction; Will challenge (1 bane) to negate it. Companion 2" 
+    },
+    { 
+        name: "Recall Past Success", 
+        tradition: "Soul", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 round",
+        desc: "The next attack roll or challenge roll you make before the spell ends is made with 2 boons. Companion 2" 
+    },
+    { 
+        name: "Negate Harm", 
+        tradition: "Soul", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute (Special)",
+        desc: "Reduce all incoming damage by 1d3. Triggered: When taking damage, reduce it to 0 and the spell ends. Companion 2" 
+    },
+    { 
+        name: "Open the Third Eye", 
+        tradition: "Soul", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Attack rolls ignore obscurement/invisibility. Immunity to the Blinded affliction. Companion 2" 
+    },
+    { 
+        name: "Strike the Soul", 
+        tradition: "Soul", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One creature you can reach",
+        duration: "Instantaneous",
+        desc: "Unarmed strike (3 boons, can use Will). Deals +1d6 damage. If target is living/flesh/has soul: +1 Insanity and impaired 1 rd. 20+: +2d6 damage. Companion 2" 
+    },
+    { 
+        name: "Shattering Strike", 
+        tradition: "Soul", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "One creature/object you can reach",
+        duration: "Instantaneous",
+        desc: "Unarmed strike (3 boons, can use Will). Deals +2d6 damage. If target is construct/object: +4d6 damage total. 20+: +3d6 base extra damage. Companion 2" 
+    },
+    { 
+        name: "Walk the Sky", 
+        tradition: "Soul", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 round (Extendable)",
+        desc: "Gain Fly speed. Triggered: Use at end of round to extend 1 round (up to 1 minute total). Companion 2" 
+    },
+    { 
+        name: "Phase Shift", 
+        tradition: "Soul", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Take half damage from weapons; deal half damage. Can move through solid objects/creatures and ignore difficult terrain. Companion 2" 
+    },
+    { 
+        name: "Velocity", 
+        tradition: "Soul", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Regain action on cast. Fast turn: Move Speed + action. Slow turn: Move 2x Speed + action. Can use 2 triggered actions per round. Enemies take 1 bane to attack you. Companion 2" 
+    },
+    { 
+        name: "Rend Soul", 
+        tradition: "Soul", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "One creature/object you can reach",
+        duration: "Instantaneous",
+        desc: "Unarmed strike (3 boons, can use Will). Deals +2d6 damage. Living mortals take 2d6 Insanity and must pass Will challenge or be stunned 1 min. 20+: +4d6 damage. Companion 2" 
+    },
+    { 
+        name: "Transcendent Recovery", 
+        tradition: "Soul", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "Instantaneous (1 min aftereffect)",
+        desc: "Heal all damage, remove all afflictions/penalties, and reduce Insanity by 1d3. Aftereffect: 1 boon on all rolls for 1 minute. Companion 2" 
+    },
+          { 
         name: "Impose Predictability", 
         tradition: "Order", 
         rank: 0, 
