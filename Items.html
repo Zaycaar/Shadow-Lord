@@ -74,7 +74,7 @@ createApp({
         return {
             search: '',
             filterCat: 'All',
-            categories: ['Weapon', 'Armor', 'Ammunition', 'Incantation', 'Potion', 'Relic', 'Personal Gear', 'Clothing', 'Tools', 'Animals', 'Hirelings', 'Alchemical Items', 'Forbidden Items', 'Engineering Marvel', 'Property', 'Vehicle'],
+            categories: ['Weapon', 'Armor', 'Ammunition', 'Incantation', 'Potion', 'Relic', 'Personal Gear', 'Clothing', 'Tools', 'Animals', 'Hirelings', 'Alchemical Items', 'Forbidden Items', 'Engineering Marvel', 'Property', 'Vehicle', 'Exotic Material', 'Clockwork Attachment'],
             database: [
                 { cat: 'Armor', rarity: 'Common', name: 'Clothing', desc: 'Defense: Agi.', cost: 'Varies', src: 'Core', pg: 101 },
                 { cat: 'Armor', rarity: 'Common', name: 'Soft Leather', desc: 'Defense: Agi+1.', cost: '2 SS', src: 'Core', pg: 101 },
@@ -226,15 +226,15 @@ createApp({
                 { cat: 'Relic', rarity: 'Unique', name: 'Bone Arrow', desc: 'Cursed arrow. Slay the living.', cost: 'N/A', src: 'Desolation', pg: 25 },
                 { cat: 'Relic', rarity: 'Unique', name: 'Cauldron of Death', desc: 'Any creature put into the cauldron becomes undead.', cost: 'N/A', src: 'Desolation', pg: 25 },
                 { cat: 'Relic', rarity: 'Unique', name: 'Mantle of the Harrower', desc: 'Protection from the sun. Death and Necromancy magic.', cost: 'N/A', src: 'Desolation', pg: 25 },
-                { cat: 'Exotic Material', rarity: '', name: '', desc: '', cost: '', src: 'Paths of Iron', pg: 0 },
-                { cat: 'Exotic Material', rarity: '', name: '', desc: '', cost: '', src: 'Paths of Iron', pg: 0 },
-                { cat: 'Exotic Material', rarity: '', name: '', desc: '', cost: '', src: 'Paths of Iron', pg: 0 },
-                { cat: 'Exotic Material', rarity: '', name: '', desc: '', cost: '', src: 'Paths of Iron', pg: 0 },
-                { cat: 'Clockwork Attachment', rarity: '', name: '', desc: '', cost: '', src: 'Paths of Iron', pg: 0 },
-                { cat: 'Clockwork Attachment', rarity: '', name: '', desc: '', cost: '', src: 'Paths of Iron', pg: 0 },
-                { cat: 'Clockwork Attachment', rarity: '', name: '', desc: '', cost: '', src: 'Paths of Iron', pg: 0 },
-                { cat: 'Clockwork Attachment', rarity: '', name: '', desc: '', cost: '', src: 'Paths of Iron', pg: 0 },
-                { cat: 'Clockwork Attachment', rarity: '', name: '', desc: '', cost: '', src: 'Paths of Iron', pg: 0 },
+                { cat: 'Exotic Material', rarity: 'Exotic', name: 'Alchemical Glass', desc: 'Pointed and edged weapons. Extra sharp.', cost: 'x 50', src: 'Paths of Iron', pg: 2 },
+                { cat: 'Exotic Material', rarity: 'Exotic', name: 'Dark Steel', desc: 'Extra anti-faerie.', cost: 'x 100', src: 'Paths of Iron', pg: 2 },
+                { cat: 'Exotic Material', rarity: 'Exotic', name: 'Dragonbone', desc: 'Living weapon. Emits fire and moans.', cost: 'x 500', src: 'Paths of Iron', pg: 2 },
+                { cat: 'Exotic Material', rarity: 'Exotic', name: 'Blood Iron', desc: 'Inherently poisoned.', cost: 'x 200', src: 'Paths of Iron', pg: 3 },
+                { cat: 'Clockwork Attachment', rarity: '', name: 'Coiled Spring', desc: 'Super jump. Must reset mechanism.', cost: '1 gc', src: 'Paths of Iron', pg: 0 },
+                { cat: 'Clockwork Attachment', rarity: '', name: 'Impact Absorbers', desc: 'Reduced fall damage.', cost: '1 gc', src: 'Paths of Iron', pg: 0 },
+                { cat: 'Clockwork Attachment', rarity: '', name: 'Internal Transceiver', desc: 'Radio to other clockwork with this upgrade.', cost: '15 gc', src: 'Paths of Iron', pg: 0 },
+                { cat: 'Clockwork Attachment', rarity: '', name: 'Passenger Compartment', desc: 'Can store a smaller creature inside of itself.', cost: '10 gc', src: 'Paths of Iron', pg: 0 },
+                { cat: 'Clockwork Attachment', rarity: '', name: 'Retractable Blades', desc: 'Hidden blades inside body.', cost: '2 gc', src: 'Paths of Iron', pg: 0 },
             ]
         }
     },
