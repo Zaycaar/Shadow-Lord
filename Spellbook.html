@@ -87,7 +87,11 @@
             <option value="3">Rank 3</option>
             <option value="4">Rank 4</option>
             <option value="5">Rank 5</option>
-             <option value="6">Rank 6</option>
+            <option value="6">Rank 6</option>
+            <option value="7">Rank 7</option>
+            <option value="8">Rank 8</option>
+            <option value="9">Rank 9</option>
+            <option value="10">Rank 10</option>
         </select>
 
         <select id="typeFilter" onchange="filterSpells()">
@@ -103,6 +107,168 @@
         // DATA ENTRIES
         // Add your spreadsheet rows here following this exact format.
       const spells = [
+          { 
+        name: "Shimmering Wall", 
+        tradition: "Air", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "5yd long, 2yd tall, 1yd wide line",
+        duration: "1 minute",
+        desc: "Air shimmers with heat. Imposes 2 banes on attack rolls against targets behind the area. Creatures within 3 yards of the wall ignore this effect. OP" 
+    },
+    { 
+        name: "Uplifting Step", 
+        tradition: "Air", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Ignore difficult terrain while walking/running. Move across liquid or pits as solid ground; sink/fall if movement ends there. OP" 
+    },
+    { 
+        name: "Heat Wave", 
+        tradition: "Air", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "3-yard cone",
+        duration: "Instantaneous (1 min penalty)",
+        desc: "Melts ice/dries dampness. Strength challenge: Failure = -3 Health penalty and fatigued for 1 minute. OP" 
+    },
+    { 
+        name: "Wind Disk", 
+        tradition: "Air", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "+2 Defense. 1 bane on ranged attacks from Size 1 or smaller. Triggered (Shield Disk): Imposes 1 bane for ally. Action/Triggered (Disk Attack): 1d6+1 damage. Using Shield/Attack ends benefits until end of round. OP" 
+    },
+    { 
+        name: "Buffeting Winds", 
+        tradition: "Air", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "5-yard cone",
+        duration: "1 minute",
+        desc: "Difficult terrain. Disperses vapors/smoke. Extinguishes flames. 3 banes on ranged attacks through area. Flying creatures: Strength challenge (1 bane) or moved 1d6 yards away. OP" 
+    },
+    { 
+        name: "Explosive Exhalation", 
+        tradition: "Air", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "One living/breathing creature within short range",
+        duration: "Instantaneous",
+        desc: "Will vs Strength. Success: 1d6+3 damage. Target must pass Will challenge or be stunned 1 round. 20+: Will challenge is with 1 bane. OP" 
+    },
+    { 
+        name: "Bedeviling Winds", 
+        tradition: "Air", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "Up to 3 1-yard cubes within medium range",
+        duration: "Concentration, up to 1 minute",
+        desc: "Strength challenge: 2d6 damage and fall prone (half damage success). Disperses vapors/flames. Action: Move cubes 3 yards. OP" 
+    },
+    { 
+        name: "Cloak of Air", 
+        tradition: "Air", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 hour",
+        desc: "Pushes vapors 1yd away. Breathe underwater. Half damage from falls. 2 banes on incoming ranged attacks (except siege/firearms). OP" 
+    },
+    { 
+        name: "Soar", 
+        tradition: "Air", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "4 hours",
+        desc: "Gain +10 Speed and the ability to Fly. OP" 
+    },
+    { 
+        name: "Suffocate", 
+        tradition: "Air", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "Up to 3 living/breathing creatures (medium range)",
+        duration: "1 minute",
+        desc: "Strength challenge (2 banes) each round. Failure: 1d6+2 damage and fatigued + slowed for 1 round. OP" 
+    },
+    { 
+        name: "Control Winds", 
+        tradition: "Air", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "Self/Line",
+        duration: "8 hours",
+        desc: "+2 Speed. Action/Triggered: Cast Wind Blast (3 boons). Action: 10x30yd line of wind (difficult terrain, fills sails). Triggered: Fly until end of round or +5 Agility for jumping (3 boons). OP" 
+    },
+    { 
+        name: "Vacuum", 
+        tradition: "Air", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "5-yard radius sphere within long range",
+        duration: "Instantaneous",
+        desc: "Living/breathing: Strength challenge (1 bane) or 3d6 damage and dazed. Round end: All within 10yds make Strength challenge (2 banes); failure = 2d6 damage, moved 1d6+1 towards center, and prone. OP" 
+    },
+    { 
+        name: "Cacophony", 
+        tradition: "Air", 
+        rank: 6, 
+        type: "Attack", 
+        targetArea: "15-yard cone",
+        duration: "Instantaneous",
+        desc: "7d6 damage (double to glass/stone). Strength challenge (1 bane) or deafened 1d6 days (half damage on success). OP" 
+    },
+    { 
+        name: "Mass Flight", 
+        tradition: "Air", 
+        rank: 6, 
+        type: "Utility", 
+        targetArea: "Up to 10 creatures within short range",
+        duration: "1 hour",
+        desc: "Each target gains +2 Speed and the ability to Fly. OP" 
+    },
+    { 
+        name: "Skyfall", 
+        tradition: "Air", 
+        rank: 7, 
+        type: "Attack", 
+        targetArea: "Up to 10 targets within long range",
+        duration: "Instantaneous",
+        desc: "Strength challenge: Failure = Launch target 5d6+20 yards into the sky. Target then falls, taking normal fall damage (or impact damage if they hit a surface). OP" 
+    },
+    { 
+        name: "Become the Wind", 
+        tradition: "Air", 
+        rank: 8, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "Concentration, up to 1 hour",
+        desc: "Size 3 whirlwind form. +10 Speed, Fly. Immune: Disease, Poison, many afflictions. Resilience: Half weapon damage. Savage Winds: Entering spaces deals 3d6+2 (Strength half). OP" 
+    },
+    { 
+        name: "Name of the Wind", 
+        tradition: "Air", 
+        rank: 9, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 hour",
+        desc: "Cast learned Air spells (Rank 0-3) without expending castings. Cast any Rank 0 Air spell (even if unlearned). OP" 
+    },
+    { 
+        name: "Fury of the Heavens", 
+        tradition: "Air", 
+        rank: 10, 
+        type: "Attack", 
+        targetArea: "Point within extreme range",
+        duration: "Concentration, up to 1 minute",
+        desc: "200yd diameter tornado. 8d6 damage to all in space. Strength challenge (1-3 banes) or grabbed. Aftereffect: Will challenge (5 banes) or 1d6+3 hostile wind genies appear. OP" 
+    },
           { 
         name: "Curse of Lycanthropy", 
         tradition: "Curse", 
