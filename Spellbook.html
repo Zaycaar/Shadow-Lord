@@ -108,6 +108,168 @@
         // Add your spreadsheet rows here following this exact format.
       const spells = [
           { 
+        name: "Preservation", 
+        tradition: "Alchemy", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "One Size 1 or smaller object you reach",
+        duration: "10 days",
+        desc: "Req: Alchemist's kit. Object will not rot/spoil and takes half damage. Prevents corpses from being turned into undead. OP" 
+    },
+    { 
+        name: "Venomous Dart", 
+        tradition: "Alchemy", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "Up to 5 darts",
+        duration: "Until rest",
+        desc: "Req: Alchemist's kit/darts. Prep: 1 min. Darts gain 1 boon to attack. Hit: Str challenge or take 1d3+1 damage and poisoned 1 min. OP" 
+    },
+    { 
+        name: "Fire Bottle", 
+        tradition: "Alchemy", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "Up to 3 small empty containers",
+        duration: "Until rest",
+        desc: "Req: Alchemist's kit. Prep: 1 min. Bottles thrown at short range (Agi vs Agi). Radius 2yd: 1d6 damage and Agi challenge or catch fire (1d6/rd). OP" 
+    },
+    { 
+        name: "Reeking Fog", 
+        tradition: "Alchemy", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "5-yard radius sphere from point in medium range",
+        duration: "1 minute",
+        desc: "Partial obscurity. Living/breathing: Str challenge (1 bane) or impaired while in fog and for 1 min after. OP" 
+    },
+    { 
+        name: "Corrosive Touch", 
+        tradition: "Alchemy", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Unarmed strikes use Intellect. Hits on creatures or organic objects deal +2d6 extra damage. OP" 
+    },
+    { 
+        name: "Oil Slick", 
+        tradition: "Alchemy", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "5-yard radius circle within short range",
+        duration: "10 minutes",
+        desc: "Difficult terrain. Agi challenge (3 banes) to move/stand or fall prone. Flammable: Burns 1d6 min, deals 1d6/rd, and emits heavy smoke (Str challenge or 1d6 damage). OP" 
+    },
+    { 
+        name: "Spew Poison", 
+        tradition: "Alchemy", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "5-yard long cone",
+        duration: "Instantaneous",
+        desc: "Req: Alchemist's kit. You take 1d6 damage. Area: Str challenge or take 4d6 damage and poisoned 1 hour. OP" 
+    },
+    { 
+        name: "Manikins", 
+        tradition: "Alchemy", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "Size 1 block of clay",
+        duration: "Special",
+        desc: "Req: Alchemist's kit. Prep: Up to 5 mins. Create 1 tiny construct per min. Can see/hear through them. Sacrifice: Explode all for 1d6+1 damage (1yd radius). OP" 
+    },
+    { 
+        name: "Brew Dragon Fire", 
+        tradition: "Alchemy", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "One small clay container",
+        duration: "Until rest",
+        desc: "Req: Alchemist's kit. Prep: 1 min. Thrown (short range): 4yd radius hemisphere. Covers targets in goo: 2d6 damage and catch fire (1d6/rd). Burns underwater/cannot be smothered. OP" 
+    },
+    { 
+        name: "Reanimate Corpse", 
+        tradition: "Alchemy", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "One Size 1 dead creature you reach",
+        duration: "Instantaneous",
+        desc: "Req: Alchemist's kit. Prep: 1 min. Resurrects target at healing rate Health. Daily Will challenge (3 banes) or -3 Intellect; at 0 Intellect, becomes a hostile monster. OP" 
+    },
+    { 
+        name: "Beget Ooze", 
+        tradition: "Alchemy", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "2-yard cube within medium range",
+        duration: "1 minute",
+        desc: "Creates a compelled Size 3 ooze at the end of the round. OP" 
+    },
+    { 
+        name: "Monstrous Transformation", 
+        tradition: "Alchemy", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "One syringe or bottle",
+        duration: "8 hours (potency) / 1 hour (form)",
+        desc: "Req: Alchemist's kit. Prep: 1 min. Consumed/injected target becomes a Huge Monster with Frightening trait for 1 hr. Gains 1d3 Insanity upon return. OP" 
+    },
+    { 
+        name: "Brew Longevity Potion", 
+        tradition: "Alchemy", 
+        rank: 6, 
+        type: "Utility", 
+        targetArea: "One liquid container",
+        duration: "1 year",
+        desc: "Req: Alchemist's kit + 10gc rare ingredients. Prep: 1 hr. Quaffer grows younger by 1d3 age categories. Fail Intellect challenge (3 banes): You age 1 category. Sacrifice: Cast Philosopher’s Stone. OP" 
+    },
+    { 
+        name: "Universal Solvent", 
+        tradition: "Alchemy", 
+        rank: 6, 
+        type: "Utility", 
+        targetArea: "Special 5gc container",
+        duration: "8 hours",
+        desc: "Req: Alchemist's kit + 5gc rare ingredients. Prep: 1 min. Dissolves Size 1 objects/afflicted creatures instantly. Larger targets take 10d6 damage (Agi challenge avoids). OP" 
+    },
+    { 
+        name: "Promethean", 
+        tradition: "Alchemy", 
+        rank: 7, 
+        type: "Utility", 
+        targetArea: "Pile of humanoid body parts",
+        duration: "24 hours (compelled)",
+        desc: "Req: 3+ Corruption, Alchemist's kit, 1000gc. Prep: 24 hrs. Create Promethean (compelled 24 hrs, then hostile). Fail Str challenge (3 banes): 2d6 Insanity and permanent -1 Will. OP" 
+    },
+    { 
+        name: "Transmutation", 
+        tradition: "Alchemy", 
+        rank: 8, 
+        type: "Utility", 
+        targetArea: "One Size 1 or smaller non-magical object",
+        duration: "Permanent",
+        desc: "Req: Alchemist's kit + 1gc exotic ingredients. Prep: 10 mins. Change material of object. Gold/gems max value 500gc. Aftereffect: Will challenge (4 banes) or 3d6 Insanity and -10 Health for 1 month. OP" 
+    },
+    { 
+        name: "Rapid Alchemy", 
+        tradition: "Alchemy", 
+        rank: 9, 
+        type: "Utility", 
+        targetArea: "Up to 10 liquid containers",
+        duration: "1 week",
+        desc: "Req: Alchemist's kit. Prep: 1 min. Brew 10 potions (max total 50gc). You must know the formulas. OP" 
+    },
+    { 
+        name: "Golem", 
+        tradition: "Alchemy", 
+        rank: 10, 
+        type: "Utility", 
+        targetArea: "Size 3 block of clay",
+        duration: "Permanent",
+        desc: "Req: Alchemist's kit + 5000gc. Prep: 24 hrs. Create a Golem with three restrictive rules. Aftereffect: Will challenge (5 banes) or 3d6 Insanity; going mad prevents future casts and Golem turns hostile. OP" 
+    },
+          { 
         name: "Shimmering Wall", 
         tradition: "Air", 
         rank: 0, 
