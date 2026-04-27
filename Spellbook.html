@@ -108,6 +108,168 @@
         // Add your spreadsheet rows here following this exact format.
       const spells = [
           { 
+        name: "Unlock Potential", 
+        tradition: "Alteration", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "1 round",
+        desc: "Target makes attack and challenge rolls with 2 boons. Triggered: Cast on your turn for 1 boon. OP" 
+    },
+    { 
+        name: "Warp Flesh", 
+        tradition: "Alteration", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "One living creature (flesh/blood) you reach",
+        duration: "Instantaneous",
+        desc: "Will vs Agility. Success: 1d6 damage. 20+: Target is impaired for 1 round. OP" 
+    },
+    { 
+        name: "Malform", 
+        tradition: "Alteration", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One living creature (flesh/blood) you reach",
+        duration: "1 minute or until incapacitated",
+        desc: "Will vs Agility. Success: 1d6+2 damage; target is impaired and has Frightening trait. 20+: +2d6 extra damage. OP" 
+    },
+    { 
+        name: "Steal Hearing", 
+        tradition: "Alteration", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One living creature (flesh/blood) you reach",
+        duration: "1 minute",
+        desc: "Will vs Agility. Success: 1d6+3 damage and deafened. You gain 2 boons to hearing-based Perception. 20+: +1d6 extra damage and deafened lasts 1 hour. OP" 
+    },
+    { 
+        name: "Revitalize", 
+        tradition: "Alteration", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "Instantaneous",
+        desc: "Removes Health penalty or heals damage equal to healing rate. Sacrifice: Expend a casting to heal 2x your healing rate. OP" 
+    },
+    { 
+        name: "Steal Sight", 
+        tradition: "Alteration", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "One sighted living creature you reach",
+        duration: "1 minute",
+        desc: "Will vs Agility. Success: Target is blinded. You gain 1 boon to sight-based Perception. 20+: Blinded lasts 1 hour. OP" 
+    },
+    { 
+        name: "Elasticity", 
+        tradition: "Alteration", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "1 hour",
+        desc: "Reach increases by 2 yards, +4 Speed. Agility challenge (1 boon) to avoid being knocked prone. OP" 
+    },
+    { 
+        name: "Steal Strength", 
+        tradition: "Alteration", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "One living creature you can reach",
+        duration: "1 minute",
+        desc: "Will vs Agility. Success: Target fatigued (half melee/thrown damage). You gain 1 boon to Strength rolls and +1d6 melee/thrown damage. 20+: Target is also slowed. OP" 
+    },
+    { 
+        name: "Bolster Health", 
+        tradition: "Alteration", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "1 hour",
+        desc: "+20 Health. Immune to disease/poison (existing cases suppressed). No damage from disease/poison. OP" 
+    },
+    { 
+        name: "Horrid Growths", 
+        tradition: "Alteration", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "One living creature (flesh/blood) you reach",
+        duration: "1 minute",
+        desc: "Req: 2+ Corruption. Will vs Agility. Success: 2d6 damage and diseased. Round end: Str challenge (1 bane) or 1d6+1 damage. If killed, target explodes (3yd radius). 20+: +3d6 damage. OP" 
+    },
+    { 
+        name: "Diminish", 
+        tradition: "Alteration", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "One creature you can reach",
+        duration: "1 minute",
+        desc: "Will (1 boon) vs Agility. Success: Target takes 3 banes on all rolls; attackers gain 3 boons vs target. 20+: Str challenge or take 4d6 damage. OP" 
+    },
+    { 
+        name: "Resistance", 
+        tradition: "Alteration", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "1 hour",
+        desc: "Target takes half damage from all sources. OP" 
+    },
+    { 
+        name: "Suspend Animation", 
+        tradition: "Alteration", 
+        rank: 6, 
+        type: "Utility", 
+        targetArea: "One willing or unconscious creature reach",
+        duration: "1 year",
+        desc: "Immune to all damage/afflictions; cannot move/act. Permanence: Cast daily for 1yr + 1day. Sacrifice: Cast Resistance. OP" 
+    },
+    { 
+        name: "Steal Capability", 
+        tradition: "Alteration", 
+        rank: 6, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "1 minute",
+        desc: "Will vs Agility. Success: -5 penalty to target's attributes (kills if any drop to 0). You gain +5 Str and Agi (max 20). OP" 
+    },
+    { 
+        name: "Awaken the Giant", 
+        tradition: "Alteration", 
+        rank: 7, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "1 hour",
+        desc: "Target becomes Size 10. +80 Health, +4 Speed. Weapon damage scales to Size. Ends and deals 10d6 damage if space is too small. OP" 
+    },
+    { 
+        name: "Bestow Power", 
+        tradition: "Alteration", 
+        rank: 8, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "1 hour",
+        desc: "Target gains +2 Power (max 10). Aftereffect: Will challenge (4 banes) or you take -1 Power penalty for 1 hour. OP" 
+    },
+    { 
+        name: "Malefic Monstrosities", 
+        tradition: "Alteration", 
+        rank: 9, 
+        type: "Attack", 
+        targetArea: "20-yard cone",
+        duration: "Permanent",
+        desc: "Str challenge (1 bane) or stunned 1 min. If stunned for full minute, permanently becomes a monster. Damage ends stun. Aftereffect: Will challenge (4 banes) or gain 1d3 Corruption. OP" 
+    },
+    { 
+        name: "Demigod", 
+        tradition: "Alteration", 
+        rank: 10, 
+        type: "Utility", 
+        targetArea: "One creature you can reach",
+        duration: "8 hours",
+        desc: "All attributes become 20; Defense/Perception become 25. +50 Health. Immune Insanity. Half damage. Ending: Str challenge (5 banes) or severe Health penalties/damage. Aftereffect: Will challenge (5 banes) or -1d6 Power penalty for 1 week + 1 day. OP" 
+    },
+          { 
         name: "Preservation", 
         tradition: "Alchemy", 
         rank: 0, 
