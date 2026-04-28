@@ -108,6 +108,177 @@
         // Add your spreadsheet rows here following this exact format.
       const spells = [
           { 
+        name: "Pressing Strike", 
+        tradition: "Battle", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "One melee weapon attack",
+        duration: "Instantaneous",
+        desc: "Substitute Intellect for attack attribute. Success: Normal damage; you and target move up to 5 yards in any direction. OP" 
+    },
+    { 
+        name: "Savage Strike", 
+        tradition: "Battle", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "One melee weapon attack",
+        duration: "Instantaneous",
+        desc: "Substitute Intellect for attack attribute. Success: +1d6 extra damage; you grant 1 boon on the next attack against you this round. OP" 
+    },
+    { 
+        name: "Certain Strike", 
+        tradition: "Battle", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "Instantaneous",
+        desc: "Triggered: When you fail a weapon attack or Battle spell attack. Reroll with 1 boon. OP" 
+    },
+    { 
+        name: "Fangs of the Serpent", 
+        tradition: "Battle", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "1 target or 2 different targets",
+        duration: "Instantaneous",
+        desc: "Attack(s) use Intellect and gain 1 boon. Single target: +1d6 damage and move half Speed (no free attacks). Two targets: Normal damage each. OP" 
+    },
+    { 
+        name: "Killing Urge", 
+        tradition: "Battle", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One creature within short range",
+        duration: "Instantaneous",
+        desc: "Target uses Triggered action to attack with 1 boon (+1d6 damage). Sacrifice: You attack with Intellect for +1d6 damage and gain 2 boons on free attacks for 1 round. OP" 
+    },
+    { 
+        name: "Avalanche Strike", 
+        tradition: "Battle", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "Up to 3 creatures within 1 yard",
+        duration: "Instantaneous",
+        desc: "Targets: Agility challenge (1 bane) or fall prone. If prone, make a weapon attack (Intellect) for +2d6 extra damage. OP" 
+    },
+    { 
+        name: "Distant Doom", 
+        tradition: "Battle", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "One creature/object in medium range",
+        duration: "Instantaneous",
+        desc: "Move Speed (ignore difficult terrain/free attacks/creatures). If in reach: Attack with Intellect (+1 boon) for +2d6 extra damage. OP" 
+    },
+    { 
+        name: "Climb the Mountain", 
+        tradition: "Battle", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "One creature (Size >= your Size) in reach",
+        duration: "Instantaneous",
+        desc: "Enter target space/climb. Attack with Intellect (+2 boons) for +3d6 extra damage. You fly/land 5 yards away (no free attacks). OP" 
+    },
+    { 
+        name: "Iron Grasp", 
+        tradition: "Battle", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "One creature you can reach",
+        duration: "Special",
+        desc: "Req: Free hand. Unarmed strike (Intellect, +1 boon) for +2d6 extra damage and target is Grabbed. Maintain with Triggered action for 1d6 damage/round. OP" 
+    },
+    { 
+        name: "Drive Them Before You", 
+        tradition: "Battle", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "Each chosen creature in reach",
+        duration: "Instantaneous",
+        desc: "Move Speed. Targets: Str challenge (2 banes) or 2d6 damage, fly 1d6 yards away, and land prone. OP" 
+    },
+    { 
+        name: "Steely Defense", 
+        tradition: "Battle", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Take half damage from weapons. Triggered: Can be cast on your turn using a triggered action. OP" 
+    },
+    { 
+        name: "Paint the Field Red", 
+        tradition: "Battle", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "Each chosen creature in reach",
+        duration: "Instantaneous",
+        desc: "Req: Melee weapon. Targets: Agility challenge (1 bane) or 4d6+1 damage (half on success). If fail and injured: Take extra damage equal to Health. OP" 
+    },
+    { 
+        name: "Reaper’s Harvest", 
+        tradition: "Battle", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "One creature you can reach",
+        duration: "Instantaneous",
+        desc: "Attack with Intellect (+3 boons) for 6d6+5 damage. If target Health <= 30, it takes damage equal to its Health instead. OP" 
+    },
+    { 
+        name: "Savage Rebuke", 
+        tradition: "Battle", 
+        rank: 6, 
+        type: "Attack", 
+        targetArea: "Triggering creature",
+        duration: "Instantaneous",
+        desc: "Triggered: When hit by a weapon attack. Turn success into failure and attack (Intellect, +3 boons) for 3d6+3 damage and impaired 1 round. OP" 
+    },
+    { 
+        name: "Cast Down From Heaven", 
+        tradition: "Battle", 
+        rank: 6, 
+        type: "Attack", 
+        targetArea: "Grabbed creature",
+        duration: "Instantaneous",
+        desc: "Triggered: When you grab a creature. Fly 20 yards up with target; attack (Intellect, +1 boon) for +2d6 damage and Stunned. Release target to fall and you land safely. OP" 
+    },
+    { 
+        name: "Whirlwind of Death", 
+        tradition: "Battle", 
+        rank: 7, 
+        type: "Attack", 
+        targetArea: "Each chosen creature in reach",
+        duration: "Instantaneous",
+        desc: "Req: Melee weapon. Two-part sweep: 6d6 damage (Agi half) -> Fly Speed -> 6d6 damage (Agi half). End: Str challenge (3 banes) or fatigued 1 min. OP" 
+    },
+    { 
+        name: "Battle Fervor", 
+        tradition: "Battle", 
+        rank: 8, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 hour",
+        desc: "Gain special actions by expending Rank 0 castings: Blurring Advance (Move 3x Speed), Deflection (3 banes to enemy), Evasion (3 boons to resist area), or Strike (3 boons to attack). OP" 
+    },
+    { 
+        name: "Surge of Slaughter", 
+        tradition: "Battle", 
+        rank: 9, 
+        type: "Attack", 
+        targetArea: "20-yard cone",
+        duration: "Instantaneous",
+        desc: "Health <= 35: Dies instantly. Others: Agility challenge (3 banes) or 10d6 damage (half on success). You then move to any space in area. OP" 
+    },
+    { 
+        name: "God of War", 
+        tradition: "Battle", 
+        rank: 10, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "8 hours",
+        desc: "Onlookers: Will challenge (3 banes) or 1d3 Insanity. +50 Health, immune Insanity. Attacks: +3 boons and +5d6 damage. Enemies: 3 banes to attack you. End of round: 3d6 damage to chosen nearby creatures. Aftereffect: Will challenge (5 banes) or 3d6 Insanity and -1d6 Power penalty. OP" 
+    },
+          { 
         name: "Helping Hand", 
         tradition: "Arcana", 
         rank: 0, 
