@@ -108,6 +108,816 @@
         // Add your spreadsheet rows here following this exact format.
       const spells = [
           { 
+        name: "Choking Smoke", 
+        tradition: "Fire", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "3-yard cone",
+        duration: "1 minute",
+        desc: "Heavily obscures area. Living/breathing creatures must pass Str challenge (+1 boon) or become fatigued while in area and for 1 round after. OP" 
+    },
+    { 
+        name: "Manipulate Flame", 
+        tradition: "Fire", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "One Size 1/2 or smaller flame in medium range",
+        duration: "1 hour",
+        desc: "Options: Double/halve light; change shape; or fly flame to fingertip. Can send flame to ignite object in short range. Sacrifice: Use triggered action to take half damage from fire/heat. OP" 
+    },
+    { 
+        name: "Blazing Columns", 
+        tradition: "Fire", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "Up to four 1-yard-square spaces on ground",
+        duration: "1 minute",
+        desc: "2-yard tall columns deal 1d6 damage on appearance and at round end. Agi challenge: half damage and move 1 yard out. OP" 
+    },
+    { 
+        name: "Sword of Fire", 
+        tradition: "Fire", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "Self (Weapon)",
+        duration: "1 minute",
+        desc: "Create fiery sword. Attack with Will vs Agi: 1d6 + 2 damage. 20+: +1d6 extra damage. Acts as torch light. OP" 
+    },
+    { 
+        name: "Fire Walk", 
+        tradition: "Fire", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Triggered: Cast on your turn. Immune to fire damage. Entering Size 1+ fire allows teleporting to another fire within medium range; locate all fires within 1 mile. OP" 
+    },
+    { 
+        name: "Ignite", 
+        tradition: "Fire", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "Any number of flammable objects in short range",
+        duration: "Instantaneous",
+        desc: "Targets take 1d6 damage and catch fire (1d6 damage per round until destroyed/extinguished). OP" 
+    },
+    { 
+        name: "Cloak of Cinders", 
+        tradition: "Fire", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "Self / 5-yard cone",
+        duration: "1 minute",
+        desc: "Immune to fire damage. Action: Hurl cinders in cone for 2d6 damage (Agi challenge for none). Cinders return to you after. OP" 
+    },
+    { 
+        name: "See Through the Flame", 
+        tradition: "Fire", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "One flame you reach",
+        duration: "1 hour",
+        desc: "1 min concentration. Sense all flames within 1 mile; see through any chosen flame as if in its space. Action: Swap flames. OP" 
+    },
+    { 
+        name: "Fire Imps", 
+        tradition: "Fire", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "3-yard cube in short range",
+        duration: "1 hour",
+        desc: "Summons five compelled fire imps. Imps disappear when spell ends or incapacitated. OP" 
+    },
+    { 
+        name: "Living Inferno", 
+        tradition: "Fire", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Half damage from cold; attackers take 1d6 damage. Near creatures (1 yd) Agi challenge or 2d6 damage. Fire spells deal +1d6 damage (+2d6 extra if Flaming Shroud is active). OP" 
+    },
+    { 
+        name: "Circle of Fire", 
+        tradition: "Fire", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "5-yard radius circle on ground",
+        duration: "1 minute",
+        desc: "3d6 + 5 damage on appearance and at round end. Agi challenge (if within 1 yd of edge): half damage and fall prone outside area. OP" 
+    },
+    { 
+        name: "Rain of Fire", 
+        tradition: "Fire", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "10-yard radius cloud in long range",
+        duration: "1 minute",
+        desc: "5d6 damage to everything under cloud every round. Agi challenge: failure = catch fire (1d6/round); success = half damage. OP" 
+    },
+    { 
+        name: "Blood of the Earth", 
+        tradition: "Fire", 
+        rank: 6, 
+        type: "Attack", 
+        targetArea: "3-yard radius point on ground",
+        duration: "1 minute",
+        desc: "Creates lava pool/flow. Contact: 8d6 damage and catch fire. Agi challenge: half damage and no fire. Cold damage turns lava to rock (traps creatures). OP" 
+    },
+    { 
+        name: "Wildfire", 
+        tradition: "Fire", 
+        rank: 6, 
+        type: "Attack", 
+        targetArea: "10-yard cube in long range",
+        duration: "Concentration, up to 1 minute",
+        desc: "5d6 damage and catch fire (Agi challenge: half/no fire). Action: Move cube 10 yards. Damage applies only once per round per target. OP" 
+    },
+    { 
+        name: "Swarm of Fireballs", 
+        tradition: "Fire", 
+        rank: 7, 
+        type: "Attack", 
+        targetArea: "Up to 5 points in long range",
+        duration: "Instantaneous",
+        desc: "Each point explodes in 5-yard radius for 5d6 damage (Agi challenge: half). Overlapping areas deal +1d6 extra damage per overlap. OP" 
+    },
+    { 
+        name: "Become the Conflagration", 
+        tradition: "Fire", 
+        rank: 8, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "Concentration, up to 1 hour",
+        desc: "Size 3 flame form. Long range sightless perception; fire leap teleport; immune to many conditions; half weapon damage. Water vulnerability. Heal from Fire spells. Action: Blaze (3 yds, 5d6 damage, catch fire). OP" 
+    },
+    { 
+        name: "Name of Fire", 
+        tradition: "Fire", 
+        rank: 9, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 hour",
+        desc: "Cast learned Rank 0-3 Fire spells without expenditure. Cast any Rank 0 Fire spell even if not learned. OP" 
+    },
+    { 
+        name: "Call Down the Mountain", 
+        tradition: "Fire", 
+        rank: 10, 
+        type: "Attack", 
+        targetArea: "Point on ground (Outdoors)",
+        duration: "Instantaneous",
+        desc: "Meteor hits for 20d6 damage in 1-mile radius; everything catches fire. Agi challenge (-3 banes) for half damage. Aftereffect: Will challenge (-5 banes) or die and explode for 10d6 in 100 yds. OP" 
+    },
+          { 
+        name: "Prick", 
+        tradition: "Fey", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "One creature in short range",
+        duration: "1 round",
+        desc: "Int vs Str. Success: 1 damage and impaired for 1 round. 20+: Impaired for 1d3 rounds. OP" 
+    },
+    { 
+        name: "Trip", 
+        tradition: "Fey", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "One creature in medium range",
+        duration: "1 round",
+        desc: "Int vs Agi. Success: Prone and cannot stand for 1 round. 20+: Cannot stand for 1d3 rounds. OP" 
+    },
+    { 
+        name: "Fumble", 
+        tradition: "Fey", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "Up to 3 creatures in short range",
+        duration: "Instantaneous",
+        desc: "Agi challenge (2 banes) or drop held object. Roll total <= 0: fall prone. Triggered: Use when target draws/retrieves item; Int vs Agi to drop. 20+: also fall prone. OP" 
+    },
+    { 
+        name: "Guiding Sprite", 
+        tradition: "Fey", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "1-yard cube in short range",
+        duration: "1 minute",
+        desc: "Summons a compelled sprite. Int vs Will to increase duration to 1 hour (gifts grant boons). OP" 
+    },
+    { 
+        name: "Repel Iron", 
+        tradition: "Fey", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "Up to 5 creatures with iron/alloy gear",
+        duration: "Instantaneous",
+        desc: "Str challenge (1 bane if wearing/made of iron). Fail: Metal targets move 2d6 yards away and fall prone; iron weapons fly 2d6 yards away. Sacrifice: Cast Fumble. OP" 
+    },
+    { 
+        name: "Iron to Wood", 
+        tradition: "Fey", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "3-yard cube in medium range",
+        duration: "24 hours",
+        desc: "Non-magical Size 1 or smaller iron objects turn to wood. Affected weapons deal half damage. Sacrifice: Teleport (short range). OP" 
+    },
+    { 
+        name: "Conventicle of Brownies", 
+        tradition: "Fey", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "2-yard cube in short range",
+        duration: "1d3 + 1 hours (secret)",
+        desc: "Req: Milk offering + 1 min concentration. Summons 1d3+1 friendly brownies. Sacrifice: Teleport (medium range). OP" 
+    },
+    { 
+        name: "Raiment of Stars", 
+        tradition: "Fey", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "Self (Clothing/Armor)",
+        duration: "4 hours",
+        desc: "Finery appearance. Benefits: Entrancing Presence (Action: Will challenge vs short range; fail = charmed 1hr); invisible in shadows; teleport (long range) to end spell. OP" 
+    },
+    { 
+        name: "Damn Your Eyes", 
+        tradition: "Fey", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Whenever you see a creature, it must pass a Will challenge or you become invisible to it until you attack. Success makes creature immune. OP" 
+    },
+    { 
+        name: "Vengeance of the Wee Free Men", 
+        tradition: "Fey", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "Up to 5 creatures in short range",
+        duration: "1 minute",
+        desc: "Each turn: Agi challenge (1 bane). Failure: 2d6+2 damage, moved 1d3 yards, and impaired 1 round. OP" 
+    },
+    { 
+        name: "Call Unicorn", 
+        tradition: "Fey", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "2-yard cube in short range",
+        duration: "8 hours",
+        desc: "Summons unicorn. If Corruption 0: friendly (rider must be virgin). If Corruption > 0: Int vs Will to compel for 1 hour; failure = hostile. OP" 
+    },
+    { 
+        name: "Strange Delusions", 
+        tradition: "Fey", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "Up to 10 creatures in medium range",
+        duration: "1 minute / 1d3 hours",
+        desc: "Int challenge (3 banes). Success: Impaired 1 min. Failure: Target believes it is a small animal for 1d3 hours (Int 5, restricted actions). OP" 
+    },
+    { 
+        name: "Deep Sleep", 
+        tradition: "Fey", 
+        rank: 6, 
+        type: "Attack", 
+        targetArea: "Any number of creatures in medium range",
+        duration: "1d6 years",
+        desc: "Will challenge (HP <= 30 fail automatically; HP <= 50 have 1 bane). Failure: Prone and asleep. No aging/need for food. Ends on damage or caster action. OP" 
+    },
+    { 
+        name: "Reflecting Pool", 
+        tradition: "Fey", 
+        rank: 6, 
+        type: "Utility", 
+        targetArea: "Pool of still water",
+        duration: "Concentration, up to 4 hours",
+        desc: "View known location in water. Portal: Creatures can enter pool to emerge at destination (10yd fall). Caster entering ends spell. Aftereffect: Fatigued (or -2d6 Health if already fatigued). OP" 
+    },
+    { 
+        name: "Lords and Ladies", 
+        tradition: "Fey", 
+        rank: 7, 
+        type: "Utility", 
+        targetArea: "10-yard cube in short range",
+        duration: "Until rest",
+        desc: "Req: Blood (1 dmg), Beauty (10gc art), Flame (7 candles) + 1 min concentration. Summons 3d6 neutral elves. Sacrifice: Teleport (extreme range). OP" 
+    },
+    { 
+        name: "Gift of Immortality", 
+        tradition: "Fey", 
+        rank: 8, 
+        type: "Utility", 
+        targetArea: "One willing mortal you reach",
+        duration: "Permanent",
+        desc: "Caster permanently reduces Health by 1d6. Target becomes faerie: gains shadowsight, immune to disease/charmed, spell defense, social boons. Iron contact impairs/strips defenses. Aftereffect: Str challenge (4 banes) or damage = Health. Sacrifice: Heal damage/remove 1 Insanity. OP" 
+    },
+    { 
+        name: "Cave of Dreams", 
+        tradition: "Fey", 
+        rank: 9, 
+        type: "Utility", 
+        targetArea: "2-yard cube in short range",
+        duration: "Permanent",
+        desc: "Creates door to extradimensional space (4x4x8 yards). No time passes inside. Undetectable. Aftereffect: Will challenge (4 banes) or 3d6 Insanity. Sacrifice: Open door to any previously created cave. OP" 
+    },
+    { 
+        name: "Imagine a Hidden Kingdom", 
+        tradition: "Fey", 
+        rank: 10, 
+        type: "Utility", 
+        targetArea: "Point you reach",
+        duration: "Permanent",
+        desc: "24-hour concentration. Creates 1-mile cube extradimensional kingdom and borderland. Aftereffect: Int challenge (5 banes) or 5d6 damage, Int/Will reduced to 5, 3d6 Insanity, and forget spell forever. Sacrifice: Expand kingdom (1 mile). OP" 
+    },
+          { 
+        name: "Convincing Word", 
+        tradition: "Enchantment", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "One creature in short range (seen/heard)",
+        duration: "1 round",
+        desc: "Triggered: Use on your turn. Int vs Will. Success: Target charmed for 1 round. 20+: Charmed for 1 minute. OP" 
+    },
+    { 
+        name: "Distraction", 
+        tradition: "Enchantment", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "One creature in short range (seen)",
+        duration: "1 round",
+        desc: "Int vs Will (2 banes if target HP >= 20). Success: Target surprised until damage taken. 20+: Target grants 1 boon on attacks vs it. OP" 
+    },
+    { 
+        name: "Attraction", 
+        tradition: "Enchantment", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One creature in short range (seen)",
+        duration: "1 minute",
+        desc: "Int vs Will (1 bane if your group attacked target since last rest). Success: +2 boons on your attacks vs target; target impaired while > 5yds away. 20+: Target impaired while it can see you. OP" 
+    },
+    { 
+        name: "Loathing", 
+        tradition: "Enchantment", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "Primary (Med range), Secondary (Short range of primary)",
+        duration: "1 minute",
+        desc: "Int +1 boon vs primary's Int. Success: Primary impaired while near secondary. Primary can remove by attacking secondary (+3 boons, +2d6 damage). 20+: Impaired adds +1 bane. OP" 
+    },
+    { 
+        name: "Awaken Passion", 
+        tradition: "Enchantment", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "Up to 3 creatures in short range",
+        duration: "Concentration, up to 1 minute",
+        desc: "Targets get 2 boons on rolls. Once per spell, a target can turn a failure into a success, which immediately ends the spell for everyone. OP" 
+    },
+    { 
+        name: "Revulsion", 
+        tradition: "Enchantment", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "One creature or object in medium range",
+        duration: "1 minute",
+        desc: "Creatures within 5yds must pass Int challenge or be impaired while near target. Caster can use triggered action to make allies immune. OP" 
+    },
+    { 
+        name: "Dolor", 
+        tradition: "Enchantment", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "Up to 5 creatures in medium range",
+        duration: "1 minute",
+        desc: "Will challenge (1 bane). Failure: Target makes rolls with 1 bane. Every subsequent failure adds +1 bane until spell ends. OP" 
+    },
+    { 
+        name: "Unreasoning Hatred", 
+        tradition: "Enchantment", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "One creature in medium range",
+        duration: "1 minute",
+        desc: "Int vs Will. Success: Target hates a secondary creature/object (+3 boons vs it, 3 banes vs anything else). Action: Change the object of hate. 20+: +1d6 Insanity. OP" 
+    },
+    { 
+        name: "Forbid", 
+        tradition: "Enchantment", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "One creature in medium range",
+        duration: "Special",
+        desc: "Int vs Will (+1 boon if HP <= 25, 1 bane if HP >= 50). Success: Target charmed; forbid one action. Using action requires Int challenge (-3 banes). Fail: Dazed (20+: Stunned). OP" 
+    },
+    { 
+        name: "Lure", 
+        tradition: "Enchantment", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "Up to 5 creatures in medium range",
+        duration: "1 minute",
+        desc: "Int challenge. Failure: Fixated on a 5yd cube area. While fixated and outside: 3 banes on rolls, difficult terrain unless moving toward area. Will challenge (1 bane) to end if inside. OP" 
+    },
+    { 
+        name: "Awaken Horror", 
+        tradition: "Enchantment", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "Up to 10 creatures in medium range",
+        duration: "1 hour",
+        desc: "Targets gain 1 Insanity. Int challenge or rolls have 1 bane for 1 hour. While affected, -3 banes to resist Frightening/Horrifying traits. OP" 
+    },
+    { 
+        name: "Zeal", 
+        tradition: "Enchantment", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "Up to 3 willing, uninjured creatures in short range",
+        duration: "1 minute",
+        desc: "Targets get 3 boons on rolls, +2d6 damage, immune to Insanity. Ends if injured; target then must pass Will challenge or +1 Insanity and dazed. OP" 
+    },
+    { 
+        name: "Awaken the Hero", 
+        tradition: "Enchantment", 
+        rank: 6, 
+        type: "Utility", 
+        targetArea: "One creature in long range",
+        duration: "1 hour",
+        desc: "Target takes half damage, immune to charmed/compelled/frightened, +3 boons on rolls, +1d6 damage. Aftereffect: Str challenge (3 banes) or fatigued 1d6 hours. OP" 
+    },
+    { 
+        name: "Devotion", 
+        tradition: "Enchantment", 
+        rank: 6, 
+        type: "Attack", 
+        targetArea: "Up to 10 creatures in short range",
+        duration: "1 hour",
+        desc: "Will challenge (1 bane if HP <= 30; +1 boon per 20 HP over 60). Failure: Compelled. Damage allows Will challenge (2 banes) to end. OP" 
+    },
+    { 
+        name: "Ennui", 
+        tradition: "Enchantment", 
+        rank: 7, 
+        type: "Attack", 
+        targetArea: "Up to 4 creatures in long range",
+        duration: "Until rest",
+        desc: "Int vs Int (+3 boons if HP <= 50). Success: Dazed and slowed. Each turn, Will challenge (3 banes) to ignore dazed for 1 round. 20+: Failures grant 1d6 Insanity; going mad = die. OP" 
+    },
+    { 
+        name: "Self-Destruct", 
+        tradition: "Enchantment", 
+        rank: 8, 
+        type: "Attack", 
+        targetArea: "One living creature in long range",
+        duration: "Special",
+        desc: "Int vs Will (+3 boons if HP <= 50; 3 banes if HP >= 100). Success: Charmed. Target grants 3 boons on attacks vs it and takes double damage. If armed, must pass Will challenge (2 banes) or attempt suicide. 20+: +Insanity = Will. OP" 
+    },
+    { 
+        name: "Charm the Multitudes", 
+        tradition: "Enchantment", 
+        rank: 9, 
+        type: "Attack", 
+        targetArea: "Every seen creature with HP <= 20",
+        duration: "1 month, 1 week, 1 day",
+        desc: "Targets become charmed. Aftereffect: Str challenge (4 banes) or -10 Health penalty for the duration. OP" 
+    },
+    { 
+        name: "True Love", 
+        tradition: "Enchantment", 
+        rank: 10, 
+        type: "Attack", 
+        targetArea: "One creature (seen/heard)",
+        duration: "Permanent",
+        desc: "Int vs Will (Fail if caster Corrupted but target is not; 3 banes if target not attracted to caster). Success: Charmed. Target dies if they go too long without seeing caster. Aftereffect: Will challenge (-5 banes) or caster becomes charmed by target instead. OP" 
+    },
+          { 
+        name: "Earth Walker", 
+        tradition: "Earth", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Ignore difficult terrain from earth/sand/stone. Only fall prone if you choose to. OP" 
+    },
+    { 
+        name: "Stone Gauntlet", 
+        tradition: "Earth", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Stone sheathes arm. +1 Defense and +2 damage to unarmed strikes. OP" 
+    },
+    { 
+        name: "Breastwork", 
+        tradition: "Earth", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "4x1x1 yard line",
+        duration: "1 minute",
+        desc: "Wall of earth (Def 5, HP 20). If destroyed, space becomes difficult terrain until spell ends. OP" 
+    },
+    { 
+        name: "Ensnare", 
+        tradition: "Earth", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One Size 2 or smaller creature on ground",
+        duration: "1 minute",
+        desc: "Will vs Agi. Success: 1d6 damage and grabbed. Escaping requires attack roll vs your Will; failure deals 1d6 damage. 20+: +1d6 extra damage. OP" 
+    },
+    { 
+        name: "Earth Wave", 
+        tradition: "Earth", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "5-yard square on ground",
+        duration: "Instantaneous",
+        desc: "Agi challenge. Failure: Fall prone and move 1d6 yards away; take 1d6 damage per yard moved. Structures take 4d6 damage (collapse deals 4d6+10). OP" 
+    },
+    { 
+        name: "Stone Call", 
+        tradition: "Earth", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "10-yard long, 1-yard wide line",
+        duration: "Instantaneous",
+        desc: "Creates a stony path to bridge gaps or liquids. Sacrifice: Cast Tremor. OP" 
+    },
+    { 
+        name: "Granite Soldiers", 
+        tradition: "Earth", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "Rocks within medium range (Total Size <= 2)",
+        duration: "1 minute",
+        desc: "Turns rocks into compelled constructs (Small, Medium, or Large based on rock Size). OP" 
+    },
+    { 
+        name: "Secret of Stone", 
+        tradition: "Earth", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "One earth/stone object you reach",
+        duration: "Instantaneous",
+        desc: "Ask object 3 questions about nearby history or properties. Sacrifice: Cast Avalanche. OP" 
+    },
+    { 
+        name: "Stone Merge", 
+        tradition: "Earth", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "Self/Stone object",
+        duration: "Concentration",
+        desc: "Move into stone/earth surface (Size >= you). Can see/hear/speak normally. Move at half Speed on surface. If object destroyed, you die. OP" 
+    },
+    { 
+        name: "Voracious Earth", 
+        tradition: "Earth", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "5-yard radius circle on ground",
+        duration: "1 minute",
+        desc: "Difficult terrain. Round end: Agi challenge or 2d6 damage. Incapacitated creatures are devoured/die. OP" 
+    },
+    { 
+        name: "Crystal Shards", 
+        tradition: "Earth", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "5-yard radius circle on ground",
+        duration: "1 hour",
+        desc: "Agi challenge. Failure: 2d6 damage and impaled (immobilized, 1d6 damage/round). Spikes provide half cover and difficult terrain. OP" 
+    },
+    { 
+        name: "Morass", 
+        tradition: "Earth", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "20-yard square on ground",
+        duration: "1d3 hours",
+        desc: "Turns earth/stone to mud 2 yards deep. Creatures sink and must swim. Can collapse structures/bridges. OP" 
+    },
+    { 
+        name: "Fissure", 
+        tradition: "Earth", 
+        rank: 6, 
+        type: "Attack", 
+        targetArea: "30x2 yard line on ground",
+        duration: "Permanent",
+        desc: "Agi challenge. Fail: Fall into crack (5d6 damage, 3d6 yards deep). Open 19 or lower: Catch edge. 20+: Move to safety. OP" 
+    },
+    { 
+        name: "Wall of Stone", 
+        tradition: "Earth", 
+        rank: 6, 
+        type: "Utility", 
+        targetArea: "30x10x4 yard line",
+        duration: "Permanent",
+        desc: "Solid stone barrier/bridge. Each 1yd cube has Def 5, HP 20, half damage from weapons. OP" 
+    },
+    { 
+        name: "Major Earthquake", 
+        tradition: "Earth", 
+        rank: 7, 
+        type: "Attack", 
+        targetArea: "3-mile radius circle on ground",
+        duration: "1d6 minutes",
+        desc: "Difficult terrain. Round end: Agi challenge or 1d6 damage and fall prone. Structures take 4d6 damage per round. OP" 
+    },
+    { 
+        name: "Become the Mountain", 
+        tradition: "Earth", 
+        rank: 8, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "Concentration, up to 1 hour",
+        desc: "Size 3 form. Str 20, +40 Health, Sightless (long range), half weapon damage, various immunities. Unarmed strike: 6d6. Round end: Near creatures Agi challenge or fall prone. OP" 
+    },
+    { 
+        name: "Name of the Mountain", 
+        tradition: "Earth", 
+        rank: 9, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 hour",
+        desc: "Cast learned Rank 0-3 Earth spells without expending castings. Can cast any Rank 0 Earth spell even if not learned. OP" 
+    },
+    { 
+        name: "Crack the World", 
+        tradition: "Earth", 
+        rank: 10, 
+        type: "Utility", 
+        targetArea: "Point on ground",
+        duration: "Special",
+        desc: "Fissure 6 miles long, 0.5 mile wide/deep. Anything inside dies (unless flier). Shaking radius 5d20 miles. Aftershock after 1d6 hours. Aftereffect: Will challenge (-5 banes) or turn to stone/die. OP" 
+    },
+          { 
+        name: "Precognitive Attack", 
+        tradition: "Divination", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "Instantaneous",
+        desc: "Triggered: When making an attack roll vs a seen target. You make the attack roll with 1 boon. OP" 
+    },
+    { 
+        name: "Precognitive Defense", 
+        tradition: "Divination", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "Instantaneous",
+        desc: "Triggered: When a seen creature attacks you. Impose 1 bane on the attacker and you get 1 boon to resist. OP" 
+    },
+    { 
+        name: "Reveal Fate", 
+        tradition: "Divination", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One creature within short range",
+        duration: "Instantaneous",
+        desc: "Will challenge (1 bane). Success: Target gains 1d3 Insanity. Sacrifice: Impose 1 bane on all attacks against you until end of round. OP" 
+    },
+    { 
+        name: "Sense Peril", 
+        tradition: "Divination", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "5-yard radius sphere centered on you",
+        duration: "Concentration, up to 1 hour",
+        desc: "Moving aura. Learn location of hidden/diseased/poisonous creatures/objects. Gain one extra action during the first round of combat. OP" 
+    },
+    { 
+        name: "Anticipate Attack", 
+        tradition: "Divination", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Impose 2 banes on attack rolls against you; gain 2 boons on challenge rolls to resist attacks. OP" 
+    },
+    { 
+        name: "Pathfinder", 
+        tradition: "Divination", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "Special",
+        duration: "Concentration",
+        desc: "Options: 1. Find the Path (shortest route to known destination within 1 mile); 2. Sense Travelers (identify last 5 creatures in 5yd radius sphere from last 24hrs; see descriptor/Corruption; follow their route). OP" 
+    },
+    { 
+        name: "See the End", 
+        tradition: "Divination", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "One creature you can see",
+        duration: "1 minute",
+        desc: "You gain 1 boon on attacks vs target. Triggered: Grant an ally 3 boons and +1d6 extra damage on an attack vs the target. OP" 
+    },
+    { 
+        name: "The Past Revealed", 
+        tradition: "Divination", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "10-yard cube",
+        duration: "Concentration, up to 4 hours",
+        desc: "View past events in reverse (1 min concentration = 1 hour of history). Sacrifice: Cast Reading. OP" 
+    },
+    { 
+        name: "Third Eye", 
+        tradition: "Divination", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 hour",
+        desc: "Impose 2 banes on attackers; 2 boons to resist; perceive hidden creatures in short range. Immune to surprise/blinded/deafened; 2 boons to Perception. OP" 
+    },
+    { 
+        name: "True Nature", 
+        tradition: "Divination", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "One creature in short range",
+        duration: "Instantaneous",
+        desc: "Intellect challenge. Success: GM must show the target's stat block and reveal one 'true thing' (special action, vulnerability, goal, or history). OP" 
+    },
+    { 
+        name: "Avert Fate", 
+        tradition: "Divination", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "Instantaneous",
+        desc: "Triggered: When you fail a roll or take damage (except from your own spells). Turn failure to success or reduce damage to 1. OP" 
+    },
+    { 
+        name: "Thwart Danger", 
+        tradition: "Divination", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Impose 5 banes on attacks against you; 5 boons to resist. On successful defense, move up to 2 yards without triggering free attacks. OP" 
+    },
+    { 
+        name: "Fateful Bond", 
+        tradition: "Divination", 
+        rank: 6, 
+        type: "Utility", 
+        targetArea: "Up to 5 creatures you reach",
+        duration: "Until rest",
+        desc: "Know location, damage, Insanity, Corruption, and afflictions of targets. Cast touch utility spells on them at any distance. OP" 
+    },
+    { 
+        name: "Mind Library", 
+        tradition: "Divination", 
+        rank: 6, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "4 hours",
+        desc: "Count as having every scholarship area as a profession. Sacrifice: Gain 2 boons on Intellect rolls for 1 hour. OP" 
+    },
+    { 
+        name: "Premonition", 
+        tradition: "Divination", 
+        rank: 7, 
+        type: "Utility", 
+        targetArea: "Special",
+        duration: "Instantaneous",
+        desc: "Ask GM one question about an event in the next 10 days; GM must answer truthfully. Aftereffect: Intellect challenge (3 banes) or 1d6 Insanity. OP" 
+    },
+    { 
+        name: "Scrying", 
+        tradition: "Divination", 
+        rank: 8, 
+        type: "Utility", 
+        targetArea: "Reflective surface",
+        duration: "Concentration",
+        desc: "View any place in the world. Zoom from 1yd cube to 2-mile cube. Sound is transmitted from the area. OP" 
+    },
+    { 
+        name: "True Finding", 
+        tradition: "Divination", 
+        rank: 9, 
+        type: "Utility", 
+        targetArea: "Special",
+        duration: "Instantaneous",
+        desc: "Name a creature, object, or place; if it exists, you know its location. OP" 
+    },
+    { 
+        name: "Cosmic Awareness", 
+        tradition: "Divination", 
+        rank: 10, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "24 hours",
+        desc: "Immune to surprise; no free attacks triggered; 5 banes on attackers; 5 boons to resist. Once per round: gain 5 boons on a roll. See hidden/invisible/shadows/illusions/true forms. Aftereffect: Intellect challenge (5 banes) or 3d6 Insanity. OP" 
+    },
+          { 
         name: "Burst", 
         tradition: "Destruction", 
         rank: 0, 
