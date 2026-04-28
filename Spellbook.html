@@ -108,6 +108,330 @@
         // Add your spreadsheet rows here following this exact format.
       const spells = [
           { 
+        name: "Otherworldly Scream", 
+        tradition: "Demonology", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "3-yard cone",
+        duration: "1 minute",
+        desc: "Caster takes 1 damage. Will challenge. Failure: +1 Insanity and deafened for 1 minute. OP" 
+    },
+    { 
+        name: "Written in Blood", 
+        tradition: "Demonology", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Caster takes 1 damage. -5 Health penalty. While active: attackers take 2 banes; caster gets 2 boons to resist attacks. OP" 
+    },
+    { 
+        name: "Mark of the Beast", 
+        tradition: "Demonology", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One creature in reach",
+        duration: "1 minute",
+        desc: "Caster takes 1d3 damage. Int vs Agi. Hit: Target must use an action to attack randomly each turn. End of round: Will challenge or +1 Insanity. 20+: Failures grant 1d3 Insanity. OP" 
+    },
+    { 
+        name: "Minor Demon", 
+        tradition: "Demonology", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "Special",
+        duration: "Special",
+        desc: "Caster takes 1d3 damage. Options: 1. Release Tiny Demon (1hr conc, Int vs Will to compel); 2. Heal Demon (3d6); 3. Torment Demon (Will vs Agi, deals 3d6, regain Rank 0 casting). OP" 
+    },
+    { 
+        name: "Bestow Mark of Darkness", 
+        tradition: "Demonology", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "One creature in medium range",
+        duration: "1 minute",
+        desc: "Caster takes 1d6 damage. Int vs Will. Success: Target gains 1 Corruption and a random Mark of Darkness; becomes charmed. Sacrifice: Heal a demon 3d6. OP" 
+    },
+    { 
+        name: "Blood Harvest", 
+        tradition: "Demonology", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "Up to 3 creatures in short range",
+        duration: "Instantaneous",
+        desc: "Caster takes 1d6 damage. Str challenge (1 bane). Failure: 3d6 damage and caster gains 1d6 Blood Points. Blood Points can be spent to negate damage from casting Demonology spells. OP" 
+    },
+    { 
+        name: "Demon Seed", 
+        tradition: "Demonology", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "One living creature in short range",
+        duration: "Special",
+        desc: "Caster takes 1d6+1 damage. Int vs Agi. Hit: Target makes Str challenge (1 bane) each round. 3 Failures: Belly bursts for 3d6 damage, Insanity = Will, and releases a tiny demon. OP" 
+    },
+    { 
+        name: "Vision of Nowhere", 
+        tradition: "Demonology", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "One creature in medium range",
+        duration: "Instantaneous",
+        desc: "Caster takes 1d6+1 damage. Int vs Will. Success: Target gains 2d6 Insanity. If they go mad and become incapacitated, they die and soul is destroyed. 20+: Target falls prone. OP" 
+    },
+    { 
+        name: "Demonic Maw", 
+        tradition: "Demonology", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "2-yard cube",
+        duration: "Concentration, up to 1 minute",
+        desc: "Caster takes 1d6+2 damage. Moving mouth (Defense 15, HP 40). Action: Move 5yds and attack (Will +1 boon vs Defense) for 4d6. 20+: Swallows target into the Void. OP" 
+    },
+    { 
+        name: "Query the Void", 
+        tradition: "Demonology", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "One defenseless/unconscious creature",
+        duration: "6 minutes",
+        desc: "Caster takes 1d6+2 damage. Target is possessed by a demon; you may ask 3 questions (GM rolls for demon's cooperation, page 42). Sacrifice: Cast Possession. OP" 
+    },
+    { 
+        name: "Steal Form from Substance", 
+        tradition: "Demonology", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "5-yard radius sphere",
+        duration: "1 minute",
+        desc: "Caster takes 2d6 damage. Demons in area get +2 boons and +1d6 damage. Objects take 30 damage. Creatures: Str challenge or 6d6 damage; incapacitated = die and turn to jelly. OP" 
+    },
+    { 
+        name: "Unholy Chorus", 
+        tradition: "Demonology", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "Up to 8 creatures in long range",
+        duration: "Special",
+        desc: "Caster takes 2d6 damage. Will challenge (1 bane). Failure: +1 Corruption and stunned. While stunned, target 'sings'; nearby creatures must pass Will challenge or gain 1d6 Insanity. OP" 
+    },
+    { 
+        name: "Create Demon Spawn", 
+        tradition: "Demonology", 
+        rank: 6, 
+        type: "Attack", 
+        targetArea: "One living creature in long range",
+        duration: "1 hour",
+        desc: "Caster takes 4d6 damage. Will +1 boon (3 boons if HP <= 40) vs Str. Success: Target becomes a Demon Spawn (horrifying monster, +Health, +Def, +Speed, spell resistance, natural weapons). 20+: Permanent. OP" 
+    },
+    { 
+        name: "Call Greater Demon", 
+        tradition: "Demonology", 
+        rank: 6, 
+        type: "Utility", 
+        targetArea: "3-yard cube in short range",
+        duration: "Instantaneous",
+        desc: "Caster takes 4d6 damage. Roll d6 on table (Page 43) to determine which demon emerges from a hole in reality. Acts according to its nature. OP" 
+    },
+    { 
+        name: "Demonic Horde", 
+        tradition: "Demonology", 
+        rank: 7, 
+        type: "Utility", 
+        targetArea: "Medium range",
+        duration: "Special",
+        desc: "Caster takes 6d6 damage. Summon 1d3+1 mobs of small demons. They act according to their nature. OP" 
+    },
+    { 
+        name: "Into the Void", 
+        tradition: "Demonology", 
+        rank: 8, 
+        type: "Attack", 
+        targetArea: "One creature in medium range",
+        duration: "Instantaneous",
+        desc: "Caster takes 8d6 damage. Int vs Str. Success: Target sucked into Void. Caster gains 1 Corruption and must pass Will challenge (-4 banes) or gain 1d3 more Corruption/3d6 Insanity. 20+: Demons spill out (Table on page 43). OP" 
+    },
+    { 
+        name: "Call Titanic Demon", 
+        tradition: "Demonology", 
+        rank: 9, 
+        type: "Utility", 
+        targetArea: "6-yard cube in short range",
+        duration: "Special",
+        desc: "Concentrate 1 hour. Caster takes 10d6 damage and +1d6 Corruption. Roll d6 on table (page 43) for titanic demon. Aftereffect: Will challenge (-4 banes) or possessed by huge demon. OP" 
+    },
+    { 
+        name: "Herald of the Demon Lord", 
+        tradition: "Demonology", 
+        rank: 10, 
+        type: "Utility", 
+        targetArea: "Self/1 mile radius",
+        duration: "Concentration, 1 hour",
+        desc: "Str challenge (banes = Corruption). Fail: Die and Diabolus takes soul. Success: Concentrate 1hr (Will challenges). Result: Release compelled Demon Prince. Will challenge (-5 banes) each round to keep it compelled. Aftereffect: +3d6 Corruption. OP" 
+    },
+          { 
+        name: "Face of Death", 
+        tradition: "Death", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "One creature within short range",
+        duration: "1 round",
+        desc: "Will challenge. Success: Target moves 2yds away and is frightened for 1 round. OP" 
+    },
+    { 
+        name: "Shroud", 
+        tradition: "Death", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "You are invisible to constructs, spirits, and undead. OP" 
+    },
+    { 
+        name: "Arrow of Endings", 
+        tradition: "Death", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One living creature in short range",
+        duration: "Instantaneous",
+        desc: "Req: Bone arrow (2cp). Will vs Agi. 2d6 damage. If target becomes injured, +2d6 extra damage. 20+: +1d6 extra damage. OP" 
+    },
+    { 
+        name: "Undo Constitution", 
+        tradition: "Death", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One living creature in short range",
+        duration: "1 minute",
+        desc: "Will vs Str. Success: Weakened (2 banes on Str rolls) and takes double damage from disease/poison. 20+: -2 Speed. OP" 
+    },
+    { 
+        name: "Dead One Walking", 
+        tradition: "Death", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "One living creature in medium range",
+        duration: "3 rounds",
+        desc: "Target is slowed but immune to all damage. When spell ends, Str challenge or take 6d6 damage (half on success). If damage causes injury: +2d6 extra. If incapacitated: target dies. OP" 
+    },
+    { 
+        name: "Mantle of Thanatos", 
+        tradition: "Death", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Partially obscured. Living creatures touching you or hitting with melee weapon: Str challenge or 2d6 damage. OP" 
+    },
+    { 
+        name: "Soul Wrench", 
+        tradition: "Death", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "One living mortal in medium range",
+        duration: "Special",
+        desc: "Will vs Will (2 boons if Health <= 10; 2 banes if Health >= 30). Success: Pull soul; target unconscious. End of round: Will challenge or 1d6 damage. 20+: 1 bane on recovery challenge. OP" 
+    },
+    { 
+        name: "Underworld Screams", 
+        tradition: "Death", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "5-yard radius sphere",
+        duration: "1 minute",
+        desc: "Shadows partially obscure and negate natural light. Creatures in area take +2d6 extra damage whenever they take damage. OP" 
+    },
+    { 
+        name: "Destroy Spirits", 
+        tradition: "Death", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "Short range (mortals), Medium range (spirits)",
+        duration: "Instantaneous",
+        desc: "Will challenge (Mortals +1 boon, Spirits 1 bane). 3d6 damage and impaired 1 min (half damage on success). Injured spirits take +3d6 extra. Sacrifice: Cast Feast of Souls. OP" 
+    },
+    { 
+        name: "Warden of the Underworld", 
+        tradition: "Death", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "1-yard cube in long range",
+        duration: "1 minute",
+        desc: "Shadow figure appears; living creatures in short range: Will challenge or frightened. Triggered: Move figure to creature within 3yds and attack (Will +1 boon vs Agi) for 3d6. 20+: Summon a second figure. OP" 
+    },
+    { 
+        name: "Toll the Bell", 
+        tradition: "Death", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "5-yard radius sphere",
+        duration: "Instantaneous",
+        desc: "Str challenge (1 bane). 3d6+10 damage and fatigued/deafened 1 hour (half damage on success). OP" 
+    },
+    { 
+        name: "Unlife", 
+        tradition: "Death", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "4 hours",
+        desc: "Not a living creature; immune to disease, poison, and various afflictions. Invisible to spirits/undead until attacking. Unarmed strikes: +2 boons and +2d6 extra damage. Death attack spells: +1 boon/+1 bane to resist. Aftereffect: Str challenge (2 banes) or 1d3 Insanity. OP" 
+    },
+    { 
+        name: "Life Siphon", 
+        tradition: "Death", 
+        rank: 6, 
+        type: "Attack", 
+        targetArea: "Up to 5 living creatures in medium range",
+        duration: "Concentration",
+        desc: "Agi challenge (1 bane) or 1d6 damage and immobilized. You gain bonus Health = damage dealt. Action to concentrate: deals 1d6 more damage. Str challenge (1 bane) to escape. You are immobilized while targets are. OP" 
+    },
+    { 
+        name: "Weight of Years", 
+        tradition: "Death", 
+        rank: 6, 
+        type: "Attack", 
+        targetArea: "One living mortal in reach",
+        duration: "Instantaneous",
+        desc: "Will vs Agi. Success: Target ages 1d3 categories. Str challenge (1 bane/category aged) or die from shock. OP" 
+    },
+    { 
+        name: "Angel of Death", 
+        tradition: "Death", 
+        rank: 7, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 hour",
+        desc: "Body falls unconscious; soul becomes a dark semisolid copy. Soul has darksight, immunity to various damage/afflictions, half damage from weapons, and phasing. Action: Touch for 3d6 damage and -6 Health (impairs). Damage is separate for soul/body; death of either risks the other. OP" 
+    },
+    { 
+        name: "Inhume", 
+        tradition: "Death", 
+        rank: 8, 
+        type: "Attack", 
+        targetArea: "Up to 10 creatures on ground in long range",
+        duration: "Special",
+        desc: "Agi challenge (3 banes) or buried 6ft deep. Buried: blinded, deafened, 1d6 damage/round. Action: Str challenge (1 bane) to dig 2ft up. OP" 
+    },
+    { 
+        name: "Unmake", 
+        tradition: "Death", 
+        rank: 9, 
+        type: "Attack", 
+        targetArea: "One creature (Health <= 100) in extreme range",
+        duration: "Instantaneous",
+        desc: "Will vs Str (Auto-success if Health <= 50). Success: Target dies and unravels. 20+: No aftereffect. Aftereffect: Str challenge (4 banes) or 5d6 damage (0 or lower = dies). OP" 
+    },
+    { 
+        name: "Kill Them All", 
+        tradition: "Death", 
+        rank: 10, 
+        type: "Attack", 
+        targetArea: "5-mile radius sphere within 10 miles",
+        duration: "Instantaneous",
+        desc: "Concentrate 1 minute. Each creature in area takes 20 damage; incapacitated = death. Aftereffect: Str challenge (5 banes) or -10 Health penalty (0 or lower = Father Death kills you). OP" 
+    },
+          { 
         name: "Failure", 
         tradition: "Curse", 
         rank: 0, 
