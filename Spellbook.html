@@ -107,6 +107,168 @@
         // DATA ENTRIES
         // Add your spreadsheet rows here following this exact format.
       const spells = [
+    { 
+        name: "Illumination", 
+        tradition: "Celestial", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "2 hours",
+        desc: "You glow (2yd radius) and leave glowing footprints (1yd radius). Triggered: Cast when using a Celestial attack or weapon attack; target then emits light and leaves footprints. OP" 
+    },
+    { 
+        name: "Radiant Shield", 
+        tradition: "Celestial", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "One creature in reach",
+        duration: "Instantaneous",
+        desc: "Triggered: When a creature in reach attacks you. Imposes 1 bane on attack. If attack hits, attacker must pass Str challenge or be blinded 1 round. OP" 
+    },
+    { 
+        name: "Sun Shard", 
+        tradition: "Celestial", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One creature in reach",
+        duration: "Instantaneous",
+        desc: "Will vs Agility. 2d6+2 damage. Spirits/Undead/Sun-vulnerable take +1d6 extra damage. 20+: Target blinded 1 round. OP" 
+    },
+    { 
+        name: "Strobe Light", 
+        tradition: "Celestial", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "5-yard radius sphere within short range",
+        duration: "1 minute",
+        desc: "Turns darkness to shadows. Sighted creatures in area take 1 bane on all attack rolls. OP" 
+    },
+    { 
+        name: "Tiny Lanterns", 
+        tradition: "Celestial", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "Four points in medium range",
+        duration: "1 hour",
+        desc: "Four glowing balls (5yd light radius). Move balls 10yds as minor activity. Action: Flash a ball to impair sighted creatures (Perception challenge with banes per light area). OP" 
+    },
+    { 
+        name: "Focused Light", 
+        tradition: "Celestial", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "20-yard line (1 inch diameter)",
+        duration: "Concentration, up to 1 minute",
+        desc: "Beam deals 2d6+1 damage to objects/creatures (Agi challenge avoids). Use action to redirect; first target in path takes damage. OP" 
+    },
+    { 
+        name: "Blinding Burst", 
+        tradition: "Celestial", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "5-yard radius from point in medium range",
+        duration: "Instantaneous",
+        desc: "Agi challenge (1 bane) or blinded 1 minute. OP" 
+    },
+    { 
+        name: "Rainbow", 
+        tradition: "Celestial", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 hour",
+        desc: "Creates a magical bow (Range: Extreme, 2d6 damage). Uses Will for attacks. Hits cause target to glow for 1 min. Triggered: Can be cast on your turn. OP" 
+    },
+    { 
+        name: "Crown of Stars", 
+        tradition: "Celestial", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "Targets in long range",
+        duration: "1 minute",
+        desc: "5 motes orbit head. Launch up to 2 motes per target (Will vs Agi). Hit: 2d6 damage. Failure: Mote returns. Use Triggered action to fire remaining motes for 1d6+2. OP" 
+    },
+    { 
+        name: "Sword of the Dawn", 
+        tradition: "Celestial", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 hour",
+        desc: "Off-hand blade (3d6+2 damage). Uses Will for attacks. 20+ and beat TN by 5: Str challenge or blinded 1 round. Triggered: Can be cast on your turn. OP" 
+    },
+    { 
+        name: "Falling Stars", 
+        tradition: "Celestial", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "Up to 4 points in long range",
+        duration: "Instantaneous",
+        desc: "Req: See sky. 3yd radius explosions. 4d6+1 damage and Agi challenge (banes if in multiple areas) or blinded 1 minute. OP" 
+    },
+    { 
+        name: "Permanent Light", 
+        tradition: "Celestial", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "One object you reach",
+        duration: "Permanent",
+        desc: "Object emits sunlight in 20yd radius. Sacrifice: Cast Nova. OP" 
+    },
+    { 
+        name: "Raiment of the Sun", 
+        tradition: "Celestial", 
+        rank: 6, 
+        type: "Utility", 
+        targetArea: "20-yard radius sphere from you",
+        duration: "1 hour",
+        desc: "Action: Fire beam at long range (Will +1 boon vs Agi). Hit: 4d6 damage. OP" 
+    },
+    { 
+        name: "Sunburst", 
+        tradition: "Celestial", 
+        rank: 6, 
+        type: "Attack", 
+        targetArea: "6-yard radius sphere in medium range",
+        duration: "1 minute",
+        desc: "Area fills with sunlight. Str challenge (1 bane) or 7d6 damage. Demons/Undead/Sun-vulnerable: +3d6 damage and always make roll with 1 bane. OP" 
+    },
+    { 
+        name: "Invisible Sun", 
+        tradition: "Celestial", 
+        rank: 7, 
+        type: "Attack", 
+        targetArea: "20-yard radius sphere in long range",
+        duration: "1 minute",
+        desc: "End of round: 3d6 damage and Str challenge (1 bane) or fatigued 1 min (also slowed). Fatigued targets take +3d6 damage. Kills reduce target to jelly. OP" 
+    },
+    { 
+        name: "Blaze in the Northern Sky", 
+        tradition: "Celestial", 
+        rank: 8, 
+        type: "Attack", 
+        targetArea: "1-yard cube in extreme range",
+        duration: "Concentration, up to 1 hour",
+        desc: "Creates a ball of sunlight (1 mile illum). Action: Fire 1000yd beam (1yd wide) for 5d6 damage (Agi half). OP" 
+    },
+    { 
+        name: "Second Sun", 
+        tradition: "Celestial", 
+        rank: 9, 
+        type: "Utility", 
+        targetArea: "Point in sky you see",
+        duration: "Until rest",
+        desc: "Illuminates 100 miles with sunlight. Negates all darkness traits/magic. Demons/Undead/Sun-vulnerable are impaired in area. Aftereffect: Str challenge (4 banes) or cannot cast for 1d20 days. OP" 
+    },
+    { 
+        name: "Call Down the Heavens", 
+        tradition: "Celestial", 
+        rank: 10, 
+        type: "Attack", 
+        targetArea: "Point on ground within 10 miles",
+        duration: "Instantaneous",
+        desc: "1-mile radius explosion. 10d6+25 damage and Agi challenge (1 bane) or blinded 1 hour (also dazed/fatigued). Creates a large crater. Aftereffect: Str challenge (5 banes) or permanently blinded. OP" 
+    },
           { 
         name: "Pressing Strike", 
         tradition: "Battle", 
