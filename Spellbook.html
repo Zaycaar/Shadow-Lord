@@ -108,6 +108,168 @@
         // Add your spreadsheet rows here following this exact format.
       const spells = [
           { 
+        name: "Burst", 
+        tradition: "Destruction", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "One Size 1 or smaller object within short range",
+        duration: "Instantaneous",
+        desc: "Caster takes 1 damage. Will challenge. Success: Object takes 2d6 damage. If destroyed, it explodes dealing half damage within 1yd. 20+: +1d6 extra damage. OP" 
+    },
+    { 
+        name: "Splinter", 
+        tradition: "Destruction", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "3-yard cone",
+        duration: "Instantaneous",
+        desc: "Req: Holding Size 1/4 or 1/8 object. Caster takes 1 damage; object breaks. Deals 1d6+2 damage to area (Agi half). OP" 
+    },
+    { 
+        name: "Maim", 
+        tradition: "Destruction", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One living creature in short range",
+        duration: "Special",
+        desc: "Caster takes 2 damage. Will vs Str. Success: 2d6+1 damage. Friendly witnesses must pass Will challenge or be frightened 1 min. 20+: +1d6 extra damage. OP" 
+    },
+    { 
+        name: "Snap Bone", 
+        tradition: "Destruction", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One creature with a skeleton in short range",
+        duration: "1 minute",
+        desc: "Caster takes 2 damage. Will vs Str. Success: 2d6 damage and slowed. 20+: Target is also dazed for 1 round. OP" 
+    },
+    { 
+        name: "Clear the Path", 
+        tradition: "Destruction", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "5-yard cone",
+        duration: "Instantaneous",
+        desc: "Caster takes 3 damage. Objects take 15 damage. Creatures: Str challenge or 4d6 damage and fall prone. Ground becomes difficult terrain. OP" 
+    },
+    { 
+        name: "Ruinous Presence", 
+        tradition: "Destruction", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "2-yard radius sphere centered on you",
+        duration: "1 minute",
+        desc: "Caster takes 3 damage. Moving aura deals 1d6 damage to others each round (Str negates). Action: Suppress aura for 1 round to blast a target within short range (Will vs Agi) for 2d6+1. 20+: +1d6 extra damage. OP" 
+    },
+    { 
+        name: "Crack the Earth", 
+        tradition: "Destruction", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "3-yard radius, 10-yard tall cylinder",
+        duration: "Instantaneous",
+        desc: "Caster takes 4 damage. Deals 5d6 damage to everything. Str challenge (flying has 1 bane) or fall prone; success is half damage. Ground becomes difficult terrain. OP" 
+    },
+    { 
+        name: "Path of Ruin", 
+        tradition: "Destruction", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "Shapeable line (10x2x2 yards)",
+        duration: "Instantaneous",
+        desc: "Caster takes 4 damage. Objects take 20 damage. Creatures: Str challenge or 4d6 damage, pushed 1d3 yards, and fall prone. OP" 
+    },
+    { 
+        name: "Fragility", 
+        tradition: "Destruction", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "Up to 5 creatures in medium range",
+        duration: "1 minute",
+        desc: "Caster takes 5 damage. Targets are impaired. Str challenge (1 bane) or take double damage while impaired. Action: Will challenge (1 bane) to remove. OP" 
+    },
+    { 
+        name: "Tear Asunder", 
+        tradition: "Destruction", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "One creature in medium range",
+        duration: "Instantaneous",
+        desc: "Caster takes 5 damage. Will vs Str. Success: Target lifted 2d6 yards, takes 7d6 damage, and falls. If injured: +3d6 extra. If incapacitated: killed instantly. 20+: +3d6 extra damage. OP" 
+    },
+    { 
+        name: "Brutal Concussion", 
+        tradition: "Destruction", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "5-yard radius sphere",
+        duration: "Instantaneous",
+        desc: "Caster takes 6 damage. Objects take 30 damage. Creatures: Str challenge or 6d6 damage. If injured: Will challenge (1 bane) or stunned 1 min. OP" 
+    },
+    { 
+        name: "Demolition", 
+        tradition: "Destruction", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "One Size 10 or smaller object in long range",
+        duration: "Instantaneous",
+        desc: "Caster takes 6 damage. Object takes 100 damage. If destroyed, it collapses; nearby creatures Agi challenge or 1d6 damage per object Size and fall prone. OP" 
+    },
+    { 
+        name: "Cascading Ruin", 
+        tradition: "Destruction", 
+        rank: 6, 
+        type: "Attack", 
+        targetArea: "One creature you can reach",
+        duration: "1 minute",
+        desc: "Caster takes 8 damage. Will vs Agi. Hit: 2d6 immediate damage. End of round: 1d6 + 1d6 per round concentrated (Str halves). 3 successes end effect. 20+: Target impaired/slowed. OP" 
+    },
+    { 
+        name: "Obliterate", 
+        tradition: "Destruction", 
+        rank: 6, 
+        type: "Attack", 
+        targetArea: "10-yard radius sphere",
+        duration: "Instantaneous",
+        desc: "Caster takes 8 damage. Deals 8d6 damage to everything. Creatures: Str challenge or moved 1d6 yards and fall prone. Size 2 objects also move; hitting objects requires Agi challenge or 2d6 damage/prone. OP" 
+    },
+    { 
+        name: "Bring It Down", 
+        tradition: "Destruction", 
+        rank: 7, 
+        type: "Attack", 
+        targetArea: "Four 5-yard radius, 20-yard tall cylinders",
+        duration: "Instantaneous",
+        desc: "Caster takes 12 damage. Deals 8d6 damage. Str challenge (1 bane per area, +1 if flying) or fall prone and stunned 1 min. OP" 
+    },
+    { 
+        name: "Annihilate", 
+        tradition: "Destruction", 
+        rank: 8, 
+        type: "Attack", 
+        targetArea: "10-yard radius sphere in 1 mile",
+        duration: "Instantaneous",
+        desc: "Caster takes 18 damage. Health <= 30: Erased from existence. Others: Str challenge or 10d6 damage (Incapacitated = erased). Aftereffect: Will challenge (4 banes) or defenseless 1d6+1 days. OP" 
+    },
+    { 
+        name: "Cataclysm", 
+        tradition: "Destruction", 
+        rank: 9, 
+        type: "Attack", 
+        targetArea: "1-mile radius circle",
+        duration: "Instantaneous",
+        desc: "Caster takes 26 damage. Everything in area takes 25 damage. Aftereffect: Will challenge (4 banes) or take 25 damage and take double damage for 1d6 days. OP" 
+    },
+    { 
+        name: "Raze", 
+        tradition: "Destruction", 
+        rank: 10, 
+        type: "Attack", 
+        targetArea: "One Size 300 or smaller object",
+        duration: "Instantaneous",
+        desc: "Object takes damage equal to Health and disappears. Aftereffect: Will challenge (5 banes) or tear hole to Void (1-mile radius drag-in effect). OP" 
+    },
+          { 
         name: "Conjure Tiny Monster", 
         tradition: "Conjuration", 
         rank: 0, 
