@@ -108,6 +108,168 @@
         // Add your spreadsheet rows here following this exact format.
       const spells = [
           { 
+        name: "Conjure Tiny Monster", 
+        tradition: "Conjuration", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "1-yard cube within short range",
+        duration: "1 minute",
+        desc: "One compelled tiny monster appears on a solid surface. OP" 
+    },
+    { 
+        name: "Energy Burst", 
+        tradition: "Conjuration", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "1-yard radius sphere within short range",
+        duration: "Instantaneous",
+        desc: "Deals 1d6 damage to everything in area (Agi half). OP" 
+    },
+    { 
+        name: "Conjure Servant", 
+        tradition: "Conjuration", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "1-yard cube within reach",
+        duration: "1 hour",
+        desc: "Faceless servant appears to perform mundane duties. Obeys spoken commands. Sacrifice: Heal a Conjuration construct 1d6 damage. OP" 
+    },
+    { 
+        name: "Flying Knives", 
+        tradition: "Conjuration", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "2-yard cube within short range",
+        duration: "1 minute",
+        desc: "Creatures entering/starting in area must pass Agi challenge or take 1d6 damage. Action/Triggered: Move knives 5 yards. OP" 
+    },
+    { 
+        name: "Creation", 
+        tradition: "Conjuration", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "1-yard cube within reach",
+        duration: "Variable (based on material)",
+        desc: "Fill area with matter (food, iron, fog, etc.). Matter lasts based on composition table. Cannot have moving parts. OP" 
+    },
+    { 
+        name: "Sticky Strands", 
+        tradition: "Conjuration", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "5-yard cube within medium range",
+        duration: "1 minute",
+        desc: "Agi challenge (1 bane) or immobilized. Moving through area requires Agi challenge (3 boons if moving only 1yd). Flame destroys strands and deals 1d6 damage to all inside. OP" 
+    },
+    { 
+        name: "Conjure Superior Monster", 
+        tradition: "Conjuration", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "2-yard cube within medium range",
+        duration: "1 minute",
+        desc: "Conjure one Medium or two Small compelled monsters. Choose one buff: Flier, +5 Health/Climber/Swimmer, +3 Health/Frightening, or Horrifying. OP" 
+    },
+    { 
+        name: "Iron Cage", 
+        tradition: "Conjuration", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "4-yard cube within medium range",
+        duration: "1 hour",
+        desc: "Enclose area in iron bars. Agi challenge (1 bane) to escape before completion. Bars prevent Size 1/2+ from squeezing. Defense 5, Health 30 per section. OP" 
+    },
+    { 
+        name: "Conjure Items", 
+        tradition: "Conjuration", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "3-yard cube within reach",
+        duration: "Until rest",
+        desc: "Create mundane items totaling up to 10 gc. Items are functional but have no resale value. OP" 
+    },
+    { 
+        name: "Forest of Spikes", 
+        tradition: "Conjuration", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "8-yard cube within medium range",
+        duration: "1 minute",
+        desc: "Agi challenge (1 bane) or take 3d6 damage and immobilized on an iron spike. Spikes provide cover; Size 1 can crawl through, others must destroy spikes (Def 5, HP 10). OP" 
+    },
+    { 
+        name: "Conjure Conveyance", 
+        tradition: "Conjuration", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "10-yard cube within medium range",
+        duration: "12 hours",
+        desc: "Create a carriage with 4 horses (land) or a boat (water). Size 6, HP 100, Speed 20. Holds Size 20 total. Sacrifice: Cast Conjure Large Monster. OP" 
+    },
+    { 
+        name: "Passage", 
+        tradition: "Conjuration", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "Point within long range",
+        duration: "1 hour",
+        desc: "Open 60 cubic yards of space in a surface. When spell ends, objects fuse; creatures must pass Agi challenge (3 banes) or die (half Health damage on success). OP" 
+    },
+    { 
+        name: "Simulacrum", 
+        tradition: "Conjuration", 
+        rank: 6, 
+        type: "Utility", 
+        targetArea: "Self-sized cube within reach",
+        duration: "Special",
+        desc: "Req: 1gc mirror. Create a naked copy of yourself (half HP). Consciousness moves to copy; original body is unconscious. Can swap between bodies. Gain Insanity if original body dies. OP" 
+    },
+    { 
+        name: "Conjure Cadre", 
+        tradition: "Conjuration", 
+        rank: 6, 
+        type: "Utility", 
+        targetArea: "10-yard cube within long range",
+        duration: "8 hours",
+        desc: "Conjure 8 compelled veterans. Triggered: Perceive from a veteran's space (within 1 mile) and issue commands. OP" 
+    },
+    { 
+        name: "Conjure Titanic Monster", 
+        tradition: "Conjuration", 
+        rank: 7, 
+        type: "Utility", 
+        targetArea: "5-yard cube within medium range",
+        duration: "1 minute",
+        desc: "One compelled titanic monster appears on a solid surface. OP" 
+    },
+    { 
+        name: "Mighty Fortress", 
+        tradition: "Conjuration", 
+        rank: 8, 
+        type: "Utility", 
+        targetArea: "100-yard cube within extreme range",
+        duration: "24 hours",
+        desc: "Concentrate 1 hour. Creates stone fortress with keep, walls, and servants. Provides food for 100. Aftereffect: Str challenge (4 banes) or Health penalty. Sacrifice: Extend 24h. Permanence: Extend daily for 1yr+1day. OP" 
+    },
+    { 
+        name: "Conjure Monstrous Horde", 
+        tradition: "Conjuration", 
+        rank: 9, 
+        type: "Utility", 
+        targetArea: "10-yard cube within extreme range",
+        duration: "8 hours",
+        desc: "Nine compelled mobs of medium monsters appear. If a mob is incapacitated, its Spawn creatures are also compelled. OP" 
+    },
+    { 
+        name: "True Conjuration", 
+        tradition: "Conjuration", 
+        rank: 10, 
+        type: "Utility", 
+        targetArea: "50-yard cube within reach",
+        duration: "Permanent",
+        desc: "Concentrate 8 hours (Will challenge/hour or gain Insanity). Create any creature (Diff 1000) or object (10,000 gc). Aftereffect: 10d6 damage, -1d6 Power, and fatigue. OP" 
+    },
+          { 
         name: "Otherworldly Scream", 
         tradition: "Demonology", 
         rank: 0, 
