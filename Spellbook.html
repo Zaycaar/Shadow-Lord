@@ -108,6 +108,168 @@
         // Add your spreadsheet rows here following this exact format.
       const spells = [
           { 
+        name: "Failure", 
+        tradition: "Curse", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "One creature within short range",
+        duration: "1 minute",
+        desc: "Int vs Int. Success: Cursed. You can use a triggered action to turn their successful attack/challenge into a failure. 20+: Roll d6; on 4+, the spell does not end after use. OP" 
+    },
+    { 
+        name: "Twisted Words", 
+        tradition: "Curse", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "One creature within short range",
+        duration: "Concentration, up to 1 minute",
+        desc: "Int vs Will. Success: Target cannot speak truth/must lie. 20+: Duration 1 minute (no concentration required). OP" 
+    },
+    { 
+        name: "Mad Laughter", 
+        tradition: "Curse", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One creature within short range",
+        duration: "1 minute",
+        desc: "Int vs Will. Success: +1 Insanity and dazed. Target makes Will challenge (1 bane) at end of round to remove dazed for 1 round. 20+: Challenge roll made with 2 banes. OP" 
+    },
+    { 
+        name: "Sleeplessness", 
+        tradition: "Curse", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One creature within short range",
+        duration: "1d6 days",
+        desc: "Int vs Str. Success: Immune to sleep (subject to deprivation). 20+: Lasts 3d6 days or until lifted. Sacrifice: Cast Hex. OP" 
+    },
+    { 
+        name: "Curse of the Emerald Hand", 
+        tradition: "Curse", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "One creature within medium range",
+        duration: "1 hour",
+        desc: "Int vs Str. Success: Poisoned. Anyone touching target must pass Str challenge (1 bane) or take 1d6 damage and be poisoned 1 min. 20+: Poisoned until rest. OP" 
+    },
+    { 
+        name: "Eternal Stench", 
+        tradition: "Curse", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "One creature within medium range",
+        duration: "1 hour",
+        desc: "Int vs Str. Success: Target stinks; living creatures within short range are impaired. 20+: Lasts until caster dies or lifts it. OP" 
+    },
+    { 
+        name: "Curse of Maddening Love", 
+        tradition: "Curse", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "One creature within medium range",
+        duration: "1 minute",
+        desc: "Int vs Will. Success: Target is charmed by a chosen object of affection (3 boons on social rolls vs target). Failure to stay within 5 yards of object causes Will challenge or 1 Insanity. 20+: Lasts until caster dies/lifts. OP" 
+    },
+    { 
+        name: "Rage", 
+        tradition: "Curse", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "One creature within medium range",
+        duration: "1 minute",
+        desc: "Int vs Will. Success: Target takes 3 banes on all rolls but deals +2d6 weapon damage. Must attack every turn or gain 1 Insanity. 20+: Lasts until caster dies/lifts. OP" 
+    },
+    { 
+        name: "Curse of the Endless Dance", 
+        tradition: "Curse", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "One creature within short range",
+        duration: "1 minute",
+        desc: "Int vs Will. Success: Target takes only slow turns and must move half Speed in your chosen direction. 20+: Permanent/until lifted; causes fatigue and Health penalties over time. OP" 
+    },
+    { 
+        name: "Sicken", 
+        tradition: "Curse", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "Up to 5 living creatures in medium range",
+        duration: "Variable",
+        desc: "Will challenge (1 bane). Success: Fatigued 1 min. Failure: Sickened (dazed, fatigued, slowed) for 1 hour. Target makes Will challenge end of round; 3 successes end spell. OP" 
+    },
+    { 
+        name: "Flesh-Bursting Curse", 
+        tradition: "Curse", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "One living creature in short range",
+        duration: "Special",
+        desc: "Int vs Will. Success: Impaired, slowed, and +4d6 extra damage taken. Taking damage sprays liquid (3yd cone, Agi challenge or fall). Death: Explodes (5yd radius) for 1d6 damage and Insanity risk. 20+: +2d6 immediate damage. OP" 
+    },
+    { 
+        name: "Terror", 
+        tradition: "Curse", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "5-yard radius sphere",
+        duration: "1 minute",
+        desc: "Health <= 10: Dies. Others: Will challenge or prone/frightened (grants 2 boons to attackers). Damage extends duration. 0 or lower roll: 3d6 shock damage. OP" 
+    },
+    { 
+        name: "Accursed Land", 
+        tradition: "Curse", 
+        rank: 6, 
+        type: "Attack", 
+        targetArea: "5-mile radius circle",
+        duration: "Special",
+        desc: "Area control: Health <= 15 cannot leave; others need Will challenge. Plants die, water corrupts (poison), no healing/casting recovery on rest, darkness increases, +1 extra Insanity gain. Sacrifice: Cast Terror. OP" 
+    },
+    { 
+        name: "Plaguebearer", 
+        tradition: "Curse", 
+        rank: 6, 
+        type: "Attack", 
+        targetArea: "Up to 3 creatures in long range",
+        duration: "Special",
+        desc: "Int (+boons) vs Str. Success: 6d6 damage, horrifying, diseased. Contagious on touch. End of round: Will challenge (Compelled 1 rd on fail) and Str challenge (damage/recovery). 20+: Will challenge at 3 banes. OP" 
+    },
+    { 
+        name: "Eternal Slumber", 
+        tradition: "Curse", 
+        rank: 7, 
+        type: "Attack", 
+        targetArea: "Up to 10 creatures in long range",
+        duration: "Permanent",
+        desc: "Will challenge (Health 30: Auto-fail; 31-60: 3 banes). Failure: Prone and asleep; does not age, eat, or drink. OP" 
+    },
+    { 
+        name: "Curse of Eight Torments", 
+        tradition: "Curse", 
+        rank: 8, 
+        type: "Attack", 
+        targetArea: "Up to 8 creatures in long range",
+        duration: "Special",
+        desc: "Int vs Will. Success: Choose one unique torment (obscured vision, extra Insanity, extra damage, resurrection loop, etc.). Aftereffect: Caster takes -10 Health and impaired until lifted. OP" 
+    },
+    { 
+        name: "Mouth of Madness", 
+        tradition: "Curse", 
+        rank: 9, 
+        type: "Attack", 
+        targetArea: "Any number of creatures in extreme range",
+        duration: "Instantaneous",
+        desc: "Will challenge (Health 50: Auto-fail; 51-100: 3 banes). Failure: Gain Insanity = Will score. Madness ends only on 6. Aftereffect: Caster gains 2d6 Insanity. OP" 
+    },
+    { 
+        name: "Doom", 
+        tradition: "Curse", 
+        rank: 10, 
+        type: "Attack", 
+        targetArea: "5-mile radius hemisphere",
+        duration: "24 hours",
+        desc: "Str challenge (Health <= 50: 3 banes). Health levels determine effect: 10 (turn to salt), others take damage/Insanity/Cursed (cannot heal, fatigued/slowed/blistered). Aftereffect: Caster Str challenge or turn to salt. OP" 
+    },
+          { 
         name: "Chaos Shield", 
         tradition: "Chaos", 
         rank: 0, 
