@@ -107,6 +107,168 @@
         // DATA ENTRIES
         // Add your spreadsheet rows here following this exact format.
       const spells = [
+          { 
+        name: "Chaos Shield", 
+        tradition: "Chaos", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Colors emit light (2yd). Attackers vs you take 1 bane. Resolve attack, roll d6: 3 or lower, spell ends. OP" 
+    },
+    { 
+        name: "Chaotic Eruption", 
+        tradition: "Chaos", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "1-yard radius sphere",
+        duration: "Instantaneous",
+        desc: "Str challenge (1 bane). Failure: Roll d6 (4+ moves 1d6 yards away; 3 or lower: impaired for 1 round). OP" 
+    },
+    { 
+        name: "Randomness", 
+        tradition: "Chaos", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "3-yard radius sphere",
+        duration: "1 minute",
+        desc: "Boons/banes count double. End of round: Will challenge or gain 1 Insanity. OP" 
+    },
+    { 
+        name: "Unlikely Transformation", 
+        tradition: "Chaos", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One living creature in short range",
+        duration: "1 round (or 1 minute)",
+        desc: "Will vs Strength. Success: Impaired and frightened. Nearby creatures: Will challenge (1 bane) or frightened. 20+: Target assumes small animal form (Transformation). OP" 
+    },
+    { 
+        name: "Chromatic Lance", 
+        tradition: "Chaos", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "One creature in medium range",
+        duration: "Instantaneous",
+        desc: "Will vs Agility. 2d6+5 damage. Roll d6: 3 or lower (half damage taken by target for 1d6 rounds), 4+ (double damage taken for 1d6 rounds). OP" 
+    },
+    { 
+        name: "Chaos Unleashed", 
+        tradition: "Chaos", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "5-yard radius sphere",
+        duration: "1 minute",
+        desc: "Attack spells in area gain 2 boons; resistance rolls against them have 2 banes. Casting a spell in area: Will challenge or 1d6 damage. OP" 
+    },
+    { 
+        name: "Chaos Orb", 
+        tradition: "Chaos", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "3-yard radius sphere",
+        duration: "Instantaneous",
+        desc: "3d6 damage (Agi half). Roll d6: Even = ball bounces 1d6 yards and pulses again (repeat process). Odd = ends. OP" 
+    },
+    { 
+        name: "Scintillating Worms", 
+        tradition: "Chaos", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "Up to 3 creatures in medium range",
+        duration: "1 minute",
+        desc: "Will vs Agility. Hit: Target shines (10yd radius), grants 1 boon to attackers. Roll d6 each turn for random effect (table on page 30). OP" 
+    },
+    { 
+        name: "Strange Changes", 
+        tradition: "Chaos", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "5yd cube in short range",
+        duration: "Instantaneous",
+        desc: "Objects warp. Creatures: Will challenge (1 bane) or gain 1 Insanity. Success: Random change (table on page 30). 20+: Roll twice. OP" 
+    },
+    { 
+        name: "Unchained Probabilities", 
+        tradition: "Chaos", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "10-yard radius sphere",
+        duration: "1 minute",
+        desc: "Roll 2 extra d20s for rolls; roll d6 (odd = lowest total, even = highest total). Sacrifice: Cast Wild Magic. OP" 
+    },
+    { 
+        name: "Chaos Vortex", 
+        tradition: "Chaos", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "10-yard tall/5-yard radius cylinder",
+        duration: "Concentration, up to 1 minute",
+        desc: "Health <= 15: Dies. Health > 15: Will challenge or 4d6 damage (half on success). Random effect table (Page 30) for spells cast nearby. OP" 
+    },
+    { 
+        name: "Shape Magic", 
+        tradition: "Chaos", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "Instantaneous",
+        desc: "Cast Rank 5 or lower spell of any tradition. Will challenge (banes = rank). Failure: Explosion (6d6 damage, Agi half). OP" 
+    },
+    { 
+        name: "Power of Chaos", 
+        tradition: "Chaos", 
+        rank: 6, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 minute",
+        desc: "Illuminates cone. Attack spells: 2 boons/2 banes/2d6 extra damage. Casting: Roll d6 for random effect (demons or energy pulse). OP" 
+    },
+    { 
+        name: "Remake", 
+        tradition: "Chaos", 
+        rank: 6, 
+        type: "Utility", 
+        targetArea: "One willing creature in reach",
+        duration: "1d6 hours",
+        desc: "Cosmetic/size/age/gender changes. Each attribute: roll d3 for +/- 1d3 bonus/penalty. Sacrifice: Cast Shape Magic. OP" 
+    },
+    { 
+        name: "Scintillating Barrier", 
+        tradition: "Chaos", 
+        rank: 7, 
+        type: "Utility", 
+        targetArea: "35yd line wall",
+        duration: "Concentration, up to 1 min",
+        desc: "Totally obscures. Emits light. Non-relic objects in wall disappear. Creatures in wall: Roll d6 for effect (table on page 31). OP" 
+    },
+    { 
+        name: "Horde of Monsters", 
+        tradition: "Chaos", 
+        rank: 8, 
+        type: "Utility", 
+        targetArea: "Any number of objects (Size 10 total)",
+        duration: "Instantaneous",
+        desc: "Objects become monsters (Size 1 count as 1). 10 Size 1 monsters merge into a mob. Hostile to non-monsters. OP" 
+    },
+    { 
+        name: "True Chaos", 
+        tradition: "Chaos", 
+        rank: 9, 
+        type: "Utility", 
+        targetArea: "1-mile radius circle",
+        duration: "Permanent",
+        desc: "Concentrate 8 hours. Area affected by 'Weird Magic'. Aftereffect: Will challenge (4 banes) or gain Insanity equal to Will. OP" 
+    },
+    { 
+        name: "Undo Reality", 
+        tradition: "Chaos", 
+        rank: 10, 
+        type: "Attack", 
+        targetArea: "10-yard radius sphere",
+        duration: "Instantaneous",
+        desc: "Will challenge (6 banes). Failure: Take Health damage and turn to dust. Area dusts everything. Health 55+: Str challenge or 50 damage/dazed, otherwise erased. Aftereffect: 1/20 chance to destroy the world. OP" 
+    },
     { 
         name: "Illumination", 
         tradition: "Celestial", 
