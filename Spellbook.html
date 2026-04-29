@@ -108,6 +108,168 @@
         // Add your spreadsheet rows here following this exact format.
       const spells = [
           { 
+        name: "Conceal Object", 
+        tradition: "Illusion", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "One Size 1/2 or smaller object in short range",
+        duration: "1 minute",
+        desc: "Object becomes hidden. Creatures must pass Perception challenge (1 bane) to see/touch it. Sacrifice: Triggered action to impose 1 bane on an incoming attack. OP" 
+    },
+    { 
+        name: "Obscuring Cloud", 
+        tradition: "Illusion", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "2-yard radius sphere centered on you",
+        duration: "1 minute",
+        desc: "Triggered: Cast on your turn. Smoke heavily obscures area. Winds can disperse. OP" 
+    },
+    { 
+        name: "Befuddle", 
+        tradition: "Illusion", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One creature in short range",
+        duration: "1 minute",
+        desc: "Int vs Perception. Success: Target makes Perception rolls with 3 banes and grants 1 boon on attacks vs it. 20+: Target also falls prone. OP" 
+    },
+    { 
+        name: "Delusion", 
+        tradition: "Illusion", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One creature in short range",
+        duration: "1 minute / 1 hour",
+        desc: "Int vs Will. Success: Choose one (Gain a language/profession for 1 hour; OR become impaired for 1 minute). OP" 
+    },
+    { 
+        name: "False Healing", 
+        tradition: "Illusion", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "One creature you reach",
+        duration: "1 minute",
+        desc: "Target gains +10 Health bonus. Aftereffect: Target takes 1d6 damage from overexertion. OP" 
+    },
+    { 
+        name: "Lasting Image", 
+        tradition: "Illusion", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "2-yard cube in short range",
+        duration: "24 hours",
+        desc: "Visual/Auditory illusion; harmless and revealed if entered. Loops every hour. Permanence: Cast in same area for 1 year + 1 day. OP" 
+    },
+    { 
+        name: "Seeming", 
+        tradition: "Illusion", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "Up to 5 creatures in 5-yard radius",
+        duration: "8 hours",
+        desc: "Illusory disguises (height/weight +/- 50%, change ancestry/gear/voice). Action: Alter disguise if in med range. Sacrifice: Cast Glamer. OP" 
+    },
+    { 
+        name: "Tormenting Hallucinations", 
+        tradition: "Illusion", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "One creature in medium range",
+        duration: "1 minute",
+        desc: "Int (+1 boon) vs Perception. Success: Impaired; granting 2 boons on attacks vs it. If target fails a roll while impaired, it becomes frightened for 1 round. 20+: +1d3 Insanity. OP" 
+    },
+    { 
+        name: "Displace", 
+        tradition: "Illusion", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "Self",
+        duration: "1 hour",
+        desc: "Triggered: Cast when attacked. Attacks vs you have 2 banes. On a miss, you can teleport 2 yards. OP" 
+    },
+    { 
+        name: "Sending", 
+        tradition: "Illusion", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "Cube (size = your Size) at seen point",
+        duration: "1 hour",
+        desc: "Illusory copy mimics your moves/speech. You perceive through it (Perception rolls have 2 banes). Copy is immune to damage. Sacrifice: Cast Phantasm. OP" 
+    },
+    { 
+        name: "False Injury", 
+        tradition: "Illusion", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "Up to 5 creatures in medium range",
+        duration: "1 minute",
+        desc: "Int (+1 boon) vs Perception. Success: Target takes -4d6 penalty to Health. Dying from this reduction is permanent. OP" 
+    },
+    { 
+        name: "Waking Nightmare", 
+        tradition: "Illusion", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "One creature in medium range",
+        duration: "1 minute",
+        desc: "Nightmare attacks target's mind each round. Int (+2 boons) vs Perception. Success: 1d6 damage and 1d3 Insanity (death if insane). Target can use action to fight back (Perception vs Int) to cumulative banes on caster. OP" 
+    },
+    { 
+        name: "Improvised Casting", 
+        tradition: "Illusion", 
+        rank: 6, 
+        type: "Utility", 
+        targetArea: "Varies",
+        duration: "Varies",
+        desc: "Cast any Rank 5 or lower spell from any tradition. Half damage; -1 bane on attack rolls; targets get +1 boon on challenge rolls. OP" 
+    },
+    { 
+        name: "Mass Concealment", 
+        tradition: "Illusion", 
+        rank: 6, 
+        type: "Attack", 
+        targetArea: "Up to 30 creatures in medium range",
+        duration: "Concentration, up to 1 hour",
+        desc: "All targets become invisible. OP" 
+    },
+    { 
+        name: "Accursed Double", 
+        tradition: "Illusion", 
+        rank: 7, 
+        type: "Utility", 
+        targetArea: "One creature in medium range",
+        duration: "1 minute",
+        desc: "Creates copy of target in short range. Double has target's stats and learned spells (Rank 5 or lower). Double takes turns when you do. Perceiving it as an illusion has 2 extra banes. OP" 
+    },
+    { 
+        name: "Illusory Landscape", 
+        tradition: "Illusion", 
+        rank: 8, 
+        type: "Utility", 
+        targetArea: "1-mile cube",
+        duration: "24 hours",
+        desc: "Mask terrain/objects/creatures (invis or new appearance). Can hide sensory effects (smoke) but not damage (heat). Sacrifice: Regain 8 ranks of Illusion castings. Permanence: Cast 1 year + 1 day. OP" 
+    },
+    { 
+        name: "Army of One", 
+        tradition: "Illusion", 
+        rank: 9, 
+        type: "Utility", 
+        targetArea: "Up to 10 open spaces in medium range",
+        duration: "1 hour",
+        desc: "10 perfect copies of self (half Health). Copies have your talents/spells (half damage, uses your castings). Copies are immune to afflictions/insanity. OP" 
+    },
+    { 
+        name: "Shape Reality", 
+        tradition: "Illusion", 
+        rank: 10, 
+        type: "Utility", 
+        targetArea: "1-mile cube",
+        duration: "1 month",
+        desc: "Overwrite landscape/structures with real-interacting illusions. Living targets pass Will challenge (-3 banes) or are disguised. Aftereffect: Will challenge (-5 banes) or 3d6 Insanity (disadvantage to end madness). Sacrifice: Regain 10 ranks of Illusion castings. Permanence: Cast monthly for 1 year + 1 day. OP" 
+    },
+          { 
         name: "Carve the Flesh", 
         tradition: "Forbidden", 
         rank: 0, 
