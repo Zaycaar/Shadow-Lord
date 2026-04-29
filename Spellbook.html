@@ -108,6 +108,461 @@
         // Add your spreadsheet rows here following this exact format.
       const spells = [
           { 
+        name: "Mark of the Necromancer", 
+        tradition: "Necromancy", 
+        rank: 0, 
+        type: "Attack", 
+        targetarea: "One creature you can reach", 
+        desc: "Make an Intellect attack roll against the target’s Agility. On a success, for 1 round, when the target takes damage, it takes 1d6 extra damage. 20+: Target is also impaired for 1 round. OP" 
+    },
+    { 
+        name: "Steal Face", 
+        tradition: "Necromancy", 
+        rank: 0, 
+        type: "Utility", 
+        targetarea: "One dead creature you can reach that has a humanoid shape and has its head still intact", 
+        desc: "For 1 hour, target's face attaches to yours, enabling you to masquerade as the dead creature. Merges and feels like living tissue. OP" 
+    },
+    { 
+        name: "Bone Armor", 
+        tradition: "Necromancy", 
+        rank: 1, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "For 1 hour, you have Defense 15 and count as wearing light armor. When hit by a weapon within 1 yard, bone splinters force attacker to make an Agility challenge roll or take 1d3 damage. OP" 
+    },
+    { 
+        name: "Charnel Stench", 
+        tradition: "Necromancy", 
+        rank: 1, 
+        type: "Attack", 
+        targetarea: "A 5-yard-long cone originating from a point in your space", 
+        desc: "Living and breathing creatures in the area must succeed on a Strength challenge roll with 1 bane or become dazed for 1 round and impaired for 1 minute. OP" 
+    },
+    { 
+        name: "Funeral Shroud", 
+        tradition: "Necromancy", 
+        rank: 2, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "Shadows partially obscure you for 1 minute. Gain 1 boon on Necromancy attack spells and 1 bane on challenge rolls to resist them. Once per round, can use a triggered action to force nearby creatures to make a Will challenge roll or gain 1 Insanity. OP" 
+    },
+    { 
+        name: "Necromantic Power", 
+        tradition: "Necromancy", 
+        rank: 2, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "Until next rest, double the number of undead you can have compelled. Sacrifice: Can regain a rank 1 or lower Necromancy spell casting. OP" 
+    },
+    { 
+        name: "Keening", 
+        tradition: "Necromancy", 
+        rank: 3, 
+        type: "Utility", 
+        targetarea: "A 10-yard-long cone originating from a point in your space", 
+        desc: "Living creatures in area must make a Strength challenge roll. Failure: 4d6 damage, 1 Insanity, and deafened for 1 minute. Success: Half damage. OP" 
+    },
+    { 
+        name: "Spectral Scythe", 
+        tradition: "Necromancy", 
+        rank: 3, 
+        type: "Attack", 
+        targetarea: "One creature you can reach", 
+        desc: "For 1 hour, your implement becomes a two-handed finesse weapon (2d6 + 2 damage) using Intellect for attack. Creatures incapacitated by this weapon die instantly. OP" 
+    },
+    { 
+        name: "Drown in Maggots", 
+        tradition: "Necromancy", 
+        rank: 4, 
+        type: "Attack", 
+        targetarea: "A 3-yard-radius circle centered on a point on the ground within long range", 
+        desc: "For 1 minute, area is difficult terrain and partially obscured. Creatures entering/starting must make Strength (3d6 damage and impaired) and Will (1 Insanity) challenge rolls. OP" 
+    },
+    { 
+        name: "Soul Blight", 
+        tradition: "Necromancy", 
+        rank: 4, 
+        type: "Attack", 
+        targetarea: "One creature you can see within medium range that has a soul", 
+        desc: "Int vs Will; Success: Target soul blighted for 1 minute (impaired). If damaged by you/your undead, target gains 1 Insanity and you/ally heal 2d6 damage. OP" 
+    },
+    { 
+        name: "Animate Huge Corpse", 
+        tradition: "Necromancy", 
+        rank: 5, 
+        type: "Utility", 
+        targetarea: "One Size 3 or smaller corpse you can reach", 
+        desc: "After 1 minute concentration, target becomes a compelled animated corpse. Size 2 counts as 1.5 undead; Size 3 counts as 2. Can also create Chainbound or Ghastly Chorus. Sacrifice: Heal compelled undead. OP" 
+    },
+    { 
+        name: "Call of the Grave", 
+        tradition: "Necromancy", 
+        rank: 5, 
+        type: "Attack", 
+        targetarea: "Up to six creatures you can see within long range", 
+        desc: "Int vs Agi; Success: 4d6 + 5 damage and diseased. If incapacitated while diseased, target dies and rises as a compelled animated corpse. Rest failure leads to permanent Health penalty." OP 
+    },
+    { 
+        name: "Awaken Graveyard", 
+        tradition: "Necromancy", 
+        rank: 6, 
+        type: "Utility", 
+        targetarea: "A 10-yard-radius circle centered on a point on the ground within long range", 
+        desc: "Creates 1d3 + 1 compelled animated mobs and 1d6 compelled animated corpses. Sacrifice: Heal all compelled undead within medium range 4d6. OP" 
+    },
+    { 
+        name: "Embodiment of Death", 
+        tradition: "Necromancy", 
+        rank: 6, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "For 1 hour, gain horrifying trait and shadows partially obscure you. Creatures incapacitated within short range die and rise as compelled undead. Nearby living creatures must pass Str challenge or take 1d6 damage each round. OP" 
+    },
+    { 
+        name: "Shed the Mortal Coil", 
+        tradition: "Necromancy", 
+        rank: 7, 
+        type: "Utility", 
+        targetarea: "Self (Soul)", 
+        desc: "Soul climbs free for duration. Gain darksight, invisibility (to most), and insubstantiality. Can possess corpses or the living (Int vs Will). If incapacitated, body may die (3 or lower on d6). OP" 
+    },
+    { 
+        name: "Unleash Bone Machine", 
+        tradition: "Necromancy", 
+        rank: 8, 
+        type: "Utility", 
+        targetarea: "A pile of bones that you can reach", 
+        desc: "After 1 hour concentration, the bones coalesce to become a compelled bone machine. Sacrifice: Heal all compelled undead within medium range to full Health. OP" 
+    },
+    { 
+        name: "Undead Legion", 
+        tradition: "Necromancy", 
+        rank: 9, 
+        type: "Utility", 
+        targetarea: "A square on the ground, 100 yards on each side", 
+        desc: "After 12 hours concentration at a graveyard/battlefield, creates an army of 1d6 x 100 compelled animated corpses. Counts as one creature for compulsion limit. OP" 
+    },
+    { 
+        name: "Undead Plague", 
+        tradition: "Necromancy", 
+        rank: 10, 
+        type: "Utility", 
+        targetarea: "A 10-mile-radius sphere centered on a point you can see", 
+        desc: "For 1 year and 1 day, living cannot leave and dead rise as spirits or undead (friendly but not compelled). monochrome imagery. Sacrifice: Heal self and legion. OP" 
+    },
+          { 
+        name: "Falling Leaves", 
+        tradition: "Nature", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "2-yard-radius sphere",
+        duration: "1 minute",
+        desc: "Leaves fall and partially obscure the area. Can be cast as a triggered action on your turn. OP" 
+    },
+    { 
+        name: "Grasping Growth", 
+        tradition: "Nature", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "One creature on the ground",
+        desc: "Will vs Str. Success: Target is slowed (1 min). Ends if target leaves the ground or takes fire damage. OP" 
+    },
+    { 
+        name: "Green Tongue", 
+        tradition: "Nature", 
+        rank: 1, 
+        type: "Utility", 
+        duration: "1 minute",
+        desc: "Touch plants to communicate. Sacrifice: Expend to heal half your healing rate. OP" 
+    },
+    { 
+        name: "Pollen Burst", 
+        tradition: "Nature", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "4-yard cube",
+        duration: "1 minute",
+        desc: "Str challenge (-1 bane) or become impaired. Wind disperses dust. When it ends, ground becomes difficult terrain. OP" 
+    },
+    { 
+        name: "Poison Ivy", 
+        tradition: "Nature", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "10-yard-radius circle",
+        desc: "Vines create difficult terrain. Str challenge (-1 bane) or poisoned and impaired until completing a rest. OP" 
+    },
+    { 
+        name: "Thorny Skin", 
+        tradition: "Nature", 
+        rank: 2, 
+        type: "Attack", 
+        duration: "1 hour",
+        desc: "+2 Defense; immune to prone/forced movement on ground; melee attacks +1 boon and +1d6 damage. Grabbing/hitting you requires Agi challenge (-3 banes) or attacker takes 2d6 damage. Special: Defense bonus total +5 with oak hide. OP" 
+    },
+    { 
+        name: "Tumescent Puffballs", 
+        tradition: "Nature", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "Up to five 1-yard cubes",
+        duration: "1 minute",
+        desc: "Creates Size 1 puffballs (Health 20). Releasing spores (3yd radius) deals 2d6 damage and poisons living creatures (Str challenge -1 bane). OP" 
+    },
+    { 
+        name: "Plant Ally", 
+        tradition: "Nature", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "One Size 1 or smaller ordinary plant",
+        duration: "1 hour",
+        desc: "Plant becomes a compelled animated plant. Sacrifice: Expend to cast ensnaring vines. OP" 
+    },
+    { 
+        name: "Toxic Growth", 
+        tradition: "Nature", 
+        rank: 4, 
+        type: "Utility", 
+        requirement: "Living plants in area",
+        targetArea: "10-yard-radius circle",
+        duration: "1 hour",
+        desc: "Difficult terrain; failure to move through causes immobilization. Each round: Str challenge (-1 bane) or poisoned/slowed for 2d6 hours. OP" 
+    },
+    { 
+        name: "Sacred Grove", 
+        tradition: "Nature", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "10-yard-radius hemisphere",
+        duration: "8 hours",
+        desc: "Hides interior from outside. You can deny entry (teleports intruder). Heal or remove poisoned/diseased 4 times. OP" 
+    },
+    { 
+        name: "Bramble Hedge", 
+        tradition: "Nature", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "Up to twenty 4-yard cubes",
+        duration: "1 hour",
+        desc: "Thorny barrier (Def 5, Health 15). Moving through: Str challenge (-1 bane) or stop. Contact: Agi challenge or 2d6-3d6 damage. OP" 
+    },
+    { 
+        name: "Reincarnation", 
+        tradition: "Nature", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "Spirit of one dead creature",
+        desc: "8-hour concentration to fashion a new body from nature. Spirit takes a new mortal ancestry. Sacrifice: Heal one creature to full and remove poisoned/diseased. OP" 
+    },
+    { 
+        name: "Seasons Passage", 
+        tradition: "Nature", 
+        rank: 6, 
+        type: "Utility", 
+        duration: "8 hours",
+        desc: "Attune to seasons for unique buffs (e.g., Summer: +1d6 attack damage, +10 Health; Winter: 2d6 cold damage to nearby enemies on slow turns). OP" 
+    },
+    { 
+        name: "Call Nature's Protector", 
+        tradition: "Nature", 
+        rank: 6, 
+        type: "Utility", 
+        targetArea: "3-yard cube",
+        duration: "8 hours",
+        desc: "Summons a leshy. Must offer service or gift for its help. Sacrifice: Expend to cast form of the oak guardian. OP" 
+    },
+    { 
+        name: "Abundance", 
+        tradition: "Nature", 
+        rank: 7, 
+        type: "Utility", 
+        targetArea: "1-mile-radius sphere",
+        duration: "Permanent",
+        desc: "Plants grow double size; crops produce double yield. Area becomes difficult terrain. Aftereffect: Will challenge (-3 banes) or fatigued. Sacrifice: Heal all your damage. OP" 
+    },
+    { 
+        name: "Rouse the Woods", 
+        tradition: "Nature", 
+        rank: 8, 
+        type: "Utility", 
+        targetArea: "Up to 10 trees in 10-yard cube",
+        duration: "1 hour",
+        desc: "Targets become compelled animated trees. OP" 
+    },
+    { 
+        name: "Incarnate Nature", 
+        tradition: "Nature", 
+        rank: 9, 
+        type: "Utility", 
+        targetArea: "5-yard square on ground",
+        duration: "12 hours",
+        desc: "Summons incarnation of nature. Will vs Will; Success: Compelled. Failure: Attacks non-plants/animals. Aftereffect: Will challenge (-4 banes) or lose Power score; total failure transforms you into a tree. OP" 
+    },
+    { 
+        name: "Heal the Land", 
+        tradition: "Nature", 
+        rank: 10, 
+        type: "Utility", 
+        targetArea: "10-mile square",
+        desc: "24-hour concentration. Restores damaged land, removes Void stains, and closes Void breaches. Aftereffect: Str challenge (-5 banes) or permanent fatigue and Health reduction. OP" 
+    },
+          { 
+        name: "Fault in Steel", 
+        tradition: "Metal", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "One Size 1/2 nonmagical metal object",
+        desc: "Find flaws in metal. Worn/carried: Will vs Agi. Success: Weapons break next time they deal damage; Armor breaks next time wearer takes damage. OP" 
+    },
+    { 
+        name: "Steel Skin", 
+        tradition: "Metal", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "One creature you reach",
+        duration: "1 minute",
+        desc: "Flesh hardens. Defense becomes 12 + Will modifier. If Defense is already higher, gain +1 bonus instead. OP" 
+    },
+    { 
+        name: "Draw Iron", 
+        tradition: "Metal", 
+        rank: 1, 
+        type: "Utility", 
+        requirement: "Standing on natural surface",
+        duration: "1 hour",
+        desc: "Draw a one-handed iron melee weapon from the ground. Grants 1 boon on attack rolls. Rusts away when spell ends. OP" 
+    },
+    { 
+        name: "Pinning Spike", 
+        tradition: "Metal", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "One creature (medium range)",
+        desc: "Will vs Defense (+1 boon). Deal 2d6+1 damage. 20+: Target is impaled and immobilized; cannot be moved by nonmagical means until spear is removed. OP" 
+    },
+    { 
+        name: "Memory of the Forge", 
+        tradition: "Metal", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "Up to 3 metal objects (short range)",
+        duration: "1 minute",
+        desc: "Objects become blazing hot. Touching deals 1d6 damage. Worn objects: Str challenge (-1 bane) or 1d6 damage (half on success). Two failures = catch fire. OP" 
+    },
+    { 
+        name: "Warding Buckler", 
+        tradition: "Metal", 
+        rank: 2, 
+        type: "Utility", 
+        duration: "1 hour",
+        desc: "Magical shield imposes 1 bane on weapon attacks. Triggered: Use when attacked to impose 3 banes; spell then ends. OP" 
+    },
+    { 
+        name: "Iron Cloud", 
+        tradition: "Metal", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "5-yard-long cone",
+        desc: "Iron dust coats targets. Str challenge (-1 bane; -2 for faeries) or blinded. Faeries take 3d6 damage on failure. OP" 
+    },
+    { 
+        name: "Riddle of Steel", 
+        tradition: "Metal", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "One iron melee weapon you reach",
+        duration: "1 minute",
+        desc: "Weapon deals +2d6 extra damage. Success on an attack roll grants 2 boons to the wielder's next attack roll. OP" 
+    },
+    { 
+        name: "Animate Metal", 
+        tradition: "Metal", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "Metal objects in 3-yard cube",
+        duration: "1 minute",
+        desc: "Convert metal objects (total Size <= 3) into up to 5 compelled constructs. Constructs have +2 Defense and Health = Size x 10. OP" 
+    },
+    { 
+        name: "Spike Burst", 
+        tradition: "Metal", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "4-yard-radius sphere",
+        desc: "Spiked ball explodes for 6d6 damage (Agi half). Fragile objects take double damage. OP" 
+    },
+    { 
+        name: "Adamantine Chains", 
+        tradition: "Metal", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "Up to 5 creatures (medium range)",
+        duration: "1 hour",
+        desc: "Will vs Agi. Success: Target is immobilized (falls if flying). Attacks vs target gain 1 boon. Agi challenge (-3 banes) to escape; failure deals 5d6 damage. OP" 
+    },
+    { 
+        name: "Invincible Panoply", 
+        tradition: "Metal", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "One Size 2 or smaller creature",
+        duration: "1 minute",
+        desc: "Iron plates affix to target. Defense 25, Speed 6, unarmed attacks deal +1d6 damage. Iron vulnerability: Str challenge (-1 bane) each round or 1d6 damage. OP" 
+    },
+    { 
+        name: "Iron Bulwark", 
+        tradition: "Metal", 
+        rank: 6, 
+        type: "Utility", 
+        targetArea: "40x10x4 yard line",
+        duration: "Permanent",
+        desc: "Solid iron barrier. Each 1-yard cube has Defense 5, Health 40, half damage from weapons. Portions separated from the main wall corrode into rust. OP" 
+    },
+    { 
+        name: "Ore Thralls", 
+        tradition: "Metal", 
+        rank: 6, 
+        type: "Utility", 
+        targetArea: "4-yard cube",
+        duration: "4 hours",
+        desc: "Summons 1d3+2 compelled ore thralls (humanoid metal beings). OP" 
+    },
+    { 
+        name: "Destroy Metal", 
+        tradition: "Metal", 
+        rank: 7, 
+        type: "Attack", 
+        targetArea: "10-yard-radius sphere",
+        desc: "Designated nonmagical metal objects take damage equal to Health and turn to dust. Does not affect magical objects. OP" 
+    },
+    { 
+        name: "Impervious", 
+        tradition: "Metal", 
+        rank: 8, 
+        type: "Utility", 
+        duration: "Until rest",
+        desc: "Skin turns metallic black. Unarmed strikes +2d6 damage; half damage from weapon attacks. Successful weapon attacks against you destroy the weapon. Aftereffect: Str challenge (-4 banes) or slowed (1 week). OP" 
+    },
+    { 
+        name: "Iron Guardian", 
+        tradition: "Metal", 
+        rank: 9, 
+        type: "Utility", 
+        targetArea: "5-yard cube",
+        duration: "8 hours",
+        desc: "Summons a compelled iron guardian. Aftereffect: Str challenge (-4 banes) or -2d6 Health penalty until rest. OP" 
+    },
+    { 
+        name: "River of Molten Metal", 
+        tradition: "Metal", 
+        rank: 10, 
+        type: "Attack", 
+        targetArea: "10-yard square",
+        duration: "1 hour",
+        desc: "10d6 damage to objects; flammable objects catch fire. Creatures: Agi challenge (-3 banes) or 10d6 damage. Expands/flows each round. Aftereffect: Str challenge (-5 banes) or caster catches fire (3d6 damage/round). OP" 
+    },
+          { 
         name: "Reveal Unspeakable Truth", 
         tradition: "Madness", 
         rank: 0, 
