@@ -108,6 +108,177 @@
         // Add your spreadsheet rows here following this exact format.
       const spells = [
           { 
+        name: "Investiture of the Messenger", 
+        tradition: "Invocation", 
+        rank: 0, 
+        type: "Utility", 
+        requirement: "Talisman of the Messenger",
+        duration: "10 minutes",
+        desc: "Legs lengthen (2x height). +4 bonus to Speed. Aftereffect: Int challenge or +1 Insanity. OP"
+    },
+    { 
+        name: "Investiture of the Watcher", 
+        tradition: "Invocation", 
+        rank: 0, 
+        type: "Utility", 
+        requirement: "Talisman of the Watcher",
+        duration: "10 minutes",
+        desc: "Eyes and ears grow. 2 boons on all Perception rolls. Aftereffect: Int challenge or +1 Insanity. OP"
+    },
+    { 
+        name: "Investiture of the Dwarf Lord", 
+        tradition: "Invocation", 
+        rank: 1, 
+        type: "Utility", 
+        requirement: "Talisman of the Dwarf Lord",
+        duration: "10 minutes",
+        desc: "Stone beard grows. Strength rolls (+1 boon); Speed (-2 penalty). Success on weapon attack: Force target Str challenge or push 1d3 yards. Triggered: Grant 1 boon to nearby creature's attack. Aftereffect: Int challenge or +1d3 Insanity. OP"
+    },
+    { 
+        name: "Investiture of the Goblin King", 
+        tradition: "Invocation", 
+        rank: 1, 
+        type: "Utility", 
+        requirement: "Talisman of the Goblin King",
+        duration: "10 minutes",
+        desc: "Appear gorgeous/glittery. Spawn 2 compelled tiny monsters (tiny goblins). 3 boons to Deceive, Steal, Hide, Open Locks, and Sneak. Action: Assume owl form (animal shape). Aftereffect: Int challenge or +1d3 Insanity. OP"
+    },
+    { 
+        name: "Investiture of the Storm Queen", 
+        tradition: "Invocation", 
+        rank: 1, 
+        type: "Attack", 
+        requirement: "Talisman of the Storm Queen",
+        duration: "10 minutes",
+        desc: "Blue skin, snowy eyes. Casting: 2d6 lightning damage (Int vs Agi). Ignore difficult terrain; half fall damage. Action: Throw lightning (1d6+3 damage). Aftereffect: Int challenge or +1d3 Insanity. OP"
+    },
+    { 
+        name: "Investiture of the Grand Druid", 
+        tradition: "Invocation", 
+        rank: 2, 
+        type: "Attack", 
+        requirement: "Talisman of the Grand Druid",
+        duration: "10 minutes",
+        desc: "Vine-stag hybrid form. +2 Defense; ignore difficult terrain. Action/Triggered: Erupt difficult terrain vines (5yd radius). Action: Immobilize ground target (Int vs Agi) + 1d6 damage. Aftereffect: Int challenge or +1d6 Insanity. OP"
+    },
+    { 
+        name: "Investiture of the Robin Prince", 
+        tradition: "Invocation", 
+        rank: 2, 
+        type: "Attack", 
+        requirement: "Talisman of the Robin Prince",
+        duration: "10 minutes",
+        desc: "Elfin/avian features. Casting: Teleport (short range) and weapon attack (can use Int) + 1d6 extra damage. Shadowsight; +4 Speed. Action/Triggered: Teleport (medium range) once per round. Aftereffect: Int challenge or +1d6 Insanity. OP"
+    },
+    { 
+        name: "Investiture of the Laughing Scoundrel", 
+        tradition: "Invocation", 
+        rank: 3, 
+        type: "Utility", 
+        requirement: "Talisman of the Laughing Scoundrel",
+        duration: "1 hour",
+        desc: "Unnerving grin/howling laughter. Round end: Choice of creatures in short range make Will challenge (1 bane) or +1 Insanity. Immune to Insanity, compelled, and frightened. Action/Triggered: Tell joke (Int vs Will); Success: +1 Insanity and 1d6 damage to self. Aftereffect: Int challenge or +1d6+1 Insanity. OP"
+    },
+    { 
+        name: "Investiture of the One-Eyed God", 
+        tradition: "Invocation", 
+        rank: 3, 
+        type: "Attack", 
+        requirement: "Talisman of the One-Eyed God",
+        duration: "1 hour",
+        desc: "Eye becomes raven flock; starlight socket. Casting: 3d6 damage (Agi challenge for half) in 5yd radius. Darksight; attacks vs you have 1 bane. Attacks vs injured targets have 2 boons and +1d6 weapon damage. Aftereffect: Int challenge or +1d6+1 Insanity. OP"
+    },
+    { 
+        name: "Investiture of the Winter King", 
+        tradition: "Invocation", 
+        rank: 4, 
+        type: "Attack", 
+        requirement: "Talisman of the Winter King",
+        duration: "1 hour",
+        desc: "Blue skin/white hair. Casting: 3d6 cold damage (5yd cone). Immune to cold; snow obscuration. Action: Hurl ice shard (Int vs Agi) for 3d6 damage. Aftereffect: Int challenge or +1d6+2 Insanity. OP"
+    },
+    { 
+        name: "Investiture of the Summer Queen", 
+        tradition: "Invocation", 
+        rank: 4, 
+        type: "Attack", 
+        requirement: "Talisman of the Summer Queen",
+        duration: "1 hour",
+        desc: "Red hair/smoldering eyes. Casting: Will challenge (1 bane) or dazed 1 minute. Immune to disease, charmed, frightened, and compelled. 3 boons on social attack rolls. Action: Hurl fire (2d6+2 damage). Aftereffect: Int challenge or +1d6+2 Insanity. OP"
+    },
+    { 
+        name: "Investiture of the Death Angel", 
+        tradition: "Invocation", 
+        rank: 5, 
+        type: "Attack", 
+        requirement: "Talisman of the Death Angel",
+        duration: "1 hour",
+        desc: "Flesh rots (bones/scythe). Observers: Will challenge or +1 Insanity. Immune to cold, disease, poison, and major afflictions. Round end: Living creatures within 3yds take 1d6+2 damage. Action: Scythe attack (3d6+2 damage); healing 2d6 if incapacitated. Aftereffect: Int challenge or +2d6 Insanity. OP"
+    },
+    { 
+        name: "Investiture of the Diviner", 
+        tradition: "Invocation", 
+        rank: 5, 
+        type: "Utility", 
+        requirement: "Talisman of the Diviner",
+        duration: "1 hour",
+        desc: "Floating/black eyes. Cannot be prone; no fall damage. 3 banes on incoming attacks; 3 boons on defense. Triggered: Grant 2 boons to others. Action: Dire prophecy (Int vs Will); 3 banes on target's rolls. Forced random movement at round end. Aftereffect: Int challenge or +2d6 Insanity. OP"
+    },
+    { 
+        name: "Investiture of the Dark Lady", 
+        tradition: "Invocation", 
+        rank: 6, 
+        type: "Attack", 
+        requirement: "Talisman of the Dark Lady",
+        duration: "4 hours",
+        desc: "Rotting corpse form. Observers: Will challenge or +1 Insanity. Spawn 3 animated corpses. +10 Health; immune to cold/disease/poison/major afflictions. Attacks vs you have 1 bane. Action: Detonate undead (2d6 damage to target; 4d6 pulse if incapacitated). Aftereffect: Int challenge or +2d6+1 Insanity. OP"
+    },
+    { 
+        name: "Investiture of the Witch-King", 
+        tradition: "Invocation", 
+        rank: 6, 
+        type: "Attack", 
+        requirement: "Talisman of the Witch-King",
+        duration: "4 hours",
+        desc: "Fire/darkness form. Casting: 6d6 fire damage (5yd radius). Size increases by 1; Darksight. Shadows/darkness follow you. Gaining Insanity from your spells compels targets. 1 boon for Dark Magic; 1 bane for resistance. Action: 3yd cone of fire (3d6). Aftereffect: Int challenge or +2d6+1 Insanity and +1 Corruption. OP"
+    },
+    { 
+        name: "Investiture of the Archmage", 
+        tradition: "Invocation", 
+        rank: 7, 
+        type: "Attack", 
+        requirement: "Talisman of the Archmage",
+        duration: "4 hours",
+        desc: "White hair/robes. Attack spells: 2 boons on roll; 2 banes to resist. Half damage from spells; 1 bane on enemy spell rolls. Action: End rank 5 or lower magical effects (5yd cube). Triggered: Cast 'Unerring Darts'. Aftereffect: Int challenge or +2d6+2 Insanity. OP"
+    },
+    { 
+        name: "Investiture of the Great Dragon", 
+        tradition: "Invocation", 
+        rank: 8, 
+        type: "Attack", 
+        requirement: "Talisman of the Great Dragon",
+        duration: "4 hours",
+        desc: "Dragon form. Size +3; Darksight; Defense 21; Speed +10; Flier. Immune to fire. Unarmed strikes (2d6). Action/Triggered: 10yd cone fire breath (8d6). Aftereffect: Int challenge or +2d6+3 Insanity. OP"
+    },
+    { 
+        name: "Investiture of the Ascended One", 
+        tradition: "Invocation", 
+        rank: 9, 
+        type: "Attack", 
+        requirement: "Talisman of the Ascended One",
+        duration: "4 hours",
+        desc: "Column of light. Observers: Will challenge (1 bane) or blinded. Emits 100yd light; attacks vs you have 3 banes; half damage from all sources. Immune to almost all afflictions. Action: Brilliant beam (5d6 damage at extreme range). Action: Intensify light to blind. Round end: 3d6 damage to all demons in long range. Aftereffect: Int challenge or +3d6+1 Insanity. OP"
+    },
+    { 
+        name: "Investiture of the Devil", 
+        tradition: "Invocation", 
+        rank: 10, 
+        type: "Attack", 
+        requirement: "Talisman of the Devil",
+        duration: "4 hours",
+        desc: "Likeness of the Devil. Size +10; Truesight; Defense 25; all attributes become 20. Immune to major afflictions/Insanity/disease/poison; half damage from all else. Action/Triggered: Force kneel (Will challenge with 3 banes); targets fall prone. Action: Hellfire (5d6 damage + catch fire) at extreme range. Aftereffect: +1d6 Corruption; Int challenge (-3 banes) or +3d6+3 Insanity. Failure (0 or lower): Devil takes your soul; immediate death. OP"
+    },
+          { 
         name: "Conceal Object", 
         tradition: "Illusion", 
         rank: 0, 
