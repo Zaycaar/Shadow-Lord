@@ -108,6 +108,202 @@
         // Add your spreadsheet rows here following this exact format.
       const spells = [
           { 
+        name: "Reveal Unspeakable Truth", 
+        tradition: "Madness", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "One creature in short range",
+        desc: "Whisper dark truths (Int vs Will); Success: Target gains 1 Insanity. 1 boon if target has 3+ Insanity. 0 or lower: You gain 1 Insanity. OP"
+    },
+    { 
+        name: "Serenity", 
+        tradition: "Madness", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "Self",
+        desc: "Triggered: When gaining Insanity, use to prevent becoming frightened from that gain. OP"
+    },
+    { 
+        name: "Aid from the Outer Gods", 
+        tradition: "Madness", 
+        rank: 1, 
+        type: "Utility", 
+        duration: "1 minute",
+        desc: "1 bane on attacks vs you. Triggered: Gain 1 Insanity to impose 2 additional banes on an incoming attack. OP"
+    },
+    { 
+        name: "Black Breath", 
+        tradition: "Madness", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "3-yard-long cone",
+        desc: "Fetid darkness causes hallucinations. Will challenge or 1d6 damage and 1d3 Insanity. OP"
+    },
+    { 
+        name: "Dream Worm", 
+        tradition: "Madness", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One creature or humanoid corpse",
+        desc: "Living: Int vs Agi; Success: +1 Insanity and Charmed (rounds = 1 + Insanity total). Corpse: Becomes animated corpse; takes 1d6/hour as it is devoured from inside. OP"
+    },
+    { 
+        name: "Forbidden Knowledge", 
+        tradition: "Madness", 
+        rank: 1, 
+        type: "Utility", 
+        duration: "1 hour",
+        desc: "Gain 1d6+1 Insanity. If not gone mad, gain 'insights' equal to Insanity gained. Insights can be spent for 2 boons on a roll or a Yes/No answer from the GM. OP"
+    },
+    { 
+        name: "Dimensional Travel", 
+        tradition: "Madness", 
+        rank: 2, 
+        type: "Utility", 
+        desc: "Teleport to medium range. On arrival: Will challenge (-1 bane) or +1 Insanity. Can be cast as a triggered action on your turn. OP"
+    },
+    { 
+        name: "Hoary Tentacle", 
+        tradition: "Madness", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "1-yard cube (short range)",
+        duration: "1 minute",
+        desc: "Size 1 tentacle appears. Observers: Will challenge or +1 Insanity. Rounds end: Grab random creature (3yd); 1d6 damage and grabbed. Already grabbed: 3d6 damage. Tentacle Str: 15. OP"
+    },
+    { 
+        name: "Unlight", 
+        tradition: "Madness", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "10-yard-radius sphere (centered on you)",
+        duration: "1 hour",
+        desc: "Yellow/gray light visible to you and 10 chosen. See through darkness/shadows/invisibility; reveal Illusions. Roll 0 or lower: See horrors; Will challenge or +1d3 Insanity. OP"
+    },
+    { 
+        name: "Bedeviling Colors", 
+        tradition: "Madness", 
+        rank: 3, 
+        type: "Attack", 
+        requirement: "At least 1 Insanity",
+        targetArea: "Up to 3 creatures (short range)",
+        duration: "1 minute",
+        desc: "Targets shed light (3yd radius). Will challenge (-2 banes) or +1d3 Insanity. While frightened from this, failure on rolls deals 2d6 damage to target. OP"
+    },
+    { 
+        name: "Eye of the Outer God", 
+        tradition: "Madness", 
+        rank: 3, 
+        type: "Utility", 
+        requirement: "At least 1 Insanity",
+        duration: "1 hour",
+        desc: "Third eye opens. Ignore banes from cover/obscurement. Action/Triggered: Gaze (Int vs Will) deals 1d6 damage and +1d3 Insanity. Failure: You gain 1 Insanity. OP"
+    },
+    { 
+        name: "Mind Shatter", 
+        tradition: "Madness", 
+        rank: 3, 
+        type: "Attack", 
+        requirement: "At least 1 Insanity",
+        targetArea: "One creature (medium range)",
+        desc: "Int vs Will (boons = target's Insanity). Success: 2d6 damage and 2d6 Insanity. 20+: +2d6 extra damage. OP"
+    },
+    { 
+        name: "Dark Star", 
+        tradition: "Madness", 
+        rank: 4, 
+        type: "Attack", 
+        requirement: "At least 2 Insanity",
+        targetArea: "2-yard-radius sphere",
+        duration: "1d6 minutes",
+        desc: "Black sphere appears. Entering/Start: Str challenge (-1 bane) or 4d6 damage and teleport away. Round end: Str challenge or pulled 1yd and immobilized. Radius can grow/shrink each round. OP"
+    },
+    { 
+        name: "Worms from the Ninth Dimension", 
+        tradition: "Madness", 
+        rank: 4, 
+        type: "Attack", 
+        requirement: "At least 2 Insanity",
+        targetArea: "2-yard cube",
+        duration: "1 minute",
+        desc: "Luminous worms. Observers: Will challenge or +1d3 Insanity (also immobilized while frightened). Area moves 1d6 yards/round; everything within 3yds must pass Agi challenge (-1 bane) or take 3d6 damage. OP"
+    },
+    { 
+        name: "Mad Piping of the Outer Dark", 
+        tradition: "Madness", 
+        rank: 5, 
+        type: "Attack", 
+        requirement: "At least 2 Insanity",
+        targetArea: "5-yard-radius sphere",
+        desc: "Alien music. Will challenge (-2 banes) or +1d6+1 Insanity. While frightened, target is dazed and dances in direction of caster's choice. OP"
+    },
+    { 
+        name: "Lay Bare the Cosmic Mysteries", 
+        tradition: "Madness", 
+        rank: 5, 
+        type: "Utility", 
+        requirement: "At least 2 Insanity",
+        duration: "1 hour",
+        desc: "10-min concentration. Mind travels to other dimension; body is prone/unconscious. Will challenge (-3 banes) or +3d6 Insanity. Success: Ask Power-score number of questions (Int challenge each). Sacrifice: Cast Worms from the Ninth Dimension. OP"
+    },
+    { 
+        name: "Chant of the Lost", 
+        tradition: "Madness", 
+        rank: 6, 
+        type: "Attack", 
+        requirement: "At least 3 Insanity",
+        targetArea: "5-yard-radius sphere (centered on you)",
+        duration: "Concentration, up to 1 min",
+        desc: "Maddening din. Will challenge (-1 bane) or +1d3 Insanity and 2d6 damage. Incapacitated targets' heads explode. Aftereffect: Will challenge (-1 bane) or +1d3 Insanity. OP"
+    },
+    { 
+        name: "Night Terrors", 
+        tradition: "Madness", 
+        rank: 6, 
+        type: "Attack", 
+        requirement: "3+ Insanity and target's personal possession/DNA",
+        targetArea: "One creature in the world",
+        desc: "1-min ritual. Int vs Will. Success: Target sleeps 8 hours. Each hour: Even d6 = +1d6 Insanity. Gaining Insanity allows Will challenge (-3 banes) to wake. If target goes mad while asleep, they die. Aftereffect: Will challenge (-3 banes) or cannot sleep for Insanity-total days. OP"
+    },
+    { 
+        name: "Cosmic Spores", 
+        tradition: "Madness", 
+        rank: 7, 
+        type: "Attack", 
+        requirement: "3+ Insanity and sky view",
+        targetArea: "10-yard-radius cylinder (up to atmosphere)",
+        duration: "1 minute",
+        desc: "Heavily obscured. Animals/Plants die instantly. Creatures: Str challenge (-1 bane) or +1d6 Insanity and diseased. Disease penalty: -1d6 Health per Insanity gain. If Health hits 0, monster tears out. Aftereffect: Str challenge (-1 bane) or you become diseased. OP"
+    },
+    { 
+        name: "Dimensional Banishment", 
+        tradition: "Madness", 
+        rank: 8, 
+        type: "Attack", 
+        requirement: "At least 4 Insanity",
+        targetArea: "One creature you see",
+        desc: "Int vs Will. Boons if target is low Health or has Insanity. Success: Target vanished. Target makes Will challenges (-3 banes) to escape. Failure = +1d6 Insanity. Mad targets are lost forever. 20+: +1d6 Insanity. OP"
+    },
+    { 
+        name: "Mental Feast", 
+        tradition: "Madness", 
+        rank: 9, 
+        type: "Attack", 
+        requirement: "At least 4 Insanity",
+        targetArea: "5-yard-radius sphere",
+        desc: "Will challenge (banes = half Insanity) or +3d6 Insanity. If mad: Mind devoured (death in 1d6 days). Otherwise: -5 Int/Will and daily Str reduction until death or success on Will challenge (-4 banes). Aftereffect: Will challenge or mind devoured. OP"
+    },
+    { 
+        name: "The Old Ones Awaken", 
+        tradition: "Madness", 
+        rank: 10, 
+        type: "Attack", 
+        requirement: "At least 5 Insanity",
+        targetArea: "3d6-mile-radius sphere",
+        duration: "Variable",
+        desc: "Landscape warps. Will challenge (-1 bane + half Insanity score) or gain Insanity = Will score (madness is permanent). Repeat challenge every hour. Aftereffect: +1d6 Insanity. If not mad, Str challenge (banes = Insanity); Failure: Alien gods drag you away forever. OP"
+    },
+          { 
         name: "Death Ward", 
         tradition: "Life", 
         rank: 0, 
