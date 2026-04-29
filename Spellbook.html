@@ -108,6 +108,168 @@
         // Add your spreadsheet rows here following this exact format.
       const spells = [
           { 
+        name: "Carve the Flesh", 
+        tradition: "Forbidden", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "One living creature in short range",
+        duration: "Instantaneous",
+        desc: "Int vs Str. Success: 1d3 + 2 damage and leaves a scar. 20+: +1d3 extra damage. OP" 
+    },
+    { 
+        name: "Face Rip", 
+        tradition: "Forbidden", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "One creature with a face you reach",
+        duration: "Instantaneous",
+        desc: "Int vs Agi. Success: 1d6 damage. Near creatures (1yd) must pass Will challenge or +1 Insanity. 20+: +1 damage and all observers must pass the Will challenge. OP" 
+    },
+    { 
+        name: "Seal the Cavity", 
+        tradition: "Forbidden", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "One Size 1 or smaller living creature in short range",
+        duration: "Special",
+        desc: "Int vs Str. Success: Choose one (Seal Mouth/Nose: Suffocation; Seal Eyes/Ears: Blinded/Deafened; Seal Genitals/Anus: Impaired/Fatigued/Slowed and 2d6 damage/hour). Removal: Cut flap (1d6 damage). 20+: Choose two effects. Aftereffect: Str challenge or suffer one effect yourself. OP" 
+    },
+    { 
+        name: "Serpent Tongue", 
+        tradition: "Forbidden", 
+        rank: 1, 
+        type: "Attack", 
+        targetArea: "Self / One creature you reach",
+        duration: "1 minute",
+        desc: "Tongue becomes poisoned barb; cannot speak. Int vs Agi: 1d6 + 2 damage. Success: Living targets pass Str challenge or 1d6 poison damage and poisoned 1 min. Already poisoned targets take +1d6 extra damage. OP" 
+    },
+    { 
+        name: "Ghastly Visage", 
+        tradition: "Forbidden", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "One creature in short range (no Horrifying trait)",
+        duration: "1 minute",
+        desc: "Int vs Str. Success: Target gains Horrifying trait. Allies chosen by caster are immune. 20+: Others resist the trait with 3 banes. OP" 
+    },
+    { 
+        name: "Grotesque Fantasies", 
+        tradition: "Forbidden", 
+        rank: 2, 
+        type: "Attack", 
+        targetArea: "One living creature in short range",
+        duration: "1 minute",
+        desc: "Int vs Will. Success: Dazed (-2 banes on attacks vs it). Round end: Will challenge (-1 bane) to end; failure grants 1 Insanity. 20+: Target takes 1d3 damage per round. OP" 
+    },
+    { 
+        name: "Unruly Organs", 
+        tradition: "Forbidden", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "One living creature of flesh and blood in medium range",
+        duration: "1 minute",
+        desc: "Int vs Str. Success: 2d6 damage. Round end: Str challenge (-1 bane) or 2d6 extra damage. Incapacitation: Target dies/prone and spawns 1d6 tiny monsters. 20+: +2d6 extra damage. OP" 
+    },
+    { 
+        name: "Vivisection", 
+        tradition: "Forbidden", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "One creature in medium range",
+        duration: "Instantaneous",
+        desc: "Int vs Str. Success: 5d6 damage. Incapacitation: Target dies, sliced into 1-inch strips; observers must pass Will challenge (-1 bane) or +1 Insanity. 20+: +2d6 extra damage. OP" 
+    },
+    { 
+        name: "Spectacular Expulsion", 
+        tradition: "Forbidden", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "Up to 3 living creatures in short range",
+        duration: "Instantaneous",
+        desc: "Str challenge (-2 banes) or 2d6 damage and spew 3-yard cone of corrosive vomit. Vomit deals 3d6 damage (Agi challenge for half). Victims become dazed 1 round. OP" 
+    },
+    { 
+        name: "Unspeakable Graft", 
+        tradition: "Forbidden", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "One creature you reach",
+        duration: "Permanent",
+        desc: "Req: Harvested part from living creature. 1 min concentration to graft part; target gains 1 Corruption. Donor/Receiver must pass Will challenge (-1 bane) after rests or +1d3 Insanity. Donor death (1-3 on d6) kills part. Sacrifice: Cast Part Bone from Flesh. OP" 
+    },
+    { 
+        name: "Bestow Corruption", 
+        tradition: "Forbidden", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "Up to 3 living creatures in short range",
+        duration: "Special",
+        desc: "Will challenge (-1 bane). Failure: +1d6 Corruption (3+ = Mark of Darkness). Target is compelled for rounds = Corruption total. Incapacitation: Dies and soul becomes hostile demon of target's Size. OP" 
+    },
+    { 
+        name: "Hook the Soul", 
+        tradition: "Forbidden", 
+        rank: 5, 
+        type: "Attack", 
+        targetArea: "One living, mortal creature in medium range",
+        duration: "Special",
+        desc: "Int vs Will (3 banes if HP >= 50). Success: 2d6 Insanity. If mad: Soul wrenched (death), becomes friendly shadow. If alive: Compelled (rounds = Insanity); must stay within 20yds or fall unconscious. Removing compulsion grants 1 Corruption. 20+: +1d6 Insanity. OP" 
+    },
+    { 
+        name: "Effluvial Bog", 
+        tradition: "Forbidden", 
+        rank: 6, 
+        type: "Attack", 
+        targetArea: "One living creature in medium range",
+        duration: "1 hour",
+        desc: "Int vs Str. Success: Target defenseless 1 round; filth fills 10-yard radius. Area is difficult terrain; taking damage in area requires Agi challenge or fall prone. Creatures within 10yds impaired; round end: Str challenge (-2 banes) or dazed. Caster immune. OP" 
+    },
+    { 
+        name: "Part Soul from Flesh", 
+        tradition: "Forbidden", 
+        rank: 6, 
+        type: "Attack", 
+        targetArea: "One living, mortal creature in medium range",
+        duration: "Instantaneous",
+        desc: "Int vs Will. Success: 10d6 damage. Incapacitation: Soul becomes hostile specter and creature dies. 20+: +4d6 extra damage. OP" 
+    },
+    { 
+        name: "Desecrate", 
+        tradition: "Forbidden", 
+        rank: 7, 
+        type: "Utility", 
+        targetArea: "100-yard radius sphere in long range",
+        duration: "24 hours",
+        desc: "Yellow mist. No healing; Will challenge to resist Insanity has 3 banes. Spending 1 hour in area: Str challenge (-3 banes) or diseased (take double damage). Spirits/Undead/Demons/Corrupted gain +10 HP and 2 boons on all rolls. Permanence: Cast for 1 month + 1 day. OP" 
+    },
+    { 
+        name: "Pollution", 
+        tradition: "Forbidden", 
+        rank: 8, 
+        type: "Attack", 
+        targetArea: "100-yard cube in extreme range",
+        duration: "1 hour",
+        desc: "Smoke heavily obscures; drifts 1d6 yards per round. Plants take 3d6 damage/round; objects 1d6. Living creatures: Str challenge (-3 banes) or progress through suffocating/poisoning tracks (Page 60). OP" 
+    },
+    { 
+        name: "Utter Ruin", 
+        tradition: "Forbidden", 
+        rank: 9, 
+        type: "Attack", 
+        targetArea: "One living creature in medium range",
+        duration: "Instantaneous",
+        desc: "Target immobilized 1 round; vision of loved one destroyed appears. Will challenge (-3 banes). Failure: 3d6 Insanity; Success: 1d6 Insanity. If mad: Target cuts own throat (damage = Health). OP" 
+    },
+    { 
+        name: "Extinction", 
+        tradition: "Forbidden", 
+        rank: 10, 
+        type: "Attack", 
+        targetArea: "10-mile radius sphere",
+        duration: "Instantaneous",
+        desc: "Creatures <= 12 years take damage = Health. Creatures > 12 years become sterile/barren. Aftereffect: +2d6 Corruption. Will challenge (-4 banes) or +1d6 extra Corruption and 4d6 Insanity. OP" 
+    },
+          { 
         name: "Choking Smoke", 
         tradition: "Fire", 
         rank: 0, 
