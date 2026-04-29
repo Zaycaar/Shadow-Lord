@@ -108,6 +108,150 @@
         // Add your spreadsheet rows here following this exact format.
       const spells = [
           { 
+        name: "Death Ward", 
+        tradition: "Life", 
+        rank: 0, 
+        type: "Utility", 
+        targetArea: "One creature you reach",
+        duration: "1 hour",
+        desc: "Target rolls 2 dice for fate rolls and keeps highest. Triggered: Use when a creature in short range would die; they instead become unconscious (1d3 hours) and heal 1 damage. OP" 
+    },
+    { 
+        name: "Destroy Death", 
+        tradition: "Life", 
+        rank: 0, 
+        type: "Attack", 
+        targetArea: "One creature in short range",
+        duration: "Instant",
+        desc: "Living: Heals 1d3. Undead: Will vs Str; Success deals 1d6+2 damage. 20+: +1d6 extra damage. OP" 
+    },
+    { 
+        name: "Bountiful Vitality", 
+        tradition: "Life", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "One creature you reach",
+        duration: "1 hour (or until triggered)",
+        desc: "Target heals 1d3 extra each time they heal. If target becomes injured, they heal half healing rate and spell ends. OP" 
+    },
+    { 
+        name: "Life Surge", 
+        tradition: "Life", 
+        rank: 1, 
+        type: "Utility", 
+        targetArea: "One creature you reach",
+        duration: "1 minute",
+        desc: "Target heals half healing rate and gains 1 boon on all attack/challenge rolls for duration. OP" 
+    },
+    { 
+        name: "Augmented Vitality", 
+        tradition: "Life", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "One creature you reach",
+        duration: "1 hour",
+        desc: "Half damage from disease/poison; 2 boons to resist/remove them. Roll 2 dice on fate rolls. Spirits/Undead have 1 bane on attacks vs target. OP" 
+    },
+    { 
+        name: "Seed of Life", 
+        tradition: "Life", 
+        rank: 2, 
+        type: "Utility", 
+        targetArea: "Up to 3 creatures you reach",
+        duration: "1 hour (or until triggered)",
+        desc: "+2d6 Health bonus. If target becomes injured, they heal their full healing rate and spell ends for them. OP" 
+    },
+    { 
+        name: "Eradicate the Unclean", 
+        tradition: "Life", 
+        rank: 3, 
+        type: "Attack", 
+        targetArea: "5-yard radius sphere",
+        duration: "Instant / 1 minute",
+        desc: "Undead take 4d6 damage (Str half). Poisonous/infectious creatures must pass Str challenge (-1 bane) or lose transmission ability. Undead must pass Will challenge (-1 bane) or be repelled 5 yards. OP" 
+    },
+    { 
+        name: "Fleeting Life", 
+        tradition: "Life", 
+        rank: 3, 
+        type: "Utility", 
+        targetArea: "One creature dead <= 7 days",
+        duration: "8 hours",
+        desc: "Temporarily revives corpse (Health 10). Retains all talents/spells. Ends if incapacitated. Sacrifice: Cast Moderate Healing. OP" 
+    },
+    { 
+        name: "Revitalize", 
+        tradition: "Life", 
+        rank: 4, 
+        type: "Utility", 
+        targetArea: "One creature you reach",
+        duration: "Instant",
+        desc: "Target heals all damage and removes fatigued, impaired, and poisoned afflictions. OP" 
+    },
+    { 
+        name: "Life from Death", 
+        tradition: "Life", 
+        rank: 4, 
+        type: "Attack", 
+        targetArea: "One creature in medium range",
+        duration: "Instant",
+        desc: "Int vs Str. Success: Target takes damage equal to its healing rate. You choose one creature in short range to heal the same amount. OP" 
+    },
+    { 
+        name: "Fountain of Life", 
+        tradition: "Life", 
+        rank: 5, 
+        type: "Utility", 
+        targetArea: "You",
+        duration: "1 minute",
+        desc: "You emit light (short range). You and allies in light heal 1d6 damage at the end of each round. Undead in light take 1d6 damage at round end. OP" 
+    },
+    { 
+        name: "Great Healing", 
+        tradition: "Life", 
+        rank: 6, 
+        type: "Utility", 
+        targetArea: "Up to 3 creatures you reach",
+        duration: "Instant",
+        desc: "Each target heals all damage. Sacrifice: Cast Cure. OP" 
+    },
+    { 
+        name: "House of Healing", 
+        tradition: "Life", 
+        rank: 7, 
+        type: "Utility", 
+        targetArea: "20-yard cube",
+        duration: "8 hours",
+        desc: "1-hour concentration to build. Resting creatures heal 1d6/hour. Resting 8 hours removes disease/poison, regrows limbs/organs, and fades scars. Aftereffect: Will challenge (-3 banes) or fatigued and -1d6 Power for 8 days. OP" 
+    },
+    { 
+        name: "Raise the Dead", 
+        tradition: "Life", 
+        rank: 8, 
+        type: "Utility", 
+        targetArea: "5-yard radius sphere",
+        duration: "Instant",
+        desc: "Revives all dead (<= 7 days). Soul in Underworld: Success. Soul in Hell: Will challenge (banes = Corruption). Aftereffect: Will challenge (-4 banes) or caster dies to trade soul. OP" 
+    },
+    { 
+        name: "Ashes to Ashes", 
+        tradition: "Life", 
+        rank: 9, 
+        type: "Attack", 
+        targetArea: "1-mile radius sphere",
+        duration: "Instant",
+        desc: "Living heal all damage. Spirits/Undead (Health <= 100) are destroyed/dissipated. Aftereffect: Str challenge (-4 banes) or 8d6 damage + fatigued. OP" 
+    },
+    { 
+        name: "Second Life", 
+        tradition: "Life", 
+        rank: 10, 
+        type: "Utility", 
+        targetArea: "One living or dead creature",
+        duration: "Instant",
+        desc: "1-hour concentration. Living: Heals all damage, removes Insanity, Corruption, Marks of Darkness, curses, and age (young adult). Dead: Full restoration. Aftereffect: Str challenge (-5 banes) or caster dies. OP" 
+    },
+          { 
         name: "Investiture of the Messenger", 
         tradition: "Invocation", 
         rank: 0, 
