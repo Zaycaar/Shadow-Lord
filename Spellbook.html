@@ -108,6 +108,582 @@
         // Add your spreadsheet rows here following this exact format.
       const spells = [
           { 
+        name: "Empty Mind", 
+        tradition: "Telepathy", 
+        rank: 0, 
+        type: "Utility", 
+        targetarea: "Self", 
+        description: "1 minute. Gain 2 boons on Int/Will challenge rolls to resist attacks; impose 2 banes on incoming attacks against Int/Will. OP" 
+    },
+    { 
+        name: "Eyes of My Enemy", 
+        tradition: "Telepathy", 
+        rank: 0, 
+        type: "Attack", 
+        targetarea: "One creature within medium range", 
+        description: "1 minute (conc). See and hear from the target's space. Your own body becomes blinded and deafened for the duration. OP" 
+    },
+    { 
+        name: "Anticipation", 
+        tradition: "Telepathy", 
+        rank: 1, 
+        type: "Utility", 
+        targetarea: "Self", 
+        description: "1 minute. Impose 1 bane on attacks from nearby enemies and gain 1 boon to resist them. Can move Int modifier yards on enemy misses. OP" 
+    },
+    { 
+        name: "Gird Mind", 
+        tradition: "Telepathy", 
+        rank: 1, 
+        type: "Utility", 
+        targetarea: "Self", 
+        description: "10 minutes. Immune to the charmed, dazed, frightened, and stunned afflictions. Sacrifice: cast Mind Stab. OP" 
+    },
+    { 
+        name: "Intellectual Defense", 
+        tradition: "Telepathy", 
+        rank: 2, 
+        type: "Utility", 
+        targetarea: "Self", 
+        description: "1 hour. Can force enemies to attack your Intellect instead of Defense. Use Intellect for any resistance roll. Gain 1 boon/impose 1 bane on Int rolls. OP" 
+    },
+    { 
+        name: "Rend Mind", 
+        tradition: "Telepathy", 
+        rank: 2, 
+        type: "Attack", 
+        targetarea: "One creature within medium range", 
+        description: "Int vs Will. Success: Target gains 1d6 Insanity. Frightened targets take 3 banes on all rolls and cannot cast spells. 20+: target dazed. OP" 
+    },
+    { 
+        name: "Fugue", 
+        tradition: "Telepathy", 
+        rank: 3, 
+        type: "Attack", 
+        targetarea: "One creature within medium range", 
+        description: "Int vs Will. Success: Target is impaired for 1 hour, slowed, and grants 1 boon on attacks. Fails cause prone; 3 successes on rolls remove effect. OP" 
+    },
+    { 
+        name: "Shielded Minds", 
+        tradition: "Telepathy", 
+        rank: 3, 
+        type: "Utility", 
+        targetarea: "5-yard-radius sphere centered on you", 
+        description: "10 minutes. Protects allies: imposes 3 banes on Int/Will attacks from outside and grants 3 boons to resist them. Cannot gain Insanity. OP" 
+    },
+    { 
+        name: "Sever the Senses", 
+        tradition: "Telepathy", 
+        rank: 4, 
+        type: "Attack", 
+        targetarea: "One creature within medium range", 
+        description: "Int vs Int. Success: Target's Perception becomes 0 for 1 minute (blinded and deafened). 20+: Effect lasts 1 hour. OP" 
+    },
+    { 
+        name: "Unhinge the Mind", 
+        tradition: "Telepathy", 
+        rank: 4, 
+        type: "Attack", 
+        targetarea: "One creature within medium range", 
+        description: "Int vs Int. Success: Target gains Insanity equal to its Will score. 20+: Target is also stunned for 1 round. OP" 
+    },
+    { 
+        name: "Cranial Burst", 
+        tradition: "Telepathy", 
+        rank: 5, 
+        type: "Attack", 
+        targetarea: "Up to three creatures within medium range", 
+        description: "Will challenge. Failure: 1d6 Insanity and impaired. Must repeat roll or gain more Insanity. Going mad causes head to explode. OP" 
+    },
+    { 
+        name: "Unassailable Mind", 
+        tradition: "Telepathy", 
+        rank: 5, 
+        type: "Utility", 
+        targetarea: "Self", 
+        description: "1 minute. Enemies must roll twice and use the lowest result for Int/Will attacks. Immune to Insanity and several mental afflictions. OP" 
+    },
+    { 
+        name: "Restore Mind", 
+        tradition: "Telepathy", 
+        rank: 6, 
+        type: "Utility", 
+        targetarea: "One creature within short range", 
+        description: "1 hour (conc). Reduce target's Insanity by 1d6 or remove one quirk. Can also reduce madness stages. OP" 
+    },
+    { 
+        name: "Wipe the Mind", 
+        tradition: "Telepathy", 
+        rank: 6, 
+        type: "Attack", 
+        targetarea: "One creature within medium range", 
+        description: "Int vs Will. Success: Target's Int and Will become 1 for 1 hour. Target cannot speak, loses memory, and loses all professions. OP" 
+    },
+    { 
+        name: "Brain Damage", 
+        tradition: "Telepathy", 
+        rank: 7, 
+        type: "Attack", 
+        targetarea: "One creature within long range", 
+        description: "Int vs Will. Success: Target gains 2d6 Insanity. If it goes mad, it is defenseless until Insanity is fully removed. OP" 
+    },
+    { 
+        name: "Mind Control", 
+        tradition: "Telepathy", 
+        rank: 8, 
+        type: "Attack", 
+        targetarea: "Up to five creatures within medium range", 
+        description: "Will challenge (Auto-fail if Health 30 or less). Success: Targets become compelled for 1 hour. OP" 
+    },
+    { 
+        name: "Domination", 
+        tradition: "Telepathy", 
+        rank: 9, 
+        type: "Attack", 
+        targetarea: "One creature within long range (Health 50 or less)", 
+        description: "Permanent. Compel target and control it completely. You gain an extra turn each round to act through the target's body. OP" 
+    },
+    { 
+        name: "Brain Fire", 
+        tradition: "Telepathy", 
+        rank: 10, 
+        type: "Attack", 
+        targetarea: "Each creature within 1 mile", 
+        description: "Will challenge (Auto-fail if Health 80 or less). Failure: Gain Insanity equal to Will. Going mad causes target to catch fire. OP" 
+    },
+          { 
+        name: "Block Strikes", 
+        tradition: "Telekinesis", 
+        rank: 0, 
+        type: "Utility", 
+        targetarea: "Self", 
+        description: "1 minute. Gain 1d3 bonus to Defense. Triggered: end the spell to impose 2 banes on an incoming attack roll. OP"
+    },
+    { 
+        name: "Drag", 
+        tradition: "Telekinesis", 
+        rank: 0, 
+        type: "Attack", 
+        targetarea: "One Size 1 or smaller creature or object within medium range", 
+        description: "Will vs Strength. Success: move target 1d6 + 5 yards toward you. 20+: target also falls prone. OP"
+    },
+    { 
+        name: "Deflecting Field", 
+        tradition: "Telekinesis", 
+        rank: 1, 
+        type: "Utility", 
+        targetarea: "Self", 
+        description: "1 minute. Flexible force field reduces all incoming damage by 1d6 (minimum 0). OP"
+    },
+    { 
+        name: "Seize", 
+        tradition: "Telekinesis", 
+        rank: 1, 
+        type: "Attack", 
+        targetarea: "One Size 1 or smaller object within medium range", 
+        description: "Will vs Strength (if carried). Success: wrench object away and move it 20 yards toward you; can catch if hands are free. OP"
+    },
+    { 
+        name: "Smash", 
+        tradition: "Telekinesis", 
+        rank: 2, 
+        type: "Attack", 
+        targetarea: "One creature or object within medium range", 
+        description: "Will vs Strength. Success: creature takes 3d6 damage and is impaired for 1 round. Objects take 15 damage. OP"
+    },
+    { 
+        name: "Telekinetic Leap", 
+        tradition: "Telekinesis", 
+        rank: 2, 
+        type: "Utility", 
+        targetarea: "Self", 
+        description: "1 round. +3 Defense bonus. Triggered: fly up to twice your Will score in yards (must land). Sacrifice: cast Crush. OP"
+    },
+    { 
+        name: "Force Missile", 
+        tradition: "Telekinesis", 
+        rank: 3, 
+        type: "Attack", 
+        targetarea: "One creature or object within long range", 
+        description: "Will vs Agility (+1 boon). Success: 4d6 damage, moves 1d6 yards away, and falls prone. 20+: +2d6 damage. OP"
+    },
+    { 
+        name: "Catch Projectiles", 
+        tradition: "Telekinesis", 
+        rank: 3, 
+        type: "Attack", 
+        targetarea: "Self", 
+        description: "1 minute (conc). Catch projectiles from Size 2 or smaller creatures; can fire back for 1d6 damage. Triggered: return fire for 4d6 damage. OP"
+    },
+    { 
+        name: "Hover", 
+        tradition: "Telekinesis", 
+        rank: 4, 
+        type: "Utility", 
+        targetarea: "Self", 
+        description: "1 hour. Gain flight. Triggered: when an enemy fails an attack against you, move up to half your Speed without triggering free attacks. OP"
+    },
+    { 
+        name: "Sweep Aside", 
+        tradition: "Telekinesis", 
+        rank: 4, 
+        type: "Attack", 
+        targetarea: "5-yard cube", 
+        description: "Strength challenge (-1 bane). Failure: 5d6 damage, move 5 yards in any direction, and fall prone. Success: half damage. OP"
+    },
+    { 
+        name: "Enemy to Weapon", 
+        tradition: "Telekinesis", 
+        rank: 5, 
+        type: "Attack", 
+        targetarea: "One Size 1 or smaller creature within short range", 
+        description: "Will vs Strength (+2 boons). 1 minute (conc). Grab target and use as a weapon (Will vs Agility) for 4d6+1 damage to both. OP"
+    },
+    { 
+        name: "Mind Fist", 
+        tradition: "Telekinesis", 
+        rank: 5, 
+        type: "Attack", 
+        targetarea: "One creature within long range", 
+        description: "Will vs Strength. Success: 5d6+10 damage, move 1d6 yards away, prone, and dazed 1 round. 20+: +3d6 damage. OP"
+    },
+    { 
+        name: "Explode", 
+        tradition: "Telekinesis", 
+        rank: 6, 
+        type: "Attack", 
+        targetarea: "Up to three physical creatures within medium range", 
+        description: "Health 20 or less: target explodes. Health 20+: Will vs Strength for 6d6 damage (+2d6 if injured; explode if incapacitated). OP"
+    },
+    { 
+        name: "Telekinetic Might", 
+        tradition: "Telekinesis", 
+        rank: 6, 
+        type: "Attack", 
+        targetarea: "Self", 
+        description: "1 hour. Gain flight, Mind Hammer (5d6 damage), Scatter (push back nearby enemies), and ability to move 3 objects as a triggered action. OP"
+    },
+    { 
+        name: "Mental Armor", 
+        tradition: "Telekinesis", 
+        rank: 7, 
+        type: "Utility", 
+        targetarea: "Self", 
+        description: "Until rest. Invisible field with Health equal to yours takes damage for you. Spend Telekinesis castings to repair the field (1d6 per rank). OP"
+    },
+    { 
+        name: "Stop", 
+        tradition: "Telekinesis", 
+        rank: 8, 
+        type: "Attack", 
+        targetarea: "Any number of creatures within medium range", 
+        description: "1 hour (conc). Strength challenge (-1 bane) or become defenseless and immobilized. Health 30 or lower fail automatically. OP"
+    },
+    { 
+        name: "Implode", 
+        tradition: "Telekinesis", 
+        rank: 9, 
+        type: "Attack", 
+        targetarea: "One creature within long range", 
+        description: "Will vs Strength (auto-success if Health 50 or lower). Target takes 50 damage; dies if incapacitated. 20+: +20 damage. OP"
+    },
+    { 
+        name: "Catastrophic Outburst", 
+        tradition: "Telekinesis", 
+        rank: 10, 
+        type: "Attack", 
+        targetarea: "1-mile-long cone", 
+        description: "Deals 20d6 damage (120 to objects). Strength challenge or move 5d20 yards, fall prone, and be stunned 1 minute. Severe aftereffects. OP"
+    },
+          { 
+        name: "Gatecrasher", 
+        tradition: "Technomancy", 
+        rank: 0, 
+        type: "Utility", 
+        targetarea: "1-yard cube", 
+        description: "1 hour. Construct a tiny device that adheres to an object. At the end of the round it is used, the object takes 4d6 damage. OP" 
+    },
+    { 
+        name: "Unfailing Tracker", 
+        tradition: "Technomancy", 
+        rank: 0, 
+        type: "Attack", 
+        targetarea: "One creature or object within short range", 
+        description: "Intellect vs Agility. Success: Bond a sensor to target. For 1 hour, you know its exact location within 1 mile. OP" 
+    },
+    { 
+        name: "Electrified Chain", 
+        tradition: "Technomancy", 
+        rank: 1, 
+        type: "Attack", 
+        targetarea: "Self", 
+        description: "1 minute. Create a chain (whip) dealing +2d6 electricity damage. Use Intellect for attacks. 20+ and beats TN by 5: target is dazed. OP" 
+    },
+    { 
+        name: "Incandescent Bomb", 
+        tradition: "Technomancy", 
+        rank: 1, 
+        type: "Utility", 
+        targetarea: "3-yard-radius sphere", 
+        description: "4 hours. Throw a device that explodes for 2d6 damage. Agility challenge or become blinded for 1 minute; success takes half damage. OP" 
+    },
+    { 
+        name: "Detonation Marbles", 
+        tradition: "Technomancy", 
+        rank: 2, 
+        type: "Attack", 
+        targetarea: "One creature or object within short range", 
+        description: "Intellect vs Agility (+1 boon). Target is impaired and slowed for 1 round, then balls explode for 3d6 damage to target and nearby. OP" 
+    },
+    { 
+        name: "Mines", 
+        tradition: "Technomancy", 
+        rank: 2, 
+        type: "Utility", 
+        targetarea: "Ground inside a 10-yard cube", 
+        description: "1 hour. Conceal 5 mines. Triggered mines deal 2d6 damage (Agility challenge for half) in a 3-yard radius. Sacrifice: cast Incandescent Bomb. OP" 
+    },
+    { 
+        name: "Dark Helmet", 
+        tradition: "Technomancy", 
+        rank: 3, 
+        type: "Utility", 
+        targetarea: "One head", 
+        description: "4 hours. Wearer gains +1 Defense, darksight, and 2 boons on Perception rolls. OP" 
+    },
+    { 
+        name: "Watchful Eyes", 
+        tradition: "Technomancy", 
+        rank: 3, 
+        type: "Utility", 
+        targetarea: "Up to five points within 5 yards", 
+        description: "12 hours. Five tiny flying sensors shriek when triggered. Struck targets take 2d6+3 damage (Agility challenge); nearby creatures must pass Str challenge or be deafened. OP" 
+    },
+    { 
+        name: "Artillery Turrets", 
+        tradition: "Technomancy", 
+        rank: 4, 
+        type: "Attack", 
+        targetarea: "Up to three 1-yard cubes", 
+        description: "1 minute. Summon three Size 1 turrets. Each round, turrets fire at targets within long range: Intellect vs Defense (+1 boon) for 2d6+3 damage. OP" 
+    },
+    { 
+        name: "Iron Boots", 
+        tradition: "Technomancy", 
+        rank: 4, 
+        type: "Utility", 
+        targetarea: "One pair of feet", 
+        description: "4 hours. Wearer gains +4 Speed, can leap 3d6 yards, or use Shattering Kick (Intellect vs Defense) for 3d6 damage and heavy knockback. OP" 
+    },
+    { 
+        name: "Bladed Whirligig", 
+        tradition: "Technomancy", 
+        rank: 5, 
+        type: "Attack", 
+        targetarea: "1-yard cube", 
+        description: "1 minute. Contraption moves 2d6 yards per round. Creatures within 1 yard take 4d6 damage (Agility challenge for half). OP" 
+    },
+    { 
+        name: "Gatling Gun", 
+        tradition: "Technomancy", 
+        rank: 5, 
+        type: "Utility", 
+        targetarea: "2-yard wide, 60-yard long line", 
+        description: "1 hour. Heavy firearm deals 4d6 damage to the line. On a roll of 1, the gun explodes for 3d6 damage. OP" 
+    },
+    { 
+        name: "Wall of Gears", 
+        tradition: "Technomancy", 
+        rank: 6, 
+        type: "Utility", 
+        targetarea: "30x6x3 yard line", 
+        description: "1 hour. Grinding gears deal 6d6 damage on appearance and 3d6 per round. Wall sections shift 1d3 yards each round. OP" 
+    },
+    { 
+        name: "Stonebreaker Bomb", 
+        tradition: "Technomancy", 
+        rank: 6, 
+        type: "Utility", 
+        targetarea: "1-yard cube", 
+        description: "8 hours. Requires 1 hour concentration. Creates a bomb that explodes in a 30-yard radius for 10d6 damage and sets area on fire. OP" 
+    },
+    { 
+        name: "Steel Titans", 
+        tradition: "Technomancy", 
+        rank: 7, 
+        type: "Utility", 
+        targetarea: "Three 3-yard cubes", 
+        description: "8 hours. Requires 1 hour concentration and 10 gc parts. Summons three compelled huge constructs to fight for you. OP" 
+    },
+    { 
+        name: "Mobile Fortress", 
+        tradition: "Technomancy", 
+        rank: 8, 
+        type: "Utility", 
+        targetarea: "10-yard cube", 
+        description: "Until rest. Size 8 vehicle with 150 Health. Armed with a cannon (extreme range, 8d6 damage). Explodes for 10d6 if destroyed. OP" 
+    },
+    { 
+        name: "Dirigible", 
+        tradition: "Technomancy", 
+        rank: 9, 
+        type: "Utility", 
+        targetarea: "10-yard cube", 
+        description: "Until rest. Gain Pilot profession and an airship. If airborne when spell ends, debris falls for up to 20d6 damage. OP" 
+    },
+    { 
+        name: "World-Breaker Bomb", 
+        tradition: "Technomancy", 
+        rank: 10, 
+        type: "Utility", 
+        targetarea: "1-yard cube", 
+        description: "Until triggered. 1 hour concentration. Massive explosion with three tiers of Blast, Heat, and Poison damage up to a 1.5-mile radius. OP" 
+    },
+          { 
+        name: "Drench", 
+        tradition: "Storm", 
+        rank: 0, 
+        type: "Utility", 
+        targetarea: "5-yard radius cylinder, 10 yards tall", 
+        description: "1 round. Heavy rain heavily obscures area and extinguishes unprotected natural flames. OP" 
+    },
+    { 
+        name: "Electric Eel Skin", 
+        tradition: "Storm", 
+        rank: 0, 
+        type: "Utility", 
+        targetarea: "Self", 
+        description: "1 minute. Metal melee attackers must pass Agi challenge or take 1d6 damage and drop weapon. Triggered: deal 1d3+1 damage and daze target. OP" 
+    },
+    { 
+        name: "Jolt", 
+        tradition: "Storm", 
+        rank: 1, 
+        type: "Attack", 
+        targetarea: "One creature you can reach", 
+        description: "Will vs Agi (+1 boon vs metal). Success: 1d6+3 damage, target flies 1d3 yards away and falls prone. 20+: +1d6 extra damage. OP" 
+    },
+    { 
+        name: "Sleet", 
+        tradition: "Storm", 
+        rank: 1, 
+        type: "Utility", 
+        targetarea: "10-yard radius cylinder, 20 yards tall", 
+        description: "1 hour. Partially obscures area. Surfaces become slippery (Agi challenge or fall). Grants 1 boon to Storm/Water spells in area. OP" 
+    },
+    { 
+        name: "Ride the Lightning", 
+        tradition: "Storm", 
+        rank: 2, 
+        type: "Attack", 
+        targetarea: "Two points (Self and one within medium range)", 
+        description: "Teleport between points via lightning. Deals 1d6+3 damage at start and 2d6 at destination. Sacrifice: cast Forked Lightning. OP" 
+    },
+    { 
+        name: "Storm Blessing", 
+        tradition: "Storm", 
+        rank: 2, 
+        type: "Utility", 
+        targetarea: "Self", 
+        description: "1 hour. +4 Speed, half damage from cold/lightning/thunder. Ignore weather. Triggered: duration becomes 1 min. Sacrifice: cast Jolt. OP" 
+    },
+    { 
+        name: "Deluge", 
+        tradition: "Storm", 
+        rank: 3, 
+        type: "Utility", 
+        targetarea: "1/2-mile radius cylinder", 
+        description: "1 hour (outdoors). Heavily obscures area and creates difficult terrain. Extinguishes all flames. Grants 1 boon to Storm/Water spells. OP" 
+    },
+    { 
+        name: "Thunderbolt", 
+        tradition: "Storm", 
+        rank: 3, 
+        type: "Attack", 
+        targetarea: "3-yard-radius sphere", 
+        description: "Str challenge (-2 banes). Fail: fall prone, stunned 1 round, deafened 1 hour. Success: impaired 1 round. OP" 
+    },
+    { 
+        name: "Cloud Chariot", 
+        tradition: "Storm", 
+        rank: 4, 
+        type: "Utility", 
+        targetarea: "5-yard cube", 
+        description: "1 hour. Summon flying chariot (50 Health, Size 8). Speed 24 (60 mph). Provides cover and partial obscurement. OP" 
+    },
+    { 
+        name: "Smog", 
+        tradition: "Storm", 
+        rank: 4, 
+        type: "Attack", 
+        targetarea: "12-yard-long cone", 
+        description: "1 minute. Poisonous smoke heavily obscures area. Str challenge (-1 bane) or 2d6+1 damage and poisoned/fatigued. Wither plants. OP" 
+    },
+    { 
+        name: "Dancing Lightning", 
+        tradition: "Storm", 
+        rank: 5, 
+        type: "Attack", 
+        targetarea: "20-yard-long cone", 
+        description: "6d6 damage (double vs metal armor). Str challenge: success = half damage; failure = prone and defenseless 1 round. OP" 
+    },
+    { 
+        name: "Bind Storm Genie", 
+        tradition: "Storm", 
+        rank: 5, 
+        type: "Utility", 
+        targetarea: "2-yard cube of smoke/mist", 
+        description: "1 minute. Transforms target area into a storm genie. Will vs Will: success compels it, failure makes it hostile. OP" 
+    },
+    { 
+        name: "Summon Storm", 
+        tradition: "Storm", 
+        rank: 6, 
+        type: "Utility", 
+        targetarea: "Point in sky within 1 mile", 
+        description: "1d6 hours. 10x2 mile storm obscures area. High winds (-3 banes to range). Action: call 3d6 damage lightning bolt (Str challenge). OP" 
+    },
+    { 
+        name: "Power of the Storm", 
+        tradition: "Storm", 
+        rank: 6, 
+        type: "Utility", 
+        targetarea: "Self", 
+        description: "1 hour. +2 Speed and flight. Storm attack spells gain 2 boons, deal +2d6 damage, and targets take 2 banes to resist. OP" 
+    },
+    { 
+        name: "Lightning Storm", 
+        tradition: "Storm", 
+        rank: 7, 
+        type: "Attack", 
+        targetarea: "Up to 10 creatures/objects", 
+        description: "8d6 damage. Agi challenge (1-3 banes): fail = stunned 1 min and prone; success = prone and half damage. Nearby enemies deafened. OP" 
+    },
+    { 
+        name: "Heart of Winter", 
+        tradition: "Storm", 
+        rank: 8, 
+        type: "Attack", 
+        targetarea: "10-mile radius cylinder", 
+        description: "3d6 days (outdoors). Heavy snow (1d3+2 ft/day) obscures and creates difficult terrain. Freezing damage to exposed creatures. OP" 
+    },
+    { 
+        name: "Name of the Storm", 
+        tradition: "Storm", 
+        rank: 9, 
+        type: "Utility", 
+        targetarea: "Self", 
+        description: "1 hour. Cast learned Storm spells (Rank 0-3) without expending castings. Gain access to all Rank 0 Storm spells. OP" 
+    },
+    { 
+        name: "Hurricane", 
+        tradition: "Storm", 
+        rank: 10, 
+        type: "Utility", 
+        targetarea: "Point in sky (200-mile radius)", 
+        description: "3d6 hours. Massive wind/rain damage, structures flattened. Str challenge or moved 3d6 yards; Agi challenge to avoid 4d6 debris damage. OP" 
+    },
+          { 
         name: "Frightful Spirit", 
         tradition: "Spiritualism", 
         rank: 0, 
