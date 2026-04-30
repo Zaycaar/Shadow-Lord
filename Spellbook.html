@@ -108,6 +108,438 @@
         // Add your spreadsheet rows here following this exact format.
       const spells = [
           { 
+        name: "Frightful Spirit", 
+        tradition: "Spiritualism", 
+        rank: 0, 
+        type: "Utility", 
+        targetarea: "1-yard cube within short range", 
+        desc: "1 round. A ghostly figure imposes 1 bane on rolls for creatures within 1 yard that can see it (unless immune to frightened). OP" 
+    },
+    { 
+        name: "Peer into the Spirit World", 
+        tradition: "Spiritualism", 
+        rank: 0, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "1 minute. See all invisible creatures and objects within short range. OP" 
+    },
+    { 
+        name: "Call Poltergeist", 
+        tradition: "Spiritualism", 
+        rank: 1, 
+        type: "Utility", 
+        targetarea: "1-yard cube within short range", 
+        desc: "1 minute. Summon a poltergeist. Will vs Will: Success makes it compelled; failure lets it act naturally. OP" 
+    },
+    { 
+        name: "Vexing Spirit", 
+        tradition: "Spiritualism", 
+        rank: 1, 
+        type: "Attack", 
+        targetarea: "One creature within short range", 
+        desc: "Will vs Will. Success: Spirit enters target (1 min). Target is frightened; you can move them 3 yards on their failed rolls. 20+: +1d3 Insanity. OP" 
+    },
+    { 
+        name: "Lion Spirit", 
+        tradition: "Spiritualism", 
+        rank: 2, 
+        type: "Utility", 
+        targetarea: "One creature within short range", 
+        desc: "1 minute. Target gains +5 Health, +2 Speed, +2 weapon damage. Can use a triggered action to attack when charging. OP" 
+    },
+    { 
+        name: "Spirit Thrall", 
+        tradition: "Spiritualism", 
+        rank: 2, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "1 hour. Tethered spirit takes half your incoming damage (20 Health). If it dies, you and nearby creatures must pass Will challenge or gain 1 Insanity. OP" 
+    },
+    { 
+        name: "Call Phantom", 
+        tradition: "Spiritualism", 
+        rank: 3, 
+        type: "Utility", 
+        targetarea: "1-yard cube within medium range", 
+        desc: "1 minute. Summon a phantom. Will vs Will: Success makes it compelled; failure lets it act naturally. OP" 
+    },
+    { 
+        name: "Horrifying Spirits", 
+        tradition: "Spiritualism", 
+        rank: 3, 
+        type: "Attack", 
+        targetarea: "5-yard-radius sphere within medium range", 
+        desc: "1 round. Will challenge or take 3d6 damage and 1d3 Insanity. Frightened targets must rush away from origin. OP" 
+    },
+    { 
+        name: "Host of Spirits", 
+        tradition: "Spiritualism", 
+        rank: 4, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "Until rest. 2d6 spirits enter you. Expend spirits to: impose/gain boons/banes, heal when incapacitated, or attack for 2d6 damage and frightened. OP" 
+    },
+    { 
+        name: "Horror of the Spirit World", 
+        tradition: "Spiritualism", 
+        rank: 4, 
+        type: "Attack", 
+        targetarea: "One creature within medium range", 
+        desc: "Will vs Agi. Success: Dragged to Underworld for 1d6 rounds (gain 1d3 Insanity/round). Failure: 2d6 damage. OP" 
+    },
+    { 
+        name: "Call Specter", 
+        tradition: "Spiritualism", 
+        rank: 5, 
+        type: "Utility", 
+        targetarea: "1-yard cube within short range", 
+        desc: "1 minute. Summon a specter. Will vs Will: Success makes it compelled; failure lets it act naturally. OP" 
+    },
+    { 
+        name: "Tormenting Spirit", 
+        tradition: "Spiritualism", 
+        rank: 5, 
+        type: "Attack", 
+        targetarea: "One creature within medium range", 
+        desc: "Will vs Will. Success: Target takes 4d6 damage/round and 2 banes on all rolls. Fail: Creates a hostile wraith instead. OP" 
+    },
+    { 
+        name: "Spirit Bind", 
+        tradition: "Spiritualism", 
+        rank: 6, 
+        type: "Attack", 
+        targetarea: "One living mortal within short range", 
+        desc: "Will vs Will. Success: Charmed/Possessed by spirit (new Int/Will stats). 3 failures makes it permanent. Fail: Creates a hostile specter. OP" 
+    },
+    { 
+        name: "Guiding Spirits", 
+        tradition: "Spiritualism", 
+        rank: 6, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "Until rest. 2d6+3 spirits enter you (+2 boons to Perc). Expend spirits for: 1d6 Insanity attack, 3d6 damage attack, scouting (100 yards), or 1d3 boons on a roll. OP" 
+    },
+    { 
+        name: "Hero Spirit", 
+        tradition: "Spiritualism", 
+        rank: 7, 
+        type: "Utility", 
+        targetarea: "One creature within medium range", 
+        desc: "1 hour. Target gains +2 Defense, +20 Health, 3 boons on rolls, +2d6 weapon damage, and immunity to mental afflictions. OP" 
+    },
+    { 
+        name: "Vision of the Underworld", 
+        tradition: "Spiritualism", 
+        rank: 8, 
+        type: "Attack", 
+        targetarea: "5-yard cube within long range", 
+        desc: "10 minutes. Will challenge (-2 banes) or 1d6 Insanity. Moving inside drags to Underworld. Buffs Spiritualism spells and nearby spirits. OP" 
+    },
+    { 
+        name: "Dragon Spirit", 
+        tradition: "Spiritualism", 
+        rank: 9, 
+        type: "Utility", 
+        targetarea: "One creature within long range", 
+        desc: "10 minutes. Target gains: frightening trait, truesight, flight, spell resistance, +2d6 melee damage, and a 10-yard cone fire breath (4d6+5). OP" 
+    },
+    { 
+        name: "Open the Underworld’s Gates", 
+        tradition: "Spiritualism", 
+        rank: 10, 
+        type: "Attack", 
+        targetarea: "3-yard cube within long range", 
+        desc: "1 hour. Iron gate summons random horrors/spirits every minute. Nearby spirits gain massive buffs. Living creatures within 1 mile die if incapacitated. OP" 
+    },
+          { 
+        name: "Feat of Will", 
+        tradition: "Soul", 
+        rank: 0, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "1 minute. Use Will modifier for any attribute/characteristic roll. Triggered: Use Will modifier as a bonus to an attribute being attacked. OP" 
+    },
+    { 
+        name: "Focused Strike", 
+        tradition: "Soul", 
+        rank: 0, 
+        type: "Utility", 
+        targetarea: "One creature you can reach", 
+        desc: "Make an unarmed strike with 1 boon using Will; deals +1d6 damage. OP" 
+    },
+    { 
+        name: "Guarded Soul", 
+        tradition: "Soul", 
+        rank: 1, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "1 minute. Impose 1 bane on attacks against you; resists with 1 boon. Triggered: Impose 4 banes on an attack. Sacrifice: Heal half healing rate. OP" 
+    },
+    { 
+        name: "Leaf on the Wind", 
+        tradition: "Soul", 
+        rank: 1, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "1 minute. +4 Speed (+8 if flier) and ignore difficult terrain. Sacrifice: Move Speed without triggering free attacks. OP" 
+    },
+    { 
+        name: "Soul to Soul", 
+        tradition: "Soul", 
+        rank: 2, 
+        type: "Utility", 
+        targetarea: "Self / Medium range", 
+        desc: "1 hour. Detect/locate souls within medium range; ignore obscurement banes. Sacrifice: Communicate soul-to-soul with one creature for 1 minute. OP" 
+    },
+    { 
+        name: "Topple the Mountain", 
+        tradition: "Soul", 
+        rank: 2, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "1 minute. Str rolls gain boons equal to Will mod. Triggered: If attacked by Size 1+ creature, Str vs Str success fails their attack, deals 2d6, and repels/knocks prone. OP" 
+    },
+    { 
+        name: "Introspective Trance", 
+        tradition: "Soul", 
+        rank: 3, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "1 minute (defenseless/immobilized). At end, heal all damage and remove diseased/poisoned afflictions. OP" 
+    },
+    { 
+        name: "Soul Shivers", 
+        tradition: "Soul", 
+        rank: 3, 
+        type: "Attack", 
+        targetarea: "One creature you can reach", 
+        desc: "Unarmed strike (+3 boons/Will). Success: +2d6 damage and dazed 1 min. No soul: +4d6 damage instead. 20+: +2d6 extra damage. OP" 
+    },
+    { 
+        name: "Quiet the Soul", 
+        tradition: "Soul", 
+        rank: 4, 
+        type: "Utility", 
+        targetarea: "One creature you can reach", 
+        desc: "1 hour. Remove/immune to charmed/compelled/frightened. Will vs Int success: remove 1 Insanity. Sacrifice: Grant self 3 boons on Int/Will/Perc roll and remove 1 Insanity. OP" 
+    },
+    { 
+        name: "Trance of Excellence", 
+        tradition: "Soul", 
+        rank: 4, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "1 minute. Immune to most afflictions and take half damage. Taking damage requires Will challenge or spell ends. OP" 
+    },
+    { 
+        name: "Confound the Soul", 
+        tradition: "Soul", 
+        rank: 5, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "8 hours. Invisible to creatures with souls; partially obscured from those without. Attacking requires Will challenge or target becomes immune. OP" 
+    },
+    { 
+        name: "Soul Dissonance", 
+        tradition: "Soul", 
+        rank: 5, 
+        type: "Attack", 
+        targetarea: "One creature you can reach", 
+        desc: "Unarmed strike (+3 boons/Will). Success: 1d3 Insanity and stunned (rounds = Insanity total). No soul: +5d6 damage. Going mad in this way = instant death. OP" 
+    },
+    { 
+        name: "Become the Soul", 
+        tradition: "Soul", 
+        rank: 6, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "4 hours. Half damage from weapons; half damage dealt. Gain fly, move through objects, and ignore difficult terrain. OP" 
+    },
+    { 
+        name: "Recall Former Lives", 
+        tradition: "Soul", 
+        rank: 6, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "Until rest. Gain 1d6 professions and 2 memories each. Expend memory for 3 boons on a roll or a Yes/No question the GM must answer truthfully. OP" 
+    },
+    { 
+        name: "Displace Soul", 
+        tradition: "Soul", 
+        rank: 7, 
+        type: "Attack", 
+        targetarea: "One creature you can reach", 
+        desc: "Unarmed strike (+3 boons/Will). Success: 2d6 Insanity; target unconscious (rounds = Insanity) as soul is ejected. Going mad = instant death. Aftereffect: Will challenge (-3 banes) or Insanity/Corruption. OP" 
+    },
+    { 
+        name: "Astral Projection", 
+        tradition: "Soul", 
+        rank: 8, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "Concentration. Body is defenseless; soul moves freely. Soul lacks Str/Agi; Health=Will, Def=Int. Soul is invisible and can move through objects. Hourly Will challenge or gain Insanity. OP" 
+    },
+    { 
+        name: "Transcendence", 
+        tradition: "Soul", 
+        rank: 9, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "Concentration (1 hour). Immune to all damage, Insanity, and afflictions. Attacking or casting attack spells ends the spell immediately. OP" 
+    },
+    { 
+        name: "Enlightenment", 
+        tradition: "Soul", 
+        rank: 10, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "Permanent (requires Will challenge vs -5 banes). Gain massive Def/Will bonuses, immunity to Insanity and many afflictions, +3 boons on rolls, and stop aging. OP" 
+    },
+          { 
+        name: "Filthy Limerick", 
+        tradition: "Song", 
+        rank: 0, 
+        type: "Attack", 
+        targetarea: "One creature within short range", 
+        desc: "Will vs Will. Success: Target impaired for 1 round, granting 1 boon on attacks against it. OP"
+    },
+    { 
+        name: "Uplifting Melody", 
+        tradition: "Song", 
+        rank: 0, 
+        type: "Utility", 
+        targetarea: "One creature within short range", 
+        desc: "Concentration (1 min). Target makes its next attack or challenge roll this round with 2 boons. OP"
+    },
+    { 
+        name: "Cacophonous Utterance", 
+        tradition: "Song", 
+        rank: 1, 
+        type: "Attack", 
+        targetarea: "A 3-yard-long cone from your space", 
+        desc: "Glass/crystal takes full Health damage. Creatures: Str challenge or 2d6 damage and deafened (1 min); half damage on success. OP"
+    },
+    { 
+        name: "Stirring Refrain", 
+        tradition: "Song", 
+        rank: 1, 
+        type: "Utility", 
+        targetarea: "One creature within medium range", 
+        desc: "1 minute. Target can move Speed without free attacks. Ends if you stop playing or cast another spell. OP"
+    },
+    { 
+        name: "Battle Chant", 
+        tradition: "Song", 
+        rank: 2, 
+        type: "Utility", 
+        targetarea: "Up to five creatures within medium range", 
+        desc: "Concentration (1 min). Targets make attack rolls with 1 boon and deal +1d6 damage on melee attacks. OP"
+    },
+    { 
+        name: "Rousing Ballad", 
+        tradition: "Song", 
+        rank: 2, 
+        type: "Utility", 
+        targetarea: "Up to five creatures within medium range", 
+        desc: "Targets with Insanity or charmed/compelled/frightened afflictions make Will challenge (+1 boon) to remove 1 Insanity or the affliction. OP"
+    },
+    { 
+        name: "Infectious Groove", 
+        tradition: "Song", 
+        rank: 3, 
+        type: "Attack", 
+        targetarea: "One creature within short range", 
+        desc: "1 minute. Will challenge or move Speed in your chosen direction and become immobilized until round end. OP"
+    },
+    { 
+        name: "Sorrowful Dirge", 
+        tradition: "Song", 
+        rank: 3, 
+        type: "Attack", 
+        targetarea: "Up to ten creatures within medium range", 
+        desc: "Will challenge or impaired and slowed (up to 1 min concentration). Each round, failure grants 1 Insanity. Ends if you stop playing or cast another spell. OP"
+    },
+    { 
+        name: "Maddening Drone", 
+        tradition: "Song", 
+        rank: 4, 
+        type: "Attack", 
+        targetarea: "One creature within medium range", 
+        desc: "Concentration (1 min). Will challenge or dazed (grants 1 boon to attackers; resists with 1 bane). Success grants immunity. OP"
+    },
+    { 
+        name: "Swords to Plowshares", 
+        tradition: "Song", 
+        rank: 4, 
+        type: "Attack", 
+        targetarea: "Each chosen creature within medium range", 
+        desc: "Will challenge (-1 bane) or cannot attack or cast attack spells while you play. Ends if target takes damage, gains Insanity, or leaves range. OP"
+    },
+    { 
+        name: "Song of Discord", 
+        tradition: "Song", 
+        rank: 5, 
+        type: "Attack", 
+        targetarea: "One creature within medium range", 
+        desc: "Concentration (1 min). Will challenge (-1 bane) or compelled (attacks with 1 boon and +1d6 damage). Damage triggers new challenge or 1 Insanity. OP"
+    },
+    { 
+        name: "Song of Seduction", 
+        tradition: "Song", 
+        rank: 5, 
+        type: "Attack", 
+        targetarea: "A 20-yard-radius sphere centered on you", 
+        desc: "Concentration (1 min). Will challenge (+1 boon) or charmed (1 hour). Charmed must move closer to you on fast turns. Damage triggers challenge (-3 banes). OP"
+    },
+    { 
+        name: "Hymn of Rebirth", 
+        tradition: "Song", 
+        rank: 6, 
+        type: "Utility", 
+        targetarea: "Corpse dead no longer than 48 hours within short range", 
+        desc: "10-minute concentration. Restore mortal to life (Underworld soul = automatic; Hell soul = Will challenge vs Corruption). Failure vs Hell summons 1d3 furies. OP"
+    },
+    { 
+        name: "Siren Song", 
+        tradition: "Song", 
+        rank: 6, 
+        type: "Attack", 
+        targetarea: "A 500-yard-radius sphere centered on you", 
+        desc: "Concentration (1 hour). Hearers gain 1 Insanity and become impaired unless moving toward you. Sight triggers Will challenge (-3 banes) or stunned. Sacrifice: Cast Song of Seduction. OP"
+    },
+    { 
+        name: "Voice of Thunder", 
+        tradition: "Song", 
+        rank: 7, 
+        type: "Attack", 
+        targetarea: "A 20-yard-long cone from your space", 
+        desc: "60 damage to objects. Creatures: Str challenge (-1 bane) or 8d6 damage, deafened (1d3 days), repelled 1d6 yards, and fall prone. OP"
+    },
+    { 
+        name: "Heavenly Choir", 
+        tradition: "Song", 
+        rank: 8, 
+        type: "Utility", 
+        targetarea: "A 20-yard-radius sphere centered on you", 
+        desc: "Concentration (1 hour). Buff allies (+10 Health, 2 boons, Def/Agi resist 2 boons) and debuff enemies (-10 Health, 2 banes, grant 2 boons to attackers, Will fail = charmed/frightened). OP"
+    },
+    { 
+        name: "Blow Your Horn", 
+        tradition: "Song", 
+        rank: 9, 
+        type: "Utility", 
+        targetarea: "One building within a 500yd cube", 
+        desc: "Building crumbles. Creatures inside Health 50 or lower die; others: Str challenge (-3 banes) or 8d6+50 damage and buried (blinded/deafened/taking damage). Aftereffect: Will challenge (-4 banes). OP"
+    },
+    { 
+        name: "Music of the Spheres", 
+        tradition: "Song", 
+        rank: 10, 
+        type: "Utility", 
+        targetarea: "Varies", 
+        desc: "1-hour concentration. Alter reality: cast rank 8 spell, create 100k gc object, resurrect 10, heal/restore 10, undo rank 9 spell, reshape landscape, or erase Difficulty <751 creature. Aftereffect: Will challenge (-5 banes). OP"
+    },
+          { 
         name: "Darkling’s Raiment", 
         tradition: "Shadow", 
         rank: 0, 
