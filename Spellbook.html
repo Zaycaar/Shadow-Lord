@@ -108,6 +108,582 @@
         // Add your spreadsheet rows here following this exact format.
       const spells = [
           { 
+        name: "Darkling’s Raiment", 
+        tradition: "Shadow", 
+        rank: 0, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "1 hour. Shadows partially obscure you in lit areas or totally obscure you in shadowy areas. OP"
+    },
+    { 
+        name: "Steal Shadow", 
+        tradition: "Shadow", 
+        rank: 0, 
+        type: "Attack", 
+        targetarea: "One creature within short range", 
+        desc: "Int vs Agi. Success: Tear away target's shadow for 1 minute. Gain 1 boon on attacks against them, impose 1 bane on their attacks against you, and they cannot be hidden from you. OP"
+    },
+    { 
+        name: "Blinding Blot", 
+        tradition: "Shadow", 
+        rank: 1, 
+        type: "Attack", 
+        targetarea: "One creature within short range", 
+        desc: "Int vs Perc. Success: Target is blinded for 1 minute (Perc challenge ends). 20+: Target also impaired for 1 minute. OP"
+    },
+    { 
+        name: "Darkening Blades", 
+        tradition: "Shadow", 
+        rank: 1, 
+        type: "Attack", 
+        targetarea: "A 3-yard-long cone from reach", 
+        desc: "Shards deal 2d6 damage (Agi half). Challenge roll has 1 bane if target is in shadows or 2 banes if in darkness. OP"
+    },
+    { 
+        name: "Penumbral Blade", 
+        tradition: "Shadow", 
+        rank: 2, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "1 minute. Form a blade for Int attacks dealing 2d6 + 2 damage (+1d6 if target is in shadows/darkness). OP"
+    },
+    { 
+        name: "Shadow Snakes", 
+        tradition: "Shadow", 
+        rank: 2, 
+        type: "Attack", 
+        targetarea: "A 5-yard-radius circle within medium range", 
+        desc: "1 minute. Each round, creatures must pass Agi roll or take 1d6 damage and become impaired. You can move serpents 5 yards as an action. OP"
+    },
+    { 
+        name: "Strangling Twin", 
+        tradition: "Shadow", 
+        rank: 3, 
+        type: "Attack", 
+        targetarea: "A shadow cast by one creature within short range", 
+        desc: "1 minute. Animated shadow attacks caster each round: Agi challenge or grabbed. If already grabbed, take 3d6 damage. Ends if shadow enters light and you fail Int challenge. OP"
+    },
+    { 
+        name: "Things in the Dark", 
+        tradition: "Shadow", 
+        rank: 3, 
+        type: "Attack", 
+        targetarea: "A 5-yard-radius sphere within medium range", 
+        desc: "1 minute. Total darkness. Each round, Will challenge (-1 bane) or gain 1d3 Insanity. Going mad triggers Str challenge or death by fright. OP"
+    },
+    { 
+        name: "Chilling Darkness", 
+        tradition: "Shadow", 
+        rank: 4, 
+        type: "Attack", 
+        targetarea: "A 10-yard tall, 5-yard-radius cylinder within medium range", 
+        desc: "Deals 3d6 cold damage. Perc challenge (-2 banes) or become blinded, impaired, and slowed for 1 minute. OP"
+    },
+    { 
+        name: "Void Tentacles", 
+        tradition: "Shadow", 
+        rank: 4, 
+        type: "Attack", 
+        targetarea: "One point in space within medium range", 
+        desc: "Concentration (1 min). Up to five creatures: Agi challenge (-1 bane) or grabbed. Already grabbed take 3d6 damage (extra if injured). Incapacitated targets vanish into the Void. OP"
+    },
+    { 
+        name: "Enervating Gloom", 
+        tradition: "Shadow", 
+        rank: 5, 
+        type: "Attack", 
+        targetarea: "A 5-yard cube within long range", 
+        desc: "Concentration (1 min). Str challenge (-1 bane) or take -10 penalty to Health (cumulative) and become impaired/slowed. You gain +3 Health per affected creature for 1 hour. OP"
+    },
+    { 
+        name: "Shadow Horror", 
+        tradition: "Shadow", 
+        rank: 5, 
+        type: "Utility", 
+        targetarea: "A 2-yard cube within long range", 
+        desc: "1 hour. Summons a compelled large monster with horrifying, flier, and +20 Health. You are immune to its horrifying trait. OP"
+    },
+    { 
+        name: "Nightfall", 
+        tradition: "Shadow", 
+        rank: 6, 
+        type: "Utility", 
+        targetarea: "A 100-yard-radius sphere within extreme range", 
+        desc: "8 hours. Total darkness blocks nonmagical vision and rank 5 or lower light. Shadow spells gain 3 boons on attacks, +2d6 damage, and 3 banes on resists. OP"
+    },
+    { 
+        name: "Obsidian Serpents", 
+        tradition: "Shadow", 
+        rank: 6, 
+        type: "Attack", 
+        targetarea: "Four tendrils emerging from your body", 
+        desc: "Concentration (1 min). Attack 4 creatures (Int vs Agi) for damage, grabbing (Str 14), or forced movement. Tendrils have Defense/Health equal to your Intellect. OP"
+    },
+    { 
+        name: "Shadow Gate", 
+        tradition: "Shadow", 
+        rank: 7, 
+        type: "Utility", 
+        targetarea: "A point in space you can reach", 
+        desc: "8 hours. Portal to a shadow realm where travelers move at 5x speed and see reality as insubstantial. Creatures in the realm when spell ends are shunted to the Void. OP"
+    },
+    { 
+        name: "Shade", 
+        tradition: "Shadow", 
+        rank: 8, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "4 hours. Become a living shadow: darksight, immune to cold/fire/poison/many afflictions, half damage from weapons, move through objects, lack Str score. Touch deals 6d6 damage. Aftereffect: Will challenge or Corruption. OP"
+    },
+    { 
+        name: "Eclipse", 
+        tradition: "Shadow", 
+        rank: 9, 
+        type: "Utility", 
+        targetarea: "The sun or the moon", 
+        desc: "Blots out sun/moon. Areas become shadowed. Celestial spells and light-creating spells fail. Observers gain 1 Insanity. Sacrifice: Cast Shade. OP"
+    },
+    { 
+        name: "Ravenous Blot", 
+        tradition: "Shadow", 
+        rank: 10, 
+        type: "Attack", 
+        targetarea: "A 1-yard-diameter sphere within short range", 
+        desc: "Concentration (1 hr). Size 1 or smaller objects/creatures entering area are annihilated. Larger take half Health damage. If concentration breaks, sphere moves toward you. Aftereffect: Str challenge (-5 banes) or disappear. OP"
+    },
+          { 
+        name: "Rune of Invisibility", 
+        tradition: "Rune", 
+        rank: 0, 
+        type: "Utility", 
+        targetarea: "One object you can reach", 
+        desc: "1 minute. Target is invisible to all creatures except you. OP" 
+    },
+    { 
+        name: "Rune of Prohibition", 
+        tradition: "Rune", 
+        rank: 0, 
+        type: "Utility", 
+        targetarea: "A 2-yard cube within reach", 
+        desc: "1 minute. Living creatures must pass Will challenge (-1 bane) to enter the area. Failure prevents entry for duration. OP" 
+    },
+    { 
+        name: "Rune of Force", 
+        tradition: "Rune", 
+        rank: 1, 
+        type: "Utility", 
+        targetarea: "One weapon you can reach", 
+        desc: "1 minute. Attacks deal +1d3 damage and repel target 1d3 yards. 20+: Target also falls prone. OP" 
+    },
+    { 
+        name: "Rune of Suffering", 
+        tradition: "Rune", 
+        rank: 1, 
+        type: "Utility", 
+        targetarea: "One creature you can reach", 
+        desc: "Int vs Agi. Success: Target impaired for 1 minute. While impaired, target must pass Will challenge whenever damaged or fall prone. OP" 
+    },
+    { 
+        name: "Detonating Rune", 
+        tradition: "Rune", 
+        rank: 2, 
+        type: "Utility", 
+        targetarea: "One creature you can reach", 
+        desc: "1 minute. Int vs Agi success leaves sigil. Each round end, 50% chance to explode (5-yard radius) for 3d6 + 1d6 per non-detonated round (Agi half for others). OP" 
+    },
+    { 
+        name: "Sickening Rune", 
+        tradition: "Rune", 
+        rank: 2, 
+        type: "Utility", 
+        targetarea: "One weapon you can reach", 
+        desc: "1 minute. Weapon becomes poisonous. Damaged targets must pass Str challenge or take 2d6 damage and become poisoned/impaired for 1 minute. OP" 
+    },
+    { 
+        name: "Rune of Calling", 
+        tradition: "Rune", 
+        rank: 3, 
+        type: "Utility", 
+        targetarea: "One object you can reach", 
+        desc: "24 hours. Triggered: Teleport object to hand from any distance. Sacrifice: Teleport self to object. OP" 
+    },
+    { 
+        name: "Wall of Runes", 
+        tradition: "Rune", 
+        rank: 3, 
+        type: "Utility", 
+        targetarea: "A line 20yd long, 5yd high, 5yd wide within long range", 
+        desc: "1 hour. Area is difficult terrain. Entering or being in area when cast requires Str challenge or become immobilized. OP" 
+    },
+    { 
+        name: "Pulsing Glyph", 
+        tradition: "Rune", 
+        rank: 4, 
+        type: "Utility", 
+        targetarea: "A point within short range", 
+        desc: "1 minute. Each round end, 5-yard pulse: Str challenge (-1 bane) or 3d6 damage, repelled 1d3+1 yards, and fall prone. OP" 
+    },
+    { 
+        name: "Rune of Thunder", 
+        tradition: "Rune", 
+        rank: 4, 
+        type: "Utility", 
+        targetarea: "One weapon you can reach", 
+        desc: "1 hour. On successful hit, thunder deals 2d6+3 damage and deafens nearby creatures (1yd) who fail a Str challenge. OP" 
+    },
+    { 
+        name: "Rune of Speed", 
+        tradition: "Rune", 
+        rank: 5, 
+        type: "Utility", 
+        targetarea: "One willing creature you can reach", 
+        desc: "1 hour. +4 Speed, 1 boon on attacks, 2 boons on Agi resists. Can move Speed (fast turn) or 2x Speed (slow turn) as part of an action. OP" 
+    },
+    { 
+        name: "Rune of the Giant", 
+        tradition: "Rune", 
+        rank: 5, 
+        type: "Utility", 
+        targetarea: "One willing creature Size 3 or smaller", 
+        desc: "1 hour. Target gains +2 Size (max 4), +2 Speed, and +20 Health. Equipment scales accordingly. OP" 
+    },
+    { 
+        name: "Impregnable Rune", 
+        tradition: "Rune", 
+        rank: 6, 
+        type: "Utility", 
+        targetarea: "A point on a solid surface", 
+        desc: "Until rest. Objects within 10 yards are immune to damage; doors lock; area is immune to Divination and Teleportation. OP" 
+    },
+    { 
+        name: "Rune of Warding", 
+        tradition: "Rune", 
+        rank: 6, 
+        type: "Utility", 
+        targetarea: "A point on a solid surface", 
+        desc: "Until triggered (1-min concentration). Trap explodes in 5-yard radius if non-designated creature enters. Deals 10d6 damage (Agi -1 bane half). OP" 
+    },
+    { 
+        name: "Rune of Madness", 
+        tradition: "Rune", 
+        rank: 7, 
+        type: "Attack", 
+        targetarea: "A point within medium range", 
+        desc: "Creatures within 20 yards that see the rune must pass Will challenge (-1 bane) or gain Insanity equal to Will and go mad. OP" 
+    },
+    { 
+        name: "Runic Inscription", 
+        tradition: "Rune", 
+        rank: 8, 
+        type: "Utility", 
+        targetarea: "A point on a solid surface", 
+        desc: "Until triggered (1-hour concentration). Choose effect: Death (10d6 or instant kill), Madness (max Insanity), Pain (damage/impaired), Sleep (2d6 days), or Summoning (Huge Demon). OP" 
+    },
+    { 
+        name: "Rune of Damning Light", 
+        tradition: "Rune", 
+        rank: 9, 
+        type: "Utility", 
+        targetarea: "One willing creature you can reach", 
+        desc: "1 hour. 10-yard radiance. Each round, creatures with Health 20 or lower die. Others take 6d6 damage (Str -1 bane immune). OP" 
+    },
+    { 
+        name: "Rune of Annihilation", 
+        tradition: "Rune", 
+        rank: 10, 
+        type: "Attack", 
+        targetarea: "One creature or object you can reach", 
+        desc: "Int vs Agi. Success: Target takes 1d6 damage each round until it dies and turns to dust. Aftereffect: Int challenge (-5 banes) or self-inflict. OP" 
+    },
+          { 
+        name: "Untouchable Object", 
+        tradition: "Protection", 
+        rank: 0, 
+        type: "Utility", 
+        targetarea: "One Size 1/2 object you can reach", 
+        desc: "1 hour. Minor ward prevents any creature but you from physically touching the object, even with gloves. Can still be damaged by effects. OP" 
+    },
+    { 
+        name: "Danger Sense", 
+        tradition: "Protection", 
+        rank: 0, 
+        type: "Utility", 
+        targetarea: "You and up to five creatures within short range", 
+        desc: "1 minute. Targets cannot be surprised. Triggered: If you would be surprised, you can cast this to protect only yourself. OP" 
+    },
+    { 
+        name: "Binding Shackles", 
+        tradition: "Protection", 
+        rank: 1, 
+        type: "Attack", 
+        targetarea: "One creature within 1 yard of the ground in medium range", 
+        desc: "Int vs Agi (+1 boon). Success: Iron chains anchor target to a point on the ground for 1 minute; cannot move more than 3 yards from it. Str challenge (-3 banes) to end. 20+: +1d6 damage. OP" 
+    },
+    { 
+        name: "Perfect Target", 
+        tradition: "Protection", 
+        rank: 1, 
+        type: "Attack", 
+        targetarea: "One willing creature within short range", 
+        desc: "1 minute. Target grants 1 boon to attackers. If target takes damage, spell ends in a 3-yard radius explosion dealing 3d6 damage to everyone else (Agi half). OP" 
+    },
+    { 
+        name: "Electrify", 
+        tradition: "Protection", 
+        rank: 2, 
+        type: "Utility", 
+        targetarea: "One creature or object within medium range", 
+        desc: "1 hour. Target's metal weapon attacks deal +1d6 damage. Creatures touching or touched by the target take 1d6 damage and must pass Agi challenge or be repelled 1d6 yards and fall prone. OP" 
+    },
+    { 
+        name: "Screen", 
+        tradition: "Protection", 
+        rank: 2, 
+        type: "Utility", 
+        targetarea: "A 5-yard-radius sphere centered on a point you can reach", 
+        desc: "8 hours. Insubstantial mirror field blocks outside perception and sound. Prevents Divination into the area. Those inside can see out normally. OP" 
+    },
+    { 
+        name: "Forceful Rebuke", 
+        tradition: "Protection", 
+        rank: 3, 
+        type: "Attack", 
+        targetarea: "Each creature of your choice within 2 yards of you", 
+        desc: "Force blast deals 4d6 damage. Targets must pass Str challenge (-1 bane) or move 5 yards away and fall prone. OP" 
+    },
+    { 
+        name: "Magic Trap", 
+        tradition: "Protection", 
+        rank: 3, 
+        type: "Utility", 
+        targetarea: "A point you can reach on a solid surface", 
+        desc: "8 hours. Glowing mark explodes in 5-yard radius if non-designated creature moves within 2 yards. Deals 6d6 fire damage (Agi half). Explosion deafens nearby creatures (Str challenge). OP" 
+    },
+    { 
+        name: "Energy Ward", 
+        tradition: "Protection", 
+        rank: 4, 
+        type: "Utility", 
+        targetarea: "Up to three creatures within short range", 
+        desc: "1 hour. Targets are immune to cold, heat, fire, and lightning damage. Triggered: Use when taking such damage to reduce it to 0 and end the spell. OP" 
+    },
+    { 
+        name: "Force Shield", 
+        tradition: "Protection", 
+        rank: 4, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "4 hours. Shield imposes 2 banes on attacks against your Defense/Agi. Shield Smash: Int vs Agi attack dealing 3d6+2 damage and repelling the target 1d3 yards. OP" 
+    },
+    { 
+        name: "Entrapping Globe", 
+        tradition: "Protection", 
+        rank: 5, 
+        type: "Attack", 
+        targetarea: "One Size 2 or smaller creature within medium range", 
+        desc: "Int vs Agi. Success: Encased in a sphere for 1 hour. Sphere is impervious; only air passes. You can move sphere 10 yards as an action. Target is blinded/deafened to outside. 20+: Immediate 10-yard move. OP" 
+    },
+    { 
+        name: "Protection from Corruption", 
+        tradition: "Protection", 
+        rank: 5, 
+        type: "Utility", 
+        targetarea: "One creature you can reach", 
+        desc: "8 hours. Target cannot gain Corruption from others. Banes on attacks/Boons on resists against Corrupt creatures equal to half the attacker's Corruption score (min 1). OP" 
+    },
+    { 
+        name: "Denial", 
+        tradition: "Protection", 
+        rank: 6, 
+        type: "Utility", 
+        targetarea: "A 5-yard-radius circle on the ground in your space", 
+        desc: "1 minute. Ground is difficult terrain for outsiders. Non-group members ending turns in the area must pass Will challenge (-1 bane) or be stunned for 1 round. OP" 
+    },
+    { 
+        name: "Stalwart Defender", 
+        tradition: "Protection", 
+        rank: 6, 
+        type: "Utility", 
+        targetarea: "A 2-yard cube originating from a point you can reach", 
+        desc: "1 hour. Sigils form a Stalwart Defender that remains until destroyed or duration ends. OP" 
+    },
+    { 
+        name: "Reflective Cube", 
+        tradition: "Protection", 
+        rank: 7, 
+        type: "Utility", 
+        targetarea: "A 2-yard cube originating from a point you can reach", 
+        desc: "1 hour. Attacks from outside are reflected back at the attacker. Moving into cube requires Str challenge (-3 banes) or take 2d6 damage and stop. Those inside can attack out freely. OP" 
+    },
+    { 
+        name: "Ultimate Security", 
+        tradition: "Protection", 
+        rank: 8, 
+        type: "Utility", 
+        targetarea: "One building or vehicle you can see", 
+        desc: "Until rest (1-hour concentration). Grounds become difficult terrain/foggy; wall Health doubled; doors/windows lock; halls induce sleep (Will challenge); stairs become slippery/dangerous; rooms spawn defensive monsters. OP" 
+    },
+    { 
+        name: "Refuge", 
+        tradition: "Protection", 
+        rank: 9, 
+        type: "Utility", 
+        targetarea: "Up to ten willing creatures you can reach", 
+        desc: "Teleport to a known location. Heals all damage, removes 1d3 Insanity, and all afflictions. Triggered: Use when damage would injure/incapacitate. Aftereffect: Str challenge (-4 banes) or 1-week fatigue. OP" 
+    },
+    { 
+        name: "True Protection", 
+        tradition: "Protection", 
+        rank: 10, 
+        type: "Utility", 
+        targetarea: "One creature you can reach", 
+        desc: "1 month. Target takes half damage, cannot die (incapacitated = 1-min sleep then heal 1), immune to deprivation, cannot gain Insanity/Corruption. Chance to remove afflictions each round. Aftereffect: Will challenge (-5 banes). OP" 
+    },
+          { 
+        name: "Lick Your Wounds", 
+        tradition: "Primal", 
+        rank: 0, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "Heal damage equal to half your healing rate. For 1 hour, gain 1 boon to resist becoming diseased or poisoned. OP" 
+    },
+    { 
+        name: "Primal Might", 
+        tradition: "Primal", 
+        rank: 0, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "For 1 hour, gain +3 bonus to Health (+6 if under lick your wounds). Extends beast within and hide from animals durations if active. OP" 
+    },
+    { 
+        name: "Primal Scream", 
+        tradition: "Primal", 
+        rank: 1, 
+        type: "Attack", 
+        targetarea: "A 5-yard cube originating from a point you can reach", 
+        desc: "Strength challenge or deafened for 1 minute; Will challenge or frightened for 1 minute. Frightened targets grant 1 boon on attacks against them. OP" 
+    },
+    { 
+        name: "Venomous Fangs", 
+        tradition: "Primal", 
+        rank: 1, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "For 1 minute, teeth become finesse natural weapons (1d6+1 damage). Success forces Str challenge (-1 bane) or target takes 1d6 poison damage and is poisoned. OP" 
+    },
+    { 
+        name: "Darting Claw", 
+        tradition: "Primal", 
+        rank: 2, 
+        type: "Attack", 
+        targetarea: "Self", 
+        desc: "Requires beast within. Gain +2 Speed. Triggered: Move up to Speed (no free attacks) and make one natural/unarmed attack with 2 boons and +2d6 damage. OP" 
+    },
+    { 
+        name: "Swarming Animals", 
+        tradition: "Primal", 
+        rank: 2, 
+        type: "Utility", 
+        targetarea: "A 3-yard square on a solid surface within medium range", 
+        desc: "1 minute. Summons 1d3+1 compelled animal swarms. Spell ends when the last swarm is incapacitated. OP" 
+    },
+    { 
+        name: "Rabid Beast", 
+        tradition: "Primal", 
+        rank: 3, 
+        type: "Utility", 
+        targetarea: "Each chosen animal within medium range", 
+        desc: "1 minute. Targets gain 1d6 Insanity (not frightened), +10 Health, 1 boon on attacks, and +1d6 damage. Targets must attack or charge each turn." 
+    },
+    { 
+        name: "Resilient Beast", 
+        tradition: "Primal", 
+        rank: 3, 
+        type: "Utility", 
+        targetarea: "You or one animal you can reach", 
+        desc: "1 minute. Target gains +2 Defense/Speed, 1 boon on Str rolls, and can use a triggered action at round end to heal half its healing rate. OP" 
+    },
+    { 
+        name: "Eagle’s Wings", 
+        tradition: "Primal", 
+        rank: 4, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "Requires beast within. 1 hour. Gain +4 Speed and fly. Flying attacks don't trigger free attacks. Natural/unarmed attacks deal +1d6 extra damage. OP" 
+    },
+    { 
+        name: "Legendary Beast", 
+        tradition: "Primal", 
+        rank: 4, 
+        type: "Utility", 
+        targetarea: "You (if under beast within) or one animal within medium range", 
+        desc: "Target Size increases by 2; natural/unarmed attacks deal +2d6 damage. Damaged smaller targets must pass Str challenge or fall prone. OP" 
+    },
+    { 
+        name: "Primal Beast", 
+        tradition: "Primal", 
+        rank: 5, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "Requires beast within. 1 hour. Size 3, +20 Health, +2 Speed, 1 boon on attacks, +2d6 damage. Darksight gained. Success by 5+ on 20+ roll deals extra 2d6 damage. Aftereffect: Str challenge (-2 banes) or fatigued. OP" 
+    },
+    { 
+        name: "Savagery", 
+        tradition: "Primal", 
+        rank: 5, 
+        type: "Attack", 
+        targetarea: "Up to five animals compelled by you within medium range", 
+        desc: "1 minute. Targets move Speed (no free attacks) and attack with 2 boons and +3d6 damage. Targets gain +2 Defense and +10 Health. OP" 
+    },
+    { 
+        name: "Call Arion Charger", 
+        tradition: "Primal", 
+        rank: 6, 
+        type: "Utility", 
+        targetarea: "A 2-yard cube on a solid surface within medium range", 
+        desc: "Permanent. Summons a friendly Arion Charger. Sacrifice: Heal charger to full. OP" 
+    },
+    { 
+        name: "Call Primal Champion", 
+        tradition: "Primal", 
+        rank: 6, 
+        type: "Utility", 
+        targetarea: "A 3-yard cube on a solid surface within medium range", 
+        desc: "1 hour. Summons a friendly Primal Champion that follows your directions. Ends if champion is incapacitated. OP" 
+    },
+    { 
+        name: "Stampede", 
+        tradition: "Primal", 
+        rank: 7, 
+        type: "Attack", 
+        targetarea: "A 20-yard cube on the ground within medium range", 
+        desc: "Concentration. Move herd 20 yards. Str challenge (-1 bane) or 6d6 damage and prone (half damage on success). Moving herd triggers roll again. Aftereffect: Will challenge (-3 banes). OP" 
+    },
+    { 
+        name: "Primal Regent", 
+        tradition: "Primal", 
+        rank: 8, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "Until rest. Animals never attack you. Befriend animals (Will vs Will +1 boon) to compel them. Sacrifice: Heal all animals within 1 mile. OP" 
+    },
+    { 
+        name: "Favor of the Horned Lord", 
+        tradition: "Primal", 
+        rank: 9, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "Requires beast within. 8 hours. Size 4 avatar. Gain truesight, +50 Health, +6 Speed, 2 boons on attacks, +3d6 damage. Nearby animals gain 1 boon and +1d6 damage. Aftereffect: Will challenge (-4 banes) or 2d6 Insanity/permanent animal transformation. OP" 
+    },
+    { 
+        name: "Create Life", 
+        tradition: "Primal", 
+        rank: 10, 
+        type: "Utility", 
+        targetarea: "A 6-yard cube originating from a point you can reach", 
+        desc: "Permanent. 24-hour concentration to create a breeding pair of a new animal species (up to Size 3). Aftereffect: Will challenge (-5 banes) or 10-year cooldown. Sacrifice: Resurrect one dead animal. OP" 
+    },
+          { 
         name: "Choose Outcome", 
         tradition: "Order", 
         rank: 0, 
