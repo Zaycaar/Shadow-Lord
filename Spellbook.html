@@ -108,6 +108,150 @@
         // Add your spreadsheet rows here following this exact format.
       const spells = [
           { 
+        name: "Choose Outcome", 
+        tradition: "Order", 
+        rank: 0, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "Will challenge (-2 banes). Success: Your next attack or challenge roll before the end of next round is a success. Failure: Impaired for 1 round. OP" 
+    },
+    { 
+        name: "Ordered Strike", 
+        tradition: "Order", 
+        rank: 0, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "Triggered: Use when you succeed on a variable damage attack. Do not roll damage; treat each die as a 4. OP" 
+    },
+    { 
+        name: "Logic Prison", 
+        tradition: "Order", 
+        rank: 1, 
+        type: "Attack", 
+        targetarea: "One Size 2 or smaller creature you can see within short range", 
+        desc: "Will vs Agi. Success: Target trapped for 1 minute; cannot move, use actions, or triggered actions. Target is immune to outside damage/afflictions. Ends if target passes Int challenge (-1 bane) at round end. OP" 
+    },
+    { 
+        name: "Ordered Defense", 
+        tradition: "Order", 
+        rank: 1, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "Triggered: For 1 round, replace the result of any d20 roll for an attack against you (or your challenge roll to resist) with a 10. OP" 
+    },
+    { 
+        name: "Demand Order", 
+        tradition: "Order", 
+        rank: 2, 
+        type: "Attack", 
+        targetarea: "One creature within short range that can hear you", 
+        desc: "Demand an activity. Target can obey (making rolls with 3 boons) or pass Will challenge (-1 bane). Failure: Take 3d6 damage, gain 1d3 Insanity, and must obey. OP" 
+    },
+    { 
+        name: "Forbidden Zone", 
+        tradition: "Order", 
+        rank: 2, 
+        type: "Utility", 
+        targetarea: "A 3-yard cube within medium range", 
+        desc: "1 minute. Creatures attempting to enter must pass Str challenge (-1 bane) or take 4d6 damage and stop at the edge. OP" 
+    },
+    { 
+        name: "Command Truth", 
+        tradition: "Order", 
+        rank: 3, 
+        type: "Attack", 
+        targetarea: "One creature within short range that can hear you", 
+        desc: "Will vs Will (+1 boon). Success: For 1 minute, if target lies, it takes 1d6 damage and 1d3 Insanity (once per round). 20+: Lasts 1 hour. OP" 
+    },
+    { 
+        name: "Safeguard", 
+        tradition: "Order", 
+        rank: 3, 
+        type: "Utility", 
+        targetarea: "One creature within medium range", 
+        desc: "1 minute. Spinning glyphs (Health 30) take all damage intended for the target until they are destroyed. OP" 
+    },
+    { 
+        name: "Depower",  OP
+        tradition: "Order", 
+        rank: 4, 
+        type: "Attack", 
+        targetarea: "One creature within medium range", 
+        desc: "Will vs Will. Success: Target impaired for 1 hour and takes -1d6 penalty to Power. 20+: Target also stunned for 1 round. Sacrifice: Heal all damage and remove 1 Insanity from self. OP" 
+    },
+    { 
+        name: "Mental Stability", 
+        tradition: "Order", 
+        rank: 4, 
+        type: "Utility", 
+        targetarea: "Up to five creatures within short range", 
+        desc: "1 minute. Targets cannot gain Insanity and are immune to charmed, compelled, and frightened afflictions. OP" 
+    },
+    { 
+        name: "Forceful Summons", 
+        tradition: "Order", 
+        rank: 5, 
+        type: "Attack", 
+        targetarea: "One creature you can see", 
+        desc: "Will vs Will (+1 boon if Health <= 50). Success: Target teleports to you, falls prone, and is immobilized/impaired for 1 hour. Will challenge (-2 banes) at round end to break. 20+: +3d6 damage. OP" 
+    },
+    { 
+        name: "Ordered Space", 
+        tradition: "Order", 
+        rank: 5, 
+        type: "Utility", 
+        targetarea: "A 10-yard cube within long range", 
+        desc: "1 hour. Barrier is immune to damage; nothing passes. 20-yard field around it requires Will challenge (-3 banes) to teleport through; failure deals 5d6 damage and stops travel. Sacrifice: Cast dictum. OP" 
+    },
+    { 
+        name: "Eradicate Infestation", 
+        tradition: "Order", 
+        rank: 6, 
+        type: "Attack", 
+        targetarea: "Up to five creatures within medium range", 
+        desc: "Str challenge (Banes: 1 faerie, 2 demon, 3 monster). Success: 6d6 damage (half on success). Monsters take +4d6 extra damage. OP" 
+    },
+    { 
+        name: "Strength From Order", 
+        tradition: "Order", 
+        rank: 6, 
+        type: "Utility", 
+        targetarea: "Self", 
+        desc: "1 hour. Impose Order: Triggered Will challenge to change any nearby d20 roll to a 1 or 20. Deaden Magic: Impose 1 bane on enemy spells. Order's Grasp: Action to immobilize one creature (Will vs Will). OP" 
+    },
+    { 
+        name: "Purge Chaos", 
+        tradition: "Order", 
+        rank: 7, 
+        type: "Utility", 
+        targetarea: "A 50-yard-radius sphere centered on you", 
+        desc: "1 hour. You roll a d20 and d6 at start/end; all creatures in area use your results. Monsters/Faeries/Demons take 3d6 damage and impairment (Str challenge -3 banes). -3 Power penalty to all in area. Chaos spells fail. Aftereffect: Will challenge (-3 banes). OP" 
+    },
+    { 
+        name: "Imprisoned by Flawless Logic", 
+        tradition: "Order", 
+        rank: 8, 
+        type: "Attack", 
+        targetarea: "One Size 3 or smaller creature or object you can reach", 
+        desc: "Will vs Agi. Success: Target trapped in a static prison for 1 year and 1 day; immune to all damage, afflictions, hunger, and aging. Cannot be moved. Aftereffect: Will challenge (-4 banes). Sacrifice: Regain 8 ranks of Order spells. OP" 
+    },
+    { 
+        name: "Voice of Ultimate Authority", 
+        tradition: "Order", 
+        rank: 9, 
+        type: "Utility", 
+        targetarea: "One creature within medium range that can hear you", 
+        desc: "Until rest. Command one creature: Will 15 or lower are compelled until rest. Will 16+ requires Will vs Will to compel for 1 hour. OP" 
+    },
+    { 
+        name: "Restore Reality", 
+        tradition: "Order", 
+        rank: 10, 
+        type: "Attack", 
+        targetarea: "A 1-mile-radius sphere centered on a point you can see", 
+        desc: "Constructs become objects; Monsters take 1d6x10 damage; Demons sent to Void (Will challenge -4 banes if Health > 50); Faeries fettered in iron for 1 week. Ongoing magic rank 8 or lower ends. Void breaches close. Aftereffect: Will challenge (-5 banes) or 10d6 damage (Incapacitated = turned to stone). OP" 
+    },
+          { 
         name: "Mark of the Necromancer", 
         tradition: "Necromancy", 
         rank: 0, 
