@@ -108,6 +108,734 @@
         // Add your spreadsheet rows here following this exact format.
       const spells = [
           { 
+        name: "Icicle", 
+        tradition: "Water", 
+        rank: 0, 
+        type: "Attack", 
+        targetarea: "One creature within short range", 
+        description: "Will vs Agility. Success: 1d6 damage plus 1d3 cold damage. Attack Roll 20+: +1d6 extra cold damage. OP"
+    },
+    { 
+        name: "Rime", 
+        tradition: "Water", 
+        rank: 0, 
+        type: "Utility", 
+        targetarea: "2-yard cube on a flat surface", 
+        description: "1 minute. Surfaces become icy; creatures moving through must pass an Agility challenge or fall prone. Targets in area take +1d6 extra cold damage. OP"
+    },
+    { 
+        name: "Cloudburst", 
+        tradition: "Water", 
+        rank: 1, 
+        type: "Utility", 
+        targetarea: "20-yard radius cylinder, 10 yards tall", 
+        description: "1 hour. Heavy rain/snow partially obscures area and douses flames. Can move area 5 yards as an action. Sacrifice: cast Icicle. OP"
+    },
+    { 
+        name: "Water Burst", 
+        tradition: "Water", 
+        rank: 1, 
+        type: "Attack", 
+        targetarea: "1-yard cube of water", 
+        description: "Water explodes; objects/creatures within 3 yards take 1d6+3 damage and move 1d6 yards. Strength challenge for half damage and to avoid falling prone. OP"
+    },
+    { 
+        name: "Swirling Mist", 
+        tradition: "Water", 
+        rank: 2, 
+        type: "Utility", 
+        targetarea: "5-yard-radius sphere", 
+        description: "1 minute. Obscures area. While inside, you are invisible (if >1 yard away), take half damage, and movement never triggers free attacks. OP"
+    },
+    { 
+        name: "Watery Serpent", 
+        tradition: "Water", 
+        rank: 2, 
+        type: "Attack", 
+        targetarea: "1-yard cube", 
+        description: "1 minute. Summon serpent; use action to move 5 yards and attack (Will +1 boon vs Agility). Success: 2d6+3 damage and target is stuck for 1 round. OP"
+    },
+    { 
+        name: "Flood", 
+        tradition: "Water", 
+        rank: 3, 
+        type: "Attack", 
+        targetarea: "40-yard-long cone", 
+        description: "1 round. Rushing water deals 2d6 damage and moves objects/creatures 4d6 yards away. Strength challenge for half damage and to avoid falling prone. OP"
+    },
+    { 
+        name: "Restorative Waters", 
+        tradition: "Water", 
+        rank: 3, 
+        type: "Utility", 
+        targetarea: "3-yard-radius hemisphere", 
+        description: "Nourishes creatures, removes diseased/poisoned, and heals healing rate. For 1 minute, targets heal +1d6 extra whenever healing. OP"
+    },
+    { 
+        name: "Wall of Ice", 
+        tradition: "Water", 
+        rank: 4, 
+        type: "Utility", 
+        targetarea: "10x5x1 yard shapeable line", 
+        description: "1 hour. Creating wall forces Agility challenges to avoid 3d6 damage and immobilization. Bitter cold deals 1d6 damage to nearby creatures each round. OP"
+    },
+    { 
+        name: "Watery Form", 
+        tradition: "Water", 
+        rank: 4, 
+        type: "Utility", 
+        targetarea: "Self", 
+        description: "1 hour. Become transparent water: take half damage, gain swimmer trait, breathe underwater, invisible while submerged, +1 boon to Str/Agility rolls. OP"
+    },
+    { 
+        name: "Caustic Waters", 
+        tradition: "Water", 
+        rank: 5, 
+        type: "Attack", 
+        targetarea: "10-yard-long cone", 
+        description: "Acid deals 5d6 damage (Agility challenge half). Organic objects destroyed. Victims take 1d6 ongoing damage until acid is washed away. OP"
+    },
+    { 
+        name: "Parch", 
+        tradition: "Water", 
+        rank: 5, 
+        type: "Attack", 
+        targetarea: "5-yard-radius sphere", 
+        description: "Removes all moisture/mist. Flesh-and-blood creatures must pass a Strength challenge or take 4d6+6 damage and become impaired until they rest. OP"
+    },
+    { 
+        name: "Control Water", 
+        tradition: "Water", 
+        rank: 6, 
+        type: "Utility", 
+        targetarea: "100-yard cube of water", 
+        description: "1 hour (conc). Choose: Divide waters (create a 100-yard path), Raise waters (flood/capsize), or Lower waters (create a whirlpool). OP"
+    },
+    { 
+        name: "Seething Sea", 
+        tradition: "Water", 
+        rank: 6, 
+        type: "Attack", 
+        targetarea: "100-yard cube of water", 
+        description: "1 minute. Water boils, dealing 10d6 damage initially and 2d6 each round thereafter. Steam heavily obscures air above water. Sacrifice: cast Caustic Waters. OP"
+    },
+    { 
+        name: "Elemental Ice", 
+        tradition: "Water", 
+        rank: 7, 
+        type: "Utility", 
+        targetarea: "50-mile radius surface", 
+        description: "24 hours. Surface freezes 6 feet deep. Creatures must pass Agility challenge or be trapped (defenseless, immobilized, 2d6 cold damage per round). OP"
+    },
+    { 
+        name: "Become the Sea", 
+        tradition: "Water", 
+        rank: 8, 
+        type: "Utility", 
+        targetarea: "Self (Size 3 wall of water)", 
+        description: "1 hour (conc). Immune to many afflictions; pinpoint creatures in long range. Can move 1d6-2d6 yards toward/away; use triggered action to smash for 5d6 damage. OP"
+    },
+    { 
+        name: "Name of Water", 
+        tradition: "Water", 
+        rank: 9, 
+        type: "Utility", 
+        targetarea: "Self", 
+        description: "1 hour. Cast rank 3 or lower Water spells without expending castings; can cast any rank 0 Water spell even if not learned. OP"
+    },
+    { 
+        name: "Tsunami", 
+        tradition: "Water", 
+        rank: 10, 
+        type: "Attack", 
+        targetarea: "5-mile long, 0.5-mile wide line", 
+        description: "Summons a 2,000-foot wave moving up to 500 mph. Deals 20d6, 10d6, or 5d6 damage upon landfall depending on distance from shore. Massive aftereffect damage. OP"
+    },
+          { 
+        name: "Chameleon", 
+        tradition: "Transformation", 
+        rank: 0, 
+        type: "Utility", 
+        targetarea: "Self", 
+        description: "1 hour. Gain 3 boons to become hidden. Triggered: Match surroundings to hide immediately with 3 boons, even if observed. OP" 
+    },
+    { 
+        name: "Weapon Appendage", 
+        tradition: "Transformation", 
+        rank: 0, 
+        type: "Attack", 
+        targetarea: "Self", 
+        description: "1 minute. One limb becomes a blade (1d6 + 1 damage). Can use Will for attacks. Success on 20+ that beats target by 5 deals +1d6 damage. OP" 
+    },
+    { 
+        name: "Devolve", 
+        tradition: "Transformation", 
+        rank: 1, 
+        type: "Utility", 
+        targetarea: "Self", 
+        description: "1 hour. Gain 1 boon on Strength/Agility rolls and ignore difficult terrain while climbing/swimming. Take 2 banes on Intellect/Will rolls; cannot speak. OP" 
+    },
+    { 
+        name: "Venomous Shape", 
+        tradition: "Transformation", 
+        rank: 1, 
+        type: "Utility", 
+        targetarea: "Self", 
+        description: "1 hour. Gain the poisonous trait whenever assuming an animal form via Transformation spells. Sacrifice: cast Flowing Form. OP" 
+    },
+    { 
+        name: "Plant Form", 
+        tradition: "Transformation", 
+        rank: 2, 
+        type: "Utility", 
+        targetarea: "1-yard cube in your space", 
+        description: "1 minute. Assume the form of an animated plant. OP" 
+    },
+    { 
+        name: "Slime Form", 
+        tradition: "Transformation", 
+        rank: 2, 
+        type: "Utility", 
+        targetarea: "1-yard cube in your space", 
+        description: "1 minute. Assume the form of a slime. OP" 
+    },
+    { 
+        name: "Bear Form", 
+        tradition: "Transformation", 
+        rank: 3, 
+        type: "Utility", 
+        targetarea: "2-yard cube in your space", 
+        description: "1 minute. Assume the form of a bear. OP" 
+    },
+    { 
+        name: "Great Cat Form", 
+        tradition: "Transformation", 
+        rank: 3, 
+        type: "Utility", 
+        targetarea: "2-yard cube in your space", 
+        description: "10 minutes. Assume the form of a great cat; can immediately use an attack option or special attack. OP" 
+    },
+    { 
+        name: "Hulk", 
+        tradition: "Transformation", 
+        rank: 4, 
+        type: "Utility", 
+        targetarea: "Self (Size + 1 space)", 
+        description: "1 hour. Size +1, +40 Health, 2 boons on Strength rolls, but 1 bane on Agility rolls. Weapon attacks deal 2d6 extra damage and may frighten targets. OP" 
+    },
+    { 
+        name: "Abundant Animals", 
+        tradition: "Transformation", 
+        rank: 4, 
+        type: "Utility", 
+        targetarea: "Self", 
+        description: "1 hour. Become six small animals (climber, flier, or swimmer). Control each separately; perceive from all spaces. Spell ends when last animal is incapacitated. OP" 
+    },
+    { 
+        name: "Griffon Form", 
+        tradition: "Transformation", 
+        rank: 5, 
+        type: "Utility", 
+        targetarea: "2-yard cube in your space", 
+        description: "8 hours. Assume griffon form with +30 Health and +1d6 extra damage on attacks. OP" 
+    },
+    { 
+        name: "Monstrous Form", 
+        tradition: "Transformation", 
+        rank: 5, 
+        type: "Utility", 
+        targetarea: "3-yard cube in your space", 
+        description: "1 hour. Assume form of a Size 3 huge monster with the frightening trait. OP" 
+    },
+    { 
+        name: "Giant Form", 
+        tradition: "Transformation", 
+        rank: 6, 
+        type: "Utility", 
+        targetarea: "3-yard cube in your space", 
+        description: "1 hour. Assume form of a Size 3 giant; lacks the stupidity trait. OP" 
+    },
+    { 
+        name: "Shapeshifter", 
+        tradition: "Transformation", 
+        rank: 6, 
+        type: "Utility", 
+        targetarea: "3-yard cube in your space", 
+        description: "4 hours. Freely swap between animal sizes (tiny to huge). Can expend other Transformation spells for extra damage on attacks. OP" 
+    },
+    { 
+        name: "Wyvern Form", 
+        tradition: "Transformation", 
+        rank: 7, 
+        type: "Utility", 
+        targetarea: "3-yard cube in your space", 
+        description: "1 hour. Assume the form of a wyvern. OP" 
+    },
+    { 
+        name: "Basilisk Form", 
+        tradition: "Transformation", 
+        rank: 8, 
+        type: "Utility", 
+        targetarea: "3-yard cube in your space", 
+        description: "4 hours. Assume basilisk form; immediately use an attack and trigger captivating appearance trait. OP" 
+    },
+    { 
+        name: "Dragon Form", 
+        tradition: "Transformation", 
+        rank: 9, 
+        type: "Utility", 
+        targetarea: "4-yard cube in your space", 
+        description: "8 hours. Assume form of a Size 4 dragon; reduce all incoming damage by 5. OP" 
+    },
+    { 
+        name: "Becoming", 
+        tradition: "Transformation", 
+        rank: 10, 
+        type: "Utility", 
+        targetarea: "Self", 
+        description: "Until rest. Assume the form of any living creature you can see as an action or triggered action. Damage total carries over between forms. OP" 
+    },
+          { 
+        name: "Consequence", 
+        tradition: "Time", 
+        rank: 0, 
+        type: "Utility", 
+        targetarea: "Self", 
+        description: "Triggered: Gain 1d3 boons on an attack or challenge roll. Failure on the roll causes the caster to become dazed for 1 round. OP"
+    },
+    { 
+        name: "Retry", 
+        tradition: "Time", 
+        rank: 0, 
+        type: "Utility", 
+        targetarea: "One creature within short range", 
+        description: "Triggered: Force a creature to discard a roll result and roll again. Aftereffect: Potential penalty to the caster's next roll. OP"
+    },
+    { 
+        name: "Borrowed Time", 
+        tradition: "Time", 
+        rank: 1, 
+        type: "Utility", 
+        targetarea: "Self", 
+        description: "1 minute. Increase actions by one and double Speed. Requires a Will challenge each round to avoid becoming stunned. OP"
+    },
+    { 
+        name: "Time Loop", 
+        tradition: "Time", 
+        rank: 1, 
+        type: "Attack", 
+        targetarea: "One creature within short range", 
+        description: "Int vs Will. Success: Target must repeat its previous turn's actions for 1 minute. Will challenge each round to end the effect. OP"
+    },
+    { 
+        name: "Time Skip", 
+        tradition: "Time", 
+        rank: 2, 
+        type: "Utility", 
+        targetarea: "Self", 
+        description: "1 minute. Impose 2 banes on incoming attacks and gain 2 boons on attack rolls. Aftereffect: Caster may appear to age or grow younger." OP
+    },
+    { 
+        name: "Timely Warning", 
+        tradition: "Time", 
+        rank: 2, 
+        type: "Utility", 
+        targetarea: "One creature within medium range", 
+        description: "Triggered: Prevent damage or an affliction for a creature. Caster may later disappear for 1 round to deliver the warning in the past. OP"
+    },
+    { 
+        name: "Halt Time", 
+        tradition: "Time", 
+        rank: 3, 
+        type: "Utility", 
+        targetarea: "4-yard-radius sphere", 
+        description: "1 minute. Stops time for everyone in the area except the caster. When it ends, time is accelerated for those inside for a period. OP"
+    },
+    { 
+        name: "Major Paradox", 
+        tradition: "Time", 
+        rank: 3, 
+        type: "Attack", 
+        targetarea: "Up to five creatures within medium range", 
+        description: "Intellect challenge (-1 bane). Failure: Targets are removed from existence for 1 minute, becoming insensate and unable to act. OP"
+    },
+    { 
+        name: "Excellent Adventure", 
+        tradition: "Time", 
+        rank: 4, 
+        type: "Utility", 
+        targetarea: "Area within 10 yards", 
+        description: "Manifest the result of a past non-harmful activity. Caster must later travel back in time to actually perform the task or create a paradox. OP"
+    },
+    { 
+        name: "Stolen Moments", 
+        tradition: "Time", 
+        rank: 4, 
+        type: "Attack", 
+        targetarea: "Up to two creatures within medium range", 
+        description: "Int vs Will. Success: Target loses turns and is defenseless for 1 minute; another chosen creature gains an extra turn each round. OP"
+    },
+    { 
+        name: "Alter Fortunes", 
+        tradition: "Time", 
+        rank: 5, 
+        type: "Utility", 
+        targetarea: "Area within half Speed", 
+        description: "Triggered (End of Round): Caster removes themselves from time to meddle with up to three rolls in the next round, turning results to success or failure. OP"
+    },
+    { 
+        name: "Time Disruption", 
+        tradition: "Time", 
+        rank: 5, 
+        type: "Utility", 
+        targetarea: "10-yard-radius sphere within medium range", 
+        description: "1 minute. Will challenge (-3 banes). Failure: 1d3 Insanity and stunned. Recovery allows only slow turns for the duration. OP"
+    },
+    { 
+        name: "Sever Timeline", 
+        tradition: "Time", 
+        rank: 6, 
+        type: "Attack", 
+        targetarea: "One creature within medium range", 
+        description: "Int vs Will. Success: Target fades and takes half damage/deals half damage. Failure to recover via Will rolls results in total disappearance and death. OP"
+    },
+    { 
+        name: "Time Dilation", 
+        tradition: "Time", 
+        rank: 6, 
+        type: "Utility", 
+        targetarea: "Up to five creatures within short range", 
+        description: "1 minute. Targets gain a fast and slow turn each round, +1 boon on rolls, and increased Speed. Aftereffect: Potential damage and fatigue. OP"
+    },
+    { 
+        name: "Temporal Bubble", 
+        tradition: "Time", 
+        rank: 7, 
+        type: "Utility", 
+        targetarea: "5-yard-radius sphere", 
+        description: "8 hours. Time inside passes at 8x the rate of time outside. Crossing the barrier deals 10d6 damage (Strength challenge half). OP"
+    },
+    { 
+        name: "Erase From Existence", 
+        tradition: "Time", 
+        rank: 8, 
+        type: "Attack", 
+        targetarea: "One living creature within medium range", 
+        description: "Intellect challenge (-4 banes). Failure results in caster death or damage. Success: Kills an ancestor, erasing the target from history entirely. OP"
+    },
+    { 
+        name: "Stop Time", 
+        tradition: "Time", 
+        rank: 9, 
+        type: "Utility", 
+        targetarea: "Self and up to five touched creatures", 
+        description: "1d3 + 1 rounds. Time stops globally. Caster and allies can act normally while others are treated as unconscious. Aftereffect: Potential 9d6 damage. OP"
+    },
+    { 
+        name: "Time Gate", 
+        tradition: "Time", 
+        rank: 10, 
+        type: "Utility", 
+        targetarea: "2-yard cube", 
+        description: "Requires 1-hour concentration. Opens a portal to a specific time in the past or future for 10 minutes. Caster takes damage/Insanity during casting. OP"
+    },
+          { 
+        name: "Righteous Smite", 
+        tradition: "Theurgy", 
+        rank: 0, 
+        type: "Attack", 
+        targetarea: "Self", 
+        description: "Weapon attack using Will. Success: +1d6 damage. Failure: expend an extra casting of this spell or pass a Will challenge to avoid Insanity. OP" 
+    },
+    { 
+        name: "Triumph of Faith", 
+        tradition: "Theurgy", 
+        rank: 0, 
+        type: "Utility", 
+        targetarea: "Self", 
+        description: "1 minute. Triggered: when gaining an affliction, make a Will challenge roll to negate it. OP" 
+    },
+    { 
+        name: "Mantle of Holiness", 
+        tradition: "Theurgy", 
+        rank: 1, 
+        type: "Utility", 
+        targetarea: "Self", 
+        description: "1 minute. Attack rolls with 1 boon (2 against Corrupted). Foes like demons/undead take 1 bane on attacks against you. Can end early to heal. OP" 
+    },
+    { 
+        name: "Censure", 
+        tradition: "Theurgy", 
+        rank: 1, 
+        type: "Attack", 
+        targetarea: "5-yard-radius sphere", 
+        description: "Demons, devils, faeries, spirits, or undead must pass a Will challenge or become impaired for 1 minute and unable to take fast turns. OP" 
+    },
+    { 
+        name: "Omen", 
+        tradition: "Theurgy", 
+        rank: 1, 
+        type: "Utility", 
+        targetarea: "1-yard cube within medium range", 
+        description: "1 minute (conc). Chosen creatures near the sign gain 2 boons on all rolls, immunity to Insanity, and immunity to charmed/frightened. OP" 
+    },
+    { 
+        name: "Divine Shield", 
+        tradition: "Theurgy", 
+        rank: 2, 
+        type: "Utility", 
+        targetarea: "5-yard radius centered on you", 
+        description: "End of round. Immune to all damage and new afflictions; heal healing rate when it ends. Triggered: cast to reduce one attack's damage to 0. OP" 
+    },
+    { 
+        name: "Holy Armaments", 
+        tradition: "Theurgy", 
+        rank: 2, 
+        type: "Utility", 
+        targetarea: "Self", 
+        description: "1 minute. Summon a shield (1d6+2 damage, -1 bane to attackers) and sword (2d6+2 damage, +1 boon). Both deal +2d6 damage to divine foes. OP" 
+    },
+    { 
+        name: "Angelic Aid", 
+        tradition: "Theurgy", 
+        rank: 3, 
+        type: "Utility", 
+        targetarea: "1-yard cube within short range", 
+        description: "1 minute. Summons a friendly angel to fight on your behalf until the duration ends or it is incapacitated. OP" 
+    },
+    { 
+        name: "Salvation", 
+        tradition: "Theurgy", 
+        rank: 3, 
+        type: "Utility", 
+        targetarea: "One creature within medium range", 
+        description: "Target teleports to a space you can reach and heals damage equal to twice its healing rate. OP" 
+    },
+    { 
+        name: "Altar of Faith", 
+        tradition: "Theurgy", 
+        rank: 4, 
+        type: "Utility", 
+        targetarea: "1-yard cube within short range", 
+        description: "1 hour. Creates a holy altar. Allies within 5 yards gain enhanced Prayer, 3 boons on resistance rolls; divine foes take 1 bane and extra damage. OP" 
+    },
+    { 
+        name: "Anoint the Faithful", 
+        tradition: "Theurgy", 
+        rank: 4, 
+        type: "Utility", 
+        targetarea: "Up to three creatures you can reach", 
+        description: "1 minute. Targets gain +10 Health, 1 boon on rolls, deal +2d6 extra damage, and foes take 1 bane to resist their attacks. OP" 
+    },
+    { 
+        name: "Divine Justice", 
+        tradition: "Theurgy", 
+        rank: 5, 
+        type: "Attack", 
+        targetarea: "One creature within medium range", 
+        description: "Will vs Will (+boons for target's Corruption). Success: 8d6+8 damage and potential stun. Failure: You gain 1d6 Insanity. OP" 
+    },
+    { 
+        name: "Forceful Conversion", 
+        tradition: "Theurgy", 
+        rank: 5, 
+        type: "Attack", 
+        targetarea: "Up to five creatures within short range", 
+        description: "Will challenge. Failure: Target compelled for 1 minute. Roll of 0 or lower: Target permanently charmed and becomes a fanatical believer. OP" 
+    },
+    { 
+        name: "Paragon of Faith", 
+        tradition: "Theurgy", 
+        rank: 6, 
+        type: "Utility", 
+        targetarea: "Self", 
+        description: "1 hour. Gain feathery wings (flight, +6 Speed) and radiant weapons (+1 boon, +2d6 extra damage, potential blindness on hit). OP" 
+    },
+    { 
+        name: "Holy Ground", 
+        tradition: "Theurgy", 
+        rank: 6, 
+        type: "Utility", 
+        targetarea: "10-yard cube", 
+        description: "4 hours. Creates a temple. Divine foes take damage; allies heal and remove Insanity. Allies gain +15 Health, +2 Defense, and 3 boons. OP" 
+    },
+    { 
+        name: "Purge the Unclean", 
+        tradition: "Theurgy", 
+        rank: 7, 
+        type: "Attack", 
+        targetarea: "Chosen divine foes and corrupted targets within medium range", 
+        description: "Strength challenge (-3 banes). Failure: 8d6 damage and stunned 1 minute. Targets incapacitated by this damage are utterly annihilated. OP" 
+    },
+    { 
+        name: "Heavenly Host", 
+        tradition: "Theurgy", 
+        rank: 8, 
+        type: "Attack", 
+        targetarea: "Up to eight 1-yard cubes within medium range", 
+        description: "1 hour. Summons eight angels to destroy indicated targets. Requires a Will challenge afterward to avoid 1d6+3 Insanity. OP" 
+    },
+    { 
+        name: "Miracle", 
+        tradition: "Theurgy", 
+        rank: 9, 
+        type: "Utility", 
+        targetarea: "Varies", 
+        description: "Cast any rank 7 spell, create objects worth 50k gc, mass heal 100 creatures, or destroy one creature instantly. Severe aftereffects. OP" 
+    },
+    { 
+        name: "Apocalypse", 
+        tradition: "Theurgy", 
+        rank: 10, 
+        type: "Utility", 
+        targetarea: "200-mile-radius sphere", 
+        description: "7 days (conc). Triggers daily events: Rapture, Famine, Plague, Meteor Showers, War, Death, and Ruin. Ends with the caster's death and soul judgment. OP" 
+    },
+          { 
+        name: "Blink", 
+        tradition: "Teleportation", 
+        rank: 0, 
+        type: "Utility", 
+        targetarea: "Self", 
+        description: "1 round. Rapidly teleport in place, imposing 3 banes on attack rolls made against you. OP"
+    },
+    { 
+        name: "Short Hop", 
+        tradition: "Teleportation", 
+        rank: 0, 
+        type: "Utility", 
+        targetarea: "Self", 
+        description: "Instantly teleport to an open space within 5 yards. OP"
+    },
+    { 
+        name: "Bend Space", 
+        tradition: "Teleportation", 
+        rank: 1, 
+        type: "Utility", 
+        targetarea: "10-yard-radius sphere centered on you", 
+        description: "1 minute. You can teleport anywhere within the moving area as a triggered action on your turn. OP"
+    },
+    { 
+        name: "Bury the Hatchet", 
+        tradition: "Teleportation", 
+        rank: 1, 
+        type: "Attack", 
+        targetarea: "One creature within short range", 
+        description: "Intellect vs Agility. Success: Teleport a held small object into the target's body for 2d6 damage and the impaired affliction. OP"
+    },
+    { 
+        name: "Close the Gap", 
+        tradition: "Teleportation", 
+        rank: 2, 
+        type: "Utility", 
+        targetarea: "Up to five willing creatures within short range", 
+        description: "Teleport each target to an open space within 20 yards. Triggered: teleport them up to 5 yards. OP"
+    },
+    { 
+        name: "Relocate Object", 
+        tradition: "Teleportation", 
+        rank: 2, 
+        type: "Utility", 
+        targetarea: "One Size 2 or smaller object within short range", 
+        description: "Teleport object up to 10 yards. If dropped, it deals 1d6 damage per 2 yards fallen to anything it hits. OP"
+    },
+    { 
+        name: "Phase Out", 
+        tradition: "Teleportation", 
+        rank: 3, 
+        type: "Attack", 
+        targetarea: "One creature with a physical body within medium range", 
+        description: "Intellect vs Will. Success: Target deals/takes half damage and can move through solids. Failure on subsequent Will rolls causes temporary disappearance and Insanity. OP"
+    },
+    { 
+        name: "Sequester", 
+        tradition: "Teleportation", 
+        rank: 3, 
+        type: "Utility", 
+        targetarea: "Self", 
+        description: "8 hours. Disappear into a pocket dimension. Sacrifice: cast Shortcut. OP"
+    },
+    { 
+        name: "Dismember", 
+        tradition: "Teleportation", 
+        rank: 4, 
+        type: "Attack", 
+        targetarea: "One creature within medium range", 
+        description: "Intellect vs Strength. Success: 6d6 damage and impaired. If incapacitated, the target dies as its body is scattered. OP"
+    },
+    { 
+        name: "Portable Portal", 
+        tradition: "Teleportation", 
+        rank: 4, 
+        type: "Utility", 
+        targetarea: "Ring/Surface within reach", 
+        description: "1 hour. Create a 1-yard diameter ring that acts as a portal back to the space where you originally cast the spell. OP"
+    },
+    { 
+        name: "Dimensional Stability", 
+        tradition: "Teleportation", 
+        rank: 5, 
+        type: "Utility", 
+        targetarea: "20-yard-radius sphere", 
+        description: "7 days. Stabilize reality to prevent all teleportation into, out of, or within the area. Sacrifice: teleport to extreme range. OP"
+    },
+    { 
+        name: "Exile", 
+        tradition: "Teleportation", 
+        rank: 5, 
+        type: "Attack", 
+        targetarea: "Up to five creatures within medium range", 
+        description: "Intellect vs Will. Success: Target disappears from reality for 1 minute and may gain Insanity upon return. OP"
+    },
+    { 
+        name: "Sigil Ring", 
+        tradition: "Teleportation", 
+        rank: 6, 
+        type: "Utility", 
+        targetarea: "5-yard-radius circle", 
+        description: "Until rest. Etch runes of a visited location; use a triggered action to teleport everyone in the circle to that location. Sacrifice: cast Travel. OP"
+    },
+    { 
+        name: "Remove Obstacle", 
+        tradition: "Teleportation", 
+        rank: 6, 
+        type: "Utility", 
+        targetarea: "One Size 10 or smaller object", 
+        description: "Teleport object to a seen space within extreme range. Objects dropped from air deal 1d6 damage per 2 yards fallen. Sacrifice: cast Exile. OP"
+    },
+    { 
+        name: "Dismantle", 
+        tradition: "Teleportation", 
+        rank: 7, 
+        type: "Attack", 
+        targetarea: "10-yard-radius sphere within long range", 
+        description: "Objects take 20 damage. Creatures with Health 20 or lower collapse into blocks; others take 8d6 damage (Strength challenge half). OP"
+    },
+    { 
+        name: "Calling", 
+        tradition: "Teleportation", 
+        rank: 8, 
+        type: "Attack", 
+        targetarea: "One creature you have seen or whose true name you know", 
+        description: "Intellect vs Will. Success: Target appears in an open space within short range. True names grant automatic success if Difficulty is 500 or lower. OP"
+    },
+    { 
+        name: "Gateway", 
+        tradition: "Teleportation", 
+        rank: 9, 
+        type: "Utility", 
+        targetarea: "3-yard cube archway", 
+        description: "Permanent. 24-hour concentration and 1,000 gc required. Create a permanent portal to a visited location or map point. OP"
+    },
+    { 
+        name: "Reality Shift", 
+        tradition: "Teleportation", 
+        rank: 10, 
+        type: "Utility", 
+        targetarea: "Up to ten willing creatures you can reach", 
+        description: "Intellect challenge with 5 banes. Success: Transport linked group to a different reality. Failure: Disappear into the Void forever. OP"
+    },
+          { 
         name: "Empty Mind", 
         tradition: "Telepathy", 
         rank: 0, 
