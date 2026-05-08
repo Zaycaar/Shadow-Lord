@@ -6483,7 +6483,7 @@
         tradition: "Air", 
         rank: 0, 
         type: "Utility", 
-        targetArea: "5yd long, 2yd tall, 1yd wide line",
+        targetArea: "Shapeable line. 5yd long, 2yd tall, 1yd wide, startes in Short Range.",
         duration: "1 minute",
         desc: "Air shimmers with heat. Imposes 2 banes on attack rolls against targets behind the area. Creatures within 3 yards of the wall ignore this effect. OP" 
     },
@@ -6501,8 +6501,8 @@
         tradition: "Air", 
         rank: 1, 
         type: "Attack", 
-        targetArea: "3-yard cone",
-        duration: "Instantaneous (1 min penalty)",
+        targetArea: "3-yard cone within short range",
+        duration: "Instantaneous",
         desc: "Melts ice/dries dampness. Strength challenge: Failure = -3 Health penalty and fatigued for 1 minute. OP" 
     },
     { 
@@ -6512,16 +6512,16 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 minute",
-        desc: "+2 Defense. 1 bane on ranged attacks from Size 1 or smaller. Triggered (Shield Disk): Imposes 1 bane for ally. Action/Triggered (Disk Attack): 1d6+1 damage. Using Shield/Attack ends benefits until end of round. OP" 
+        desc: "+2 Defense. 1 bane on ranged attacks from Size 1 or smaller, firearms and siege weapons ignore. Triggered (Shield Disk): Imposes 1 bane for ally. Action/Triggered (Disk Attack): 1d6+1 damage. Using Shield/Attack ends benefits until end of round. OP" 
     },
     { 
         name: "Buffeting Winds", 
         tradition: "Air", 
         rank: 2, 
         type: "Utility", 
-        targetArea: "5-yard cone",
+        targetArea: "5-yard cone within short range",
         duration: "1 minute",
-        desc: "Difficult terrain. Disperses vapors/smoke. Extinguishes flames. 3 banes on ranged attacks through area. Flying creatures: Strength challenge (1 bane) or moved 1d6 yards away. OP" 
+        desc: "Area becomes difficult terrain. Disperses vapors/smoke. Extinguishes flames. 3 banes on ranged attacks through area. Flying creatures: Strength challenge (1 bane) or moved 1d6 yards away. OP" 
     },
     { 
         name: "Explosive Exhalation", 
@@ -6530,7 +6530,7 @@
         type: "Attack", 
         targetArea: "One living/breathing creature within short range",
         duration: "Instantaneous",
-        desc: "Will vs Strength. Success: 1d6+3 damage. Target must pass Will challenge or be stunned 1 round. 20+: Will challenge is with 1 bane. OP" 
+        desc: "Will attack vs Strength. Success: 1d6+3 damage. Target must pass Will challenge or be stunned 1 round. 20+: Will challenge is with 1 bane. OP" 
     },
     { 
         name: "Bedeviling Winds", 
@@ -6539,7 +6539,7 @@
         type: "Attack", 
         targetArea: "Up to 3 1-yard cubes within medium range",
         duration: "Concentration, up to 1 minute",
-        desc: "Strength challenge: 2d6 damage and fall prone (half damage success). Disperses vapors/flames. Action: Move cubes 3 yards. OP" 
+        desc: "Extinguish flames, scatter objects. Size 2 or smaller creatures take 2d6 damage and fall prone. Strength challenge roll for just half damage. Concentrate: Move cubes 3 yards. OP" 
     },
     { 
         name: "Cloak of Air", 
@@ -6548,7 +6548,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 hour",
-        desc: "Pushes vapors 1yd away. Breathe underwater. Half damage from falls. 2 banes on incoming ranged attacks (except siege/firearms). OP" 
+        desc: "Pushes vapor, gas, and smoke 1yd away. Breathe underwater. Half damage from falls. 2 banes on incoming ranged attacks (except siege/firearms). OP" 
     },
     { 
         name: "Soar", 
@@ -6566,16 +6566,16 @@
         type: "Attack", 
         targetArea: "Up to 3 living/breathing creatures (medium range)",
         duration: "1 minute",
-        desc: "Strength challenge (2 banes) each round. Failure: 1d6+2 damage and fatigued + slowed for 1 round. OP" 
+        desc: "You pull the air away from each target, making it difficult for the creature to breathe. At the end of each round for the duration, each target must make a Strength challenge roll with 2 banes. On a failure, the target takes 1d6 + 2 damage and becomes fatigued for 1 round. When it is fatigued in this way, the target is also slowed. OP" 
     },
     { 
         name: "Control Winds", 
         tradition: "Air", 
         rank: 5, 
         type: "Utility", 
-        targetArea: "Self/Line",
+        targetArea: "Self",
         duration: "8 hours",
-        desc: "+2 Speed. Action/Triggered: Cast Wind Blast (3 boons). Action: 10x30yd line of wind (difficult terrain, fills sails). Triggered: Fly until end of round or +5 Agility for jumping (3 boons). OP" 
+        desc: "+2 Speed. Action/Triggered: Cast Wind Blast with 3 boons. Action: 10x30yd line of wind, disperse vapors, scatter objects, fill sails, difficult terrain moving against. Triggered: Fly until end of round or +5 Agility and 3 boons for jumping. OP" 
     },
     { 
         name: "Vacuum", 
@@ -6584,16 +6584,16 @@
         type: "Attack", 
         targetArea: "5-yard radius sphere within long range",
         duration: "Instantaneous",
-        desc: "Living/breathing: Strength challenge (1 bane) or 3d6 damage and dazed. Round end: All within 10yds make Strength challenge (2 banes); failure = 2d6 damage, moved 1d6+1 towards center, and prone. OP" 
+        desc: "Living/breathing: Strength challenge with 1 bane, or 3d6 damage and dazed. Round end: All within 10yds make Strength challenge with 2 banes, 4 if flying, 1 boon for each size above 2.. failure = 2d6 damage, moved 1d6+1 towards center, and prone. Just half damage on success. OP" 
     },
     { 
         name: "Cacophony", 
         tradition: "Air", 
         rank: 6, 
         type: "Attack", 
-        targetArea: "15-yard cone",
+        targetArea: "15-yard cone, beginning in reach.",
         duration: "Instantaneous",
-        desc: "7d6 damage (double to glass/stone). Strength challenge (1 bane) or deafened 1d6 days (half damage on success). OP" 
+        desc: "7d6 damage and deafened for 1d6 days (double to glass/stone). Strength challenge roll with 1 bane, just half damage on success. Rank 4 life spell heals deafened OP" 
     },
     { 
         name: "Mass Flight", 
@@ -6611,7 +6611,7 @@
         type: "Attack", 
         targetArea: "Up to 10 targets within long range",
         duration: "Instantaneous",
-        desc: "Strength challenge: Failure = Launch target 5d6+20 yards into the sky. Target then falls, taking normal fall damage (or impact damage if they hit a surface). OP" 
+        desc: "Each target must make a Strength challenge roll. A Size 1/2 or smaller target makes the roll with 3 banes. A Size 2 or larger creature makes the roll with 1 boon plus 1 boon per point of Size it has above 2. If a target’s roll is a failure, you launch the target 5d6 + 20 yards into the sky. When it reaches this distance, it then falls, taking damage as normal upon landing. If a creature can fly, it does not fall unless it can’t move. A target that encounters a solid surface before traveling the full distance of the fall takes 1d6 damage plus 1d6 damage for each 5 full yards it was prevented from moving. After taking this damage, the target falls. OP" 
     },
     { 
         name: "Become the Wind", 
@@ -6620,7 +6620,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "Concentration, up to 1 hour",
-        desc: "Size 3 whirlwind form. +10 Speed, Fly. Immune: Disease, Poison, many afflictions. Resilience: Half weapon damage. Savage Winds: Entering spaces deals 3d6+2 (Strength half). OP" 
+        desc: "Size 3 whirlwind form. See creatures in long range, they cannot hide, ignore obscurement. +10 speed and flight. Half damage frm weapons. Amorphous. Creatures in short range of you are deafened. Moving into a creatures space deals 3d6+2 damage and prone, just half damage on strength challenge roll. OP" 
     },
     { 
         name: "Name of the Wind", 
@@ -6638,7 +6638,7 @@
         type: "Attack", 
         targetArea: "Point within extreme range",
         duration: "Concentration, up to 1 minute",
-        desc: "200yd diameter tornado. 8d6 damage to all in space. Strength challenge (1-3 banes) or grabbed. Aftereffect: Will challenge (5 banes) or 1d6+3 hostile wind genies appear. OP" 
+        desc: "An enormous tornado appears in the sky and descends until it touches the target. The tornado is 200 yards in diameter where it touches the ground and forms a funnel that’s up to 1d6 × 100 yards tall. At the end of each round, the tornado moves 50 yards in a straight line in a direction you choose. For the duration, anything in the tornado’s space or that enters it takes 8d6 damage. A creature or an object can take this damage only once per round, regardless of how many times it enters the tornado. When a creature takes this damage, it must make a Strength challenge roll with 1 bane, or 3 banes if the creature is flying. On a failure, the creature is grabbed by the tornado. The tornado has an effective Strength of 20. Unsecured items are automatically pulled into the tornado\’s space. Objects, such as structures and trees, destroyed by the tornado’s damage are also pulled into the tornado’s space. When the spell ends, all the debris inside the tornado falls to the ground, turning the ground in its space and within 200 yards of it into difficult terrain until it’s cleared away. Any creatures in the tornado fall 10d6 yards to the ground. Aftereffect You must make a Will challenge roll with 5 banes. On a failure, 1d6 + 3 hostile wind genies appear in spaces the GM chooses within 10 yards of you. The genies take the next available turn to attack you and your companions, fighting to the death. OP" 
     },
           { 
         name: "Curse of Lycanthropy", 
@@ -6726,8 +6726,8 @@
         tradition: "Air", 
         rank: 1, 
         type: "Attack", 
-        targetArea: "3-yard long cone",
-        duration: "1 minute",
+        targetArea: "3-yard long conewithin short range",
+        duration: "Instantaneous",
         desc: "Strength challenge roll. Failure: Living creatures become fatigued. While fatigued, take 1 damage each time an attack or challenge roll is made. Desolation" 
     },
     { 
@@ -6735,7 +6735,7 @@
         tradition: "Air", 
         rank: 1, 
         type: "Utility", 
-        targetArea: "5yd long, 2yd tall, 1yd wide line",
+        targetArea: "5yd long, 2yd tall, 1yd wide line beginning in short range",
         duration: "1 minute",
         desc: "Creatures beyond short range of the wall make attack rolls with 3 banes against targets behind the wall. Desolation" 
     },
@@ -6746,7 +6746,7 @@
         type: "Utility", 
         targetArea: "1-yard cube of sand/dust within medium range",
         duration: "1 minute",
-        desc: "Target becomes a Dust Devil. Will vs Will: Success = compelled; Failure = hostile. Cannot be voluntarily ended. Desolation" 
+        desc: "Target becomes a Dust Devil. Will attack vs Will. Dust devil is compelled on success, hostile on failure. Cannot be voluntarily ended. Desolation" 
     },
     { 
         name: "Sun Hammer", 
@@ -11073,7 +11073,7 @@
         tradition: "Air", 
         rank: 0, 
         type: "Utility", 
-        targetArea: "Sphere with a 2-yard radius centered on a point in your space",
+        targetArea: "Sphere with a 2-yard radius centered on a point you can reach",
         duration: "1 minute",
         desc: "You create a light breeze in the area, which moves with you for the duration. The breeze clears away odors and dust, scatters lightweight objects such as papers, extinguishes candles, and causes larger flames to flicker and dance. Creatures in the area that attack you with thrown or ranged weapons make their attack rolls with 1 bane. Core" 
     },
@@ -11084,14 +11084,14 @@
         type: "Attack", 
         targetArea: "One creature or object within medium range",
         duration: "Instantaneous",
-        desc: "A powerful wind assails the target. Make a Will attack roll against the target’s Strength. On a success, the wind moves the target 1d6 yards away from you.Attack Roll 20+ The target falls prone at the end of this movement. Core" 
+        desc: "A powerful wind assails the target. Make a Will attack roll against the target’s Strength. On a success, the wind moves the target 1d6 yards away from you. Attack Roll 20+ The target falls prone at the end of this movement. Core" 
     },
     { 
         name: "Evoke Gale", 
         tradition: "Air", 
         rank: 1, 
         type: "Attack", 
-        targetArea: "Cone, 3 yards long, originating from a point in your space",
+        targetArea: "Cone, 3 yards long, originating from a point in short range.",
         duration: "Instantaneous",
         desc: "A howling wind disperses vapors, fog, smoke, and gas from the area. Unprotected flames gutter out, and lightweight objects are blown to the nearest edge of the area. Each creature in the area must get a success on a Strength challenge roll or be moved 1d6 yards away from the origin point. Flying creatures make the roll with 1 bane. Core" 
     },
@@ -11100,7 +11100,7 @@
         tradition: "Air", 
         rank: 1, 
         type: "Attack", 
-        targetArea: "One creature within medium range",
+        targetArea: "One creature within short range",
         duration: "Instantaneous",
         desc: "Windborne grit scours your target. Make a Will attack roll against the target’s Strength. On a success, the target takes 2d6 + 3 damage. A living creature that becomes incapacitated by this damage dies instantly, its flesh (if any) stripped from its bones.Attack Roll 20+ The target takes 2d6 extra damage. Core" 
     },
@@ -11118,9 +11118,9 @@
         tradition: "Air", 
         rank: 2, 
         type: "Utility", 
-        targetArea: "Sphere with a 4-yard radius centered on a point you can reach",
+        targetArea: "Sphere with a 4-yard radius centered on a point within medium range",
         duration: "1 hour",
-        desc: "For the duration, no sound emanates from or reaches into the area. Creatures in the area are deafened and are immune to any sound-based attack, such as the thunderclap spell. Core" 
+        desc: "For the duration, no sound emanates from or reaches into the area. Creatures in the area are deafened and are immune to any sound-based attacks. Core" 
     },
     { 
         name: "Thunderclap", 
@@ -11145,7 +11145,7 @@
         tradition: "Air", 
         rank: 3, 
         type: "Attack", 
-        targetArea: "A line, 20 yards long, 10 yards high, and 2 yards wide originating from a point within long rangee",
+        targetArea: "Cylinder, 4 yards tall, 4 yard radius. Within Long Range.",
         duration: "Instantaneous",
         desc: "A powerful blast of wind erupts from the origin point. Each creature in the area must make a Strength challenge roll; Size 1 or smaller creatures make the roll with 1 bane. On a failure, it falls prone and is moved 5d6 yards away from  the origin point. If it encounters a solid surface before  moving the full distance, it and the surface it strikes each  take 1d6 damage plus 1d6 extra damage per 5 yards remaining in this movement (round down). Core" 
     },
@@ -11154,8 +11154,8 @@
         tradition: "Air", 
         rank: 4, 
         type: "Attack", 
-        targetArea: "Sphere with a 1-mile radius centered on you",
-        duration: "8 hours",
+        targetArea: "A line 220 yards long, 10 yards high, 2 yards wide. Beginning in long range.",
+        duration: "",
         desc: "A powerful whirlwind appears at one end of the area and moves along and through it, dealing 3d6 damage to anything whose space it enters. Each unsecured object damaged in this way is moved 1d6 yards in a direction you choose. Each creature damaged in this way must make a Strength challenge roll. On a failure, it is moved 1d6 yards in a direction you choose and falls prone. On a success, it just takes half the damage. Core" 
     },
     { 
