@@ -6188,7 +6188,7 @@
         type: "Attack", 
         targetArea: "One living creature (flesh/blood) you reach",
         duration: "1 minute",
-        desc: "Will vs Agility. Success: 1d6+3 damage and deafened. You gain 2 boons to hearing-based Perception. 20+: +1d6 extra damage and deafened lasts 1 hour. OP" 
+        desc: "Will attack vs Agility. Success: 1d6+3 damage and deafened. You gain 2 boons to hearing-based Perception. 20+: +1d6 extra damage and deafened lasts 1 hour. OP" 
     },
     { 
         name: "Revitalize", 
@@ -6206,7 +6206,7 @@
         type: "Attack", 
         targetArea: "One sighted living creature you reach",
         duration: "1 minute",
-        desc: "Will vs Agility. Success: Target is blinded. You gain 1 boon to sight-based Perception. 20+: Blinded lasts 1 hour. OP" 
+        desc: "Will attack vs Agility. Success: Target is blinded. You gain 1 boon to sight-based Perception while target is blinded. 20+: Blinded lasts 1 hour. OP" 
     },
     { 
         name: "Elasticity", 
@@ -6215,7 +6215,7 @@
         type: "Utility", 
         targetArea: "One creature you can reach",
         duration: "1 hour",
-        desc: "Reach increases by 2 yards, +4 Speed. Agility challenge (1 boon) to avoid being knocked prone. OP" 
+        desc: "Reach increases by 2 yards, +4 Speed. Make agility challenge rolls to avoid being knocked prone with 1 boon. OP" 
     },
     { 
         name: "Steal Strength", 
@@ -6224,7 +6224,7 @@
         type: "Attack", 
         targetArea: "One living creature you can reach",
         duration: "1 minute",
-        desc: "Will vs Agility. Success: Target fatigued (half melee/thrown damage). You gain 1 boon to Strength rolls and +1d6 melee/thrown damage. 20+: Target is also slowed. OP" 
+        desc: "Will attack vs Agility. Success: Target fatigued and deals half damage on melee and thrown weapon attacks. While target is fatigued, you make strength rolls with 1 boon and attacks with melee and thrown weapons deal +1d6 damage. 20+: Target is also slowed. OP" 
     },
     { 
         name: "Bolster Health", 
@@ -6242,7 +6242,7 @@
         type: "Attack", 
         targetArea: "One living creature (flesh/blood) you reach",
         duration: "1 minute",
-        desc: "Req: 2+ Corruption. Will vs Agility. Success: 2d6 damage and diseased. Round end: Str challenge (1 bane) or 1d6+1 damage. If killed, target explodes (3yd radius). 20+: +3d6 damage. OP" 
+        desc: "Req: 2+ Corruption. Will attack vs Agility. Success: 2d6 damage and diseased. Round end: Str challenge (1 bane) or 1d6+1 damage. If incapacitated, target explodes (3yd radius). 20+: +3d6 damage. OP" 
     },
     { 
         name: "Diminish", 
@@ -6251,7 +6251,7 @@
         type: "Attack", 
         targetArea: "One creature you can reach",
         duration: "1 minute",
-        desc: "Will (1 boon) vs Agility. Success: Target takes 3 banes on all rolls; attackers gain 3 boons vs target. 20+: Str challenge or take 4d6 damage. OP" 
+        desc: "Will attack with 1 boon vs Agility. Success: Target takes 3 banes on all rolls; attackers gain 3 boons vs target. 20+: Str challenge or take 4d6 damage. OP" 
     },
     { 
         name: "Resistance", 
@@ -6278,7 +6278,7 @@
         type: "Utility", 
         targetArea: "One creature you can reach",
         duration: "1 minute",
-        desc: "Will vs Agility. Success: -5 penalty to target's attributes (kills if any drop to 0). You gain +5 Str and Agi (max 20). OP" 
+        desc: "Will attack vs Agility. Success: -5 penalty to target's attributes (kills if any drop to 0). You gain +5 Str and Agi (max 20), does not alter health or defense. OP" 
     },
     { 
         name: "Awaken the Giant", 
@@ -6287,7 +6287,7 @@
         type: "Utility", 
         targetArea: "One creature you can reach",
         duration: "1 hour",
-        desc: "Target becomes Size 10. +80 Health, +4 Speed. Weapon damage scales to Size. Ends and deals 10d6 damage if space is too small. OP" 
+        desc: "Target becomes Size 10, all worn and carries items scale. +80 Health, +4 Speed. Weapon damage scales to Size. Ends and deals 10d6 damage if space is too small. OP" 
     },
     { 
         name: "Bestow Power", 
@@ -6296,7 +6296,7 @@
         type: "Utility", 
         targetArea: "One creature you can reach",
         duration: "1 hour",
-        desc: "Target gains +2 Power (max 10). Aftereffect: Will challenge (4 banes) or you take -1 Power penalty for 1 hour. OP" 
+        desc: "Target gains +2 Power (max 10). Aftereffect: Will challenge roll with 4 banes or you take -1 Power penalty for 1 hour. OP" 
     },
     { 
         name: "Malefic Monstrosities", 
@@ -6305,7 +6305,7 @@
         type: "Attack", 
         targetArea: "20-yard cone",
         duration: "Permanent",
-        desc: "Str challenge (1 bane) or stunned 1 min. If stunned for full minute, permanently becomes a monster. Damage ends stun. Aftereffect: Will challenge (4 banes) or gain 1d3 Corruption. OP" 
+        desc: "Str challenge roll with 1 bane or stunned 1 min. Anyone who witnesses this makes will challenge or gain 1 insanity. If a stunned creature takes damage, it is no longer stunned or affected by this spell. A creature stunned for a full minute transoforms into a monster of its size. <b>Aftereffect:</b> Make will challenge with 4 banes or gain 1d3 corruption. OP" 
     },
     { 
         name: "Demigod", 
@@ -6314,7 +6314,7 @@
         type: "Utility", 
         targetArea: "One creature you can reach",
         duration: "8 hours",
-        desc: "All attributes become 20; Defense/Perception become 25. +50 Health. Immune Insanity. Half damage. Ending: Str challenge (5 banes) or severe Health penalties/damage. Aftereffect: Will challenge (5 banes) or -1d6 Power penalty for 1 week + 1 day. OP" 
+        desc: "All attributes become 20; Defense/Perception become 25. +50 Health. Cannon gain Insanity. Takes half damage from all sources. Ending: Str challenge roll with 5 banes. Success: fatigued for 1d6+1 days, if already fatigued -3d6 health; Failure: Penalty of health equal to half health; 0 or less: Dies. Penalties last 1 week and 1 day. Aftereffect: Will challenge roll with 5 banes or -1d6 Power penalty for 1 week and 1 day. OP" 
     },
           { 
         name: "Preservation", 
@@ -7205,16 +7205,16 @@
         type: "Utility", 
         targetArea: "Special ingredients within reach",
         duration: "Permanent",
-        desc: "Req: 1+ Corruption & Alchemist's Kit. Ingredients must be half the item's price. Concentrate 1 hour to create a non-living forbidden item (price <= 5 gc). Hunger" 
+        desc: "Req: 1 or more Corruption & Alchemist's Kit. Ingredients must be half the item's price. Concentrate 1 hour to create a non-living forbidden item that costs 5 gc or less.. Hunger" 
     },
     { 
         name: "Iron Flask", 
         tradition: "Alchemy", 
         rank: 5, 
         type: "Utility", 
-        targetArea: "One iron bottle you hold",
+        targetArea: "One iron bottle (cost of 1 gc) you hold",
         duration: "Instantaneous",
-        desc: "Req: 3+ Corruption & Alchemist's Kit. Prepare: 1 hr concentration. Capture: Intellect vs Will to trap a demon as smoke. Compel: Intellect vs Will to compel a released demon for 1 min. Hunger" 
+        desc: "Req: 3+ Corruption & Alchemist's Kit. Choose one: <b>Prepare:</b> 1 hr concentration. prepare the bottle for use. <b>Capture Demon:</b> Intellect attack vs will of demon in short range. Capture demon as smoke in the bottle. Releasing demon from bottle makes it appear in short range. Bottle may only contain 1 demon at a time. <b>Compel:</b> Intellect attack vs Will of a demon that has been contained in flask in short range. On success, demon becomes compelled for 1 minute. Hunger" 
     },
     { 
         name: "Throwback", 
@@ -7223,7 +7223,7 @@
         type: "Attack", 
         targetArea: "One creature you can reach",
         duration: "1 minute",
-        desc: "Req: 1+ Corruption. Will vs Agility: Target dazed 1 rd. Then Strength challenge: Failure (auto if Health <= 15) transforms target into a monster (+1d3 Str, +3d6 Health, +2 Speed, Int 5). Hunger" 
+        desc: "Req: 1+ Corruption. Will attack vs agility. Target is dazed for 1 round. When dazed ends, target makes Strength challenge roll, auto fail if health is less than 15, 1 boon if health if over 30. Transform on a failure, may choose to fail. Target and witness to transformation makes will challenge with 1 bane or gain 1 insanity. Transformed: +1d3, strength, +3d6 health, +2 speed, Int dropps to 5, Only actions are attack or charge, lasts 1 minute. Hunger" 
     },
     { 
         name: "Invoke the Skull King", 
@@ -11173,7 +11173,7 @@
         rank: 0, 
         type: "Utility", 
         targetArea: "Self",
-        duration: "1 hour",
+        duration: "Concentration, up to 1 minute.",
         desc: "You touch the target. Provided it knows at least one language, you can communicate with the target for the duration while you maintain physical contact with it, regardless of whether you share any languages. Core" 
     },
     { 
@@ -11181,7 +11181,7 @@
         tradition: "Alteration", 
         rank: 0, 
         type: "Utility", 
-        targetArea: "Self",
+        targetArea: "One creature you can reach",
         duration: "1 minute",
         desc: "You touch the target, causing it to appear indistinct. For the duration, when the target attempts to hide, it makes the Agility challenge roll with 1 boon and creatures that can see the target and attack its Defense or Agility make their attack rolls with 1 bane. Core" 
     },
@@ -11209,7 +11209,7 @@
         rank: 1, 
         type: "Utility", 
         targetArea: "One creature you can reach",
-        duration: "1 hours",
+        duration: "1 hour",
         desc: "You touch the target. For the duration, it can breathe water as easily as it breathes air, moves at full Speed while swimming, and never needs to make a challenge roll to swim. Core" 
     },
     { 
@@ -11237,14 +11237,14 @@
         type: "Utility", 
         targetArea: "One creature you can reach",
         duration: "1 minute",
-        desc: "You touch the target, which grows or shrinks and remains at its new Size for the duration. Everything the target wears and carries also grows or shrinks to accommodate the new form, though if such an object leaves the target’s possession it immediately returns to its normal size.If the target grows, its Size doubles and it gains a +10 bonus to Health. Its weapon attacks deal 1d6 extra damage if its new Size is 3 or less, or 2d6 extra damage if its new Size is 4 or more. If the space the target occupies is not large enough to accommodate its new Size, the target takes 5d6 damage and the effect ends immediately.If the target shrinks, its Size is halved. It deals half damage with weapon attacks, makes Strength attack rolls and challenge rolls with 1 bane, and makes Agility attack rolls and challenge rolls with 1 boon. Core"
+        desc: "You touch the target, which grows or shrinks and remains at its new Size for the duration. Everything the target wears and carries also grows or shrinks to accommodate the new form, though if such an object leaves the target’s possession it immediately returns to its normal size. If the target grows, its Size doubles and it gains a +10 bonus to Health. Its weapon attacks deal 1d6 extra damage if its new Size is 3 or less, or 2d6 extra damage if its new Size is 4 or more. If the space the target occupies is not large enough to accommodate its new Size, the target takes 5d6 damage and the effect ends immediately. If the target shrinks, its Size is halved. It deals half damage with weapon attacks, makes Strength attack rolls and challenge rolls with 1 bane, and makes Agility attack rolls and challenge rolls with 1 boon. Core"
     },
     { 
         name: "Regeneration", 
         tradition: "Alteration", 
         rank: 3, 
         type: "Utility", 
-        targetArea: "One creature you can reach",
+        targetArea: "One living creature you can reach",
         duration: "1 minute",
         desc: "You touch the target. At the end of each round for the duration, the target heals damage equal to half its healing rate. Core" 
     },
@@ -11253,7 +11253,7 @@
         tradition: "Alteration", 
         rank: 4, 
         type: "Utility", 
-        targetArea: "Self",
+        targetArea: "One creature you can reach",
         duration: "1 minute",
         desc: "You touch the target. For the duration, it can move at its full Speed across difficult terrain, move through spaces occupied by other creatures regardless of their Size, and move freely through openings at least 1 inch wide. As well, for the duration, the target cannot fall prone and is immune to the grabbed, immobilized, and slowed afflictions. Core" 
     },
@@ -11263,7 +11263,7 @@
         rank: 5, 
         type: "Utility", 
         targetArea: "One creature you can reach",
-        duration: "1 minute",
+        duration: "1 hour",
         desc: "You touch the target. Choose Strength, Agility, Intellect, or Will and roll 1d6. The target gains a bonus to the chosen attribute score equal to the number rolled, up to a maximum score of 20, for the duration. The increase also affects any characteristic associated with the attribute. Core" 
     }
 ];
