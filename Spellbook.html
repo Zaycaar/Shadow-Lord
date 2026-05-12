@@ -6026,7 +6026,7 @@
         type: "Utility", 
         targetArea: "Point you reach",
         duration: "1 hour",
-        desc: "Creates a 1yd lens with 10x magnification. Sacrifice: Move a creature 1d6 yards and knock it prone (Str challenge with 1 bane). OP" 
+        desc: "Creates a 1yd lens with 10x magnification. <b>Sacrifice:</b> Creature in reach makes strength challenge with 1 bane, on a failure creature is pushed 1d6 yards and falls prone.. OP" 
     },
     { 
         name: "Arcane Coils", 
@@ -6035,7 +6035,7 @@
         type: "Attack", 
         targetArea: "Up to 3 creatures within short range",
         duration: "Instantaneous",
-        desc: "Targets become immobilized. Str challenge action to remove. OP" 
+        desc: "Targets become immobilized. An immobilized creature must usa an action to make a strength challenge to remove the affliction. OP" 
     },
     { 
         name: "Inevitable Blade", 
@@ -6044,7 +6044,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 minute",
-        desc: "Force blade deals 2d6+1 damage. Attacks use Intellect vs Agility. Target takes half damage even on a failure. OP" 
+        desc: "A magical weapon appears in your hand. Counts as basic weapon that deal 2d6+1 damage and uses Int for attack rolls against targets agility. If attack fails, target still takes half damage. OP" 
     },
     { 
         name: "Flying Disc", 
@@ -6053,7 +6053,7 @@
         type: "Utility", 
         targetArea: "1-yard cube within reach",
         duration: "1 hour",
-        desc: "Hovers. Holds one Size 1 creature/weight. Triggered: Move disc 20 yards in any direction (if seen). OP" 
+        desc: "1 yard diameter disc shaped device. Hover parralel to the ground. Can hold a size 1 creature or equivalent weight of objects. If you can see the disc, usa a triggered action to move it up to 20 yards vertically or horzontaly. OP" 
     },
     { 
         name: "Block Magic", 
@@ -6062,7 +6062,7 @@
         type: "Attack", 
         targetArea: "One creature within medium range",
         duration: "1 hour",
-        desc: "Target must pass Int/Will challenge to cast. Spells cast by target take 1 bane on attacks and grant 1 boon to resist. Sacrifice: Cast Empowered Magic. OP" 
+        desc: "Target must pass Int/Will challenge to cast a spell or spell fails. Spells cast by target take 1 bane on attacks and grant 1 boon to resist. <b>Sacrifice:</b> Cast Empowered Magic. OP" 
     },
     { 
         name: "Reverse Spell", 
@@ -6071,16 +6071,16 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "Instantaneous",
-        desc: "Triggered: When targeted by an attack spell, change target to the caster. Sacrifice: Cast Destroy Magic. OP" 
+        desc: "<b>Triggered:</b> When targeted by an attack spell, change target to the caster. <b>Sacrifice:</b> Cast Destroy Magic. OP" 
     },
     { 
         name: "Well of Magic", 
         tradition: "Arcana", 
         rank: 4, 
         type: "Utility", 
-        targetArea: "5-yard radius circle within reach",
+        targetArea: "5-yard radius circle on the ground within reach",
         duration: "1 minute",
-        desc: "Attack spells in area gain 2 boons and impose 2 banes. Casting a spell in area: Roll 1d6; on a 6, the casting is not expended. OP" 
+        desc: "Attack spells in area gain 2 boons and impose 2 banes on challenge rolls. Casting a spell in area: Roll 1d6; on a 6, the casting is not expended. OP" 
     },
     { 
         name: "Arcane Conflagration", 
@@ -6088,8 +6088,8 @@
         rank: 5, 
         type: "Attack", 
         targetArea: "5-yard radius sphere within medium range",
-        duration: "Instantaneous (1 min daze)",
-        desc: "Deals 5d6 damage (Agi half). Failure on Will challenge: Dazed for 1 min and -1d3 penalty to Power. Repeat Will challenge to end daze. OP" 
+        duration: "Instantaneous",
+        desc: "Deal 5d6 damage in area. Creatures in area make agility challenge roll for half damage, and a will challenge roll or be dazed for 1 minute. While dazed, -1d3 Power. End of round Will challenge to remove Dazed. OP" 
     },
     { 
         name: "Magical Vortex", 
@@ -6098,7 +6098,7 @@
         type: "Utility", 
         targetArea: "5-yard radius sphere within long range",
         duration: "1 minute",
-        desc: "Ends Rank 5 or lower spells in area. Action: Move vortex 20 yards. Within 5 yards: Will challenge (2 banes) to cast or casting is wasted. Sacrifice: Destroy rank 4 or lower spell. OP" 
+        desc: "Ends Rank 5 or lower spells in area. Creautures within 5 yards of vortex must make a will challenge roll with 2 banes to cast a spell, or waste the casting. <b>Action:</b> Move vortex 20 yards. <b>Sacrifice:</b> Cast Destroy Magic to end a rank 4 or lower spell. OP" 
     },
     { 
         name: "Absorb Magic", 
@@ -6107,7 +6107,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 hour (or until triggered)",
-        desc: "Triggered: Absorb an attack spell targeting you. Gain spell points = 1 + spell rank. Use points (cost = rank) to cast learned spells without expending castings. OP" 
+        desc: "<b>Triggered:</b> Absorb an attack spell targeting you. Gain spell points = 1 + spell rank. Use points (cost = rank) to cast learned spells without expending castings. You retain the points until you spend them or cast this spell again. May not be used to cast Absord Magic or Harness Magic. OP" 
     },
     { 
         name: "Cloud of Missiles", 
@@ -6116,7 +6116,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 hour",
-        desc: "Partially obscures your space. Action/Triggered each turn: Cast Explosive Darts without expending a casting. OP" 
+        desc: "A cloud of glowing darts follows you and obscures your space. Each turn you may use an action or triggered action to Cast Explosive Darts without expending a casting, even if you have not learned the spell. OP" 
     },
     { 
         name: "Arcane Reservoir", 
@@ -6125,7 +6125,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "Instantaneous",
-        desc: "Regain all expended castings of Rank 3 or lower learned spells. OP" 
+        desc: "Regain all expended castings of Rank 3 or lower spells you have learned. OP" 
     },
     { 
         name: "End All Magic", 
@@ -6134,7 +6134,7 @@
         type: "Utility", 
         targetArea: "100-yard radius within extreme range",
         duration: "Instantaneous",
-        desc: "Ends non-permanent Rank 8 or lower spells. Int challenge to end higher/permanent spells (2-3 banes). Sacrifice: Destroy enchanted object or suppress/delete relic properties. OP" 
+        desc: "Ends non-permanent Rank 8 or lower spells. Int challenge with 2 banes to end rank 9 spells, e banes to end rank 10 and permenant spells. <b>Sacrifice:</b> End magic affecting an object, or destroy enchanted object. If Relic, Make Int challenge roll with 3 banes to supress Its properties until you rest. On a roll of 20+, permanently remove its properties. On a failure, become stunned for 1 minute. 0 or lower, die. OP" 
     },
     { 
         name: "Darts of Annihilation", 
@@ -6150,9 +6150,9 @@
         tradition: "Arcana", 
         rank: 10, 
         type: "Utility", 
-        targetArea: "5-mile radius sphere",
+        targetArea: "5-mile radius sphere in point you can see.",
         duration: "1d6 days",
-        desc: "Massive buffs: Spells last significantly longer. +5 boons to attacks, 5 banes to resist. +3d6 damage. 20+ effects on 15+. Aftereffect: Int challenge (5 banes) or Power becomes 0 (recovers slowly). OP" 
+        desc: "Spells that last 1 minute last an hour. 10 minutes last 24 hours. Durations longer than 24 hours have duration doubled. Gain 5 boons on attack spell rolls, impose 5 banes on challenge rolls to resist spells. Dame dealing spells gain +3d6 extra damage. Effects that trigger on attack rolls of 20+ instead trigger on 15+ if it beats target number by at least 5. OP" 
     },
           { 
         name: "Unlock Potential", 
