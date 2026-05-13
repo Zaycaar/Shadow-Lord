@@ -5504,25 +5504,25 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 minute",
-        desc: "Colors emit light (2yd). Attackers vs you take 1 bane. Resolve attack, roll d6: 3 or lower, spell ends. OP" 
+        desc: "Colors dance around you and dapple your body for the duration. The colors emit light in a 2-yard radius centered on a point in your space. Whenever a creature makes an attack roll against you, the colors impose 1 bane on the attack roll. After resolving the attack, roll a d6. On a 3 or lower, the spell ends. <b>Triggered</b> On your turn, you can use a triggered action to cast this spell. OP" 
     },
     { 
         name: "Chaotic Eruption", 
         tradition: "Chaos", 
         rank: 0, 
         type: "Attack", 
-        targetArea: "1-yard radius sphere",
+        targetArea: "1-yard radius sphere in your space",
         duration: "Instantaneous",
-        desc: "Str challenge (1 bane). Failure: Roll d6 (4+ moves 1d6 yards away; 3 or lower: impaired for 1 round). OP" 
+        desc: "Vibrant colors rush out from you and dissipate. Each creature in the area, including you, must make a Strength challenge roll with 1 bane. On a failure, roll a d6. On a 4 or higher, the creature is moved 1d6 yards in a straight line away from the area’s origin point in a direction you choose. On a 3 or lower, the creature becomes impaired for 1 round. <b>Triggered</b> On your turn, you can use a triggered action to cast this spell. OP" 
     },
     { 
         name: "Randomness", 
         tradition: "Chaos", 
         rank: 1, 
         type: "Utility", 
-        targetArea: "3-yard radius sphere",
+        targetArea: "3-yard radius sphere in reach",
         duration: "1 minute",
-        desc: "Boons/banes count double. End of round: Will challenge or gain 1 Insanity. OP" 
+        desc: "A burst of color spreads through the area, making each creature in it subject to randomness for 1 minute. Creatures affected by this spell double the numbers rolled on boons or banes, such that a roll of 6 would count as a roll of 12. At the end of each round, each creature affected by this spell must make a Will challenge roll. On a failure, the creature gains 1 Insanity. OP" 
     },
     { 
         name: "Unlikely Transformation", 
@@ -5530,8 +5530,8 @@
         rank: 1, 
         type: "Attack", 
         targetArea: "One living creature in short range",
-        duration: "1 round (or 1 minute)",
-        desc: "Will vs Strength. Success: Impaired and frightened. Nearby creatures: Will challenge (1 bane) or frightened. 20+: Target assumes small animal form (Transformation). OP" 
+        duration: "Instantaneous",
+        desc: "You hurl colors at the target. Make a Will attack roll against the target’s Strength. On a success, the target becomes impaired for 1 round, as its body seems to rearrange itself for a moment. When the target is impaired in this way, it is also frightened. Each creature within short range of the target and that can see it must get a success on a Will challenge roll with 1 bane or become frightened for 1 round. Attack Roll 20+ You also cause the target to assume the form of a small animal (Shadow, page 217), as if it had been affected by a Transformation spell. The target remains in this form for 1 minute or until it takes any damage. OP" 
     },
     { 
         name: "Chromatic Lance", 
@@ -5540,25 +5540,25 @@
         type: "Attack", 
         targetArea: "One creature in medium range",
         duration: "Instantaneous",
-        desc: "Will vs Agility. 2d6+5 damage. Roll d6: 3 or lower (half damage taken by target for 1d6 rounds), 4+ (double damage taken for 1d6 rounds). OP" 
+        desc: "A braided rainbow leaps from your hand. Make a Will attack roll against the target’s Agility. On a success, the target takes 2d6 + 5 damage. Then, roll a d6. On a 3 or lower, the target takes half damage from all sources for 1d6 rounds thereafter. On a 4 or higher, the target takes double damage from all sources for 1d6 rounds thereafter. OP" 
     },
     { 
         name: "Chaos Unleashed", 
         tradition: "Chaos", 
         rank: 2, 
         type: "Utility", 
-        targetArea: "5-yard radius sphere",
+        targetArea: "5-yard radius sphere originating within reach",
         duration: "1 minute",
-        desc: "Attack spells in area gain 2 boons; resistance rolls against them have 2 banes. Casting a spell in area: Will challenge or 1d6 damage. OP" 
+        desc: "A buzzing cloud of sparkling lights spreads through the area and remains for the duration. The cloud grants 2 boons to attack rolls made by creatures in the area when they cast attack spells and imposes 2 banes on challenge rolls made by creatures outside the area to resist attack spells cast from within the area. When a creature in the area casts any spell, however, it must get a success on a Will challenge roll or take 1d6 damage from exposure to the chaotic energy. OP" 
     },
     { 
         name: "Chaos Orb", 
         tradition: "Chaos", 
         rank: 3, 
         type: "Attack", 
-        targetArea: "3-yard radius sphere",
+        targetArea: "A point you can see on a solid surface in medium range",
         duration: "Instantaneous",
-        desc: "3d6 damage (Agi half). Roll d6: Even = ball bounces 1d6 yards and pulses again (repeat process). Odd = ends. OP" 
+        desc: "You gather up and throw a ball of unruly, chaotic energy at the target. When the ball reaches its destination or if it encounters a solid surface before then, it explodes into a 3-yard-radius sphere centered on the point it struck. The energy deals 3d6 damage to everything in the area. A creature in the area can make an Agility challenge roll and takes half the damage on a success. Then, roll a d6. On an odd number, the spell ends. On an even number, the ball bounces 1d6 yards. Roll a d6: you choose the direction on an even number, and the GM chooses a direction on an odd number. When the ball lands at the new point, it releases a pulse as described above. A creature can take damage from this spell only once per round per casting of the spell, regardless of how many times it finds itself in the area of its pulse. Roll a d6 again to determine if the ball continues bouncing or the spell ends. Continue this process until the spell ends. OP" 
     },
     { 
         name: "Scintillating Worms", 
@@ -5566,8 +5566,8 @@
         rank: 3, 
         type: "Attack", 
         targetArea: "Up to 3 creatures in medium range",
-        duration: "1 minute",
-        desc: "Will vs Agility. Hit: Target shines (10yd radius), grants 1 boon to attackers. Roll d6 each turn for random effect (table on page 30). OP" 
+        duration: "Instantaneous",
+        desc: "You fling out your hand to release one writhing, scintillating tendril toward each of the targets. For each tendril, make a Will attack roll against the target’s Agility. On a failure, the tendril dissipates. On a success, the tendril touches the target, vanishes into it, and causes light to shine out from the target’s eyes and orifices in a 10-yard radius for 1 minute. The light grants 1 boon on attack rolls made against an affected target. When a target emitting light in this way would take a turn, roll a d6 and consult the table on Occult Philosophy Page 30. OP" 
     },
     { 
         name: "Strange Changes", 
@@ -5576,25 +5576,25 @@
         type: "Utility", 
         targetArea: "5yd cube in short range",
         duration: "Instantaneous",
-        desc: "Objects warp. Creatures: Will challenge (1 bane) or gain 1 Insanity. Success: Random change (table on page 30). 20+: Roll twice. OP" 
+        desc: "Chaos afflicts everything in the area. Each object in it that is not worn or carried by a creature warps, twists, and changes color. The object’s functionality is unchanged, however. Each creature in the area must make a Will challenge roll with 1 bane. A creature gains 1 Insanity on a failure, or on a success becomes subject to a random change. Roll a d6 for each creature that gets a success and consult the table on Occult Philosophy Page 30. OP" 
     },
     { 
         name: "Unchained Probabilities", 
         tradition: "Chaos", 
         rank: 4, 
         type: "Utility", 
-        targetArea: "10-yard radius sphere",
+        targetArea: "10-yard radius sphere centered on a point in reach",
         duration: "1 minute",
-        desc: "Roll 2 extra d20s for rolls; roll d6 (odd = lowest total, even = highest total). Sacrifice: Cast Wild Magic. OP" 
+        desc: "A wave of electric blue light spreads through the area and remains for the duration, periodically making odd musical noises and flashing lights, and turning darkness in the area into shadows. Until the effect ends, when a creature in the area would make an attack roll or a challenge roll, it must roll two additional d20s, and you roll a d6. If you roll an odd number, the triggering creature uses the lowest number rolled on any d20. If you roll an even number, the triggering creature uses the highest number rolled on any d20. <b>acrifice</b> You can use an action and expend a casting of this spell to cast the Wild Magic spell. OP" 
     },
     { 
         name: "Chaos Vortex", 
         tradition: "Chaos", 
         rank: 5, 
         type: "Attack", 
-        targetArea: "10-yard tall/5-yard radius cylinder",
+        targetArea: "10-yard tall/5-yard radius cylinder within long range.",
         duration: "Concentration, up to 1 minute",
-        desc: "Health <= 15: Dies. Health > 15: Will challenge or 4d6 damage (half on success). Random effect table (Page 30) for spells cast nearby. OP" 
+        desc: "Brightly glowing vapors and flashing lights spread through the area and swirl around to heavily obscure it. The vortex remains for the duration. Each time you use an action to concentrate on this spell, you can make a Will challenge roll and move it up to 5 yards across the ground on a success. On a failure, the GM moves the vortex up to 5 yards in any direction. Any creature with a Health score of 15 or lower in the vortex’s space when it appears or that enters it dies, and its body along with everything it wears and carries, except for relics, breaks apart into colorful clouds that join the vortex. Relics fall to the ground in the vortex’s space, unharmed. Creatures with Health scores higher than 15 in the vortex’s space when it appears or that enter it must make a Will challenge roll. A creature takes 4d6 damage from the wild energy on a failure, or half the damage on a success. A creature can take this damage only once per round per casting of the spell, regardless of how many times it enters the vortex’s space during that round. Finally, whenever a creature within medium range of the vortex casts a spell, roll a d6 and consult the table on Occult Philosophy Page 30. OP" 
     },
     { 
         name: "Shape Magic", 
@@ -5603,7 +5603,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "Instantaneous",
-        desc: "Cast Rank 5 or lower spell of any tradition. Will challenge (banes = rank). Failure: Explosion (6d6 damage, Agi half). OP" 
+        desc: "You bend and twist the magical energy released when you cast this spell so that it takes a useful form. Choose a spell from any tradition that is of rank 5 or lower. Make a Will challenge roll with a number of banes equal to the rank of the chosen spell. On a success, you cast the chosen spell. On a failure, the magic gets away from you and explodes in a sphere with a radius in yards equal to the rank of the spell you chose. You and everything in the area take 6d6 damage. A creature in the area that gets a success on a Will challenge roll instead takes half damage. OP" 
     },
     { 
         name: "Power of Chaos", 
@@ -5612,7 +5612,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 minute",
-        desc: "Illuminates cone. Attack spells: 2 boons/2 banes/2d6 extra damage. Casting: Roll d6 for random effect (demons or energy pulse). OP" 
+        desc: "You flood your body with raw magical energy, becoming a living vessel for its power for the duration. The spell has several effects. <b>Inner Radiance</b> Light pours from your eyes, nostrils and mouth, illuminating the area inside a 20-yard-long cone. <b>Amplified Magic</b> Until the spell ends, when you cast an attack spell, you make the attack roll with 2 boons and creatures make the challenge roll to resist the attack with 2 banes. In addition, your attack spells deal 2d6 extra damage. <b>Searing Chaos</b> When you cast a spell, roll a d6 to see what happens. • On a 1, 1d6 small demons appear in open spaces around you and take the next available turn to attack the nearest creature. • On a 2–5, nothing else happens. • On a 6, raw magical energy rushes from a point in your space out to a radius in yards equal to the rank of the spell you cast. The energy deals 3d6 damage to everything other than you in the area. A creature in the area can make an Agility challenge roll and takes half the damage on a success. OP" 
     },
     { 
         name: "Remake", 
@@ -5621,16 +5621,16 @@
         type: "Utility", 
         targetArea: "One willing creature in reach",
         duration: "1d6 hours",
-        desc: "Cosmetic/size/age/gender changes. Each attribute: roll d3 for +/- 1d3 bonus/penalty. Sacrifice: Cast Shape Magic. OP" 
+        desc: "You touch the target and channel raw chaotic energy into it to alter its appearance. You can make whatever cosmetic changes you like to the target, while altering its height by up to 6 inches and its weight by up to 30%. You can make the target appear older or younger, or of a different gender. In addition, for each attribute, roll a d3. On a 1, the target takes a –1d3 penalty to that attribute score. On a 2, nothing else happens. On a 3, the target gains a +1d3 bonus to the score. A bonus cannot increase an attribute score above 20 or reduce it below 1. Bonuses and penalties last until the spell ends. They do not, however, modify the target’s characteristics. <b>Sacrifice</b> You can use an action and expend a casting of this spell to cast the Shape Magic spell. OP" 
     },
     { 
         name: "Scintillating Barrier", 
         tradition: "Chaos", 
         rank: 7, 
         type: "Utility", 
-        targetArea: "35yd line wall",
+        targetArea: "A shapeable line 35 yards long, 10 yards tall, and 1 yard wide, originating from a point within long range",
         duration: "Concentration, up to 1 min",
-        desc: "Totally obscures. Emits light. Non-relic objects in wall disappear. Creatures in wall: Roll d6 for effect (table on page 31). OP" 
+        desc: "Shimmering opaque colors spread through the area to become a wall that totally obscures everything behind it for the duration. The wall emits light out to a range of 20 yards. If you concentrate for the full minute, the wall remains for 1 additional hour without requiring your attention. Any object in the wall’s space that is not a relic takes damage equal to its Health and disappears. For any creature in the wall’s space when it appears or that enters it, roll a d6 and consult the table on Occult Philosophy page 31. A creature can be affected by the wall only once per round per casting of this spell, regardless of how many times it enters the wall’s space. OP" 
     },
     { 
         name: "Horde of Monsters", 
@@ -5639,25 +5639,25 @@
         type: "Utility", 
         targetArea: "Any number of objects (Size 10 total)",
         duration: "Instantaneous",
-        desc: "Objects become monsters (Size 1 count as 1). 10 Size 1 monsters merge into a mob. Hostile to non-monsters. OP" 
+        desc: "Each target becomes a monster of its Size. Objects smaller than Size 1 count as Size 1 for the purpose of this spell. Every ten Size 1 monsters merge to become a mob. The monsters are hostile to all creatures that are not monsters, and the monsters take the next available turn. OP" 
     },
     { 
         name: "True Chaos", 
         tradition: "Chaos", 
         rank: 9, 
         type: "Utility", 
-        targetArea: "1-mile radius circle",
+        targetArea: "A 1-mile-radius circle on the ground centered on a point you can reach",
         duration: "Permanent",
-        desc: "Concentrate 8 hours. Area affected by 'Weird Magic'. Aftereffect: Will challenge (4 banes) or gain Insanity equal to Will. OP" 
+        desc: "Upon casting this spell, you must concentrate for 8 hours, during which time you infect the area with chaos. If you finish, the area functions as if under the Weird Magic effect. <b>Aftereffect</b> Make a Will challenge roll with 4 banes. On a failure, you gain Insanity equal to your Will score. OP" 
     },
     { 
         name: "Undo Reality", 
         tradition: "Chaos", 
         rank: 10, 
         type: "Attack", 
-        targetArea: "10-yard radius sphere",
+        targetArea: "A 10-yard-radius sphere centered on a point you can see within medium range",
         duration: "Instantaneous",
-        desc: "Will challenge (6 banes). Failure: Take Health damage and turn to dust. Area dusts everything. Health 55+: Str challenge or 50 damage/dazed, otherwise erased. Aftereffect: 1/20 chance to destroy the world. OP" 
+        desc: "Req: At least 1 corruption. You unravel the words of creation that give form to substance. Make a Will challenge roll with 6 banes. On a failure, you take damage equal to your Health as your body turns to dust and drifts off into the Void to be absorbed by the Demon Lord. Regardless of the result of the challenge roll, a shadow spreads through the area, causing everything in it to turn to dust and flow into the Void. Creatures in the area that have Health scores of 55 or higher can make Strength challenge rolls. A creature takes 50 damage and becomes dazed for 1 minute on a success, or is utterly erased from existence on a failure. Aftereffect Roll a d20. On a 1, you set in motion the utter annihilation of the world. After 3d6 days, the planet and everything on it is destroyed, utterly devoured by the Demon Lord. OP" 
     },
     { 
         name: "Illumination", 
