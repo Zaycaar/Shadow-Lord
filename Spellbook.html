@@ -5826,18 +5826,18 @@
         tradition: "Battle", 
         rank: 0, 
         type: "Attack", 
-        targetArea: "One melee weapon attack",
+        targetArea: Self",
         duration: "Instantaneous",
-        desc: "Substitute Intellect for attack attribute. Success: Normal damage; you and target move up to 5 yards in any direction. OP" 
+        desc: "Make an attack with one melee weapon you are wielding.  You can substitute Intellect for the attribute you would normally use to make the attack roll.  On a success, the attack deals normal damage, and you and the target move up to 5 yards in a direction you choose. OP" 
     },
     { 
         name: "Savage Strike", 
         tradition: "Battle", 
         rank: 0, 
         type: "Attack", 
-        targetArea: "One melee weapon attack",
+        targetArea: "self",
         duration: "Instantaneous",
-        desc: "Substitute Intellect for attack attribute. Success: +1d6 extra damage; you grant 1 boon on the next attack against you this round. OP" 
+        desc: "Make an attack with one melee weapon you are wielding. You can substitute Intellect for the attribute you would normally use to make the attack roll. On a success, the attack deals 1d6 extra damage and you grant 1 boon on the next attack roll made to attack you before the end of the round. OP" 
     },
     { 
         name: "Certain Strike", 
@@ -5846,25 +5846,25 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "Instantaneous",
-        desc: "Triggered: When you fail a weapon attack or Battle spell attack. Reroll with 1 boon. OP" 
+        desc: "<b>Triggered</b> When you make an attack roll for a weapon attack or as part of your casting of a Battle spell and you get a failure on the roll, you can use a triggered action to cast this spell. Disregard the triggering result and repeat the attack roll with 1 boon. OP" 
     },
     { 
         name: "Fangs of the Serpent", 
         tradition: "Battle", 
         rank: 1, 
         type: "Attack", 
-        targetArea: "1 target or 2 different targets",
+        targetArea: "Self",
         duration: "Instantaneous",
-        desc: "Attack(s) use Intellect and gain 1 boon. Single target: +1d6 damage and move half Speed (no free attacks). Two targets: Normal damage each. OP" 
+        desc: "Either make an attack with a weapon you are wielding against one target or make two attacks with a weapon you are wielding, each one against a different target. You make the attack roll with 1 boon, and you can use Intellect instead of the attack’s normal attribute. If you attack and hit one target, the attack deals 1d6 extra damage and you can move up to half your Speed after the attack without triggering free attacks.If you attack two targets, each hit deals normal damage. OP" 
     },
     { 
         name: "Killing Urge", 
         tradition: "Battle", 
         rank: 1, 
         type: "Attack", 
-        targetArea: "One creature within short range",
+        targetArea: "One creature within short range that can hear you",
         duration: "Instantaneous",
-        desc: "Target uses Triggered action to attack with 1 boon (+1d6 damage). Sacrifice: You attack with Intellect for +1d6 damage and gain 2 boons on free attacks for 1 round. OP" 
+        desc: "The target can use a triggered action to make an attack with a weapon. You grant the target 1 boon to its attack roll, and the attack deals 1d6 extra damage. <b>Sacrifice</b> You can use an action and expend a casting of  this spell to make an attack with a melee weapon. You  can substitute Intellect for the attribute you would normally use to make the attack roll. On a success, the target takes  1d6 extra damage and, for 1 round, you make attack rolls that are part of free attacks with 2 boons. OP" 
     },
     { 
         name: "Avalanche Strike", 
@@ -5873,25 +5873,25 @@
         type: "Attack", 
         targetArea: "Up to 3 creatures within 1 yard",
         duration: "Instantaneous",
-        desc: "Targets: Agility challenge (1 bane) or fall prone. If prone, make a weapon attack (Intellect) for +2d6 extra damage. OP" 
+        desc: "A target must get a success on an Agility challenge roll with 1 bane or fall prone. If a creature falls prone, you can make a weapon attack against that creature as part of the same action you used to cast the spell and substitute Intellect for the attribute you normally use to make the attack roll. The weapon attack deals 2d6 extra damage. OP" 
     },
     { 
         name: "Distant Doom", 
         tradition: "Battle", 
         rank: 2, 
         type: "Attack", 
-        targetArea: "One creature/object in medium range",
+        targetArea: "One creature or object in medium range",
         duration: "Instantaneous",
-        desc: "Move Speed (ignore difficult terrain/free attacks/creatures). If in reach: Attack with Intellect (+1 boon) for +2d6 extra damage. OP" 
+        desc: "You move up to your Speed toward the target. Your movement ignores difficult terrain, lets you move through spaces occupied by other creatures, and does not trigger free attacks. If you can reach the target by the end of your movement, you can make an attack against it using a melee weapon you are wielding. You make the attack roll with  1 boon and you can substitute Intellect for the attribute you would normally use to make the attack. On a success, the attack deals 2d6 extra damage. OP" 
     },
     { 
         name: "Climb the Mountain", 
         tradition: "Battle", 
         rank: 3, 
         type: "Attack", 
-        targetArea: "One creature (Size >= your Size) in reach",
+        targetArea: "One creature Your size or larger",
         duration: "Instantaneous",
-        desc: "Enter target space/climb. Attack with Intellect (+2 boons) for +3d6 extra damage. You fly/land 5 yards away (no free attacks). OP" 
+        desc: "You move into the target’s space, climb its body, and attack it with a weapon you are wielding. You make the attack roll with 2 boons and you can substitute Intellect for the attribute you would normally use to make the attack. On a success, the attack deals 3d6 extra damage. On a success or a failure, you fly and land in an open space within 5 yards of the target. This movement does not trigger free attacks.OP" 
     },
     { 
         name: "Iron Grasp", 
@@ -5900,16 +5900,16 @@
         type: "Attack", 
         targetArea: "One creature you can reach",
         duration: "Special",
-        desc: "Req: Free hand. Unarmed strike (Intellect, +1 boon) for +2d6 extra damage and target is Grabbed. Maintain with Triggered action for 1d6 damage/round. OP" 
+        desc: "Req: Must have a free hand. Make an attack with an unarmed strike against the target. You make the attack roll with 1 boon and you can substitute Intellect for the attribute you would normally use for the attack. On a success, the attack deals 2d6 extra damage and the target becomes grabbed. You can maintain the grab each round using a triggered action on your turn. Each time you maintain the grab, the target takes 1d6 damage. The effect ends when you or the target becomes incapacitated or when the grabbed affliction is removed. OP" 
     },
     { 
         name: "Drive Them Before You", 
         tradition: "Battle", 
         rank: 4, 
         type: "Attack", 
-        targetArea: "Each chosen creature in reach",
+        targetArea: "Self",
         duration: "Instantaneous",
-        desc: "Move Speed. Targets: Str challenge (2 banes) or 2d6 damage, fly 1d6 yards away, and land prone. OP" 
+        desc: "Move up to your Speed. At the end of your movement, each creature you choose within your reach must get a success on a Strength challenge roll with 2 banes or take 2d6 damage, fly 1d6 yards away from you in a direction you choose, and land prone. OP" 
     },
     { 
         name: "Steely Defense", 
@@ -5918,16 +5918,16 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 minute",
-        desc: "Take half damage from weapons. Triggered: Can be cast on your turn using a triggered action. OP" 
+        desc: "For the duration, you take half damage from weapons. <b>Triggered:</b> On your turn, you can use a triggered action to cast this spell. OP" 
     },
     { 
         name: "Paint the Field Red", 
         tradition: "Battle", 
         rank: 5, 
         type: "Attack", 
-        targetArea: "Each chosen creature in reach",
+        targetArea: " Each creature of your choice that you can reach",
         duration: "Instantaneous",
-        desc: "Req: Melee weapon. Targets: Agility challenge (1 bane) or 4d6+1 damage (half on success). If fail and injured: Take extra damage equal to Health. OP" 
+        desc: "Req: Melee weapon other than unarmed strike. You swing the weapon around you in a deadly arc. A target must make an Agility challenge roll with 1 bane. It takes 4d6 + 1 damage on a failure, or half the damage on a success. Any creature that got a failure on the Agility roll and becomes injured by this attack takes extra damage equal to its Health. OP" 
     },
     { 
         name: "Reaper’s Harvest", 
@@ -5936,25 +5936,25 @@
         type: "Attack", 
         targetArea: "One creature you can reach",
         duration: "Instantaneous",
-        desc: "Attack with Intellect (+3 boons) for 6d6+5 damage. If target Health <= 30, it takes damage equal to its Health instead. OP" 
+        desc: "Attack the target with a weapon you are wielding. You make the attack roll with 3 boons and you can substitute Intellect for the attribute you would normally use. On a success, the target takes 6d6 + 5 damage. A target with a Health score of 30 or lower instead takes damage equal to its Health. OP" 
     },
     { 
         name: "Savage Rebuke", 
         tradition: "Battle", 
         rank: 6, 
         type: "Attack", 
-        targetArea: "Triggering creature",
+        targetArea: "Self",
         duration: "Instantaneous",
-        desc: "Triggered: When hit by a weapon attack. Turn success into failure and attack (Intellect, +3 boons) for 3d6+3 damage and impaired 1 round. OP" 
+        desc: "<b>Triggered:</b> You can use a Triggered action to cast this spell when a creature attacks you with a weapon and gets a success on the attack roll. You turn the success into a failure and then make an attack with a weapon against the triggering creature. You make the attack roll with 3 boons and you can substitute Intellect for the attribute you would normally use. On a success, the attack deals 3d6 + 3 damage and the target becomes impaired for 1 round. OP" 
     },
     { 
         name: "Cast Down From Heaven", 
         tradition: "Battle", 
         rank: 6, 
         type: "Attack", 
-        targetArea: "Grabbed creature",
+        targetArea: "GSelf",
         duration: "Instantaneous",
-        desc: "Triggered: When you grab a creature. Fly 20 yards up with target; attack (Intellect, +1 boon) for +2d6 damage and Stunned. Release target to fall and you land safely. OP" 
+        desc: "<b>Triggered</b> You can use a Triggered action to cast this spell when you succeed on an attack roll to grab a creature of your Size or smaller. You fly up to 20 yards into the air, taking the grabbed creature with you. You then make an attack with a melee weapon against the target you have grabbed. You make the attack roll with 1 boon and can substitute Intellect for the attribute you would normally use. On a success, the attack deals 2d6 extra damage and the target becomes stunned until the end of the round. On a success or a failure, you remove the grabbed affliction and the target falls. You then land safely in an open space within 5 yards of the space you left. OP" 
     },
     { 
         name: "Whirlwind of Death", 
@@ -5963,7 +5963,7 @@
         type: "Attack", 
         targetArea: "Each chosen creature in reach",
         duration: "Instantaneous",
-        desc: "Req: Melee weapon. Two-part sweep: 6d6 damage (Agi half) -> Fly Speed -> 6d6 damage (Agi half). End: Str challenge (3 banes) or fatigued 1 min. OP" 
+        desc: "Req: Melee weapon other than unarmed strike. You sweep your weapon around you in a deadly arc. Each target must make an Agility challenge roll with 1 bane. A creature takes 6d6 damage on a failure, or half the damage on a success.You then fly up to your Speed. You must land at the end of this movement or you fall. If you land, you sweep your weapon around you again, and each creature you choose within your reach must make an Agility challenge roll with  1 bane. A creature takes 6d6 damage on a failure, or half the damage on a success.When the spell ends, you must get a success on a Strength challenge roll with 3 banes or become fatigued for 1 minute. OP" 
     },
     { 
         name: "Battle Fervor", 
@@ -5972,7 +5972,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 hour",
-        desc: "Gain special actions by expending Rank 0 castings: Blurring Advance (Move 3x Speed), Deflection (3 banes to enemy), Evasion (3 boons to resist area), or Strike (3 boons to attack). OP" 
+        desc: "You amplify your fighting techniques for the duration. Until the spell ends, you can use the following special actions. <b>Blurring Advance</b> On your turn, you can use a riggered action and expend the casting of any one rank 0 utility spell and then move up to three times your Speed. This movement does not trigger free attacks. <b>Blurring Deflection</b> When a creature you can see attacks you with a weapon, you can use a triggered action and expend the casting of one rank 0 attack spell to impose  3 banes on the triggering attack roll. <b>Blurring Evasion</b> When you would make a challenge roll to resist an attack that affects an area, you can use a  Triggered action and expend the casting of one rank 0 attack spell to make the challenge roll with 3 boons. If the spell deals damage, you take no damage on a success, and half the damage on a failure. <b>Blurring Strike</b> On your turn, you can use a triggered action and expend the casting of one rank 0 attack spell. Until the round ends, when you attack with a weapon, you make the attack roll with 3 boons. OP" 
     },
     { 
         name: "Surge of Slaughter", 
@@ -5981,7 +5981,7 @@
         type: "Attack", 
         targetArea: "20-yard cone",
         duration: "Instantaneous",
-        desc: "Health <= 35: Dies instantly. Others: Agility challenge (3 banes) or 10d6 damage (half on success). You then move to any space in area. OP" 
+        desc: "You leap into motion to carve a path through your enemies. Each creature with a Health score of 35 or lower inside the area takes damage equal to its Health. Each other creature in the area must make an Agility challenge roll with 3 banes. A creature takes 10d6 damage on a failure, or half the damage on a success. You then move to any open space within the area. OP" 
     },
     { 
         name: "God of War", 
@@ -5990,7 +5990,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "8 hours",
-        desc: "Onlookers: Will challenge (3 banes) or 1d3 Insanity. +50 Health, immune Insanity. Attacks: +3 boons and +5d6 damage. Enemies: 3 banes to attack you. End of round: 3d6 damage to chosen nearby creatures. Aftereffect: Will challenge (5 banes) or 3d6 Insanity and -1d6 Power penalty. OP" 
+        desc: "Magical power flows into you, transforming you into a god of war. You become bigger, stronger, and far more menacing. Your eyes glow with malice, and blood paints your body. Any creature that can see you when you transform must get a success on a Will challenge roll with 3 banes or gain 1d3 Insanity. Until the spell ends, gain the following benefits:• You gain a +50 bonus to Health.• You cannot gain Insanity.• You make attack rolls with 3 boons.• Your attacks with weapons deal 5d6 extra damage.• You impose 3 banes on attack rolls made by creatures against you.• At the end of each round, each creature you choose within your reach takes 3d6 damage. <b>Aftereffect</b> You must make a Will challenge roll with 5 banes. On a failure, you gain 3d6 Insanity and take a –1d6 penalty to Power that lasts for 1 week and 1 day. If you would go mad as a result of this Insanity gain, you suffer battle madness as normal, but the madness ends only on a roll of 6, and you take 2d6 damage at the end of each round until the madness ends. OP" 
     },
           { 
         name: "Helping Hand", 
@@ -7232,7 +7232,7 @@
         type: "Attack", 
         targetArea: "Self",
         duration: "Instantaneous",
-        desc: "Req: Mad Devotion & Reavers of the Skull King cult. Triggered: When creature within short range is incapacitated. Move Speed and attack with 1 boon. Sacrifice: Augmented Attack. Hunger" 
+        desc: "Req: Mad Devotion & Reavers of the Skull King cult. <b>Triggered</b> You cast this spell using a triggered action when a creature you can see within short range becomes incapacitated. You move up to your Speed and make an attack with a weapon at any point during your movement. You make the attack roll with 1 boon. <b>Sacrifice</b> You can expend a casting of this spell to cast the augmented attack spell from the Battle tradition. Hunger" 
     },
     { 
         name: "Invoke the Wandering Star", 
@@ -7428,18 +7428,18 @@
         tradition: "Battle", 
         rank: 0, 
         type: "Attack", 
-        targetArea: "One target of a ranged/thrown attack",
+        targetArea: "Self",
         duration: "Instantaneous",
-        desc: "Make a weapon attack. Ignore banes from cover (except total), invisibility, or obscured areas. Terrible Beauty" 
+        desc: "As part of casting this spell, make an attack with a ranged weapon or a thrown weapon. Your attack ignores banes incurred by any form of cover except for total cover, banes due to invisibility, and banes from attacking targets that are in obscured areas. Terrible Beauty" 
     },
     { 
         name: "Phasing Missile", 
         tradition: "Battle", 
         rank: 1, 
         type: "Attack", 
-        targetArea: "One target of a ranged/thrown attack",
+        targetArea: "Self",
         duration: "Instantaneous",
-        desc: "Weapon attack with 1 boon. Ignore banes from cover. Can hit totally covered targets (blinded penalties apply if unseen; no cover penalties if seen). Terrible Beauty" 
+        desc: "As part of casting this spell, make an attack with a ranged weapon or a thrown weapon. You make the attack roll with 1 boon. Your attack ignores banes due to cover, and you can attack totally covered targets, but if you cannot see such a target, you shoot as if you were blinded. If you can see a totally covered target, you can attack that target as if it was not covered. Terrible Beauty" 
     },
     { 
         name: "Moon Bridge", 
