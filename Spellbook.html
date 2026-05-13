@@ -4854,7 +4854,7 @@
         tradition: "Conjuration", 
         rank: 0, 
         type: "Utility", 
-        targetArea: "1-yard cube within short range",
+        targetArea: "1-yard cube of space within short range",
         duration: "1 minute",
         desc: "One compelled tiny monster appears on a solid surface. OP" 
     },
@@ -4865,34 +4865,34 @@
         type: "Attack", 
         targetArea: "1-yard radius sphere within short range",
         duration: "Instantaneous",
-        desc: "Deals 1d6 damage to everything in area (Agi half). OP" 
+        desc: "Crackling energy explodes in the area, dealing 1d6 damage to everything in it. A creature in the area can make an Agility challenge roll and takes half the damage on a success. OP" 
     },
     { 
         name: "Conjure Servant", 
         tradition: "Conjuration", 
         rank: 1, 
         type: "Utility", 
-        targetArea: "1-yard cube within reach",
+        targetArea: "1-yard cube of space within reach",
         duration: "1 hour",
-        desc: "Faceless servant appears to perform mundane duties. Obeys spoken commands. Sacrifice: Heal a Conjuration construct 1d6 damage. OP" 
+        desc: "A Faceless Servant appears on a solid surface inside the area and remains for the duration or until it becomes incapacitated. The servant knows how to perform mundane duties, such as cooking, cleaning, folding, making or breaking down camp, and so on. The servant obeys your spoken commands, taking its turn when you decide, and doing as ordered to the best of its ability. <b>Sacrifice</b> You can use an action and expend a casting of this spell to cause one construct you created with a Conjuration spell to heal 1d6 damage. OP" 
     },
     { 
         name: "Flying Knives", 
         tradition: "Conjuration", 
         rank: 1, 
         type: "Attack", 
-        targetArea: "2-yard cube within short range",
+        targetArea: "2-yard cube of space within short range",
         duration: "1 minute",
-        desc: "Creatures entering/starting in area must pass Agi challenge or take 1d6 damage. Action/Triggered: Move knives 5 yards. OP" 
+        desc: "Flying knives appear and fly around inside the area for the duration and then disappear when the spell ends. Any creature inside the area or that enters it must get a success on an Agility challenge roll or take 1d6 damage. A creature makes this roll just once per round per casting of the spell, regardless of how many times it enters the area. You can use an action, or a triggered action on your turn, to move the flying knives up to 5 yards in any direction. OP" 
     },
     { 
         name: "Creation", 
         tradition: "Conjuration", 
         rank: 2, 
         type: "Utility", 
-        targetArea: "1-yard cube within reach",
+        targetArea: "1-yard cube of space within reach",
         duration: "Variable (based on material)",
-        desc: "Fill area with matter (food, iron, fog, etc.). Matter lasts based on composition table. Cannot have moving parts. OP" 
+        desc: "Fill area with matter (food, iron, fog, etc.). Matter lasts based on composition table, Occult Philosophy page 32. Cannot have moving parts. OP" 
     },
     { 
         name: "Sticky Strands", 
@@ -4900,8 +4900,8 @@
         rank: 2, 
         type: "Attack", 
         targetArea: "5-yard cube within medium range",
-        duration: "1 minute",
-        desc: "Agi challenge (1 bane) or immobilized. Moving through area requires Agi challenge (3 boons if moving only 1yd). Flame destroys strands and deals 1d6 damage to all inside. OP" 
+        duration: "Instantaneous",
+        desc: "Thick, sticky strands spread through the area. Each creature in the area must get a success on an Agility challenge roll with 1 bane or become immobilized for 1 minute. A creature can use an action to make a Strength challenge roll and removes the immobilized affliction from itself on a success. If the area where the strands appear touches at least two solid surfaces, parallel or perpendicular to one another, the spell lasts for 1 minute. Otherwise, strands that are not immobilizing a creature disappear when they are overcome. If a creature moves through the area while the strands remain, the creature must make an Agility challenge roll upon entering the area or moving to a different space inside the area. A creature moves normally on a success, or becomes immobilized, as described above, on a failure. A creature that moves just 1 yard through the area on its turn makes the challenge roll with 3 boons. Flame that touches the strands destroys them instantly and deals 1d6 damage to everything in the area the strands occupied. OP" 
     },
     { 
         name: "Conjure Superior Monster", 
@@ -4910,7 +4910,7 @@
         type: "Utility", 
         targetArea: "2-yard cube within medium range",
         duration: "1 minute",
-        desc: "Conjure one Medium or two Small compelled monsters. Choose one buff: Flier, +5 Health/Climber/Swimmer, +3 Health/Frightening, or Horrifying. OP" 
+        desc: "Either one compelled medium monster or two compelled small monsters appear inside the area and remain for the duration or until they are incapacitated. You can bestow one of the following benefits on the creatures created by this spell: • The flier trait, • +5 Health and either the climber or swimmer trait, • +3 Health and the frightening trait, • The horrifying trait OP" 
     },
     { 
         name: "Iron Cage", 
@@ -4919,7 +4919,7 @@
         type: "Attack", 
         targetArea: "4-yard cube within medium range",
         duration: "1 hour",
-        desc: "Enclose area in iron bars. Agi challenge (1 bane) to escape before completion. Bars prevent Size 1/2+ from squeezing. Defense 5, Health 30 per section. OP" 
+        desc: "A cage made from iron forms to fully enclose the area. Any creature in the area can attempt to escape the cage by making an Agility challenge roll with 1 bane. On a success, the creature moves to the nearest open space outside the cage and cannot move during its next turn. The cage remains for 1 hour or until it’s destroyed. The cage bars are close enough to prevent a creature of Size 1/2 or larger from squeezing between them. Each 1-yard-square section of the cage has Defense 5 and Health 30. OP" 
     },
     { 
         name: "Conjure Items", 
@@ -4928,34 +4928,34 @@
         type: "Utility", 
         targetArea: "3-yard cube within reach",
         duration: "Until rest",
-        desc: "Create mundane items totaling up to 10 gc. Items are functional but have no resale value. OP" 
+        desc: "You cause items to appear inside the area and remain for the duration. You can choose any mundane items, provided the total value of those items does not exceed 10 gc. The spell cannot be used to create enchanted objects, potions, alchemical objects, or incantations. Although the objects are functional, they have no real value and cannot be sold. OP" 
     },
     { 
         name: "Forest of Spikes", 
         tradition: "Conjuration", 
         rank: 4, 
         type: "Attack", 
-        targetArea: "8-yard cube within medium range",
+        targetArea: "8-yard cube of space within medium range",
         duration: "1 minute",
-        desc: "Agi challenge (1 bane) or take 3d6 damage and immobilized on an iron spike. Spikes provide cover; Size 1 can crawl through, others must destroy spikes (Def 5, HP 10). OP" 
+        desc: "A cluster of iron spikes, each 8 yards long, forms inside the area and remains for the duration. Any creature in the area when you cast the spell must get a success on an Agility challenge roll with 1 bane or become impaled on a spike, taking 3d6 damage and becoming immobilized until the spell ends. A spike has Defense 5 and Health 10. Destroying the spike affecting a creature removes the immobilized affliction. The spikes provide cover to anything in the area and behind it. A Size 1 or smaller creature can safely crawl through the area. Larger creatures must destroy the spikes in order to move. In addition, a creature can climb up the sides of the area and across the top, space permitting. OP" 
     },
     { 
         name: "Conjure Conveyance", 
         tradition: "Conjuration", 
         rank: 5, 
         type: "Utility", 
-        targetArea: "10-yard cube within medium range",
+        targetArea: "10-yard cube of space within medium range",
         duration: "12 hours",
-        desc: "Create a carriage with 4 horses (land) or a boat (water). Size 6, HP 100, Speed 20. Holds Size 20 total. Sacrifice: Cast Conjure Large Monster. OP" 
+        desc: "A vehicle appears on a solid or liquid surface inside the area. If you chose a solid surface, the vehicle is a carriage drawn by a team of four horses. If you chose a liquid surface, the vehicle is a boat. The vehicle remains for the duration or until it’s destroyed, at which point the vehicle disappears in a cloud of sparkles. Either vehicle is a Size 6 object with Health 100, able to hold creatures and objects whose total Size does not exceed 20. Its maximum Speed is 20 (acceleration 4/deceleration 2) in combat or 30 miles per hour out of combat. It moves as you direct it (not requiring an action) and follows your last command until you give it a new one. Sacrifice You can use an action and expend a casting of this spell to cast the Conjure Large Monster spell. OP" 
     },
     { 
         name: "Passage", 
         tradition: "Conjuration", 
         rank: 5, 
         type: "Utility", 
-        targetArea: "Point within long range",
+        targetArea: "Point on a solid ot liquid surface within long range",
         duration: "1 hour",
-        desc: "Open 60 cubic yards of space in a surface. When spell ends, objects fuse; creatures must pass Agi challenge (3 banes) or die (half Health damage on success). OP" 
+        desc: "You open a space into the surface that contains the target. The space consists of 60 cubes, each 1 yard on a side, that you can arrange in any way you like to create the opening. The created space lasts for the duration. When the spell ends, the space disappears, becoming solid or liquid once more. If you created a space in a solid surface, any objects in it when the spell ends become fused with the substance. A creature in such a situation must make an Agility challenge roll with 3 banes. A creature takes 3d6 damage and exits to the nearest open space to the area on a success, or, on a failure, takes damage equal to its Health from being fused with the material. OP" 
     },
     { 
         name: "Simulacrum", 
@@ -4964,16 +4964,17 @@
         type: "Utility", 
         targetArea: "Self-sized cube within reach",
         duration: "Special",
-        desc: "Req: 1gc mirror. Create a naked copy of yourself (half HP). Consciousness moves to copy; original body is unconscious. Can swap between bodies. Gain Insanity if original body dies. OP" 
+        desc: "Req: 1gc mirror.The mirror disappears, and a naked copy of yourself appears inside the area. Your consciousness moves into the copy’s body, where it remains until the body becomes incapacitated, which ends the spell and causes the copy to disappear into a cloud of sparkles. The copy’s body uses all your attributes and characteristics, except for its Health, which is half your normal Health score. The copy does not, however, start with any damage that your real body has. The copy can fully make use of any of your talents and traits and has full access to the spells you have learned. In effect, you create a second you (without, of course, your clothing and other possessions.) For as long as your consciousness occupies the copy\’s body, your original body is unconscious. Provided you are within 1 mile of your original body, you can use an action to move your consciousness from your copy to your original body or vice versa. The body that your consciousness leaves becomes unconscious until you return to it. When your consciousness moves in this way, you become defenseless for 1 minute. When you transfer your consciousness, you leave behind any damage taken and marks of darkness gained by the body, but you bring with you Insanity, Corruption, and any remaining unexpended castings. If your consciousness occupies your copy’s body and the body dies, your consciousness travels back unerringly to your original body or the nearest other copy. Your disembodied consciousness travels at 10 miles per hour. It cannot use actions, does not perceive its surroundings, is immune to all damage and effects, and can move through solid objects. For each hour your consciousness remains outside a body, you gain 1 Insanity. If the gain would cause you to go mad, your consciousness shatters and never returns to the unconscious body. If your original body dies, the copy occupied by your consciousness becomes your new, permanent body. You are impaired while your consciousness occupies a copy of your body and is within short range of another copy of your body. When you finish casting the spell, you must get a success on a Will challenge roll with 3 banes or gain 1d3 Insanity.
+<b>Sacrifice</b> You can use an action and expend a casting of this spell to allow your copy to heal all damage. OP" 
     },
     { 
         name: "Conjure Cadre", 
         tradition: "Conjuration", 
         rank: 6, 
         type: "Utility", 
-        targetArea: "10-yard cube within long range",
+        targetArea: "10-yard cube of space within long range",
         duration: "8 hours",
-        desc: "Conjure 8 compelled veterans. Triggered: Perceive from a veteran's space (within 1 mile) and issue commands. OP" 
+        desc: "Appearing inside the area are eight Veterans. They remain in existence for the duration. If a veteran conjured by this spell becomes incapacitated, it disappears. The veterans can have any appearance you choose. Friendly to you, they obey your spoken commands, even if doing so would be suicidal. On your turn, you can use a triggered action to briefly perceive from the space occupied by a veteran, provided you are within 1 mile of the creature. While you perceive from its space, you can issue it a command. Your senses return to your body when you finish your turn. OP" 
     },
     { 
         name: "Conjure Titanic Monster", 
@@ -4982,7 +4983,7 @@
         type: "Utility", 
         targetArea: "5-yard cube within medium range",
         duration: "1 minute",
-        desc: "One compelled titanic monster appears on a solid surface. OP" 
+        desc: "One compelled Titanic Monster appears on a solid surface inside the area and remains for the duration or until it becomes incapacitated. OP" 
     },
     { 
         name: "Mighty Fortress", 
@@ -4991,25 +4992,25 @@
         type: "Utility", 
         targetArea: "100-yard cube within extreme range",
         duration: "24 hours",
-        desc: "Concentrate 1 hour. Creates stone fortress with keep, walls, and servants. Provides food for 100. Aftereffect: Str challenge (4 banes) or Health penalty. Sacrifice: Extend 24h. Permanence: Extend daily for 1yr+1day. OP" 
+        desc: "Upon casting this spell, you must concentrate for 1 hour. When you finish, a fortress appears on a solid surface in the area and remains for the duration. The fortress is made of stone and consists of three turrets connected by three walls, creating a triangular space between them. Inside stands a keep, a stable, and a workshop. You decide the exact dimensions of the components of the structure, but no components can extend beyond the area. You can place as many doors and windows as you like throughout the structure and can divide the keep into as many floors and rooms as you wish. You can also designate a room’s function, which causes the room to become furnished appropriately for the function you assigned it. For example, a bedroom would have a bed, table, candles, and fireplace, while a dining hall would have tables and chairs. You can also add decorations and other cosmetic details. The fortress provides food and drink of whatever sort you wish enough to accommodate one hundred people. In addition, for every five creatures inside the fortress, the structure also creates a faceless servant that obeys your spoken commands or the spoken commands of any creature to which it is assigned. <b>Aftereffect</b> Make a Strength challenge roll with 4 banes. On a success, you become fatigued until you complete a rest. If you’re already fatigued, take a –3d6 penalty to Health instead. On a failure, you take a penalty to your Health equal to half your Health that remains for 1 week and 1 day. If the total of your roll is 0 or lower, you take a penalty to your Health equal to your Health score and you die. <b>Sacrifice</b> You can use an action and expend a casting of this spell to extend the duration by another 24 hours. <b>Permanence</b> You must extend the spell’s duration each day for 1 year and 1 day. OP" 
     },
     { 
         name: "Conjure Monstrous Horde", 
         tradition: "Conjuration", 
         rank: 9, 
         type: "Utility", 
-        targetArea: "10-yard cube within extreme range",
+        targetArea: "10-yard cube of space within extreme range",
         duration: "8 hours",
-        desc: "Nine compelled mobs of medium monsters appear. If a mob is incapacitated, its Spawn creatures are also compelled. OP" 
+        desc: "Nine compelled Mobs of Medium Monsters appear on solid surfaces inside the area and remain for the duration. If a mob becomes incapacitated, it uses its Spawn trait, and the creatures that appear are also compelled. Individual creatures making up the mob disappear when they become incapacitated. OP" 
     },
     { 
         name: "True Conjuration", 
         tradition: "Conjuration", 
         rank: 10, 
         type: "Utility", 
-        targetArea: "50-yard cube within reach",
+        targetArea: "50-yard cube of space within reach",
         duration: "Permanent",
-        desc: "Concentrate 8 hours (Will challenge/hour or gain Insanity). Create any creature (Diff 1000) or object (10,000 gc). Aftereffect: 10d6 damage, -1d6 Power, and fatigue. OP" 
+        desc: "Upon casting this spell, you must concentrate for 8 hours. At the end of each hour, you must get a success on a Will challenge roll or gain 1 Insanity. If you finish, you conjure a creature or object inside the area, provided the area is large enough to accommodate its Size. You can conjure any creature of Difficulty 1,000 or lower or any object worth 10,000 gc or less. The creature or object is real and remains until it’s killed or destroyed. <b>Aftereffect</b> Gain 1d6 Insanity, and then make a Strength challenge roll with 5 banes. On a failure, you take 10d6 damage. In addition, you take a –1d6 penalty to Power and become fatigued for 1 week and 1 day. If the damage would cause you to become incapacitated, you die as your body evaporates into threads of magical energy. OP" 
     },
           { 
         name: "Otherworldly Scream", 
@@ -10661,7 +10662,7 @@
         type: "Utility", 
         targetArea: "A cube of space, 20 yards on a side, originating from a point within long range and resting on a solid or liquid surface",
         duration: "12 hours; see effect",
-        desc: "You must concentrate for 1 minute, during which time you visualize a building or island. At the end of this time, the building or island you visualized appears in the area and remains for the duration. If you conjure a building, you make all decisions about what it looks like, such as entrances, windows, and the number of rooms. It includes beds for up to ten people, chairs, tables, enough food and drink to sustain up to ten people, and a hearth complete with a burning fire. If you conjure an island, you provide accommodations for up to ten people as if you had created a building, but in the form of bungalows or huts. Sacrifice: You can expend a casting of this spell to cast conjure large monster. Core" 
+        desc: "You must concentrate for 1 minute, during which time you visualize a building or island. At the end of this time, the building or island you visualized appears in the area and remains for the duration. If you conjure a building, you make all decisions about what it looks like, such as entrances, windows, and the number of rooms. It includes beds for up to ten people, chairs, tables, enough food and drink to sustain up to ten people, and a hearth complete with a burning fire. If you conjure an island, you provide accommodations for up to ten people as if you had created a building, but in the form of bungalows or huts. <b>Sacrifice:</b> You can expend a casting of this spell to cast conjure large monster. Core" 
     },
     { 
         name: "Conjure Huge Monster", 
