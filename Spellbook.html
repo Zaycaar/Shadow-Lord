@@ -5666,16 +5666,16 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "2 hours",
-        desc: "You glow (2yd radius) and leave glowing footprints (1yd radius). Triggered: Cast when using a Celestial attack or weapon attack; target then emits light and leaves footprints. OP" 
+        desc: "You harness the power of the sun, drawing it inside you so that you glow for the duration. You emit light in a 2-yard radius, and whenever you walk across a surface, you leave behind a trail of glowing footprints that emit light in a 1-yard radius for 1 minute before fading away. If you touch a creature or an object, you cause it to emit light in a 1-yard radius for 1 minute. You can use a triggered action on your turn to suppress this spell’s effect on yourself or to resume its effect. Time spent suppressed counts against the spell’s duration. <b>Triggered</b> You can use a triggered action to cast this spell when you cast a Celestial attack spell or you attack with a weapon. If the triggering attack results in a success, the target of the attack emits light in a 2-yard radius and, when it walks across a surface, it leaves behind a trail of glowing footprints that emit light in a 1-yard radius for 1 minute before fading away. OP" 
     },
     { 
         name: "Radiant Shield", 
         tradition: "Celestial", 
         rank: 0, 
         type: "Utility", 
-        targetArea: "One creature in reach",
+        targetArea: "Self",
         duration: "Instantaneous",
-        desc: "Triggered: When a creature in reach attacks you. Imposes 1 bane on attack. If attack hits, attacker must pass Str challenge or be blinded 1 round. OP" 
+        desc: "<b>Triggered</b> You can use a triggered action to cast this spell when a creature you can reach attacks you with a melee weapon. A burst of light appears between you and the triggering creature, imposing 1 bane on its attack roll. If the attack results in a success, the triggering creature must get a success on a Strength challenge roll or become blinded for 1 round. OP" 
     },
     { 
         name: "Sun Shard", 
@@ -5684,7 +5684,7 @@
         type: "Attack", 
         targetArea: "One creature in reach",
         duration: "Instantaneous",
-        desc: "Will vs Agility. 2d6+2 damage. Spirits/Undead/Sun-vulnerable take +1d6 extra damage. 20+: Target blinded 1 round. OP" 
+        desc: "A blazing shard of light slashes toward the target. Make a Will attack roll against the target’s Agility. On a success, the blazing light strikes the target and deals 2d6 + 2 damage. If the target is a spirit or an undead, or has a special vulnerability to sunlight, it takes 1d6 extra damage. Attack Roll 20+ The target also becomes blinded for 1 round. OP" 
     },
     { 
         name: "Strobe Light", 
@@ -5693,7 +5693,7 @@
         type: "Utility", 
         targetArea: "5-yard radius sphere within short range",
         duration: "1 minute",
-        desc: "Turns darkness to shadows. Sighted creatures in area take 1 bane on all attack rolls. OP" 
+        desc: "Flashing light fills the area, turning darkness in it to shadows. The brightness of the light, however, imposes 1 bane on all attack rolls made by sighted creatures in the area. OP" 
     },
     { 
         name: "Tiny Lanterns", 
@@ -5702,25 +5702,25 @@
         type: "Utility", 
         targetArea: "Four points in medium range",
         duration: "1 hour",
-        desc: "Four glowing balls (5yd light radius). Move balls 10yds as minor activity. Action: Flash a ball to impair sighted creatures (Perception challenge with banes per light area). OP" 
+        desc: "Four Size 1/4 glowing balls appear centered on the targets and remain for the duration. Each ball sheds light in a coloryou choose in a 5-yard radius. As a minor activity, you can move one or more lights created by this casting of the spell up to 10 yards in any direction. The lights remain in their positions until moved again. You can also use an action to cause one or more balls to flash with intense brightness and then go out. Any sighted creature within 5 yards of a flash must get a success on a Perception challenge roll or become impaired for 1 round. A creature makes this roll with 1 bane for each area of light created by this spell that it is in. OP" 
     },
     { 
         name: "Focused Light", 
         tradition: "Celestial", 
         rank: 2, 
         type: "Attack", 
-        targetArea: "20-yard line (1 inch diameter)",
+        targetArea: "Self",
         duration: "Concentration, up to 1 minute",
-        desc: "Beam deals 2d6+1 damage to objects/creatures (Agi challenge avoids). Use action to redirect; first target in path takes damage. OP" 
+        desc: "A beam of light in a color you choose, 1 inch in diameter, extends up to 20 yards from your hand in a direction you choose. The beam turns darkness within 1 yard of it into shadows. The beam cannot extend through any solid andnon-transparent creature or object it touches; thus, such obstacles provide total cover to anything behind them. Any object touched by the beam takes 2d6 + 1 damage. When you cast the spell, each creature in the beam’s path can make an Agility challenge roll. A creature dodges the beam on a success, or takes 2d6 + 1 damage on a failure. For the duration, each time you use an action to concentrate on the spell, you can point the beam in a different direction. The first creature or object in the path of the light is subject to the spell’s effect as if you had just cast the spell. OP" 
     },
     { 
         name: "Blinding Burst", 
         tradition: "Celestial", 
         rank: 3, 
         type: "Attack", 
-        targetArea: "5-yard radius from point in medium range",
+        targetArea: "A point in medium range",
         duration: "Instantaneous",
-        desc: "Agi challenge (1 bane) or blinded 1 minute. OP" 
+        desc: "You hurl a mote of light toward the target. When the mote reaches the target or impacts against a solid surface before then, it explodes to release blinding light in a 5-yard radius. Each creature in the area must get a success on an Agility challenge roll with 1 bane or become blinded for 1 minute. OP" 
     },
     { 
         name: "Rainbow", 
@@ -5729,16 +5729,16 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 hour",
-        desc: "Creates a magical bow (Range: Extreme, 2d6 damage). Uses Will for attacks. Hits cause target to glow for 1 min. Triggered: Can be cast on your turn. OP" 
+        desc: "A bow formed from solidified multicolored light appears in your hand and remains for the duration or until you drop it, which ends the spell. The bow functions as a ranged weapon that has the range (extreme) property and deals 2d6 damage. The weapon provides its own ammunition—magical arrows of multicolored light—and you can substitute Will for the attribute you would normally use to attack with this weapon. When a target takes damage from an attack made using this weapon, it emits light in a 5-yard radius for 1 minute. <b>Triggered</b> On your turn, you can use a triggered action to cast this spell. OP" 
     },
     { 
         name: "Crown of Stars", 
         tradition: "Celestial", 
         rank: 4, 
         type: "Attack", 
-        targetArea: "Targets in long range",
+        targetArea: "Self",
         duration: "1 minute",
-        desc: "5 motes orbit head. Launch up to 2 motes per target (Will vs Agi). Hit: 2d6 damage. Failure: Mote returns. Use Triggered action to fire remaining motes for 1d6+2. OP" 
+        desc: "Five glowing motes swirl in the air around your head and remain for the duration or until you expend them. When you cast this spell, you can launch any of the motes from around your head at creatures or objects within long range. You can divide these motes between targets, but you cannot send more than two motes against a single target. For each mote, make a Will attack roll against the target’s Agility. On a success, the mote strikes the target and explodes, dealing 2d6 damage. On a failure, the mote returns to you and resumes orbiting your head. If you have any motes remaining after you cast this spell, you can use a triggered action on your turn to expend one mote and send it flying at a creature or object within long range. Make a Will attack roll against the target’s Agility. On a success, the mote hits and explodes, dealing 1d6 + 2 damage. On a failure, the mote returns to you and resumes orbiting your head. Attack Roll 20+ The target takes 1d6 extra damage. OP" 
     },
     { 
         name: "Sword of the Dawn", 
@@ -5747,16 +5747,16 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 hour",
-        desc: "Off-hand blade (3d6+2 damage). Uses Will for attacks. 20+ and beat TN by 5: Str challenge or blinded 1 round. Triggered: Can be cast on your turn. OP" 
+        desc: "A crescent blade of rose-colored light emerges from your hand and remains for the duration or until you drop it, which ends the spell. The blade functions as a melee weapon that you can wield in your off hand and that deals 3d6 + 2 damage. You can substitute Will for the attribute you would normally use to attack with this weapon. The blade emits light in a 5-yard radius. Finally, if the total of your attack roll is 20 or higher and beats the target number by at least 5, the target must get a success on a Strength challenge roll or become blinded for 1 round. <b><Triggered</b> On your turn, you can use a triggered action to cast this spell. OP" 
     },
     { 
         name: "Falling Stars", 
         tradition: "Celestial", 
         rank: 5, 
         type: "Attack", 
-        targetArea: "Up to 4 points in long range",
+        targetArea: "Up to 4 points on the ground in long range",
         duration: "Instantaneous",
-        desc: "Req: See sky. 3yd radius explosions. 4d6+1 damage and Agi challenge (banes if in multiple areas) or blinded 1 minute. OP" 
+        desc: "Req: Must be able to see the sky. Stars fall from the sky to land on each target and then explode with blinding light in a 3-yard-radius hemisphere. Each creature or object in the area of one or more of the explosions takes 4d6 + 1 damage and must make an Agility challenge roll. A creature or object in the area of more than one explosion makes the roll with 1 bane for each explosion beyond the first one. A creature takes half the damage on a success, or also becomes blinded for 1 minute on a failure. OP" 
     },
     { 
         name: "Permanent Light", 
@@ -5765,16 +5765,16 @@
         type: "Utility", 
         targetArea: "One object you reach",
         duration: "Permanent",
-        desc: "Object emits sunlight in 20yd radius. Sacrifice: Cast Nova. OP" 
+        desc: "You touch the target and cause it to emit light in a 20-yard radius for the duration. Light created by this spell counts as sunlight. <b>Sacrifice</b> You can use an action and expend a casting of this spell and cast the Nova spell. OP" 
     },
     { 
         name: "Raiment of the Sun", 
         tradition: "Celestial", 
         rank: 6, 
         type: "Utility", 
-        targetArea: "20-yard radius sphere from you",
-        duration: "1 hour",
-        desc: "Action: Fire beam at long range (Will +1 boon vs Agi). Hit: 4d6 damage. OP" 
+        targetArea: "Self",
+        duration: "1 hour, or until you become incapacitated",
+        desc: "Brilliant light shines from a point in your space into a 20-yard radius sphere for the duration. Until the spell ends, you can use an action to loose a beam of radiance at one creature or object within long range. Make a Will attack roll with 1 boon against the target’s Agility. On a success, the beam hits and the target takes 4d6 damage. OP" 
     },
     { 
         name: "Sunburst", 
@@ -5783,7 +5783,7 @@
         type: "Attack", 
         targetArea: "6-yard radius sphere in medium range",
         duration: "1 minute",
-        desc: "Area fills with sunlight. Str challenge (1 bane) or 7d6 damage. Demons/Undead/Sun-vulnerable: +3d6 damage and always make roll with 1 bane. OP" 
+        desc: "unlight fills the area for the duration. Light created in the area illuminates everything within 100 yards of it. When you cast the spell, each creature in the area must make a Strength challenge roll with 1 bane. A creature takes 7d6 damage on a failure, or half the damage on a success. Demons, faeries, spirits, trolls, undead, and any creature that has sunlight vulnerability or sunlight weakness makes the challenge roll with 1 bane and takes 3d6 extra damage on a failure. OP" 
     },
     { 
         name: "Invisible Sun", 
@@ -5792,7 +5792,7 @@
         type: "Attack", 
         targetArea: "20-yard radius sphere in long range",
         duration: "1 minute",
-        desc: "End of round: 3d6 damage and Str challenge (1 bane) or fatigued 1 min (also slowed). Fatigued targets take +3d6 damage. Kills reduce target to jelly. OP" 
+        desc: "Invisible radiance spreads through the area for the duration. At the end of each round, the radiance deals 3d6 damage to everything in the area. A creature in the area must make a Strength challenge roll with 1 bane. The creature becomes fatigued for 1 minute on a failure, or just takes half the damage on a success. A creature fatigued by this spell is also slowed. If a creature is already fatigued, it takes 3d6 extra damage. Any creature incapacitated by the damage dies, reduced to a puddle of quivering jelly. OP" 
     },
     { 
         name: "Blaze in the Northern Sky", 
@@ -5801,7 +5801,7 @@
         type: "Attack", 
         targetArea: "1-yard cube in extreme range",
         duration: "Concentration, up to 1 hour",
-        desc: "Creates a ball of sunlight (1 mile illum). Action: Fire 1000yd beam (1yd wide) for 5d6 damage (Agi half). OP" 
+        desc: "A 1-yard-diameter ball of roiling light appears inside the area and remains for the duration. The ball illuminates everything within 1 mile of it, and its light counts as sunlight. When you cast the spell and, again, when you use an action to concentrate on it, you can release a beam of light from the area. The beam is a 1-yard-wide line that extends up to 1,000 yards or until it strikes a solid object. Each creature in the area of the light takes 5d6 damage. A creature in the area can make an Agility challenge roll and takes half the damage on a success. OP" 
     },
     { 
         name: "Second Sun", 
@@ -5810,16 +5810,16 @@
         type: "Utility", 
         targetArea: "Point in sky you see",
         duration: "Until rest",
-        desc: "Illuminates 100 miles with sunlight. Negates all darkness traits/magic. Demons/Undead/Sun-vulnerable are impaired in area. Aftereffect: Str challenge (4 banes) or cannot cast for 1d20 days. OP" 
+        desc: "A second sun appears at the target and remains for the duration. The sun illuminates everything within 100 miles of it. Light created by the spell counts as sunlight. In addition, the light negates all mundane and magical forms of shadow and darkness, such as the shadows cast by the Demonic Shadows trait, in the area. Finally, demons, devils, spirits, undead, and creatures with sunlight vulnerability or sunlight weakness are impaired for as long as they remain in the area. <b>Aftereffect</b> You must make a Strength challenge roll with 4 banes. On a failure, you can’t cast this spell again for 1d20 days. OP" 
     },
     { 
         name: "Call Down the Heavens", 
         tradition: "Celestial", 
         rank: 10, 
         type: "Attack", 
-        targetArea: "Point on ground within 10 miles",
+        targetArea: "Point on ground you can see within 10 miles",
         duration: "Instantaneous",
-        desc: "1-mile radius explosion. 10d6+25 damage and Agi challenge (1 bane) or blinded 1 hour (also dazed/fatigued). Creates a large crater. Aftereffect: Str challenge (5 banes) or permanently blinded. OP" 
+        desc: "Req: Must be able to see the sky. A star falls from the heavens and strikes the target, exploding in a 1-mile radius. The explosion deals 10d6 + 25 damage to everything in the area. Each creature in the area must make an Agility challenge roll with 1 bane. A creature takes half the damage on a success, or becomes blinded for 1 hour on a failure. A creature blinded by this spell is also dazed and fatigued. The fallen star creates a crater that forms a hemisphere, 10 yards deep and 20 yards in diameter. <b>Aftereffect</b> You must make a Strength challenge roll with 5 banes. On a failure, your eyes burn out, causing you to become permanently blinded. OP" 
     },
           { 
         name: "Pressing Strike", 
@@ -5828,7 +5828,7 @@
         type: "Attack", 
         targetArea: "Self",
         duration: "Instantaneous",
-        desc: "Make an attack with one melee weapon you are wielding.  You can substitute Intellect for the attribute you would normally use to make the attack roll.  On a success, the attack deals normal damage, and you and the target move up to 5 yards in a direction you choose. OP" 
+        desc: "Make an attack with one melee weapon you are wielding. You can substitute Intellect for the attribute you would normally use to make the attack roll.  On a success, the attack deals normal damage, and you and the target move up to 5 yards in a direction you choose. OP" 
     },
     { 
         name: "Savage Strike", 
@@ -6753,9 +6753,9 @@
         tradition: "Celestial", 
         rank: 4, 
         type: "Attack", 
-        targetArea: "25yd tall, 2yd radius cylinder within extreme range",
+        targetArea: " vertical cylinder, 25 yards tall with a 2-yard radius,centered on a point on the ground within extreme rangethat is lit by the sun",
         duration: "Instantaneous",
-        desc: "Requires sunlight. Deals 2d6 + 3 damage. Strength challenge: Success = half damage; Failure = prone and fatigued for 1 minute. Desolation" 
+        desc: "A beam of intense sunlight deals 2d6 + 3 damage toeverything in the area. Each creature that takes damage thisway must make a Strength challenge roll. It falls prone andbecomes fatigued for 1 minute on a failure, or just takes halfthe damage on a success. Desolation" 
     },
     { 
         name: "Curse of the Tomb Kings", 
@@ -7241,7 +7241,7 @@
         type: "Attack", 
         targetArea: "3-yard radius sphere within short range",
         duration: "1 minute",
-        desc: "Req: Mad Devotion & Seekers of the Wandering Star cult. Will challenge each round: Failure = 1d3 damage and frightened 1 round. Sphere moves randomly each round. Hunger" 
+        desc: "Req: Mad Devotion & Seekers of the Wandering Star cult. Lurid red light fills the area for the duration. When the light appears and again at the end of each round until the spell ends, each creature in the area must make a Will challenge roll. On a failure, the creature takes 1d3 damage from the burning light and becomes frightened for 1 round. At the end of each round until the spell ends, roll a d6. On a 1, the sphere moves 1d6 yards toward you. On a 2–5, the sphere moves a number of yards equal to the number rolled in a random direction. On a 6, the sphere moves up to 6 yards in a direction you choose. Hunger" 
     },
     { 
         name: "Fomor Doom", 
@@ -7446,9 +7446,9 @@
         tradition: "Celestial", 
         rank: 2, 
         type: "Utility", 
-        targetArea: "10yd long, 2yd wide line within medium range",
+        targetArea: "A line 10 yards long, 2 yards wide, and 1 inch thick,originating from a point within medium range, each endof which must be in contact with a solid surface",
         duration: "Concentration, up to 1 minute",
-        desc: "Night/Underground only. Area becomes solid and sheds soft light. Sacrifice: Expend to cast Burning Beam. Terrible Beauty" 
+        desc: "Night/Underground only. Soft light fills the area and remains for the duration. The area becomes solid and able to hold any weight placed on it. <b>Sacrifice</b> You can expend a casting of this spell to cast the Burning Beam spell. Terrible Beauty" 
     },
     { 
         name: "Create Secret Door", 
