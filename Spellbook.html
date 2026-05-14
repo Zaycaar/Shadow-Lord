@@ -7268,7 +7268,7 @@
         type: "Attack", 
         targetArea: "One demon within short range",
         duration: "Permanent until object destroyed",
-        desc: "Req: Hold 1+ gc object. Take 1d6+1 damage. Intellect vs Will. Success: Trap demon in object. Object gains magic properties but becomes Corrupted (touch = Will challenge or gain 1 Corruption). Hunger" 
+        desc: "Req: You must be holding in one hand an object that is worth at least 1 gc. You brandish the object at the target and take 1d6 + 1 damage. Make an Intellect attack roll against the target’s Will. If the target is Size 1/2 or smaller, you make the attack roll with 1 boon. For each point of Size the demon is larger than 1, you make the attack roll with 1 bane. On a success, the demon sheds its physical form, which dissolves in the space it occupied, and its essence streams into the object you brandished, where it remains until the object is destroyed. When the demon’s essence enters the object, roll a d6. On a 1, the object gains a special property, determined by rolling on the Demonic Object Properties table in chapter 4. On a 2–5, the object gains one randomly determined enchanted object property.On a 6, the object gains 1d3 randomly determined enchanted object properties. Regardless of the properties the object gains, it is corrupted, and any creature that touches it must get a success on a Will challenge roll or gain 1 Corruption. Once a creature gains Corruption in this way, it is not at risk of gaining further Corruption from the object. If the object is destroyed, the demon bound to it appears in a new body in an open space of the GM’s choice within short range of the object. Sacrifice You can use an action to expend a casting of this spell to cast the Call Lesser Demon spell. Hunger" 
     },
     { 
         name: "Demonic Blessing", 
@@ -7277,7 +7277,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 minute",
-        desc: "Take 1d6+1 damage. Gain a random demonic talent. If you gain 1 Corruption at casting, duration becomes 1 hour. Hunger" 
+        desc: "Take 1d6 + 1 damage. You gain a random demonic talent that remains for the duration. If you choose to gain 1 Corruption when you cast the spell but before you determine the talent, the duration increases to 1 hour. Hunger" 
     },
     { 
         name: "Draw Forth the Soul Screaming", 
@@ -7286,16 +7286,16 @@
         type: "Attack", 
         targetArea: "One living mortal within short range",
         duration: "Special",
-        desc: "Take 2d6 damage. Intellect vs Will (1 boon if target has 6+ Corruption). Success: Target stunned while concentrating. Concentrate 1 min: Target dies; soul becomes a Shadow. Hunger" 
+        desc: "Take 2d6 damage. A tendril of magical darkness leaps from the center of your forehead toward the target. Make an Intellect attack roll against the target’s Will. If the target has 6 or more Corruption, you make the attack roll with 1 boon. If the target has Health 30 or higher, you make the attack roll with 1 bane. On a success, the target becomes stunned for as long as you concentrate, during which it time it screams. If you concentrate for 1 minute, the target dies and you draw forth its soul, which immediately becomes a <b>Shadow</b>. If you choose to gain 1 Corruption, the shadow is compelled for 1 hour or until it becomes incapacitated. <b>Attack Roll 20+:</b> The target dies and you draw forth its soul as described in the effect. Hunger" 
     },
     { 
         name: "Void Breach", 
         tradition: "Demonology", 
         rank: 9, 
         type: "Utility", 
-        targetArea: "One point within extreme range",
+        targetArea: "One point you can see within extreme range",
         duration: "Special",
-        desc: "Take 10d6 damage and gain Insanity = Will. Punch a hole in reality creating a Void Breach (random duration/effects). Hunger" 
+        desc: "Take 10d6 damage and gain Insanity equal to your Will. You punch a hole in reality at the target point to create a <b>Void breach</b>. Determine randomly the breach’s duration, area of influence, and effects. Hunger" 
     },
     { 
         name: "Invoke the Nameless One", 
@@ -8051,7 +8051,7 @@
         type: "Attack", 
         targetArea: "One creature within short range",
         duration: "Instantaneous",
-        desc: "Take 1 damage. Intellect vs Agility. Success: 1d3 + Corruption damage. <b>Attack Roll 20+:</b>: Move target 1yd and it is impaired for 1 round. DLC" 
+        desc: "Take 1 damage. A black claw materializes in the air and slashes at the target. Make an Intellect attack roll against the target’s Agility. On a success, the target takes damage equal to 1d3 + your Corruption. <b>Attack Roll 20+:</b>: Move target 1yd and it is impaired for 1 round. DLC" 
     },
     { 
         name: "Demonic Guidance", 
@@ -8060,16 +8060,16 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 minute",
-        desc: "Take 1 damage. Gain 1 boon on all rolls. Each failure grants 1 Insanity (no fear from this gain). Triggered: Use for 2 boons on one roll; failure deals 1d6 damage and 1 Insanity. DLC" 
+        desc: "Take 1 damage. For the duration, you make attack rolls and challenge rolls with 1 boon. Each time you fail, you gain 1 Insanity. You do not become frightened as a result of gaining Insanity in this way. <b>Triggered</b> When you make an attack roll or challenge roll, you can use a triggered action to cast this spell. You make the roll with 2 boons, but if you fail, you take 1d6 damage and gain 1 Insanity. After the roll, the spell ends. DLC" 
     },
     { 
         name: "Compel Demon", 
         tradition: "Demonology", 
         rank: 1, 
         type: "Attack", 
-        targetArea: "One demon within short range",
+        targetArea: "One demon you can see within short range",
         duration: "1 minute",
-        desc: "Take 1d3 damage. Intellect vs Will (1 boon if you summoned it). Success: Demon is compelled. Failure: Demon gains 1 boon vs you and is immune to your Compel. DLC" 
+        desc: "Take 1d3 damage, and make an Intellect attack roll against the target’s Will. If you caused the target to appear by casting a Demonology spell, you make the roll with 1 boon. On a success, the target becomes compelled for 1 minute. On a failure, the demon makes attack rolls against you with 1 boon and becomes immune to your castings of this spell. <b>Attack Roll 20+</b> The demon becomes compelled until you complete a rest.. DLC" 
     },
     { 
         name: "Favor of the Demon Lord", 
@@ -8078,7 +8078,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "Special",
-        desc: "Take 1d3 damage. Gain 1d6 Insanity. If you don't go mad: +4d6 Health and 1 boon on all rolls. Roll d6 at end of each round; 6 ends effect. DLC" 
+        desc: "Take 1d3 damage. The Demon Lord’s shadow falls upon you. Gain 1d6 Insanity. Unless you go mad, you increase your Health by 4d6, and you make all attack rolls and challenge rolls with 1 boon. At the end of each round, roll a d6. A 6 ends the effect. DLC" 
     },
     { 
         name: "Offering of Blood", 
