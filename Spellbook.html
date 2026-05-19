@@ -4762,16 +4762,16 @@
         type: "Attack", 
         targetArea: "One Size 1 or smaller object within short range",
         duration: "Instantaneous",
-        desc: "Caster takes 1 damage. Will challenge. Success: Object takes 2d6 damage. If destroyed, it explodes dealing half damage within 1yd. 20+: +1d6 extra damage. OP" 
+        desc: "You take 1 damage. Make a Will challenge roll. On a success, the target takes 2d6 damage. If the damage destroys the target, it explodes, dealing half the damage it took to  everything within 1 yard of it. A creature in the area can make  an Agility challenge roll and takes no damage on a success. <b>Attack Roll 20+:</b> The target takes 1d6 extra damage. OP" 
     },
     { 
         name: "Splinter", 
         tradition: "Destruction", 
         rank: 0, 
         type: "Attack", 
-        targetArea: "3-yard cone",
+        targetArea: "3-yard cone starting in your space",
         duration: "Instantaneous",
-        desc: "Req: Holding Size 1/4 or 1/8 object. Caster takes 1 damage; object breaks. Deals 1d6+2 damage to area (Agi half). OP" 
+        desc: "Req: Holding Size 1/4 or 1/8 object. You take 1 damage and cause the object you are holding to break, sending splinters into the area. The splinters deal 1d6 + 2 damage to everything in the area. A creature in the area can make an Agility challenge roll and takes half the damage on a success. OP" 
     },
     { 
         name: "Maim", 
@@ -4780,7 +4780,7 @@
         type: "Attack", 
         targetArea: "One living creature in short range",
         duration: "Special",
-        desc: "Caster takes 2 damage. Will vs Str. Success: 2d6+1 damage. Friendly witnesses must pass Will challenge or be frightened 1 min. 20+: +1d6 extra damage. OP" 
+        desc: "You take 2 damage and release a blast of destructive energy at the target. Make a Will attack roll against the target’s Strength. On a success, the target takes 2d6 + 1 damage. Any creature that is friendly to the target and that can see it must make a Will challenge roll or become frightened for 1 minute. A creature frightened by this effect can make a Will challenge roll at the end of each round and removes the affliction from itself on a success. <b>Attack Roll 20+</b> The target takes 1d6 extra damage. OP" 
     },
     { 
         name: "Snap Bone", 
@@ -4788,17 +4788,17 @@
         rank: 1, 
         type: "Attack", 
         targetArea: "One creature with a skeleton in short range",
-        duration: "1 minute",
-        desc: "Caster takes 2 damage. Will vs Str. Success: 2d6 damage and slowed. 20+: Target is also dazed for 1 round. OP" 
+        duration: "Instantaneous",
+        desc: "You take 2 damage and make a twisting gesture at the target. Make a Will attack roll against the target’s Strength. On a success, a bone breaks inside the target’s body, causing the target to take 2d6 damage and become slowed for 1 minute. <b>Attack Roll 20+</b> The target also becomes dazed for 1 round. OP" 
     },
     { 
         name: "Clear the Path", 
         tradition: "Destruction", 
         rank: 2, 
         type: "Attack", 
-        targetArea: "5-yard cone",
+        targetArea: "5-yard cone starting in reach",
         duration: "Instantaneous",
-        desc: "Caster takes 3 damage. Objects take 15 damage. Creatures: Str challenge or 4d6 damage and fall prone. Ground becomes difficult terrain. OP" 
+        desc: "You take 3 damage and bring your fist to the ground, causing destructive energy to spread through the area. Each object in the area takes 15 damage. Each creature in the area must make a Strength challenge roll. A creature takes 4d6 damage and falls prone on a failure, or just takes half the damage on a success. The ground under the cone becomes difficult terrain until cleared away. OP" 
     },
     { 
         name: "Ruinous Presence", 
@@ -4807,25 +4807,25 @@
         type: "Attack", 
         targetArea: "2-yard radius sphere centered on you",
         duration: "1 minute",
-        desc: "Caster takes 3 damage. Moving aura deals 1d6 damage to others each round (Str negates). Action: Suppress aura for 1 round to blast a target within short range (Will vs Agi) for 2d6+1. 20+: +1d6 extra damage. OP" 
+        desc: "You take 3 damage. You emanate waves of destructive energy into the area for the duration. The area moves with you, remaining centered on a point in your space. When you cast the spell and at the end of each round until the spell ends, everything in the area other than you takes 1d6 damage. A creature in the area can make a Strength challenge roll and takes no damage on a success. In addition, you can use an action to suppress the spell’s effect for 1 round and send a wave of destructive energy at a creature or object within short range. Make a Will attack roll against the creature’s or object\’s Agility. On a success, the wave hits and deals 2d6 + 1 damage to the target. <b>Attack Roll 20+</b> The target takes 1d6 extra damage. OP" 
     },
     { 
         name: "Crack the Earth", 
         tradition: "Destruction", 
         rank: 3, 
         type: "Attack", 
-        targetArea: "3-yard radius, 10-yard tall cylinder",
+        targetArea: "3-yard radius, 10-yard tall cylinder in long range",
         duration: "Instantaneous",
-        desc: "Caster takes 4 damage. Deals 5d6 damage to everything. Str challenge (flying has 1 bane) or fall prone; success is half damage. Ground becomes difficult terrain. OP" 
+        desc: "You take 4 damage and call down a pulse of concussive force. Everything inside the area takes 5d6 damage. A creature that would take this damage must make a Strength challenge roll. A flying creature makes the roll with 1 bane. A creature falls prone on a failure, or takes half the damage on a success. The ground under the area becomes difficult terrain until cleared away. OP" 
     },
     { 
         name: "Path of Ruin", 
         tradition: "Destruction", 
         rank: 3, 
         type: "Attack", 
-        targetArea: "Shapeable line (10x2x2 yards)",
+        targetArea: " A shapeable line, 10 yards long, 2 yards tall, and 2 yards wide, originating from a point you can reach",
         duration: "Instantaneous",
-        desc: "Caster takes 4 damage. Objects take 20 damage. Creatures: Str challenge or 4d6 damage, pushed 1d3 yards, and fall prone. OP" 
+        desc: "You take 4 damage to send a wave of destructive force through the area. Objects in the area take 20 damage. A creature in the area must make a Strength challenge roll. The creature takes 4d6 damage, moves 1d3 yards along the path of the line, and then falls prone on a failure, or takes half the damage on a success. OP" 
     },
     { 
         name: "Fragility", 
@@ -4834,25 +4834,25 @@
         type: "Attack", 
         targetArea: "Up to 5 creatures in medium range",
         duration: "1 minute",
-        desc: "Caster takes 5 damage. Targets are impaired. Str challenge (1 bane) or take double damage while impaired. Action: Will challenge (1 bane) to remove. OP" 
+        desc: "You take 5 damage and cause each target to become impaired for 1 minute. Each target must then make a Strength challenge roll with 1 bane. On a failure, for as long as the creature is impaired, it takes double damage. An affected target can use an action to make a Will challenge roll with 1 bane. On a success, the target removes the impaired affliction from itself. OP" 
     },
     { 
         name: "Tear Asunder", 
         tradition: "Destruction", 
         rank: 4, 
         type: "Attack", 
-        targetArea: "One creature in medium range",
+        targetArea: "One creature you can see in medium range",
         duration: "Instantaneous",
-        desc: "Caster takes 5 damage. Will vs Str. Success: Target lifted 2d6 yards, takes 7d6 damage, and falls. If injured: +3d6 extra. If incapacitated: killed instantly. 20+: +3d6 extra damage. OP" 
+        desc: "You take 5 damage and make a Will attack roll against the target’s Strength. On a success, the creature rises 2d6 yards into the air, takes 7d6 damage, and then falls. If the damage causes the creature to become injured, the target takes 3d6 extra damage. If the damage causes the creature to become incapacitated, the spell tears it to pieces, killing the creature instantly. <b>Attack Roll 20+</b> The target takes 3d6 extra damage. OP" 
     },
     { 
         name: "Brutal Concussion", 
         tradition: "Destruction", 
         rank: 5, 
         type: "Attack", 
-        targetArea: "5-yard radius sphere",
+        targetArea: "5-yard radius sphere in long range",
         duration: "Instantaneous",
-        desc: "Caster takes 6 damage. Objects take 30 damage. Creatures: Str challenge or 6d6 damage. If injured: Will challenge (1 bane) or stunned 1 min. OP" 
+        desc: "You take 6 damage. A wave of concussive force spreads through the area. Each object in the area takes 30 damage. A creature in the area must make a Strength challenge roll. A creature takes 6d6 damage on a failure, or half the damage on a success. If the damage causes the creature to become injured, it must also get a success on a Will challenge roll with 1 bane or become stunned for 1 minute.  OP" 
     },
     { 
         name: "Demolition", 
@@ -4861,7 +4861,7 @@
         type: "Attack", 
         targetArea: "One Size 10 or smaller object in long range",
         duration: "Instantaneous",
-        desc: "Caster takes 6 damage. Object takes 100 damage. If destroyed, it collapses; nearby creatures Agi challenge or 1d6 damage per object Size and fall prone. OP" 
+        desc: "You take 6 damage, and the target takes 100 damage. If the damage destroys the object, it collapses. Any creatures under or inside the object when it collapses must make an Agility challenge roll. A creature takes 1d6 damage per point of the target’s Size and falls prone on a failure, or just takes half the damage on a success. OP" 
     },
     { 
         name: "Cascading Ruin", 
@@ -4870,25 +4870,25 @@
         type: "Attack", 
         targetArea: "One creature you can reach",
         duration: "1 minute",
-        desc: "Caster takes 8 damage. Will vs Agi. Hit: 2d6 immediate damage. End of round: 1d6 + 1d6 per round concentrated (Str halves). 3 successes end effect. 20+: Target impaired/slowed. OP" 
+        desc: "You take 8 damage and make a Will attack roll against the target’s Agility. On a success, you touch the target and set in motion a vibration that builds in intensity for 1 minute. The target takes 2d6 damage immediately. At the end of each round, the target takes 1d6 damage plus 1d6 for each round you have concentrated on the effect. Each time the target takes this damage, it can make a Strength challenge roll and takes half the damage on a success. If the target gets three successes to halve this damage, the target ends the effect.<b>Attack Roll 20+</b> The target is also impaired until the spell ends. While the target is impaired by the spell, it is also slowed. OP" 
     },
     { 
         name: "Obliterate", 
         tradition: "Destruction", 
         rank: 6, 
         type: "Attack", 
-        targetArea: "10-yard radius sphere",
+        targetArea: "10-yard radius sphere in medium range",
         duration: "Instantaneous",
-        desc: "Caster takes 8 damage. Deals 8d6 damage to everything. Creatures: Str challenge or moved 1d6 yards and fall prone. Size 2 objects also move; hitting objects requires Agi challenge or 2d6 damage/prone. OP" 
+        desc: "You take 8 damage and cause concussive force to explode through the area, dealing 8d6 damage to everything in it. A creature in the area must make a Strength challenge roll. A creature moves 1d6 yards away from the origin point and falls prone on a failure, or takes half the damage on a success. Unsecured objects in the area of Size 2 or smaller move 1d6 yards away from the origin point. Anything in the object’s path as it moves in this way must get a success on an Agility challenge roll or take 2d6 damage and fall prone OP" 
     },
     { 
         name: "Bring It Down", 
         tradition: "Destruction", 
         rank: 7, 
         type: "Attack", 
-        targetArea: "Four 5-yard radius, 20-yard tall cylinders",
+        targetArea: "Up to four separate points on the ground within extreme range",
         duration: "Instantaneous",
-        desc: "Caster takes 12 damage. Deals 8d6 damage. Str challenge (1 bane per area, +1 if flying) or fall prone and stunned 1 min. OP" 
+        desc: "You take 12 damage. Four waves of concussive force crash down on each target. A wave is a 20-yard-tall cylinder with a 5-yard radius. Anything in at least one of the areas takes 8d6 damage. A creature in at least one of the areas must make a Strength challenge roll. It makes the roll with 1 bane for each area it happens to be in. It also makes the roll with 1 bane if it is flying. A creature falls prone and becomes stunned for 1 minute on a failure, or takes half the damage on a success. OP" 
     },
     { 
         name: "Annihilate", 
@@ -4897,16 +4897,16 @@
         type: "Attack", 
         targetArea: "10-yard radius sphere in 1 mile",
         duration: "Instantaneous",
-        desc: "Caster takes 18 damage. Health <= 30: Erased from existence. Others: Str challenge or 10d6 damage (Incapacitated = erased). Aftereffect: Will challenge (4 banes) or defenseless 1d6+1 days. OP" 
+        desc: "You take 18 damage. A wave of destructive energy spreads through the area. Anything in it that has a Health score of 30 or lower takes damage equal to its Health, dies or is destroyed, and then disappears, erased from existence. Anything in the area with a higher Health score must make a Strength challenge roll, taking 10d6 damage on a failure, or half the damage on a success. Any object destroyed by the damage and any creature incapacitated by the damage disappears, annihilated. <b>Aftereffect:</b> Make a Will challenge roll with 4 banes. On a failure, you become defenseless for 1d6 + 1 days. OP" 
     },
     { 
         name: "Cataclysm", 
         tradition: "Destruction", 
         rank: 9, 
         type: "Attack", 
-        targetArea: "1-mile radius circle",
+        targetArea: "1-mile radius circle within 10 miles",
         duration: "Instantaneous",
-        desc: "Caster takes 26 damage. Everything in area takes 25 damage. Aftereffect: Will challenge (4 banes) or take 25 damage and take double damage for 1d6 days. OP" 
+        desc: "You take 26 damage. Everything under the area takes 25 damage. Aftereffect You must succeed on a Will challenge roll with 4 banes, or you take 25 damage and you also take double damage from all sources for 1d6 days.  OP" 
     },
     { 
         name: "Raze", 
@@ -4915,7 +4915,7 @@
         type: "Attack", 
         targetArea: "One Size 300 or smaller object",
         duration: "Instantaneous",
-        desc: "Object takes damage equal to Health and disappears. Aftereffect: Will challenge (5 banes) or tear hole to Void (1-mile radius drag-in effect). OP" 
+        desc: "The target takes damage equal to its Health and disappears. <b>Aftereffect:</b> You must get a success on a Will challenge roll with 5 banes, or you punch a hole into the Void at a point you can reach. Each creature and unsecured object within 1 mile of the target must get a success on a Strength challenge roll with 5 banes or be picked up and dragged through the hole and lost to the domain of the Demon Lord before the hole snaps shut. OP" 
     },
           { 
         name: "Conjure Tiny Monster", 
