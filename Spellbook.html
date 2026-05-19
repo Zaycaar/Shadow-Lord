@@ -5016,9 +5016,9 @@
         tradition: "Demonology", 
         rank: 0, 
         type: "Attack", 
-        targetArea: "3-yard cone",
+        targetArea: "3-yard cone, starting in reach",
         duration: "1 minute",
-        desc: "Caster takes 1 damage. Will challenge. Failure: +1 Insanity and deafened for 1 minute. OP" 
+        desc: "You take 1 damage. Your eyes turn black, and tiny black hands reach up from your throat to force open your mouth, which then issues a deafening scream. Each creature in the area must get a success on a Will challenge roll or gain 1 Insanity and become deafened for 1 minute. OP" 
     },
     { 
         name: "Written in Blood", 
@@ -5027,7 +5027,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 minute",
-        desc: "Caster takes 1 damage. -5 Health penalty. While active: attackers take 2 banes; caster gets 2 boons to resist attacks. OP" 
+        desc: "You take 1 damage. All over your body, your flesh splits to form foul script in the Dark Speech. You take a –5 penalty to Health that lasts for the duration. While you have this penalty, you impose 2 banes on attack rolls made against you, and you make challenge rolls to resist attacks with 2 boons. OP" 
     },
     { 
         name: "Mark of the Beast", 
@@ -5036,7 +5036,7 @@
         type: "Attack", 
         targetArea: "One creature in reach",
         duration: "1 minute",
-        desc: "Caster takes 1d3 damage. Int vs Agi. Hit: Target must use an action to attack randomly each turn. End of round: Will challenge or +1 Insanity. 20+: Failures grant 1d3 Insanity. OP" 
+        desc: "You take 1d3 damage. The flesh covering your finger pulls back to reveal blood, meat, and bone, and then snaps back into place. Make an Intellect attack roll against the target’s Agility. On a success, you touch the target with your bleeding digit, leaving behind a smudge of blood that remains for 1 minute. While the target has this mark, it must use an action to attack on each of its turns, using a charge if necessary. If presented with multiple targets, it must choose the target randomly. Furthermore, at the end of each round, the target must get a success on a Will challenge roll or gain 1 Insanity, though it does not become frightened as a result of gaining Insanity in this way. If the target goes mad from gaining Insanity, it gains 1 Corruption and then reduces its Insanity total by 1d3. <b>Attack Roll 20+:</b> The target gains 1d3 Insanity, instead of 1 Insanity, when it gets a failure on its Will challenge roll. OP" 
     },
     { 
         name: "Minor Demon", 
@@ -5045,7 +5045,7 @@
         type: "Utility", 
         targetArea: "Special",
         duration: "Special",
-        desc: "Caster takes 1d3 damage. Options: 1. Release Tiny Demon (1hr conc, Int vs Will to compel); 2. Heal Demon (3d6); 3. Torment Demon (Will vs Agi, deals 3d6, regain Rank 0 casting). OP" 
+        desc: "You take 1d3 damage and choose one of the following effects. Release Tiny Demon Choose a cube of space, 1 yard on a side, resting on a solid surface originating from a point within short range. Concentrate for 1 hour, during which time you chant, rock back and forth, and pierce your flesh with barbed needles. At the end of this time, a hole opens in reality to release a <b>Tiny Demon</b> that remains until it is destroyed or until you use this function of the spell again. When the demon appears, you make an Intellect attack roll against the demon’s Will. On a success, the demon becomes friendly to you and accompanies you. It obeys your commands, but only if issued in Dark Speech. You could command the demon to attack, guard a location, or perform any other task, even if it means the demon’s destruction. On a failure, the demon is hostile to you and all other creatures. <b>Heal Demon:</b> One demon you choose within short range heals 3d6 damage. <b>Torment Demon:</b> Make a Will attack roll against the Agility of one tiny demon you can see within short range. On a success, the demon takes 3d6 damage and you regain the expended casting of a rank 0 spell. OP" 
     },
     { 
         name: "Bestow Mark of Darkness", 
@@ -5054,7 +5054,7 @@
         type: "Attack", 
         targetArea: "One creature in medium range",
         duration: "1 minute",
-        desc: "Caster takes 1d6 damage. Int vs Will. Success: Target gains 1 Corruption and a random Mark of Darkness; becomes charmed. Sacrifice: Heal a demon 3d6. OP" 
+        desc: "You take 1d6 damage. Make an Intellect attack roll against the target’s Will. On a success, the target gains 1 Corruption and automatically gains a random <b>Mark of Darkness</b>. The target then becomes charmed by you for 1 minute. When it removes the charmed affliction from itself, it remembers being charmed by you. <b>Sacrifice:</b> You can use an action and expend a casting of this spell to cause one demon within short range to heal 3d6 damage. OP" 
     },
     { 
         name: "Blood Harvest", 
@@ -5063,7 +5063,7 @@
         type: "Attack", 
         targetArea: "Up to 3 creatures in short range",
         duration: "Instantaneous",
-        desc: "Caster takes 1d6 damage. Str challenge (1 bane). Failure: 3d6 damage and caster gains 1d6 Blood Points. Blood Points can be spent to negate damage from casting Demonology spells. OP" 
+        desc: "You take 1d6 damage. Each target must make a Strength challenge roll with 1 bane. On a failure, a creature takes 3d6 damage as bleeding lacerations appear all over its body. For each creature that got a failure on the roll, you gain 1d6 blood points. When you cast a Demonology spell and would take damage from casting the spell, you can remove 1 damage for each blood point you spend. While you have at least 1 blood point, your eyes weep blood. OP" 
     },
     { 
         name: "Demon Seed", 
@@ -5072,7 +5072,7 @@
         type: "Attack", 
         targetArea: "One living creature in short range",
         duration: "Special",
-        desc: "Caster takes 1d6+1 damage. Int vs Agi. Hit: Target makes Str challenge (1 bane) each round. 3 Failures: Belly bursts for 3d6 damage, Insanity = Will, and releases a tiny demon. OP" 
+        desc: "You take 1d6 + 1 damage. You flick a glistening dollop of liquid at the target. Make an Intellect attack roll against the target’s Agility. On a success, the liquid strikes the target and is absorbed into its body. At the end of each round, the target must make a Strength challenge roll with 1 bane. On a failure, the target takes 1d6 damage as its belly bulges out until its flesh begins to tear, weeping blood and gore from the fissures. If the target gets three successes, its belly deflates and a river of corrupted fluids flows from its body for a few minutes. If the target gets three failures, its belly bursts to release a <b>Tiny Demon</b> in an open space within 1 yard of it. The target then takes 3d6 damage and gains Insanity equal to its Will score. The demon acts according to its nature, takes the next available turn, and remains until it’s destroyed. OP" 
     },
     { 
         name: "Vision of Nowhere", 
@@ -5081,43 +5081,43 @@
         type: "Attack", 
         targetArea: "One creature in medium range",
         duration: "Instantaneous",
-        desc: "Caster takes 1d6+1 damage. Int vs Will. Success: Target gains 2d6 Insanity. If they go mad and become incapacitated, they die and soul is destroyed. 20+: Target falls prone. OP" 
+        desc: "You take 1d6 + 1 damage. Make an Intellect attack roll against the target’s Will. On a success, you blast the target’s mind with the emptiness of the Void, causing it to gain 2d6 Insanity. If the target goes mad as a result of gaining this Insanity and becomes incapacitated while suffering the effects of madness, it dies and its soul is dragged screaming into the Void, where it is destroyed. <b>Attack Roll 20+</b> The target also falls prone. OP" 
     },
     { 
         name: "Demonic Maw", 
         tradition: "Demonology", 
         rank: 4, 
         type: "Utility", 
-        targetArea: "2-yard cube",
+        targetArea: "2-yard cube within long range",
         duration: "Concentration, up to 1 minute",
-        desc: "Caster takes 1d6+2 damage. Moving mouth (Defense 15, HP 40). Action: Move 5yds and attack (Will +1 boon vs Defense) for 4d6. 20+: Swallows target into the Void. OP" 
+        desc: "You take 1d6 + 2 damage. A yawning mouth appears inside the area and remains for the duration. When the maw appears and each time you use an action to concentrate on the spell, you can move the maw up to 5 yards and then attack a creature within 1 yard of it. Make a Will attack roll with 1 boon against the target’s Defense. On a success, the maw chomps down on the creature, dealing 4d6 damage. The maw can be attacked. It has Defense 15, Health 40, and it counts as an object. If it is destroyed, the spell ends immediately. <b>Attack Roll 20+</b> The maw swallows the creature, drawing it into its space, where it disappears from view. A swallowed creature is held in a bubble extending out into the Void, has total cover from everything, and is blinded, deafened, and immobilized. At the end of each round, the creature must get a success on a Will challenge roll or gain 1 Insanity. If the creature dies while swallowed, its body is sucked into the Void, lost forever. If the creature is still alive when the spell ends, it is spit out to land prone inside the spell’s area. The maw otherwise functions as described above. OP" 
     },
     { 
         name: "Query the Void", 
         tradition: "Demonology", 
         rank: 4, 
         type: "Attack", 
-        targetArea: "One defenseless/unconscious creature",
+        targetArea: "One defenseless/unconscious creature in medium range",
         duration: "6 minutes",
-        desc: "Caster takes 1d6+2 damage. Target is possessed by a demon; you may ask 3 questions (GM rolls for demon's cooperation, page 42). Sacrifice: Cast Possession. OP" 
+        desc: "You take 1d6 + 2 damage. The target heals 1 damage, removes the defenseless and unconscious afflictions from itself, and becomes possessed by a demon for the duration. Until the spell ends, the demon has full control over the target’s body and can speak using its mouth. You can ask the demon up to three questions. Each time you ask the demon a question, the GM secretly rolls 3d6 and consults the table (Occult Philosophy page 42) to see what the demon does. <b>Sacrifice:</b> You can use an action and expend a casting of this spell to cast the Possession spell. OP" 
     },
     { 
         name: "Steal Form from Substance", 
         tradition: "Demonology", 
         rank: 5, 
         type: "Attack", 
-        targetArea: "5-yard radius sphere",
+        targetArea: "5-yard radius sphere within long range",
         duration: "1 minute",
-        desc: "Caster takes 2d6 damage. Demons in area get +2 boons and +1d6 damage. Objects take 30 damage. Creatures: Str challenge or 6d6 damage; incapacitated = die and turn to jelly. OP" 
+        desc: "You take 2d6 damage and create a field of instability in the area that lasts for the duration. Demons in the area make attack rolls with 2 boons and their attacks deal 1d6 extra damage. In addition, when you cast the spell, each object in the area takes 30 damage. Objects destroyed by the damage collapse into formless jelly. Creatures in the area when you cast the spell must make a Strength challenge roll. A creature takes 6d6 damage on a failure, or half the damage on a success. Any creature incapacitated by the damage dies, collapsing into a pool of formless jelly. Jelly created by this spell evaporates into the Void after 1 hour. OP" 
     },
     { 
         name: "Unholy Chorus", 
         tradition: "Demonology", 
         rank: 5, 
         type: "Attack", 
-        targetArea: "Up to 8 creatures in long range",
+        targetArea: "Up to 8 creatures you can see in long range",
         duration: "Special",
-        desc: "Caster takes 2d6 damage. Will challenge (1 bane). Failure: +1 Corruption and stunned. While stunned, target 'sings'; nearby creatures must pass Will challenge or gain 1d6 Insanity. OP" 
+        desc: "You take 2d6 damage. Each target must make a Will challenge roll with 1 bane. On a failure, it gains 1 Corruption and becomes stunned for a number of rounds equal to 1 + its Corruption total. When stunned in this way, the creature throws its head back and makes an awful racket that sounds something like singing. At the end of each round, any creature within 3 yards of a singing creature must get a success on a Will challenge roll or gain 1d6 Insanity. A creature or object in the area of more than one singing creature makes the roll with 1 bane for each creature beyond the first one. If a stunned creature takes any damage, it removes the stunned affliction from itself. OP" 
     },
     { 
         name: "Create Demon Spawn", 
@@ -5126,7 +5126,7 @@
         type: "Attack", 
         targetArea: "One living creature in long range",
         duration: "1 hour",
-        desc: "Caster takes 4d6 damage. Will +1 boon (3 boons if HP <= 40) vs Str. Success: Target becomes a Demon Spawn (horrifying monster, +Health, +Def, +Speed, spell resistance, natural weapons). 20+: Permanent. OP" 
+        desc: "You take 4d6 damage. Threads of dark energy leap from your open mouth toward the target. Against an unwilling target, make a Will attack roll with 1 boon against the target’s Strength. If the target has a Health score of 40 or lower, you make the attack roll with 3 boons. On a success, the target becomes a demon spawn for 1 hour. Against a willing target, you get an automatic success. The demon spawn is friendly to you and might obey your spoken commands. Until the spell ends, the target has the following benefits and drawbacks. • Gains the horrifying trait and changes its descriptor to Monster • Gains a +2 bonus to Perception • Gains darksight • Gains a +2 bonus to Defense • Gains a bonus to Health equal to half its original Health score • Gains a +1 bonus to Strength and Agility • Takes a –3 penalty to Intellect and Will • Gains a +2 bonus to Speed • Cannot gain Insanity • Takes half damage from spells, imposes 1 bane on attack rolls against it from spells, and makes challenge rolls to resist attack spells with 1 boon • Makes attack rolls using natural weapons with 1 boon and deals 1d6 extra damage on such attacks; if the target does not have a natural weapon, it gains one with the finesse property that deals 1d6 damage if Size 1/4 or smaller, 2d6 if Size 1/2, 3d6 if Size 1, 4d6 if Size 2, or 5d6 if Size 3 or larger Attack Roll 20+ The effect is permanent. OP" 
     },
     { 
         name: "Call Greater Demon", 
@@ -5135,7 +5135,7 @@
         type: "Utility", 
         targetArea: "3-yard cube in short range",
         duration: "Instantaneous",
-        desc: "Caster takes 4d6 damage. Roll d6 on table (Page 43) to determine which demon emerges from a hole in reality. Acts according to its nature. OP" 
+        desc: "You take 4d6 damage. You tear a hole in reality inside the area. Roll a d6 to see what happens, after wards The hole then closes. A demon that emerges from the hole acts according to its nature, takes the next available turn, and remains until it’s destroyed. 1:A Huge Demon emerges from the hole and moves onto a solid surface nearest to the area. 2-5:A Large Demon emerges from the hole and moves onto a solid surface nearest to the area. 6:Nothing Happens.  OP" 
     },
     { 
         name: "Demonic Horde", 
@@ -5144,7 +5144,7 @@
         type: "Utility", 
         targetArea: "Medium range",
         duration: "Special",
-        desc: "Caster takes 6d6 damage. Summon 1d3+1 mobs of small demons. They act according to their nature. OP" 
+        desc: "You take 6d6 damage. You tear holes in reality to release 1d3 + 1 mobs of small demons (see page 136) to move into open spaces on solid surfaces of the GM’s choice farther than short range from you but within medium range. The mobs remain until all the small demons created using the mob’s spawn traits have been destroyed. The holes then close. The demons act according to their nature, take the next available turn, and remain until they’re destroyed. OP" 
     },
     { 
         name: "Into the Void", 
@@ -5153,16 +5153,16 @@
         type: "Attack", 
         targetArea: "One creature in medium range",
         duration: "Instantaneous",
-        desc: "Caster takes 8d6 damage. Int vs Str. Success: Target sucked into Void. Caster gains 1 Corruption and must pass Will challenge (-4 banes) or gain 1d3 more Corruption/3d6 Insanity. 20+: Demons spill out (Table on page 43). OP" 
+        desc: "You take 8d6 damage. Make an Intellect attack roll against the target’s Strength. On a success, you tear a hole in reality, which then sucks the target into the Void. A target drawn into the Void is unlikely to be seen again. You then gain 1 Corruption. Make a Will challenge roll with 4 banes. On a failure, you gain an additional 1d3 Corruption and 3d6 Insanity. <b>Attack Roll 20+:</b> One or more demons come spilling out of the hole before it closes. The GM can roll on the table (Occult Philosophy, Page 43) to determine how many demons and of what kinds appear. A demon that emerges from the hole acts according to its nature, takes the next available turn, and remains until it’s destroyed. OP" 
     },
     { 
         name: "Call Titanic Demon", 
         tradition: "Demonology", 
         rank: 9, 
         type: "Utility", 
-        targetArea: "6-yard cube in short range",
+        targetArea: "A cube of space, 6 yards on a side, originating from a point within short range",
         duration: "Special",
-        desc: "Concentrate 1 hour. Caster takes 10d6 damage and +1d6 Corruption. Roll d6 on table (page 43) for titanic demon. Aftereffect: Will challenge (-4 banes) or possessed by huge demon. OP" 
+        desc: "Upon casting this spell, you must concentrate for 1 hour, during which time you must violate your body. When you finish, you take 10d6 damage and gain 1d6 Corruption, and you tear a hole in reality inside the area. Roll a d6 to see what happens. The hole then closes. A demon that emerges from the hole acts according to its nature, takes the next available turn, and remains until it’s destroyed. <b>Aftereffect</b> Make a Will challenge roll with 4 banes. On a failure, you are possessed by a Huge Demon. 1:1d3 Titanic Demons Emerge. 2-5:A Titanic Demon emerges. 6:Nothing Happens. OP" 
     },
     { 
         name: "Herald of the Demon Lord", 
@@ -5171,7 +5171,7 @@
         type: "Utility", 
         targetArea: "Self/1 mile radius",
         duration: "Concentration, 1 hour",
-        desc: "Str challenge (banes = Corruption). Fail: Die and Diabolus takes soul. Success: Concentrate 1hr (Will challenges). Result: Release compelled Demon Prince. Will challenge (-5 banes) each round to keep it compelled. Aftereffect: +3d6 Corruption. OP" 
+        desc: "When you use an action to cast this spell, you must make a Strength challenge roll with a number of banes equal to your Corruption score. On a failure, you take damage equal to your Health, and Diabolus himself comes to claim your soul. He places your soul in a special vessel from which it cannot escape until the last star burns out in the night sky. As well, everything within 1 mile of you takes 15 damage from the flames that spread out from the Devil when he enters the world. The Devil then leaves, returning to Hell. On a success, you must concentrate for 1 hour. For every 10 minutes you concentrate, you must get a success on a Will challenge roll or gain 1d6 Insanity. If you concentrate for the full time, you punch a hole through reality to release a compelled demon prince into the world. You can choose which demon prince appears from the options presented in The Hunger in the Void or from one you and your GM create together. At the end of each round, make a Will challenge roll with 5 banes. On a failure, the demon prince removes the compelled affliction from itself and becomes hostile to everything, doing its best to prepare the way for its dreaded master. <b>Aftereffect</b> You gain 3d6 Corruption. OP" 
     },
           { 
         name: "Face of Death", 
@@ -7250,7 +7250,7 @@
         type: "Attack", 
         targetArea: "One human within short range",
         duration: "Special",
-        desc: "Tendrils of dark power envelop the target. Make an Intellect attack roll against the target’s Strength. If the target has Health 15 or lower, you make the attack roll with 1 boon. If the target has Health 30 or higher, you make the attack roll with 1 bane. On a success, the target becomes frightened for as long as you concentrate. While frightened in this way, the target must use an action on each of its turns to attack with a weapon. If you concentrate for 1 minute, the target gains 1d6 Insanity and permanently transforms into a fomor. See Hunger in the Void pg 9 for changes. Huner" 
+        desc: "Tendrils of dark power envelop the target. Make an Intellect attack roll against the target’s Strength. If the target has Health 15 or lower, you make the attack roll with 1 boon. If the target has Health 30 or higher, you make the attack roll with 1 bane. On a success, the target becomes frightened for as long as you concentrate. While frightened in this way, the target must use an action on each of its turns to attack with a weapon. If you concentrate for 1 minute, the target gains 1d6 Insanity and permanently transforms into a fomor. See Hunger in the Void pg 9 for changes. Hunger" 
     },
     { 
         name: "Vision of Horror", 
