@@ -7295,16 +7295,16 @@
         type: "Utility", 
         targetArea: "One point you can see within extreme range",
         duration: "Special",
-        desc: "Take 10d6 damage and gain Insanity equal to your Will. You punch a hole in reality at the target point to create a <b>Void breach</b>. Determine randomly the breach’s duration, area of influence, and effects. Hunger" 
+        desc: "Take 10d6 damage and gain Insanity equal to your Will. You punch a hole in reality at the target point to create a <b>Void breach</b>. Determine randomly the breach’s duration, area of influence, and effects (Hunger in the void, chapter 1). Hunger" 
     },
     { 
         name: "Invoke the Nameless One", 
         tradition: "Destruction", 
         rank: 1, 
         type: "Attack", 
-        targetArea: "1d6-yard radius from you",
+        targetArea: "Self",
         duration: "1 minute",
-        desc: "Req: Mad Devotion & Nameless cult. Take 2 damage. Each round, pulse deals 1 damage to you and 1d6 to everything in area (Agility for no damage). Hunger" 
+        desc: "Req: Mad Devotion & Nameless cult. Take 2 damage. A pulse of destructive force rushes out from you when you cast the spell and at the end of each round until the spell ends. The pulse spreads from a point in your space out to a radius of 1d6 yards and deals 1 damage to you and 1d6 damage to everything in the area. A creature can make an Agility roll and takes no damage on a success. Hunger" 
     },
     { 
         name: "Pleasure from Pain", 
@@ -7313,7 +7313,7 @@
         type: "Attack", 
         targetArea: "One living creature within medium range",
         duration: "1 minute",
-        desc: "Req: 1+ Corruption. Intellect vs Will. Success: Whenever target takes damage, it takes 1d6 extra and gains 1 cumulative boon on its next turn. <b>Attack Roll 20+:</b>: Target also charmed. Hunger" 
+        desc: "Req: 1 or more Corruption. You warp the target’s senses so that it feels intense pleasure whenever it would feel pain. Make an Intellect attack rollagainst the target’s Will. If the target has 6 or more Insanity , you make the attack roll with 1 boon. On a success, for 1 minute, whenever the target takes damage, it takes 1d6 extra damage and then makes attack rolls and challenge rolls with 1 boon for 1 round. Boons gained this way are cumulative. <b>Attack Roll 20+:</b> The target is also charmed until the effect ends. Hunger" 
     },
     { 
         name: "Shed the Skin", 
@@ -7322,7 +7322,7 @@
         type: "Attack", 
         targetArea: "One living creature with skin",
         duration: "Permanent",
-        desc: "Req: 1+ Corruption. Intellect vs Strength. Success: Target's skin sloughs off; target becomes a Bloody Bones (loses original stats). Sacrifice: Hallucinations. Hunger" 
+        desc: "Req: 1 or more Corruption. Make an Intellect attack roll against the target’s Strength. If the target has Health 20 or lower, you get an automatic success. If the target has Health 40 or higher, you make the attack roll with 1 bane. On a success, the target’s skin sloughs from its body causing it to become a <b>Bloody Bones</b>. The target retains none of its original statistics. <b>Sacrifice</b> You can expend a casting of this spell to cast the hallucinations spell from the Fey tradition Hunger" 
     },
     { 
         name: "Invoke the One True God", 
@@ -7331,7 +7331,7 @@
         type: "Attack", 
         targetArea: "1-yard radius from you",
         duration: "1 minute",
-        desc: "Req: Mad Devotion & Knights of the One True God cult. Creatures within 1yd take 1d6 damage. Gain a ball of flame over head; use action to hurl for 1d6 damage (Will vs Agility). Hunger" 
+        desc: "Req: Mad Devotion & Knights of the One True God cult. Flames rush out from you, causing each creature and object within 1 yard of you to take 1d6 damage. A creature can make an Agility challenge roll and takes half the damage on a success. For the duration, a ball of flame burns over your head, shedding light in a 2-yard radius. You can use an action to attack with the ball of flame, hurling it at one creature within short range. Make a Will attack roll against the target’s Agility. On a success, the target takes 1d6 damage. At the end of the round in which you threw the ball of flame, if the spell has not ended, a new ball of flame appears over your head. Hunger" 
     },
     { 
         name: "Invoke the Glistening Prince", 
@@ -7340,7 +7340,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 minute",
-        desc: "Req: Mad Devotion & Philosophers of the Glistening Prince cult. Take 1d6 damage and gain half-damage resistance. Each time you take damage, make Will challenge or gain 1 Insanity. Hunger" 
+        desc: "Req: Mad Devotion & Philosophers of the Glistening Prince cult. You take 1d6 damage from tearing your flesh and then take half damage for the duration. Each time you take damage after the initial damage, you must get a success on a Will challenge roll or gain 1 Insanity. Hunger" 
     },
     { 
         name: "Invoke Mother of Monsters", 
@@ -7349,25 +7349,25 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "Instantaneous",
-        desc: "Req: Mad Devotion & Mother’s Children cult. Take damage = healing rate. Birth a small horrifying monster under your control. You are dazed until it is incapacitated. Hunger" 
+        desc: "Req: Mad Devotion & Mother’s Children cult. Your belly swells and then splits open to give birth to a <b>Small Monster</b> that has the horrifying trait. You take damage equal to your healing rate and become dazed for 1 minute or until the monster you birthed is incapacitated. You control the monster and make all decisions about what it does on each of its turns. Hunger" 
     },
     { 
         name: "Create Zombie", 
         tradition: "Necromancy", 
         rank: 2, 
         type: "Utility", 
-        targetArea: "One Size 1/2 or 1 humanoid corpse",
+        targetArea: "One Size 1/2 or 1 humanoid corpse in reach",
         duration: "Permanent",
-        desc: "Maintain contact for 1 minute to imbue corpse with dark power, turning it into a compelled zombie. Hunger" 
+        desc: "You touch the target and imbue it with dark power. If you concentrate for 1 minute, during which time you must maintain contact with it, the target becomes a compelled <b>Zombie</b>. Hunger" 
     },
     { 
         name: "Exacting Chains", 
         tradition: "Protection", 
         rank: 5, 
         type: "Attack", 
-        targetArea: "One creature within medium range",
+        targetArea: "One creature you can see within medium range",
         duration: "Concentration, up to 1 minute",
-        desc: "Req: 1+ Corruption. Intellect vs Agility. Success: Target defenseless (immune to all damage but yours). Concentration: Intellect vs Will to deal 2d6 damage and apply afflictions. Hunger" 
+        desc: "Req: 1+ Corruption. Chains of glossy black links and manacles spring into existence around the target and attempt to secure it. Make an Intellect attack roll against the target’s Agility. If the target is a demon, you make the attack roll with 2 boons. On a success, the target becomes defenseless for as long as you concentrate, up to 1 minute. While the target is defenseless in this way, it is immune to damage from all sources other than you. Each time you use an action to concentrate on this spell, you can afflict the target with mind-shattering agony. Make an Intellect attack roll against the target’s Will. On a success, the target takes 2d6 damage and you can bestow one of the following afflictions on the target: charmed, frightened, or impaired. The affliction lasts for as long as the target is defenseless. If the target was already charmed, it becomes compelled for 1 hour instead. If it was already frightened, the target becomes dazed for 1 hour instead. If the target was already impaired, it becomes blinded for 1 hour instead. If at any time you get a failure on attack roll against the affected target, the spell ends, and the target can take the next available turn. Hunger" 
     },
     { 
         name: "Invoke the Eternal Shadow", 
@@ -7376,7 +7376,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 minute",
-        desc: "Req: Mad Devotion & Brothers of the Eternal Shadow cult. Gain darkvision, 3 boons to hide, and immunity to Celestial attacks. Can extinguish light sources as action/triggered. Hunger" 
+        desc: "Req: Mad Devotion & Brothers of the Eternal Shadow cult. Slippery black fluid runs out of all your orifices to spread across your body until you are completely sheathed in the stuff. The substance remains for the duration. Until the spell ends, you have darkvision, you make challenge rolls to become hidden with 3 boons, and you are immune to Celestial attack spells. In addition, you can use an action or a triggered action on each of your turns to extinguish one natural light source or a light source created by a rank 0 spell within short range. Hunger" 
     },
     { 
         name: "Screaming Shadows", 
@@ -7385,7 +7385,7 @@
         type: "Utility", 
         targetArea: "10-yard radius sphere within short range",
         duration: "1 hour",
-        desc: "Req: 1+ Corruption. Area totally obscured. Creatures in area must make Will challenge each round or gain 1 Insanity. Madness = demonic possession. 12 on 2d6 ends spell with a Void Breach. Hunger" 
+        desc: "Req: 1+ Corruption. Chilling darkness fills the area, making it totally obscured for the duration. The darkness cancels all light from natural sources as well as sources created by spells of rank 2 or lower. The darkness blocks all nonmagical vision other than truesight. When the darkness appears and at the end of each round until the spell ends, each creature in the area must get a success on a Will challenge roll or gain 1 Insanity. A creature that goes mad from gaining this Insanity automatically becomes possessed by a demon. Roll a d6 to determine the demon’s size: 1, tiny; 2, small; 3, medium; 4, large; 5, huge; 6, titanic. Finally, at the end of each minute until the spell ends, roll 2d6. On a 12, the spell ends and a Void Breach occurs (Hunger in the Void, chapter 1). Hunger" 
     },
     { 
         name: "Invoke the Lady of Sighs", 
@@ -7394,7 +7394,7 @@
         type: "Attack", 
         targetArea: "One living creature within short range",
         duration: "1 round",
-        desc: "Req: Mad Devotion & Sisters of the Blue Hand cult. Intellect vs Will. Success: Target dazed (takes half damage). Target can pass Will challenge (1 bane) to end early. Hunger" 
+        desc: "Req: Mad Devotion & Sisters of the Blue Hand cult. You flood the target’s mind with pleasure until it gasps in ecstasy. Make an Intellect attack roll against the target’s Will. On a success, the target becomes dazed for 1 round. While dazed in this way, the target takes half damage. On each of the dazed target’s turns, it can make a Will challenge roll with 1 bane. A success removes the affliction. Hunger" 
     },
     { 
         name: "Void Step", 
@@ -7403,7 +7403,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 minute",
-        desc: "Req: 1+ Corruption. Action/Triggered: Teleport to a space you can see (medium range). Gain 1 Insanity per use. If you roll a 1 on d6 after use, spell ends. Hunger" 
+        desc: "Req: 1+ Corruption.For the duration, you can use an action, or a triggered action on your turn, to teleport to a space you can see within medium range by moving through the Void. Each time you do, gain 1 Insanity, and then roll a d6. On a 1, the spell ends. Hunger" 
     },
     { 
         name: "Void Gate", 
@@ -7412,7 +7412,7 @@
         type: "Utility", 
         targetArea: "3-yard cube within medium range",
         duration: "Special",
-        desc: "Concentrate 1 minute to create a portal to the Void. Portal lasts 1 hr + 1 hr per Corruption point. Creatures can pass through to enter the Void. Hunger" 
+        desc: "Light bends and twists in the area for as long as you concentrate, up to 1 minute. If you don’t concentrate for a full minute, the spell ends. If you spend the full minute concentrating, a black, oval portal appears in the center of the area and remains there for 1 hour plus 1 hour per point of Corruption you have when you cast the spell. The portal is 3 yards tall and 2 yards wide, but it has no thickness and is invisible when viewed from the side. Theportal has a front and a back and can have any orientation. Any creature that passes through the portal enters the Void. The portal is visible from the Void, and creatures in the Void can pass through the portal and then move away from the spell’s area. Hunger" 
     },
     { 
         name: "Demonic Apotheosis", 
@@ -7421,7 +7421,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 hour",
-        desc: "Req: 4+ Corruption & living mortal. Gain 1 boon to Perception, darksight, +2 Defense, +10 Health, and immunity to Insanity. Take half damage from spells. Unarmed deals +2d6 damage. Hunger" 
+        desc: "Req: 4+ Corruption & living mortal. You undergo a hideous transformation, calling upon the Corruption in your soul to become as a demon. Each creature within short range that can see you must get a success on a Will challenge roll or gain 1 Insanity. This spell grants several benefits that last for the duration. • You make Perception rolls with 1 boon and gain darksight if you don’t have it already. • You gain a +2 bonus to Defense and a +10 bonus to Health. • You cannot gain Insanity. • You take half damage from spells. You make challenge rolls to resist attack spells with 1 boon, and creatures attacking you with spells make their attack rolls with 1 bane. • Your unarmed attacks deal 2d6 extra damage. When the effect ends, make a Will challenge roll with a number of banes equal to your Corruption. On a failure, you gain 1d3 Insanity and 1 Corruption. Hunger" 
     },
           { 
         name: "Seeking Missile", 
@@ -7455,9 +7455,9 @@
         tradition: "Conjuration", 
         rank: 2, 
         type: "Utility", 
-        targetArea: "1-yard radius circle on a flat surface",
+        targetArea: "1-yard radius circle on a flat surface within short range.",
         duration: "1 hour",
-        desc: "Creates an ornate door with a 2-yard space behind it. Can bypass walls <= 2 yards thick. Caution: Anything inside when spell ends is shunted into the Void. Terrible Beauty" 
+        desc: "A closed, ornate, round wooden door 2 yards in diameter appears in the area. The door can be opened and closed, functioning as an ordinary door. Behind the door is a 2-yard- diameter open space that extends up to 2 yards into the surface on which the spell was cast. Both the door and the space remain for the duration. If the thickness of the surface is 2 yards or less, opening the door grants access to whatever lies beyond the surface. When the effect ends, any creature or object inside the space created by the spell becomes shunted into the Void, unlikely to be seen again. Terrible Beauty" 
     },
     { 
         name: "Cursed Apple", 
@@ -7475,7 +7475,7 @@
         type: "Attack", 
         targetArea: "Any number of creatures within short range",
         duration: "1 minute",
-        desc: "Will challenge (bane if charmed). Success: Target is dazed until it takes damage. Immune if you've attacked them since your last rest. Terrible Beauty" 
+        desc: "Each target must make a Will challenge roll. If the target is charmed, it makes the roll with 1 bane. If you attacked the target at any point since you last completed a rest, the target is immune to this spell. On a failure, the target becomes dazed for 1 minute or until it takes damage. Terrible Beauty" 
     },
     { 
         name: "Kindred Soul", 
@@ -7484,16 +7484,16 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 hour",
-        desc: "Creatures of similar size perceive you as their own ancestry. Your speech is understood by anyone who knows at least one language. Terrible Beauty" 
+        desc: "For the duration, creatures that can see and that have the same Size or range of Sizes that members of your ancestry commonly possess perceive you as sharing their ancestry. In addition, when you speak, creatures that hear you speak and know at least one language can understand what you say as if you had spoken in a language they know. Terrible Beauty" 
     },
     { 
         name: "Circle of Stones", 
         tradition: "Nature", 
         rank: 3, 
         type: "Utility", 
-        targetArea: "Eight points within short range",
+        targetArea: "Eight points on the ground within short range, each of which must be at least 2 yards from another",
         duration: "Permanent (Stones) / Until Rest (Energy)",
-        desc: "Raise 8 large stones. Imbued: Chosen creatures within 1yd get +1 Defense and 1 boon to attacks. Action: Enter stone; safe until destroyed or energy fades (exit = damage/Insanity). Terrible Beauty" 
+        desc: "You cause a stone to rise from one target point when you cast the spell and another stone in each round when you use an action to concentrate on the spell, until a total of eight stones appear. Each stone is 2 yards wide, 1 yard thick, and 4 yards tall, with Defense 5 and 100 Health, and remains until it is destroyed. A stone that appears as a result of casting this spell is imbued with magical energy that lasts until you complete a rest. You can use an action, or a triggered action on your turn, to choose up to eight creatures you can see within medium range of you. The stones provide a +1 bonus to Defense and 1 boon to attack rolls for chosen creatures that are within 1 yard of at least one of the stones. A chosen creature can use an action to touch a stone imbued with magical energy and be moved into the stone’s space. While in the stone’s space, the creature remains aware of its surroundings and of the passage of time, but it cannot do anything except to use an action to move out of the stone through the surface where it entered. If a stone is destroyed while a creature is inside it, the creature becomes fused to the rubble and dies. If the creature is still inside the stone when the stone’s magical energy dissipates, the creature is forced out of the stone, taking damage equal to twice its healing rate and gaining 1d6 Insanity. Terrible Beauty" 
     },
     { 
         name: "Call Steeds", 
@@ -7502,7 +7502,7 @@
         type: "Utility", 
         targetArea: "5-yard radius circle within short range",
         duration: "8 hours",
-        desc: "Summons six horses. They are compelled by anyone riding them until they are incapacitated or duration ends. Terrible Beauty" 
+        desc: "At the end of the round, six horses appear in the area standing on the ground. They remain for the duration or until they become incapacitated, at which point they disappear. The horses become compelled by anyone riding them for as long as they are ridden. Terrible Beauty" 
     },
     { 
         name: "Imprison", 
@@ -7511,16 +7511,16 @@
         type: "Attack", 
         targetArea: "One creature on the ground within long range",
         duration: "Special",
-        desc: "Agility challenge (bane for low Health/high Power; boon for high Health). Failure: Immobilized. Concentrate 1 min: Target dragged 3d6 miles underground and hidden from Divination. Terrible Beauty" 
+        desc: "Adamantine chains spring up from the ground, forcing the target to make an Agility challenge roll. A target with Health 50 or lower makes the roll with 1 bane per point of its Power score. A target with Health 100 or higher makes the roll with 1 boon. On a failure, the creature is immobilized for as long as you concentrate, up to 1 minute. While it is immobilized, the target can use an action to make a Strength challenge roll with 1 bane plus 1 bane for each round you used an action to concentrate on the spell. On a success, the target removes the immobilized affliction and the chains disappear. If you concentrate on maintaining the effect for 1 minute, the chains drag the target 3d6 miles down into the earth, where it remains bound until you use an action or a triggered action at any time to free it. While bound in this way, the target cannot be perceived with Divination spells. Terrible Beauty" 
     },
     { 
         name: "Remove Curse", 
         tradition: "Protection", 
         rank: 5, 
         type: "Attack", 
-        targetArea: "One cursed creature within medium range",
+        targetArea: "One cursed creature you can see within medium range",
         duration: "Instantaneous",
-        desc: "Intellect challenge roll. Success: Remove one curse. Total 20+: Remove all curses. Terrible Beauty" 
+        desc: "Make an Intellect challenge roll. On a success, you remove one curse from the target. If the total of your challenge roll is 20 or higher, you remove all curses from the target. Terrible Beauty" 
     },
     { 
         name: "Song of Revels", 
@@ -7529,7 +7529,7 @@
         type: "Attack", 
         targetArea: "One creature within short range",
         duration: "Concentration, up to 1 minute",
-        desc: "Will challenge or be impaired (1 min). You choose how impaired targets move. Action: Will challenge to clear (failure = 1 Insanity). Terrible Beauty" 
+        desc: "When you cast the spell, and when you use an action to concentrate on it, choose one creature within short range that can hear you. The target must get a success on a Will challenge roll or become impaired for 1 minute. While impaired, the target must take a slow turn each round, and you decide how the target moves during that turn, provided you can see it. An affected creature can use an action to make a Will challenge roll. A creature removes the affliction on a success, or gains 1 Insanity on a failure. Terrible Beauty" 
     },
     { 
         name: "Enthrolling Song", 
@@ -7538,7 +7538,7 @@
         type: "Attack", 
         targetArea: "Any living creatures within short range",
         duration: "Concentration, up to 1 hour",
-        desc: "Will challenge or become enthralled (dazed; must move to stay in medium range). Ends if target can't see/hear you. Terrible Beauty" 
+        desc: "You play or sing a lively melody. Each target must get a success on a Will challenge roll or become enthralled for as long as you concentrate and continue to play, up to 1 hour. An enthralled creature is dazed, and on each of its turns, it must move to stay with medium range of you. If an affected creature cannot see or hear you on its turn, the effect immediately ends for that creature. Terrible Beauty" 
     },
     { 
         name: "Hidden Space", 
@@ -7547,7 +7547,7 @@
         type: "Utility", 
         targetArea: "1-yard cube within medium range",
         duration: "8 hours",
-        desc: "Portal to interdimensional cube (size based on Power). Dangerous: When spell ends, odd d6 roll = shunted to Void; even d6 = damage and prone. Terrible Beauty" 
+        desc: "A portal opens in the center of the area and remains for the duration. The portal is 1 yard wide and 2 yards tall, but has no thickness. It has a front and a back, and can have any orientation. Anything moving through the front of the portal enters an interdimensional space that is up to 2 yards in all dimensions for each point of your Power score. For example, if you have Power 5, the space can be a cube up to 10 yards on each side. The walls, floor, and ceiling of the space are solid, with swirls of silvery mist moving across their surfaces. There is sufficient air to breathe for as long as the space remains in existence. Creatures and objects inside the space cannot be approached by any means except through the open portal. If you are inside the space, you can use an action to close the portal, thus making the space inaccessible. When the spell ends, roll a d6 for each creature or object inside the space. On an odd number, the creature or object is shunted into the Void, tumbles into the endless dark, and is likely torn apart by demons. On an even number, the creature or object takes damage equal to half its Health and lands prone in an open space of the GM’s choosing within short range of the space the portal occupied. Terrible Beauty" 
     },
     { 
         name: "Banish", 
@@ -7556,7 +7556,7 @@
         type: "Attack", 
         targetArea: "One creature within medium range",
         duration: "Concentration, up to 1 minute",
-        desc: "Will vs Will. Success: Target out of phase (half damage dealt/taken). Concentrate 1 min: Target disappears (returned to home or teleported 5d20 miles away). Terrible Beauty" 
+        desc: "Make a Will attack roll against the target’s Will. On a success, the target goes out of phase for as long as you concentrate, up to 1 minute. While out of phase, the target takes half damage from all attacks, and its attacks deal half damage. The target can use an action to make a Will challenge roll with 1 bane plus 1 bane for each round you used an action to concentrate on the spell. On a success, the effect ends. If you concentrate on the effect for 1 minute, the target disappears. If it had been summoned, the target returns to where it was when you summoned it. Otherwise, the target teleports to a point the GM chooses 5d20 miles away. Terrible Beauty" 
     },
           { 
         name: "Misdirect", 
