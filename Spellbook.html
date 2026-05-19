@@ -113,7 +113,8 @@
         rank: 2, 
         type: "Utility", 
         targetarea: "One dead horse or similar creature in reach", 
-        description: "Instantaneous. Requires 1-minute concentration. Target becomes an animated steed under your control until destroyed. Sacrifice: Heal an undead 2d6."
+        duration: "Instantaneous",
+        description: "Requires 1-minute concentration. The target becomes an animated steed under your control. When its damage total equals its Health, it collapses into a pile of rotting filth. <b>Sacrifice</b> You can use an action to expend a casting of this spell. Target one undead within short range. The target heals 2d6 damage."
     },
     { 
         name: "Animate Beast", 
@@ -121,7 +122,8 @@
         rank: 3, 
         type: "Utility", 
         targetarea: "One dead Size 2 beast in reach", 
-        description: "Instantaneous. Requires 1-minute concentration. Target becomes an animated beast under your control until destroyed. Sacrifice: Heal one undead 3d6 or two undead 2d6 each."
+        duration: "Instantaneous",
+        description: "Requires 1-minute concentration. The target becomes an animated beast under your control. When its damage total equals its Health, it collapses into a pile of rotting filth. <b>Sacrifice:</b> You can use an action to expend a casting of this spell. Target one or undead within short range. The target heals 3d6 damage. If you target two undead, each heals 2d6 damage instead."
     },
     { 
         name: "Animate Hulk", 
@@ -129,7 +131,8 @@
         rank: 5, 
         type: "Utility", 
         targetarea: "One dead Size 3 creature in reach", 
-        description: "Instantaneous. Requires 1-minute concentration. Target becomes an animated hulk (counts as two creatures) under your control until destroyed. Sacrifice: Heal one undead 4d6 or two undead 3d6 each."
+        duration: "Instantaneous",
+        description: "Requires 1-minute concentration. The target becomes an animated hulk under your control, which counts as being two creatures. When its damage total equals its Health, it collapses into a pile of rotting filth. <b>Sacrifice:</b> You can use an action to expend a casting of this spell. Target one or undead within short range. The target heals 4d6 damage. If you target two undead, each heals 3d6 damage instead."
     },
           { 
         name: "Icicle", 
@@ -137,6 +140,7 @@
         rank: 0, 
         type: "Attack", 
         targetarea: "One creature within short range", 
+        duration: "",
         description: "Will vs Agility. Success: 1d6 damage plus 1d3 cold damage. <b>Attack Roll 20+:</b>: +1d6 extra cold damage. OP"
     },
     { 
@@ -145,6 +149,7 @@
         rank: 0, 
         type: "Utility", 
         targetarea: "2-yard cube on a flat surface", 
+        duration: "",
         description: "1 minute. Surfaces become icy; creatures moving through must pass an Agility challenge or fall prone. Targets in area take +1d6 extra cold damage. OP"
     },
     { 
@@ -153,6 +158,7 @@
         rank: 1, 
         type: "Utility", 
         targetarea: "20-yard radius cylinder, 10 yards tall", 
+        duration: "",
         description: "1 hour. Heavy rain/snow partially obscures area and douses flames. Can move area 5 yards as an action. Sacrifice: cast Icicle. OP"
     },
     { 
@@ -161,6 +167,7 @@
         rank: 1, 
         type: "Attack", 
         targetarea: "1-yard cube of water", 
+        duration: "",
         description: "Water explodes; objects/creatures within 3 yards take 1d6+3 damage and move 1d6 yards. Strength challenge for half damage and to avoid falling prone. OP"
     },
     { 
@@ -169,6 +176,7 @@
         rank: 2, 
         type: "Utility", 
         targetarea: "5-yard-radius sphere", 
+        duration: "",
         description: "1 minute. Obscures area. While inside, you are invisible (if >1 yard away), take half damage, and movement never triggers free attacks. OP"
     },
     { 
@@ -177,6 +185,7 @@
         rank: 2, 
         type: "Attack", 
         targetarea: "1-yard cube", 
+        duration: "",
         description: "1 minute. Summon serpent; use action to move 5 yards and attack (Will +1 boon vs Agility). Success: 2d6+3 damage and target is stuck for 1 round. OP"
     },
     { 
@@ -185,6 +194,7 @@
         rank: 3, 
         type: "Attack", 
         targetarea: "40-yard-long cone", 
+        duration: "",
         description: "1 round. Rushing water deals 2d6 damage and moves objects/creatures 4d6 yards away. Strength challenge for half damage and to avoid falling prone. OP"
     },
     { 
@@ -193,6 +203,7 @@
         rank: 3, 
         type: "Utility", 
         targetarea: "3-yard-radius hemisphere", 
+        duration: "",
         description: "Nourishes creatures, removes diseased/poisoned, and heals healing rate. For 1 minute, targets heal +1d6 extra whenever healing. OP"
     },
     { 
@@ -201,6 +212,7 @@
         rank: 4, 
         type: "Utility", 
         targetarea: "10x5x1 yard shapeable line", 
+        duration: "",
         description: "1 hour. Creating wall forces Agility challenges to avoid 3d6 damage and immobilization. Bitter cold deals 1d6 damage to nearby creatures each round. OP"
     },
     { 
@@ -209,6 +221,7 @@
         rank: 4, 
         type: "Utility", 
         targetarea: "Self", 
+        duration: "",
         description: "1 hour. Become transparent water: take half damage, gain swimmer trait, breathe underwater, invisible while submerged, +1 boon to Str/Agility rolls. OP"
     },
     { 
@@ -217,6 +230,7 @@
         rank: 5, 
         type: "Attack", 
         targetarea: "10-yard-long cone", 
+        duration: "",
         description: "Acid deals 5d6 damage (Agility challenge half). Organic objects destroyed. Victims take 1d6 ongoing damage until acid is washed away. OP"
     },
     { 
@@ -225,6 +239,7 @@
         rank: 5, 
         type: "Attack", 
         targetarea: "5-yard-radius sphere", 
+        duration: "",
         description: "Removes all moisture/mist. Flesh-and-blood creatures must pass a Strength challenge or take 4d6+6 damage and become impaired until they rest. OP"
     },
     { 
@@ -232,7 +247,8 @@
         tradition: "Water", 
         rank: 6, 
         type: "Utility", 
-        targetarea: "100-yard cube of water", 
+        targetarea: "100-yard cube of water",
+        duration: "",
         description: "1 hour (conc). Choose: Divide waters (create a 100-yard path), Raise waters (flood/capsize), or Lower waters (create a whirlpool). OP"
     },
     { 
@@ -241,6 +257,7 @@
         rank: 6, 
         type: "Attack", 
         targetarea: "100-yard cube of water", 
+        duration: "",
         description: "1 minute. Water boils, dealing 10d6 damage initially and 2d6 each round thereafter. Steam heavily obscures air above water. Sacrifice: cast Caustic Waters. OP"
     },
     { 
@@ -249,6 +266,7 @@
         rank: 7, 
         type: "Utility", 
         targetarea: "50-mile radius surface", 
+        duration: "",
         description: "24 hours. Surface freezes 6 feet deep. Creatures must pass Agility challenge or be trapped (defenseless, immobilized, 2d6 cold damage per round). OP"
     },
     { 
@@ -257,6 +275,7 @@
         rank: 8, 
         type: "Utility", 
         targetarea: "Self (Size 3 wall of water)", 
+        duration: "",
         description: "1 hour (conc). Immune to many afflictions; pinpoint creatures in long range. Can move 1d6-2d6 yards toward/away; use triggered action to smash for 5d6 damage. OP"
     },
     { 
@@ -265,6 +284,7 @@
         rank: 9, 
         type: "Utility", 
         targetarea: "Self", 
+        duration: "",
         description: "1 hour. Cast rank 3 or lower Water spells without expending castings; can cast any rank 0 Water spell even if not learned. OP"
     },
     { 
@@ -273,6 +293,7 @@
         rank: 10, 
         type: "Attack", 
         targetarea: "5-mile long, 0.5-mile wide line", 
+        duration: "",
         description: "Summons a 2,000-foot wave moving up to 500 mph. Deals 20d6, 10d6, or 5d6 damage upon landfall depending on distance from shore. Massive aftereffect damage. OP"
     },
           { 
@@ -281,6 +302,7 @@
         rank: 0, 
         type: "Utility", 
         targetarea: "Self", 
+              duration: "",
         description: "1 hour. Gain 3 boons to become hidden. Triggered: Match surroundings to hide immediately with 3 boons, even if observed. OP" 
     },
     { 
@@ -289,6 +311,7 @@
         rank: 0, 
         type: "Attack", 
         targetarea: "Self", 
+        duration: "",
         description: "1 minute. One limb becomes a blade (1d6 + 1 damage). Can use Will for attacks. Success on 20+ that beats target by 5 deals +1d6 damage. OP" 
     },
     { 
@@ -297,6 +320,7 @@
         rank: 1, 
         type: "Utility", 
         targetarea: "Self", 
+        duration: "",
         description: "1 hour. Gain 1 boon on Strength/Agility rolls and ignore difficult terrain while climbing/swimming. Take 2 banes on Intellect/Will rolls; cannot speak. OP" 
     },
     { 
@@ -305,6 +329,7 @@
         rank: 1, 
         type: "Utility", 
         targetarea: "Self", 
+        duration: "",
         description: "1 hour. Gain the poisonous trait whenever assuming an animal form via Transformation spells. Sacrifice: cast Flowing Form. OP" 
     },
     { 
@@ -313,6 +338,7 @@
         rank: 2, 
         type: "Utility", 
         targetarea: "1-yard cube in your space", 
+        duration: "",
         description: "1 minute. Assume the form of an animated plant. OP" 
     },
     { 
@@ -321,6 +347,7 @@
         rank: 2, 
         type: "Utility", 
         targetarea: "1-yard cube in your space", 
+        duration: "",
         description: "1 minute. Assume the form of a slime. OP" 
     },
     { 
@@ -329,6 +356,7 @@
         rank: 3, 
         type: "Utility", 
         targetarea: "2-yard cube in your space", 
+        duration: "",
         description: "1 minute. Assume the form of a bear. OP" 
     },
     { 
@@ -337,6 +365,7 @@
         rank: 3, 
         type: "Utility", 
         targetarea: "2-yard cube in your space", 
+        duration: "",
         description: "10 minutes. Assume the form of a great cat; can immediately use an attack option or special attack. OP" 
     },
     { 
@@ -345,6 +374,7 @@
         rank: 4, 
         type: "Utility", 
         targetarea: "Self (Size + 1 space)", 
+        duration: "",
         description: "1 hour. Size +1, +40 Health, 2 boons on Strength rolls, but 1 bane on Agility rolls. Weapon attacks deal 2d6 extra damage and may frighten targets. OP" 
     },
     { 
@@ -353,6 +383,7 @@
         rank: 4, 
         type: "Utility", 
         targetarea: "Self", 
+        duration: "",
         description: "1 hour. Become six small animals (climber, flier, or swimmer). Control each separately; perceive from all spaces. Spell ends when last animal is incapacitated. OP" 
     },
     { 
@@ -361,6 +392,7 @@
         rank: 5, 
         type: "Utility", 
         targetarea: "2-yard cube in your space", 
+        duration: "",
         description: "8 hours. Assume griffon form with +30 Health and +1d6 extra damage on attacks. OP" 
     },
     { 
@@ -369,6 +401,7 @@
         rank: 5, 
         type: "Utility", 
         targetarea: "3-yard cube in your space", 
+        duration: "",
         description: "1 hour. Assume form of a Size 3 huge monster with the frightening trait. OP" 
     },
     { 
@@ -377,6 +410,7 @@
         rank: 6, 
         type: "Utility", 
         targetarea: "3-yard cube in your space", 
+        duration: "",
         description: "1 hour. Assume form of a Size 3 giant; lacks the stupidity trait. OP" 
     },
     { 
@@ -385,6 +419,7 @@
         rank: 6, 
         type: "Utility", 
         targetarea: "3-yard cube in your space", 
+        duration: "",
         description: "4 hours. Freely swap between animal sizes (tiny to huge). Can expend other Transformation spells for extra damage on attacks. OP" 
     },
     { 
@@ -393,6 +428,7 @@
         rank: 7, 
         type: "Utility", 
         targetarea: "3-yard cube in your space", 
+        duration: "",
         description: "1 hour. Assume the form of a wyvern. OP" 
     },
     { 
@@ -401,6 +437,7 @@
         rank: 8, 
         type: "Utility", 
         targetarea: "3-yard cube in your space", 
+        duration: "",
         description: "4 hours. Assume basilisk form; immediately use an attack and trigger captivating appearance trait. OP" 
     },
     { 
@@ -409,6 +446,7 @@
         rank: 9, 
         type: "Utility", 
         targetarea: "4-yard cube in your space", 
+        duration: "",
         description: "8 hours. Assume form of a Size 4 dragon; reduce all incoming damage by 5. OP" 
     },
     { 
@@ -417,6 +455,7 @@
         rank: 10, 
         type: "Utility", 
         targetarea: "Self", 
+        duration: "",
         description: "Until rest. Assume the form of any living creature you can see as an action or triggered action. Damage total carries over between forms. OP" 
     },
           { 
@@ -425,6 +464,7 @@
         rank: 0, 
         type: "Utility", 
         targetarea: "Self", 
+              duration: "",
         description: "Triggered: Gain 1d3 boons on an attack or challenge roll. Failure on the roll causes the caster to become dazed for 1 round. OP"
     },
     { 
@@ -433,6 +473,7 @@
         rank: 0, 
         type: "Utility", 
         targetarea: "One creature within short range", 
+        duration: "",
         description: "Triggered: Force a creature to discard a roll result and roll again. Aftereffect: Potential penalty to the caster's next roll. OP"
     },
     { 
@@ -441,6 +482,7 @@
         rank: 1, 
         type: "Utility", 
         targetarea: "Self", 
+        duration: "",
         description: "1 minute. Increase actions by one and double Speed. Requires a Will challenge each round to avoid becoming stunned. OP"
     },
     { 
@@ -449,6 +491,7 @@
         rank: 1, 
         type: "Attack", 
         targetarea: "One creature within short range", 
+        duration: "",
         description: "Int vs Will. Success: Target must repeat its previous turn's actions for 1 minute. Will challenge each round to end the effect. OP"
     },
     { 
@@ -457,6 +500,7 @@
         rank: 2, 
         type: "Utility", 
         targetarea: "Self", 
+        duration: "",
         description: "1 minute. Impose 2 banes on incoming attacks and gain 2 boons on attack rolls. Aftereffect: Caster may appear to age or grow younger. OP"
     },
     { 
@@ -465,6 +509,7 @@
         rank: 2, 
         type: "Utility", 
         targetarea: "One creature within medium range", 
+        duration: "",
         description: "Triggered: Prevent damage or an affliction for a creature. Caster may later disappear for 1 round to deliver the warning in the past. OP"
     },
     { 
@@ -473,6 +518,7 @@
         rank: 3, 
         type: "Utility", 
         targetarea: "4-yard-radius sphere", 
+        duration: "",
         description: "1 minute. Stops time for everyone in the area except the caster. When it ends, time is accelerated for those inside for a period. OP"
     },
     { 
@@ -481,6 +527,7 @@
         rank: 3, 
         type: "Attack", 
         targetarea: "Up to five creatures within medium range", 
+        duration: "",
         description: "Intellect challenge (-1 bane). Failure: Targets are removed from existence for 1 minute, becoming insensate and unable to act. OP"
     },
     { 
@@ -489,6 +536,7 @@
         rank: 4, 
         type: "Utility", 
         targetarea: "Area within 10 yards", 
+        duration: "",
         description: "Manifest the result of a past non-harmful activity. Caster must later travel back in time to actually perform the task or create a paradox. OP"
     },
     { 
@@ -497,6 +545,7 @@
         rank: 4, 
         type: "Attack", 
         targetarea: "Up to two creatures within medium range", 
+        duration: "",
         description: "Int vs Will. Success: Target loses turns and is defenseless for 1 minute; another chosen creature gains an extra turn each round. OP"
     },
     { 
@@ -505,6 +554,7 @@
         rank: 5, 
         type: "Utility", 
         targetarea: "Area within half Speed", 
+        duration: "",
         description: "Triggered (End of Round): Caster removes themselves from time to meddle with up to three rolls in the next round, turning results to success or failure. OP"
     },
     { 
@@ -513,6 +563,7 @@
         rank: 5, 
         type: "Utility", 
         targetarea: "10-yard-radius sphere within medium range", 
+        duration: "",
         description: "1 minute. Will challenge (-3 banes). Failure: 1d3 Insanity and stunned. Recovery allows only slow turns for the duration. OP"
     },
     { 
@@ -521,6 +572,7 @@
         rank: 6, 
         type: "Attack", 
         targetarea: "One creature within medium range", 
+        duration: "",
         description: "Int vs Will. Success: Target fades and takes half damage/deals half damage. Failure to recover via Will rolls results in total disappearance and death. OP"
     },
     { 
@@ -529,6 +581,7 @@
         rank: 6, 
         type: "Utility", 
         targetarea: "Up to five creatures within short range", 
+        duration: "",
         description: "1 minute. Targets gain a fast and slow turn each round, +1 boon on rolls, and increased Speed. Aftereffect: Potential damage and fatigue. OP"
     },
     { 
@@ -537,6 +590,7 @@
         rank: 7, 
         type: "Utility", 
         targetarea: "5-yard-radius sphere", 
+        duration: "",
         description: "8 hours. Time inside passes at 8x the rate of time outside. Crossing the barrier deals 10d6 damage (Strength challenge half). OP"
     },
     { 
@@ -545,6 +599,7 @@
         rank: 8, 
         type: "Attack", 
         targetarea: "One living creature within medium range", 
+        duration: "",
         description: "Intellect challenge (-4 banes). Failure results in caster death or damage. Success: Kills an ancestor, erasing the target from history entirely. OP"
     },
     { 
@@ -553,6 +608,7 @@
         rank: 9, 
         type: "Utility", 
         targetarea: "Self and up to five touched creatures", 
+        duration: "",
         description: "1d3 + 1 rounds. Time stops globally. Caster and allies can act normally while others are treated as unconscious. Aftereffect: Potential 9d6 damage. OP"
     },
     { 
@@ -561,6 +617,7 @@
         rank: 10, 
         type: "Utility", 
         targetarea: "2-yard cube", 
+        duration: "",
         description: "Requires 1-hour concentration. Opens a portal to a specific time in the past or future for 10 minutes. Caster takes damage/Insanity during casting. OP"
     },
           { 
@@ -569,6 +626,7 @@
         rank: 0, 
         type: "Attack", 
         targetarea: "Self", 
+              duration: "",
         description: "Weapon attack using Will. Success: +1d6 damage. Failure: expend an extra casting of this spell or pass a Will challenge to avoid Insanity. OP" 
     },
     { 
@@ -577,6 +635,7 @@
         rank: 0, 
         type: "Utility", 
         targetarea: "Self", 
+        duration: "",
         description: "1 minute. Triggered: when gaining an affliction, make a Will challenge roll to negate it. OP" 
     },
     { 
@@ -585,6 +644,7 @@
         rank: 1, 
         type: "Utility", 
         targetarea: "Self", 
+        duration: "",
         description: "1 minute. Attack rolls with 1 boon (2 against Corrupted). Foes like demons/undead take 1 bane on attacks against you. Can end early to heal. OP" 
     },
     { 
@@ -593,6 +653,7 @@
         rank: 1, 
         type: "Attack", 
         targetarea: "5-yard-radius sphere", 
+        duration: "",
         description: "Demons, devils, faeries, spirits, or undead must pass a Will challenge or become impaired for 1 minute and unable to take fast turns. OP" 
     },
     { 
@@ -601,6 +662,7 @@
         rank: 1, 
         type: "Utility", 
         targetarea: "1-yard cube within medium range", 
+        duration: "",
         description: "1 minute (conc). Chosen creatures near the sign gain 2 boons on all rolls, immunity to Insanity, and immunity to charmed/frightened. OP" 
     },
     { 
@@ -609,6 +671,7 @@
         rank: 2, 
         type: "Utility", 
         targetarea: "5-yard radius centered on you", 
+        duration: "",
         description: "End of round. Immune to all damage and new afflictions; heal healing rate when it ends. Triggered: cast to reduce one attack's damage to 0. OP" 
     },
     { 
@@ -617,6 +680,7 @@
         rank: 2, 
         type: "Utility", 
         targetarea: "Self", 
+        duration: "",
         description: "1 minute. Summon a shield (1d6+2 damage, -1 bane to attackers) and sword (2d6+2 damage, +1 boon). Both deal +2d6 damage to divine foes. OP" 
     },
     { 
@@ -625,6 +689,7 @@
         rank: 3, 
         type: "Utility", 
         targetarea: "1-yard cube within short range", 
+        duration: "",
         description: "1 minute. Summons a friendly angel to fight on your behalf until the duration ends or it is incapacitated. OP" 
     },
     { 
@@ -633,6 +698,7 @@
         rank: 3, 
         type: "Utility", 
         targetarea: "One creature within medium range", 
+        duration: "",
         description: "Target teleports to a space you can reach and heals damage equal to twice its healing rate. OP" 
     },
     { 
@@ -641,6 +707,7 @@
         rank: 4, 
         type: "Utility", 
         targetarea: "1-yard cube within short range", 
+        duration: "",
         description: "1 hour. Creates a holy altar. Allies within 5 yards gain enhanced Prayer, 3 boons on resistance rolls; divine foes take 1 bane and extra damage. OP" 
     },
     { 
@@ -649,6 +716,7 @@
         rank: 4, 
         type: "Utility", 
         targetarea: "Up to three creatures you can reach", 
+        duration: "",
         description: "1 minute. Targets gain +10 Health, 1 boon on rolls, deal +2d6 extra damage, and foes take 1 bane to resist their attacks. OP" 
     },
     { 
@@ -6647,7 +6715,7 @@
         type: "Attack", 
         targetArea: "One living mortal within short range",
         duration: "Permanent",
-        desc: "You speak a bitter curse. Make an Intellect attack roll against the target’s Will. You make the attack roll with 1 bane if the target has Health 50 or more. On a success, the target becomes dazed for 1 minute. At the end of that time, the target becomes a skinchanger and gains all the skinchanger traits. Tooth and Claw" 
+        desc: "You speak a bitter curse. Make an Intellect attack roll against the target’s Will. You make the attack roll with 1 bane if the target has Health 50 or more. On a success, the target becomes dazed for 1 minute. At the end of that time, the target becomes a skinchanger and gains all the skinchanger traits (see Tooth and Claw). Tooth and Claw" 
     },
     { 
         name: "Quicksilver", 
@@ -6656,16 +6724,16 @@
         type: "Utility", 
         targetArea: "One weapon or 5 pieces of ammo",
         duration: "24 hours",
-        desc: "Req: One silver coin. Coin disappears; target counts as silver for the duration. Sacrifice: Cast a rank 0 spell.Tooth and Claw" 
+        desc: "Req: One silver coin. The coin disappears, and the target becomes covered in a silver patina that remains for the duration. The target counts as if it were made from silver. <b>Sacrifice</b> You cast one rank 0 spell you have learned. Tooth and Claw" 
     },
     { 
         name: "Unmask the Masked", 
         tradition: "Transformation", 
         rank: 1, 
         type: "Attack", 
-        targetArea: "Each chosen creature you see within short range",
+        targetArea: " Each creature you can see that you choose within short range",
         duration: "Instantaneous",
-        desc: "Targets with non-spell transformation abilities (Changelings, Skinchangers) must immediately shift forms. Sacrifice: Cast a rank 0 spell. Tooth and Claw" 
+        desc: "If a target can assume a different form without having to cast a spell such as a skinchanger’s ability to become an animal or a changeling’s ability to adopt a different appearance, the target must immediately use that ability without having to use an action or a triggered action to do so. <b>Sacrifice</b> You cast one rank 0 spell you have learned. Tooth and Claw" 
     },
           { 
         name: "Bleed", 
@@ -6674,7 +6742,7 @@
         type: "Attack", 
         targetArea: "One living creature within short range",
         duration: "Special",
-        desc: "Intellect/Will vs Strength. Success: 1d3 damage. Target takes 1 damage each round unless they get three Strength successes or heal. 20+: +1d3 damage. Desolation" 
+        desc: "Bubbles form on the target’s skin. Make an Intellect or Will attack roll against the target’s Strength. On a success, the bubbles burst and the target takes 1d3 damage, and at  the end of each round, the target must get a success on  a Strength challenge roll or take 1 damage. Getting three  successes on the challenge roll or healing any damage ends  this effect. <b>Attack Roll 20+:</b> The target takes 1d3 extra damage. Desolation" 
     },
     { 
         name: "Restore Humors", 
@@ -6683,7 +6751,7 @@
         type: "Utility", 
         targetArea: "One living creature you can reach",
         duration: "Instantaneous",
-        desc: "Intellect/Will challenge. Success: Target heals its healing rate. Failure: Target takes damage equal to half its healing rate. Desolation" 
+        desc: "You touch the target and make an Intellect or Will challenge roll. On a success, the target heals damage equal to its  healing rate. On a failure, the target takes damage equal to  half its healing rate. Desolation" 
     },
     { 
         name: "Blood to Water", 
@@ -6701,7 +6769,7 @@
         type: "Attack", 
         targetArea: "One living creature within short range",
         duration: "1 minute",
-        desc: "Intellect/Will vs Strength. Success: Target takes 2d6 Health penalty; you gain 2d6 Health bonus (Vampires can choose 1 blood point instead). Desolation" 
+        desc: "A hole opens somewhere on the target’s body and then closes. Make an Intellect or Will attack roll against the target’s Strength. On a success, roll 2d6. The total rolled is imposed as a penalty to the target’s Health, and you gain a bonus to Health equal to the same amount. Both the penalty and the bonus last for 1 minute. <b>Special</b> If you are a vampire, you can gain 1 blood point instead of the bonus to Health. Desolation" 
     },
     { 
         name: "Boiling Blood", 
@@ -6710,7 +6778,7 @@
         type: "Attack", 
         targetArea: "One living creature within short range",
         duration: "Instantaneous",
-        desc: "Instant death if Health <= 15 (explodes for 1d6 damage in 3yd radius). Otherwise, Intellect/Will vs Strength: 2d6+3 damage. 20+: +1d6 damage. Desolation" 
+        desc: "Blood boils in the target’s veins. If the target has Health 15 or less, it dies instantly, its body bloated and blackened. Otherwise, make an Intellect or Will attack roll against the target’s Strength. On a success, the target takes 2d6 + 3 damage. A target killed by this effect explodes and sprays boiling blood in a 3-yard radius centered on a point within its space. Each creature in the area must get a success on an Agility challenge roll or take 1d6 damage. <b>Attack Roll 20+:</b> The target takes 1d6 extra damage. Desolation" 
     },
     { 
         name: "Hemorrhage", 
@@ -6719,7 +6787,7 @@
         type: "Attack", 
         targetArea: "One living creature within medium range",
         duration: "Special",
-        desc: "Instant death if Health <= 20. Otherwise, Intellect/Will vs Strength: 5d6 damage and starts bleeding (1d6/round). Bleeding ends with healing or Intellect success. 20+: +2d6 damage. Desolation" 
+        desc: "If the target has Health 20 or less, it dies instantly, blood spraying from its orifi ces. Otherwise, make an Intellect or Will attack roll against the target’s Strength. On a success, a grisly bleeding wound appears somewhere on the target’s body; the target takes 5d6 damage and starts bleeding. The bleeding lasts until the target heals any damage or until it or a creature next to it gets a success on an Intellect challenge roll to stanch the wound. While bleeding, the target takes 1d6 damage at the end of each round. <b>Attack Roll 20+:</b> The target takes 2d6 extra damage. Desolation" 
     },
           { 
         name: "Heat Wave", 
@@ -6728,16 +6796,16 @@
         type: "Attack", 
         targetArea: "3-yard long cone within short range",
         duration: "Instantaneous",
-        desc: "Strength challenge roll. Failure: Living creatures become fatigued. While fatigued, take 1 damage each time an attack or challenge roll is made. Desolation" 
+        desc: "Each living creature in the area must get a success on a Strength challenge roll or become fatigued for 1 minute. While fatigued in this way, the creature takes 1 damage each time it makes an attack roll or a challenge roll. Desolation" 
     },
     { 
         name: "Shimmer Wall", 
         tradition: "Air", 
         rank: 1, 
         type: "Utility", 
-        targetArea: "5yd long, 2yd tall, 1yd wide line beginning in short range",
+        targetArea: "A shapeable line, 5 yards long, 2 yards tall, and 1 yard wide, originating from a point within short range",
         duration: "1 minute",
-        desc: "Creatures beyond short range of the wall make attack rolls with 3 banes against targets behind the wall. Desolation" 
+        desc: "You raise the air temperature in the area, causing it to shimmer for the duration. Creatures beyond short range of the area’s edge make attack rolls with 3 banes against creatures behind the area. Desolation" 
     },
     { 
         name: "Bind Dust Devil", 
@@ -6746,7 +6814,7 @@
         type: "Utility", 
         targetArea: "1-yard cube of sand/dust within medium range",
         duration: "1 minute",
-        desc: "Target becomes a Dust Devil. Will attack vs Will. Dust devil is compelled on success, hostile on failure. Cannot be voluntarily ended. Desolation" 
+        desc: "At the end of the round in which you cast this spell, the target becomes a <b>Dust Devil</b>. You cannot voluntarily end this spell. When the effect ends, the dust devil dissipates, covering the ground under its space with sand or dust. When the Dust Devil appears, make a Will attack roll against its Will. The Dust Devil becomes compelled for the duration on a success or becomes hostile to you on a failure. Desolation" 
     },
     { 
         name: "Sun Hammer", 
@@ -6773,7 +6841,7 @@
         type: "Attack", 
         targetArea: "4-yard radius circle on ground",
         duration: "1 minute",
-        desc: "Difficult terrain. Strength challenge each round: Failure = stuck (immobilized); Second failure = submerged (blinded/immobilized/no breathing). Ending on stone is lethal. Desolation" 
+        desc: "The ground in the area becomes diffi cult terrain for the duration. Any creature in the area when you cast the spell or at the end of each round for the duration must make a Strength challenge roll. A creature becomes stuck on a failure; on a success, a creature is moved to the nearest open space outside the area. If a creature that is already stuck gets a failure on this check, it becomes submerged instead and cannot breathe. A stuck creature is immobilized. It can use an action to make a Strength challenge roll, removing this affliction on a success. A submerged creature is blinded and immobilized. It can use an action to make a Strength challenge roll with 1 bane. It becomes stuck instead on a success, or takes 1d6 damage on a failure. When the spell ends, the ground returns to its normal consistency. Stuck creatures and those submerged in earth or mud can continue attempting to free themselves as described above. However, if the ground was stone, each stuck creature instead remains immobilized until it is freed, and each submerged creature takes damage equal to its Health, dying instantly. Freeing a stuck creature requires dealing at least 10 damage to the ground in the area using weapons or tools. Desolation" 
     },
     { 
         name: "Liche", 
@@ -6791,7 +6859,7 @@
         type: "Utility", 
         targetArea: "Up to five creatures you can reach",
         duration: "2 hours",
-        desc: "Targets are immune to the effects of deprivation and exposure. Desolation" 
+        desc: "You touch each target. For the duration, each target is immune to the effects of deprivation and exposure. Desolation" 
     },
     { 
         name: "Desiccate", 
@@ -6800,7 +6868,7 @@
         type: "Attack", 
         targetArea: "One living creature within short range",
         duration: "1 hour",
-        desc: "Will vs Strength. Success: 2d6 damage and fatigued. If already fatigued, take +2d6 extra damage. Fatigued removed by drinking gallons of water = Size. Desolation" 
+        desc: "You touch each target. For the duration, each target is immune to the effects of deprivation and exposure. this fatigued affl iction. If the target was already fatigued, it instead takes 2d6 extra damage. Desolation" 
     },
           { 
         name: "Overcome Affliction", 
@@ -7532,7 +7600,7 @@
         desc: "When you cast the spell, and when you use an action to concentrate on it, choose one creature within short range that can hear you. The target must get a success on a Will challenge roll or become impaired for 1 minute. While impaired, the target must take a slow turn each round, and you decide how the target moves during that turn, provided you can see it. An affected creature can use an action to make a Will challenge roll. A creature removes the affliction on a success, or gains 1 Insanity on a failure. Terrible Beauty" 
     },
     { 
-        name: "Enthrolling Song", 
+        name: "Enthralling Song", 
         tradition: "Song", 
         rank: 5, 
         type: "Attack", 
