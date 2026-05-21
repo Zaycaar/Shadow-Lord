@@ -4438,7 +4438,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 minute",
-        desc: "Ignore difficult terrain from earth/sand/stone. Only fall prone if you choose to. OP" 
+        desc: "For the duration, when you move, you ignore the effects of moving across difficult terrain created by earth, sand, stone, or a similar material. In addition, if an effect would knock you prone, you fall prone only if you choose to do so.  OP" 
     },
     { 
         name: "Stone Gauntlet", 
@@ -4447,61 +4447,62 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 minute",
-        desc: "Stone sheathes arm. +1 Defense and +2 damage to unarmed strikes. OP" 
+        desc: "Stone sheathes your hand and forearm, remaining there for the duration, after which time it crumbles away. The stone covering grants you a +1 bonus to Defense and a +2 bonus to damage when you attack with an unarmed strike. OP" 
     },
     { 
         name: "Breastwork", 
         tradition: "Earth", 
         rank: 1, 
         type: "Utility", 
-        targetArea: "4x1x1 yard line",
+        targetArea: "A line, 4 yards long, 1 yard high, and 1 yard thick, originating from a point you can reach",
         duration: "1 minute",
-        desc: "Wall of earth (Def 5, HP 20). If destroyed, space becomes difficult terrain until spell ends. OP" 
+        desc: "You cause a wall of earth to rise up from the ground to fill the area. The wall has Defense 5 and Health 20. The earth fills its space completely and remains for the duration or until destroyed. If the wall is destroyed, it crumbles to fill the ground in its space with difficult terrain that remains until the spell ends. OP" 
     },
     { 
         name: "Ensnare", 
         tradition: "Earth", 
         rank: 1, 
         type: "Attack", 
-        targetArea: "One Size 2 or smaller creature on ground",
+        targetArea: "One Size 2 or smaller creature on ground in short range",
         duration: "1 minute",
-        desc: "Will vs Agi. Success: 1d6 damage and grabbed. Escaping requires attack roll vs your Will; failure deals 1d6 damage. 20+: +1d6 extra damage. OP" 
+        desc: "You cause the earth to form into a tentacle and grab the target’s foot or other appendage. Make a Will attack roll against the target’s Agility. On a success, the target takes 1d6 damage and becomes grabbed for 1 minute. A target grabbed by this spell can use an action to escape, but it makes its attack roll against your Will. Furthermore, if it gets a failure on its attack roll to escape, the target takes 1d6 damage. <b>Attack Roll 20+:</b> The target takes 1d6 extra damage. OP" 
     },
     { 
         name: "Earth Wave", 
         tradition: "Earth", 
         rank: 2, 
         type: "Attack", 
-        targetArea: "5-yard square on ground",
+        targetArea: "5-yard square on ground in short range",
         duration: "Instantaneous",
-        desc: "Agi challenge. Failure: Fall prone and move 1d6 yards away; take 1d6 damage per yard moved. Structures take 4d6 damage (collapse deals 4d6+10). OP" 
+        desc: "The ground heaves, forming a wave that moves from one side of the area to the other. Each creature on the ground in the area must get a success on an Agility challenge roll or fall prone and be moved 1d6 yards away from the origin point, taking 1d6 damage for each yard it moves in this way. Unattended, unsecured objects of Size 1 or smaller resting on the ground in the area topple over and roll away, just as creatures do, but they do not take damage. Structures, objects of Size 2 or larger, and objects anchored to the ground take 4d6 damage. A structure destroyed by this damage collapses and everything on, inside, or under it takes 4d6 + 10 damage. In addition, creatures on the structure might take falling damage from landing after the structure collapses.  OP" 
     },
     { 
         name: "Stone Call", 
         tradition: "Earth", 
         rank: 2, 
         type: "Utility", 
-        targetArea: "10-yard long, 1-yard wide line",
+        targetArea: "10-yard long, 1-yard wide line in medium range",
         duration: "Instantaneous",
-        desc: "Creates a stony path to bridge gaps or liquids. Sacrifice: Cast Tremor. OP" 
+        desc: "<b>Req:</b>Must be standing on earthen or stone surface. Stones roll in from your environment or heave themselves up below the area to form a stony path in the area. The path can bridge gaps, liquid surfaces, and the like. Sacrifice You can use an action and expend a casting of this spell to cast the <b>Tremor</b> spell. OP" 
     },
     { 
         name: "Granite Soldiers", 
         tradition: "Earth", 
         rank: 3, 
         type: "Utility", 
-        targetArea: "Rocks within medium range (Total Size <= 2)",
+        targetArea: "Any number of rocks whose total size must not exceed 2 within Medium Range.",
         duration: "1 minute",
-        desc: "Turns rocks into compelled constructs (Small, Medium, or Large based on rock Size). OP" 
+        desc: "You imbue each target with the power of earth, causing it to become a compelled <b>Construct</b> for the duration or until it’s destroyed. A Size 1/2 target becomes a <b>Small Construct</b>. A Size 1 target becomes a <b>Medium Construct</b>. A Size 2 target becomes a <b>Large Construct</b>. Alternatively, you can combine rocks to make a larger construct. OP" 
     },
     { 
         name: "Secret of Stone", 
         tradition: "Earth", 
         rank: 3, 
         type: "Utility", 
-        targetArea: "One earth/stone object you reach",
+        targetArea: "One earth/sand/stone object you can reach",
         duration: "Instantaneous",
-        desc: "Ask object 3 questions about nearby history or properties. Sacrifice: Cast Avalanche. OP" 
+        desc: "You touch the target and ask it three questions. The questions must pertain to anything that might be true or might have occurred within short range of the object. If you ask a question that the target cannot answer, you receive no answer and the question is wasted. <b>Sacrifice:</b> You can use an action and expend a casting of this 
+spell to cast the <b>Avalanche spell</b>. OP" 
     },
     { 
         name: "Stone Merge", 
@@ -4510,61 +4511,61 @@
         type: "Utility", 
         targetArea: "Self/Stone object",
         duration: "Concentration",
-        desc: "Move into stone/earth surface (Size >= you). Can see/hear/speak normally. Move at half Speed on surface. If object destroyed, you die. OP" 
+        desc: "For the duration, you can move into the surface of objects made from earth or stone that are your Size or larger. When you do so, you and everything you wear and carry flow into the object, and a pair of eye-like cracks appear on the surface at the point you entered. While inside the object, you can see and hear normally, and you can speak, though doing so causes a mouth to appear on the surface just under the eyes. You can also move across the surface at half Speed, provided that surface remains earth or stone. If you are in an object and that object is destroyed, you take damage equal to your Health and die. OP" 
     },
     { 
         name: "Voracious Earth", 
         tradition: "Earth", 
         rank: 4, 
         type: "Attack", 
-        targetArea: "5-yard radius circle on ground",
+        targetArea: "5-yard radius circle on ground in medium range",
         duration: "1 minute",
-        desc: "Difficult terrain. Round end: Agi challenge or 2d6 damage. Incapacitated creatures are devoured/die. OP" 
+        desc: "Dozens of biting mouths appear all over the ground inside the area, turning it into difficult terrain for the duration. When you cast the spell and at the end of each round until the spell ends, each creature on the ground in the area must get a success on an Agility challenge roll or take 2d6 damage from being bitten by one of these mouths. A creature that becomes incapacitated by this damage dies, devoured by the hungry earth. OP" 
     },
     { 
         name: "Crystal Shards", 
         tradition: "Earth", 
         rank: 5, 
         type: "Attack", 
-        targetArea: "5-yard radius circle on ground",
+        targetArea: "5-yard radius circle on ground on point you can see in long range",
         duration: "1 hour",
-        desc: "Agi challenge. Failure: 2d6 damage and impaled (immobilized, 1d6 damage/round). Spikes provide half cover and difficult terrain. OP" 
+        desc: "Crystalline blades burst up from the ground inside the area. Each creature on the ground or up to 2 yards above it must make an Agility challenge roll. A creature takes 2d6 damage and becomes impaled on a failure, or just takes half the damage on a success. A creature impaled by this spell is immobilized and takes 1d6 damage at the end of each round. A creature can free itself by destroying the spike (Defense 5, Health 15) or by pulling itself off the spike, which requires a success on a Strength challenge roll.The spikes remain for the duration and then retract. The spikes provide half cover to anything in the area and behind it, and they turn the area into difficult terrain. OP" 
     },
     { 
         name: "Morass", 
         tradition: "Earth", 
         rank: 5, 
         type: "Utility", 
-        targetArea: "20-yard square on ground",
+        targetArea: "20-yard square on ground in long range",
         duration: "1d3 hours",
-        desc: "Turns earth/stone to mud 2 yards deep. Creatures sink and must swim. Can collapse structures/bridges. OP" 
+        desc: "You change the consistency of earth, sand, and stone surfaces in the area, causing them to become like mud for the duration, after which time the material returns to its normal hardness. Earth, sand, and stone surfaces in the area become pools of mud, 2 yards deep. Any creature standing on such a surface sinks into the mud and must swim to an edge before it can get out. If there’s an open space within 3 yards under the affected area, the mud drains until it fills the volume of space below or until the area is drained of mud. Any object made of earth, sand, or stone resting on the surface sinks into the mud. Depending on the area you choose, this spell could weaken or damage structures, cause bridges to collapse, walls to topple, even buildings to slide. OP" 
     },
     { 
         name: "Fissure", 
         tradition: "Earth", 
         rank: 6, 
         type: "Attack", 
-        targetArea: "30x2 yard line on ground",
+        targetArea: "A shapeable line, 30 yards long and two yards wide, on the ground originating from a point you can see within medium range ",
         duration: "Permanent",
-        desc: "Agi challenge. Fail: Fall into crack (5d6 damage, 3d6 yards deep). Open 19 or lower: Catch edge. 20+: Move to safety. OP" 
+        desc: "Must be standing on the ground. A fissure opens into the area. Any Size 2 or smaller creature on the ground in the area must make an Agility challenge roll. On a roll of 20 or higher, the creature moves to an open space of solid ground nearest to it. On a success with a roll of 19 or lower, the creature almost falls into the fissure, but catches the edge and can use its movement to pull itself up. On a failure, the creature falls into the crack, taking 5d6 damage and landing prone 3d6 yards below the surface. A creature can climb out of the fissure using its movement. The fissure remains open indefinitely. Any creature that falls into it suffers the effects described above.OP" 
     },
     { 
         name: "Wall of Stone", 
         tradition: "Earth", 
         rank: 6, 
         type: "Utility", 
-        targetArea: "30x10x4 yard line",
+        targetArea: "A shapeable line, 30 yards long, 10 yards high, and 4 yards wide, originating from a point within long range",
         duration: "Permanent",
-        desc: "Solid stone barrier/bridge. Each 1yd cube has Def 5, HP 20, half damage from weapons. OP" 
+        desc: "A wall of solid stone springs into existence in the area. The wall can have any orientation, as long as either half of its length rests on a solid surface or two sides rest on solid surfaces. Thus, you could cast this spell to serve as a barrier or as a bridge across a gap. Each 1-yard cube of wall has Defense 5, Health 20, and takes half damage from weapons. If a cube of wall is destroyed, its space becomes difficult terrain until the rubble is cleared away. OP" 
     },
     { 
         name: "Major Earthquake", 
         tradition: "Earth", 
         rank: 7, 
         type: "Attack", 
-        targetArea: "3-mile radius circle on ground",
+        targetArea: "3-mile radius circle on ground centered on a point you can see",
         duration: "1d6 minutes",
-        desc: "Difficult terrain. Round end: Agi challenge or 1d6 damage and fall prone. Structures take 4d6 damage per round. OP" 
+        desc: "The ground inside the area shakes and heaves violently for the duration. The area becomes difficult terrain. When you cast the spell and at the end of each round until the spell ends, each creature standing on the area must get a success on an Agility challenge roll or take 1d6 damage and fall prone. In addition, when you cast the spell and at the end of each round until the spell ends, any structure resting on the area takes 4d6 damage. Any structure destroyed by this damage collapses and everything on, inside, or under it takes 4d6 + 10 damage. Creatures on top of a collapsing structure might also take falling damage. OP" 
     },
     { 
         name: "Become the Mountain", 
@@ -4573,7 +4574,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "Concentration, up to 1 hour",
-        desc: "Size 3 form. Str 20, +40 Health, Sightless (long range), half weapon damage, various immunities. Unarmed strike: 6d6. Round end: Near creatures Agi challenge or fall prone. OP" 
+        desc: "You assume the form of a Size 3 hulking brute made of earth and stone, and remain in that form for the duration. You resume your normal form when the spell ends, appearing anywhere inside the brute’s space. Until the spell ends, you gain the following benefits: Sightless You rely on senses other than sight to perceive your surroundings and can pinpoint the location of each creature and object within long range of you. Creatures within that area cannot hide from you, and you ignore banes imposed by obscurement on rolls to perceive things. You are not subject to the blinded condition. Attributes Your Strength score becomes 20. Characteristics You gain a +40 bonus to Health. Earth Stride You ignore the effects of moving across difficult terrain created by earth, sand or stone. You can also move through solid obstacles made from earth, sand, or stone and remain in those areas indefinitely. If the obstacle is destroyed while you are in it, you appear in its space. Immune damage from disease and poison; blinded, dazed, deafened, diseased, fatigued, frightened, immobilized, poisoned, prone, slowed, and stunned. Resilience You take half damage from weapons. Shattering Fists When you concentrate on this spell, you can make an unarmed strike against one creature or object you can reach. On a success, your attack deals 6d6 damage, or 36 damage to an object. Unruly Earth At the end of each round, each creature on the ground that is not a genie and is within short range of you must get a success on an Agility challenge roll with 1 bane or fall prone. If the creature is already prone, it takes 2d6 damage. Any object on the ground in the area takes 2d6 damage. OP" 
     },
     { 
         name: "Name of the Mountain", 
@@ -4582,16 +4583,16 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 hour",
-        desc: "Cast learned Rank 0-3 Earth spells without expending castings. Can cast any Rank 0 Earth spell even if not learned. OP" 
+        desc: "You speak the secret name of the earth and master its power. For the duration, you can cast rank 3 and lower Earth spells that you have learned without expending a casting. In addition, you can cast any rank 0 Earth spell, whether you have learned it or not. OP" 
     },
     { 
         name: "Crack the World", 
         tradition: "Earth", 
         rank: 10, 
         type: "Utility", 
-        targetArea: "Point on ground",
+        targetArea: "A point on the surface of terrain made of earth, sand, or stone that you can see",
         duration: "Special",
-        desc: "Fissure 6 miles long, 0.5 mile wide/deep. Anything inside dies (unless flier). Shaking radius 5d20 miles. Aftershock after 1d6 hours. Aftereffect: Will challenge (-5 banes) or turn to stone/die. OP" 
+        desc: "An enormous crack, up to a half mile wide and a half mile deep, extends out from the target until it reaches 6 miles in length. Anything in the area when the crack appears falls into it and takes damage equal to its Health unless it has the flier trait, in which case a creature does not fall. The ground within 5d20 miles of the crack shakes violently for 1d6 minutes, turning the surface into difficult terrain. When the ground starts shaking and at the end of each round thereafter until it stops, each creature standing on the area must get a success on an Agility challenge roll or take 1d6 damage and fall prone. When you cast the spell and at the end of each minute until the spell ends, any structure resting on the area takes 4d6 damage. Any structure destroyed by this damage collapses and everything on, inside, or under it takes 4d6 + 10 damage. Creatures on top of a collapsing structure might also take falling damage. When the shaking stops, roll a d6 to determine the number of hours that pass before the aftershock strikes. At the end of this time, the ground shakes for 1 minute with the same effects as described above. <b>Aftereffect</b> You must get a success on a Will challenge roll with 5 banes or take damage equal to your Health and turn into a stone statue, becoming an object of your Size. OP" 
     },
           { 
         name: "Precognitive Attack", 
