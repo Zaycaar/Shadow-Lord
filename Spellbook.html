@@ -4107,32 +4107,32 @@
         duration: "Instantaneous",
         desc: "Meteor hits for 20d6 damage in 1-mile radius; everything catches fire. Agi challenge (-3 banes) for half damage. Aftereffect: Will challenge (-5 banes) or die and explode for 10d6 in 100 yds. OP" 
     },
-          { 
+         { 
         name: "Prick", 
         tradition: "Fey", 
         rank: 0, 
         type: "Attack", 
         targetArea: "One creature in short range",
         duration: "1 round",
-        desc: "Int vs Str. Success: 1 damage and impaired for 1 round. 20+: Impaired for 1d3 rounds. OP" 
+        desc: "Make an Intellect attack roll against the target’s Strength. On a success, the target takes 1 damage and becomes impaired for 1 round. <b>Attack Roll 20+:</b> The target is impaired for 1d3 rounds. OP" 
     },
     { 
         name: "Trip", 
         tradition: "Fey", 
         rank: 0, 
         type: "Attack", 
-        targetArea: "One creature in medium range",
+        targetArea: "One creature in medium range that you can see",
         duration: "1 round",
-        desc: "Int vs Agi. Success: Prone and cannot stand for 1 round. 20+: Cannot stand for 1d3 rounds. OP" 
+        desc: "Make an Intellect attack roll against the target’s Agility. On a success, the target falls prone and cannot stand up for 1 round. <b>Attack Roll 20+:</b> The target cannot stand up for 1d3 rounds. OP" 
     },
     { 
         name: "Fumble", 
         tradition: "Fey", 
         rank: 1, 
         type: "Attack", 
-        targetArea: "Up to 3 creatures in short range",
+        targetArea: "Up to 3 creatures in short range that you can see",
         duration: "Instantaneous",
-        desc: "Agi challenge (2 banes) or drop held object. Roll total <= 0: fall prone. Triggered: Use when target draws/retrieves item; Int vs Agi to drop. 20+: also fall prone. OP" 
+        desc: "A target must get a success on an Agility challenge roll with 2 banes or drop whatever it is holding. The object slides  1 yard away from the target. If the total of the target’s roll is 0 or lower, the target also falls prone. Triggered When a creature draws a weapon or retrieves an object from a pocket or container, you can use a triggered action to cast this spell. Instead of the normal effect, make an Intellect attack roll against the target’s Agility. On a success, the target drops the object that triggered this casting. If the total of your attack roll is 20 or higher and beats the target number by at least 5, the target also falls prone. OP" 
     },
     { 
         name: "Guiding Sprite", 
@@ -4140,18 +4140,17 @@
         rank: 1, 
         type: "Utility", 
         targetArea: "1-yard cube in short range",
-        duration: "1 minute",
-        desc: "Summons a compelled sprite. Int vs Will to increase duration to 1 hour (gifts grant boons). OP" 
+        duration: "See effect",
+        desc: "A compelled <b>Sprite</b> appears in the area and remains for 1 minute. If you get a success on an Intellect attack roll against the sprite’s Will, you convince the sprite to remain, which increases the duration to 1 hour. If you give the sprite a gift, you make the attack roll with 1 or more boons depending on the quality of the gift. OP" 
     },
     { 
         name: "Repel Iron", 
         tradition: "Fey", 
         rank: 2, 
         type: "Attack", 
-        targetArea: "Up to 5 creatures with iron/alloy gear",
+        targetArea: " Up to five creatures within medium range that are wearing armor made from iron or an alloy of iron, are made from such metals, or are wielding or carrying a weapon made from such metals",
         duration: "Instantaneous",
-        desc: "Str challenge (1 bane if wearing/made of iron). Fail: Metal targets move 2d6 yards away and fall prone; iron weapons fly 2d6 yards away. Sacrifice: Cast Fumble. OP" 
-    },
+        desc: "Each target must make a Strength challenge roll. If the target is wearing armor made from iron or an alloy of iron  or the target is made from such metal, it makes the roll with  1 bane. On a failure, A target wearing metal or that is made made of metal moves 2d6 yards in a straight line away from you and then falls prone. A weapon carried or worn in a scabbard or other sheath pulls free from the target’s body and flies 2d6 yards away from it on a failure, landing when it reaches the full distance or encounters a solid surface before then. If both effects apply to the same target, they happen at the same time. <b>Sacrifice:</b> You can use an action and expend a casting of this spell to cast the <b>Fumble spell</b>. OP"     },
     { 
         name: "Iron to Wood", 
         tradition: "Fey", 
@@ -4159,7 +4158,7 @@
         type: "Utility", 
         targetArea: "3-yard cube in medium range",
         duration: "24 hours",
-        desc: "Non-magical Size 1 or smaller iron objects turn to wood. Affected weapons deal half damage. Sacrifice: Teleport (short range). OP" 
+        desc: "Each Size 1 or smaller object about the size of a door or smaller in the area that is made of iron and not under the effect of magic turns into wood. A weapon affected by this spell deals half damage. <b>Sacrifice:</b> You can use an action and expend a casting of this spell to teleport to an open space you can see within short range. OP" 
     },
     { 
         name: "Conventicle of Brownies", 
@@ -4167,18 +4166,17 @@
         rank: 3, 
         type: "Utility", 
         targetArea: "2-yard cube in short range",
-        duration: "1d3 + 1 hours (secret)",
-        desc: "Req: Milk offering + 1 min concentration. Summons 1d3+1 friendly brownies. Sacrifice: Teleport (medium range). OP" 
+        duration: "1d3 + 1 hours (GM rolls in secret)",
+        desc: "You must make an offering of milk in a small bowl and then concentrate for 1 minute. When you finish, 1d3 + 1 <b>Brownies</b> appear in the area having come from a hidden kingdom. The brownies are friendly to you and can be convinced to help you complete a task, share your danger, or accompany you on your travels. The brownies remain for the duration or until they are incapacitated, at which point they vanish. <b>Sacrifice:</b> You can use an action, or a triggered action on your turn, and expend a casting of this spell to teleport to an open space within medium range. OP" 
     },
     { 
         name: "Raiment of Stars", 
         tradition: "Fey", 
         rank: 3, 
         type: "Utility", 
-        targetArea: "Self (Clothing/Armor)",
+        targetArea: "The clothing or armor you are wearing",
         duration: "4 hours",
-        desc: "Finery appearance. Benefits: Entrancing Presence (Action: Will challenge vs short range; fail = charmed 1hr); invisible in shadows; teleport (long range) to end spell. OP" 
-    },
+        desc: "You alter the appearance of your clothing and armor so you appear dressed in exquisite finery. Small specks of light form a crown around your brow. The spell lasts for the duration or until you remove your clothing. Until it ends, you gain the following benefits: <b>Entrancing Presence</b> You can use an action to force each creature within short range that can see you to make a Will challenge roll. On a success, the creature becomes immune to your use of Entrancing Presence until it completes a rest. On a failure, the creature becomes charmed for 1 hour or until it is no longer within short range of you. <b>Intensified Shadows</b> You are invisible when in areas obscured by shadows or darkness. <b>Hidden Door</b> You can use an action, or a triggered action on your turn, to teleport to an open space you can see within long range. Once you use this effect, the spell ends. OP"     },
     { 
         name: "Damn Your Eyes", 
         tradition: "Fey", 
@@ -4186,7 +4184,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 minute",
-        desc: "Whenever you see a creature, it must pass a Will challenge or you become invisible to it until you attack. Success makes creature immune. OP" 
+        desc: "You weave magic around you that causes the eyes of other creatures to skip over you. For the duration, whenever you see a creature, the creature must make a Will challenge roll. On a failure, you become invisible to that creature until you use an action to attack. For as long as you are invisible to the creature, you are hidden from it, even if you speak or do something else to draw attention to your position. On a success, the creature becomes immune to this casting of the spell. OP" 
     },
     { 
         name: "Vengeance of the Wee Free Men", 
@@ -4195,25 +4193,25 @@
         type: "Attack", 
         targetArea: "Up to 5 creatures in short range",
         duration: "1 minute",
-        desc: "Each turn: Agi challenge (1 bane). Failure: 2d6+2 damage, moved 1d3 yards, and impaired 1 round. OP" 
+        desc: "A swarm of tiny, invisible faeries besets the targets. When you cast the spell and again on each of your turns for the duration, each target must make an Agility challenge roll with 1 bane. On a failure, the target takes 2d6 + 2 damage as the invisible faeries pull, tear, and batter their victim. It also moves 1d3 yards in a direction you choose and becomes impaired for 1 round. OP" 
     },
     { 
         name: "Call Unicorn", 
         tradition: "Fey", 
         rank: 5, 
         type: "Utility", 
-        targetArea: "2-yard cube in short range",
+        targetArea: "2-yard cube on solid surface in short range",
         duration: "8 hours",
-        desc: "Summons unicorn. If Corruption 0: friendly (rider must be virgin). If Corruption > 0: Int vs Will to compel for 1 hour; failure = hostile. OP" 
+        desc: "A <b>Unicorn</b> gallops out of thin air to appear inside the area. If you have a Corruption score of 0, the unicorn is friendly to you and will accompany you, share your danger, and help you to the best of its ability with one exception: it will bear only a virgin as its rider. The unicorn remains for the duration, or until it becomes incapacitated, at which time it disappears. If you have a Corruption score greater than 0, you must make an Intellect attack roll against the unicorn’s Will. On a success, the unicorn becomes compelled for 1 hour, after which time the spell ends and the unicorn disappears. On a failure, the unicorn becomes hostile to you and takes the next available turn to attack you and other members of your group. OP" 
     },
     { 
         name: "Strange Delusions", 
         tradition: "Fey", 
         rank: 5, 
         type: "Utility", 
-        targetArea: "Up to 10 creatures in medium range",
-        duration: "1 minute / 1d3 hours",
-        desc: "Int challenge (3 banes). Success: Impaired 1 min. Failure: Target believes it is a small animal for 1d3 hours (Int 5, restricted actions). OP" 
+        targetArea: "Up to 10 creatures in medium range that you can see",
+        duration: "See effect",
+        desc: "A target must make an Intellect challenge roll with 3 banes, though a creature with an Intellect score of 7 or less makes the roll with 3 boons instead. A target becomes impaired for 1 minute on a success. It can make a Will challenge roll at the end of each round and removes the affliction from itself on a success. On a failure, the target believes you have transformed it into a <b>Small Animal</b> of your choice for 1d3 hours. Until the spell ends, the target’s Intellect becomes 5, and it behaves as if it were the animal, though its other statistics are unchanged. The target can use actions only to do things the animal could normally do. The effect ends for a target if it becomes incapacitated. OP" 
     },
     { 
         name: "Deep Sleep", 
@@ -4221,44 +4219,44 @@
         rank: 6, 
         type: "Attack", 
         targetArea: "Any number of creatures in medium range",
-        duration: "1d6 years",
-        desc: "Will challenge (HP <= 30 fail automatically; HP <= 50 have 1 bane). Failure: Prone and asleep. No aging/need for food. Ends on damage or caster action. OP" 
+        duration: "Instantaneous",
+        desc: "A target must make a Will challenge roll. A creature with a Health score of 30 or lower automatically gets a failure. A creature with a Health score of 50 or lower makes the roll with 1 bane. On a failure, the creature falls prone and becomes asleep for 1d6 years. While affected by this spell, the creature does not need to eat or drink, nor does it age. The creature removes the asleep affliction from itself if it takes damage or if you use an action to end the effect on an affected creature you can see. OP" 
     },
     { 
         name: "Reflecting Pool", 
         tradition: "Fey", 
         rank: 6, 
         type: "Utility", 
-        targetArea: "Pool of still water",
+        targetArea: "Pool of still water in reach",
         duration: "Concentration, up to 4 hours",
-        desc: "View known location in water. Portal: Creatures can enter pool to emerge at destination (10yd fall). Caster entering ends spell. Aftereffect: Fatigued (or -2d6 Health if already fatigued). OP" 
+        desc: "Visualize a place you have previously visited or found on a map. The water’s surface changes to show the place you visualized. If the place is outdoors, you see it as if you were looking down on it from a height of 10 yards. If the place is indoors, you see it as if you were looking down from the same height or from the ceiling, whichever is lower. The size of the area displayed depends on the size of the pool, and you hear sounds emanate from the pool as if you were there. The effect lasts for the duration.As long as the pool shows the destination, creatures on your side of the image can enter the pool and appear at the destination it shows, falling 10 yards if outside or from the ceiling if inside. If you enter the pool, you travel to the destination, but the spell ends immediately. <b>Aftereffect:</b> You are fatigued until you complete a rest. If you are already fatigued, you take a –2d6 penalty to Health that lasts until you are no longer fatigued. OP" 
     },
     { 
         name: "Lords and Ladies", 
         tradition: "Fey", 
         rank: 7, 
         type: "Utility", 
-        targetArea: "10-yard cube in short range",
+        targetArea: "10-yard cube in short range on a solid surface",
         duration: "Until rest",
-        desc: "Req: Blood (1 dmg), Beauty (10gc art), Flame (7 candles) + 1 min concentration. Summons 3d6 neutral elves. Sacrifice: Teleport (extreme range). OP" 
+        desc: "You must make three offerings to cast this spell. The offering of blood requires dealing at least 1 damage to a living creature you can reach. The offering of beauty must be a piece of art worth at least 10 gc. And the offering of flame must be seven lit candles. You then must concentrate for 1 minute. When you finish, 3d6 <b>Elves</b> appear in the area. The elves are neutral toward you, but interested in what you have to say. You might be able to convince them to assist you, or accompany you if the cause is interesting, results in a reward for the elves, or allows the elves to work mischief. If you fail to convince the elves to stay, they disappear, returning to the hidden kingdom from which they came. Otherwise, the elves remain until you complete a rest or until they become incapacitated, at which point they disappear. <b>Sacrifice:</b> You can use an action, or a triggered action on your turn, and expend a casting of this spell to teleport to an open space within extreme range. OP" 
     },
     { 
         name: "Gift of Immortality", 
         tradition: "Fey", 
         rank: 8, 
         type: "Utility", 
-        targetArea: "One willing mortal you reach",
+        targetArea: "One willing mortal you can reach",
         duration: "Permanent",
-        desc: "Caster permanently reduces Health by 1d6. Target becomes faerie: gains shadowsight, immune to disease/charmed, spell defense, social boons. Iron contact impairs/strips defenses. Aftereffect: Str challenge (4 banes) or damage = Health. Sacrifice: Heal damage/remove 1 Insanity. OP" 
+        desc: "You reduce your Health by 1d6. The reduction is permanent. You then touch the target and transform it into a faerie. As part of the transformation, you decide three ways in which the target’s appearance changes. All of these changes are cosmetic and thus do not affect the target’s statistics. Then, the target gains all of the following benefits. <b>Shadowsight:</b> The target gains shadowsight (if it doesn’t have it already), which lets it see in areas obscured by shadows as if those areas were lit. <b>Immune:</b> The target becomes immune to damage from disease and to the charmed and diseased afflictions. <b>Spell Defense:</b> The target takes half damage from spells. It makes challenge rolls to resist attack spells with 1 boon, and creatures attacking it with spells make their attack rolls with 1 bane. <b>Bewitching Presence:</b> The target makes attack rolls in social situations with 1 boon. <b>Iron Vulnerability:</b> The target becomes impaired while in contact with iron. In addition, if the target touches or is touched by iron, it loses Spell Defense and Bewitching Presence for 1 minute. <b>Immortal:</b> The target physically remains at its present age until it dies. <b>Aftereffect:</b> You must get a success on a Strength challenge roll with 4 banes or take damage equal to your Health. <b>Sacrifice:</b> You can use an action and expend a casting of this spell to heal all your damage and remove 1 Insanity from yourself. OP" 
     },
     { 
         name: "Cave of Dreams", 
         tradition: "Fey", 
         rank: 9, 
         type: "Utility", 
-        targetArea: "2-yard cube in short range",
+        targetArea: "2-yard cube of space in short range",
         duration: "Permanent",
-        desc: "Creates door to extradimensional space (4x4x8 yards). No time passes inside. Undetectable. Aftereffect: Will challenge (4 banes) or 3d6 Insanity. Sacrifice: Open door to any previously created cave. OP" 
+        desc: "A door appears inside the area and remains for the duration. The door opens to a cave of dreams, which is an extradimensional space 4 yards wide, 4 yards high, and 8 yards deep. You decide what the interior of the cave looks like. Time does not pass inside the cave while the door is closed, so any creature left inside does not experience the passage of time and does not need to eat, sleep, breathe, or drink. Creatures and objects inside a cave of dreams cannot be detected by any means. <b>Aftereffect:</b> You must get a success on a Will challenge roll with 4 banes or gain 3d6 Insanity. If you go mad from gaining this Insanity, when you roll to end the effect of the madness, you must roll three times and use the lowest result. <b>Sacrifice:</b> You can use an action and expend a casting of this spell to open a door to any cave of dreams you have previously created with this spell. OP" 
     },
     { 
         name: "Imagine a Hidden Kingdom", 
@@ -4267,7 +4265,7 @@
         type: "Utility", 
         targetArea: "Point you reach",
         duration: "Permanent",
-        desc: "24-hour concentration. Creates 1-mile cube extradimensional kingdom and borderland. Aftereffect: Int challenge (5 banes) or 5d6 damage, Int/Will reduced to 5, 3d6 Insanity, and forget spell forever. Sacrifice: Expand kingdom (1 mile). OP" 
+        desc: "<b>Req:</b>Must be on a world, not in hidden kingdom or extradimensional space. Upon casting this spell, you must concentrate for 24 hours, during which time you visualize a world. When you finish, you create an extradimensional place, known as a hidden kingdom, that becomes tethered to reality. The hidden kingdom is a cube, 1 mile on each side, originating from the target. You decide the appearance of this place, creating sky, ground, and any other features you like. You can create ordinary animals and plants to inhabit this place, though all such creations disappear if removed from the hidden kingdom. When you complete your hidden kingdom, you also create an area of borderland, which allows creatures and objects to pass into and out of the hidden kingdom you created. The borderland can be as simple as a door or as complex as a permanent fog bank. The area of borderland must fit inside a cube of space, 100 yards on a side. As part of your creation of this borderland, you also decide how and if creatures can pass through the borderland and into the hidden kingdom, as well as how creatures might move out from within the borderland and into the reality to which the borderland is attached. For example, you might say that the borderland allows passage only under the light  of a full moon or if a living creature is killed in the area of the borderland. Work with your GM to define any relevant details about the place, remembering that the GM has the final say over what’s possible with this spell. <b>Aftereffect:</b> You must get a success on an Intellect challenge roll with 5 banes or take 5d6 damage, reduce your Intellect and Will to 5, and gain 3d6 Insanity. The reduction to Intellect and Will lasts for 1 month, 1 week, and 1 day. Finally, you forget this spell and cannot cast it again, even from an incantation. <b>Sacrifice:</b> You can use an action and expend a casting of this spell to expand a hidden kingdom you have created with this spell. You must be able to reach the target of the previous spell and then concentrate for 24 hours. At the end of this time, you increase the size of the hidden kingdom by 1 mile in each direction. You are still subject to the spell’s <b>Aftereffect:</b>. OP" 
     },
           { 
         name: "Convincing Word", 
