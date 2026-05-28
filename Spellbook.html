@@ -3621,14 +3621,14 @@
         duration: "4 hours",
         desc: "Likeness of the Devil. Size +10; Truesight; Defense 25; all attributes become 20. Immune to major afflictions/Insanity/disease/poison; half damage from all else. Action/Triggered: Force kneel (Will challenge with 3 banes); targets fall prone. Action: Hellfire (5d6 damage + catch fire) at extreme range. Aftereffect: +1d6 Corruption; Int challenge (-3 banes) or +3d6+3 Insanity. Failure (0 or lower): Devil takes your soul; immediate death. OP"
     },
-          { 
+{ 
         name: "Conceal Object", 
         tradition: "Illusion", 
         rank: 0, 
         type: "Utility", 
         targetArea: "One Size 1/2 or smaller object in short range",
         duration: "1 minute",
-        desc: "Object becomes hidden. Creatures must pass Perception challenge (1 bane) to see/touch it. Sacrifice: Triggered action to impose 1 bane on an incoming attack. OP" 
+        desc: "You cause the object to become hidden for the duration. When a creature would encounter the target through one of its senses, such as by touching it or seeing it, the creature must make a Perception challenge roll with 1 bane. On a success, the creature can perceive the object as normal. On a failure, the creature cannot perceive the object until the spell ends.<br><b>Sacrifice</b> When a creature you can see attacks you, you can use a triggered action and expend a casting of this spell to impose 1 bane on the triggering attack roll. OP" 
     },
     { 
         name: "Obscuring Cloud", 
@@ -3637,7 +3637,7 @@
         type: "Utility", 
         targetArea: "2-yard radius sphere centered on you",
         duration: "1 minute",
-        desc: "Triggered: Cast on your turn. Smoke heavily obscures area. Winds can disperse. OP" 
+        desc: "A billowing cloud of smoke in a color you choose spreads out to heavily obscure the area. The smoke remains for the duration or until dispersed by wind.<br><b>Triggered</b> On your turn, you can use a triggered action to cast this spell. OP" 
     },
     { 
         name: "Befuddle", 
@@ -3646,7 +3646,7 @@
         type: "Attack", 
         targetArea: "One creature in short range",
         duration: "1 minute",
-        desc: "Int vs Perception. Success: Target makes Perception rolls with 3 banes and grants 1 boon on attacks vs it. 20+: Target also falls prone. OP" 
+        desc: "You weave minor illusions around the target that leave it reeling. Make an Intellect attack roll against the target’s Perception. On a success, the target makes Perception rolls with 3 banes for 1 minute, and during this time it also grants 1 boon on attack rolls made against it.<br><b>Attack Roll 20+</b> The target also falls prone. OP" 
     },
     { 
         name: "Delusion", 
@@ -3655,7 +3655,7 @@
         type: "Attack", 
         targetArea: "One creature in short range",
         duration: "1 minute / 1 hour",
-        desc: "Int vs Will. Success: Choose one (Gain a language/profession for 1 hour; OR become impaired for 1 minute). OP" 
+        desc: "You fill the target’s mind with false belief about its capabilities. Choose one of the following effects:<br>• You enable the target to speak, read, or write a language it does not know or gain a profession it does not have. The effect lasts for 1 hour. <br>• The target becomes impaired for 1 minute.  OP" 
     },
     { 
         name: "False Healing", 
@@ -3664,7 +3664,7 @@
         type: "Utility", 
         targetArea: "One creature you reach",
         duration: "1 minute",
-        desc: "Target gains +10 Health bonus. Aftereffect: Target takes 1d6 damage from overexertion. OP" 
+        desc: "You touch the target and make it believe it has healed damage. Until the spell ends, the target has a +10 bonus to Health.<br><b>Aftereffect:</b> The target takes 1d6 damage from overexertion. OP" 
     },
     { 
         name: "Lasting Image", 
@@ -3673,25 +3673,25 @@
         type: "Utility", 
         targetArea: "2-yard cube in short range",
         duration: "24 hours",
-        desc: "Visual/Auditory illusion; harmless and revealed if entered. Loops every hour. Permanence: Cast in same area for 1 year + 1 day. OP" 
+        desc: "You create an illusion in the area that remains for the duration. The illusion has both auditory and visual components, if you like, though you can choose one or the other. The magic from the spell allows you to decide how the image moves (if it does) and what sounds the image makes. Any movements and sounds created by the spell continue for 1 hour before starting over at the beginning, as if you had just cast the spell. Although realistic, the illusion is harmless and its illusory nature is revealed to any creature entering the area.<br><b>Permanence:</b> You must cast this spell in the same area each day for 1 year and 1 day. OP" 
     },
     { 
         name: "Seeming", 
         tradition: "Illusion", 
         rank: 3, 
         type: "Utility", 
-        targetArea: "Up to 5 creatures in 5-yard radius",
+        targetArea: "Up to five creatures inside a 5-yard-radius sphere centered on a point within medium range",
         duration: "8 hours",
-        desc: "Illusory disguises (height/weight +/- 50%, change ancestry/gear/voice). Action: Alter disguise if in med range. Sacrifice: Cast Glamer. OP" 
+        desc: "You mask each target with an illusory disguise that lasts for the duration. You can adjust the target’s height and weight by up to 50 percent, though its Size does not change. You can make the target appear to be a member of a different ancestry, and you can change the appearance of the target\’s clothing and equipment. The spell masks any noise created by the target’s nature or gear and also alters the sound of the target\’s voice to be appropriate for its new appearance. If you are within medium range of a target affected by your casting of this spell, you can use an action to alter the disguise or create a new one.<b>Sacrifice:</b> You can use an action and expend a casting of this spell to cast the <b>Glamer</b> spell. OP" 
     },
     { 
         name: "Tormenting Hallucinations", 
         tradition: "Illusion", 
         rank: 3, 
         type: "Attack", 
-        targetArea: "One creature in medium range",
+        targetArea: "One creature you can see in medium range",
         duration: "1 minute",
-        desc: "Int (+1 boon) vs Perception. Success: Impaired; granting 2 boons on attacks vs it. If target fails a roll while impaired, it becomes frightened for 1 round. 20+: +1d3 Insanity. OP" 
+        desc: "You besiege the target’s mind with unsettling noises and visions. Make an Intellect attack roll with 1 boon against the target’s Perception. On a success, the target becomes impaired for 1 minute. When impaired in this way, whenever the target gets a failure on an attack roll or a challenge roll, it becomes frightened for 1 round. In addition, the target grants 2 boons on attack rolls made against it until the spell ends.<br><b>Attack Roll 20+:</b> The target also gains 1d3 Insanity. OP" 
     },
     { 
         name: "Displace", 
@@ -3700,34 +3700,34 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 hour",
-        desc: "Triggered: Cast when attacked. Attacks vs you have 2 banes. On a miss, you can teleport 2 yards. OP" 
+        desc: "You make others see you where you are not. For the duration, you impose 2 banes on attack rolls made against you. When an attack roll made against you results in a failure, you can teleport to an open space within 2 yards of the space you occupy.<br><b>Triggered</b> When a creature you can see attacks you, you can use a triggered action to cast this spell. OP" 
     },
     { 
         name: "Sending", 
         tradition: "Illusion", 
         rank: 4, 
         type: "Utility", 
-        targetArea: "Cube (size = your Size) at seen point",
+        targetArea: "A cube of space, a number of yards on each side equal to your Size, originating from a point you have previously seen or visited",
         duration: "1 hour",
-        desc: "Illusory copy mimics your moves/speech. You perceive through it (Perception rolls have 2 banes). Copy is immune to damage. Sacrifice: Cast Phantasm. OP" 
+        desc: "You cause an illusory copy of yourself to appear in the area and remain for the duration. You can perceive from the area as if you were in it at the same time that you perceive from the space you currently occupy. The resulting double vision and overlapping hearing imposes 2 banes on Perception rolls you make until the spell ends. The copy mimics your movements and speech, though it cannot leave the area. The copy is immune to all damage.<br><b>Sacrifice</b> You can use an action and expend a casting of this spell to cast the <b>Phantasm</b> spell. OP" 
     },
     { 
         name: "False Injury", 
         tradition: "Illusion", 
         rank: 5, 
         type: "Attack", 
-        targetArea: "Up to 5 creatures in medium range",
-        duration: "1 minute",
-        desc: "Int (+1 boon) vs Perception. Success: Target takes -4d6 penalty to Health. Dying from this reduction is permanent. OP" 
+        targetArea: "Up to 5 creatures you can see in medium range",
+        duration: "See Effect",
+        desc: "Your illusion attacks the minds of your targets, causing them to believe they have suffered some ghastly injury. For each target, make an Intellect attack roll with 1 boon against its Perception. On a success, the target takes a –4d6 penalty to its Health for 1 minute. A target that dies from this reduction to Health did so because it believed that it had sustained a mortal injury. OP" 
     },
     { 
         name: "Waking Nightmare", 
         tradition: "Illusion", 
         rank: 5, 
         type: "Attack", 
-        targetArea: "One creature in medium range",
+        targetArea: "One creature you can see in medium range",
         duration: "1 minute",
-        desc: "Nightmare attacks target's mind each round. Int (+2 boons) vs Perception. Success: 1d6 damage and 1d3 Insanity (death if insane). Target can use action to fight back (Perception vs Int) to cumulative banes on caster. OP" 
+        desc: "You reach into the target’s mind to find its worst fear and then experience that fear as a nightmare that appears before the target, remaining there for the duration. Only the target can perceive the nightmare, and the nightmare follows the target wherever it goes. When the nightmare appears and again at the end of each round, the nightmare attacks the target. Make an Intellect attack roll with 2 boons against the target’s Perception. On a success, the nightmare causes the target to gain 1d3 Insanity and take 1d6 damage. If Insanity gained in this way would cause the target to go mad, the target instead dies. An affected target can use an action to fight back against the nightmare. The target makes a Perception attack roll with 1 bane against your Intellect. On a success, the target imposes 1 bane on attack rolls you make against it using the nightmare. Banes imposed on you by the target’s successful efforts to fight back are cumulative. OP" 
     },
     { 
         name: "Improvised Casting", 
@@ -3736,7 +3736,7 @@
         type: "Utility", 
         targetArea: "Varies",
         duration: "Varies",
-        desc: "Cast any Rank 5 or lower spell from any tradition. Half damage; -1 bane on attack rolls; targets get +1 boon on challenge rolls. OP" 
+        desc: "Choose one rank 5 or lower spell from any tradition. You cast the spell. If the spell deals damage, it deals half damage. If the spell requires you to make an attack roll, you make the attack roll with 1 bane. If the spell allows creatures to make a challenge roll, the creatures make the roll with 1 boon. OP" 
     },
     { 
         name: "Mass Concealment", 
@@ -3745,7 +3745,7 @@
         type: "Attack", 
         targetArea: "Up to 30 creatures in medium range",
         duration: "Concentration, up to 1 hour",
-        desc: "All targets become invisible. OP" 
+        desc: "Each target becomes invisible for the duration. OP" 
     },
     { 
         name: "Accursed Double", 
@@ -3754,16 +3754,16 @@
         type: "Utility", 
         targetArea: "One creature in medium range",
         duration: "1 minute",
-        desc: "Creates copy of target in short range. Double has target's stats and learned spells (Rank 5 or lower). Double takes turns when you do. Perceiving it as an illusion has 2 extra banes. OP" 
+        desc: "You use magic to create a copy of the target inside an open space within short range of the target. The double remains for the duration or until it becomes incapacitated. The double has the target’s attribute and characteristic scores, except for Insanity and Corruption. The double has access to all the talents the target possesses, as well as any spell of rank 5 or lower that the target has learned. The double takes a turn when it appears and again whenever you take a turn. On the double’s turn, it can use an action or move up to its Speed. If the target attempts to discern that the double is an illusion, the spell imposes 2 banes on its Perception roll, in addition to any banes normally incurred by discerning the illusion. OP" 
     },
     { 
         name: "Illusory Landscape", 
         tradition: "Illusion", 
         rank: 8, 
         type: "Utility", 
-        targetArea: "1-mile cube",
+        targetArea: "A cube of space, 1 mile on a side, originating from a point you can see",
         duration: "24 hours",
-        desc: "Mask terrain/objects/creatures (invis or new appearance). Can hide sensory effects (smoke) but not damage (heat). Sacrifice: Regain 8 ranks of Illusion castings. Permanence: Cast 1 year + 1 day. OP" 
+        desc: "You mask the terrain, objects, and creatures in the area with a powerful illusion that remains for the duration. You decide how the terrain looks, sounds, smells, and feels. You can render creatures or objects in the area invisible or alter their appearance to match any description you choose. Affected creatures and objects retain their illusory appearance until the spell ends or until they leave the area. In addition, you can hide terrain features and mask their visual effects. For instance, the spell could render a fire and its smoke invisible, though the fire would still generate heat and deal damage when touched.<br><b>Sacrifice:</b> You can use an action and expend a casting of this spell to regain castings of Illusion spells you have expended. The total ranks of the castings you regain cannot exceed 8, and rank 0 spells count as 1/2 rank.<br><b>Permanence:</b> You must cast this spell to create the same illusion in the same area each day for 1 year and 1 day. OP" 
     },
     { 
         name: "Army of One", 
@@ -3782,168 +3782,6 @@
         targetArea: "1-mile cube",
         duration: "1 month",
         desc: "Overwrite landscape/structures with real-interacting illusions. Living targets pass Will challenge (-3 banes) or are disguised. Aftereffect: Will challenge (-5 banes) or 3d6 Insanity (disadvantage to end madness). Sacrifice: Regain 10 ranks of Illusion castings. Permanence: Cast monthly for 1 year + 1 day. OP" 
-    },
-          { 
-        name: "Carve the Flesh", 
-        tradition: "Forbidden", 
-        rank: 0, 
-        type: "Attack", 
-        targetArea: "One living creature in short range",
-        duration: "Instantaneous",
-        desc: "Int vs Str. Success: 1d3 + 2 damage and leaves a scar. 20+: +1d3 extra damage. OP" 
-    },
-    { 
-        name: "Face Rip", 
-        tradition: "Forbidden", 
-        rank: 0, 
-        type: "Utility", 
-        targetArea: "One creature with a face you reach",
-        duration: "Instantaneous",
-        desc: "Int vs Agi. Success: 1d6 damage. Near creatures (1yd) must pass Will challenge or +1 Insanity. 20+: +1 damage and all observers must pass the Will challenge. OP" 
-    },
-    { 
-        name: "Seal the Cavity", 
-        tradition: "Forbidden", 
-        rank: 1, 
-        type: "Attack", 
-        targetArea: "One Size 1 or smaller living creature in short range",
-        duration: "Special",
-        desc: "Int vs Str. Success: Choose one (Seal Mouth/Nose: Suffocation; Seal Eyes/Ears: Blinded/Deafened; Seal Genitals/Anus: Impaired/Fatigued/Slowed and 2d6 damage/hour). Removal: Cut flap (1d6 damage). 20+: Choose two effects. Aftereffect: Str challenge or suffer one effect yourself. OP" 
-    },
-    { 
-        name: "Serpent Tongue", 
-        tradition: "Forbidden", 
-        rank: 1, 
-        type: "Attack", 
-        targetArea: "Self / One creature you reach",
-        duration: "1 minute",
-        desc: "Tongue becomes poisoned barb; cannot speak. Int vs Agi: 1d6 + 2 damage. Success: Living targets pass Str challenge or 1d6 poison damage and poisoned 1 min. Already poisoned targets take +1d6 extra damage. OP" 
-    },
-    { 
-        name: "Ghastly Visage", 
-        tradition: "Forbidden", 
-        rank: 2, 
-        type: "Attack", 
-        targetArea: "One creature in short range (no Horrifying trait)",
-        duration: "1 minute",
-        desc: "Int vs Str. Success: Target gains Horrifying trait. Allies chosen by caster are immune. 20+: Others resist the trait with 3 banes. OP" 
-    },
-    { 
-        name: "Grotesque Fantasies", 
-        tradition: "Forbidden", 
-        rank: 2, 
-        type: "Attack", 
-        targetArea: "One living creature in short range",
-        duration: "1 minute",
-        desc: "Int vs Will. Success: Dazed (-2 banes on attacks vs it). Round end: Will challenge (-1 bane) to end; failure grants 1 Insanity. 20+: Target takes 1d3 damage per round. OP" 
-    },
-    { 
-        name: "Unruly Organs", 
-        tradition: "Forbidden", 
-        rank: 3, 
-        type: "Attack", 
-        targetArea: "One living creature of flesh and blood in medium range",
-        duration: "1 minute",
-        desc: "Int vs Str. Success: 2d6 damage. Round end: Str challenge (-1 bane) or 2d6 extra damage. Incapacitation: Target dies/prone and spawns 1d6 tiny monsters. 20+: +2d6 extra damage. OP" 
-    },
-    { 
-        name: "Vivisection", 
-        tradition: "Forbidden", 
-        rank: 3, 
-        type: "Attack", 
-        targetArea: "One creature in medium range",
-        duration: "Instantaneous",
-        desc: "Int vs Str. Success: 5d6 damage. Incapacitation: Target dies, sliced into 1-inch strips; observers must pass Will challenge (-1 bane) or +1 Insanity. 20+: +2d6 extra damage. OP" 
-    },
-    { 
-        name: "Spectacular Expulsion", 
-        tradition: "Forbidden", 
-        rank: 4, 
-        type: "Attack", 
-        targetArea: "Up to 3 living creatures in short range",
-        duration: "Instantaneous",
-        desc: "Str challenge (-2 banes) or 2d6 damage and spew 3-yard cone of corrosive vomit. Vomit deals 3d6 damage (Agi challenge for half). Victims become dazed 1 round. OP" 
-    },
-    { 
-        name: "Unspeakable Graft", 
-        tradition: "Forbidden", 
-        rank: 4, 
-        type: "Utility", 
-        targetArea: "One creature you reach",
-        duration: "Permanent",
-        desc: "Req: Harvested part from living creature. 1 min concentration to graft part; target gains 1 Corruption. Donor/Receiver must pass Will challenge (-1 bane) after rests or +1d3 Insanity. Donor death (1-3 on d6) kills part. Sacrifice: Cast Part Bone from Flesh. OP" 
-    },
-    { 
-        name: "Bestow Corruption", 
-        tradition: "Forbidden", 
-        rank: 5, 
-        type: "Attack", 
-        targetArea: "Up to 3 living creatures in short range",
-        duration: "Special",
-        desc: "Will challenge (-1 bane). Failure: +1d6 Corruption (3+ = Mark of Darkness). Target is compelled for rounds = Corruption total. Incapacitation: Dies and soul becomes hostile demon of target's Size. OP" 
-    },
-    { 
-        name: "Hook the Soul", 
-        tradition: "Forbidden", 
-        rank: 5, 
-        type: "Attack", 
-        targetArea: "One living, mortal creature in medium range",
-        duration: "Special",
-        desc: "Int vs Will (3 banes if HP >= 50). Success: 2d6 Insanity. If mad: Soul wrenched (death), becomes friendly shadow. If alive: Compelled (rounds = Insanity); must stay within 20yds or fall unconscious. Removing compulsion grants 1 Corruption. 20+: +1d6 Insanity. OP" 
-    },
-    { 
-        name: "Effluvial Bog", 
-        tradition: "Forbidden", 
-        rank: 6, 
-        type: "Attack", 
-        targetArea: "One living creature in medium range",
-        duration: "1 hour",
-        desc: "Int vs Str. Success: Target defenseless 1 round; filth fills 10-yard radius. Area is difficult terrain; taking damage in area requires Agi challenge or fall prone. Creatures within 10yds impaired; round end: Str challenge (-2 banes) or dazed. Caster immune. OP" 
-    },
-    { 
-        name: "Part Soul from Flesh", 
-        tradition: "Forbidden", 
-        rank: 6, 
-        type: "Attack", 
-        targetArea: "One living, mortal creature in medium range",
-        duration: "Instantaneous",
-        desc: "Int vs Will. Success: 10d6 damage. Incapacitation: Soul becomes hostile specter and creature dies. 20+: +4d6 extra damage. OP" 
-    },
-    { 
-        name: "Desecrate", 
-        tradition: "Forbidden", 
-        rank: 7, 
-        type: "Utility", 
-        targetArea: "100-yard radius sphere in long range",
-        duration: "24 hours",
-        desc: "Yellow mist. No healing; Will challenge to resist Insanity has 3 banes. Spending 1 hour in area: Str challenge (-3 banes) or diseased (take double damage). Spirits/Undead/Demons/Corrupted gain +10 HP and 2 boons on all rolls. Permanence: Cast for 1 month + 1 day. OP" 
-    },
-    { 
-        name: "Pollution", 
-        tradition: "Forbidden", 
-        rank: 8, 
-        type: "Attack", 
-        targetArea: "100-yard cube in extreme range",
-        duration: "1 hour",
-        desc: "Smoke heavily obscures; drifts 1d6 yards per round. Plants take 3d6 damage/round; objects 1d6. Living creatures: Str challenge (-3 banes) or progress through suffocating/poisoning tracks (Page 60). OP" 
-    },
-    { 
-        name: "Utter Ruin", 
-        tradition: "Forbidden", 
-        rank: 9, 
-        type: "Attack", 
-        targetArea: "One living creature in medium range",
-        duration: "Instantaneous",
-        desc: "Target immobilized 1 round; vision of loved one destroyed appears. Will challenge (-3 banes). Failure: 3d6 Insanity; Success: 1d6 Insanity. If mad: Target cuts own throat (damage = Health). OP" 
-    },
-    { 
-        name: "Extinction", 
-        tradition: "Forbidden", 
-        rank: 10, 
-        type: "Attack", 
-        targetArea: "10-mile radius sphere",
-        duration: "Instantaneous",
-        desc: "Creatures <= 12 years take damage = Health. Creatures > 12 years become sterile/barren. Aftereffect: +2d6 Corruption. Will challenge (-4 banes) or +1d6 extra Corruption and 4d6 Insanity. OP" 
     },
          { 
         name: "Choking Smoke", 
@@ -7400,24 +7238,6 @@
         desc: "Req: Mad Devotion & Knights of the One True God cult. Flames rush out from you, causing each creature and object within 1 yard of you to take 1d6 damage. A creature can make an Agility challenge roll and takes half the damage on a success. For the duration, a ball of flame burns over your head, shedding light in a 2-yard radius. You can use an action to attack with the ball of flame, hurling it at one creature within short range. Make a Will attack roll against the target’s Agility. On a success, the target takes 1d6 damage. At the end of the round in which you threw the ball of flame, if the spell has not ended, a new ball of flame appears over your head. Hunger" 
     },
     { 
-        name: "Invoke the Glistening Prince", 
-        tradition: "Forbidden", 
-        rank: 1, 
-        type: "Utility", 
-        targetArea: "Self",
-        duration: "1 minute",
-        desc: "Req: Mad Devotion & Philosophers of the Glistening Prince cult. You take 1d6 damage from tearing your flesh and then take half damage for the duration. Each time you take damage after the initial damage, you must get a success on a Will challenge roll or gain 1 Insanity. Hunger" 
-    },
-    { 
-        name: "Invoke Mother of Monsters", 
-        tradition: "Forbidden", 
-        rank: 1, 
-        type: "Utility", 
-        targetArea: "Self",
-        duration: "Instantaneous",
-        desc: "Req: Mad Devotion & Mother’s Children cult. Your belly swells and then splits open to give birth to a <b>Small Monster</b> that has the horrifying trait. You take damage equal to your healing rate and become dazed for 1 minute or until the monster you birthed is incapacitated. You control the monster and make all decisions about what it does on each of its turns. Hunger" 
-    },
-    { 
         name: "Create Zombie", 
         tradition: "Necromancy", 
         rank: 2, 
@@ -9955,105 +9775,7 @@
         duration: "1 hour; see effect",
         desc: "An identical copy of you appears. It uses your attributes. You can move it your Speed when you move and cast spells from its space. Triggered: When hit, use a triggered action to swap positions with the copy, making it the target instead. Core" 
     },
-          { 
-        name: "Black Tongue", 
-        tradition: "Forbidden", 
-        rank: 0, 
-        type: "Utility", 
-        targetArea: "Self",
-        duration: "1 minute",
-        desc: "For the duration, you make Intellect and Will attack rolls with 1 boon against demons, devils, spirits, and undead. Core" 
-    },
-    { 
-        name: "Harm", 
-        tradition: "Forbidden", 
-        rank: 0, 
-        type: "Attack", 
-        targetArea: "One creature you can see within short range",
-        duration: "1 minute",
-        desc: "Invisible barbs tear at the target’s body. Make an Intellect attack roll against its Strength. On a success, the target takes a –5 penalty to Health for 1 minute. <b>Attack Roll 20+:</b> The penalty to Health is –10 instead. Core" 
-    },
-    { 
-        name: "Obedience", 
-        tradition: "Forbidden", 
-        rank: 1, 
-        type: "Attack", 
-        targetArea: "One living creature within short range",
-        duration: "1 minute",
-        desc: "You hook the target’s soul. Make an Intellect attack roll against its Will. On a success, for the next 1 minute, the target must choose at the end of each round whether to take 1d6 damage or to become compelled for 1 round. Core" 
-    },
-    { 
-        name: "Hateful Defecation", 
-        tradition: "Forbidden", 
-        rank: 1, 
-        type: "Attack", 
-        targetArea: "One living creature with a physical body within medium range",
-        duration: "Instantaneous",
-        desc: "If the target’s Health is 10 or less, it dies instantly. If higher, make an Intellect attack roll against its Strength. On a success, the target takes 1d6 + 2 damage and becomes dazed for 1 round. If incapacitated by this damage, it dies instantly and explodes. Each creature within 2 yards of the target must make a Will challenge roll or become impaired for 1 round. <b>Attack Roll 20+:</b> The target takes 1d6 extra damage. Core" 
-    },
-    { 
-        name: "Tongue Rip", 
-        tradition: "Forbidden", 
-        rank: 1, 
-        type: "Attack", 
-        targetArea: "One creature capable of speech within short range",
-        duration: "Concentration, up to 1 hour; see effect",
-        desc: "Make an Intellect attack roll against the target’s Will. On a success, your tongue forks and you take over the target’s mouth for as long as you concentrate. You can speak from your mouth or the target’s mouth (within 1 mile). <b>Attack Roll 20+:</b> The effect does not require you to concentrate. Core" 
-    },
-    { 
-        name: "Ravenous Maggots", 
-        tradition: "Forbidden", 
-        rank: 2, 
-        type: "Attack", 
-        targetArea: "One living creature within medium range",
-        duration: "1 minute",
-        desc: "Maggots fill the target’s belly, dealing 2d6 damage. At the end of each round, the target must make a Strength challenge roll or take 1d6 damage and become impaired. Three successes end the effect. If incapacitated by this damage, the target dies and a cloud of black flies (5-yard radius) heavily obscures the area for 1 minute. Core" 
-    },
-    { 
-        name: "Vision's End", 
-        tradition: "Forbidden", 
-        rank: 2, 
-        type: "Attack", 
-        targetArea: "One sighted creature within short range",
-        duration: "Concentration, up to 1 minute; see effect",
-        desc: "If Health is 15 or less, target takes 2d6 damage and is blinded as eyes explode. If 15+, make an Intellect attack against Strength (1 bane if Health 30+). Success blinds the target for the duration. Each round, target must make a Strength challenge roll or take 1d6 damage. Three failures make the blindness permanent. <b>Attack Roll 20+:</b> Concentration not required. Core" 
-    },
-    { 
-        name: "Desire's End", 
-        tradition: "Forbidden", 
-        rank: 3, 
-        type: "Attack", 
-        targetArea: "One living creature within short range",
-        duration: "Instantaneous",
-        desc: "Make an Intellect attack roll against Strength. On a success, the target takes 3d6 damage and is dazed for 1d6 rounds. <b>Attack Roll 20+:</b> The target takes 3d6 extra damage and falls prone; it cannot stand up while dazed. Core" 
-    },
-    { 
-        name: "Part Bone from Flesh", 
-        tradition: "Forbidden", 
-        rank: 3, 
-        type: "Attack", 
-        targetArea: "One creature that has bones in its body within medium range",
-        duration: "Instantaneous",
-        desc: "Make an Intellect attack roll against Strength. On a success, the target takes 6d6 damage. If incapacitated, it dies instantly and its bones become an animated corpse that attacks the nearest creature. <b>Attack Roll 20+:</b> The target takes 2d6 extra damage. Core" 
-    },
-    { 
-        name: "Soul Exchange", 
-        tradition: "Forbidden", 
-        rank: 4, 
-        type: "Attack", 
-        targetArea: "Two living mortal creatures within medium range",
-        duration: "Permanent",
-        desc: "Make an Intellect attack roll against each target’s Will. Success dazes the target for 1 minute (Stunned if 20+). Special: If both fail, souls swap bodies permanently. Each gains 1d6 Insanity. Souls retain languages, professions, Intellect, Will, Insanity, Corruption, path talents, and magic. Core" 
-    },
-    { 
-        name: "Horrid Joining", 
-        tradition: "Forbidden", 
-        rank: 5, 
-        type: "Attack", 
-        targetArea: "Two creatures within short range of each other and medium range of you",
-        duration: "Permanent",
-        desc: "Make an Intellect attack roll against each target’s Strength. Success deals 3d6 damage and impairs for 1 round. Special: If both fail, bodies merge permanently. Merged creature has higher Strength, lower Agility, combined Size, and combined Health (higher + half lower). It gains 2d6 Insanity and the horrifying trait. Each target takes a turn (one fast, one slow). Core" 
-    },
+         
           { 
         name: "Control Flame", 
         tradition: "Fire", 
