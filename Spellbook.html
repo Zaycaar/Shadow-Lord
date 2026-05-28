@@ -3945,14 +3945,14 @@
         duration: "Instantaneous",
         desc: "Creatures <= 12 years take damage = Health. Creatures > 12 years become sterile/barren. Aftereffect: +2d6 Corruption. Will challenge (-4 banes) or +1d6 extra Corruption and 4d6 Insanity. OP" 
     },
-          { 
+         { 
         name: "Choking Smoke", 
         tradition: "Fire", 
         rank: 0, 
         type: "Utility", 
-        targetArea: "3-yard cone",
+        targetArea: "3-yard cone starting in reach",
         duration: "1 minute",
-        desc: "Heavily obscures area. Living/breathing creatures must pass Str challenge (+1 boon) or become fatigued while in area and for 1 round after. OP" 
+        desc: "A roiling cloud of smoke spews from your fingertip and spreads through the area. The smoke heavily obscures the area for the duration or until it is dispersed by winds. Each living and breathing creature in the area when the smoke appears or that enters the smoke must get a success on a Strength challenge roll with 1 boon or become fatigued for as long as it remains in area and for 1 round thereafter. OP" 
     },
     { 
         name: "Manipulate Flame", 
@@ -3961,25 +3961,25 @@
         type: "Utility", 
         targetArea: "One Size 1/2 or smaller flame in medium range",
         duration: "1 hour",
-        desc: "Options: Double/halve light; change shape; or fly flame to fingertip. Can send flame to ignite object in short range. Sacrifice: Use triggered action to take half damage from fire/heat. OP" 
+        desc: "When you cast this spell, choose one of the following effects, which lasts for the duration: <br>• You double the range of illumination created by the flame. <b>• You halve the range of illumination created by the flame. <br>• You cause the flame to assume a particular shape. You can alter the shape of the flame as a minor activity provided you are within range of it. <b>• You cause the flame to fly toward you and land on your fingertip, where it sheds the same amount of light as it did before. You can use a triggered action on your turn to end the spell and send the flame to a flammable object within short range, which catches on fire and burns until extinguished. <br><b>Triggered:</b> On your turn, you can use a triggered action to cast this spell. <br></b>Sacrifice:</b> When you would take damage from fire or heat, you can use a triggered action and expend a casting of this spell to take half the damage. OP" 
     },
     { 
         name: "Blazing Columns", 
         tradition: "Fire", 
         rank: 1, 
         type: "Attack", 
-        targetArea: "Up to four 1-yard-square spaces on ground",
+        targetArea: "Up to four 1-yard-square spaces on ground in medium range",
         duration: "1 minute",
-        desc: "2-yard tall columns deal 1d6 damage on appearance and at round end. Agi challenge: half damage and move 1 yard out. OP" 
+        desc: "A 2-yard-tall column of flame appears at each target and fills its square. The flames burn for the duration or until they are extinguished, and they emit light out to a range of 10 yards. The flames deal 1d6 damage to creatures and objects in their area when they appear and at the end of each round until the spell ends. A creature in the area can make an Agility challenge roll; on a success, it takes half the damage and moves 1 yard out of the area. OP" 
     },
     { 
         name: "Sword of Fire", 
         tradition: "Fire", 
         rank: 1, 
         type: "Attack", 
-        targetArea: "Self (Weapon)",
+        targetArea: "Self",
         duration: "1 minute",
-        desc: "Create fiery sword. Attack with Will vs Agi: 1d6 + 2 damage. 20+: +1d6 extra damage. Acts as torch light. OP" 
+        desc: "A sword-shaped length of fire erupts from one of your open hands and remains for the duration or until you drop it, which ends the spell. The sword of fire sheds light as a torch and counts as a weapon. You can attack with this sword of fire when you cast this spell and again on later turns when you use an action to do so. When you attack with it, make a Will attack roll against the Agility of one creature you can reach. On a success, the fiery blade hits and deals 1d6 + 2 damage. <br><b>Attack Roll 20+:</b> The target of your attack takes 1d6 extra damage. OP" 
     },
     { 
         name: "Fire Walk", 
@@ -3988,7 +3988,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 minute",
-        desc: "Triggered: Cast on your turn. Immune to fire damage. Entering Size 1+ fire allows teleporting to another fire within medium range; locate all fires within 1 mile. OP" 
+        desc: "For the duration, you are immune to damage from fire. In addition, whenever you enter a space containing a Size 1 or larger fire, you become aware of the location of each other fire within medium range, and you can immediately travel to and exit from another cube of fire of the same or larger size within medium range of the fire whose space you entered.<br><b>Triggered:</b> On your turn, you can use a triggered action to cast this spell. OP" 
     },
     { 
         name: "Ignite", 
@@ -3997,25 +3997,25 @@
         type: "Utility", 
         targetArea: "Any number of flammable objects in short range",
         duration: "Instantaneous",
-        desc: "Targets take 1d6 damage and catch fire (1d6 damage per round until destroyed/extinguished). OP" 
+        desc: "Each target takes 1d6 damage as it catches fire. It continues to take this damage at the end of each round until it is destroyed or the fire is extinguished. OP" 
     },
     { 
         name: "Cloak of Cinders", 
         tradition: "Fire", 
         rank: 3, 
         type: "Attack", 
-        targetArea: "Self / 5-yard cone",
+        targetArea: "Self",
         duration: "1 minute",
-        desc: "Immune to fire damage. Action: Hurl cinders in cone for 2d6 damage (Agi challenge for none). Cinders return to you after. OP" 
+        desc: "A swirl of fiery cinders surrounds you for the duration. The cinders move to remain around you and render you immune to damage from fire. When you cast the spell and again when you use an action to do so, you can hurl some of the cinders in a 5-yard-long cone originating from a point you can reach. The cinders deal 2d6 damage to everything in the area. Flammable objects in the area catch fire. A creature in the area can make an Agility challenge roll and takes no damage on a success. Afterward, the cinders return to swirl around you once more. OP" 
     },
     { 
         name: "See Through the Flame", 
         tradition: "Fire", 
         rank: 3, 
         type: "Utility", 
-        targetArea: "One flame you reach",
+        targetArea: "One flame you can reach",
         duration: "1 hour",
-        desc: "1 min concentration. Sense all flames within 1 mile; see through any chosen flame as if in its space. Action: Swap flames. OP" 
+        desc: "Upon casting this spell, you must concentrate for 1 minute, during which time you peer into the target. When you finish, you become aware of every flame within 1 mile of you. Choose one of those flames. You can see through that flame as if you were in its space. You can use an action to choose a different flame within 1 mile of you. OP" 
     },
     { 
         name: "Fire Imps", 
@@ -4024,7 +4024,7 @@
         type: "Utility", 
         targetArea: "3-yard cube in short range",
         duration: "1 hour",
-        desc: "Summons five compelled fire imps. Imps disappear when spell ends or incapacitated. OP" 
+        desc: "Five compelled <b>Fire Imps</b> appear in the area. Each one disappears when the spell ends or when it becomes incapacitated. OP" 
     },
     { 
         name: "Living Inferno", 
@@ -4033,43 +4033,43 @@
         type: "Attack", 
         targetArea: "Self",
         duration: "1 minute",
-        desc: "Half damage from cold; attackers take 1d6 damage. Near creatures (1 yd) Agi challenge or 2d6 damage. Fire spells deal +1d6 damage (+2d6 extra if Flaming Shroud is active). OP" 
+        desc: "Roaring flames envelop you for the duration. The flames are warm, but they do not harm you or anything you wear or carry. The flames shed light in a 20-yard radius. You take half damage from cold, and when a creature touches you or gets a success against you on an attack roll made using a melee weapon, the creature takes 1d6 damage. When you cast this spell and at the end of each round until the spell ends, each creature within 1 yard must get a success on an Agility challenge roll or take 2d6 damage. Finally, your other Fire spells deal 1d6 extra damage. <br><b>Special</b> If you cast the <b>Flaming Shroud</b> spell while under the effects of this spell, this spell deals 2d6 extra damage. OP" 
     },
     { 
         name: "Circle of Fire", 
         tradition: "Fire", 
         rank: 5, 
         type: "Attack", 
-        targetArea: "5-yard radius circle on ground",
+        targetArea: "5-yard radius circle on ground in long range",
         duration: "1 minute",
-        desc: "3d6 + 5 damage on appearance and at round end. Agi challenge (if within 1 yd of edge): half damage and fall prone outside area. OP" 
+        desc: "A circle of white-hot fire covers the ground in the area for the duration. When the flames appear and again at the end of the round until the spell ends, everything in the area takes 3d6 + 5 damage. A creature in the area and within 1 yard of the edge can make an Agility challenge roll. On a success, the creature takes half the damage and falls prone in the nearest space outside the area. OP" 
     },
     { 
         name: "Rain of Fire", 
         tradition: "Fire", 
         rank: 5, 
         type: "Attack", 
-        targetArea: "10-yard radius cloud in long range",
+        targetArea: "A point in long range",
         duration: "1 minute",
-        desc: "5d6 damage to everything under cloud every round. Agi challenge: failure = catch fire (1d6/round); success = half damage. OP" 
+        desc: "A 2-yard-tall, roiling black cloud spreads out from the target until it attains a 10-yard radius. Until the spell ends, fiery stones fall from the cloud, partially obscuring the area under it. When you cast the spell and at the end of each round until the spell ends, the fiery stones deal 5d6 damage to everything under the cloud that does not have shelter. Each creature that would take this damage can make an Agility challenge roll. A creature catches fire on a failure, or just takes half the damage on a success. A creature that catches fire takes 1d6 damage from the flames at the end of each round until the fire is extinguished. OP" 
     },
     { 
         name: "Blood of the Earth", 
         tradition: "Fire", 
         rank: 6, 
         type: "Attack", 
-        targetArea: "3-yard radius point on ground",
+        targetArea: "A point on the ground within long range",
         duration: "1 minute",
-        desc: "Creates lava pool/flow. Contact: 8d6 damage and catch fire. Agi challenge: half damage and no fire. Cold damage turns lava to rock (traps creatures). OP" 
+        desc: "The ground within 3 yards of the target falls away as lava bubbles up from below. If you chose a point on a relatively flat surface, the lava spreads out in an expanding pool from the target, enlarging its 3-yard radius by 1 yard at the end of each round for the duration. Otherwise, the lava flows 1 yard at the end of each round in a 3-yard-wide path leading downslope. Everything in contact with the lava when it appears or that later comes into contact with it takes 8d6 damage and catches fire. A creature that would take this damage can make an Agility challenge roll, catching fire on a failure, or taking just half the damage on a success. A creature that catches fire takes 1d6 damage from the flames at the end of each round until the fire is extinguished.If the lava is exposed to a spell that deals damage from cold, the lava immediately hardens to become solid rock, possibly trapping creatures and objects. A creature or object trapped in this way can be freed only by chipping away at the rock, which takes 1d6 minutes of work using tools. OP" 
     },
     { 
         name: "Wildfire", 
         tradition: "Fire", 
         rank: 6, 
         type: "Attack", 
-        targetArea: "10-yard cube in long range",
+        targetArea: "A cube of space, 10 yards on a side, originating from a point within long range",
         duration: "Concentration, up to 1 minute",
-        desc: "5d6 damage and catch fire (Agi challenge: half/no fire). Action: Move cube 10 yards. Damage applies only once per round per target. OP" 
+        desc: "Roaring flames fill the area, causing everything in it to take 5d6 damage. Creatures and flammable objects catch fire. A creature can make an Agility challenge roll; on a success, it takes half the damage and does not catch fire. The flames remain for the duration. Each round you use an action to concentrate on the spell, you can move the cube up to 10 yards, with the same consequences as above. A creature can take the damage from this casting of the spell just once per round, regardless of how many times it enters the area. OP" 
     },
     { 
         name: "Swarm of Fireballs", 
@@ -4078,7 +4078,7 @@
         type: "Attack", 
         targetArea: "Up to 5 points in long range",
         duration: "Instantaneous",
-        desc: "Each point explodes in 5-yard radius for 5d6 damage (Agi challenge: half). Overlapping areas deal +1d6 extra damage per overlap. OP" 
+        desc: "You hurl a globe of fire at each target. When a globe of fire reaches the target or encounters a solid surface before then, it explodes in a 5-yard radius centered on the target or the point of impact. The flames deal 5d6 damage to everything in the area. If a creature or object is in multiple areas, it takes 1d6 extra damage for each overlapping area beyond the first. A creature in the area can make an Agility challenge roll and takes half the damage on a success. OP" 
     },
     { 
         name: "Become the Conflagration", 
@@ -4087,7 +4087,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "Concentration, up to 1 hour",
-        desc: "Size 3 flame form. Long range sightless perception; fire leap teleport; immune to many conditions; half weapon damage. Water vulnerability. Heal from Fire spells. Action: Blaze (3 yds, 5d6 damage, catch fire). OP" 
+        desc: "You assume the form of a Size 3 ball of flame and remain in that form for the duration. You resume your normal form when the spell ends, appearing anywhere in the ball’s space. Until the spell ends, you gain the following benefits.<br><b>Sightless</b> You rely on senses other than sight to perceive your surroundings and can pinpoint the location of each creature and object within long range of you. Creatures within that area cannot hide from you, and you ignore banes imposed by obscurement on rolls to perceive things. You are not subject to the blinded condition.<br><b>Fire Leap</b> When you enter a space of your Size or larger that is filled with fire, you can instantly exit from another space that is filled with fire of the same Size or larger within medium range.<br><b>Immune</b> You are immune to damage from disease, fire, and poison as well as the blinded, dazed, deafened, diseased, fatigued, frightened, immobilized, poisoned, prone, slowed, and stunned afflictions.<br><b>Fiery Form</b> You take half damage from weapons. In addition, you shed light in a 15-yard radius.<br><b>Water</b> Vulnerability You cannot move across or into water  or ice, you make challenge rolls to resist Water spells with  1 bane, and you take double damage from Water spells.<br><b>Empowered by Fire</b> When you would take damage from a Fire spell, you instead add the damage as a bonus to your Health. The bonus lasts for 1 minute. <br><b>Blaze</b> When you use an action to concentrate on this spell, you can choose to cause the flames emanating from your body to blaze, forcing each creature within 3 yards of you to make an Agility challenge roll. A creature takes 5d6 damage and catches fire on a failure, or just takes half the damage on a success. A creature that catches fire takes 1d6 damage from the flames at the end of each round until the fire is extinguished. OP" 
     },
     { 
         name: "Name of Fire", 
@@ -4096,16 +4096,16 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 hour",
-        desc: "Cast learned Rank 0-3 Fire spells without expenditure. Cast any Rank 0 Fire spell even if not learned. OP" 
+        desc: "You speak the secret name of the flame and master its power. For the duration, you can cast rank 3 and lower Fire spells you have learned without expending a casting. In addition, you can cast any rank 0 Fire spell, whether you have learned it or not. OP" 
     },
     { 
         name: "Call Down the Mountain", 
         tradition: "Fire", 
         rank: 10, 
         type: "Attack", 
-        targetArea: "Point on ground (Outdoors)",
+        targetArea: "Point on ground you can see",
         duration: "Instantaneous",
-        desc: "Meteor hits for 20d6 damage in 1-mile radius; everything catches fire. Agi challenge (-3 banes) for half damage. Aftereffect: Will challenge (-5 banes) or die and explode for 10d6 in 100 yds. OP" 
+        desc: "You must be outside. A large, fiery meteor falls from the sky and lands on the target, where it explodes in a 1-mile radius. Everything in the area takes 20d6 damage from the flame and fiery debris and also catches fire. A creature that catches fire takes 1d6 damage from the flames at the end of each round until the fire is extinguished. A creature in the area can make an Agility challenge roll with 3 banes. On a success, it just takes half the damage.<br><b>Aftereffect</b> You must get a success on a Will challenge roll with 5 banes, or you die and explode in flames, dealing 10d6 damage to everything within 100 yards of you. A creature in the area can make an Agility challenge roll with 5 banes and takes half the damage on a success. OP" 
     },
          { 
         name: "Prick", 
