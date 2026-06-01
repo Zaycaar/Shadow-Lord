@@ -3110,202 +3110,204 @@
         duration: "1 hour",
         desc: "10d6 damage to objects; flammable objects catch fire. Creatures: Agi challenge (-3 banes) or 10d6 damage. Expands/flows each round. Aftereffect: Str challenge (-5 banes) or caster catches fire (3d6 damage/round). OP" 
     },
-          { 
-        name: "Reveal Unspeakable Truth", 
-        tradition: "Madness", 
-        rank: 0, 
-        type: "Attack", 
-        targetArea: "One creature in short range",
-        desc: "Whisper dark truths (Int vs Will); Success: Target gains 1 Insanity. 1 boon if target has 3+ Insanity. 0 or lower: You gain 1 Insanity. OP"
-    },
-    { 
-        name: "Serenity", 
-        tradition: "Madness", 
-        rank: 0, 
-        type: "Utility", 
-        targetArea: "Self",
-        desc: "Triggered: When gaining Insanity, use to prevent becoming frightened from that gain. OP"
-    },
-    { 
-        name: "Aid from the Outer Gods", 
-        tradition: "Madness", 
-        rank: 1, 
-        type: "Utility", 
-        duration: "1 minute",
-        desc: "1 bane on attacks vs you. Triggered: Gain 1 Insanity to impose 2 additional banes on an incoming attack. OP"
-    },
-    { 
-        name: "Black Breath", 
-        tradition: "Madness", 
-        rank: 1, 
-        type: "Attack", 
-        targetArea: "3-yard-long cone",
-        desc: "Fetid darkness causes hallucinations. Will challenge or 1d6 damage and 1d3 Insanity. OP"
-    },
-    { 
-        name: "Dream Worm", 
-        tradition: "Madness", 
-        rank: 1, 
-        type: "Attack", 
-        targetArea: "One creature or humanoid corpse",
-        desc: "Living: Int vs Agi; Success: +1 Insanity and Charmed (rounds = 1 + Insanity total). Corpse: Becomes animated corpse; takes 1d6/hour as it is devoured from inside. OP"
-    },
-    { 
-        name: "Forbidden Knowledge", 
-        tradition: "Madness", 
-        rank: 1, 
-        type: "Utility", 
-        duration: "1 hour",
-        desc: "Gain 1d6+1 Insanity. If not gone mad, gain 'insights' equal to Insanity gained. Insights can be spent for 2 boons on a roll or a Yes/No answer from the GM. OP"
-    },
-    { 
-        name: "Dimensional Travel", 
-        tradition: "Madness", 
-        rank: 2, 
-        type: "Utility", 
-        desc: "Teleport to medium range. On arrival: Will challenge (-1 bane) or +1 Insanity. Can be cast as a triggered action on your turn. OP"
-    },
-    { 
-        name: "Hoary Tentacle", 
-        tradition: "Madness", 
-        rank: 2, 
-        type: "Attack", 
-        targetArea: "1-yard cube (short range)",
-        duration: "1 minute",
-        desc: "Size 1 tentacle appears. Observers: Will challenge or +1 Insanity. Rounds end: Grab random creature (3yd); 1d6 damage and grabbed. Already grabbed: 3d6 damage. Tentacle Str: 15. OP"
-    },
-    { 
-        name: "Unlight", 
-        tradition: "Madness", 
-        rank: 2, 
-        type: "Utility", 
-        targetArea: "10-yard-radius sphere (centered on you)",
-        duration: "1 hour",
-        desc: "Yellow/gray light visible to you and 10 chosen. See through darkness/shadows/invisibility; reveal Illusions. Roll 0 or lower: See horrors; Will challenge or +1d3 Insanity. OP"
-    },
-    { 
-        name: "Bedeviling Colors", 
-        tradition: "Madness", 
-        rank: 3, 
-        type: "Attack", 
-        requirement: "At least 1 Insanity",
-        targetArea: "Up to 3 creatures (short range)",
-        duration: "1 minute",
-        desc: "Targets shed light (3yd radius). Will challenge (-2 banes) or +1d3 Insanity. While frightened from this, failure on rolls deals 2d6 damage to target. OP"
-    },
-    { 
-        name: "Eye of the Outer God", 
-        tradition: "Madness", 
-        rank: 3, 
-        type: "Utility", 
-        requirement: "At least 1 Insanity",
-        duration: "1 hour",
-        desc: "Third eye opens. Ignore banes from cover/obscurement. Action/Triggered: Gaze (Int vs Will) deals 1d6 damage and +1d3 Insanity. Failure: You gain 1 Insanity. OP"
-    },
-    { 
-        name: "Mind Shatter", 
-        tradition: "Madness", 
-        rank: 3, 
-        type: "Attack", 
-        requirement: "At least 1 Insanity",
-        targetArea: "One creature (medium range)",
-        desc: "Int vs Will (boons = target's Insanity). Success: 2d6 damage and 2d6 Insanity. 20+: +2d6 extra damage. OP"
-    },
-    { 
-        name: "Dark Star", 
-        tradition: "Madness", 
-        rank: 4, 
-        type: "Attack", 
-        requirement: "At least 2 Insanity",
-        targetArea: "2-yard-radius sphere",
-        duration: "1d6 minutes",
-        desc: "Black sphere appears. Entering/Start: Str challenge (-1 bane) or 4d6 damage and teleport away. Round end: Str challenge or pulled 1yd and immobilized. Radius can grow/shrink each round. OP"
-    },
-    { 
-        name: "Worms from the Ninth Dimension", 
-        tradition: "Madness", 
-        rank: 4, 
-        type: "Attack", 
-        requirement: "At least 2 Insanity",
-        targetArea: "2-yard cube",
-        duration: "1 minute",
-        desc: "Luminous worms. Observers: Will challenge or +1d3 Insanity (also immobilized while frightened). Area moves 1d6 yards/round; everything within 3yds must pass Agi challenge (-1 bane) or take 3d6 damage. OP"
-    },
-    { 
-        name: "Mad Piping of the Outer Dark", 
-        tradition: "Madness", 
-        rank: 5, 
-        type: "Attack", 
-        requirement: "At least 2 Insanity",
-        targetArea: "5-yard-radius sphere",
-        desc: "Alien music. Will challenge (-2 banes) or +1d6+1 Insanity. While frightened, target is dazed and dances in direction of caster's choice. OP"
-    },
-    { 
-        name: "Lay Bare the Cosmic Mysteries", 
-        tradition: "Madness", 
-        rank: 5, 
-        type: "Utility", 
-        requirement: "At least 2 Insanity",
-        duration: "1 hour",
-        desc: "10-min concentration. Mind travels to other dimension; body is prone/unconscious. Will challenge (-3 banes) or +3d6 Insanity. Success: Ask Power-score number of questions (Int challenge each). Sacrifice: Cast Worms from the Ninth Dimension. OP"
-    },
-    { 
-        name: "Chant of the Lost", 
-        tradition: "Madness", 
-        rank: 6, 
-        type: "Attack", 
-        requirement: "At least 3 Insanity",
-        targetArea: "5-yard-radius sphere (centered on you)",
-        duration: "Concentration, up to 1 min",
-        desc: "Maddening din. Will challenge (-1 bane) or +1d3 Insanity and 2d6 damage. Incapacitated targets' heads explode. Aftereffect: Will challenge (-1 bane) or +1d3 Insanity. OP"
-    },
-    { 
-        name: "Night Terrors", 
-        tradition: "Madness", 
-        rank: 6, 
-        type: "Attack", 
-        requirement: "3+ Insanity and target's personal possession/DNA",
-        targetArea: "One creature in the world",
-        desc: "1-min ritual. Int vs Will. Success: Target sleeps 8 hours. Each hour: Even d6 = +1d6 Insanity. Gaining Insanity allows Will challenge (-3 banes) to wake. If target goes mad while asleep, they die. Aftereffect: Will challenge (-3 banes) or cannot sleep for Insanity-total days. OP"
-    },
-    { 
-        name: "Cosmic Spores", 
-        tradition: "Madness", 
-        rank: 7, 
-        type: "Attack", 
-        requirement: "3+ Insanity and sky view",
-        targetArea: "10-yard-radius cylinder (up to atmosphere)",
-        duration: "1 minute",
-        desc: "Heavily obscured. Animals/Plants die instantly. Creatures: Str challenge (-1 bane) or +1d6 Insanity and diseased. Disease penalty: -1d6 Health per Insanity gain. If Health hits 0, monster tears out. Aftereffect: Str challenge (-1 bane) or you become diseased. OP"
-    },
-    { 
-        name: "Dimensional Banishment", 
-        tradition: "Madness", 
-        rank: 8, 
-        type: "Attack", 
-        requirement: "At least 4 Insanity",
-        targetArea: "One creature you see",
-        desc: "Int vs Will. Boons if target is low Health or has Insanity. Success: Target vanished. Target makes Will challenges (-3 banes) to escape. Failure = +1d6 Insanity. Mad targets are lost forever. 20+: +1d6 Insanity. OP"
-    },
-    { 
-        name: "Mental Feast", 
-        tradition: "Madness", 
-        rank: 9, 
-        type: "Attack", 
-        requirement: "At least 4 Insanity",
-        targetArea: "5-yard-radius sphere",
-        desc: "Will challenge (banes = half Insanity) or +3d6 Insanity. If mad: Mind devoured (death in 1d6 days). Otherwise: -5 Int/Will and daily Str reduction until death or success on Will challenge (-4 banes). Aftereffect: Will challenge or mind devoured. OP"
-    },
-    { 
-        name: "The Old Ones Awaken", 
-        tradition: "Madness", 
-        rank: 10, 
-        type: "Attack", 
-        requirement: "At least 5 Insanity",
-        targetArea: "3d6-mile-radius sphere",
-        duration: "Variable",
-        desc: "Landscape warps. Will challenge (-1 bane + half Insanity score) or gain Insanity = Will score (madness is permanent). Repeat challenge every hour. Aftereffect: +1d6 Insanity. If not mad, Str challenge (banes = Insanity); Failure: Alien gods drag you away forever. OP"
-    },
+        {
+    "name": "Reveal Unspeakable Truth",
+    "tradition": "Madness",
+    "rank": 0,
+    "type": "Attack",
+    "targetArea": "One creature within short range",
+    "duration": "",
+    "desc": "As you whisper some dark, unsettling truth, words of smoke spill from your mouth and float toward the target, where they dissipate. If the target can hear you, make an Intellect attack roll against the target’s Will. If the target has 3 or more Insanity, you make the attack roll with 1 boon. On a success, the target gains 1 Insanity.<br>If the total of your roll is 0 or lower, you instead gain 1 Insanity."
+  },
+  {
+    "name": "Serenity",
+    "tradition": "Madness",
+    "rank": 0,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "",
+    "desc": "<b>Triggered</b> When you gain Insanity, you can use a triggered action to cast this spell. You are not frightened from gaining the Insanity."
+  },
+  {
+    "name": "Black Breath",
+    "tradition": "Madness",
+    "rank": 1,
+    "type": "Attack",
+    "targetArea": "A 3-yard-long cone originating from a point in your space",
+    "duration": "",
+    "desc": "You exhale a cloud of fetid darkness that spreads through the area. The darkness causes creatures in its midst to experience terrifying hallucinations. Each creature in the area must get a success on a Will challenge roll or take 1d6 damage and gain 1d3 Insanity."
+  },
+  {
+    "name": "Dream Worm",
+    "tradition": "Madness",
+    "rank": 1,
+    "type": "Attack",
+    "targetArea": "One creature or one humanoid corpse within short range",
+    "duration": "See the effect",
+    "desc": "You reach into another dimension to pluck forth a wriggling dream worm, and then you flick it at the target. The effect depends on whether you chose a living or a dead target.<br>Against a living target, make an Intellect attack roll against the target’s Agility. On a success, the target gains 1 Insanity and becomes charmed for a number of rounds equal to 1 + its Insanity total.<br>Against a dead target, the worm wriggles into the target’s body, causing it to become an <b>Animated Corpse</b>. The target remains an animated corpse until it is destroyed. Each hour, the target takes 1d6 damage from being devoured from the inside out."
+  },
+  {
+    "name": "Forbidden Knowledge",
+    "tradition": "Madness",
+    "rank": 1,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "1 hour; see the effect",
+    "desc": "You open your mind to impossible vistas and abominations beyond mortal imagining. Gain 1d6 + 1 Insanity. If you do not go mad as a result of gaining Insanity in this way, you gain a number of insights equal to the Insanity you gained. The spell ends when you expend the last insight.<br>When you make an attack roll or a challenge roll, you can expend an insight to make the roll with 2 boons.<br>Alternatively, while you have at least one insight, you can use an action to expend an insight and ask the GM a question that can be answered “yes” or “no” about an object, person, place, or effect you can see. The GM must answer truthfully, saying “unknown” only if answering “yes” or “no” would not apply."
+  },
+  {
+    "name": "Aid from the Outer Gods",
+    "tradition": "Madness",
+    "rank": 1,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "1 minute",
+    "desc": "You impose 1 bane on attack rolls made against you until the spell ends. In addition, whenever a creature you can see would attack you, you can use a triggered action to gain 1 Insanity and impose 2 additional banes on the attack roll."
+  },
+  {
+    "name": "Dimensional Travel",
+    "tradition": "Madness",
+    "rank": 2,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "",
+    "desc": "By stepping into another dimension, you teleport to an open space within medium range. When you reach that space, make a Will challenge roll with 1 bane. On a failure, you gain 1 Insanity.<br>Triggered On your turn, you can use a triggered action to cast this spell."
+  },
+  {
+    "name": "Hoary Tentacle",
+    "tradition": "Madness",
+    "rank": 2,
+    "type": "Attack",
+    "targetArea": "A cube of space, 1 yard on a side, originating from a point within short range",
+    "duration": "1 minute",
+    "desc": "A Size 1 hideous pale tentacle reaches out from another dimension into the target and remains for the duration. Each creature that can see the tentacle must get a success on a Will challenge roll or gain 1 Insanity.<br>When the tentacle appears and again at the end of each round, it tries to grab a randomly determined creature within 3 yards of it, or it attacks a creature it is already grabbing. On a grab attempt, a creature must get a success on an Agility challenge roll with 1 bane or take 1d6 damage and become grabbed. The tentacle can have only one creature grabbed at a time and maintains the grab for as long as it is able until the creature dies. If the tentacle has a creature grabbed, the creature takes 3d6 damage and the grabbed affliction lasts 1 more round. For the purpose of escaping the grab, the tentacle’s Strength is 15."
+  },
+  {
+    "name": "Unlight",
+    "tradition": "Madness",
+    "rank": 2,
+    "type": "Utility",
+    "targetArea": "A 10-yard-radius sphere centered on a point within your space",
+    "duration": "1 hour",
+    "desc": "An unnatural illumination, alternately pale yellow and gray-green, bleeds through the area for the duration. The area moves with you and remains centered on you. Only you, and up to ten creatures you designate within medium range, can perceive the light, which enables you to see areas of shadows and darkness inside the area as if those areas were lit. In addition, you and the chosen creatures can see invisible creatures and objects in it. Furthermore, effects in the area created by Illusion spells are revealed as such to you and the chosen creatures.<br>From time to time, extradimensional horrors appear inside the area. Whenever a creature in the area gets a 0 or lower on an attack roll or a challenge roll, you and each creature you chose that can see into the area catch a glimpse of some unnatural terror swimming through the air, forcing you and the affected chosen creatures to make Will challenge rolls, with a failure resulting in a gain of 1d3 Insanity."
+  },
+  {
+    "name": "Bedeviling Colors",
+    "tradition": "Madness",
+    "rank": 3,
+    "type": "Attack",
+    "targetArea": "Up to three creatures within short range",
+    "duration": "1 minute",
+    "desc": "<b>Requirement:</b> You must have at least 1 Insanity.<br>Strange and impossible colors swirl around the targets, causing each creature to shed light in a 3-yard radius for the duration. The light moves with the targets. Each target must make a Will challenge roll with 2 banes. On a failure, the target gains 1d3 Insanity. While the target is frightened from gaining Insanity in this way, it takes 2d6 damage from the colors feeding on its essence whenever it gets a failure on an attack roll or a challenge roll."
+  },
+  {
+    "name": "Eye of the Outer God",
+    "tradition": "Madness",
+    "rank": 3,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "1 hour",
+    "desc": "<b>Requirement:</b> You must have at least 1 Insanity.<br>A bloody eye opens in the center of your forehead and remains open for the duration. The eye lets you see into areas obscured by shadows or darkness as if those areas were lit. In addition, your attack rolls ignore banes imposed by cover or obscurement.<br>You can use an action, or a triggered action on your turn, to turn your gaze on one creature that can see you and is within medium range. The creature cannot avert its eyes. Make an Intellect attack roll against the creature’s Will. On a success, the creature takes 1d6 damage and gains 1d3 Insanity.<br>On a failure, the eye shows you something you cannot comprehend, and you gain 1 Insanity instead."
+  },
+  {
+    "name": "Mind Shatter",
+    "tradition": "Madness",
+    "rank": 3,
+    "type": "Attack",
+    "targetArea": "One creature within medium range",
+    "duration": "",
+    "desc": "<b>Requirement</b> You must have at least 1 Insanity.<br>Make an Intellect attack roll against the target’s Will, with a number of boons equal to the target’s Insanity score. On a success, the target takes 2d6 damage and gains 2d6 Insanity.<br>Attack Roll 20+ The target takes 2d6 extra damage."
+  },
+  {
+    "name": "Dark Star",
+    "tradition": "Madness",
+    "rank": 4,
+    "type": "Attack",
+    "targetArea": "A sphere with a 2-yard radius centered on a point within medium range",
+    "duration": "1d6 minutes; see the effect",
+    "desc": "<b>Requirement:</b> You must have at least 2 Insanity<br>A solid black sphere made from the solidified thoughts of an aborted god appears inside the area and remains for the duration. Any creature inside the area when the sphere appears must get a success on a Strength challenge roll with 1 bane or take 4d6 damage and teleport to an open space of the GM’s choice within short range of the area’s origin point.<br>In addition, when the sphere appears and at the end of each round until the spell ends, each creature within short range of it must get a success on a Strength challenge roll with 1 bane or be pulled 1 yard toward the area and become immobilized for 1 round. If a creature or an object enters the area, it takes 4d6 damage and teleports to an open space of the GM’s choice within short range of the area’s origin point.<br>At the end of each round, roll a d6. On a 6, the sphere’s radius increases by 1 yard, subjecting creatures inside the new, larger area to the above effects as if they had entered it. On a 1, the sphere’s radius drops by 1 yard. If the radius drops to 0, the spell ends immediately."
+  },
+  {
+    "name": "Worms from the Ninth Dimension",
+    "tradition": "Madness",
+    "rank": 4,
+    "type": "Attack",
+    "targetArea": "A cube of space, 2 yards on a side, originating from a point within medium range",
+    "duration": "1 minute; see the effect",
+    "desc": "<b>Requirement:</b> You must have at least 2 Insanity.<br>A knot of enormous eyeless, multicolored luminous worms fills the area and remains for the duration. Each creature that can see the worms when they appear must get a success on a Will challenge roll or gain 1d3 Insanity. When it is frightened from gaining Insanity in this way, a creature is also immobilized.<br>When the worms appear and at the end of each round thereafter until the spell ends, the area moves 1d6 yards in a direction you choose, and the worms lunge out to bite everything they can reach. Each creature within 3 yards of the area must get a success on an Agility challenge roll with 1 bane or take 3d6 damage.<br>At the end of each round, roll a d6. On a 6, the duration of the spell is extended by 1 minute. On a 1, the spell ends immediately."
+  },
+  {
+    "name": "Mad Piping of the Outer Dark",
+    "tradition": "Madness",
+    "rank": 5,
+    "type": "Attack",
+    "targetArea": "A 5-yard-radius sphere centered on a point within medium range",
+    "duration": "",
+    "desc": "<b>Requirement:</b> You must have at least 2 Insanity.<br>Weird piping noises fill the area with unsettling music. Each creature in the area that can hear the music must get a success on a Will challenge roll with 2 banes or gain 1d6 + 1 Insanity. When a creature becomes frightened from gaining Insanity in this way, the creature is dazed and dances in whatever direction you choose on each of its turns."
+  },
+  {
+    "name": "Lay Bare the Cosmic Mysteries",
+    "tradition": "Madness",
+    "rank": 5,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "1 hour",
+    "desc": "<b>Requirement:</b> You must have at least 2 Insanity.<br>Upon casting this spell, you must concentrate for 10 minutes. If you finish, you fling your mind into another dimension, leaving your body prone and unconscious for the duration. If your body dies while in this state, your mind becomes forever lost in the impossible vistas of the other dimension.<br>Upon entering the other dimension, you must get a success on a Will challenge roll with 3 banes or gain 3d6 Insanity. If you go mad, the spell ends, and your mind returns to your body, where it suffers the effects of madness. Otherwise, you can ask the GM a number of questions equal to your Power score. For each question, make an Intellect challenge roll. The GM must answer your question truthfully on a success, or can answer truthfully or not on a failure. If you ask a question for which there is not an answer, the question is wasted.<br><b>Sacrifice:</b> You can use an action and expend a casting of this spell to cast the <b>Worms from the Ninth Dimension</b> spell."
+  },
+  {
+    "name": "Chant of the Lost",
+    "tradition": "Madness",
+    "rank": 6,
+    "type": "Attack",
+    "targetArea": "A 5-yard-radius sphere centered on a point in your space",
+    "duration": "Concentration, up to 1 minute",
+    "desc": "<b>Requirement:</b> You must have at least 3 Insanity.<br>You chant the words of an alien language, filling the area with a maddening din that moves with you and remains centered on a point in your space. When you cast the spell and again when you use an action to concentrate on it, each creature in the area other than you that can hear you must get a success on a Will challenge roll with 1 bane or gain 1d3 Insanity and take 2d6 damage. If the damage causes a creature to become incapacitated, the creature’s head explodes, killing it instantly.<br><b>Aftereffect:</b> You must get a success on a Will challenge roll with 1 bane or gain 1d3 Insanity."
+  },
+  {
+    "name": "Night Terrors",
+    "tradition": "Madness",
+    "rank": 6,
+    "type": "Attack",
+    "targetArea": "One creature on the same world as you",
+    "duration": "",
+    "desc": "<b>Requirement:</b> You must have at least 3 Insanity, plus a personal possession or a bit of material such as hair, flesh, blood, or nail from the target<br>When you cast the spell, you must burn the required possession or material in a dung fire and waft the smoke into the air, a process that takes 1 minute. When you finish, make an Intellect attack roll against the target’s Will. On a success, the target falls asleep for 8 hours and cannot be awakened by any means except as described below. When the creature is asleep in this way, extradimensional entities of monstrous form and sinister intent torment its dreams. At the end of each hour the target sleeps, roll a d6. On an even number, the target gains 1d6 Insanity. Whenever the target gains Insanity from this spell, it can make a Will challenge roll with 3 banes. On a success, it wakes up and the effect ends. If the target is asleep and goes mad as a result of gaining Insanity in this way, it dies.<br><b>Aftereffect:</b> You must get a success on a Will challenge roll with 3 banes or be prevented from sleeping for a number of days equal to your Insanity total. While prevented from sleeping, you cannot derive any benefit from resting and you can become subject to the effects of deprivation if you are not immune to the asleep affliction."
+  },
+  {
+    "name": "Cosmic Spores",
+    "tradition": "Madness",
+    "rank": 7,
+    "type": "Attack",
+    "targetArea": "A 10-yard-radius cylinder centered on a point on the ground that extends upward until it leaves the atmosphere",
+    "duration": "1 minute",
+    "desc": "<b>Requirement:</b> You must have at least 3 Insanity and be able to see the sky.<br>A fine white powder falls throughout the area, causing it to become heavily obscured for the duration. All normal plants and animals in the area take damage equal to their Health, as they wither and die.<br>Each other creature in the area must make a Strength challenge roll with 1 bane when you cast the spell and again at the end of each round the creature is in the area until the spell ends. On a failure, a creature gains 1d6 Insanity and becomes diseased.<br>For as long as a creature is diseased from this effect, it takes a –1d6 penalty to Health, or its penalty to Health worsens by 1d6, each time it gains Insanity from any source. The penalty remains until the creature is no longer diseased from this effect. If the penalty reduces the creature’s Health to 0, the creature dies, and a horrifying monster of its Size tears free from its body and can take the next available turn.<br>When a creature diseased from this spell completes a rest, it can make a Strength challenge roll with 1 bane. A creature gains 1 Insanity on a failure. After getting three successes on this roll, the creature removes the diseased affliction from itself.<br><b>Aftereffect:</b> You must get a success on a Strength challenge roll with 1 bane or become diseased as if you had been affected by this spell. If you cannot become diseased, you instead gain 3d6 Insanity."
+  },
+  {
+    "name": "Dimensional Banishment",
+    "tradition": "Madness",
+    "rank": 8,
+    "type": "Attack",
+    "targetArea": "One creature you can see",
+    "duration": "",
+    "desc": "<b>Requirement:</b> You must have at least 4 Insanity.<br>Reality ripples around the target. Each creature that can see the target must get a success on a Will challenge roll or gain 1 Insanity. Then, make an Intellect attack roll against the target’s Will. You make the roll with 3 boons if the target has a Health score of 50 or lower. You also make the roll with 1 boon if the target’s Insanity score is 1 or higher. On a success, the target disappears, dragged into a maddening dimension where it remains until it can find its way free.<br>At the end of each round, the target must make a Will challenge roll with 3 banes if its Health is 50 or lower and 1 bane if it has at least 1 Insanity. On a failure, the target gains 1d6 Insanity. If the target goes mad as a result of gaining Insanity in this way, it is lost inside that dimension. If the target gets three successes, it reappears in the space it left or an open space nearest to that space.<br><b>Attack Roll 20+:</b> The target gains 1d6 Insanity."
+  },
+  {
+    "name": "Mental Feast",
+    "tradition": "Madness",
+    "rank": 9,
+    "type": "Attack",
+    "targetArea": "A 5-yard-radius sphere centered on a point within medium range",
+    "duration": "",
+    "desc": "<b>Requirement:</b> You must have at least 4 Insanity.<br>A buzzing sound fills the area, afflicting all creatures within it with madness. Each creature in the area must make a Will challenge roll, with a number of banes equal to half its Insanity score. On a failure, the creature gains 3d6 Insanity. If this Insanity gain would cause a creature to go mad, its mind is devoured by alien forces, which removes its Intellect and Will scores and consigns it to death, 1d6 days later. Otherwise, a creature that gains this Insanity becomes compelled and takes a –5 penalty to Intellect and Will, and each time the creature completes a rest, it reduces its Strength by 1. If the creature’s Strength drops to 0, it dies and the body rots away almost at once. Each time the creature completes a rest, it can make a Will challenge roll with 4 banes. On a success, the effect ends for it.<br><b>Aftereffect:</b> You must get a success on a Will challenge roll or gain 1d6 Insanity. If you go mad, your mind becomes devoured by alien forces."
+  },
+  {
+    "name": "The Old Ones Awaken",
+    "tradition": "Madness",
+    "rank": 10,
+    "type": "Attack",
+    "targetArea": "A 3d6-mile-radius sphere centered on a point in your space",
+    "duration": "See the effect",
+    "desc": "<b>Requirement:</b> You must have at least 5 Insanity.<br>The sky in the area darkens until it looks like a bruise, and in the gloomy expanse can be seen squirming, twisting things, horrors beyond imagining. The landscape and structures in the area melt and warp, becoming alien and unnerving. Finally, a deep, sonorous hum fills the air.<br>When you cast the spell, each creature in the area must get a success on a Will challenge roll with 1 bane. A creature makes the roll with a number of banes equal to half its Insanity score. On a failure, the creature gains Insanity equal to its Will score, and the effects of madness it suffers are permanent.<br>When a creature enters the area and at the end of each hour it spends inside it, the creature must repeat the challenge roll with the same effects as described above.<br>At the end of each hour, roll a d6. On a 1, the radius shrinks by 1d6 miles, and the spell ends if the radius decreases to 0 miles. On a 6, the radius increases by 1d6 miles.<br><b>Aftereffect:</b> You gain 1d6 Insanity. If you are not driven mad, make a Strength challenge roll with a number of banes equal to your Insanity score. On a success, you gain 2d6 Insanity. On a failure, the alien gods snatch you and drag you into their dimension, where you remain their plaything until the end of time."
+  }
          {
     "name": "Death Ward",
     "tradition": "Life",
