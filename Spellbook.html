@@ -7450,14 +7450,14 @@
         duration: "Permanent (Stones) / Until Rest (Energy)",
         desc: "You cause a stone to rise from one target point when you cast the spell and another stone in each round when you use an action to concentrate on the spell, until a total of eight stones appear. Each stone is 2 yards wide, 1 yard thick, and 4 yards tall, with Defense 5 and 100 Health, and remains until it is destroyed. A stone that appears as a result of casting this spell is imbued with magical energy that lasts until you complete a rest. You can use an action, or a triggered action on your turn, to choose up to eight creatures you can see within medium range of you. The stones provide a +1 bonus to Defense and 1 boon to attack rolls for chosen creatures that are within 1 yard of at least one of the stones. A chosen creature can use an action to touch a stone imbued with magical energy and be moved into the stone’s space. While in the stone’s space, the creature remains aware of its surroundings and of the passage of time, but it cannot do anything except to use an action to move out of the stone through the surface where it entered. If a stone is destroyed while a creature is inside it, the creature becomes fused to the rubble and dies. If the creature is still inside the stone when the stone’s magical energy dissipates, the creature is forced out of the stone, taking damage equal to twice its healing rate and gaining 1d6 Insanity. Terrible Beauty" 
     },
-    { 
+   { 
         name: "Call Steeds", 
         tradition: "Primal", 
         rank: 4, 
         type: "Utility", 
-        targetArea: "5-yard radius circle within short range",
+        targetArea: "A circle on the ground with a radius of 5 yards centered on a point within short range",
         duration: "8 hours",
-        desc: "At the end of the round, six horses appear in the area standing on the ground. They remain for the duration or until they become incapacitated, at which point they disappear. The horses become compelled by anyone riding them for as long as they are ridden. Terrible Beauty" 
+        desc: "At the end of the round, six <b>Horses</b> appear in the area standing on the ground. They remain for the duration or until they become incapacitated, at which point they disappear. The horses become compelled by anyone riding them for as long as they are ridden. Terrible Beauty" 
     },
     { 
         name: "Imprison", 
@@ -7645,8 +7645,8 @@
         rank: 2, 
         type: "Utility", 
         targetArea: "One Size 1/2 or smaller animal within medium range",
-        duration: "Special",
-        desc: "Mind enters animal. Use animal stats except Int/Will/Insanity/Corruption. Can cast spells with no speech. Every hour, make Will challenge roll or gain 1 Insanity. Sacrifice: Expend to cast rank 0/1 Primal spell. DLC" 
+        duration: " Until the target or you become unconscious; see the effect",
+        desc: "Your mind enters the body of the target where it remains for the duration. While in the target’s body, you use all of its statistics except for its Intellect, Willpower, Insanity, and Corruption. You retain all talents and knowledge of spells while housed in the target’s body. Unless the body can speak, you can cast only those spells that require no speech, and you can use only those talents of which the body is capable. Your body rests in a catatonic state until you return your mind. <br>At the end of each hour your mind resides inside the target, you must make a Will challenge roll. On a failure, you gain 1 Insanity. If gaining Insanity would cause you to go mad, your mind is destroyed, and your body remains in a catatonic state until it dies. <br><b>Sacrifice:</b> You can expend the casting of this spell to cast a rank 1 or rank 0 Primal spell you have learned. DLC" 
     },
     { 
         name: "Destructive Rune", 
@@ -9392,7 +9392,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 minute",
-        desc: "You take on bestial features. Gain darksight, +2 Speed, and deal 1d6 extra damage with unarmed strikes and natural weapons. Core" 
+        desc: "Your eyes glow, fur covers your body, your nails lengthen into claws, and your teeth become fangs. For the duration, you gain darksight and a +2 bonus to Speed, and your attacks with unarmed strikes and natural weapons deal 1d6 extra damage. Core" 
     },
     { 
         name: "Hide from Animals", 
@@ -9410,7 +9410,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 minute",
-        desc: "You can communicate with any animal that can hear you. Core" 
+        desc: "For the duration, you can communicate with any animal that can hear you. Core" 
     },
     { 
         name: "Befriend Animal", 
@@ -9419,25 +9419,25 @@
         type: "Attack", 
         targetArea: "One animal you can see within short range",
         duration: "Until rest; see effect",
-        desc: "Make a Will attack roll vs target's Will (1 boon if Beast Tongue is active). If target Health > yours, it fails. Success: Target is charmed and helps you. Limit: Power score. <b>Attack Roll 20+:</b> Permanently charmed. Core" 
+        desc: "Make a Will attack roll against the target’s Will. You make the attack roll with 1 boon if you are under the effect of the <b>Beast Tongue</b> spell. If the target’s Health is higher than yours, the spell fails and the casting is wasted.<br>On a success, the target becomes charmed until you complete a rest. It accompanies you on your adventures and helps you to the best of its ability, though it remains under the GM’s control. <br>You can have a number of animals charmed in this way equal to your Power score. If casting this spell causes you to exceed this number, the effect automatically ends on the animal affected for the longest time. <b>Attack Roll 20+:</b> The target becomes permanently charmed. Core" 
     },
     { 
         name: "Call Small Animal", 
         tradition: "Primal", 
         rank: 1, 
         type: "Utility", 
-        targetArea: "1-yard cube within medium range",
+        targetArea: "A cube of space, 1 yard on a side, originating from a point within medium range and resting on a solid surface",
         duration: "1 hour",
-        desc: "A compelled small or tiny animal appears. A tiny animal can have one trait: climber, flier, poisonous, or swimmer. Core" 
+        desc: "A compelled <b>Small Animal</b> or <b>Tiny Animal</b> appears in the area. <br>A <b>Tiny Animal</b> can have one of the following traits: climber, flier, poisonous, or swimmer. <br>The animal is of a kind appropriate to the environment where you cast the spell. When the effect ends or the animal becomes incapacitated, it returns whence it came. Core" 
     },
     { 
         name: "Call Medium Animal", 
         tradition: "Primal", 
         rank: 2, 
         type: "Utility", 
-        targetArea: "1-yard cube within medium range",
+        targetArea: "A cube of space, 1 yard on a side, originating from a point within medium range and resting on a solid surface",
         duration: "1 hour",
-        desc: "A compelled medium, small, or tiny animal appears. Small/tiny animals can have one trait: climber, flier, poisonous, or swimmer. Core" 
+        desc: "This spell works like <b>Call Small Animal</b>, except that a compelled <b>Medium Animal</b>, <b>Small Animal</b>, or <b>Tiny Animal</b> appears inside the area. A small or tiny animal can have one of the following traits: climber, flier, poisonous, or swimmer. Core" 
     },
     { 
         name: "Dire Beast", 
@@ -9446,16 +9446,16 @@
         type: "Utility", 
         targetArea: "You or one animal within short range",
         duration: "1 minute",
-        desc: "Target's Size increases by 1 (minimum Size 1). Attacks with unarmed strikes and natural weapons deal 1d6 extra damage. Core" 
+        desc: "The target becomes a savage beast. For the duration, the target’s Size increases to 1, or increases by 1 if it is Size 1 or larger, and its attacks with unarmed strikes and natural weapons deal 1d6 extra damage. Core" 
     },
     { 
         name: "Call Large Animal", 
         tradition: "Primal", 
         rank: 3, 
         type: "Utility", 
-        targetArea: "2-yard cube within medium range",
+        targetArea: "A cube of space, 2 yards on a side, originating from a point within medium range and resting on a solid surface",
         duration: "1 hour",
-        desc: "A compelled large, medium, or small animal appears. Medium/small animals can have one trait: climber, flier, poisonous, or swimmer. Core" 
+        desc: "This spell works like <b>Call Small Animal</b>, except that a compelled <b>Large Animal</b>, <b>Medium Animal</b>, or <b>Small Animal</b> appears in the area. A medium or small animal can have one of the following traits: climber, flier, poisonous, or swimmer. Core" 
     },
     { 
         name: "Pounce", 
@@ -9464,7 +9464,7 @@
         type: "Attack", 
         targetArea: "Self",
         duration: "Instantaneous",
-        desc: "Req: Beast Within. Move up to twice Speed. Make an unarmed/natural attack using Will. Success: Attack damage + 4d6 extra damage and target falls prone. Core" 
+        desc: "<b>Requirement:</b> You must be under the effects of the <b>Beast Within</b> spell. You move up to twice your Speed. At any point during this movement, you can make an attack with an unarmed strike or natural weapon against a target within your reach, using Will in place of the attribute the attack normally uses. On a success, the target takes the attack’s damage plus 4d6 extra damage and falls prone. Core" 
     },
     { 
         name: "Call of the Wild", 
@@ -9473,16 +9473,16 @@
         type: "Utility", 
         targetArea: "Up to five creatures within short range",
         duration: "1 minute",
-        desc: "Targets gain bestial traits: +10 Health, +2 Speed, and 1d6 extra damage with unarmed strikes and natural weapons. Core" 
+        desc: "The targets acquire bestial traits. For the duration, each target gains a +10 bonus to Health and a +2 bonus to Speed, and deals 1d6 extra damage with its attacks using unarmed strikes and natural weapons. Core" 
     },
     { 
         name: "Call Huge Animal", 
         tradition: "Primal", 
         rank: 5, 
         type: "Utility", 
-        targetArea: "3-yard cube within medium range",
+        targetArea: "A cube of space, 3 yards on a side, originating from a point within medium range and resting on a solid surface",
         duration: "1 hour",
-        desc: "A compelled huge, large, or medium animal appears. Large/medium animals can have one trait: climber, flier, poisonous, or swimmer. Core" 
+        desc: "This spell works like <b>Call Small Animal</b>, except that a compelled <b>Huge Animal</b>, <b>Large Animal</b>, or <b>Medium Animal</b> appears in the area. A large or medium animal can have one of the following traits: climber, flier, poisonous, or swimmer. Core" 
     },
           { 
         name: "Hide from Undead", 
