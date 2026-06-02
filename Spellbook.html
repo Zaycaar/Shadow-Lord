@@ -59,7 +59,7 @@
             <option value="Madness">Madness</option>
             <option value="Metal">Metal</option>
             <option value="Nature">Nature</option>
-            <option value="Necromancy","Blood">Necromancy</option>
+            <option value="Necromancy"|"Blood">Necromancy</option>
             <option value="Order">Order</option>
             <option value="Primal">Primal</option>
             <option value="Protection">Protection</option>
@@ -11118,10 +11118,11 @@ function filterSpells() {
     const trad = document.getElementById('traditionFilter').value;
     const rank = document.getElementById('rankFilter').value;
     const type = document.getElementById('typeFilter').value;
+    const tradList = trad.split('|');
 
     const filtered = spells.filter(s => {
         const matchesSearch = s.name.toLowerCase().includes(search);
-        const matchesTrad = (trad === "All" || s.tradition === trad);
+        const matchesTrad = (trad === "All" || tradList.includes(s.tradition));;
         const matchesRank = (rank === "All" || s.rank.toString() === rank);
         const matchesType = (type === "All" || s.type === type);
         return matchesSearch && matchesTrad && matchesRank && matchesType;
