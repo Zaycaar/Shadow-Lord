@@ -2511,150 +2511,168 @@
         targetarea: "A 6-yard cube originating from a point you can reach", 
         desc: "Permanent. 24-hour concentration to create a breeding pair of a new animal species (up to Size 3). Aftereffect: Will challenge (-5 banes) or 10-year cooldown. Sacrifice: Resurrect one dead animal. OP" 
     },
-          { 
-        name: "Choose Outcome", 
-        tradition: "Order", 
-        rank: 0, 
-        type: "Utility", 
-        targetarea: "Self", 
-        desc: "Will challenge (-2 banes). Success: Your next attack or challenge roll before the end of next round is a success. Failure: Impaired for 1 round. OP" 
-    },
-    { 
-        name: "Ordered Strike", 
-        tradition: "Order", 
-        rank: 0, 
-        type: "Utility", 
-        targetarea: "Self", 
-        desc: "Triggered: Use when you succeed on a variable damage attack. Do not roll damage; treat each die as a 4. OP" 
-    },
-    { 
-        name: "Logic Prison", 
-        tradition: "Order", 
-        rank: 1, 
-        type: "Attack", 
-        targetarea: "One Size 2 or smaller creature you can see within short range", 
-        desc: "Will vs Agi. Success: Target trapped for 1 minute; cannot move, use actions, or triggered actions. Target is immune to outside damage/afflictions. Ends if target passes Int challenge (-1 bane) at round end. OP" 
-    },
-    { 
-        name: "Ordered Defense", 
-        tradition: "Order", 
-        rank: 1, 
-        type: "Utility", 
-        targetarea: "Self", 
-        desc: "Triggered: For 1 round, replace the result of any d20 roll for an attack against you (or your challenge roll to resist) with a 10. OP" 
-    },
-    { 
-        name: "Demand Order", 
-        tradition: "Order", 
-        rank: 2, 
-        type: "Attack", 
-        targetarea: "One creature within short range that can hear you", 
-        desc: "Demand an activity. Target can obey (making rolls with 3 boons) or pass Will challenge (-1 bane). Failure: Take 3d6 damage, gain 1d3 Insanity, and must obey. OP" 
-    },
-    { 
-        name: "Forbidden Zone", 
-        tradition: "Order", 
-        rank: 2, 
-        type: "Utility", 
-        targetarea: "A 3-yard cube within medium range", 
-        desc: "1 minute. Creatures attempting to enter must pass Str challenge (-1 bane) or take 4d6 damage and stop at the edge. OP" 
-    },
-    { 
-        name: "Command Truth", 
-        tradition: "Order", 
-        rank: 3, 
-        type: "Attack", 
-        targetarea: "One creature within short range that can hear you", 
-        desc: "Will vs Will (+1 boon). Success: For 1 minute, if target lies, it takes 1d6 damage and 1d3 Insanity (once per round). 20+: Lasts 1 hour. OP" 
-    },
-    { 
-        name: "Safeguard", 
-        tradition: "Order", 
-        rank: 3, 
-        type: "Utility", 
-        targetarea: "One creature within medium range", 
-        desc: "1 minute. Spinning glyphs (Health 30) take all damage intended for the target until they are destroyed. OP" 
-    },
-    { 
-        name: "Depower",
-        tradition: "Order", 
-        rank: 4, 
-        type: "Attack", 
-        targetarea: "One creature within medium range", 
-        desc: "Will vs Will. Success: Target impaired for 1 hour and takes -1d6 penalty to Power. 20+: Target also stunned for 1 round. Sacrifice: Heal all damage and remove 1 Insanity from self. OP" 
-    },
-    { 
-        name: "Mental Stability", 
-        tradition: "Order", 
-        rank: 4, 
-        type: "Utility", 
-        targetarea: "Up to five creatures within short range", 
-        desc: "1 minute. Targets cannot gain Insanity and are immune to charmed, compelled, and frightened afflictions. OP" 
-    },
-    { 
-        name: "Forceful Summons", 
-        tradition: "Order", 
-        rank: 5, 
-        type: "Attack", 
-        targetarea: "One creature you can see", 
-        desc: "Will vs Will (+1 boon if Health <= 50). Success: Target teleports to you, falls prone, and is immobilized/impaired for 1 hour. Will challenge (-2 banes) at round end to break. 20+: +3d6 damage. OP" 
-    },
-    { 
-        name: "Ordered Space", 
-        tradition: "Order", 
-        rank: 5, 
-        type: "Utility", 
-        targetarea: "A 10-yard cube within long range", 
-        desc: "1 hour. Barrier is immune to damage; nothing passes. 20-yard field around it requires Will challenge (-3 banes) to teleport through; failure deals 5d6 damage and stops travel. Sacrifice: Cast dictum. OP" 
-    },
-    { 
-        name: "Eradicate Infestation", 
-        tradition: "Order", 
-        rank: 6, 
-        type: "Attack", 
-        targetarea: "Up to five creatures within medium range", 
-        desc: "Str challenge (Banes: 1 faerie, 2 demon, 3 monster). Success: 6d6 damage (half on success). Monsters take +4d6 extra damage. OP" 
-    },
-    { 
-        name: "Strength From Order", 
-        tradition: "Order", 
-        rank: 6, 
-        type: "Utility", 
-        targetarea: "Self", 
-        desc: "1 hour. Impose Order: Triggered Will challenge to change any nearby d20 roll to a 1 or 20. Deaden Magic: Impose 1 bane on enemy spells. Order's Grasp: Action to immobilize one creature (Will vs Will). OP" 
-    },
-    { 
-        name: "Purge Chaos", 
-        tradition: "Order", 
-        rank: 7, 
-        type: "Utility", 
-        targetarea: "A 50-yard-radius sphere centered on you", 
-        desc: "1 hour. You roll a d20 and d6 at start/end; all creatures in area use your results. Monsters/Faeries/Demons take 3d6 damage and impairment (Str challenge -3 banes). -3 Power penalty to all in area. Chaos spells fail. Aftereffect: Will challenge (-3 banes). OP" 
-    },
-    { 
-        name: "Imprisoned by Flawless Logic", 
-        tradition: "Order", 
-        rank: 8, 
-        type: "Attack", 
-        targetarea: "One Size 3 or smaller creature or object you can reach", 
-        desc: "Will vs Agi. Success: Target trapped in a static prison for 1 year and 1 day; immune to all damage, afflictions, hunger, and aging. Cannot be moved. Aftereffect: Will challenge (-4 banes). Sacrifice: Regain 8 ranks of Order spells. OP" 
-    },
-    { 
-        name: "Voice of Ultimate Authority", 
-        tradition: "Order", 
-        rank: 9, 
-        type: "Utility", 
-        targetarea: "One creature within medium range that can hear you", 
-        desc: "Until rest. Command one creature: Will 15 or lower are compelled until rest. Will 16+ requires Will vs Will to compel for 1 hour. OP" 
-    },
-    { 
-        name: "Restore Reality", 
-        tradition: "Order", 
-        rank: 10, 
-        type: "Attack", 
-        targetarea: "A 1-mile-radius sphere centered on a point you can see", 
-        desc: "Constructs become objects; Monsters take 1d6x10 damage; Demons sent to Void (Will challenge -4 banes if Health > 50); Faeries fettered in iron for 1 week. Ongoing magic rank 8 or lower ends. Void breaches close. Aftereffect: Will challenge (-5 banes) or 10d6 damage (Incapacitated = turned to stone). OP" 
-    },
+         {
+    "name": "Choose Outcome",
+    "tradition": "Order",
+    "rank": 0,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "",
+    "desc": "You attempt to exert your will on reality to bring about order. Make a Will challenge roll with 2 banes. On a success, the next time you would make an attack roll or a challenge roll before the end of the next round, you can choose to make the result of that roll a success. On a failure, you become impaired for 1 round."
+  },
+  {
+    "name": "Ordered Strike",
+    "tradition": "Order",
+    "rank": 0,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "",
+    "desc": "<b>Triggered:</b> When you get a success on an attack roll for an attack that deals a variable amount of damage, you can use a triggered action to cast this spell. Do not roll damage. Instead, you treat each die of damage as if you had rolled a 4."
+  },
+  {
+    "name": "Logic Prison",
+    "tradition": "Order",
+    "rank": 1,
+    "type": "Attack",
+    "targetArea": "One Size 2 or smaller creature you can see within short range",
+    "duration": "See the effect",
+    "desc": "Strings of words speed toward the target. Make a Will attack roll against the target’s Agility. On a success, the target becomes trapped in a logic prison for 1 minute. While trapped in this way, the target cannot use actions or triggered actions, and it cannot move. In addition, the target is immune to damage and to afflictions that originate outside its space. At the end of each round, the target can make an Intellect challenge roll with 1 bane. On a success, it escapes the logic prison and ends the spell."
+  },
+  {
+    "name": "Ordered Defense",
+    "tradition": "Order",
+    "rank": 1,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "1 round",
+    "desc": "<b>Triggered:</b> On your turn, you can use a triggered action to cast this spell. For 1 round, whenever a creature makes an attack roll against you, or you would make a challenge roll to resist an attack, you discard the d20 roll and replace the result with a 10."
+  },
+  {
+    "name": "Demand",
+    "tradition": "Order",
+    "rank": 2,
+    "type": "Attack",
+    "targetArea": "One creature within short range that can hear you",
+    "duration": "",
+    "desc": "Describe a course of activity you expect the target to perform by using an action or by moving. The next time the target takes a turn before the end of the next round, it can either do as you described, in which case it makes any rolls associated with the activity with 3 boons. Or, an unwilling target can make a Will challenge roll with 1 bane. The target ignores your demand on a success, or takes 3d6 damage and gains 1d3 Insanity on a failure. A target that gets a failure must obey your command."
+  },
+  {
+    "name": "Forbidden Zone",
+    "tradition": "Order",
+    "rank": 2,
+    "type": "Utility",
+    "targetArea": "A cube of space, 3 yards on a side, originating from a point within medium range",
+    "duration": "1 minute",
+    "desc": "You attempt to prevent creatures from entering the area for the duration. Any creature in the area when you cast the spell can freely leave it. But if a creature tries to enter the area, the creature must make a Strength challenge roll with 1 bane. On a failure, a creature takes 4d6 damage and stops moving at the edge of the area. On a success, the creature ignores the effect of this casting of the spell."
+  },
+  {
+    "name": "Command Truth",
+    "tradition": "Order",
+    "rank": 3,
+    "type": "Attack",
+    "targetArea": "One creature within short range that can hear you",
+    "duration": "1 minute",
+    "desc": "Make a Will attack roll with 1 boon against the target’s Will. On a success, you impose truth upon the target for 1 minute. A target affected in this way understands that if it lies or speaks an untruth, it suffers terrible consequences, taking 1d6 damage and gaining 1d3 Insanity. A target can take this damage and gain this Insanity just once per round, regardless of how many untruths it tells. A target that goes mad from gaining Insanity in this way gains a form of madness of your choice.<br><b>Attack Roll 20+:</b> The effect lasts for 1 hour instead of 1 minute."
+  },
+  {
+    "name": "Safeguard",
+    "tradition": "Order",
+    "rank": 3,
+    "type": "Utility",
+    "targetArea": "One creature you can see within medium range",
+    "duration": "1 minute; see the effect",
+    "desc": "Glowing glyphs fly from your mouth to gather around the target, spinning slowly around it for the duration. The glyphs have Health 30. Whenever the target would take damage, the damage instead is applied to the glyphs. If the damage total equals or exceeds the glyphs’ Health, the glyphs disappear and the spell ends."
+  },
+  {
+    "name": "Depower",
+    "tradition": "Order",
+    "rank": 4,
+    "type": "Attack",
+    "targetArea": "One creature within medium range",
+    "duration": "",
+    "desc": "You intone fragmented words of creation to strip the target of its ability to wield magic. Make a Will attack roll against the target’s Will. On a success, the target becomes impaired for 1 hour. While impaired in this way, the target has a –1d6 penalty to Power (minimum score of 0).<br>An affected target can use an action to make a Will challenge roll with 3 banes. On a success, it removes the impaired affliction from itself and ends the spell.<br><b>Attack Roll 20+:</b> The target is also stunned for 1 round.<br><b>Sacrifice:</b> You can use an action and expend a casting of this spell to heal all your damage and remove 1 Insanity from yourself."
+  },
+  {
+    "name": "Mental Stability",
+    "tradition": "Order",
+    "rank": 4,
+    "type": "Utility",
+    "targetArea": "Up to five creatures within short range",
+    "duration": "1 minute",
+    "desc": "You reorganize each target’s thoughts to encourage stability and sanity. Until the spell ends, a target cannot gain Insanity and is immune to the charmed, compelled, and frightened afflictions."
+  },
+  {
+    "name": "Forceful Summons",
+    "tradition": "Order",
+    "rank": 5,
+    "type": "Attack",
+    "targetArea": "One creature you can see",
+    "duration": "",
+    "desc": "As you speak the word of summons, a glyph falls from your tongue and dissolves in the air. Make a Will attack roll against the target’s Will. If the target has a Health score of 50 or lower, you make the roll with 1 boon. On a success, the target teleports to an open space you can reach, falls prone, and becomes immobilized for 1 hour. When the target is immobilized in this way, it is also impaired. At the end of each round, the target can make a Will challenge roll with 2 banes and ends the effect on itself with a success.<br><b>Attack Roll 20+:</b> The target also takes 3d6 damage."
+  },
+  {
+    "name": "Ordered Space",
+    "tradition": "Order",
+    "rank": 5,
+    "type": "Utility",
+    "targetArea": "A cube, 10 yards on a side, originating from a point within long range",
+    "duration": "1 hour",
+    "desc": "Interlocking, glowing sigils appear on the edges of the area to form a solid barrier. The barrier is immune to all damage. Creatures and objects cannot pass through it by any means.<br>The barrier also emanates an invisible field that extends 20 yards out from either side of it. The field imposes order that interferes with Teleportation magic and other magical forms of travel. If a creature would use magic to travel to a space inside the field, the creature must make a Will challenge roll with 3 banes. The creature takes 5d6 damage and reappears in the space it left on a failure, or just takes half the damage and passes through the barrier on a success.<br><b>Sacrifice:</b> You can use an action and expend a casting of this spell to cast the dictum spell (Demon Lord’s Companion 2, page 40)."
+  },
+  {
+    "name": "Eradicate Infestation",
+    "tradition": "Order",
+    "rank": 6,
+    "type": "Attack",
+    "targetArea": "Up to five creatures you can see within medium range",
+    "duration": "",
+    "desc": "You intone words of power to purge the field of your enemies. Each target must make a Strength challenge roll. If the target is a faerie, it makes the roll with 1 bane. If the target is a demon, it makes the roll with 2 banes. If the target is a monster, it makes the roll with 3 banes. A target takes 6d6 damage on a failure, or half the damage on a success. A monster takes 4d6 extra damage."
+  },
+  {
+    "name": "Strength from Order",
+    "tradition": "Order",
+    "rank": 6,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "1 hour",
+    "desc": "Magic flows into your body, imbuing it with strength and vigor to bring order to the world. The spell has different effects as described below, all of which last for the duration.<br><b>Impose Order</b> When a player- or GM-controlled creature within short range rolls a d20, you can use a triggered action to make a Will challenge roll. On a success, you replace the number rolled with a 1 or a 20.<br><b>Deaden Magic</b> When a creature within medium range casts an attack spell, you can impose 1 bane on the attack roll and grant 1 boon on challenge rolls made by other creatures to resist the attack. When you do so, the triggering spell deals half damage.<br><b>Order’s Grasp</b> You can use an action to make a Will attack roll against one creature you can see within medium range. On a success, the creature is immobilized. The creature remains immobilized until it uses an action to make a Strength challenge roll with 1 bane and gets a success."
+  },
+  {
+    "name": "Purge Chaos",
+    "tradition": "Order",
+    "rank": 7,
+    "type": "Utility",
+    "targetArea": "A 50-yard-radius sphere centered on a point you can reach",
+    "duration": "1 hour",
+    "desc": "Gray light leaps from the point you touch and remains for the duration, turning darkness in the area to shadows and shadows in the area to light. The spell has effects as described below, all of which last for the duration.<br><b>Static Outcomes</b> When you cast the spell and at the end of each round thereafter, roll a d20 and a d6. Each roll made for a creature in the area using a d20 or a d6 uses the result of your rolls in place of the rolls they made.<br><b>Lament of the Monstrous</b> Each demon, faerie, and monster in the area when you cast the spell or that enters it must get a success on a Strength challenge roll with 3 banes or take 3d6 damage and become impaired until it leaves the area. Any creature incapacitated by this damage is utterly erased from existence.<br><b>Suspend Magic</b> Spells that take effect in the area deal half damage. At the end of each round, you can use a triggered action to end one active and ongoing spell effect that affects a creature, object, or area within this spell’s area. Finally, each creature in the area takes a –3 penalty to Power for as long as it remains in the area.<br><b>Annihilate Chaos</b> Spells of the Chaos tradition have no effect when cast in the area or when they would affect targets or areas inside the area.<br><b>Aftereffect:</b> You must make a Will challenge roll with 3 banes. On a success, you become fatigued until you complete a rest, or you take 6d6 damage and become stunned for 1d6 hours on a failure."
+  },
+  {
+    "name": "Imprisoned by Flawless Logic",
+    "tradition": "Order",
+    "rank": 8,
+    "type": "Attack",
+    "targetArea": "One Size 3 or smaller creature or object you can reach",
+    "duration": "1 year and 1 day",
+    "desc": "You touch the target object or make a Will attack roll against the target creature’s Agility. Against an object or on a success against a creature, you trap the target in a prison of logic, where it remains for 1 year and 1 day. While trapped in this prison, the target does not age, does not experience hunger or thirst, and is immune to damage, gaining Insanity, and all afflictions. The target cannot be moved from its space and remains in place until the spell ends.<br><b>Sacrifice:</b> You can use an action and expend a casting of this spell to regain castings of Order spells you have expended. The total ranks of the castings you regain cannot exceed 8, and rank 0 spells count as 1/2 rank.<br><b>Aftereffect:</b> You must make a Will challenge roll with 4 banes. On a failure, you cannot regain the casting of this spell by any means until the effect ends.<br><b>Permanence:</b> You must cast this spell once a year for 10 consecutive years on a creature or object still affected by a previous casting of this spell. You get an automatic success on the attack roll each time you cast the spell, but you must contend with the aftereffect as normal."
+  },
+  {
+    "name": "Voice of Ultimate Authority",
+    "tradition": "Order",
+    "rank": 9,
+    "type": "Utility",
+    "targetArea": "One creature within medium range that can hear you",
+    "duration": "Until you complete a rest",
+    "desc": "You speak with the ultimate authority ingrained in you through your commitment to order. Until the spell ends, you can use an action to issue a command to one creature within medium range that can hear you. If the creature’s Will score is 15 or lower, it becomes compelled until the spell ends or until the creature becomes incapacitated or goes mad. If the creature’s Will score is higher than 15, you must make a Will attack roll against the creature’s Will. On a success, the creature becomes compelled for 1 hour; on a failure, it becomes immune to the effect of this casting of this spell."
+  },
+  {
+    "name": "Restore Reality",
+    "tradition": "Order",
+    "rank": 10,
+    "type": "Attack",
+    "targetArea": "A 1-mile-radius sphere centered on a point you can see",
+    "duration": "",
+    "desc": "You speak the words of creation to undo the evidence of chaos and upheaval in the area, with the following effects.<br><b>Halt Construct</b> Each construct in the area becomes an object of its Size, incapable of using actions, moving, or perceiving its surroundings.<br><b>Eradicate Monsters</b> Each monster in the area takes 1d6 x 10 damage. A monster incapacitated by this damage turns to dust that blows away at the end of the next round.<br><b>Banish Demons</b> Each demon in the area with a Health score of 50 or lower dissolves, its essence sent screaming back to the Void. The bodies of the demons blacken and blow apart. Any demon in the area with a Health score greater than 50 must get a success on a Will challenge roll with 4 banes or be destroyed and sent back to the Void as described above.<br><b>Torment the Fey</b> Each faerie in the area with a Health score of 50 or lower becomes fettered with iron shackles that remain in place for 1 week and 1 day. The shackles are immune to damage and cannot be removed by any means.<br><b>Undo Magic</b> Any ongoing magical effect on a creature, object, or location in the area that was created by a spell of rank 8 or lower ends immediately.<br><b>Seal the Breach</b> Any Void breach in the area instantly snaps shut.<br><b>Aftereffect:</b> You must get a success on a Will challenge roll with 5 banes or take 10d6 damage. If you would become incapacitated, you die and immediately turn into a stone statue."
+  },
          {
     "name": "Mark of the Necromancer",
     "tradition": "Necromancy",
