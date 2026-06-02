@@ -2655,150 +2655,168 @@
         targetarea: "A 1-mile-radius sphere centered on a point you can see", 
         desc: "Constructs become objects; Monsters take 1d6x10 damage; Demons sent to Void (Will challenge -4 banes if Health > 50); Faeries fettered in iron for 1 week. Ongoing magic rank 8 or lower ends. Void breaches close. Aftereffect: Will challenge (-5 banes) or 10d6 damage (Incapacitated = turned to stone). OP" 
     },
-          { 
-        name: "Mark of the Necromancer", 
-        tradition: "Necromancy", 
-        rank: 0, 
-        type: "Attack", 
-        targetarea: "One creature you can reach", 
-        desc: "Make an Intellect attack roll against the target’s Agility. On a success, for 1 round, when the target takes damage, it takes 1d6 extra damage. 20+: Target is also impaired for 1 round. OP" 
-    },
-    { 
-        name: "Steal Face", 
-        tradition: "Necromancy", 
-        rank: 0, 
-        type: "Utility", 
-        targetarea: "One dead creature you can reach that has a humanoid shape and has its head still intact", 
-        desc: "For 1 hour, target's face attaches to yours, enabling you to masquerade as the dead creature. Merges and feels like living tissue. OP" 
-    },
-    { 
-        name: "Bone Armor", 
-        tradition: "Necromancy", 
-        rank: 1, 
-        type: "Utility", 
-        targetarea: "Self", 
-        desc: "For 1 hour, you have Defense 15 and count as wearing light armor. When hit by a weapon within 1 yard, bone splinters force attacker to make an Agility challenge roll or take 1d3 damage. OP" 
-    },
-    { 
-        name: "Charnel Stench", 
-        tradition: "Necromancy", 
-        rank: 1, 
-        type: "Attack", 
-        targetarea: "A 5-yard-long cone originating from a point in your space", 
-        desc: "Living and breathing creatures in the area must succeed on a Strength challenge roll with 1 bane or become dazed for 1 round and impaired for 1 minute. OP" 
-    },
-    { 
-        name: "Funeral Shroud", 
-        tradition: "Necromancy", 
-        rank: 2, 
-        type: "Utility", 
-        targetarea: "Self", 
-        desc: "Shadows partially obscure you for 1 minute. Gain 1 boon on Necromancy attack spells and 1 bane on challenge rolls to resist them. Once per round, can use a triggered action to force nearby creatures to make a Will challenge roll or gain 1 Insanity. OP" 
-    },
-    { 
-        name: "Necromantic Power", 
-        tradition: "Necromancy", 
-        rank: 2, 
-        type: "Utility", 
-        targetarea: "Self", 
-        desc: "Until next rest, double the number of undead you can have compelled. Sacrifice: Can regain a rank 1 or lower Necromancy spell casting. OP" 
-    },
-    { 
-        name: "Keening", 
-        tradition: "Necromancy", 
-        rank: 3, 
-        type: "Utility", 
-        targetarea: "A 10-yard-long cone originating from a point in your space", 
-        desc: "Living creatures in area must make a Strength challenge roll. Failure: 4d6 damage, 1 Insanity, and deafened for 1 minute. Success: Half damage. OP" 
-    },
-    { 
-        name: "Spectral Scythe", 
-        tradition: "Necromancy", 
-        rank: 3, 
-        type: "Attack", 
-        targetarea: "One creature you can reach", 
-        desc: "For 1 hour, your implement becomes a two-handed finesse weapon (2d6 + 2 damage) using Intellect for attack. Creatures incapacitated by this weapon die instantly. OP" 
-    },
-    { 
-        name: "Drown in Maggots", 
-        tradition: "Necromancy", 
-        rank: 4, 
-        type: "Attack", 
-        targetarea: "A 3-yard-radius circle centered on a point on the ground within long range", 
-        desc: "For 1 minute, area is difficult terrain and partially obscured. Creatures entering/starting must make Strength (3d6 damage and impaired) and Will (1 Insanity) challenge rolls. OP" 
-    },
-    { 
-        name: "Soul Blight", 
-        tradition: "Necromancy", 
-        rank: 4, 
-        type: "Attack", 
-        targetarea: "One creature you can see within medium range that has a soul", 
-        desc: "Int vs Will; Success: Target soul blighted for 1 minute (impaired). If damaged by you/your undead, target gains 1 Insanity and you/ally heal 2d6 damage. OP" 
-    },
-    { 
-        name: "Animate Huge Corpse", 
-        tradition: "Necromancy", 
-        rank: 5, 
-        type: "Utility", 
-        targetarea: "One Size 3 or smaller corpse you can reach", 
-        desc: "After 1 minute concentration, target becomes a compelled animated corpse. Size 2 counts as 1.5 undead; Size 3 counts as 2. Can also create Chainbound or Ghastly Chorus. Sacrifice: Heal compelled undead. OP" 
-    },
-    { 
-        name: "Call of the Grave", 
-        tradition: "Necromancy", 
-        rank: 5, 
-        type: "Attack", 
-        targetarea: "Up to six creatures you can see within long range", 
-        desc: "Int vs Agi; Success: 4d6 + 5 damage and diseased. If incapacitated while diseased, target dies and rises as a compelled animated corpse. Rest failure leads to permanent Health penalty. OP"  
-    },
-    { 
-        name: "Awaken Graveyard", 
-        tradition: "Necromancy", 
-        rank: 6, 
-        type: "Utility", 
-        targetarea: "A 10-yard-radius circle centered on a point on the ground within long range", 
-        desc: "Creates 1d3 + 1 compelled animated mobs and 1d6 compelled animated corpses. Sacrifice: Heal all compelled undead within medium range 4d6. OP" 
-    },
-    { 
-        name: "Embodiment of Death", 
-        tradition: "Necromancy", 
-        rank: 6, 
-        type: "Utility", 
-        targetarea: "Self", 
-        desc: "For 1 hour, gain horrifying trait and shadows partially obscure you. Creatures incapacitated within short range die and rise as compelled undead. Nearby living creatures must pass Str challenge or take 1d6 damage each round. OP" 
-    },
-    { 
-        name: "Shed the Mortal Coil", 
-        tradition: "Necromancy", 
-        rank: 7, 
-        type: "Utility", 
-        targetarea: "Self (Soul)", 
-        desc: "Soul climbs free for duration. Gain darksight, invisibility (to most), and insubstantiality. Can possess corpses or the living (Int vs Will). If incapacitated, body may die (3 or lower on d6). OP" 
-    },
-    { 
-        name: "Unleash Bone Machine", 
-        tradition: "Necromancy", 
-        rank: 8, 
-        type: "Utility", 
-        targetarea: "A pile of bones that you can reach", 
-        desc: "After 1 hour concentration, the bones coalesce to become a compelled bone machine. Sacrifice: Heal all compelled undead within medium range to full Health. OP" 
-    },
-    { 
-        name: "Undead Legion", 
-        tradition: "Necromancy", 
-        rank: 9, 
-        type: "Utility", 
-        targetarea: "A square on the ground, 100 yards on each side", 
-        desc: "After 12 hours concentration at a graveyard/battlefield, creates an army of 1d6 x 100 compelled animated corpses. Counts as one creature for compulsion limit. OP" 
-    },
-    { 
-        name: "Undead Plague", 
-        tradition: "Necromancy", 
-        rank: 10, 
-        type: "Utility", 
-        targetarea: "A 10-mile-radius sphere centered on a point you can see", 
-        desc: "For 1 year and 1 day, living cannot leave and dead rise as spirits or undead (friendly but not compelled). monochrome imagery. Sacrifice: Heal self and legion. OP" 
-    },
+         {
+    "name": "Mark of the Necromancer",
+    "tradition": "Necromancy",
+    "rank": 0,
+    "type": "Attack",
+    "targetArea": "One creature you can reach",
+    "duration": "1 round",
+    "desc": "Your hand blackens as you reach for the target. Make an Intellect attack roll against the target’s Agility. On a success, you touch the target and leave a black handprint on the spot you touch. For 1 round, when the target takes damage, it takes 1d6 extra damage.<br><b>Attack roll 20+:</b> The target is also impaired for 1 round."
+  },
+  {
+    "name": "Harvest Face",
+    "tradition": "Necromancy",
+    "rank": 0,
+    "type": "Utility",
+    "targetArea": "One dead creature you can reach that has a humanoid shape and has its head still intact",
+    "duration": "1 hour",
+    "desc": "You touch the target and cause its face to lift from the skull and attach itself to your face, where it remains for the duration. The face merges with yours to appear and feel like living tissue, enabling you to masquerade as the dead creature. When the spell ends, the face rots away and slides from your head."
+  },
+  {
+    "name": "Bone Armor",
+    "tradition": "Necromancy",
+    "rank": 1,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "1 hour",
+    "desc": "Bones break free from the ground under you and crawl up your body until you are fully encased. For the duration, you have Defense 15 and you count as if you are wearing light armor. While you wear this armor, whenever a creature within 1 yard of you attacks you with a weapon and gets a success on the attack roll, bone splinters fly at the triggering creature, forcing it to make an Agility challenge roll. On a failure, the creature takes 1d3 damage."
+  },
+  {
+    "name": "Charnel Stench",
+    "tradition": "Necromancy",
+    "rank": 1,
+    "type": "Attack",
+    "targetArea": "A 5-yard-long cone originating from a point in your space",
+    "duration": "",
+    "desc": "You exhale a reeking brown cloud that spreads through the area and then dissipates. Each living and breathing creature in the area must get a success on a Strength challenge roll with 1 bane or become dazed for 1 round and impaired for 1 minute thereafter."
+  },
+  {
+    "name": "Funeral Shroud",
+    "tradition": "Necromancy",
+    "rank": 2,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "1 minute",
+    "desc": "Shadows appear and gather around you, partially obscuring you for the duration. The shadows grant you 1 boon on attack rolls you make from casting Necromancy attack spells and impose 1 bane on challenge rolls you make to resist those spells. In addition, at any time, once per round, you can use a triggered action to cause the shadows to emit a sharp noise. Each creature (other than you) that is within 3 yards of you must make a Will challenge roll. The creature gains 1 Insanity on a failure. On a success, it becomes immune to this effect of your casting of the funeral shroud spell until it completes a rest."
+  },
+  {
+    "name": "Necromantic Power",
+    "tradition": "Necromancy",
+    "rank": 2,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "Until you complete a rest",
+    "desc": "Dark magic energizes your body to give you greater control over the undead you create. The number of undead you can have compelled is doubled until this spell ends.<br><b>Sacrifice:</b> You can use an action and expend a casting of this spell to regain the casting of one rank 1 or lower Necromancy spell you have learned."
+  },
+  {
+    "name": "Keening",
+    "tradition": "Necromancy",
+    "rank": 3,
+    "type": "Utility",
+    "targetArea": "A 10-yard-long cone originating from a point in your space",
+    "duration": "",
+    "desc": "The sound of your terrifying scream spreads through the area. Each living creature in the area must make a Strength challenge roll. A creature takes 4d6 damage, gains 1 Insanity, and becomes deafened for 1 minute on a failure, or just takes half the damage on a success."
+  },
+  {
+    "name": "Spectral Scythe",
+    "tradition": "Necromancy",
+    "rank": 3,
+    "type": "Attack",
+    "targetArea": "One creature you can reach",
+    "duration": "1 hour",
+    "desc": "Requirement You must be holding your implement with both hands<br>Seething shadows turn your implement into a scythe that you can use for the duration. When the scythe appears, and on each of your turns until the spell ends, you can use it to attack one creature you can reach. It functions as a two-handed finesse weapon that deals 2d6 + 2 damage. You can use Intellect in place of the attribute you would normally use to attack with this weapon. Finally, when a creature becomes incapacitated by an attack you make with this weapon, the creature dies."
+  },
+  {
+    "name": "Drown in Maggots",
+    "tradition": "Necromancy",
+    "rank": 4,
+    "type": "Attack",
+    "targetArea": "A 3-yard-radius circle centered on a point on the ground within long range",
+    "duration": "1 minute",
+    "desc": "Maggots come boiling up out of the ground to partially obscure the area and turn the ground in it into difficult terrain for the duration. Any creature in the area when the maggots appear or that enters the area must make both a Strength challenge roll and a Will challenge roll. A failure on the Strength roll indicates the creature takes 3d6 damage from the chewing maggots and becomes impaired for 1 round. A failure on the Will roll indicates the creature gains 1 Insanity."
+  },
+  {
+    "name": "Soul Blight",
+    "tradition": "Necromancy",
+    "rank": 4,
+    "type": "Attack",
+    "targetArea": "One creature you can see within medium range that has a soul",
+    "duration": "1 minute",
+    "desc": "Curls of darkness rise from all over your body for the duration. When you cast this spell, and again whenever you use a triggered action on your turn to do so, you can blight the soul of one creature you can see within medium range that has a soul. Make an Intellect attack roll against the creature’s Will. On a success, the creature’s soul becomes blighted for 1 minute. While its soul is blighted in this way, the creature is impaired, and whenever it takes damage from one of your attacks or an attack made by an undead under your control, it gains 1 Insanity and you or a creature within short range of you heals 2d6 damage."
+  },
+  {
+    "name": "Animate Huge Corpse",
+    "tradition": "Necromancy",
+    "rank": 5,
+    "type": "Utility",
+    "targetArea": "One Size 3 or smaller corpse you can reach",
+    "duration": "",
+    "desc": "Upon casting this spell, you must concentrate for 1 minute, during which time you maintain physical contact with the target. When you finish, the target becomes a compelled animated corpse (apply the animated corpse template on page 133 to the base creature) of its Size. A Size 2 creature counts as one-and-a half undead creatures, and a Size 3 creature counts as two undead creatures for determining how many undead you can have compelled.<br>Create Chainbound If you have enough corpses to fill a cube, 3 yards on a side, and at least four heavy lengths of chain, you can use this spell to create a compelled chainbound (shadow, page 224) instead of an animated corpse.<br>Create Ghastly Chorus If you have enough faces harvested from corpses to spread across a flat surface, 3 yards on a side, you can use this spell to create a compelled ghastly chorus (shadow, page 235) instead of an animated corpse.<br><b>Sacrifice:</b> You can use an action and expend a casting of this spell to cause an undead compelled by you and within short range to heal 3d6 damage or cause two such creatures to heal 2d6 damage."
+  },
+  {
+    "name": "Call of the Grave",
+    "tradition": "Necromancy",
+    "rank": 5,
+    "type": "Attack",
+    "targetArea": "Up to six creatures you can see within long range",
+    "duration": "",
+    "desc": "Threads of necromantic energy leap from your outstretched hand and streak toward the targets. For each target, make an Intellect attack roll against its Agility. On a success, the target takes 4d6 + 5 damage and becomes diseased. If the target becomes incapacitated when it is diseased in this way, it dies, and 1 round later it rises as a compelled animated corpse of its Size (apply the animated corpse template from page 133 to the creature).<br>Each time a target diseased by this spell completes a rest, it must make a Strength challenge roll. The target takes a –1d6 penalty to Health on a failure or, after its third success, removes the diseased affliction from itself. The penalty from this effect is cumulative and permanent.<br><b>Attack roll 20+:</b> The target takes 2d6 extra damage."
+  },
+  {
+    "name": "Awaken Graveyard",
+    "tradition": "Necromancy",
+    "rank": 6,
+    "type": "Utility",
+    "targetArea": "A 10-yard-radius circle centered on a point on the ground within long range",
+    "duration": "",
+    "desc": "Bursting from the ground and standing up are 1d3 + 1 compelled animated mobs of corpses (see page 134) and 1d6 compelled animated corpses (shadow, page 218). Each mob of corpses counts as one undead creature for determining how many undead you can have compelled.<br><b>Sacrifice:</b> You can use an action and expend a casting of this spell to cause all undead within medium range that are compelled by you to heal 4d6 damage."
+  },
+  {
+    "name": "Embodiment of Death",
+    "tradition": "Necromancy",
+    "rank": 6,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "1 hour",
+    "desc": "You release the darkness inside you to become the embodiment of death for the duration. While in this form, you have the following benefits and drawbacks.<br>• You have the horrifying trait.<br>• Shadows partially obscure your space.<br>• When a creature within short range of you becomes incapacitated, it dies, and 1 round later it stands up as a compelled animated corpse of its Size (apply the animated corpse template from page 133 to the base creature).<br>• At the end of the round, each living creature within short range of you must get a success on a Strength challenge roll with 1 bane or take 1d6 damage.<br><b>Aftereffect:</b> You must get a success on a Strength challenge roll with 3 banes or take 2d6 damage."
+  },
+  {
+    "name": "Shed the Mortal Coil",
+    "tradition": "Necromancy",
+    "rank": 7,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "See the effect",
+    "desc": "Requirement You must have a soul<br>Upon casting this spell, you must concentrate for 1 minute. When you finish, your body falls prone, and your soul climbs free from the flesh. You control your soul as if it were your body, while your body counts as being asleep. The spell ends when your soul moves back into the space occupied by your body. For the duration, your soul is equivalent to you, and you have the following benefits and drawbacks:<br>Darksight You gain darksight if you do not have it already. Darksight lets you see into areas within medium range that are obscured by shadows and darkness as if those areas were lit and into areas beyond this distance that are obscured by darkness as if those areas were obscured by shadows.<br>Invisible You are invisible to all creatures other than spirits, animals, and children.<br>Strength You lack a Strength score, which makes you immune to attacks against your Strength or effects that require a Strength roll. You cannot, however, interact with physical objects.<br>Health Any damage sustained by your body or your soul is counted against your Health score.<br>Insubstantial You take half damage from weapons, you can move through solid objects and through other creatures, and you ignore the effects of moving across difficult terrain.<br>Possess Corpse If you move into a space occupied by a corpse, you can possess it. You and the corpse combine to become a zombie (shadow, page 259) until you use an action to leave the corpse, at which point it becomes an ordinary corpse once more. If the zombie becomes incapacitated, your soul is forced out, and you cannot possess that corpse again.<br>Possess the Living You can use an action to attempt to possess one creature you can reach that has a soul. Make an Intellect attack roll against the creature’s Will. On a success, your soul moves into the creature’s body. For as long as you possess the creature, you retain your Intellect, Will, and Health, languages, professions, and all of your talents from paths and spells, but you gain the traits of the creature’s ancestry. In addition, you replace the creature’s personality with your own.<br>While possessing a creature, you can use an action to attempt to draw memories and experience from the hostage soul. Make an Intellect challenge roll. On a success, you can ask the soul a question and receive a true answer.<br>You can use an action to abandon the body and return to your soul state. Alternatively, if the body dies while your soul inhabits it, you can either use the possess corpse option or move out of the body.<br>Incapacitated If you become incapacitated while under the effect of this spell, roll a d6. On a 4 or higher, your soul returns to your body. On a 3 or lower, your body dies, and your soul becomes a shadow (shadow, page 253), retaining none of the statistics you had in life. Either way, the spell ends.<br><b>Aftereffect:</b> You must get a success on a Will challenge roll with 3 banes or gain 3d6 Insanity.<br><b>Sacrifice:</b> You can use an action and expend a casting of this spell to cast the awaken graveyard spell (previous page)."
+  },
+  {
+    "name": "Unleash Bone Machine",
+    "tradition": "Necromancy",
+    "rank": 8,
+    "type": "Utility",
+    "targetArea": "A pile of bones that you can reach",
+    "duration": "",
+    "desc": "Upon casting this spell, you must concentrate for 1 hour. When you finish, the target coalesces to become a bone machine (shadow, page 222).<br><b>Sacrifice:</b> You can use an action and expend a casting of this spell to cause any undead within medium range that you have compelled to heal all damage."
+  },
+  {
+    "name": "Undead Legion",
+    "tradition": "Necromancy",
+    "rank": 9,
+    "type": "Utility",
+    "targetArea": "A square on the ground, 100 yards on each side, originating from a point you can reach",
+    "duration": "",
+    "desc": "Requirement You must be at an ancient graveyard, battlefield, or similar site with a significant quantity of corpses<br>Upon casting this spell, you must concentrate for 12 hours. The ground in the area trembles and shakes as a number of corpses dig their way free and stand up. This spell creates an army of 1d6 x 100 compelled animated corpses (shadow, page 218). The army counts as one undead creature for the purpose of determining how many undead you can have compelled.<br><b>Aftereffect:</b> You must get a success on a Will challenge roll with 4 banes or gain 4d6 Insanity. In addition, you cannot cast this spell again until each creature created by this spell is destroyed.<br><b>Sacrifice:</b> You can use an action and expend a casting of this spell to heal all damage on yourself and each undead created by this spell."
+  },
+  {
+    "name": "Undead Plague",
+    "tradition": "Necromancy",
+    "rank": 10,
+    "type": "Utility",
+    "targetArea": "A 10-mile-radius sphere centered on a point you can see",
+    "duration": "1 year and 1 day",
+    "desc": "Gloom spreads through the area, rendering every image in it in black and white for the duration. Living creatures in the area when you cast the spell cannot leave the area.<br>The dark energies suffusing the place keep the dead from moving on. When a mortal creature dies in the area, its soul emerges from its body but is prevented from moving to the Underworld or Hell. Roll a d6. The soul becomes an apparition (see page 135) on a 1–5 or a phantom (shadow, page 250) on a 6.<br>In addition, the necromantic energies cause the new corpse to stand up and become undead 1d6 minutes after death. Roll a d6. The corpse becomes an animated corpse (shadow, page 217) on a 1–5 or a zombie (shadow, page 259) on a 6.<br>Spirits and undead created by this spell are friendly to you and obey your spoken commands, though they are not compelled.<br><b>Aftereffect:</b> You must get a success on a Strength challenge roll with 5 banes or take 10d6 damage. If the damage causes you to become incapacitated, Father Death appears in a space within 1 yard of you, fetches your soul, and delivers it personally to Hell.<br>In addition, you must get a success on a Will challenge roll with 5 banes or take a –1d6 penalty to Power. At the end of each week, the penalty lessens by 1 until it reaches 0.<br><b>Permanence:</b> You must cast this spell on the same area once a year for 10 consecutive years."
+  },
          {
     "name": "Falling Leaves",
     "tradition": "Nature",
