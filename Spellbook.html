@@ -8600,7 +8600,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 minute; see effect",
-        desc: "A gleaming holy symbol appears in your hand. While held, you gain 1 boon on attack rolls with Theurgy spells. Ends if dropped. Core" 
+        desc: "A gleaming holy symbol appears in your hand and remains for the duration or until you drop it. The holy symbol grants 1 boon on your attack rolls with Theurgy spells. Core" 
     },
     { 
         name: "Denounce", 
@@ -8609,7 +8609,7 @@
         type: "Attack", 
         targetArea: "One creature within short range that can see/hear you",
         duration: "1 round",
-        desc: "Will vs Will attack. Success: Target is frightened for 1 round. <b>Attack Roll 20+:</b>: Target also falls prone. Core" 
+        desc: "You present your holy symbol at the target. Make a Will attack roll against the target’s Will. On a success, the target becomes frightened for 1 round.<br><b>Attack Roll 20+</b> The target also falls prone. Core" 
     },
     { 
         name: "Blessing", 
@@ -8618,7 +8618,7 @@
         type: "Utility", 
         targetArea: "Any number of creatures you can reach",
         duration: "1 minute",
-        desc: "Targets make attack/challenge rolls with 1 boon and cannot be frightened. Core" 
+        desc: "You touch each target and bestow your blessing. For the duration, the target makes attack rolls and challenge rolls with 1 boon and cannot be frightened. Core" 
     },
     { 
         name: "Censure", 
@@ -8626,8 +8626,8 @@
         rank: 1, 
         type: "Attack", 
         targetArea: "A sphere with a 5-yard radius centered on a point you can reach",
-        duration: "1 minute",
-        desc: "Release holy power. Each demon, devil, faerie, spirit, or undead must succeed on a Will challenge roll or become impaired. While impaired, they cannot take fast turns. Core" 
+        duration: "Instantaneous",
+        desc: "You present your holy symbol, a bit of scripture, or some other physical representation of your faith, and release a wave of holy power that spreads through the area. Each demon, devil, faerie, spirit, or undead in the area must get a success on a Will challenge roll or become impaired for 1 minute. When impaired in this way, a creature cannot take fast turns. Core" 
     },
     { 
         name: "Hallowed Ground", 
@@ -8636,7 +8636,7 @@
         type: "Utility", 
         targetArea: "A hemisphere with a 3-yard radius centered on a point within short range",
         duration: "Concentration, up to 1 minute; see effect",
-        desc: "A dome blocks passage and spell effects. Creatures inside are hidden from those outside. Leaving is possible, but reentering is not. Ends if a creature inside makes an attack. Core" 
+        desc: "A transparent, immobile dome shimmers into existence for the duration. Nothing outside the dome can pass through it, and the area within the dome is excluded from the areas of spell effects. Creatures and objects inside the dome are hidden from everyone outside it except you. A creature inside the dome can freely leave, but once it does so it cannot reenter. The effect ends immediately if a creature inside the dome makes an attack. Core" 
     },
     { 
         name: "God Hammer", 
@@ -8645,7 +8645,7 @@
         type: "Attack", 
         targetArea: "A point in space within medium range",
         duration: "1 minute",
-        desc: "Golden hammer appears. Triggered: Move hammer 10 yards and attack (Will vs Defense with 1 boon). Success: 2d6 damage. <b>Attack Roll 20+:</b>: 2d6 extra damage. Core" 
+        desc: "A glowing golden hammer appears at the target and hovers there. For the duration, you can use a triggered action on your turn to move the hammer up to 10 yards and attack one creature within 1 yard of it. Make a Will attack roll with 1 boon against the target’s Defense. On a success, the target takes 2d6 damage.<br><b>Attack Roll 20+:</b> The target takes 2d6 extra damage. Core" 
     },
     { 
         name: "Revelation", 
@@ -8654,7 +8654,7 @@
         type: "Utility", 
         targetArea: "One creature you can reach",
         duration: "1 minute; see effect",
-        desc: "Grant target 7 revelations. Target can expend any number on a roll; each revelation expended adds 2 boons. Core" 
+        desc: "You touch the target, granting it seven revelations that last for the duration or until it expends the last one. When the target makes an attack roll or challenge roll, it can expend any number of revelations up to the number it has remaining. For each revelation expended, the target makes the roll with 2 boons. Core" 
     },
     { 
         name: "Divine Aid", 
@@ -8672,7 +8672,7 @@
         type: "Attack", 
         targetArea: "A point on the ground within medium range",
         duration: "Instantaneous",
-        desc: "Lightning deals 2d6 + 2 damage to each creature within 1d6 yards of the point. Agility challenge roll: half damage on success, dazed for 1 round on failure. Core" 
+        desc: "A bolt of lightning strikes the target and deals 2d6 + 2 damage to each creature within 1d6 yards of that point. A creature that takes damage in this way must make an Agility challenge roll. It becomes dazed for 1 round on a failure, or just takes half the damage on a success. Core" 
     },
     { 
         name: "Avatar", 
@@ -8681,16 +8681,16 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 minute",
-        desc: "Take half damage from all sources, make attack rolls with 1 boon, and deal 2d6 extra damage with weapon attacks. Core" 
+        desc: "Divine power flows into you. For the duration, you take half damage from all sources, make attack rolls with 1 boon, and deal 2d6 extra damage with weapon attacks. Core" 
     },
     { 
         name: "Fire from Heaven", 
         tradition: "Theurgy", 
         rank: 5, 
         type: "Attack", 
-        targetArea: "Vertical cylinder, 25yd tall, 5yd radius, within extreme range",
+        targetArea: " A vertical cylinder, 25 yards tall with a 5-yard radius, centered on a point on the ground within extreme range",
         duration: "Instantaneous",
-        desc: "Flames deal 7d6 damage. Will challenge roll for half. Any creature incapacitated by this damage is erased from reality. Core" 
+        desc: "Flames spread through the area and deal 7d6 damage to each creature in it. A creature that gets a success on a Will challenge roll takes half the damage. Any creature incapacitated by this damage disappears, erased from the fabric of reality. Core" 
     },
           { 
         name: "Dismiss", 
@@ -8708,16 +8708,16 @@
         type: "Utility", 
         targetArea: "One object you could hold in one hand within medium range",
         duration: "Instantaneous",
-        desc: "The target teleports to your hand (or your feet if hands are full). Core" 
+        desc: "The target teleports to your handd, or lands at your feet if your hands are full. Core" 
     },
     { 
         name: "Division", 
         tradition: "Teleportation", 
         rank: 1, 
         type: "Attack", 
-        targetArea: "One creature within short range",
+        targetArea: "One creature you can see within short range",
         duration: "Instantaneous",
-        desc: "Intellect vs Strength. Success: 3d6 damage. If incapacitated, the target flies apart and dies instantly. <b>Attack Roll 20+:</b>: 1d6 extra damage. Core" 
+        desc: "Make an Intellect attack roll against the target’s Strength. On a success, the target takes 3d6 damage. If the target becomes incapacitated by this damage, pieces of its body  fly apart, killing it instantly.<br><b>Attack Roll 20+:</b> The target takes 1d6 extra damage. Core" 
     },
     { 
         name: "Hole of Glory", 
@@ -8726,7 +8726,7 @@
         type: "Utility", 
         targetArea: "Two 1-yard cubes within medium range",
         duration: "1 minute",
-        desc: "Creates two 1-foot-wide portals. Anything in one comes out the other. Closing portals may sever objects inside (GM discretion). Core" 
+        desc: "A 1-foot-wide portal opens in the center of each cube and remains for the duration. The portals have no thickness; anything placed in one instantly comes out the other. When the effect ends, the portals close, possibly severing whatever is in them (as determined by the GM). Core" 
     },
     { 
         name: "Swap", 
@@ -8735,7 +8735,7 @@
         type: "Utility", 
         targetArea: "One creature within long range",
         duration: "Instantaneous",
-        desc: "You and target exchange positions. Unwilling targets can make a Will challenge roll to negate. Triggered: Use on your turn if target is within short range. Core" 
+        desc: "You and the target teleport to exchange positions. An unwilling target can make a Will challenge roll, negating the effect on a success.<br><b>Triggered</b> You can use a triggered action on your turn to cast this spell. If you do, the target must be within short range. Core" 
     },
     { 
         name: "Remove", 
@@ -8744,7 +8744,7 @@
         type: "Attack", 
         targetArea: "One creature you can reach",
         duration: "Instantaneous",
-        desc: "Intellect vs Agility. Success: Target teleports to an open space on a solid surface you can see within medium range. <b>Attack Roll 20+:</b>: Range is extreme. Core" 
+        desc: "Make an Intellect attack roll against the target’s Agility. On a success, you touch the target and it teleports to an open space on a solid surface you can see within medium range.<br><b>Attack Roll 20+:</b> The open space is instead within extreme range. Core" 
     },
     { 
         name: "Shortcut", 
@@ -8753,7 +8753,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "Instantaneous",
-        desc: "Teleport to an open space you can see within long range. Triggered: Use on your turn to teleport within medium range instead. Core" 
+        desc: "You teleport to an open space you can see within long range.<br><b>Triggered:</b> You can use a triggered action on your turn to cast this spell. If you do, the open space is instead within medium range. Core" 
     },
     { 
         name: "Boundless Step", 
@@ -8762,7 +8762,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 minute",
-        desc: "On each of your turns, you can use a triggered action to teleport to an open space you can see within medium range. Core" 
+        desc: "On each of your turns for the duration, you can use a triggered action to teleport to an open space you can see within medium range. Core" 
     },
     { 
         name: "Fuse", 
@@ -8771,16 +8771,16 @@
         type: "Attack", 
         targetArea: "One creature within medium range",
         duration: "Instantaneous",
-        desc: "Intellect vs Will. Success: Target teleports to a solid surface near you, fusing with it. Deals 6d6 damage and target is immobilized. Target must saw off a limb (2x healing rate in damage) or destroy the object to free themselves. <b>Attack Roll 20+:</b>: +2d6 damage and stunned 1 round. Core" 
+        desc: "Make an Intellect attack roll against the target’s Will. On a success, the target teleports to an open space on a solid surface within medium range of you, part of it fusing with the surface. It takes 6d6 damage and becomes immobilized. The only way to remove this affliction is either to destroy the object in which the target is fused or to take an action to saw off an imprisoned limb (dealing damage to the target equal to twice its healing rate).<br><b>Attack Roll 20+:</b> The target takes 2d6 extra damage and is also stunned for 1 round. Core" 
     },
     { 
         name: "Portals", 
         tradition: "Teleportation", 
         rank: 4, 
         type: "Utility", 
-        targetArea: "Two 2-yard cubes (one within reach, one within extreme range)",
+        targetArea: "Two cubes, each 2 yards on a side, one originating from a point you can reach and the other originating from a point within extreme range",
         duration: "1 minute",
-        desc: "Creates two portals (1yd x 2yd). Entering the front of one exits the back of the other and vice versa. Core" 
+        desc: "A portal opens in the center of each cube and remains for the duration. Each portal is 1 yard wide and 2 yards tall, but has no thickness. A portal has a front and a back, and it can have any orientation. Anything entering the front of one portal instantly exits into an open space from the back of the other, and vice versa. Core" 
     },
     { 
         name: "Travel", 
@@ -8789,16 +8789,16 @@
         type: "Utility", 
         targetArea: "Up to five willing creatures you can reach",
         duration: "Instantaneous",
-        desc: "Intellect challenge roll to reach a destination. Failure: Teleport to a random spot within 1d20 miles. Roll of 0 or less: 10d6 damage and 1 Insanity. If destination is occupied/solid: 5d6 damage and 1 Insanity or instant death if fused with material. Core" 
+        desc: "You touch each target and name one destination. Makean Intellect challenge roll. The GM might impose one or more banes on the roll, based on your familiarity with the destination. If you name a place that does not exist, the spell fails and the casting is wasted.<br>On a success, the targets teleport to the destination.<br>On a failure, each target teleports separately to a location within 1d20 miles of the destination, as chosen by the GM. If the total of the roll is 0 or less, each target also takes 10d6 damage and gains 1 Insanity from the spell going horribly wrong. If the destination space is not large enough to accommodate a target, the target takes 5d6 damage, gains 1 Insanity, and returns to the space it left. A creature incapacitated by this damage is slain on arrival, reduced to a heap of blood, bone, and tissue. If the destination space is not open—such as inside a wall—the target fuses with the material filling the destination and dies instantly. Core" 
     },
           { 
         name: "Jury-Rig", 
         tradition: "Technomancy", 
         rank: 0, 
         type: "Utility", 
-        targetArea: "One Size 2 or smaller damaged object you can reach",
+        targetArea: "One Size 2 or smaller object that has 1 or more damage, but is not destroyed, that you can reach",
         duration: "Instantaneous",
-        desc: "You touch the object and remove 1d6 damage from it. Cannot be used on destroyed objects. Core" 
+        desc: "You touch the target, removing 1d6 damage from it. Core" 
     },
     { 
         name: "Magic Wrench", 
@@ -8807,7 +8807,7 @@
         type: "Attack", 
         targetArea: "One creature or object within short range",
         duration: "Instantaneous",
-        desc: "Make an Intellect attack roll against Defense. Success: 1d6 + 1 damage and the target falls prone. <b>Attack Roll 20+:</b>: Target is impaired until the end of the round. Core" 
+        desc: "You create and chuck a wrench. Make an Intellect attack roll against the target’s Defense. On a success, the target takes 1d6 + 1 damage and falls prone.<br><b>Attack Roll 20+:</b> The target also becomes impaired until the end of the round.Core" 
     },
     { 
         name: "Bolt Thrower", 
@@ -8816,7 +8816,7 @@
         type: "Attack", 
         targetArea: "1-yard cube within reach on a solid surface",
         duration: "1 minute",
-        desc: "Create a Size 1 crossbow turret (Defense 5, Health = your Intellect). At the end of each round, it attacks a target within long range (Intellect vs Defense) for 2d6 damage. <b>Attack Roll 20+:</b>: 1d6 extra damage. Core" 
+        desc: "You create a Size 1 crossbow turret in the area. The turret has Defense 5 and Health equal to your Intellect score. It lasts for the duration or until destroyed. At the end of each round, the turret fires at one target creature or object within long range. Make an Intellect attack roll against the target’s Defense. On a success, the target takes 2d6 damage.<br><b>Attack Roll 20+:</b> The target takes 1d6 extra damage. Core" 
     },
     { 
         name: "Caltrops", 
@@ -8825,7 +8825,7 @@
         type: "Utility", 
         targetArea: "5-yard radius circle on the ground within medium range",
         duration: "1 minute",
-        desc: "Metal bits cover the area. Moving through requires an Agility challenge roll or take 1d6 + 1 damage and become slowed. If already slowed by this, target falls prone and becomes immobilized. Afflictions end when target heals. Core" 
+        desc: "Jagged metal bits erupt from the origin point, covering all horizontal surfaces in the area for the duration. A creature that enters or moves across the area must get a success on an Agility challenge roll or take 1d6 + 1 damage and become slowed. If the creature was already slowed in this way, it falls prone and becomes immobilized. The creature removes this slowed or immobilized affliction when it heals damage. Core" 
     },
     { 
         name: "Sparking Shield", 
@@ -8834,7 +8834,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 minute",
-        desc: "Once per round, when a melee attack hits you, the attacker must make an Agility challenge roll. Failure: 1d6 damage, moved 1d3 yards away, and falls prone. Core" 
+        desc: "You create a magical shield on your arm that remains for the duration. Once per round, when a creature attacks you with a melee weapon and gets a success, the shield sparks and the attacking creature must make an Agility challenge roll. On a failure, it takes 1d6 damage and is moved 1d3 yards away from you, falling prone at the end of this movement. Core" 
     },
     { 
         name: "Flamethrower", 
@@ -8842,8 +8842,8 @@
         rank: 2, 
         type: "Utility", 
         targetArea: "Self (creates an item)",
-        duration: "Until 6 uses expended; see effect",
-        desc: "Creates a weapon with 6 uses. Action: 5yd line deals 2d6 damage (Agility challenge for half). Warning: If wielder takes fire/lightning damage, it explodes (5yd sphere) for 1d6 damage per remaining use. Core" 
+        duration: "see effect",
+        desc: "You create a flamethrower, a weapon that has six uses. It appears in your hands, or at your feet if you don’t have a hand free. When the last use is expended, the flamethrower crumbles into spare parts.<br>A creature wielding the flamethrower can use an action to expend a use, which looses flames across a line, 5 yards long and 1 yard wide, from a point the creature can reach. The flames deal 2d6 damage to everything in the area; each creature in the area that gets a success on an Agility challenge roll takes half the damage.<br>The flamethrower explodes when the creature wielding it takes damage from fire or lightning. Flames fill a sphere with a 5-yard radius originating from a point in the creature’s space, dealing 1d6 damage per unexpended use to everything in the area. Each creature in the area that gets a success on an Agility challenge roll takes half the damage Core" 
     },
     { 
         name: "Grenades", 
@@ -8852,7 +8852,7 @@
         type: "Attack", 
         targetArea: "Up to three points within short range",
         duration: "Instantaneous",
-        desc: "Throw three grenades. Each deals 1d6 + 1 fire damage in a 1-yard radius (Agility challenge for half). Core" 
+        desc: "You throw three grenades, dividing them as you choose among the targets. When a grenade reaches its target, or if it encounters a solid creature or object before then, it explodes. The explosion deals 1d6 + 1 damage from fire to everything in a sphere with a 1-yard radius centered on the target or a point within the creature’s or object’s space. Each creature in the area that gets a success on an Agility challenge roll takes half the damage. Core" 
     },
     { 
         name: "Flying Blades", 
@@ -8861,14 +8861,14 @@
         type: "Attack", 
         targetArea: "Up to three creatures or objects within medium range",
         duration: "Instantaneous",
-        desc: "Five blades are divided among targets. For each, make an Intellect attack vs Defense. Success: 2d6 damage. <b>Attack Roll 20+:</b>: 1d6 extra damage. Core" 
+        desc: "Five blades fly from your hand, divided as you choose among the targets. For each blade, make an Intellect attack roll against the target’s Defense. On a success, the target takes 2d6 damage.<br><b>Attack Roll 20+:</b> The target takes 1d6 extra damage. Core" 
     },
     { 
         name: "Mend", 
         tradition: "Technomancy", 
         rank: 3, 
         type: "Utility", 
-        targetArea: "One Size 3 or smaller damaged object you can reach",
+        targetArea: "One Size 3 or smaller object that has 1 or more damage, but is not destroyed, that you can reach",
         duration: "Instantaneous",
         desc: "You touch the target and remove all damage from it. Core" 
     },
@@ -8878,8 +8878,8 @@
         rank: 4, 
         type: "Utility", 
         targetArea: "3-yard cube within reach",
-        duration: "Until rest; see effect",
-        desc: "Concentrate for 1 hour to build a Huge construct. Inside the cockpit, you use its Defense, Health, Speed, and actions. Ends if incapacitated. Core" 
+        duration: "Until you complete a rest; see the effect",
+        desc: "You concentrate for 1 hour, during which time you create a powered battle suit, a <b>Huge Construct</b>, in the area. The construct remains for the duration or until incapacitated. It cannot use actions or move independently; you must move into its cockpit to control it. While inside, you treat the construct’s Defense and Health scores as your own, move at its Speed, and can use its attack options and actions in place of your own. Core" 
     },
     { 
         name: "Magic Item", 
@@ -8888,7 +8888,7 @@
         type: "Utility", 
         targetArea: "One object you can reach",
         duration: "1 hour; see effect",
-        desc: "Tasks with the object have 1 boon. Weapons deal +1d6 damage; Armor grants +1 Defense. Permanence: Spend 1 gc for 'Until Rest'. Cast daily for 40 days to make permanent. Core" 
+        desc: "You touch the target, imbuing it with magical power. For the duration, attack rolls or challenge rolls for any task attempted with the target are made with 1 boon. If the object is a weapon, attacks with it deal 1d6 extra damage. If it is a suit of armor, the wearer gains a +1 bonus to Defense.<br><b>Permanence:</b> If you expend rare ingredients worth 1 gc when you cast this spell, the effect instead lasts until you complete a rest. If you cast the spell this way on the same target each day for one month, one week, and one day, the effect becomes permanent. Core" 
     },
           { 
         name: "Fog", 
@@ -8906,16 +8906,16 @@
         type: "Attack", 
         targetArea: "One creature within short range",
         duration: "Instantaneous",
-        desc: "Will vs Agility attack. 1 boon if target is metal/wearing metal. Success: 1d6 damage. <b>Attack Roll 20+:</b>: Target also dazed until end of round. Core" 
+        desc: "Make a Will attack roll against the target’s Agility. You make the attack roll with 1 boon if the target is wearing metal or is made from metal. On a success, the target takes 1d6 damage.<br><b>Attack Roll 20+:</b> The target also becomes dazed until the end of the round. Core" 
     },
     { 
         name: "Forked Lightning", 
         tradition: "Storm", 
         rank: 1, 
         type: "Attack", 
-        targetArea: "Up to two creatures/objects within short range of each other",
+        targetArea: " Up to two creatures or objects within short range of each other and within medium range of you",
         duration: "Instantaneous",
-        desc: "Will vs Agility attack. 1 boon if target is metal/wearing metal. Success: 1d6+2 damage. <b>Attack Roll 20+:</b>: Target takes 1d6 extra damage. Core" 
+        desc: "For each target, make a Will attack roll against its Agility. You make the attack roll with 1 boon if the target is wearing metal or is made from metal. On a success, the target takes 1d6 + 2 damage.<br><b>Attack Roll 20+:</b> The target takes 1d6 extra damage. Core" 
     },
     { 
         name: "Freezing Fog", 
@@ -8924,7 +8924,7 @@
         type: "Attack", 
         targetArea: "Cylinder, 3yd tall, 5yd radius, within medium range",
         duration: "1 minute; see effect",
-        desc: "Fog partially obscures area; ground is slippery difficult terrain. Creatures in area must make Strength challenge rolls at end of rounds or take 1d3 damage and become slowed. Core" 
+        desc: "Fog spreads through and partially obscures the area for the duration or until dispersed by wind. The ground in the area becomes slippery and is difficult terrain until the effect ends. Any creature in the area when you cast the spell or at the end of a round for the duration must make a Strength challenge roll. On a failure, it takes 1d3 damage and becomes slowed for 1 round. Core" 
     },
     { 
         name: "Saint Astrid’s Flame", 
@@ -8933,7 +8933,7 @@
         type: "Utility", 
         targetArea: "Up to three creatures or objects within short range",
         duration: "1 minute",
-        desc: "Harmless green flames shed light (1yd radius). Target cannot become invisible/hidden; attacks against target have 1 boon. Core" 
+        desc: "Harmless green flames envelop each target for the duration. Each target sheds light in a 1-yard radius and cannot become invisible or hidden from creatures that can see it, and creatures make attack rolls against it with 1 boon. Core" 
     },
     { 
         name: "Call Lightning", 
@@ -8942,7 +8942,7 @@
         type: "Attack", 
         targetArea: "Point on ground within long range",
         duration: "Instantaneous",
-        desc: "Req: Outdoors. Bolt deals 3d6+5 damage within 3 yards of point. Strength challenge roll: Failure = deafened for 1 hour; Success = half damage. Sacrifice: Expend to cast Forked Lightning. Core" 
+        desc: "Req: You must be outdoors. A bolt of lightning strikes the target from the sky and deals 3d6 + 5 damage to everything within 3 yards of that point. Each creature that takes damage in this way must make a Strength challenge roll. It becomes deafened for 1 hour on a failure, or just takes half the damage on a success.<br><b>Sacrifice:</b> You can expend a casting of this spell to cast forked lightning. Core" 
     },
     { 
         name: "Poisonous Fog", 
@@ -8951,7 +8951,7 @@
         type: "Attack", 
         targetArea: "Cylinder, 2yd tall, 5yd radius, within medium range",
         duration: "1 minute; see effect",
-        desc: "Heavily obscures area. Moves away from you at end of rounds. Creatures must make Strength challenge rolls or take 1d6 damage and become poisoned/immobilized for 1 round. Core" 
+        desc: "Purple fog spreads through and heavily obscures the area for the duration or until dispersed by wind. The fog is heavier than air, so it settles into cracks and openings in the ground below it. At the end of each round for the duration, roll a d6. If the number is even, the cloud moves half that many yards away from you.<br>When the fog appears and at the end of each round for the duration, each creature in the area must get a success on a Strength challenge roll or take 1d6 damage and become poisoned for 1 round. While poisoned in this way, the creature is also immobilized. Core" 
     },
     { 
         name: "Hailstorm", 
@@ -8960,16 +8960,16 @@
         type: "Attack", 
         targetArea: "Cylinder, 2yd tall, 5yd radius, within long range",
         duration: "1 minute",
-        desc: "Partially obscures area and deafens creatures in/near it. Ground is difficult terrain. Hail deals 3d6 damage (Agility challenge roll for half damage and to avoid falling prone). Core" 
+        desc: "Hail falls from clouds that spread through the area and remain for the duration, partially obscuring the area below. For the duration, creatures in the area and within 5 yards of the area’s edge are deafened. The ground in the area becomes difficult terrain until the hail melts.<br>When you cast the spell, and at the end of each round for the duration, the hail deals 3d6 damage to anything in the area that does not have shelter. Each creature that takes damage in this way must make an Agility challenge roll. It falls prone on a failure, or just takes half the damage on a success. Core" 
     },
     { 
         name: "Lightning Bolt", 
         tradition: "Storm", 
         rank: 3, 
         type: "Attack", 
-        targetArea: "Line, 30yd long, 1yd wide, from your point",
+        targetArea: "A line, 30 yards long and 1 yard wide, originating from a point you can reach",
         duration: "Instantaneous",
-        desc: "Deals 5d6 damage. Rebounds if hitting solid object. Agility challenge roll for half damage (1 bane if target is metal/heavy armor). Rebounding bolt makes creatures roll twice. Core" 
+        desc: "Lightning travels 5d6 yards along the area. If it encounters a solid object before it reaches the end of the line, the bolt rebounds and travels back toward you in a straight line up to the remaining distance. The lightning deals 5d6 damage to everything in the area. Each creature in the area must make an Agility challenge roll, with 1 bane if it is made from metal or wearing heavy armor. A creature in the path of a rebounding lightning bolt makes the roll twice. On a success, the creature takes half the damage. Core" 
     },
     { 
         name: "Acid Rain", 
@@ -8985,9 +8985,9 @@
         tradition: "Storm", 
         rank: 5, 
         type: "Attack", 
-        targetArea: "One creature within long range",
+        targetArea: " One creature within long range; see the effect",
         duration: "Instantaneous",
-        desc: "Will vs Agility attack. Success: 8d6 damage. Can repeat against different targets, reducing damage by 2d6 each time. Ends when damage dice reach 0. Core" 
+        desc: "You hurl lightning at the target. Make a Will attack roll against its Agility. You make the attack roll with 1 boon if the target is wearing metal or is made from metal. On a success, the target takes 8d6 damage, and you can repeat the attack against a different target within long range of the first. Each time you do so, you must choose a target you have not attacked with this casting of the spell and reduce the damage dealt by 2d6. When the number of damage dice drops to 0, the effect ends. Core" 
     },
           { 
         name: "Project Voice", 
