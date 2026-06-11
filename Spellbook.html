@@ -8302,35 +8302,35 @@
         rank: 0, 
         type: "Attack", 
         targetArea: "One creature within short range",
-        duration: "1 round",
-        desc: "Will vs Agility attack. Success: 1d3 damage and target is immobilized for 1 round. <b>Attack Roll 20+:</b>: +1d3 extra damage. Core" 
+        duration: "Instantaneous",
+        desc: "The temperate plummets around the target. Make a Will attack roll against its Agility. On a success, the target takes 1d3 damage and becomes immobilized for 1 round.<br><b>Attack Roll 20+:</b> The target takes 1d3 extra damage. Core" 
     },
     { 
         name: "Produce Water", 
         tradition: "Water", 
         rank: 0, 
         type: "Utility", 
-        targetArea: "One container you can reach",
+        targetArea: "One cup, bowl, or similar container that you can reach",
         duration: "Instantaneous",
-        desc: "You touch a cup, bowl, or similar container and it fills with fresh, clean water. Core" 
+        desc: "You touch the target, which fills with fresh, clean water. Core" 
     },
     { 
         name: "Drown", 
         tradition: "Water", 
         rank: 1, 
         type: "Attack", 
-        targetArea: "One air-breathing creature within short range",
-        duration: "Special",
-        desc: "Strength challenge roll: Failure = 1d6+2 damage and impaired. Target must repeat the roll each round with 1 boon. After three failures total, the target suffocates and dies." 
+        targetArea: "One creature within short range that breathes air",
+        duration: "S",
+        desc: "Water accumulates in the target’s lungs or a similar organ. The target must make a Strength challenge roll; on a failure, it takes 1d6 + 2 damage and becomes impaired. At the end of each round the target is impaired in this way, it must make a Strength challenge roll with 1 boon, removing this affliction on a success. After three failures, the target suffocates and dies." 
     },
     { 
         name: "Ice Blast", 
         tradition: "Water", 
         rank: 1, 
         type: "Attack", 
-        targetArea: "3-yard cone from you",
+        targetArea: "A cone, 3 yards long, originating from a point you can reach",
         duration: "1 round",
-        desc: "Deals 2d6+2 damage (Agility challenge for half). Ground becomes difficult terrain for 1 round. Core" 
+        desc: "You hurl jagged ice shards that deal 2d6 + 2 damage to everything in the area, or half the damage with a success on an Agility challenge roll. The ground in the area becomes difficult terrain that lasts for 1 round. Core" 
     },
     { 
         name: "Wellspring of Life", 
@@ -8339,7 +8339,7 @@
         type: "Utility", 
         targetArea: "2-yard radius hemisphere within short range",
         duration: "1 minute",
-        desc: "Healing waters partially obscure area. Living creatures inside don't need to drink until after a rest. When a creature in the area heals, they heal 1d3 extra damage. Core" 
+        desc: "Healing waters partially obscure the area for the duration. Each living creature in the area does not need to drink water until after it completes a rest. In addition, when a creature in the area heals damage, it heals 1d3 extra damage. Core" 
     },
     { 
         name: "Geyser", 
@@ -8348,7 +8348,7 @@
         type: "Attack", 
         targetArea: "5-yard radius circle within medium range",
         duration: "Instantaneous",
-        desc: "Scalding water erupts, dealing 2d6+2 damage and moving Size 1 or smaller objects 1d6 yards. Agility challenge roll: half damage on success, prone on failure. Core" 
+        desc: "A column of scalding water erupts from the area, climbing 2d6 yards before raining onto the ground out to half that many yards beyond the area and extinguishing unprotected flames.<br>The force of the water moves unsecured objects of Size 1 or smaller 1d6 yards away from the origin point, while each creature in the area takes 2d6 + 2 damage from the hot water and must make an Agility challenge roll. The creature falls prone on a failure, or just takes half the damage on a success. Core" 
     },
     { 
         name: "Wave", 
@@ -8357,7 +8357,7 @@
         type: "Attack", 
         targetArea: "10yd long, 10yd tall, 1yd wide line",
         duration: "1 round",
-        desc: "Provides partial obscurement and half cover. At end of round, it tips to cover a 10x10yd area. Creatures take 1d6 damage and fall prone (Strength challenge for half and no prone). Water then spreads 10yds further. Core" 
+        desc: "Water rises to fill the area for the duration. The water provides partial obscurement to anything in its space and behind it, and provides half cover. The water also extinguishes any flames in the area. <br>When the effect ends, the line of water tips and falls either away from you or toward you as you choose, to cover an area 10 yards long and 10 yards wide. Each creature in that area takes 1d6 damage and must make a Strength challenge roll. It falls prone on a failure, or just takes half the damage  on a success. <br>The water then spreads out a further 10 yards in all directions, extinguishing any flames it touches. Core" 
     },
     { 
         name: "Sphere of Water", 
@@ -8366,7 +8366,7 @@
         type: "Attack", 
         targetArea: "3-yard radius sphere within medium range",
         duration: "Concentration, up to 1 minute",
-        desc: "Air-breathing creatures trapped inside must succeed on a Strength challenge roll each round or take 2d6 damage. Action: Move the sphere 5 yards. Trapped creatures can use an action to swim free with a Strength challenge roll. Core" 
+        desc: "Water fills the area and remains for the duration. Each time you use an action to concentrate on the spell, you can move the sphere and anything in it up to 5 yards in any direction.<br>Each creature in the area when you cast the spell becomes trapped in the sphere, as does a creature whose space the sphere enters. At the end of each round until  the effect ends, each air-breathing creature trapped in  this way must get a success on a Strength challenge roll  or take 2d6 damage.<br>A creature trapped in this way can use an action to make a Strength challenge roll. On a success, it swims free and falls prone in an open space it chooses within 1 yard of the sphere. Core" 
     },
     { 
         name: "Tidal Forces", 
@@ -8374,8 +8374,8 @@
         rank: 3, 
         type: "Attack", 
         targetArea: "Any number of creatures within medium range",
-        duration: "1 round",
-        desc: "Strength challenge roll with 1 bane. Failure: Moved 2d6 yards toward/away and dazed. Success: Moved half distance. Core" 
+        duration: "Instantaneous",
+        desc: "Each target must make a Strength challenge roll with 1 bane. On a failure, it is moved 2d6 yards toward you or away from you (your choice) and becomes dazed for 1 round. On a success, it is just moved half the distance. Core" 
     },
     { 
         name: "Cold Snap", 
@@ -8384,7 +8384,7 @@
         type: "Attack", 
         targetArea: "8-yard cone from you",
         duration: "Instantaneous",
-        desc: "Deals 7d6 damage (Strength challenge for half). Water/liquids freeze. If incapacitated by this damage, target freezes solid and dies. Core" 
+        desc: "Lethal cold spreads through the area, instantly freezing water and water-based liquids, including potions. The cold deals 7d6 damage to everything in the area. Each creature in the area that gets a success on a Strength challenge roll takes only half the damage. A creature that becomes incapacitated by this damage freezes solid and dies instantly. Core" 
     },
     { 
         name: "Bind Water Genie", 
@@ -8393,7 +8393,7 @@
         type: "Utility", 
         targetArea: "2-yard cube of ice, snow, or water within long range",
         duration: "1 minute",
-        desc: "Creates a Size 2 water genie. Will vs Will attack. Success: Genie is compelled. Failure: Genie is hostile. Core" 
+        desc: "At the end of the round in which you cast this spell, the target becomes a Size 2 <b>Water Genie</b>. You cannot voluntarily end this spell. When the genie appears, make a Will attack roll against its Will. The genie becomes compelled for the duration on a success, or becomes hostile to you on a failure. Core" 
     },
           { 
         name: "Flowing Form", 
@@ -8411,7 +8411,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 hour; see effect",
-        desc: "Alter your appearance (height +/- 12 inches, weight +/- 25%). No attributes or ancestry change. Ends if you become unconscious. Core" 
+        desc: "You alter your body’s appearance so that you look like someone else for the duration or until you become unconscious. You can increase or decrease your height by up to 12 inches, increase or decrease your weight by up to 25 percent, and make any other cosmetic changes you like. None of your attributes, characteristics, and other abilities change, and you cannot take on a different ancestry. Core" 
     },
     { 
         name: "Animal Shape", 
@@ -8420,7 +8420,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 minute",
-        desc: "Assume the form of a medium, small, or tiny animal. Tiny forms can gain one trait: climber, flier, or swimmer. Core" 
+        desc: "You assume the form of a <b>Medium Animal</b>, <b>Amall Animal</b>, or <b>Tiny Animal</b> for the duration. If you assume the form of a tiny animal, you can gain one of the following traits: climber, flier, or swimmer. Core" 
     },
     { 
         name: "Bounding Step", 
@@ -8429,7 +8429,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 minute",
-        desc: "Gain +4 Speed and can use an action to jump 3d6 yards and land safely. Core" 
+        desc: "For the duration, you gain a +4 bonus to Speed and can use an action to jump 3d6 yards, landing safely. Core" 
     },
     { 
         name: "Murmuration", 
@@ -8438,7 +8438,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "Instantaneous",
-        desc: "Become a cloud of starlings and fly up to twice Speed (can move through occupied spaces). Triggered: Use when taking damage to take half damage and move up to half Speed. Core" 
+        desc: "You burst apart to become a cloud of starlings and fly up to twice your Speed without triggering free attacks; you can move through spaces occupied by other creatures regardless of their Size. At the end of this movement, you return to your normal form.<br><b>Triggered:</b> You can use a triggered action to cast this spell when you take damage. If you do, you take half the damage from the triggering attack and move up to half your Speed as above. Core" 
     },
     { 
         name: "Improved Animal Shape", 
@@ -8447,7 +8447,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 hour",
-        desc: "Assume form of a large, medium, small, or tiny animal. Small/tiny forms can gain one trait: climber, flier, or swimmer. Core" 
+        desc: "You assume the form of a <b>Large Animal</b>, <b>Medium Animal</b>, <b>Small Animal,</b> or <b>Tiny Animal</b> and remain in that form for the duration. If you assume the form of a small or tiny animal, you can gain one of the following traits: climber, flier, or swimmer. Core" 
     },
     { 
         name: "Object Form", 
@@ -8456,7 +8456,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "Concentration, up to 8 hours",
-        desc: "Become an object of your Size or smaller. You cannot talk and actions are limited to concentration, but you retain normal senses. Ends if you take damage. Core" 
+        desc: "You assume the form of an object of your Size or smaller for the duration, becoming physically indistinguishable from the object whose form you take. You make all decisions about what your new form looks like. Until the effect ends, you cannot talk and you can use actions only to concentrate on this spell. However, you perceive using your normal senses. The effect ends if you take any damage. Core" 
     },
     { 
         name: "Mist Form", 
@@ -8465,7 +8465,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "Concentration, up to 1 hour",
-        desc: "Become a cloud of mist. Immune to damage and several afflictions (grabbed, immobilized, etc.). Cannot speak/act/cast. Wind moves you 2d6 yards and deals cumulative -5 Health penalty. Core" 
+        desc: "You assume the form of a cloud of mist of your Size for the duration. Until the effect ends, you have all the following benefits and drawbacks:<br>• You are immune to damage.<br>• You ignore the effects of attack rolls against your Strength or that require a Strength challenge roll.<br>• You can fly and can move through openings wide enough to permit the passage of air, though you cannot move into spaces filled with liquid—they are solid objects to you.<br>• You cannot fall. You are immune to the grabbed, immobilized, prone, and slowed afflictions.<br>• You can’t speak, use actions, spells, or objects. <br>At the end of each round, when you are in an area of wind, you are moved 2d6 yards in the direction the wind blows and take a cumulative –5 penalty to Health. The penalty remains until you return to your normal form. Core" 
     },
     { 
         name: "Speed Healing", 
@@ -8474,7 +8474,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "Instantaneous",
-        desc: "Concentrate for 1 minute. At the end, heal twice your healing rate and remove diseased, fatigued, and poisoned afflictions. Core" 
+        desc: "You must concentrate for 1 minute while casting this spell. If your concentration is uninterrupted, at the end of that time, you heal damage equal to twice your healing rate and you remove any of the following afflictions from yourself: diseased, fatigued, and poisoned. Core" 
     },
     { 
         name: "Metallicus", 
@@ -8483,7 +8483,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 minute",
-        desc: "Body becomes metal (Defense 20, +10 Health). Immune to many afflictions; half damage from cold, fire, and weapons. You are slowed and cannot drink, eat, or swim. Core" 
+        desc: "Your body becomes like metal. For the duration, your Defense becomes 20, you gain a +10 bonus to Health, you are immune to the asleep, blinded, deafened, diseased, fatigued, and poisoned afflictions, and you cannot be moved against your will. You also take half damage from cold, fire, and weapons. However, you are also slowed, and you cannot drink, eat, or swim. Core" 
     },
     { 
         name: "Greater Animal Shape", 
@@ -8492,25 +8492,25 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 hour",
-        desc: "Assume form of a huge, large, medium, small, or tiny animal. Medium/small/tiny forms can gain one trait: climber, flier, or swimmer. Core" 
+        desc: "You assume the form of a <b>Huge Animal</b>, <b>Large Animal</b>, <b>Medium Animal</b>, <b>Small Animal</b>, or <b>Tiny Animal</b> for the duration. If you assume the form of a medium, small, or tiny animal, you can gain one of the following traits: climber, flier, or swimmer. Core" 
     },
           { 
-        name: "Delay Time", 
+        name: "Delay", 
         tradition: "Time", 
         rank: 0, 
         type: "Attack", 
         targetArea: "One creature you can see within short range",
-        duration: "1 minute",
-        desc: "Make an Intellect attack roll against the target’s Will. On a success, the target is slowed. <b>Attack Roll 20+:</b>: The target is also impaired while slowed. Core" 
+        duration: "",
+        desc: "Make an Intellect attack roll against the target’s Will. On a success, the target is slowed for one minute. <br><b>Attack Roll 20+:</b>: The target is also impaired while slowed. Core" 
     },
     { 
         name: "Swiftness", 
         tradition: "Time", 
         rank: 0, 
         type: "Utility", 
-        targetArea: "One non-fatigued creature you can reach",
+        targetArea: "One creature that is not fatigued that you can reach",
         duration: "1 minute",
-        desc: "Target gains a +10 bonus to Speed. When the effect ends, the target becomes fatigued for 1 minute. Core" 
+        desc: "You touch the target, which gains a +10 bonus to Speed for the duration. When the effect ends, the target becomes fatigued for 1 minute. Core" 
     },
     { 
         name: "Minor Paradox", 
@@ -8519,7 +8519,7 @@
         type: "Attack", 
         targetArea: "One creature you can see within short range",
         duration: "1 round",
-        desc: "Intellect vs Intellect attack. Success: Target ceases to exist for 1 round. <b>Attack Roll 20+:</b>: You regain the casting of this spell. Core" 
+        desc: "Make an Intellect attack roll against the target’s Intellect. On a success, the target ceases to exist for 1 round. It reappears in its former space or in the nearest open space to it if it is occupied.<br><b>Attack Roll 20+:</b> You regain the casting of this spell. Core" 
     },
     { 
         name: "Rewrite Moment", 
@@ -8531,13 +8531,13 @@
         desc: "Once per round, when you roll a die, you can discard the result and reroll. You must use the second result. Core" 
     },
     { 
-        name: "Slow Time", 
+        name: "Slow", 
         tradition: "Time", 
         rank: 1, 
         type: "Attack", 
         targetArea: "Up to five creatures within medium range",
-        duration: "1 minute",
-        desc: "Targets must make a Will challenge roll or become slowed for 1 minute. Core" 
+        duration: "",
+        desc: "Each target must make a Will challenge roll. On a failure, it becomes slowed for 1 minute. Core" 
     },
     { 
         name: "Precognition", 
@@ -8555,34 +8555,34 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "1 minute",
-        desc: "You disappear from time. You can reappear in your original space at any time during the duration, or automatically when it ends. Core" 
+        desc: "You jump forward in time, disappearing from your space. At any time during the duration, you can reappear in the space you left or in the nearest open space to it if it is occupied. Otherwise, you reappear at the end of the round when the effect ends. Core" 
     },
     { 
-        name: "Accelerate Time", 
+        name: "Accelerate", 
         tradition: "Time", 
         rank: 3, 
         type: "Utility", 
         targetArea: "One creature you can reach",
         duration: "1 minute",
-        desc: "Target can take both a fast and a slow turn each round. When the effect ends, target is fatigued for 1d6 minutes. Core" 
+        desc: "You touch the target. For the duration, it can take both a fast turn and a slow turn each round. When the effect ends, the target becomes fatigued for 1d6 minutes. Core" 
     },
     { 
-        name: "Decelerate Time", 
+        name: "Decelerate", 
         tradition: "Time", 
         rank: 3, 
         type: "Attack", 
         targetArea: "A sphere with a 3-yard radius within medium range",
         duration: "1 minute",
-        desc: "Creatures in area must succeed on a Will challenge roll or be slowed. While slowed this way, a slow turn allows either an action or movement, but not both. Core" 
+        desc: "Each creature in the area must get a success on a Will challenge roll or become slowed for 1 minute. While slowed in this way, when the creature takes a slow turn, it can use an action or move, but not both. Core" 
     },
     { 
         name: "Twain Self", 
         tradition: "Time", 
         rank: 4, 
         type: "Utility", 
-        targetArea: "Special (Self and Future Self)",
+        targetArea: " A cube, large enough to hold a creature of your Size, originating from a point within a number of yards equal to your Speed",
         duration: "1 minute; see effect",
-        desc: "Summon your future self. Both take a turn each round but take 1 bane on all rolls. You share all resources (Health, Spells, Items, Afflictions). When the effect ends, you both disappear and you reappear 1 minute later where your future self was. Core" 
+        desc: "You cause your self from the future to appear in the area and it remains in your time for the duration. Until the spell ends, you and your future self can each take a turn every round, though the paradox of your twained existence imposes  1 bane on both of your attack rolls and challenge rolls.<br>You and your future self have identical attributes and characteristics. Although you can act separately, you and your future self count as one creature for the purpose of sharing resources. Thus, if one takes damage or gains Insanity, it applies to both characters. If one expends the casting of a spell, the casting is expended for both. If one of you suffers an affliction or would benefit from an ongoing effect, the affliction and effect apply to both.<br>Your future self has indentical copies of everything you wear and carry, with a couple exceptions. First, if you or your duplicate consume or expend on item, such as dealing a healing potion, the item is lost to both of you. Furthermore, if you have a relic, you must decide whether you or your future self carries the relic.<br>If either you or your future self becomes incapacitated, the other does as well. If you die, your future self disappears.<br>When the effect ends, you and your future self disappear. You reappear 1 minute later, in the space your future self occupied or in the nearest open space if it is occupied. Core" 
     },
     { 
         name: "Time Travel", 
@@ -8591,7 +8591,7 @@
         type: "Utility", 
         targetArea: "Self",
         duration: "Up to 100 years",
-        desc: "Choose a moment up to 100 years in the future. You disappear from existence until that time catches up, then reappear in your original space. Core" 
+        desc: "Choose a moment in time up to 100 years in the future. You disappear from existence. When time in the game catches up to the time you chose, you immediately reappear in the space you left or in the nearest open space to it if it is occupied. Core" 
     },
           { 
         name: "Create Holy Symbol", 
