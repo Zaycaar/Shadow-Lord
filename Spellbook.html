@@ -2373,7 +2373,8 @@
         rank: 0, 
         type: "Utility", 
         targetArea: "Self", 
-        desc: "Heal damage equal to half your healing rate. For 1 hour, gain 1 boon to resist becoming diseased or poisoned. OP" 
+		duration: "1 hour"
+        desc: "You heal damage equal to half your healing rate. For the duration, you make rolls to resist becoming diseased or poisoned with 1 boon. OP" 
     },
     { 
         name: "Primal Might", 
@@ -2381,15 +2382,17 @@
         rank: 0, 
         type: "Utility", 
         targetArea: "Self", 
-        desc: "For 1 hour, gain +3 bonus to Health (+6 if under lick your wounds). Extends beast within and hide from animals durations if active. OP" 
+		duration: "1 hour"
+        desc: "You gain a +3 bonus to Health that lasts for the duration. <br><b>Special:</b> If you’re under the effect of beast within when you cast this spell, you add 1 hour to the spell’s duration. If you’re under the effect of <b>Lick Your Wounds</b> when you cast this spell, the bonus to Health from this spell increases to +6. Finally, if you’re under the effect of <b>Hide From Animals</b>, the duration of that spell increases to 1 hour and the spell does not end even if you attack an animal. OP" 
     },
     { 
         name: "Primal Scream", 
         tradition: "Primal", 
         rank: 1, 
         type: "Attack", 
-        targetArea: "A 5-yard cube originating from a point you can reach", 
-        desc: "Strength challenge or deafened for 1 minute; Will challenge or frightened for 1 minute. Frightened targets grant 1 boon on attacks against them. OP" 
+        targetArea: "A cube of space, 5 yards on a side, originating from a point you can reach", 
+		duration: ""
+        desc: "All the rage and fury of your magic come forth through your scream, which carries up to 1 mile away from you. Each creature in the area must get a success on a Strength challenge roll and a Will challenge roll. A failure on the Strength challenge roll causes a creature to become deafened for 1 minute. A failure on the Will challenge roll causes a creature to become frightened for 1 minute. When frightened in this way, a creature grants 1 boon on attack rolls made against it. <br><b>Special:</b> If you are under the effect of <b>Primal Might</b> when you cast this spell, you impose 1 bane on the challenge roll made to resist this spell. OP" 
     },
     { 
         name: "Venomous Fangs", 
@@ -2397,7 +2400,8 @@
         rank: 1, 
         type: "Utility", 
         targetArea: "Self", 
-        desc: "For 1 minute, teeth become finesse natural weapons (1d6+1 damage). Success forces Str challenge (-1 bane) or target takes 1d6 poison damage and is poisoned. OP" 
+		 duration: "1 minute"
+        desc: "Your teeth lengthen into venomous fangs that remain for the duration. Make an attack with these fangs. The fangs are natural weapons with the finesse property that deal 1d6 + 1 damage. When you get a success on an attack roll using your fangs against a creature, the creature must get a success on a Strength challenge roll with 1 bane or take 1d6 damage from the fangs’ poison and become poisoned for 1 minute. If the creature is already poisoned, it takes 1d6 extra damage. OP" 
     },
     { 
         name: "Darting Claw", 
@@ -2405,23 +2409,26 @@
         rank: 2, 
         type: "Attack", 
         targetArea: "Self", 
-        desc: "Requires beast within. Gain +2 Speed. Triggered: Move up to Speed (no free attacks) and make one natural/unarmed attack with 2 boons and +2d6 damage. OP" 
+		duration: "See effect"
+        desc: "<b>Req</b> You must be under the effect of the <b>Beast Within</b> spell. <br>You gain a +2 bonus to Speed until the beast within effect ends. When you cast this spell and again using a triggered action on your turn, you can move up to your Speed without triggering free attacks and make one unarmed attack or attack with a natural weapon against a creature you can reach during your movement. You make the attack roll with 2 boons, and the attack deals 2d6 extra damage.  OP" 
     },
     { 
         name: "Swarming Animals", 
         tradition: "Primal", 
         rank: 2, 
         type: "Utility", 
-        targetArea: "A 3-yard square on a solid surface within medium range", 
-        desc: "1 minute. Summons 1d3+1 compelled animal swarms. Spell ends when the last swarm is incapacitated. OP" 
+        targetArea: " A square of space, 3 yards on a side, originating from a point within medium range and resting on a solid surface", 
+		duration: "1 Minute. See effect."
+        desc: "Accompanied by loud shrieks and cries, 1d3 + 1 compelled <b>Animal Swarms</b> appear inside the area and remain for the duration. The animals called are appropriate to the environment where you cast this spell. When the last swarm is incapacitated, the spell ends. OP" 
     },
     { 
         name: "Rabid Beast", 
         tradition: "Primal", 
         rank: 3, 
         type: "Utility", 
-        targetArea: "Each chosen animal within medium range", 
-        desc: "1 minute. Targets gain 1d6 Insanity (not frightened), +10 Health, 1 boon on attacks, and +1d6 damage. Targets must attack or charge each turn." 
+        targetArea: "Each chosen animal within medium range",
+		duration: "1 minute. See effect"
+        desc: "The target gains 1d6 Insanity and foams at the mouth. The target is not frightened from gaining Insanity in this way. Instead, for the duration, the target has a +10 bonus to Health, makes attack rolls with 1 boon, and deals 1d6 extra damage on attacks it makes with natural weapons or unarmed strikes. Until this effect ends, the target must use an action on each of its turns to attack or charge.  OP" 
     },
     { 
         name: "Resilient Beast", 
@@ -2429,7 +2436,8 @@
         rank: 3, 
         type: "Utility", 
         targetArea: "You or one animal you can reach", 
-        desc: "1 minute. Target gains +2 Defense/Speed, 1 boon on Str rolls, and can use a triggered action at round end to heal half its healing rate. OP" 
+		duration: "1 minute. See effect."
+        desc: "You touch the target, causing it to become tougher, stronger, and more ferocious. The effect lasts for the duration or until the target becomes incapacitated. The spell grants the target a +2 bonus to Defense and Speed. The target makes Strength attack rolls and challenge rolls with 1 boon. Finally, at the end of each round, the target can use a triggered action to heal damage equal to half its healing rate. OP" 
     },
     { 
         name: "Eagle’s Wings", 
@@ -2437,23 +2445,26 @@
         rank: 4, 
         type: "Utility", 
         targetArea: "Self", 
-        desc: "Requires beast within. 1 hour. Gain +4 Speed and fly. Flying attacks don't trigger free attacks. Natural/unarmed attacks deal +1d6 extra damage. OP" 
+		duration: "1 hour"
+        desc: "<b>Req:</b> You must be under the effect of the <b>Beast Within</b> spell. <br><b>Triggered:</b> On your turn, you can use a triggered action to cast this spell. You gain a +4 bonus to Speed for the duration. While you have this bonus, you can move by flying, and if you attack while flying, your movement after the attack does not trigger free attacks. Finally, your attacks with natural weapons or unarmed strikes deal 1d6 extra damage. OP" 
     },
     { 
         name: "Legendary Beast", 
         tradition: "Primal", 
         rank: 4, 
         type: "Utility", 
-        targetArea: "You (if under beast within) or one animal within medium range", 
-        desc: "Target Size increases by 2; natural/unarmed attacks deal +2d6 damage. Damaged smaller targets must pass Str challenge or fall prone. OP" 
+        targetArea: "You (if under the effect of <b>Beast Within</b>) or one <b>Animal</b> within medium range",
+		duration: "See effect"
+        desc: "The target becomes an enormous, vicious beast, for 1 minute if you targeted an animal or until the beast within effect ends if you targeted yourself. The target’s Size increases by 2,  and its attacks with natural weapons or unarmed strikes  deal 2d6 extra damage. When the target deals damage to a creature smaller than it, the creature must get a success on a Strength challenge roll or fall prone.<br><b>Triggered:</b> If you are under the effect of the <b>Dire Beast</b> spell, you can use a triggered action on your turn to cast this spell. OP" 
     },
     { 
         name: "Primal Beast", 
         tradition: "Primal", 
         rank: 5, 
         type: "Utility", 
-        targetArea: "Self", 
-        desc: "Requires beast within. 1 hour. Size 3, +20 Health, +2 Speed, 1 boon on attacks, +2d6 damage. Darksight gained. Success by 5+ on 20+ roll deals extra 2d6 damage. Aftereffect: Str challenge (-2 banes) or fatigued. OP" 
+        targetArea: "Self",
+		duration: "1 hour"
+        desc: "<b>req:</b> You must be under the effect of the <b>Beast Within</b> spell. <br>You undergo an astonishing transformation, becoming a brutal beast warped by primal forces. For the duration, you gain the following benefits:<br>• Your casting of beast within does not end until this spell ends.<br>• You gain darksight if you do not have it already. Darksight lets you see into areas within medium range that are obscured by shadows and darkness as if those areas were lit and into areas beyond this distance that are obscured by darkness as if those areas were obscured by shadows.<br>• Your Size increases to 3 if it is lower than 3.<br>• You gain a +20 bonus to Health and a +2 bonus to Speed.<br>• You make attack rolls with 1 boon.<br>• Your attacks with natural weapons and unarmed strikes deal 2d6 extra damage.<br>• Whenever you roll a 20 or higher on an attack using natural weapons or an unarmed strike and you beat the target number by 5 or more, your attack deals 2d6 extra damage.<br><b>Aftereffect:</b> You must get a success on a Strength challenge roll with 2 banes or become fatigued for 1 minute. OP" 
     },
     { 
         name: "Savagery", 
@@ -2461,31 +2472,35 @@
         rank: 5, 
         type: "Attack", 
         targetArea: "Up to five animals compelled by you within medium range", 
-        desc: "1 minute. Targets move Speed (no free attacks) and attack with 2 boons and +3d6 damage. Targets gain +2 Defense and +10 Health. OP" 
+		duration: "1 minute"
+        desc: "Each target moves up to its Speed without triggering free attacks. At any point during its movement, the target can attack with its natural weapon, making the attack roll with  2 boons and dealing 3d6 extra damage. <br>Until the spell ends, each target gains a +2 bonus to Defense and a +10 bonus to Health. OP" 
     },
     { 
         name: "Call Arion Charger", 
         tradition: "Primal", 
         rank: 6, 
         type: "Utility", 
-        targetArea: "A 2-yard cube on a solid surface within medium range", 
-        desc: "Permanent. Summons a friendly Arion Charger. Sacrifice: Heal charger to full. OP" 
+        targetArea: "A cube of space, 2 yards on a side, originating from a point within medium range and resting on a solid surface", 
+		duration: "Permanent"
+        desc: "An <b>Arion Charger</b> appears in the area. The creature is friendly to you and regards you as a trusted companion and ally. The creature obeys your spoken commands. The creature remains until it is killed or you  cast this spell again.<br><b>Sacrifice:</b> You can use an action and expend a casting of this spell to cause your charger to heal all damage if you can see it and it is within medium range of you. OP" 
     },
     { 
         name: "Call Primal Champion", 
         tradition: "Primal", 
         rank: 6, 
         type: "Utility", 
-        targetArea: "A 3-yard cube on a solid surface within medium range", 
-        desc: "1 hour. Summons a friendly Primal Champion that follows your directions. Ends if champion is incapacitated. OP" 
+        targetArea: " A cube of space, 3 yards on a side, originating from a point within medium range and resting on a solid surface",
+		duration: "1 hour. See effect."
+        desc: "A <b>Primal Champion</b> appears inside the area and remains for the duration. If the champion becomes incapacitated, it disappears and the spell ends immediately. The champion is friendly to you and uses an action and moves as you direct it (not an action), provided you are within long range of it. OP" 
     },
     { 
         name: "Stampede", 
         tradition: "Primal", 
         rank: 7, 
         type: "Attack", 
-        targetArea: "A 20-yard cube on the ground within medium range", 
-        desc: "Concentration. Move herd 20 yards. Str challenge (-1 bane) or 6d6 damage and prone (half damage on success). Moving herd triggers roll again. Aftereffect: Will challenge (-3 banes). OP" 
+        targetArea: " A cube, 20 yards on a side, originating from a point on the ground within medium range", 
+		duration: "Concentration, up to 1 minute"
+        desc: "A great herd of animals appears on solid surfaces throughout the area and remains for the duration. When you cast the spell and again when you use an action to concentrate on it, you can move the animals in a stampede up to 20 yards in a straight line across the ground. The stampede is subject to the effects of moving across difficult terrain. It ignores pits and hazardous terrain smaller than its space. It stops moving if it encounters an obstacle larger than its space, such as the edge of a cliff.<br>Any creature in the area when the spell is cast must make a Strength challenge roll with 1 bane. A creature takes 6d6 damage and falls prone on a failure, or just takes half the damage on a success. <br>Whenever the stampede enters the space of another creature as the stampede moves, the creature must make a Strength challenge roll with consequences as described above. A creature can take this damage just once per round.<br>Any creature in the stampede’s space when the stampede stops moving must succeed on an Agility challenge roll or take 3d6 damage.<br><b>Aftereffect:</b> Make a Will challenge roll with 3 banes. On  a failure, you become fatigued until you complete a rest.<br><b>Sacrifice:</b> You can use an action and expend a casting of  this spell to heal all damage.  OP" 
     },
     { 
         name: "Primal Regent", 
@@ -2493,7 +2508,8 @@
         rank: 8, 
         type: "Utility", 
         targetArea: "Self", 
-        desc: "Until rest. Animals never attack you. Befriend animals (Will vs Will +1 boon) to compel them. Sacrifice: Heal all animals within 1 mile. OP" 
+		duration: "Until you complete a rest"
+        desc: "Primal magic suffuses your being, making you appear as a regent to animals that can see you. Until the spell ends, animals never attack you, not even to defend themselves. They approach you when beckoned and allow you to handle them. In addition, you can use an action, or a triggered action, on your turn to befriend an animal you can see. Make a Will attack roll with 1 boon against the animal’s Will. On a success, the animal becomes compelled until the spell ends. You can have a number of animals compelled by this spell equal to 1 + your Power score.<b>Sacrifice:</b> You can use an action and expend a casting of this spell to cause all animals within 1 mile of you to heal all damage. OP" 
     },
     { 
         name: "Favor of the Horned Lord", 
@@ -2501,22 +2517,24 @@
         rank: 9, 
         type: "Utility", 
         targetArea: "Self", 
-        desc: "Requires beast within. 8 hours. Size 4 avatar. Gain truesight, +50 Health, +6 Speed, 2 boons on attacks, +3d6 damage. Nearby animals gain 1 boon and +1d6 damage. Aftereffect: Will challenge (-4 banes) or 2d6 Insanity/permanent animal transformation. OP" 
+		duration: "8 hours"
+        desc: "<b>Req:</b>You must be under the effect of the <b>Beast Within</b> spell. <br>You gain the favor of the Horned Lord, causing you to become a giant, horned humanoid figure, with green-glowing eyes, and runes etched into your thick hide. As the avatar of this god, you gain the following benefits for the duration.<br>• Your casting of beast within does not end until this  spell ends.<br>• You gain truesight if you don’t have it already. You can see in areas obscured by shadows and darkness as if those areas were lit. You can also see invisible creatures and objects, and you automatically recognize illusions  you see for what they are.<br>• Your Size increases to 4 if it is lower than 4.<br>• You gain a +50 bonus to Health and a +6 bonus to Speed.<br>• You make attack rolls with 2 boons.<br>• Your attacks with natural weapons and unarmed strikes deal 3d6 extra damage.<br>• Whenever you roll a 20 or higher on an attack using natural weapons or an unarmed strike and you beat  the target number by 5 or more, your attack deals  2d6 extra damage.<br>• All animals within long range of you make attack rolls  with 1 boon and deal 1d6 extra damage on their attacks.<br>• You can use an action and expend the casting of a Primal spell you have learned to allow one creature you choose within long range to heal damage equal to twice its healing rate.<br><b>Aftereffect:</b> Make a Will challenge roll with 4 banes. On  a failure, you gain 2d6 Insanity. If this Insanity gain would cause you to go mad, you permanently transform into an <b>Animal</b> of your Size and retain none of your original statistics or memories. OP" 
     },
     { 
         name: "Create Life", 
         tradition: "Primal", 
         rank: 10, 
         type: "Utility", 
-        targetArea: "A 6-yard cube originating from a point you can reach", 
-        desc: "Permanent. 24-hour concentration to create a breeding pair of a new animal species (up to Size 3). Aftereffect: Will challenge (-5 banes) or 10-year cooldown. Sacrifice: Resurrect one dead animal. OP" 
+        targetArea: "A cube of space, 6 yards on a side, originating from a point you can reach and resting on an earthen surface",
+		duration: "Permanent"
+        desc: "Upon casting this spell, you must concentrate for 24 hours, during which time you mold the earth under the area so that it has the shape of two animals. When you finish, you breathe life into their nostrils, causing them to become living creatures, one male and the other female, of an entirely new species. These animals can be up to Size 3, and they have statistics for animals of their Size, but you make all other decisions about these animals: their habitat, diet, activity cycle, and so on. These animals are favorably disposed to  one another, and if permitted to breed, they have offspring. They are always friendly to you and never harm you, not even in self-defense.<br><b>Aftereffect:</b> Make a Will challenge roll with 5 banes.  On a failure, you cannot cast this spell again for 10 years,  10 months, and 10 days.<br><b>Sacrifice:</b> You can use an action and expend the casting of this spell to restore one dead animal you can touch to life. The animal has no recollection of being dead, but it is friendly to you for the rest of its natural life. Upon using the spell in this way, you are not subject to the spell’s aftereffect. OP" 
     },
-         {
+              {
     name: "Choose Outcome",
     tradition: "Order",
     rank: 0,
     type: "Utility",
-    targetArea: "",
+    targetArea: "Self",
     duration: "",
     desc: "You attempt to exert your will on reality to bring about order. Make a Will challenge roll with 2 banes. On a success, the next time you would make an attack roll or a challenge roll before the end of the next round, you can choose to make the result of that roll a success. On a failure, you become impaired for 1 round."
   },
@@ -2534,7 +2552,7 @@
     tradition: "Order",
     rank: 1,
     type: "Attack",
-    targetArea: "One Size 2 or smaller creature you can see within short range",
+    targetArea: "One Size 2 or smaller creature you can see within short range"",
     duration: "See the effect",
     desc: "Strings of words speed toward the target. Make a Will attack roll against the target’s Agility. On a success, the target becomes trapped in a logic prison for 1 minute. While trapped in this way, the target cannot use actions or triggered actions, and it cannot move. In addition, the target is immune to damage and to afflictions that originate outside its space. At the end of each round, the target can make an Intellect challenge roll with 1 bane. On a success, it escapes the logic prison and ends the spell."
   },
@@ -2543,8 +2561,8 @@
     tradition: "Order",
     rank: 1,
     type: "Utility",
-    targetArea: "",
-    duration: "1 round",
+    targetArea: "Self",
+    duration: "",
     desc: "<b>Triggered:</b> On your turn, you can use a triggered action to cast this spell. For 1 round, whenever a creature makes an attack roll against you, or you would make a challenge roll to resist an attack, you discard the d20 roll and replace the result with a 10."
   },
   {
@@ -2617,7 +2635,7 @@
     type: "Utility",
     targetArea: "A cube, 10 yards on a side, originating from a point within long range",
     duration: "1 hour",
-    desc: "Interlocking, glowing sigils appear on the edges of the area to form a solid barrier. The barrier is immune to all damage. Creatures and objects cannot pass through it by any means.<br>The barrier also emanates an invisible field that extends 20 yards out from either side of it. The field imposes order that interferes with Teleportation magic and other magical forms of travel. If a creature would use magic to travel to a space inside the field, the creature must make a Will challenge roll with 3 banes. The creature takes 5d6 damage and reappears in the space it left on a failure, or just takes half the damage and passes through the barrier on a success.<br><b>Sacrifice:</b> You can use an action and expend a casting of this spell to cast the dictum spell (Demon Lord’s Companion 2, page 40)."
+    desc: "Interlocking, glowing sigils appear on the edges of the area to form a solid barrier. The barrier is immune to all damage. Creatures and objects cannot pass through it by any means.<br>The barrier also emanates an invisible field that extends 20 yards out from either side of it. The field imposes order that interferes with Teleportation magic and other magical forms of travel. If a creature would use magic to travel to a space inside the field, the creature must make a Will challenge roll with 3 banes. The creature takes 5d6 damage and reappears in the space it left on a failure, or just takes half the damage and passes through the barrier on a success.<br><b>Sacrifice:</b> You can use an action and expend a casting of this spell to cast the <b>Dictum</b> spell."
   },
   {
     name: "Eradicate Infestation",
@@ -2635,7 +2653,7 @@
     type: "Utility",
     targetArea: "",
     duration: "1 hour",
-    desc: "Magic flows into your body, imbuing it with strength and vigor to bring order to the world. The spell has different effects as described below, all of which last for the duration.<br><b>Impose Order</b> When a player- or GM-controlled creature within short range rolls a d20, you can use a triggered action to make a Will challenge roll. On a success, you replace the number rolled with a 1 or a 20.<br><b>Deaden Magic</b> When a creature within medium range casts an attack spell, you can impose 1 bane on the attack roll and grant 1 boon on challenge rolls made by other creatures to resist the attack. When you do so, the triggering spell deals half damage.<br><b>Order’s Grasp</b> You can use an action to make a Will attack roll against one creature you can see within medium range. On a success, the creature is immobilized. The creature remains immobilized until it uses an action to make a Strength challenge roll with 1 bane and gets a success."
+    desc: "Magic flows into your body, imbuing it with strength and vigor to bring order to the world. The spell has different effects as described below, all of which last for the duration.<br><b>Impose Order:</b> When a player- or GM-controlled creature within short range rolls a d20, you can use a triggered action to make a Will challenge roll. On a success, you replace the number rolled with a 1 or a 20.<br><b>Deaden Magic:</b> When a creature within medium range casts an attack spell, you can impose 1 bane on the attack roll and grant 1 boon on challenge rolls made by other creatures to resist the attack. When you do so, the triggering spell deals half damage.<br><b>Order’s Grasp:</b> You can use an action to make a Will attack roll against one creature you can see within medium range. On a success, the creature is immobilized. The creature remains immobilized until it uses an action to make a Strength challenge roll with 1 bane and gets a success."
   },
   {
     name: "Purge Chaos",
@@ -2644,7 +2662,7 @@
     type: "Utility",
     targetArea: "A 50-yard-radius sphere centered on a point you can reach",
     duration: "1 hour",
-    desc: "Gray light leaps from the point you touch and remains for the duration, turning darkness in the area to shadows and shadows in the area to light. The spell has effects as described below, all of which last for the duration.<br><b>Static Outcomes</b> When you cast the spell and at the end of each round thereafter, roll a d20 and a d6. Each roll made for a creature in the area using a d20 or a d6 uses the result of your rolls in place of the rolls they made.<br><b>Lament of the Monstrous</b> Each demon, faerie, and monster in the area when you cast the spell or that enters it must get a success on a Strength challenge roll with 3 banes or take 3d6 damage and become impaired until it leaves the area. Any creature incapacitated by this damage is utterly erased from existence.<br><b>Suspend Magic</b> Spells that take effect in the area deal half damage. At the end of each round, you can use a triggered action to end one active and ongoing spell effect that affects a creature, object, or area within this spell’s area. Finally, each creature in the area takes a –3 penalty to Power for as long as it remains in the area.<br><b>Annihilate Chaos</b> Spells of the Chaos tradition have no effect when cast in the area or when they would affect targets or areas inside the area.<br><b>Aftereffect:</b> You must make a Will challenge roll with 3 banes. On a success, you become fatigued until you complete a rest, or you take 6d6 damage and become stunned for 1d6 hours on a failure."
+    desc: "Gray light leaps from the point you touch and remains for the duration, turning darkness in the area to shadows and shadows in the area to light. The spell has effects as described below, all of which last for the duration.<br><b>Static Outcomes:</b> When you cast the spell and at the end of each round thereafter, roll a d20 and a d6. Each roll made for a creature in the area using a d20 or a d6 uses the result of your rolls in place of the rolls they made.<br><b>Lament of the Monstrous:</b> Each demon, faerie, and monster in the area when you cast the spell or that enters it must get a success on a Strength challenge roll with 3 banes or take 3d6 damage and become impaired until it leaves the area. Any creature incapacitated by this damage is utterly erased from existence.<br><b>Suspend Magic:</b> Spells that take effect in the area deal half damage. At the end of each round, you can use a triggered action to end one active and ongoing spell effect that affects a creature, object, or area within this spell’s area. Finally, each creature in the area takes a –3 penalty to Power for as long as it remains in the area.<br><b>Annihilate Chaos:</b> Spells of the Chaos tradition have no effect when cast in the area or when they would affect targets or areas inside the area.<br><b>Aftereffect:</b> You must make a Will challenge roll with 3 banes. On a success, you become fatigued until you complete a rest, or you take 6d6 damage and become stunned for 1d6 hours on a failure."
   },
   {
     name: "Imprisoned by Flawless Logic",
@@ -2671,7 +2689,7 @@
     type: "Attack",
     targetArea: "A 1-mile-radius sphere centered on a point you can see",
     duration: "",
-    desc: "You speak the words of creation to undo the evidence of chaos and upheaval in the area, with the following effects.<br><b>Halt Construct</b> Each construct in the area becomes an object of its Size, incapable of using actions, moving, or perceiving its surroundings.<br><b>Eradicate Monsters</b> Each monster in the area takes 1d6 x 10 damage. A monster incapacitated by this damage turns to dust that blows away at the end of the next round.<br><b>Banish Demons</b> Each demon in the area with a Health score of 50 or lower dissolves, its essence sent screaming back to the Void. The bodies of the demons blacken and blow apart. Any demon in the area with a Health score greater than 50 must get a success on a Will challenge roll with 4 banes or be destroyed and sent back to the Void as described above.<br><b>Torment the Fey</b> Each faerie in the area with a Health score of 50 or lower becomes fettered with iron shackles that remain in place for 1 week and 1 day. The shackles are immune to damage and cannot be removed by any means.<br><b>Undo Magic</b> Any ongoing magical effect on a creature, object, or location in the area that was created by a spell of rank 8 or lower ends immediately.<br><b>Seal the Breach</b> Any Void breach in the area instantly snaps shut.<br><b>Aftereffect:</b> You must get a success on a Will challenge roll with 5 banes or take 10d6 damage. If you would become incapacitated, you die and immediately turn into a stone statue."
+    desc: "You speak the words of creation to undo the evidence of chaos and upheaval in the area, with the following effects.<br><b>Halt Construct:</b> Each construct in the area becomes an object of its Size, incapable of using actions, moving, or perceiving its surroundings.<br><b>Eradicate Monsters:</b> Each monster in the area takes 1d6 x 10 damage. A monster incapacitated by this damage turns to dust that blows away at the end of the next round.<br><b>Banish Demons:</b> Each demon in the area with a Health score of 50 or lower dissolves, its essence sent screaming back to the Void. The bodies of the demons blacken and blow apart. Any demon in the area with a Health score greater than 50 must get a success on a Will challenge roll with 4 banes or be destroyed and sent back to the Void as described above.<br><b>Torment the Fey:</b> Each faerie in the area with a Health score of 50 or lower becomes fettered with iron shackles that remain in place for 1 week and 1 day. The shackles are immune to damage and cannot be removed by any means.<br><b>Undo Magic:</b> Any ongoing magical effect on a creature, object, or location in the area that was created by a spell of rank 8 or lower ends immediately.<br><b>Seal the Breach:</b> Any Void breach in the area instantly snaps shut.<br><b>Aftereffect:</b> You must get a success on a Will challenge roll with 5 banes or take 10d6 damage. If you would become incapacitated, you die and immediately turn into a stone statue."
   },
         {
     name: "Mark of the Necromancer",
