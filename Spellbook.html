@@ -1647,582 +1647,654 @@
         targetArea: "3-yard cube within long range", 
         desc: "1 hour. Iron gate summons random horrors/spirits every minute. Nearby spirits gain massive buffs. Living creatures within 1 mile die if incapacitated. OP" 
     },
-          { 
-        name: "Feat of Will", 
-        tradition: "Soul", 
-        rank: 0, 
-        type: "Utility", 
-        targetArea: "Self", 
-        desc: "1 minute. Use Will modifier for any attribute/characteristic roll. Triggered: Use Will modifier as a bonus to an attribute being attacked. OP" 
-    },
-    { 
-        name: "Focused Strike", 
-        tradition: "Soul", 
-        rank: 0, 
-        type: "Utility", 
-        targetArea: "One creature you can reach", 
-        desc: "Make an unarmed strike with 1 boon using Will; deals +1d6 damage. OP" 
-    },
-    { 
-        name: "Guarded Soul", 
-        tradition: "Soul", 
-        rank: 1, 
-        type: "Utility", 
-        targetArea: "Self", 
-        desc: "1 minute. Impose 1 bane on attacks against you; resists with 1 boon. Triggered: Impose 4 banes on an attack. Sacrifice: Heal half healing rate. OP" 
-    },
-    { 
-        name: "Leaf on the Wind", 
-        tradition: "Soul", 
-        rank: 1, 
-        type: "Utility", 
-        targetArea: "Self", 
-        desc: "1 minute. +4 Speed (+8 if flier) and ignore difficult terrain. Sacrifice: Move Speed without triggering free attacks. OP" 
-    },
-    { 
-        name: "Soul to Soul", 
-        tradition: "Soul", 
-        rank: 2, 
-        type: "Utility", 
-        targetArea: "Self / Medium range", 
-        desc: "1 hour. Detect/locate souls within medium range; ignore obscurement banes. Sacrifice: Communicate soul-to-soul with one creature for 1 minute. OP" 
-    },
-    { 
-        name: "Topple the Mountain", 
-        tradition: "Soul", 
-        rank: 2, 
-        type: "Utility", 
-        targetArea: "Self", 
-        desc: "1 minute. Str rolls gain boons equal to Will mod. Triggered: If attacked by Size 1+ creature, Str vs Str success fails their attack, deals 2d6, and repels/knocks prone. OP" 
-    },
-    { 
-        name: "Introspective Trance", 
-        tradition: "Soul", 
-        rank: 3, 
-        type: "Utility", 
-        targetArea: "Self", 
-        desc: "1 minute (defenseless/immobilized). At end, heal all damage and remove diseased/poisoned afflictions. OP" 
-    },
-    { 
-        name: "Soul Shivers", 
-        tradition: "Soul", 
-        rank: 3, 
-        type: "Attack", 
-        targetArea: "One creature you can reach", 
-        desc: "Unarmed strike (+3 boons/Will). Success: +2d6 damage and dazed 1 min. No soul: +4d6 damage instead. 20+: +2d6 extra damage. OP" 
-    },
-    { 
-        name: "Quiet the Soul", 
-        tradition: "Soul", 
-        rank: 4, 
-        type: "Utility", 
-        targetArea: "One creature you can reach", 
-        desc: "1 hour. Remove/immune to charmed/compelled/frightened. Will vs Int success: remove 1 Insanity. Sacrifice: Grant self 3 boons on Int/Will/Perc roll and remove 1 Insanity. OP" 
-    },
-    { 
-        name: "Trance of Excellence", 
-        tradition: "Soul", 
-        rank: 4, 
-        type: "Utility", 
-        targetArea: "Self", 
-        desc: "1 minute. Immune to most afflictions and take half damage. Taking damage requires Will challenge or spell ends. OP" 
-    },
-    { 
-        name: "Confound the Soul", 
-        tradition: "Soul", 
-        rank: 5, 
-        type: "Utility", 
-        targetArea: "Self", 
-        desc: "8 hours. Invisible to creatures with souls; partially obscured from those without. Attacking requires Will challenge or target becomes immune. OP" 
-    },
-    { 
-        name: "Soul Dissonance", 
-        tradition: "Soul", 
-        rank: 5, 
-        type: "Attack", 
-        targetArea: "One creature you can reach", 
-        desc: "Unarmed strike (+3 boons/Will). Success: 1d3 Insanity and stunned (rounds = Insanity total). No soul: +5d6 damage. Going mad in this way = instant death. OP" 
-    },
-    { 
-        name: "Become the Soul", 
-        tradition: "Soul", 
-        rank: 6, 
-        type: "Utility", 
-        targetArea: "Self", 
-        desc: "4 hours. Half damage from weapons; half damage dealt. Gain fly, move through objects, and ignore difficult terrain. OP" 
-    },
-    { 
-        name: "Recall Former Lives", 
-        tradition: "Soul", 
-        rank: 6, 
-        type: "Utility", 
-        targetArea: "Self", 
-        desc: "Until rest. Gain 1d6 professions and 2 memories each. Expend memory for 3 boons on a roll or a Yes/No question the GM must answer truthfully. OP" 
-    },
-    { 
-        name: "Displace Soul", 
-        tradition: "Soul", 
-        rank: 7, 
-        type: "Attack", 
-        targetArea: "One creature you can reach", 
-        desc: "Unarmed strike (+3 boons/Will). Success: 2d6 Insanity; target unconscious (rounds = Insanity) as soul is ejected. Going mad = instant death. Aftereffect: Will challenge (-3 banes) or Insanity/Corruption. OP" 
-    },
-    { 
-        name: "Astral Projection", 
-        tradition: "Soul", 
-        rank: 8, 
-        type: "Utility", 
-        targetArea: "Self", 
-        desc: "Concentration. Body is defenseless; soul moves freely. Soul lacks Str/Agi; Health=Will, Def=Int. Soul is invisible and can move through objects. Hourly Will challenge or gain Insanity. OP" 
-    },
-    { 
-        name: "Transcendence", 
-        tradition: "Soul", 
-        rank: 9, 
-        type: "Utility", 
-        targetArea: "Self", 
-        desc: "Concentration (1 hour). Immune to all damage, Insanity, and afflictions. Attacking or casting attack spells ends the spell immediately. OP" 
-    },
-    { 
-        name: "Enlightenment", 
-        tradition: "Soul", 
-        rank: 10, 
-        type: "Utility", 
-        targetArea: "Self", 
-        desc: "Permanent (requires Will challenge vs -5 banes). Gain massive Def/Will bonuses, immunity to Insanity and many afflictions, +3 boons on rolls, and stop aging. OP" 
-    },
-          { 
-        name: "Filthy Limerick", 
-        tradition: "Song", 
-        rank: 0, 
-        type: "Attack", 
-        targetArea: "One creature within short range", 
-        desc: "Will vs Will. Success: Target impaired for 1 round, granting 1 boon on attacks against it. OP"
-    },
-    { 
-        name: "Uplifting Melody", 
-        tradition: "Song", 
-        rank: 0, 
-        type: "Utility", 
-        targetArea: "One creature within short range", 
-        desc: "Concentration (1 min). Target makes its next attack or challenge roll this round with 2 boons. OP"
-    },
-    { 
-        name: "Cacophonous Utterance", 
-        tradition: "Song", 
-        rank: 1, 
-        type: "Attack", 
-        targetArea: "A 3-yard-long cone from your space", 
-        desc: "Glass/crystal takes full Health damage. Creatures: Str challenge or 2d6 damage and deafened (1 min); half damage on success. OP"
-    },
-    { 
-        name: "Stirring Refrain", 
-        tradition: "Song", 
-        rank: 1, 
-        type: "Utility", 
-        targetArea: "One creature within medium range", 
-        desc: "1 minute. Target can move Speed without free attacks. Ends if you stop playing or cast another spell. OP"
-    },
-    { 
-        name: "Battle Chant", 
-        tradition: "Song", 
-        rank: 2, 
-        type: "Utility", 
-        targetArea: "Up to five creatures within medium range", 
-        desc: "Concentration (1 min). Targets make attack rolls with 1 boon and deal +1d6 damage on melee attacks. OP"
-    },
-    { 
-        name: "Rousing Ballad", 
-        tradition: "Song", 
-        rank: 2, 
-        type: "Utility", 
-        targetArea: "Up to five creatures within medium range", 
-        desc: "Targets with Insanity or charmed/compelled/frightened afflictions make Will challenge (+1 boon) to remove 1 Insanity or the affliction. OP"
-    },
-    { 
-        name: "Infectious Groove", 
-        tradition: "Song", 
-        rank: 3, 
-        type: "Attack", 
-        targetArea: "One creature within short range", 
-        desc: "1 minute. Will challenge or move Speed in your chosen direction and become immobilized until round end. OP"
-    },
-    { 
-        name: "Sorrowful Dirge", 
-        tradition: "Song", 
-        rank: 3, 
-        type: "Attack", 
-        targetArea: "Up to ten creatures within medium range", 
-        desc: "Will challenge or impaired and slowed (up to 1 min concentration). Each round, failure grants 1 Insanity. Ends if you stop playing or cast another spell. OP"
-    },
-    { 
-        name: "Maddening Drone", 
-        tradition: "Song", 
-        rank: 4, 
-        type: "Attack", 
-        targetArea: "One creature within medium range", 
-        desc: "Concentration (1 min). Will challenge or dazed (grants 1 boon to attackers; resists with 1 bane). Success grants immunity. OP"
-    },
-    { 
-        name: "Swords to Plowshares", 
-        tradition: "Song", 
-        rank: 4, 
-        type: "Attack", 
-        targetArea: "Each chosen creature within medium range", 
-        desc: "Will challenge (-1 bane) or cannot attack or cast attack spells while you play. Ends if target takes damage, gains Insanity, or leaves range. OP"
-    },
-    { 
-        name: "Song of Discord", 
-        tradition: "Song", 
-        rank: 5, 
-        type: "Attack", 
-        targetArea: "One creature within medium range", 
-        desc: "Concentration (1 min). Will challenge (-1 bane) or compelled (attacks with 1 boon and +1d6 damage). Damage triggers new challenge or 1 Insanity. OP"
-    },
-    { 
-        name: "Song of Seduction", 
-        tradition: "Song", 
-        rank: 5, 
-        type: "Attack", 
-        targetArea: "A 20-yard-radius sphere centered on you", 
-        desc: "Concentration (1 min). Will challenge (+1 boon) or charmed (1 hour). Charmed must move closer to you on fast turns. Damage triggers challenge (-3 banes). OP"
-    },
-    { 
-        name: "Hymn of Rebirth", 
-        tradition: "Song", 
-        rank: 6, 
-        type: "Utility", 
-        targetArea: "Corpse dead no longer than 48 hours within short range", 
-        desc: "10-minute concentration. Restore mortal to life (Underworld soul = automatic; Hell soul = Will challenge vs Corruption). Failure vs Hell summons 1d3 furies. OP"
-    },
-    { 
-        name: "Siren Song", 
-        tradition: "Song", 
-        rank: 6, 
-        type: "Attack", 
-        targetArea: "A 500-yard-radius sphere centered on you", 
-        desc: "Concentration (1 hour). Hearers gain 1 Insanity and become impaired unless moving toward you. Sight triggers Will challenge (-3 banes) or stunned. Sacrifice: Cast Song of Seduction. OP"
-    },
-    { 
-        name: "Voice of Thunder", 
-        tradition: "Song", 
-        rank: 7, 
-        type: "Attack", 
-        targetArea: "A 20-yard-long cone from your space", 
-        desc: "60 damage to objects. Creatures: Str challenge (-1 bane) or 8d6 damage, deafened (1d3 days), repelled 1d6 yards, and fall prone. OP"
-    },
-    { 
-        name: "Heavenly Choir", 
-        tradition: "Song", 
-        rank: 8, 
-        type: "Utility", 
-        targetArea: "A 20-yard-radius sphere centered on you", 
-        desc: "Concentration (1 hour). Buff allies (+10 Health, 2 boons, Def/Agi resist 2 boons) and debuff enemies (-10 Health, 2 banes, grant 2 boons to attackers, Will fail = charmed/frightened). OP"
-    },
-    { 
-        name: "Blow Your Horn", 
-        tradition: "Song", 
-        rank: 9, 
-        type: "Utility", 
-        targetArea: "One building within a 500yd cube", 
-        desc: "Building crumbles. Creatures inside Health 50 or lower die; others: Str challenge (-3 banes) or 8d6+50 damage and buried (blinded/deafened/taking damage). Aftereffect: Will challenge (-4 banes). OP"
-    },
-    { 
-        name: "Music of the Spheres", 
-        tradition: "Song", 
-        rank: 10, 
-        type: "Utility", 
-        targetArea: "Varies", 
-        desc: "1-hour concentration. Alter reality: cast rank 8 spell, create 100k gc object, resurrect 10, heal/restore 10, undo rank 9 spell, reshape landscape, or erase Difficulty <751 creature. Aftereffect: Will challenge (-5 banes). OP"
-    },
-          { 
-        name: "Darkling’s Raiment", 
-        tradition: "Shadow", 
-        rank: 0, 
-        type: "Utility", 
-        targetArea: "Self", 
-        desc: "1 hour. Shadows partially obscure you in lit areas or totally obscure you in shadowy areas. OP"
-    },
-    { 
-        name: "Steal Shadow", 
-        tradition: "Shadow", 
-        rank: 0, 
-        type: "Attack", 
-        targetArea: "One creature within short range", 
-        desc: "Int vs Agi. Success: Tear away target's shadow for 1 minute. Gain 1 boon on attacks against them, impose 1 bane on their attacks against you, and they cannot be hidden from you. OP"
-    },
-    { 
-        name: "Blinding Blot", 
-        tradition: "Shadow", 
-        rank: 1, 
-        type: "Attack", 
-        targetArea: "One creature within short range", 
-        desc: "Int vs Perc. Success: Target is blinded for 1 minute (Perc challenge ends). 20+: Target also impaired for 1 minute. OP"
-    },
-    { 
-        name: "Darkening Blades", 
-        tradition: "Shadow", 
-        rank: 1, 
-        type: "Attack", 
-        targetArea: "A 3-yard-long cone from reach", 
-        desc: "Shards deal 2d6 damage (Agi half). Challenge roll has 1 bane if target is in shadows or 2 banes if in darkness. OP"
-    },
-    { 
-        name: "Penumbral Blade", 
-        tradition: "Shadow", 
-        rank: 2, 
-        type: "Utility", 
-        targetArea: "Self", 
-        desc: "1 minute. Form a blade for Int attacks dealing 2d6 + 2 damage (+1d6 if target is in shadows/darkness). OP"
-    },
-    { 
-        name: "Shadow Snakes", 
-        tradition: "Shadow", 
-        rank: 2, 
-        type: "Attack", 
-        targetArea: "A 5-yard-radius circle within medium range", 
-        desc: "1 minute. Each round, creatures must pass Agi roll or take 1d6 damage and become impaired. You can move serpents 5 yards as an action. OP"
-    },
-    { 
-        name: "Strangling Twin", 
-        tradition: "Shadow", 
-        rank: 3, 
-        type: "Attack", 
-        targetArea: "A shadow cast by one creature within short range", 
-        desc: "1 minute. Animated shadow attacks caster each round: Agi challenge or grabbed. If already grabbed, take 3d6 damage. Ends if shadow enters light and you fail Int challenge. OP"
-    },
-    { 
-        name: "Things in the Dark", 
-        tradition: "Shadow", 
-        rank: 3, 
-        type: "Attack", 
-        targetArea: "A 5-yard-radius sphere within medium range", 
-        desc: "1 minute. Total darkness. Each round, Will challenge (-1 bane) or gain 1d3 Insanity. Going mad triggers Str challenge or death by fright. OP"
-    },
-    { 
-        name: "Chilling Darkness", 
-        tradition: "Shadow", 
-        rank: 4, 
-        type: "Attack", 
-        targetArea: "A 10-yard tall, 5-yard-radius cylinder within medium range", 
-        desc: "Deals 3d6 cold damage. Perc challenge (-2 banes) or become blinded, impaired, and slowed for 1 minute. OP"
-    },
-    { 
-        name: "Void Tentacles", 
-        tradition: "Shadow", 
-        rank: 4, 
-        type: "Attack", 
-        targetArea: "One point in space within medium range", 
-        desc: "Concentration (1 min). Up to five creatures: Agi challenge (-1 bane) or grabbed. Already grabbed take 3d6 damage (extra if injured). Incapacitated targets vanish into the Void. OP"
-    },
-    { 
-        name: "Enervating Gloom", 
-        tradition: "Shadow", 
-        rank: 5, 
-        type: "Attack", 
-        targetArea: "A 5-yard cube within long range", 
-        desc: "Concentration (1 min). Str challenge (-1 bane) or take -10 penalty to Health (cumulative) and become impaired/slowed. You gain +3 Health per affected creature for 1 hour. OP"
-    },
-    { 
-        name: "Shadow Horror", 
-        tradition: "Shadow", 
-        rank: 5, 
-        type: "Utility", 
-        targetArea: "A 2-yard cube within long range", 
-        desc: "1 hour. Summons a compelled large monster with horrifying, flier, and +20 Health. You are immune to its horrifying trait. OP"
-    },
-    { 
-        name: "Nightfall", 
-        tradition: "Shadow", 
-        rank: 6, 
-        type: "Utility", 
-        targetArea: "A 100-yard-radius sphere within extreme range", 
-        desc: "8 hours. Total darkness blocks nonmagical vision and rank 5 or lower light. Shadow spells gain 3 boons on attacks, +2d6 damage, and 3 banes on resists. OP"
-    },
-    { 
-        name: "Obsidian Serpents", 
-        tradition: "Shadow", 
-        rank: 6, 
-        type: "Attack", 
-        targetArea: "Four tendrils emerging from your body", 
-        desc: "Concentration (1 min). Attack 4 creatures (Int vs Agi) for damage, grabbing (Str 14), or forced movement. Tendrils have Defense/Health equal to your Intellect. OP"
-    },
-    { 
-        name: "Shadow Gate", 
-        tradition: "Shadow", 
-        rank: 7, 
-        type: "Utility", 
-        targetArea: "A point in space you can reach", 
-        desc: "8 hours. Portal to a shadow realm where travelers move at 5x speed and see reality as insubstantial. Creatures in the realm when spell ends are shunted to the Void. OP"
-    },
-    { 
-        name: "Shade", 
-        tradition: "Shadow", 
-        rank: 8, 
-        type: "Utility", 
-        targetArea: "Self", 
-        desc: "4 hours. Become a living shadow: darksight, immune to cold/fire/poison/many afflictions, half damage from weapons, move through objects, lack Str score. Touch deals 6d6 damage. Aftereffect: Will challenge or Corruption. OP"
-    },
-    { 
-        name: "Eclipse", 
-        tradition: "Shadow", 
-        rank: 9, 
-        type: "Utility", 
-        targetArea: "The sun or the moon", 
-        desc: "Blots out sun/moon. Areas become shadowed. Celestial spells and light-creating spells fail. Observers gain 1 Insanity. Sacrifice: Cast Shade. OP"
-    },
-    { 
-        name: "Ravenous Blot", 
-        tradition: "Shadow", 
-        rank: 10, 
-        type: "Attack", 
-        targetArea: "A 1-yard-diameter sphere within short range", 
-        desc: "Concentration (1 hr). Size 1 or smaller objects/creatures entering area are annihilated. Larger take half Health damage. If concentration breaks, sphere moves toward you. Aftereffect: Str challenge (-5 banes) or disappear. OP"
-    },
-          { 
-        name: "Rune of Invisibility", 
-        tradition: "Rune", 
-        rank: 0, 
-        type: "Utility", 
-        targetArea: "One object you can reach", 
-        desc: "1 minute. Target is invisible to all creatures except you. OP" 
-    },
-    { 
-        name: "Rune of Prohibition", 
-        tradition: "Rune", 
-        rank: 0, 
-        type: "Utility", 
-        targetArea: "A 2-yard cube within reach", 
-        desc: "1 minute. Living creatures must pass Will challenge (-1 bane) to enter the area. Failure prevents entry for duration. OP" 
-    },
-    { 
-        name: "Rune of Force", 
-        tradition: "Rune", 
-        rank: 1, 
-        type: "Utility", 
-        targetArea: "One weapon you can reach", 
-        desc: "1 minute. Attacks deal +1d3 damage and repel target 1d3 yards. 20+: Target also falls prone. OP" 
-    },
-    { 
-        name: "Rune of Suffering", 
-        tradition: "Rune", 
-        rank: 1, 
-        type: "Utility", 
-        targetArea: "One creature you can reach", 
-        desc: "Int vs Agi. Success: Target impaired for 1 minute. While impaired, target must pass Will challenge whenever damaged or fall prone. OP" 
-    },
-    { 
-        name: "Detonating Rune", 
-        tradition: "Rune", 
-        rank: 2, 
-        type: "Utility", 
-        targetArea: "One creature you can reach", 
-        desc: "1 minute. Int vs Agi success leaves sigil. Each round end, 50% chance to explode (5-yard radius) for 3d6 + 1d6 per non-detonated round (Agi half for others). OP" 
-    },
-    { 
-        name: "Sickening Rune", 
-        tradition: "Rune", 
-        rank: 2, 
-        type: "Utility", 
-        targetArea: "One weapon you can reach", 
-        desc: "1 minute. Weapon becomes poisonous. Damaged targets must pass Str challenge or take 2d6 damage and become poisoned/impaired for 1 minute. OP" 
-    },
-    { 
-        name: "Rune of Calling", 
-        tradition: "Rune", 
-        rank: 3, 
-        type: "Utility", 
-        targetArea: "One object you can reach", 
-        desc: "24 hours. Triggered: Teleport object to hand from any distance. Sacrifice: Teleport self to object. OP" 
-    },
-    { 
-        name: "Wall of Runes", 
-        tradition: "Rune", 
-        rank: 3, 
-        type: "Utility", 
-        targetArea: "A line 20yd long, 5yd high, 5yd wide within long range", 
-        desc: "1 hour. Area is difficult terrain. Entering or being in area when cast requires Str challenge or become immobilized. OP" 
-    },
-    { 
-        name: "Pulsing Glyph", 
-        tradition: "Rune", 
-        rank: 4, 
-        type: "Utility", 
-        targetArea: "A point within short range", 
-        desc: "1 minute. Each round end, 5-yard pulse: Str challenge (-1 bane) or 3d6 damage, repelled 1d3+1 yards, and fall prone. OP" 
-    },
-    { 
-        name: "Rune of Thunder", 
-        tradition: "Rune", 
-        rank: 4, 
-        type: "Utility", 
-        targetArea: "One weapon you can reach", 
-        desc: "1 hour. On successful hit, thunder deals 2d6+3 damage and deafens nearby creatures (1yd) who fail a Str challenge. OP" 
-    },
-    { 
-        name: "Rune of Speed", 
-        tradition: "Rune", 
-        rank: 5, 
-        type: "Utility", 
-        targetArea: "One willing creature you can reach", 
-        desc: "1 hour. +4 Speed, 1 boon on attacks, 2 boons on Agi resists. Can move Speed (fast turn) or 2x Speed (slow turn) as part of an action. OP" 
-    },
-    { 
-        name: "Rune of the Giant", 
-        tradition: "Rune", 
-        rank: 5, 
-        type: "Utility", 
-        targetArea: "One willing creature Size 3 or smaller", 
-        desc: "1 hour. Target gains +2 Size (max 4), +2 Speed, and +20 Health. Equipment scales accordingly. OP" 
-    },
-    { 
-        name: "Impregnable Rune", 
-        tradition: "Rune", 
-        rank: 6, 
-        type: "Utility", 
-        targetArea: "A point on a solid surface", 
-        desc: "Until rest. Objects within 10 yards are immune to damage; doors lock; area is immune to Divination and Teleportation. OP" 
-    },
-    { 
-        name: "Rune of Warding", 
-        tradition: "Rune", 
-        rank: 6, 
-        type: "Utility", 
-        targetArea: "A point on a solid surface", 
-        desc: "Until triggered (1-min concentration). Trap explodes in 5-yard radius if non-designated creature enters. Deals 10d6 damage (Agi -1 bane half). OP" 
-    },
-    { 
-        name: "Rune of Madness", 
-        tradition: "Rune", 
-        rank: 7, 
-        type: "Attack", 
-        targetArea: "A point within medium range", 
-        desc: "Creatures within 20 yards that see the rune must pass Will challenge (-1 bane) or gain Insanity equal to Will and go mad. OP" 
-    },
-    { 
-        name: "Runic Inscription", 
-        tradition: "Rune", 
-        rank: 8, 
-        type: "Utility", 
-        targetArea: "A point on a solid surface", 
-        desc: "Until triggered (1-hour concentration). Choose effect: Death (10d6 or instant kill), Madness (max Insanity), Pain (damage/impaired), Sleep (2d6 days), or Summoning (Huge Demon). OP" 
-    },
-    { 
-        name: "Rune of Damning Light", 
-        tradition: "Rune", 
-        rank: 9, 
-        type: "Utility", 
-        targetArea: "One willing creature you can reach", 
-        desc: "1 hour. 10-yard radiance. Each round, creatures with Health 20 or lower die. Others take 6d6 damage (Str -1 bane immune). OP" 
-    },
-    { 
-        name: "Rune of Annihilation", 
-        tradition: "Rune", 
-        rank: 10, 
-        type: "Attack", 
-        targetArea: "One creature or object you can reach", 
-        desc: "Int vs Agi. Success: Target takes 1d6 damage each round until it dies and turns to dust. Aftereffect: Int challenge (-5 banes) or self-inflict. OP" 
-    },
+{
+    "name": "Feat of Will",
+    "tradition": "Soul",
+    "rank": 0,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "1 minute",
+    "desc": "For the duration, whenever you would make an attack roll or a challenge roll using the modifier from an attribute or a characteristic other than Will, you can make the roll using your Will modifier instead.<br><b>Triggered:</b> When a creature would make an attack roll against one of your attributes or characteristics other than your Will, you can use a triggered action to add a bonus to the attribute being attacked. The bonus equals your Will modifier.<br><b>Triggered:</b> When you would make an attack roll or a challenge roll using the modifier from an attribute or a characteristic other than Will, you can use a triggered action to cast this spell and use your Will modifier instead."
+  },
+  {
+    "name": "Focused Strike",
+    "tradition": "Soul",
+    "rank": 0,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "",
+    "desc": "Make an unarmed strike against a creature you can reach. You can use Will in place of the attribute you would ordinarily use, you make the attack roll with 1 boon, and the attack deals 1d6 extra damage."
+  },
+  {
+    "name": "Guarded Soul",
+    "tradition": "Soul",
+    "rank": 1,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "1 minute",
+    "desc": "You impose 1 bane on all rolls made to attack you, and you make challenge rolls to resist attacks with 1 boon for the duration.<br><b>Triggered:</b> When you are the target of an attack, you can use a triggered action to impose 4 banes on the triggering attack roll.<br><b>Sacrifice</b> You can use an action and expend a casting of this spell to heal damage equal to half your healing rate."
+  },
+  {
+    "name": "Leaf on the Wind",
+    "tradition": "Soul",
+    "rank": 1,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "1 minute",
+    "desc": "For the duration, you have a +4 bonus to Speed and you ignore the effects of moving across difficult terrain, even when climbing or swimming. If you have the flier trait, the bonus increases to +8.<br><b>Sacrifice</b> You can use an action and expend a casting of this spell to move up to your Speed. This movement does not trigger free attacks."
+  },
+  {
+    "name": "Soul to Soul",
+    "tradition": "Soul",
+    "rank": 2,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "1 hour",
+    "desc": "You attune your senses so that you detect the presence or absence of any creature that has a soul within medium range of you. If such a creature is hidden from you, the spell reveals that creature’s location to you. In addition, your attack rolls against creatures that have souls ignore banes incurred from obscurement.<br><b>Sacrifice</b> You can use an action and expend a casting of this spell to touch one creature you can reach that has a soul. For as long as you concentrate, up to 1 minute, you and that creature can communicate, soul to soul, even if you do not share a common language and even if the creature knows no languages."
+  },
+  {
+    "name": "Topple the Mountain",
+    "tradition": "Soul",
+    "rank": 2,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "1 minute",
+    "desc": "You make all Strength attack rolls and challenge rolls with a number of boons equal to your Will modifier (minimum 1) for the duration.<br><b>Triggered:</b> When a creature that is your Size or larger makes a melee attack against you, you can use a triggered action to cast this spell. Make a Strength attack roll with a number of boons equal to your Will modifier against the triggering creature’s Strength. On a success, the triggering creature’s attack is automatically a failure, the creature takes 2d6 damage, and it flies 1d6 yards in a direction you choose before falling prone."
+  },
+  {
+    "name": "Introspective Trance",
+    "tradition": "Soul",
+    "rank": 3,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "1 minute",
+    "desc": "You place yourself in a trance that lasts for the duration. While in this trance, you are defenseless and immobilized. At the end of the duration, you heal all your damage, and you can remove the diseased or poisoned affliction from yourself."
+  },
+  {
+    "name": "Soul Shivers",
+    "tradition": "Soul",
+    "rank": 3,
+    "type": "Attack",
+    "targetArea": "",
+    "duration": "",
+    "desc": "Make an unarmed strike against one creature you can reach. If the creature has a soul, you make the attack roll with 3 boons and you can substitute Will for the attribute you would normally use. On a success, the creature also takes 2d6 extra damage and becomes dazed for 1 minute. At the end of each round, a creature dazed in this way can make a Will challenge roll with 1 bane and removes the dazed affliction from itself on a success.<br>If the creature doesn’t have a soul, your attack deals 4d6 extra damage instead.<br><b>Attack Roll 20+</b> Increase the extra damage by 2d6."
+  },
+  {
+    "name": "Quiet the Soul",
+    "tradition": "Soul",
+    "rank": 4,
+    "type": "Utility",
+    "targetArea": "One creature you can reach",
+    "duration": "1 hour",
+    "desc": "You touch the target, removing the charmed, compelled, and frightened afflictions from it and rendering it immune to these afflictions for the duration. In addition, make a Will attack roll against the target’s Intellect. On a success, you remove 1 Insanity from the target.<br><b>Sacrifice</b> When a creature attacks your Intellect, Will, or Perception, or you would make an Intellect, Will, or Perception challenge roll, you can use a triggered action and expend a casting of this spell to impose 3 banes on the triggering attack roll or grant yourself 3 boons on the triggering challenge roll. Then, remove 1 Insanity from yourself."
+  },
+  {
+    "name": "Trance of Excellence",
+    "tradition": "Soul",
+    "rank": 4,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "1 minute",
+    "desc": "You place yourself in a serene trance that lasts for the duration. While in this trance, you are immune to the asleep, blinded, charmed, compelled, dazed, deafened, diseased, fatigued, frightened, grabbed, immobilized, impaired, poisoned, slowed, and stunned afflictions, and you take half damage from all sources. Whenever you take damage, you must get a success on a Will challenge roll or the spell ends immediately."
+  },
+  {
+    "name": "Confound the Soul",
+    "tradition": "Soul",
+    "rank": 5,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "8 hours",
+    "desc": "For the duration, you become invisible to creatures that have souls and are partially obscured from creatures that don’t have souls. When you attack with a weapon, spell, or talent, you must get a success on a Will challenge roll or the target of your attack becomes immune to the effects of this casting of the spell."
+  },
+  {
+    "name": "Soul Dissonance",
+    "tradition": "Soul",
+    "rank": 5,
+    "type": "Attack",
+    "targetArea": "",
+    "duration": "",
+    "desc": "Make an unarmed strike against one creature you can reach. If the creature has a soul, you make the attack roll with 3 boons, and you can substitute Will for the attribute you would normally use. On a success, the creature also gains 1d3 Insanity and becomes stunned for a number of rounds equal to its Insanity total. At the end of each round, a creature stunned by this spell can make a Will challenge roll with 2 banes. The creature gains 1d3 Insanity on a failure, or removes the stunned affliction from itself on a success.<br>A creature that goes mad from gaining Insanity in this way takes damage equal to its Health.<br>If the creature doesn’t have a soul, your attack deals 5d6 extra damage instead.<br><b>Attack Roll 20+</b> The creature also takes 2d6 extra damage."
+  },
+  {
+    "name": "Become the Soul",
+    "tradition": "Soul",
+    "rank": 6,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "4 hours",
+    "desc": "For the duration, you take half damage from weapons, and your attacks deal half damage. You can move by flying, and you can move through solid objects and other creatures. Finally, you ignore the effects of moving across difficult terrain.<br>If the spell ends and you are in a space occupied by a creature or an object, you and the creature or object each take 5d6 damage. A creature that would take this damage can make an Agility challenge roll with 2 banes and reduces the damage to 0 on a success."
+  },
+  {
+    "name": "Recall Former Lives",
+    "tradition": "Soul",
+    "rank": 6,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "Until you complete a rest",
+    "desc": "You gain 1d6 random professions for the duration. For each profession you gain in this way, you gain 2 memories, which disappear when used or when the spell ends. When you would make an attack roll or challenge roll, you can expend a memory to make the roll with 3 boons. Alternatively, you can expend a memory at any time to ask the GM one question that can be answered with a yes or a no. The GM must answer your question truthfully."
+  },
+  {
+    "name": "Displace Soul",
+    "tradition": "Soul",
+    "rank": 7,
+    "type": "Attack",
+    "targetArea": "Make an unarmed strike against one creature you can reach.",
+    "duration": "",
+    "desc": "If the creature has a soul, you make the attack roll with 3 boons, and you can substitute Will for the attribute you would normally use. On a success, the creature also gains 2d6 Insanity. Instead of becoming frightened from gaining this Insanity, the creature falls prone and becomes unconscious for a number of rounds equal to its Insanity total, as its soul is forced from its body. The creature’s soul hangs in the air, struggling to reenter its body, which it does after the effect ends. If the Insanity gain would cause the creature to go mad, it takes damage equal to its Health, and the soul tumbles into the Underworld or Hell.<br>If the creature doesn’t have a soul, your attack deals 7d6 extra damage instead.<br><b>Aftereffect</b> You must make a Will challenge roll with 3 banes. On a failure, you gain 1d6 Insanity and 1 Corruption."
+  },
+  {
+    "name": "Astral Projection",
+    "tradition": "Soul",
+    "rank": 8,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "Concentration",
+    "desc": "You slip into a trance, causing your body to slump, becoming defenseless and immobilized for the duration. Your soul, however, slithers free and moves into a space within 1 yard of the space occupied by your body. If your body takes damage, you gain 2d6 Insanity, your soul returns to your body, and the spell ends. While your soul is separate from your body, you apply all the following changes to your statistics.<br><br>Attributes</b> Your soul lacks a Strength or Agility score and cannot make attack rolls or challenge rolls using these attributes. Your soul ignores attacks that target these attributes or that can be resisted by making challenge rolls with these attributes.<br><b>Characteristics</b> Your soul’s Size is the same as your body’s. You use your Perception score for your soul, but your Defense becomes equal to your Intellect score, and your soul’s Health equals your Will score. Your Speed equals the higher of your Intellect and Will scores.<br><b>Spirit</b> You take half damage from all sources. You are immune to the following afflictions: asleep, blinded, deafened, diseased, fatigued, grabbed, immobilized, poisoned, prone, slowed, and unconscious.<br>You can move through solid objects and other creatures. You ignore the effects of moving across difficult terrain. You cannot, however, physically interact with creatures or objects. When you speak, only spirits, animals, and children can hear you, though you can hear normally. In addition, you are invisible to all creatures that are not spirits, animals, or children.<br><b>Spells</b> All creatures other than spirits are immune to the effects of spells you cast.<br><b>Instant Travel</b> When you use an action to concentrate on this spell, you can choose a location that exists in the world and instantly travel to that location. Once you use this function, you must wait 10 minutes before you can use it again.<br><b>Creeping Madness</b> At the end of each hour you concentrate on this spell, you must get a success on a Will challenge roll with 4 banes or gain 1d6 Insanity.<br><b>Traumatic Death</b> If your Insanity total becomes equal to your Will score, your body dies, freeing your spirit to plunge into the Underworld or Hell."
+  },
+  {
+    "name": "Transcendence",
+    "tradition": "Soul",
+    "rank": 9,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "Concentration, up to 1 hour",
+    "desc": "You become immune to all damage, to gaining Insanity, and to all afflictions for the duration. If you use an action to make an attack or to cast an attack spell, the spell ends immediately."
+  },
+  {
+    "name": "Enlightenment",
+    "tradition": "Soul",
+    "rank": 10,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "Permanent",
+    "desc": "Make a Will challenge roll with 5 banes. On a failure, you gain 3d6 Insanity. On a success, you gain the following benefits that last for the duration.<br>• You gain a bonus to Defense and Will equal to your Will modifier (maximum score 25 for Defense and 20 for Will).<br>• You cannot gain Insanity.<br>• You become immune to the asleep, charmed, compelled, dazed, fatigued, frightened, impaired, slowed, and stunned afflictions.<br>• You impose 3 banes on attack rolls made against you, and you make challenge rolls with 3 boons.<br>• You make attack rolls with 3 boons, and your weapon attacks deal 1d6 extra damage.<br>• At the end of each hour after casting this spell, you heal damage equal to your healing rate.<br>• You stop aging and you remain at your present age until you die.<br><b>Aftereffect</b> You cannot cast this spell again until you have defeated a creature under the effect of this spell."
+  },
+          {
+    "name": "Filthy Limerick",
+    "tradition": "Song",
+    "rank": 0,
+    "type": "Attack",
+    "targetArea": "One creature within short range",
+    "duration": "1 round",
+    "desc": "You tell an obscene rhyme. If the target can hear you, make a Will attack roll against the target’s Will. On a success, the target becomes impaired for 1 round. When impaired in this way, the target grants 1 boon on rolls made to attack it."
+  },
+  {
+    "name": "Uplifting Melody",
+    "tradition": "Song",
+    "rank": 0,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "Concentration, up to 1 minute",
+    "desc": "When you cast the spell, and when you use an action to concentrate on it, choose one creature within short range that can hear you. The creature makes its next attack roll or challenge roll before the end of the round with 2 boons."
+  },
+  {
+    "name": "Cacophonous Utterance",
+    "tradition": "Song",
+    "rank": 1,
+    "type": "Attack",
+    "targetArea": "A 3-yard-long cone originating from a point in your space",
+    "duration": "",
+    "desc": "You loose a booming blast of noise from your mouth. Each object made of glass or crystal in the area takes damage equal to its Health. Each creature in the area must make a Strength challenge roll. A creature takes 2d6 damage and becomes deafened for 1 minute on a failure, or just takes half the damage on a success."
+  },
+  {
+    "name": "Stirring Refrain",
+    "tradition": "Song",
+    "rank": 1,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "1 minute; see the effect",
+    "desc": "When you cast the spell, and again on each of your turns for the duration, choose one creature within medium range that can hear you. The creature can move up to its Speed without triggering free attacks. The effect ends immediately if you stop singing or playing or you cast another spell."
+  },
+  {
+    "name": "Battle Chant",
+    "tradition": "Song",
+    "rank": 2,
+    "type": "Utility",
+    "targetArea": "Up to five creatures you choose within medium range that can hear you",
+    "duration": "Concentration, up to 1 minute",
+    "desc": "You begin chanting. For the duration, each target makes attack rolls with 1 boon and deals 1d6 extra damage on melee attacks it makes."
+  },
+  {
+    "name": "Rousing Ballad",
+    "tradition": "Song",
+    "rank": 2,
+    "type": "Utility",
+    "targetArea": "Up to five creatures you choose within medium range that can hear you",
+    "duration": "",
+    "desc": "You recite a bit of poetry to awaken new courage in each target. A target that has 1 or more Insanity or the charmed, compelled, or frightened affliction makes a Will challenge roll with 1 boon. On a success, the target removes 1 Insanity or removes one of the specified afflictions from itself."
+  },
+  {
+    "name": "Infectious Groove",
+    "tradition": "Song",
+    "rank": 3,
+    "type": "Attack",
+    "duration": "1 minute",
+    "targetArea": "",
+    "desc": "You play a lively tune. When you cast the spell, and on each of your turns for the duration, choose one creature within short range. The creature must get a success on a Will challenge roll or be moved up to its Speed in a direction you choose and then become immobilized until the end of the round."
+  },
+  {
+    "name": "Sorrowful Dirge",
+    "tradition": "Song",
+    "rank": 3,
+    "type": "Attack",
+    "targetArea": "Up to ten creatures you choose within medium range that can hear you",
+    "duration": "Concentration, up to 1 minute",
+    "desc": "You sing or play a mournful tune. Each target must get a success on a Will challenge roll or become impaired for as long as you concentrate, up to 1 minute. When impaired in this way, a target is also slowed. When you use an action to concentrate on the spell, each affected target must get a success on a Will challenge roll or gain 1 Insanity. An affected target can use an action to make a Will challenge roll and ends the effect on itself with a success. This effect ends for all targets if you stop singing or playing or you cast another spell."
+  },
+  {
+    "name": "Maddening Drone",
+    "tradition": "Song",
+    "rank": 4,
+    "type": "Attack",
+    "targetArea": "",
+    "duration": "Concentration, up to 1 minute",
+    "desc": "An eerie droning noise emanates from your mouth for the duration. When you cast this spell, and again when you use an action to concentrate on it, choose one creature within medium range that can hear you. The creature must make a Will challenge roll. It becomes immune to this casting of the spell on a success, or it becomes dazed for the duration on a failure. When dazed in this way, the creature grants 1 boon on attack rolls made against it and makes challenge rolls to resist attacks with 1 bane. If the creature cannot hear you at all at the end of the round because it is deafened, in an area sound cannot reach, or is far enough away that the GM deems the sound cannot reach it, it removes the dazed affliction from itself."
+  },
+  {
+    "name": "Swords to Plowshares",
+    "tradition": "Song",
+    "rank": 4,
+    "type": "Attack",
+    "targetArea": "Each creature you choose within medium range that can hear you",
+    "duration": "",
+    "desc": "You sing or play a song of peace and harmony. A target must get a success on a Will challenge roll with 1 bane or become affected by your music for as long as it can hear you sing or play your instrument. If the target takes damage, gains Insanity, or is beyond medium range at the end of any round, the effect ends for that target. A target affected in this way cannot use actions to attack or cast attack spells."
+  },
+  {
+    "name": "Song of Discord",
+    "tradition": "Song",
+    "rank": 5,
+    "type": "Attack",
+    "targetArea": "",
+    "duration": "Concentration, up to 1 minute",
+    "desc": "When you cast the spell, and again when you use an action to concentrate on it, choose one creature within medium range that can hear you. The creature must make a Will challenge roll with 1 bane. It becomes immune to this casting of the spell on a success, or becomes compelled for the duration on a failure. When compelled in this way, a creature makes attack rolls with 1 boon and deals 1d6 extra damage.<br>If a creature compelled by this spell takes damage, it can make a Will challenge roll with 1 bane and removes the affliction from itself on a success or gains 1 Insanity on a failure. The creature also removes the affliction if it cannot hear you at the end of the round."
+  },
+  {
+    "name": "Song of Seduction",
+    "tradition": "Song",
+    "rank": 5,
+    "type": "Attack",
+    "targetArea": "A 20-yard-radius sphere centered on a point in your space",
+    "duration": "Concentration, up to 1 minute",
+    "desc": "You sing or play an eerie song that twists the heartstrings of anyone that can hear it. The music spreads through the area and lasts for the duration. If you move, the area moves with you and remains centered on a point in your space. Each creature in the area when you cast the spell or that enters the area must make a Will challenge roll with 1 boon. A creature becomes charmed for 1 hour on a failure, or becomes immune to this casting of the spell on a success. A creature charmed in this way must take a fast turn each round and move closer to you by the shortest available route until it can come no closer. If the creature cannot get any closer to you, it can act normally, though still taking a fast turn. If a creature charmed by this spell takes damage, it makes a Will challenge roll with 3 banes. It removes the charmed affliction from itself on a success, or gains 1 Insanity on a failure."
+  },
+  {
+    "name": "Hymn of Rebirth",
+    "tradition": "Song",
+    "rank": 6,
+    "type": "Utility",
+    "targetArea": "The corpse of one mortal creature dead no longer than 48 hours that is within short range",
+    "duration": "",
+    "desc": "Upon casting this spell, you must concentrate for 10 minutes, during which time you sing or play music. When you finish, you might restore the target to life.<br>If the target’s soul resides in the Underworld, the soul returns to its body and the target is restored to life. The target heals 1 damage, gains 1d6 Insanity, and becomes impaired until it completes a rest. When impaired in this way, the target is also fatigued.<br>If the target’s soul resides in Hell, you must make a Will challenge roll with a number of banes equal to the target’s Corruption score. On a success, you restore the target to life, as described above. On a failure, 1d3 <b>Furies</b> appear in open spaces within short range of you and can take the next available turn. The furies are hostile to you and members of your group."
+  },
+  {
+    "name": "Siren Song",
+    "tradition": "Song",
+    "rank": 6,
+    "type": "Attack",
+    "targetArea": "A 500-yard-radius sphere centered on a point in your space",
+    "duration": "Concentration, up to 1 hour",
+    "desc": "You create eerie music that spreads throughout the area for the duration. Any creature other than you that can hear the music gains 1 Insanity and becomes impaired until the end of the next round unless it moves toward you. A creature can use an action to make a Will challenge roll with 1 bane and becomes immune to this casting of the spell until its effects end.<br>If a creature that can hear the music can see you at any point during its movement, it must make a Will challenge roll with 3 banes. On a failure, the creature becomes stunned until the effect ends. If an affected creature takes damage or gains Insanity, the effect ends for that creature.<br>Sacrifice You can use an action and expend a casting of this spell to cast the song of seduction spell."
+  },
+  {
+    "name": "Voice of Thunder",
+    "tradition": "Song",
+    "rank": 7,
+    "type": "Attack",
+    "targetArea": "A 20-yard-long cone originating from a point in your space",
+    "duration": "",
+    "desc": "You speak and loose a destructive wave of sonic energy that deals 60 damage to all objects in the area. Each creature in the area must make a Strength challenge roll with 1 bane. On a failure, the creature takes 8d6 damage from the noise, becomes deafened for 1d3 days, and is moved 1d6 yards away from you before falling prone. On a success, the creature just takes half the damage."
+  },
+  {
+    "name": "Heavenly Choir",
+    "tradition": "Song",
+    "rank": 8,
+    "type": "Utility",
+    "targetArea": "A 20-yard-radius sphere centered on a point in your space",
+    "duration": "Concentration, up to 1 hour",
+    "desc": "You lift your voice to the heavens, offering a beautiful, stirring song to which heavenly voices add accompaniment, while sunlight fills the area, moving with you and remaining centered on a point in your space until the spell ends.<br>When you cast the spell, you can choose any number of creatures in the area. Each creature gains the following benefits while it remains in the area:<br>• A +10 bonus to Health<br>• Makes attack rolls and challenge rolls with 2 boons<br>• Imposes 2 banes on attack rolls made against it<br>• Becomes immune to the charmed, compelled, and frightened afflictions<br>In addition, you can also choose any number of creatures in the area and bestow the following harmful effects on each one:<br>• A –10 penalty to Health<br>• Makes attack rolls and challenge rolls with 2 banes<br>• Grants 2 boons on attack rolls made against it<br>• Must get a success on a Will challenge roll at the end of each round it remains in the area or become charmed and, when charmed in this way, frightened until the end of the next round.<br><b>Aftereffect:</b> You must make a Will challenge roll with 4 banes. You gain 1d6 Insanity on a success, or you gain 2d6 Insanity on a failure."
+  },
+  {
+    "name": "Blow Your Horn",
+    "tradition": "Song",
+    "rank": 9,
+    "type": "Utility",
+    "targetArea": "One structure entirely enclosed by a cube of space, 500 yards on a side, originating from a point within short range",
+    "duration": "",
+    "desc": "You create the sound of one hundred horns sounding to fill the air with painful noise. The target takes damage equal to its Health and crumbles into ruin. Any creatures inside the structure that have a Health score of 50 or lower also take damage equal to their Health, and their corpses are buried in the rubble. Creatures in the structure that have a Health score higher than 50 must make a Strength challenge roll with 3 banes. A creature takes 8d6 + 50 damage and becomes buried under 6 feet of debris on a failure, or just takes half the damage on a success.<br>A buried creature takes 1d6 damage and is blinded and deafened. At the end of each round, the creature takes 1d6 damage until it is no longer buried. The creature can use an action to try digging its way free by making a Strength challenge roll with 1 bane. On a success, the target digs 2 feet up toward the surface.<br>A creature can free a buried target by digging it out. A creature can use its hands, or other appendages, to dig 1 foot down per round spent working. If using tools, such as a shovel, the creature digs 3 feet down per round spent working. If the target is buried in stone, a creature can dig only by using tools and gets through 1 inch per round spent working this way. Multiple creatures working together can free targets more quickly. Certain spells might expedite the recovery of affected targets, at the GM’s discretion.<br><b>Aftereffect:</b> You must make a Will challenge roll with 4 banes. You take 8d6 damage on a failure, or half the damage on a success."
+  },
+  {
+    "name": "Music of the Spheres",
+    "tradition": "Song",
+    "rank": 10,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "1 hour",
+    "desc": "Upon casting this spell, you must concentrate for 1 hour, during which time you sing or play music. When you finish, you alter reality in some way. You can choose any one of the following effects:<br>• Cast any spell of rank 8 or lower from any tradition. If you cast a spell that has an aftereffect, you can do so without suffering that spell’s aftereffect.<br>• Create one nonmagical object worth up to 100,000 gc.<br>• Restore life to up to ten dead creatures within long range, causing each to heal damage equal to its healing rate.<br>• Choose up to ten creatures you can see and allow each creature to heal all its damage, remove all afflictions from itself, end any curses on it, and be restored to the prime of his or her life.<br>• Undo the effects of any spell of rank 9 or lower cast within 1 mile of you.<br>• Reshape the landscape within 1 mile of you, such that you could cause a mountain to push up from the ground or water to cover the area.<br>• Choose one creature you can see. If the creature’s Difficulty is 750 or lower, you remove it from existence.<br>Other uses of this spell might be possible with the GM’s permission.<br><b>Aftereffect:</b> You must make a Will challenge roll with 5 banes. On a success, you must wait at least 1 year and 1 day before you can cast this spell again. On a failure, your body dissipates into sparkling particles that fly up into the sky, where they become one with the universe."
+  },
+         {
+    "name": "Darkling’s Raiment",
+    "tradition": "Shadow",
+    "rank": 0,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "1 hour",
+    "desc": "Shadows gather around your body and remain for the duration. You are partially obscured by shadows when in lit areas or totally obscured by darkness when in shadowy areas."
+  },
+  {
+    "name": "Steal Shadow",
+    "tradition": "Shadow",
+    "rank": 0,
+    "type": "Attack",
+    "targetArea": "One creature you can see within short range",
+    "duration": "1 minute",
+    "desc": "You reach out to grasp the target’s shadow. Make an Intellect attack roll against the target’s Agility. On a success, you tear away the target’s shadow. It merges with you for 1 minute, after which the shadow returns to the target. While you possess the target’s shadow, you make attack rolls against the target with 1 boon, you impose 1 bane on attack rolls it makes against you, and the target cannot be hidden from you."
+  },
+  {
+    "name": "Blinding Blot",
+    "tradition": "Shadow",
+    "rank": 1,
+    "type": "Attack",
+    "targetArea": "One creature you can see within short range",
+    "duration": "1 minute",
+    "desc": "You fling a clot of shadows at the target. Make an Intellect attack roll against the target’s Perception. On a success, the darkness clings to the target’s eyes, causing it to become blinded for 1 minute. At the end of each round, the target can make a Perception challenge roll and ends the effect on a success.<br><b>Attack Roll 20+:</b> The target also becomes impaired for 1 minute."
+  },
+  {
+    "name": "Darkening Blades",
+    "tradition": "Shadow",
+    "rank": 1,
+    "type": "Attack",
+    "targetArea": "A 3-yard-long cone originating from a point you can reach",
+    "duration": "",
+    "desc": "You fling out your hand to spray the area with shards of solidified darkness. Each creature in the area must make an eye challenge roll, with 1 bane if partially obscured by shadows or with 2 banes if totally obscured by darkness. A creature takes 2d6 damage on a failure, or half the damage on a success."
+  },
+  {
+    "name": "Penumbral Blade",
+    "tradition": "Shadow",
+    "rank": 2,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "1 minute",
+    "desc": "You gather a ball of darkness in your hands and then stretch it out to form a solid black blade that remains for the duration or until you drop it. When you cast this spell, and again, when you use an action to do so, you can attack with the blade. You make the attack roll using your Intellect, and the blade deals 2d6 + 2 damage. If the target of the attack is obscured by shadows or darkness, it takes 1d6 extra damage."
+  },
+  {
+    "name": "Shadow Snakes",
+    "tradition": "Shadow",
+    "rank": 2,
+    "type": "Attack",
+    "targetArea": "A 5-yard-radius circle centered on a point on a flat surface within medium range",
+    "duration": "1 minute",
+    "desc": "Serpents made from shadow slither inside the area for the duration. When the serpents appear and at the end of each round until the spell ends, each creature in the area must get a success on an Agility roll or take 1d6 damage and become impaired until the spell ends.<br>At any point before the spell ends, you can use an action, or a triggered action on your turn, to move the serpents up to 5 yards."
+  },
+  {
+    "name": "Strangling Twin",
+    "tradition": "Shadow",
+    "rank": 3,
+    "type": "Attack",
+    "targetArea": "A shadow cast by one creature within short range",
+    "duration": "1 minute",
+    "desc": "You infuse the target with magic that animates it. When you cast the spell, and again at the end of each round, the animated shadow attacks the creature that casts the shadow. The creature must get a success on an Agility challenge roll or become grabbed until the end of the next round. The creature makes the roll with 1 bane if it’s in an area obscured by shadows. If the creature is already grabbed, it takes 3d6 damage as the shadow tightens its grip around the creature’s neck.<br>If the animated shadow moves into a lit area, or you start your turn with the animated shadow in a lit area, you must get a success on an Intellect challenge roll or the spell ends immediately."
+  },
+  {
+    "name": "Things in the Dark",
+    "tradition": "Shadow",
+    "rank": 3,
+    "type": "Attack",
+    "targetArea": "A 5-yard-radius sphere centered on a point within medium range",
+    "duration": "1 minute",
+    "desc": "Magical darkness spreads through the area and remains for the duration. The darkness totally obscures its area. If any part of the area would be lit from light created by a rank 3 or higher Celestial spell, this spell ends.<br>When the darkness appears and at the end of each round until the spell ends, each creature in the area must make a Will challenge roll with 1 bane. A creature gains 1d3 Insanity on a failure, or becomes immune to the effect of this casting of the spell on a success. If a creature goes mad from gaining Insanity in this way, it must get a success on a Strength challenge roll or take damage equal to its Health, having died of fright. A creature immune to the frightened affliction automatically gets a success on this Strength challenge roll."
+  },
+  {
+    "name": "Chilling Darkness",
+    "tradition": "Shadow",
+    "rank": 4,
+    "type": "Attack",
+    "targetArea": "A cylinder, 10 yards tall with a 5-yard-radius, centered on a point within medium range",
+    "duration": "",
+    "desc": "The chilling dark of a starless sky settles into the area and then dissipates. Each creature in the area takes 3d6 damage from the cold and must make a Perception challenge roll with 2 banes. On a failure, the creature’s eyes turn black, causing the creature to become blinded for 1 minute. When blinded in this way, the creature is also impaired and slowed.<br>At the end of each round, a creature blinded by this spell can make a Perception challenge roll with 2 banes. On a success, it removes the blinded affliction from itself."
+  },
+  {
+    "name": "Void Tentacles",
+    "tradition": "Shadow",
+    "rank": 4,
+    "type": "Attack",
+    "targetArea": "One point in space within medium range",
+    "duration": "Concentration, up to 1 minute",
+    "desc": "Thick, ropy tentacles made of solidified darkness snake out 5 yards from the target and remain for the duration. When you cast the spell and again when you use an action to concentrate on the spell, choose up to five creatures within 5 yards of the target. Each chosen creature must get a success on an Agility challenge roll with 1 bane. A creature becomes grabbed for 1 round on a failure. If a creature is already grabbed in this way, it gets an automatic failure on the Agility challenge roll and must get a success on a Strength challenge roll or take 3d6 damage. If a creature becomes injured as a result of taking this damage, it moves 1 yard toward the target and takes 3d6 extra damage. Any creature incapacitated by this damage is drawn through the target point and vanishes into the Void, where it is torn apart by demons.<br>A creature grabbed by a tentacle can attack it. A tentacle has Defense 5, Health 20, Strength 14, and Agility 11. If a tentacle is destroyed, the creature it was grabbing is freed, and you choose one fewer creature when you use an action to concentrate on this spell. If that number drops to 0, the spell ends immediately."
+  },
+  {
+    "name": "Enervating Gloom",
+    "tradition": "Shadow",
+    "rank": 5,
+    "type": "Attack",
+    "targetArea": "A cube of space, 5 yards on a side, originating from a point within long range",
+    "duration": "Concentration, up to 1 minute",
+    "desc": "Tendrils of darkness tumble through the area, causing it to become totally obscured for the duration. The darkness blocks all nonmagical vision. When you use an action to concentrate on this spell, you can move the area up to 5 yards.<br>When you cast the spell, and again when you use an action to concentrate on it, the tendrils curl around creatures inside the area, drawing vitality from them. Each creature in the area must make a Strength challenge roll with 1 bane. When a creature gets a failure on this roll, it takes a –10 penalty to its Health, which worsens by 10 with each subsequent failure. The penalty lasts until the spell ends. When a creature has a penalty to its Health from this spell, it is impaired and slowed. For each creature that has a penalty from this spell, you have a +3 bonus to your Health score. The bonus gained from this effect lasts for 1 hour."
+  },
+  {
+    "name": "Shadow Horror",
+    "tradition": "Shadow",
+    "rank": 5,
+    "type": "Utility",
+    "targetArea": "A cube, 2 yards on a side, originating from a point within long range",
+    "duration": "1 hour; see the effect",
+    "desc": "Wisps of shadow coalesce to form a compelled <b>Large Monster</b> that remains for the duration or until it becomes incapacitated, at which point it disappears and the spell ends. The creature has the horrifying and flier traits, as well as a +20 bonus to Health. You are immune to this creature’s horrifying trait. The shadow horror can have any appearance you choose."
+  },
+  {
+    "name": "Nightfall",
+    "tradition": "Shadow",
+    "rank": 6,
+    "type": "Utility",
+    "targetArea": "A 100-yard-radius sphere centered on a point within extreme range",
+    "duration": "8 hours",
+    "desc": "Cloying darkness spills out from the center of the area and spreads through the area, totally obscuring it for the duration. The darkness blocks all nonmagical forms of vision. It ends any magical light in its area or any magical light that was created by a spell of rank 5 or lower and brought into its area.<br>While you are in the area of darkness created by this spell, whenever you cast a Shadow attack spell, you make the attack roll with 3 boons and you impose 3 banes on challenge rolls made to resist such a spell. Your Shadow attack spells deal 2d6 extra damage, and creatures created by your Shadow spells deal 1d6 extra damage on their attacks. Spirits and undead in the area can see as if the area were obscured by ordinary darkness. In addition, such creatures make attack rolls and challenge rolls with 3 boons and deal 2d6 extra damage on their attacks.<br><b>Sacrifice:</b> You can use an action and expend a casting of this spell to cast the <b>Shadow Horror</b> spell."
+  },
+  {
+    "name": "Obsidian Serpents",
+    "tradition": "Shadow",
+    "rank": 6,
+    "type": "Attack",
+    "targetArea": "",
+    "duration": "Concentration, up to 1 minute",
+    "desc": "Four tendrils of solidified darkness emerge from your body and remain for the duration. When you cast the spell, and again when you use an action to concentrate on it, you can attack with your tendrils. For each tendril, choose a different creature within 10 yards and make an Intellect attack roll against the creature’s Agility. On a success, you can choose one of the following effects:<br>• The creature takes 4d6 damage.<br>• The creature takes 3d6 damage and becomes grabbed by the tendril (Strength 14).<br>• The creature takes 3d6 + 2 damage and is moved in a straight line away from you until it is 6 yards from you.<br>• The creature takes 3d6 + 2 damage and is moved in a straight line toward you until it is 1 yard from you.<br>A tendril can be attacked. Each one has a Defense score and a Health score equal to your Intellect score. The tendrils are immune to any attack that targets an attribute, and they cannot gain afflictions. If a tendril is incapacitated, it disappears, and the number of attacks you can make with this spell is reduced by one. If all four tendrils disappear, the spell ends."
+  },
+  {
+    "name": "Shadow Gate",
+    "tradition": "Shadow",
+    "rank": 7,
+    "type": "Utility",
+    "targetArea": "A point in space you can reach",
+    "duration": "8 hours",
+    "desc": "A black speck appears at the target and then enlarges vertically until it becomes a 3-yard-radius black disk that remains in place for the duration. This shadow gate disappears when viewed from the side and totally obscures everything behind it. Anything that moves through the gate enters a shadow realm, which exists in the narrow gap between reality and the Void, and remains there until the spell ends, at which point the creature is shunted back into reality in an open space of the GM’s choice within 5 yards of the gate.<br>The realm beyond the gate appears exactly like the normal world, except that all is rendered in black and white. Travelers through the gate find structures as they appear in the real world and see creatures in reality as if they were smoky and insubstantial. Creatures in reality cannot be affected in any way by creatures in this shadow realm and vice versa. Sounds emanating from these shadow projections are not audible more than 1 yard from the creatures that make them, and even up close they sound dull and muted.<br>A creature that travels through this shadow realm moves at five times the normal rate, such that travelers can cover 15 miles per hour of walking or 40 miles per hour of running. Although no creatures are native to this border realm, travelers can sometimes see demons flitting about on the periphery of their vision, offering shocking displays of horrific beings eager to gain entry into the world.<br>At any time before the spell ends, you can use an action to create an exit from the shadow realm, which takes the form of a 5-yard-radius white disk that remains in place until the spell ends. Any creature that passes through this exit returns to reality.<br>Any creatures in the shadow realm when the spell ends become shunted into the Void, and most likely are never seen again."
+  },
+  {
+    "name": "Shade",
+    "tradition": "Shadow",
+    "rank": 8,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "4 hours",
+    "desc": "Darkness envelops your body as you transform into a living shadow. The transformation also affects everything you wear and carry, though you count as if you are wielding an implement for the purpose of casting spells. Until the spell ends, you gain the following benefits while in this form.<br>• You gain darksight if you do not have it already. Darksight lets you see into areas within medium range that are obscured by shadows and darkness as if those areas were lit and into areas beyond this distance that are obscured by darkness as if those areas were obscured by shadows.<br>• You are immune to damage from cold, disease, fire, or poison.<br>• You are immune to the asleep, blinded, deafened, diseased, fatigued, immobilized, poisoned, and slowed afflictions.<br>• You take half damage from weapon attacks.<br>• You can move through solid objects and other creatures. You ignore the effects of moving across difficult terrain.<br>• You are invisible while in areas obscured by shadows or darkness.<br>• You lack a Strength score. You cannot physically interact with objects, and you are immune to any attack that targets your Strength or that can be resisted with a Strength challenge roll.<br>• You can use an action to touch a creature you can reach. Make an Intellect attack roll against the creature’s Agility. On a success, you touch the creature, and the chill of your touch deals 6d6 damage to it.<br><b>Aftereffect:</b> You must make a Will challenge roll with 4 banes. On a failure, you gain 1 Corruption, or 1d3 Corruption if the total of your roll is 0 or lower."
+  },
+  {
+    "name": "Eclipse",
+    "tradition": "Shadow",
+    "rank": 9,
+    "type": "Utility",
+    "targetArea": "The sun or the moon",
+    "duration": "See the effect",
+    "desc": "A disk of shadow blots out the target for as long as it remains in the sky and you can see its location. Each creature that can see the effect gains 1 Insanity. If the target was the sun, it now appears as a black disk with a fiery corona. If the target was the moon, it now appears as a gray disk, almost invisible against the night sky. All areas that would be illuminated by the sun are now partially obscured by shadows, while all areas illuminated by the moon are now heavily obscured by deep shadows. The spell ends when the sun or the moon is no longer in the sky.<br>Until the spell ends, creatures that cast Celestial spells or other spells that would create areas of light find that the spells have no effect, even though the castings are expended as normal.<br><b>Sacrifice:</b> You can use an action and expend a casting of this spell to cast the <b>Shade</b> spell."
+  },
+  {
+    "name": "Ravenous Blot",
+    "tradition": "Shadow",
+    "rank": 10,
+    "type": "Attack",
+    "targetArea": "A 1-yard-diameter sphere originating from a point within short range",
+    "duration": "Concentration, up to 1 hour; see the effect",
+    "desc": "An undulating ball of absolute darkness appears inside the area and remains for the duration. When you use an action to concentrate on this spell, you can move the area up to 10 yards in any direction. If this movement would cause a creature to enter the area, the creature can dive out of the way with a success on an Agility challenge roll.<br>Any Size 1 or smaller creature or object that enters the area takes damage equal to its Health and disappears. A Size 2 or 3 creature that enters the area takes damage equal to half its Health, and the part of its body that came in contact with the area disappears. A larger creature can avoid coming into contact with the area by getting a success on an Agility challenge roll as it moves through it. The area erases portions of Size 2 or larger objects that encounter it, such that the spell could annihilate a section of wall or part of a large statue.<br>If your concentration is broken, the spell does not end. Instead, the sphere moves 2d6 yards in a straight line toward you at the end of each round. The spell ends when the duration runs out, when you use an action to end the spell while concentrating on it, or when you become destroyed by the spell.<br><b>Aftereffect:</b> You must make a Strength challenge roll with 5 banes. On a failure, you take damage equal to your Health and disappear from existence as if you had encountered the spell’s area."
+  },
+          {
+    "name": "Rune of Invisibility",
+    "tradition": "Rune",
+    "rank": 0,
+    "type": "Utility",
+    "targetArea": "One object you can reach",
+    "duration": "1 minute",
+    "desc": "You inscribe a rune on the target. Until the spell ends, the target is invisible to all creatures other than you."
+  },
+  {
+    "name": "Rune of Prohibition",
+    "tradition": "Rune",
+    "rank": 0,
+    "type": "Utility",
+    "targetArea": "A cube of space, 2 yards on a side, originating from a point you can reach",
+    "duration": "1 minute",
+    "desc": "A gleaming rune appears inside the area and remains for the duration. Until the spell ends, whenever a living creature would enter the area, the creature must make a Will challenge roll with 1 bane. A creature becomes immune to this casting of the spell on a success, and on a failure becomes unable to enter the area by any means until the spell ends."
+  },
+  {
+    "name": "Rune of Force",
+    "tradition": "Rune",
+    "rank": 1,
+    "type": "Utility",
+    "targetArea": "One weapon you can reach; it can be worn or carried by a creature other than you",
+    "duration": "1 minute",
+    "desc": "A gleaming rune appears somewhere on the weapon and remains for the duration. Whenever a creature gets a success on an attack roll made using the weapon, the target of the attack takes 1d3 extra damage and moves 1d3 yards in a straight line away from the weapon’s wielder. If the total of your attack roll is 20 or higher and beats the target number by at least 5, the target of the attack also falls prone."
+  },
+  {
+    "name": "Rune of Suffering",
+    "tradition": "Rune",
+    "rank": 1,
+    "type": "Utility",
+    "targetArea": "One creature you can reach",
+    "duration": "1 minute",
+    "desc": "Make an Intellect attack roll against the target’s Agility. On a success, you touch the target and leave behind a gleaming rune that causes the target to become impaired for 1 minute. A target impaired in this way must make a Will challenge roll whenever it takes damage, falling prone on a failure."
+  },
+  {
+    "name": "Detonating Rune",
+    "tradition": "Rune",
+    "rank": 2,
+    "type": "Utility",
+    "targetArea": "One creature you can reach",
+    "duration": "1 minute or until it detonates",
+    "desc": "Make an Intellect attack roll against the target’s Agility. On a success, you touch the target somewhere on the its body and leave behind a gently pulsing red sigil that remains for 1 minute or until it detonates.<br>At the end of each round, roll a d6. On an even number, the rune detonates, exploding into a 5-yard radius sphere centered on a point in the target’s space. Everything in the area takes 3d6 damage, plus 1d6 damage for each round the rune did not detonate. A creature in the area, other than the target, can make an Agility challenge roll and takes half the damage on a success."
+  },
+  {
+    "name": "Sickening Rune",
+    "tradition": "Rune",
+    "rank": 2,
+    "type": "Utility",
+    "targetArea": "One weapon you can reach; it can be worn or carried by a creature other than you",
+    "duration": "1 minute",
+    "desc": "You inscribe a glowing rune on the weapon, which causes it to become poisonous for the duration. A creature that takes damage from an attack made using the weapon must get a success on a Strength challenge roll or take 2d6 damage from the poison and become poisoned for 1 minute. When poisoned in this way, the creature is impaired. If the creature is already poisoned, it takes 2d6 extra damage."
+  },
+  {
+    "name": "Rune of Calling",
+    "tradition": "Rune",
+    "rank": 3,
+    "type": "Utility",
+    "targetArea": "One object you can reach",
+    "duration": "24 hours",
+    "desc": "You touch the target, and a squirming rune appears at the spot you touched, remaining for the duration. You can use an action, or a triggered action on your turn, to cause the target to teleport from its present location to your hand (or at your feet if your hands are full) at any time before the spell ends. The target teleports to you regardless of the distance between you and it.<br><b>Sacrifice:</b> You can use an action and expend a casting of this spell to teleport yourself to an open space within 1 yard of a target affected by this spell.<br><b>Permanence:</b> You must cast this spell each day on the same target for 100 days."
+  },
+  {
+    "name": "Wall of Runes",
+    "tradition": "Rune",
+    "rank": 3,
+    "type": "Utility",
+    "targetArea": "A line, 20 yards long, 5 yards high, and 5 yards wide, originating from a point within long range",
+    "duration": "1 hour",
+    "desc": "You chant a mystic poem, causing a wall of gleaming runes to appear in the area and remain for the duration. The wall partially covers everything behind it. Each creature in the area when the wall appears must get a success on a Strength challenge roll or become immobilized until the spell ends. A creature immobilized in this way can use an action to make a Strength challenge roll with 1 bane and removes the immobilized affliction from itself on a success.<br>Creatures can enter and exit the area, but they treat it as difficult terrain. In addition, if a creature moves into the area from outside, it must get a success on a Strength challenge roll or become immobilized as described above."
+  },
+  {
+    "name": "Pulsing Glyph",
+    "tradition": "Rune",
+    "rank": 4,
+    "type": "Utility",
+    "targetArea": "A point you can see within short range",
+    "duration": "1 minute",
+    "desc": "A shimmering glyph appears at the target and remains for the duration. When the glyph appears and again at the end of each round until the spell ends, the glyph releases a pulse of energy that spreads out from it in a 5-yard radius. Each creature in the area must make a Strength challenge roll with 1 bane. A creature takes 3d6 damage, moves 1d3 + 1 yards away from the glyph, and falls prone on a failure, or just takes half the damage on a success."
+  },
+  {
+    "name": "Rune of Thunder",
+    "tradition": "Rune",
+    "rank": 4,
+    "type": "Utility",
+    "targetArea": "One weapon you can reach; it can be worn or carried by a creature other than you",
+    "duration": "1 hour",
+    "desc": "A twisting, glowing rune that makes a rumbling noise appears on the weapon and remains for the duration. When a creature gets a success on an attack roll made using the weapon, thunder booms from it. Each creature within 1 yard of the weapon other than the weapon’s wielder must get a success on a Strength challenge roll or take 2d6 + 3 damage from the thunder and become deafened for 1 minute."
+  },
+  {
+    "name": "Rune of Speed",
+    "tradition": "Rune",
+    "rank": 5,
+    "type": "Utility",
+    "targetArea": "One willing creature you can reach",
+    "duration": "1 hour",
+    "desc": "You touch the target and leave behind a glowing rune that lasts for the duration, causing the target to move with astonishing speed. The rune confers all the following benefits:<br>• The target gains a +4 bonus to Speed.<br>• It makes attack rolls with 1 boon.<br>• It makes Agility challenge rolls to resist attacks with 2 boons.<br>• If the target takes a fast turn, it can use an action and move up to its Speed. If the target takes a slow turn, it can use an action and move up to twice its Speed.<br>When the spell ends, the target can immediately move up to its Speed and use an action."
+  },
+  {
+    "name": "Rune of the Giant",
+    "tradition": "Rune",
+    "rank": 5,
+    "type": "Utility",
+    "targetArea": "One willing creature of Size 3 or smaller that you can reach",
+    "duration": "1 hour",
+    "desc": "You touch the target and leave behind a gleaming rune that remains for the duration. When the rune appears, it causes the target to grow larger, gaining a +2 bonus to Size (maximum of Size 4). The rune also affects anything the target wears or carries, causing such items to grow to an appropriate size. While the target has this bonus to its Size, it also has a +2 bonus to Speed and a +20 bonus to Health."
+  },
+  {
+    "name": "Impregnable Rune",
+    "tradition": "Rune",
+    "rank": 6,
+    "type": "Utility",
+    "targetArea": "A point you can reach on a solid surface",
+    "duration": "Until you complete a rest",
+    "desc": "When you cast this spell, you can designate any number of creatures you can see within short range of you to ignore its effects.<br>A golden rune appears at the target and remains for the duration. Each object within 10 yards of the rune becomes immune to damage. Doors within this range close and cannot be opened by anyone other than you or a designated creature. Creatures and objects in the area become immune to any Divination spell that would allow observation of them. Finally, creatures more than 10 yards from the rune cannot use spells or effects that would allow them to teleport to a space within 10 yards of the rune; such effects simply fail."
+  },
+  {
+    "name": "Rune of Warding",
+    "tradition": "Rune",
+    "rank": 6,
+    "type": "Utility",
+    "targetArea": "A point you can reach on a solid surface",
+    "duration": "Until triggered",
+    "desc": "When you cast this spell, you can designate any number of creatures you can see within short range of you to ignore its effects.<br>You touch the target. If you concentrate for 1 minute, you leave behind a magical rune that remains for the duration. Otherwise, the spell ends with no effect.<br>The rune is a magical trap. If a creature other than you or a designated creature moves to within 2 yards of the rune, the rune glows an angry red color that lights the area within 5 yards of it until the end of the round or until no creature other than those designated by you are within this distance. If a creature not designated by you is in the area of light at the end of the round, the rune explodes, ending the spell. The explosion deals 10d6 damage to everything within 5 yards of the rune. A creature can make an Agility challenge roll with 1 bane and takes half the damage on a success."
+  },
+  {
+    "name": "Rune of Madness",
+    "tradition": "Rune",
+    "rank": 7,
+    "type": "Attack",
+    "targetArea": "A point you can see within medium range",
+    "duration": "",
+    "desc": "Choose any number of creatures within 5 yards of you. These creatures cannot see the rune created by this spell.<br>A crawling, obscene rune of twisting green and black lines appears at the target and wreaks havoc with the minds of creatures that can see it before it disappears. Each creature within 20 yards of the rune that can see it, other than those you chose, must get a success on a Will challenge roll with 1 bane or gain Insanity equal to its Will score and go mad."
+  },
+  {
+    "name": "Runic Inscription",
+    "tradition": "Rune",
+    "rank": 8,
+    "type": "Utility",
+    "targetArea": "A point you can see on a solid surface",
+    "duration": "Until triggered",
+    "desc": "When you cast this spell, you can designate any number of creatures you can see within short range of you to ignore the effects of this spell.<br>You inscribe a complex sigil at the target. You must then concentrate for 1 hour. When you finish, you imbue the sigil with power. Choose one of the following effects to take place when triggered. The sigil is triggered when a creature other than you or a designated creature moves to within 2 yards of it.<br><b>Death</b> Dark energy bursts from the sigil, forcing each creature within 5 yards of it to make a Strength challenge roll with 3 banes. A creature takes 10d6 damage on a failure, or damage equal to its Health if the total of its roll is 0 or lower, or takes half the damage on a success.<br><b>Madness</b> A pulse of multicolored light erupts from the sigil. Each creature within 10 yards of it must get a success on a Will challenge roll with 3 banes or gain Insanity equal to its Will score.<br><b>Pain</b> A wave of angry red light spreads out from the sigil. Each creature within 10 yards of it must get a success on a Strength challenge roll with 3 banes or take 2d6 damage and become impaired until it completes a rest. When impaired in this way, the creature is slowed and takes double damage from all sources.<br><b>Sleep</b> Soft music sounds from the sigil. Each creature within 5 yards of it must get a success on a Will challenge roll or fall prone and fall asleep for 2d6 days. A creature that takes any damage immediately removes the asleep affliction from itself.<br><b>Summoning</b> The sigil disappears with a loud bang, and a <b>Huge Demon</b> appears in an open space within 10 yards of the point where the sigil had been. The demon is hostile to all creatures and takes the next available turn."
+  },
+  {
+    "name": "Rune of Damning Light",
+    "tradition": "Rune",
+    "rank": 9,
+    "type": "Utility",
+    "targetArea": "One willing creature you can reach",
+    "duration": "1 hour",
+    "desc": "You touch the target, which causes a white rune to appear at the point you touched. A baleful white radiance shines from the rune, filling the area within 10 yards of the target with light. When the rune appears and at the end of each round until the spell ends, each creature with a Health score of 20 or lower that is within the area of light, other than the creature bearing the rune, takes damage equal to its Health. All other creatures in the area of light must make a Strength challenge roll with 1 bane. A creature takes 6d6 damage on a failure, or becomes immune to the rune’s effect on a success. A creature incapacitated by the spell’s damage dies."
+  },
+  {
+    "name": "Rune of Annihilation",
+    "tradition": "Rune",
+    "rank": 10,
+    "type": "Attack",
+    "targetArea": "One creature or object you can reach",
+    "duration": "",
+    "desc": "Make an Intellect attack roll against the target’s Agility. On a success, you touch the target and leave the rune of annihilation at the spot you touched. The target takes 1d6 damage when the rune appears and at the end of each round until it dies. A target killed by this spell crumbles away to nothing, leaving behind whatever it was wearing or carrying in a heap at the bottom of the space it occupied.<br><b>Aftereffect:</b> Make an Intellect challenge roll with 5 banes. On a failure, the rune of annihilation appears somewhere on your body with the same effects as those described above."
+  },
          {
     "name": "Untouchable Object",
     "tradition": "Protection",
