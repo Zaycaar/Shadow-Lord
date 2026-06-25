@@ -1071,582 +1071,654 @@
         targetArea: "Each creature within 1 mile", 
         desc: "Will challenge (Auto-fail if Health 80 or less). Failure: Gain Insanity equal to Will. Going mad causes target to catch fire. OP" 
     },
-          { 
-        name: "Block Strikes", 
-        tradition: "Telekinesis", 
-        rank: 0, 
-        type: "Utility", 
-        targetArea: "Self", 
-        desc: "1 minute. Gain 1d3 bonus to Defense. Triggered: end the spell to impose 2 banes on an incoming attack roll. OP"
-    },
-    { 
-        name: "Drag", 
-        tradition: "Telekinesis", 
-        rank: 0, 
-        type: "Attack", 
-        targetArea: "One Size 1 or smaller creature or object within medium range", 
-        desc: "Will vs Strength. Success: move target 1d6 + 5 yards toward you. 20+: target also falls prone. OP"
-    },
-    { 
-        name: "Deflecting Field", 
-        tradition: "Telekinesis", 
-        rank: 1, 
-        type: "Utility", 
-        targetArea: "Self", 
-        desc: "1 minute. Flexible force field reduces all incoming damage by 1d6 (minimum 0). OP"
-    },
-    { 
-        name: "Seize", 
-        tradition: "Telekinesis", 
-        rank: 1, 
-        type: "Attack", 
-        targetArea: "One Size 1 or smaller object within medium range", 
-        desc: "Will vs Strength (if carried). Success: wrench object away and move it 20 yards toward you; can catch if hands are free. OP"
-    },
-    { 
-        name: "Smash", 
-        tradition: "Telekinesis", 
-        rank: 2, 
-        type: "Attack", 
-        targetArea: "One creature or object within medium range", 
-        desc: "Will vs Strength. Success: creature takes 3d6 damage and is impaired for 1 round. Objects take 15 damage. OP"
-    },
-    { 
-        name: "Telekinetic Leap", 
-        tradition: "Telekinesis", 
-        rank: 2, 
-        type: "Utility", 
-        targetArea: "Self", 
-        desc: "1 round. +3 Defense bonus. Triggered: fly up to twice your Will score in yards (must land). Sacrifice: cast Crush. OP"
-    },
-    { 
-        name: "Force Missile", 
-        tradition: "Telekinesis", 
-        rank: 3, 
-        type: "Attack", 
-        targetArea: "One creature or object within long range", 
-        desc: "Will vs Agility (+1 boon). Success: 4d6 damage, moves 1d6 yards away, and falls prone. 20+: +2d6 damage. OP"
-    },
-    { 
-        name: "Catch Projectiles", 
-        tradition: "Telekinesis", 
-        rank: 3, 
-        type: "Attack", 
-        targetArea: "Self", 
-        desc: "1 minute (conc). Catch projectiles from Size 2 or smaller creatures; can fire back for 1d6 damage. Triggered: return fire for 4d6 damage. OP"
-    },
-    { 
-        name: "Hover", 
-        tradition: "Telekinesis", 
-        rank: 4, 
-        type: "Utility", 
-        targetArea: "Self", 
-        desc: "1 hour. Gain flight. Triggered: when an enemy fails an attack against you, move up to half your Speed without triggering free attacks. OP"
-    },
-    { 
-        name: "Sweep Aside", 
-        tradition: "Telekinesis", 
-        rank: 4, 
-        type: "Attack", 
-        targetArea: "5-yard cube", 
-        desc: "Strength challenge (-1 bane). Failure: 5d6 damage, move 5 yards in any direction, and fall prone. Success: half damage. OP"
-    },
-    { 
-        name: "Enemy to Weapon", 
-        tradition: "Telekinesis", 
-        rank: 5, 
-        type: "Attack", 
-        targetArea: "One Size 1 or smaller creature within short range", 
-        desc: "Will vs Strength (+2 boons). 1 minute (conc). Grab target and use as a weapon (Will vs Agility) for 4d6+1 damage to both. OP"
-    },
-    { 
-        name: "Mind Fist", 
-        tradition: "Telekinesis", 
-        rank: 5, 
-        type: "Attack", 
-        targetArea: "One creature within long range", 
-        desc: "Will vs Strength. Success: 5d6+10 damage, move 1d6 yards away, prone, and dazed 1 round. 20+: +3d6 damage. OP"
-    },
-    { 
-        name: "Explode", 
-        tradition: "Telekinesis", 
-        rank: 6, 
-        type: "Attack", 
-        targetArea: "Up to three physical creatures within medium range", 
-        desc: "Health 20 or less: target explodes. Health 20+: Will vs Strength for 6d6 damage (+2d6 if injured; explode if incapacitated). OP"
-    },
-    { 
-        name: "Telekinetic Might", 
-        tradition: "Telekinesis", 
-        rank: 6, 
-        type: "Attack", 
-        targetArea: "Self", 
-        desc: "1 hour. Gain flight, Mind Hammer (5d6 damage), Scatter (push back nearby enemies), and ability to move 3 objects as a triggered action. OP"
-    },
-    { 
-        name: "Mental Armor", 
-        tradition: "Telekinesis", 
-        rank: 7, 
-        type: "Utility", 
-        targetArea: "Self", 
-        desc: "Until rest. Invisible field with Health equal to yours takes damage for you. Spend Telekinesis castings to repair the field (1d6 per rank). OP"
-    },
-    { 
-        name: "Stop", 
-        tradition: "Telekinesis", 
-        rank: 8, 
-        type: "Attack", 
-        targetArea: "Any number of creatures within medium range", 
-        desc: "1 hour (conc). Strength challenge (-1 bane) or become defenseless and immobilized. Health 30 or lower fail automatically. OP"
-    },
-    { 
-        name: "Implode", 
-        tradition: "Telekinesis", 
-        rank: 9, 
-        type: "Attack", 
-        targetArea: "One creature within long range", 
-        desc: "Will vs Strength (auto-success if Health 50 or lower). Target takes 50 damage; dies if incapacitated. 20+: +20 damage. OP"
-    },
-    { 
-        name: "Catastrophic Outburst", 
-        tradition: "Telekinesis", 
-        rank: 10, 
-        type: "Attack", 
-        targetArea: "1-mile-long cone", 
-        desc: "Deals 20d6 damage (120 to objects). Strength challenge or move 5d20 yards, fall prone, and be stunned 1 minute. Severe aftereffects. OP"
-    },
-          { 
-        name: "Gatecrasher", 
-        tradition: "Technomancy", 
-        rank: 0, 
-        type: "Utility", 
-        targetArea: "1-yard cube", 
-        desc: "1 hour. Construct a tiny device that adheres to an object. At the end of the round it is used, the object takes 4d6 damage. OP" 
-    },
-    { 
-        name: "Unfailing Tracker", 
-        tradition: "Technomancy", 
-        rank: 0, 
-        type: "Attack", 
-        targetArea: "One creature or object within short range", 
-        desc: "Intellect vs Agility. Success: Bond a sensor to target. For 1 hour, you know its exact location within 1 mile. OP" 
-    },
-    { 
-        name: "Electrified Chain", 
-        tradition: "Technomancy", 
-        rank: 1, 
-        type: "Attack", 
-        targetArea: "Self", 
-        desc: "1 minute. Create a chain (whip) dealing +2d6 electricity damage. Use Intellect for attacks. 20+ and beats TN by 5: target is dazed. OP" 
-    },
-    { 
-        name: "Incandescent Bomb", 
-        tradition: "Technomancy", 
-        rank: 1, 
-        type: "Utility", 
-        targetArea: "3-yard-radius sphere", 
-        desc: "4 hours. Throw a device that explodes for 2d6 damage. Agility challenge or become blinded for 1 minute; success takes half damage. OP" 
-    },
-    { 
-        name: "Detonation Marbles", 
-        tradition: "Technomancy", 
-        rank: 2, 
-        type: "Attack", 
-        targetArea: "One creature or object within short range", 
-        desc: "Intellect vs Agility (+1 boon). Target is impaired and slowed for 1 round, then balls explode for 3d6 damage to target and nearby. OP" 
-    },
-    { 
-        name: "Mines", 
-        tradition: "Technomancy", 
-        rank: 2, 
-        type: "Utility", 
-        targetArea: "Ground inside a 10-yard cube", 
-        desc: "1 hour. Conceal 5 mines. Triggered mines deal 2d6 damage (Agility challenge for half) in a 3-yard radius. Sacrifice: cast Incandescent Bomb. OP" 
-    },
-    { 
-        name: "Dark Helmet", 
-        tradition: "Technomancy", 
-        rank: 3, 
-        type: "Utility", 
-        targetArea: "One head", 
-        desc: "4 hours. Wearer gains +1 Defense, darksight, and 2 boons on Perception rolls. OP" 
-    },
-    { 
-        name: "Watchful Eyes", 
-        tradition: "Technomancy", 
-        rank: 3, 
-        type: "Utility", 
-        targetArea: "Up to five points within 5 yards", 
-        desc: "12 hours. Five tiny flying sensors shriek when triggered. Struck targets take 2d6+3 damage (Agility challenge); nearby creatures must pass Str challenge or be deafened. OP" 
-    },
-    { 
-        name: "Artillery Turrets", 
-        tradition: "Technomancy", 
-        rank: 4, 
-        type: "Attack", 
-        targetArea: "Up to three 1-yard cubes", 
-        desc: "1 minute. Summon three Size 1 turrets. Each round, turrets fire at targets within long range: Intellect vs Defense (+1 boon) for 2d6+3 damage. OP" 
-    },
-    { 
-        name: "Iron Boots", 
-        tradition: "Technomancy", 
-        rank: 4, 
-        type: "Utility", 
-        targetArea: "One pair of feet", 
-        desc: "4 hours. Wearer gains +4 Speed, can leap 3d6 yards, or use Shattering Kick (Intellect vs Defense) for 3d6 damage and heavy knockback. OP" 
-    },
-    { 
-        name: "Bladed Whirligig", 
-        tradition: "Technomancy", 
-        rank: 5, 
-        type: "Attack", 
-        targetArea: "1-yard cube", 
-        desc: "1 minute. Contraption moves 2d6 yards per round. Creatures within 1 yard take 4d6 damage (Agility challenge for half). OP" 
-    },
-    { 
-        name: "Gatling Gun", 
-        tradition: "Technomancy", 
-        rank: 5, 
-        type: "Utility", 
-        targetArea: "2-yard wide, 60-yard long line", 
-        desc: "1 hour. Heavy firearm deals 4d6 damage to the line. On a roll of 1, the gun explodes for 3d6 damage. OP" 
-    },
-    { 
-        name: "Wall of Gears", 
-        tradition: "Technomancy", 
-        rank: 6, 
-        type: "Utility", 
-        targetArea: "30x6x3 yard line", 
-        desc: "1 hour. Grinding gears deal 6d6 damage on appearance and 3d6 per round. Wall sections shift 1d3 yards each round. OP" 
-    },
-    { 
-        name: "Stonebreaker Bomb", 
-        tradition: "Technomancy", 
-        rank: 6, 
-        type: "Utility", 
-        targetArea: "1-yard cube", 
-        desc: "8 hours. Requires 1 hour concentration. Creates a bomb that explodes in a 30-yard radius for 10d6 damage and sets area on fire. OP" 
-    },
-    { 
-        name: "Steel Titans", 
-        tradition: "Technomancy", 
-        rank: 7, 
-        type: "Utility", 
-        targetArea: "Three 3-yard cubes", 
-        desc: "8 hours. Requires 1 hour concentration and 10 gc parts. Summons three compelled huge constructs to fight for you. OP" 
-    },
-    { 
-        name: "Mobile Fortress", 
-        tradition: "Technomancy", 
-        rank: 8, 
-        type: "Utility", 
-        targetArea: "10-yard cube", 
-        desc: "Until rest. Size 8 vehicle with 150 Health. Armed with a cannon (extreme range, 8d6 damage). Explodes for 10d6 if destroyed. OP" 
-    },
-    { 
-        name: "Dirigible", 
-        tradition: "Technomancy", 
-        rank: 9, 
-        type: "Utility", 
-        targetArea: "10-yard cube", 
-        desc: "Until rest. Gain Pilot profession and an airship. If airborne when spell ends, debris falls for up to 20d6 damage. OP" 
-    },
-    { 
-        name: "World-Breaker Bomb", 
-        tradition: "Technomancy", 
-        rank: 10, 
-        type: "Utility", 
-        targetArea: "1-yard cube", 
-        desc: "Until triggered. 1 hour concentration. Massive explosion with three tiers of Blast, Heat, and Poison damage up to a 1.5-mile radius. OP" 
-    },
-          { 
-        name: "Drench", 
-        tradition: "Storm", 
-        rank: 0, 
-        type: "Utility", 
-        targetArea: "5-yard radius cylinder, 10 yards tall", 
-        desc: "1 round. Heavy rain heavily obscures area and extinguishes unprotected natural flames. OP" 
-    },
-    { 
-        name: "Electric Eel Skin", 
-        tradition: "Storm", 
-        rank: 0, 
-        type: "Utility", 
-        targetArea: "Self", 
-        desc: "1 minute. Metal melee attackers must pass Agi challenge or take 1d6 damage and drop weapon. Triggered: deal 1d3+1 damage and daze target. OP" 
-    },
-    { 
-        name: "Jolt", 
-        tradition: "Storm", 
-        rank: 1, 
-        type: "Attack", 
-        targetArea: "One creature you can reach", 
-        desc: "Will vs Agi (+1 boon vs metal). Success: 1d6+3 damage, target flies 1d3 yards away and falls prone. 20+: +1d6 extra damage. OP" 
-    },
-    { 
-        name: "Sleet", 
-        tradition: "Storm", 
-        rank: 1, 
-        type: "Utility", 
-        targetArea: "10-yard radius cylinder, 20 yards tall", 
-        desc: "1 hour. Partially obscures area. Surfaces become slippery (Agi challenge or fall). Grants 1 boon to Storm/Water spells in area. OP" 
-    },
-    { 
-        name: "Ride the Lightning", 
-        tradition: "Storm", 
-        rank: 2, 
-        type: "Attack", 
-        targetArea: "Two points (Self and one within medium range)", 
-        desc: "Teleport between points via lightning. Deals 1d6+3 damage at start and 2d6 at destination. Sacrifice: cast Forked Lightning. OP" 
-    },
-    { 
-        name: "Storm Blessing", 
-        tradition: "Storm", 
-        rank: 2, 
-        type: "Utility", 
-        targetArea: "Self", 
-        desc: "1 hour. +4 Speed, half damage from cold/lightning/thunder. Ignore weather. Triggered: duration becomes 1 min. Sacrifice: cast Jolt. OP" 
-    },
-    { 
-        name: "Deluge", 
-        tradition: "Storm", 
-        rank: 3, 
-        type: "Utility", 
-        targetArea: "1/2-mile radius cylinder", 
-        desc: "1 hour (outdoors). Heavily obscures area and creates difficult terrain. Extinguishes all flames. Grants 1 boon to Storm/Water spells. OP" 
-    },
-    { 
-        name: "Thunderbolt", 
-        tradition: "Storm", 
-        rank: 3, 
-        type: "Attack", 
-        targetArea: "3-yard-radius sphere", 
-        desc: "Str challenge (-2 banes). Fail: fall prone, stunned 1 round, deafened 1 hour. Success: impaired 1 round. OP" 
-    },
-    { 
-        name: "Cloud Chariot", 
-        tradition: "Storm", 
-        rank: 4, 
-        type: "Utility", 
-        targetArea: "5-yard cube", 
-        desc: "1 hour. Summon flying chariot (50 Health, Size 8). Speed 24 (60 mph). Provides cover and partial obscurement. OP" 
-    },
-    { 
-        name: "Smog", 
-        tradition: "Storm", 
-        rank: 4, 
-        type: "Attack", 
-        targetArea: "12-yard-long cone", 
-        desc: "1 minute. Poisonous smoke heavily obscures area. Str challenge (-1 bane) or 2d6+1 damage and poisoned/fatigued. Wither plants. OP" 
-    },
-    { 
-        name: "Dancing Lightning", 
-        tradition: "Storm", 
-        rank: 5, 
-        type: "Attack", 
-        targetArea: "20-yard-long cone", 
-        desc: "6d6 damage (double vs metal armor). Str challenge: success = half damage; failure = prone and defenseless 1 round. OP" 
-    },
-    { 
-        name: "Bind Storm Genie", 
-        tradition: "Storm", 
-        rank: 5, 
-        type: "Utility", 
-        targetArea: "2-yard cube of smoke/mist", 
-        desc: "1 minute. Transforms target area into a storm genie. Will vs Will: success compels it, failure makes it hostile. OP" 
-    },
-    { 
-        name: "Summon Storm", 
-        tradition: "Storm", 
-        rank: 6, 
-        type: "Utility", 
-        targetArea: "Point in sky within 1 mile", 
-        desc: "1d6 hours. 10x2 mile storm obscures area. High winds (-3 banes to range). Action: call 3d6 damage lightning bolt (Str challenge). OP" 
-    },
-    { 
-        name: "Power of the Storm", 
-        tradition: "Storm", 
-        rank: 6, 
-        type: "Utility", 
-        targetArea: "Self", 
-        desc: "1 hour. +2 Speed and flight. Storm attack spells gain 2 boons, deal +2d6 damage, and targets take 2 banes to resist. OP" 
-    },
-    { 
-        name: "Lightning Storm", 
-        tradition: "Storm", 
-        rank: 7, 
-        type: "Attack", 
-        targetArea: "Up to 10 creatures/objects", 
-        desc: "8d6 damage. Agi challenge (1-3 banes): fail = stunned 1 min and prone; success = prone and half damage. Nearby enemies deafened. OP" 
-    },
-    { 
-        name: "Heart of Winter", 
-        tradition: "Storm", 
-        rank: 8, 
-        type: "Attack", 
-        targetArea: "10-mile radius cylinder", 
-        desc: "3d6 days (outdoors). Heavy snow (1d3+2 ft/day) obscures and creates difficult terrain. Freezing damage to exposed creatures. OP" 
-    },
-    { 
-        name: "Name of the Storm", 
-        tradition: "Storm", 
-        rank: 9, 
-        type: "Utility", 
-        targetArea: "Self", 
-        desc: "1 hour. Cast learned Storm spells (Rank 0-3) without expending castings. Gain access to all Rank 0 Storm spells. OP" 
-    },
-    { 
-        name: "Hurricane", 
-        tradition: "Storm", 
-        rank: 10, 
-        type: "Utility", 
-        targetArea: "Point in sky (200-mile radius)", 
-        desc: "3d6 hours. Massive wind/rain damage, structures flattened. Str challenge or moved 3d6 yards; Agi challenge to avoid 4d6 debris damage. OP" 
-    },
-          { 
-        name: "Frightful Spirit", 
-        tradition: "Spiritualism", 
-        rank: 0, 
-        type: "Utility", 
-        targetArea: "1-yard cube within short range", 
-        desc: "1 round. A ghostly figure imposes 1 bane on rolls for creatures within 1 yard that can see it (unless immune to frightened). OP" 
-    },
-    { 
-        name: "Peer into the Spirit World", 
-        tradition: "Spiritualism", 
-        rank: 0, 
-        type: "Utility", 
-        targetArea: "Self", 
-        desc: "1 minute. See all invisible creatures and objects within short range. OP" 
-    },
-    { 
-        name: "Call Poltergeist", 
-        tradition: "Spiritualism", 
-        rank: 1, 
-        type: "Utility", 
-        targetArea: "1-yard cube within short range", 
-        desc: "1 minute. Summon a poltergeist. Will vs Will: Success makes it compelled; failure lets it act naturally. OP" 
-    },
-    { 
-        name: "Vexing Spirit", 
-        tradition: "Spiritualism", 
-        rank: 1, 
-        type: "Attack", 
-        targetArea: "One creature within short range", 
-        desc: "Will vs Will. Success: Spirit enters target (1 min). Target is frightened; you can move them 3 yards on their failed rolls. 20+: +1d3 Insanity. OP" 
-    },
-    { 
-        name: "Lion Spirit", 
-        tradition: "Spiritualism", 
-        rank: 2, 
-        type: "Utility", 
-        targetArea: "One creature within short range", 
-        desc: "1 minute. Target gains +5 Health, +2 Speed, +2 weapon damage. Can use a triggered action to attack when charging. OP" 
-    },
-    { 
-        name: "Spirit Thrall", 
-        tradition: "Spiritualism", 
-        rank: 2, 
-        type: "Utility", 
-        targetArea: "Self", 
-        desc: "1 hour. Tethered spirit takes half your incoming damage (20 Health). If it dies, you and nearby creatures must pass Will challenge or gain 1 Insanity. OP" 
-    },
-    { 
-        name: "Call Phantom", 
-        tradition: "Spiritualism", 
-        rank: 3, 
-        type: "Utility", 
-        targetArea: "1-yard cube within medium range", 
-        desc: "1 minute. Summon a phantom. Will vs Will: Success makes it compelled; failure lets it act naturally. OP" 
-    },
-    { 
-        name: "Horrifying Spirits", 
-        tradition: "Spiritualism", 
-        rank: 3, 
-        type: "Attack", 
-        targetArea: "5-yard-radius sphere within medium range", 
-        desc: "1 round. Will challenge or take 3d6 damage and 1d3 Insanity. Frightened targets must rush away from origin. OP" 
-    },
-    { 
-        name: "Host of Spirits", 
-        tradition: "Spiritualism", 
-        rank: 4, 
-        type: "Utility", 
-        targetArea: "Self", 
-        desc: "Until rest. 2d6 spirits enter you. Expend spirits to: impose/gain boons/banes, heal when incapacitated, or attack for 2d6 damage and frightened. OP" 
-    },
-    { 
-        name: "Horror of the Spirit World", 
-        tradition: "Spiritualism", 
-        rank: 4, 
-        type: "Attack", 
-        targetArea: "One creature within medium range", 
-        desc: "Will vs Agi. Success: Dragged to Underworld for 1d6 rounds (gain 1d3 Insanity/round). Failure: 2d6 damage. OP" 
-    },
-    { 
-        name: "Call Specter", 
-        tradition: "Spiritualism", 
-        rank: 5, 
-        type: "Utility", 
-        targetArea: "1-yard cube within short range", 
-        desc: "1 minute. Summon a specter. Will vs Will: Success makes it compelled; failure lets it act naturally. OP" 
-    },
-    { 
-        name: "Tormenting Spirit", 
-        tradition: "Spiritualism", 
-        rank: 5, 
-        type: "Attack", 
-        targetArea: "One creature within medium range", 
-        desc: "Will vs Will. Success: Target takes 4d6 damage/round and 2 banes on all rolls. Fail: Creates a hostile wraith instead. OP" 
-    },
-    { 
-        name: "Spirit Bind", 
-        tradition: "Spiritualism", 
-        rank: 6, 
-        type: "Attack", 
-        targetArea: "One living mortal within short range", 
-        desc: "Will vs Will. Success: Charmed/Possessed by spirit (new Int/Will stats). 3 failures makes it permanent. Fail: Creates a hostile specter. OP" 
-    },
-    { 
-        name: "Guiding Spirits", 
-        tradition: "Spiritualism", 
-        rank: 6, 
-        type: "Utility", 
-        targetArea: "Self", 
-        desc: "Until rest. 2d6+3 spirits enter you (+2 boons to Perc). Expend spirits for: 1d6 Insanity attack, 3d6 damage attack, scouting (100 yards), or 1d3 boons on a roll. OP" 
-    },
-    { 
-        name: "Hero Spirit", 
-        tradition: "Spiritualism", 
-        rank: 7, 
-        type: "Utility", 
-        targetArea: "One creature within medium range", 
-        desc: "1 hour. Target gains +2 Defense, +20 Health, 3 boons on rolls, +2d6 weapon damage, and immunity to mental afflictions. OP" 
-    },
-    { 
-        name: "Vision of the Underworld", 
-        tradition: "Spiritualism", 
-        rank: 8, 
-        type: "Attack", 
-        targetArea: "5-yard cube within long range", 
-        desc: "10 minutes. Will challenge (-2 banes) or 1d6 Insanity. Moving inside drags to Underworld. Buffs Spiritualism spells and nearby spirits. OP" 
-    },
-    { 
-        name: "Dragon Spirit", 
-        tradition: "Spiritualism", 
-        rank: 9, 
-        type: "Utility", 
-        targetArea: "One creature within long range", 
-        desc: "10 minutes. Target gains: frightening trait, truesight, flight, spell resistance, +2d6 melee damage, and a 10-yard cone fire breath (4d6+5). OP" 
-    },
-    { 
-        name: "Open the Underworld’s Gates", 
-        tradition: "Spiritualism", 
-        rank: 10, 
-        type: "Attack", 
-        targetArea: "3-yard cube within long range", 
-        desc: "1 hour. Iron gate summons random horrors/spirits every minute. Nearby spirits gain massive buffs. Living creatures within 1 mile die if incapacitated. OP" 
-    },
+         {
+    "name": "Block Strikes",
+    "tradition": "Telekinesis",
+    "rank": 0,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "1 minute",
+    "desc": "An invisible field of force surrounds you, helping to deflect attacks. Roll 1d3. The number rolled becomes your bonus to Defense for the duration. In addition, when a creature you can see attacks you, you can use a triggered action to end the spell and impose 2 banes on the triggering attack roll."
+  },
+  {
+    "name": "Drag",
+    "tradition": "Telekinesis",
+    "rank": 0,
+    "type": "Attack",
+    "targetArea": "One Size 1 or smaller creature or object within medium range",
+    "duration": "",
+    "desc": "You reach out with your mind to snare the target. Make a Will attack roll against the target’s Strength. On a success, you move the target up to 1d6 + 5 yards toward you.<br><b>Attack Roll 20+:</b> The target also falls prone."
+  },
+  {
+    "name": "Deflecting Field",
+    "tradition": "Telekinesis",
+    "rank": 1,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "1 minute",
+    "desc": "A flexible field of telekinetic force surrounds you for the duration. Whenever you take damage from any source, you reduce the amount of damage by 1d6 (to a minimum of 0)."
+  },
+  {
+    "name": "Seize",
+    "tradition": "Telekinesis",
+    "rank": 1,
+    "type": "Attack",
+    "targetArea": "One Size 1 or smaller object you can see within medium range; it can be worn or carried",
+    "duration": "",
+    "desc": "You seize the target with your mind and wrench it away from the creature holding it. If the target is not worn or carried by a creature, you move the object up to 20 yards toward you and, if the target is something you could hold in your hands and you have hands free enough to hold it, you can take it. If the target is worn or carried by a creature, you must make a Will attack roll against the creature’s Strength; on a success, the object moves toward you as described. The force of the movement is sufficient to break cords, ropes, and similar methods of securing items."
+  },
+  {
+    "name": "Smash",
+    "tradition": "Telekinesis",
+    "rank": 2,
+    "type": "Attack",
+    "targetArea": "One creature or object within medium range",
+    "duration": "",
+    "desc": "You loose a pulse of telekinetic force to destroy the target. If you target an object, it takes 15 damage. If you target a creature, make a Will attack roll against the target’s Strength. On a success, the target takes 3d6 damage and becomes impaired for 1 round."
+  },
+  {
+    "name": "Telekinetic Leap",
+    "tradition": "Telekinesis",
+    "rank": 2,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "1 round",
+    "desc": "You gain a +3 bonus to Defense for the duration. At any time before the spell ends, you can use a triggered action to fly up to a number of yards equal to twice your Will score. You must land at the end of this movement, or you fall. This movement does not trigger free attacks.<br><b>Sacrifice:</b> You can use an action and expend a casting of this spell to cast the <b>Crush</b> spell."
+  },
+  {
+    "name": "Force Missile",
+    "tradition": "Telekinesis",
+    "rank": 3,
+    "type": "Attack",
+    "targetArea": "One creature or object you can see within long range",
+    "duration": "",
+    "desc": "You focus your mind, gathering up an undulating ball of invisible force and sending it warbling toward the target. Make a Will attack roll with 1 boon against the target’s Agility. On a success, the target takes 4d6 damage, moves 1d6 yards away from you, and falls prone.<br><b>Attack Roll 20+:</b> The target takes 2d6 extra damage."
+  },
+  {
+    "name": "Catch Projectiles",
+    "tradition": "Telekinesis",
+    "rank": 3,
+    "type": "Attack",
+    "targetArea": "",
+    "duration": "Concentration, up to 1 minute",
+    "desc": "For the duration, whenever a Size 2 or smaller creature you can see uses a ranged weapon or a thrown melee weapon to attack you, you catch the projectile or thrown weapon with your mind so that it stops and hangs in midair in an open space 1 yard away from you in the direction from which the attack came. A creature that can reach the projectile or weapon can take it from the air. Any projectiles or thrown weapons stopped by this spell drop to the ground at the end of the round.<br>While you have at least one projectile or thrown weapon held in midair from this spell, you can use a triggered action at any time to send any or all of them at targets of your choice within medium range. For each projectile or thrown weapon, make a Will attack roll against the target’s Defense. On a success, the projectile or thrown weapon hits and deals 1d6 damage.<br><b>Triggered:</b> When a creature uses a ranged weapon or a thrown melee weapon to attack you, you can use a triggered action to cast this spell. You catch the projectile or thrown weapon with your mind and send it flying back toward the triggering creature. Make a Will attack roll with 1 boon against the creature’s Defense. On a success, the projectile or thrown weapon hits, and the creature takes 4d6 damage instead of the normal damage dealt by the weapon."
+  },
+  {
+    "name": "Hover",
+    "tradition": "Telekinesis",
+    "rank": 4,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "1 hour",
+    "desc": "You wrap yourself in bands of telekinetic force and lift yourself into the air. For the duration, you can move by flying. In addition, whenever a creature you can see gets a failure on an attack roll made against your Defense or Agility, you can use a triggered action to move up to half your Speed. This movement does not trigger free attacks."
+  },
+  {
+    "name": "Sweep Aside",
+    "tradition": "Telekinesis",
+    "rank": 4,
+    "type": "Attack",
+    "targetArea": "A cube of space, 5 yards on a side, originating from a point you can reach",
+    "duration": "",
+    "desc": "You sweep your mind across the area, forcing each creature you choose in the area to make a Strength challenge roll with 1 bane. A creature takes 5d6 damage, moves up to 5 yards in a direction you choose, and falls prone on a failure. On a success, the creature just takes half the damage."
+  },
+  {
+    "name": "Enemy to Weapon",
+    "tradition": "Telekinesis",
+    "rank": 5,
+    "type": "Attack",
+    "targetArea": "One Size 1 or smaller creature within short range",
+    "duration": "Concentration, up to 1 minute",
+    "desc": "You snatch the target with telekinetic force. Make a Will attack roll with 2 boons against the target’s Strength. On a success, the target becomes grabbed for as long as you concentrate, up to 1 minute. The grabbed affliction persists regardless of how far away you are from the target. If the target uses an action to escape the grab, it must make its attack roll against your Will, and the target makes the roll with 2 banes.<br>When you grab the target, and again when you use an action to concentrate on the spell, you can move the target up to 10 yards and use it as a weapon against a creature or object within 1 yard of it. When you do so, make a Will attack roll against the Agility of the creature you are attacking. On a success, the grabbed target and the creature you attacked each take 4d6 + 1 damage.<br><b>Attack Roll 20+:</b> You make attack rolls when using the target as a weapon with 2 boons."
+  },
+  {
+    "name": "Mind Fist",
+    "tradition": "Telekinesis",
+    "rank": 5,
+    "type": "Attack",
+    "targetArea": "One creature you can see within long range",
+    "duration": "",
+    "desc": "You direct a concentrated burst of mental force at the target. Make a Will attack roll against the target’s Strength. On a success, the target takes 5d6 + 10 damage, moves 1d6 yards away from you, falls prone, and becomes dazed for 1 round.<br><b>Attack Roll 20+:</b> The target takes 3d6 extra damage."
+  },
+  {
+    "name": "Explode",
+    "tradition": "Telekinesis",
+    "rank": 6,
+    "type": "Attack",
+    "targetArea": "Up to three creatures with physical bodies within medium range",
+    "duration": "",
+    "desc": "You use your mind to tear each target apart. If the target has a Health score of 20 or lower, it explodes, showering everything within 2 yards with whatever it’s made from. If the target has a Health score greater than 20, make a Will attack roll against the target’s Strength. On a success, the target takes 6d6 damage. If the target becomes injured from taking this damage, it takes 2d6 extra damage. If the target becomes incapacitated, it explodes, killing it instantly.<br><b>Attack Roll 20+:</b> The target takes 2d6 extra damage."
+  },
+  {
+    "name": "Telekinetic Might",
+    "tradition": "Telekinesis",
+    "rank": 6,
+    "type": "Attack",
+    "targetArea": "",
+    "duration": "1 hour",
+    "desc": "You harness the power of your mind. Until the spell ends, you gain the following benefits.<br><b>Mind Hammer;</b> You can use an action to make a Will attack roll against the Strength of one creature you can see within medium range. On a success, you smash the creature with telekinetic force, causing it to take 5d6 damage. If the total of your attack roll is 20 or higher and beats the target number by at least 5, the creature takes 2d6 extra damage.<br><b>Scatter:</b> You can use an action to force each creature you choose within short range of you to make a Strength challenge roll with 1 bane. On a failure, the creature moves in a straight line away from you a number of yards equal to 1d6 + your Power score. If the roll fails by 5 or more, the creature also falls prone.<br><b>Move Objects:</b> You can use an action, or a triggered action on your turn, to move up to three Size 1 or smaller objects you can see within medium range up to 5 yards in any direction. If you do not end the object’s movement on a solid surface, it hangs suspended in the air until you move it again or the spell ends.<br><b>Lift Self:</b> You can move by flying."
+  },
+  {
+    "name": "Mental Armor",
+    "tradition": "Telekinesis",
+    "rank": 7,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "Until you complete a rest; see the effect",
+    "desc": "You surround yourself with an invisible field of force that lasts for the duration. The field uses your Defense and has a Health score equal to yours. When you take damage, the damage applies to the field. If the field’s damage total equals or exceeds its Health, the spell ends. Any damage the field would take in excess of its Health instead applies to you.<br>You can use an action, or a triggered action on your turn, and expend the casting of a Telekinesis spell to remove damage from the field. You remove 1d6 damage for every rank of the spell (rank 0 spells count as rank 1)."
+  },
+  {
+    "name": "Stop",
+    "tradition": "Telekinesis",
+    "rank": 8,
+    "type": "Attack",
+    "targetArea": "Any number of creatures you choose within medium range",
+    "duration": "",
+    "desc": "Bands of invisible force encircle the targets. Each target must get a success on a Strength challenge roll with 1 bane or become defenseless for as long as you concentrate, up to 1 hour. When defenseless in this way, a target is also immobilized. A creature with a Health score of 30 or lower automatically gets a failure on its roll.<br>When a creature made defenseless by this spell takes damage, it can make a Strength challenge roll with 1 bane. On a success, the creature removes the affliction from itself."
+  },
+  {
+    "name": "Implode",
+    "tradition": "Telekinesis",
+    "rank": 9,
+    "type": "Attack",
+    "targetArea": "One creature you can see within long range",
+    "duration": "",
+    "desc": "You grasp the target with invisible force, causing it to collapse in on itself. Make a Will attack roll against the target’s Strength. If the target has a Health score of 50 or lower, you get an automatic success. On a success, the target takes 50 damage. If the damage causes the target to become incapacitated, it dies, collapsed beyond recognition.<br><b>Attack Roll 20+:</b> The target takes 20 extra damage."
+  },
+  {
+    "name": "Catastrophic Outburst",
+    "tradition": "Telekinesis",
+    "rank": 10,
+    "type": "Attack",
+    "targetArea": "A 1-mile-long cone originating from a point within your space",
+    "duration": "",
+    "desc": "A wave of force smashes through the area, dealing 20d6 damage to every creature in it. Objects in the area take 120 damage instead. Creatures in the area make a Strength challenge roll. A creature moves 5d20 yards in a straight line away from you, falls prone, and becomes stunned for 1 minute on a failure, or just takes half the damage on a success.<br><b>Aftereffect:</b> You must make an Intellect challenge roll with 5 banes. You become stunned for 1d6 rounds on a success, or you gain 3d6 Insanity on a failure. If you would go mad from gaining this Insanity, your head explodes and you die instantly."
+  },
+          {
+    "name": "Gatecrasher",
+    "tradition": "Technomancy",
+    "rank": 0,
+    "type": "Utility",
+    "targetArea": "A cube of space, 1 yard on a side, originating from a point you can reach",
+    "duration": "1 hour",
+    "desc": "You construct a Size 1/8 device that retains potency for the duration. The device has Defense 5 and Health 5. You can use an action to touch the device to an object you can reach and that is not worn or carried by a creature other than you. The device adheres to the object to which it is touched and begins to vibrate. At the end of the round in which the device was used, the object to which it was affixed takes 4d6 damage and the spell ends."
+  },
+  {
+    "name": "Unfailing Tracker",
+    "tradition": "Technomancy",
+    "rank": 0,
+    "type": "Attack",
+    "targetArea": "One creature or object within short range",
+    "duration": "1 hour",
+    "desc": "You fling a sensor at the target. Make an Intellect attack roll against the target’s Agility. On a success, the sensor hits the target and bonds to it. If you targeted a creature, the creature is unaware of the sensor until it finds it by getting a success on a Perception challenge roll. Provided the target is within 1 mile of you, you know the target’s exact location, which prevents the target from becoming hidden from you. A creature can use an action to remove the sensor."
+  },
+  {
+    "name": "Electrified Chain",
+    "tradition": "Technomancy",
+    "rank": 1,
+    "type": "Attack",
+    "targetArea": "",
+    "duration": "1 minute",
+    "desc": "You construct a copper chain and send an electrical current through. The chain remains for the duration. When you cast the spell, and again when you use an action to do so, you can attack with the chain. The chain counts as a whip that deals 2d6 damage from electricity in addition to its normal damage. You can substitute Intellect for the attribute you would normally use to make this attack. In addition, if you attack with the chain and the total of your attack roll is 20 higher and beats the target number by at least 5, the target of your attack is also dazed for 1 round."
+  },
+  {
+    "name": "Incandescent Bomb",
+    "tradition": "Technomancy",
+    "rank": 1,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "4 hours; see the effect",
+    "desc": "You construct a small explosive device. You, or another creature holding the device, can use an action to throw the device to a point within medium range. When the device reaches that point or impacts against a solid surface before then, it explodes in a 3-yard radius, dealing 2d6 damage to everything in the area. A creature in the area can make an Agility challenge roll. A creature also becomes blinded for 1 minute on a failure, or it just takes half the damage on a success. When the device explodes or the duration expires, the spell ends."
+  },
+  {
+    "name": "Detonation Marbles",
+    "tradition": "Technomancy",
+    "rank": 2,
+    "type": "Attack",
+    "targetArea": "One creature or object on the ground within short range",
+    "duration": "1 round; see the effect",
+    "desc": "You toss metal balls onto the ground, freeing them to roll toward the target. Make an Intellect attack roll with 1 boon against the target’s Agility. On a success, the balls roll up to cover the target’s body or surface and remain there for 1 round. While covered in balls, the target is impaired and slowed. When the effect ends, the balls explode, dealing 3d6 damage to the target and everything within 1 yard of it. A creature in the area can make an Agility challenge roll and takes half the damage on a success.<br><b>Attack Roll 20+:</b> The target takes 1d6 damage."
+  },
+  {
+    "name": "Mines",
+    "tradition": "Technomancy",
+    "rank": 2,
+    "type": "Utility",
+    "targetArea": "The ground inside a cube of space, 10 yards on a side, originating from a point within medium range",
+    "duration": "1 hour; see the effect",
+    "desc": "You conceal 5 mines under spaces within the area. When a creature moves in the area, you can decide to trigger one mine, causing it to explode in a 3-yard radius and deal 2d6 damage to everything in the area. A creature can make an Agility challenge roll and takes half the damage on a success. A particular creature cannot trigger more than one mine per round. When the last mine detonates, the spell ends.<br><b>Sacrifice:</b> You can use an action and expend a casting of this spell to cast the <b>Incandescent Bomb</b> spell."
+  },
+  {
+    "name": "Dark Helmet",
+    "tradition": "Technomancy",
+    "rank": 3,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "4 hours",
+    "desc": "Upon casting this spell, you must concentrate for 1 minute, during which time you use a tool kit to work with spare parts. When you finish, you have a helmet that can fit on your head or the head of a similarly sized creature. The helmet retains its potency for the duration, then crumbles into spare parts when the spell ends.<br>A creature that wears the helmet gains a +1 bonus to Defense, gains the darksight trait, and makes all Perception rolls with 2 boons."
+  },
+  {
+    "name": "Watchful Eyes",
+    "tradition": "Technomancy",
+    "rank": 3,
+    "type": "Utility",
+    "targetArea": "Up to five points within 5 yards of you",
+    "duration": "12 hours; see the effect",
+    "desc": "You create up to five tiny clockwork eyes that each fly toward a different point and remain there for the duration. Spotting one of these sensors requires a success on a Perception challenge roll with 1 bane.<br>When you cast this spell, you can designate any number of creatures that don’t set off the warding eyes. When a creature you did not designate moves to within 1 yard of a sensor, the device emits a high-pitched shriek that can be heard from up to 1 mile away and then moves to slam into the creature’s body. The creature must get a success on an Agility challenge roll with 1 bane or be struck by the sensor and take 2d6 + 3 damage.<br>In addition, each creature within 20 yards of the sensor must get a success on a Strength challenge roll or become deafened for 1 minute.<br>Whether the creature struck by a sensor gets a success or failure, the sensor is destroyed when triggered in this way. The spell ends when the last sensor is destroyed."
+  },
+  {
+    "name": "Artillery Turrets",
+    "tradition": "Technomancy",
+    "rank": 4,
+    "type": "Attack",
+    "targetArea": "Up to three cubes of space, each 1 yard on a side, resting on a solid surface, and originating from points you can reach",
+    "duration": "1 minute",
+    "desc": "A Size 1 artillery turret appears in each area and remains for the duration or until it is destroyed. A turret has Defense 5 and Health equal to 5 + your Intellect score.<br>At the end of each round until the spell ends, each turret loads and fires a quarrel at a creature or object within long range of it. For each turret, make an Intellect attack roll with 1 boon against the creature’s or object’s Defense. On a success, the missile hits its target and deals 2d6 + 3 damage to it.<br><b>Attack Roll 20+:</b> The creature or object takes 1d6 extra damage."
+  },
+  {
+    "name": "Iron Boots",
+    "tradition": "Technomancy",
+    "rank": 4,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "4 hours",
+    "desc": "You construct a pair of mechanized shoes and place them on your feet or the feet of one willing creature you can reach. The shoes remain for the duration, after which time they crumble into spare parts. While wearing the boots, you or another recipient has a +4 bonus to Speed and perform the following acts.<br><b>Astonishing Leap:</b> Once per round, while you are moving, you can jump up to 3d6 yards in any direction and land safely. Distance moved on this jump does not count against the maximum distance you can move on your turn.<br><b>Shattering Kick:</b> You can use an action to kick one creature you can reach, treating the boots as a weapon. Make an Intellect attack roll with 1 boon against the creature’s Defense. On a success, the creature takes 3d6 damage, moves 3d6 + 6 yards away from you, and falls prone. If the creature cannot move the full distance away from you because it encounters a solid surface, the creature and the surface it struck each take 1 damage for every 3 yards the target was prevented from moving.<br>When you use this option, roll a d6. On a 1, the boots break and the spell ends."
+  },
+  {
+    "name": "Bladed Whirligig",
+    "tradition": "Technomancy",
+    "rank": 5,
+    "type": "Attack",
+    "targetArea": "A cube of space, 1 yard on a side, originating from a point you can reach",
+    "duration": "1 minute; see effect",
+    "desc": "You construct a bladed contraption inside the area that remains for the duration or until it is destroyed. The bladed whirligig has Defense equal to your Intellect score and Health equal to twice your Intellect score. At the end of each round until the spell ends, the whirligig spins and moves 2d6 yards in a manner you choose.<br>Each creature within 1 yard of the whirligig as it moves must make a successful Agility challenge roll or take 4d6 damage from the slashing blades. A creature makes this roll just once per round per casting of this spell, regardless of how many times the whirligig passes it."
+  },
+  {
+    "name": "Gatling Gun",
+    "tradition": "Technomancy",
+    "rank": 5,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "1 hour; see the effect",
+    "desc": "You construct a heavy firearm with a rotating barrel that remains for the duration. The weapon magically creates its own ammunition. You can use an action to attack with the gatling gun, firing a stream of bullets into a 2-yard wide, 60-yard long line until the end of the round. The bullets deal 4d6 damage to everything in the line and any creature that enters it, though a creature can take this damage just once per round. A creature in the line when the spell is cast can make an Agility challenge roll with 1 bane and takes no damage on a success.<br>Each time you attack with the weapon, roll a d6. On a 2, the weapon jams, and you must use an action to clear the jam before you can attack with it again. On a 1, the weapon explodes, ending the spell, and dealing 3d6 damage to you and everything else within a 5-yard-radius sphere centered on a point in your space. A creature other than you in the sphere can make an Agility challenge roll with 1 bane and takes half the damage on a success."
+  },
+  {
+    "name": "Wall of Gears",
+    "tradition": "Technomancy",
+    "rank": 6,
+    "type": "Utility",
+    "targetArea": "A line, 30 yards long, 6 yards high, and 3 yards wide, originating from a point within long range",
+    "duration": "1 hour",
+    "desc": "A wall formed of grinding gears forms inside the area and remains in place for the duration. The wall totally covers everything behind it. Each 1-yard section of wall has Health 25. When the wall appears, everything in its space takes 6d6 damage. A creature in the area takes half the damage with a success on an Agility challenge roll.<br>Creatures can move through the area, but they treat it as difficult terrain. When a creature moves into a new space inside the area or if it is inside the area at the end of the round, the creature must get a success on an Agility challenge roll or take 3d6 damage.<br>At the end of each round, the wall moves. For every 10 yards of its length, roll a d6. On an odd number, the section of wall moves 1d3 yards toward you. On an even number, the section of wall moves 1d3 yards away from you. Anything whose space a wall’s section moves into takes 4d6 damage. A creature takes half the damage with a success on an Agility challenge roll.<br>Finally, any clockwork creature that is an object at the end of the round and within 1 yard of the wall has its key turned automatically."
+  },
+  {
+    "name": "Stonebreaker Bomb",
+    "tradition": "Technomancy",
+    "rank": 6,
+    "type": "Utility",
+    "targetArea": "A cube of space, 1 yard on a side, originating from a point you can reach",
+    "duration": "8 hours; see the effect",
+    "desc": "Upon casting this spell, you must concentrate for 1 hour, during which time you use your tools to create an explosive device. If you finish, you create an unstable bomb in the area that remains for the duration or until you set it off. The bomb has Defense 5 and Health equal to your Intellect score. It counts as three items for determining your carrying limit. If the bomb is destroyed, it detonates as described below.<br>At any time before the spell ends, you can set the bomb’s timer, causing it to explode at a time you specify. If you choose not to set the timer, the device becomes nonfunctional when the spell ends. The time you specify can be from 1 round to 8 hours. When the specified time has passed, the bomb explodes, dealing 10d6 damage to everything in a 30-yard-radius sphere centered on a point in its space. Flammable objects in the area catch fire. Creatures in the area must make Agility challenge rolls, taking half the damage on a success, or also catching fire on a failure."
+  },
+  {
+    "name": "Steel Titans",
+    "tradition": "Technomancy",
+    "rank": 7,
+    "type": "Utility",
+    "targetArea": "Three cubes of space, each 3 yards on a side, originating from points you can reach",
+    "duration": "8 hours; see the effect",
+    "desc": "<b>Requirement:</b> Spare parts, metal plating, gears, and other junk worth a total of 10 gc.<br>Upon casting this spell, you must concentrate for 1 hour, during which time you use your tools to create three steel titans. If you finish, a compelled <b>Huge Construct</b> appears inside each area and remains for the duration or until the construct is destroyed, at which point it crumbles into piles of junk."
+  },
+  {
+    "name": "Mobile Fortress",
+    "tradition": "Technomancy",
+    "rank": 8,
+    "type": "Utility",
+    "targetArea": "A cube of space, 10 yards on a side, resting on a solid surface and originating from a point you can reach",
+    "duration": "Until you complete a rest; see the effect",
+    "desc": "A mobile fortress appears inside the area and remains for the duration. The fortress is a Size 8 object with Health 150. It takes no damage from cold and takes half damage from all other sources. The maximum Speed for this vehicle is 20 (acceleration 5/deceleration 2), and it ignores the effects of moving across difficult terrain. The vehicle is self-propelled, though it requires a driver to steer it.<br>Creatures can enter and exit the vehicle through one of two hatches. The fortress can hold creatures and objects whose total Size does not exceed 20 and no individual creature greater than Size 2.<br>The fortress also comes equipped with a heavy cannon. A creature inside the fortress can use an action to fire the cannon, sending a projectile to a point within extreme range. When the projectile reaches that point or encounters a solid surface before then, the projectile explodes in a 10-yard radius, dealing 8d6 damage to everything in that area. A creature in the area can make an Agility challenge roll and takes half the damage on a success. Once the cannon is fired in this way, you must wait at least 1 minute before it can be fired again.<br>If the fortress is destroyed, it explodes in a 10-yard-radius sphere centered on a point in its space, dealing 10d6 damage to everything in the area. A creature in the area can make an Agility challenge roll and takes half the damage on a success.<br>When the spell ends, the fortress crumbles into a pile of difficult terrain that remains until cleared away.<br>Aftereffect You must make a Strength challenge roll with 4 banes. On a success, you become impaired for 1d3 hours. On a failure, you become impaired for 1d6 days. While impaired in this way, you have a –3 penalty to your Power score."
+  },
+  {
+    "name": "Dirigible",
+    "tradition": "Technomancy",
+    "rank": 9,
+    "type": "Utility",
+    "targetArea": "A cube of space, 10 yards on a side, resting on a solid surface and originating from a point you can reach",
+    "duration": "Until you complete a rest; see the effect",
+    "desc": "You gain the pilot profession, and an airship (Demon Lord’s Companion, page 32) appears inside the area and remains in existence for the duration. When the spell ends, the airship crumbles into a pile of difficult terrain that remains until cleared away. If the airship is airborne when the spell ends, the difficult terrain rains down onto the ground under its space, dealing an amount of damage equal to 2d6 plus an extra 2d6 for every 5 yards the debris falls (maximum damage 20d6) to every creature and object under it. A creature in the area of falling debris can make an Agility challenge roll and takes half the damage on a success."
+  },
+  {
+    "name": "World-Breaker Bomb",
+    "tradition": "Technomancy",
+    "rank": 10,
+    "type": "Utility",
+    "targetArea": "A cube of space, 1 yard on a side, resting on a solid surface and originating from a point you can reach",
+    "duration": "Until triggered or you cast this spell again",
+    "desc": "Upon casting this spell, you must concentrate for 1 hour, during which time you use your tools to create an explosive device. If you finish, you create an unstable bomb in the area that remains for the duration or until you set it off. The bomb has Defense 5 and Health equal to your Intellect score. It counts as three items for determining your carrying limit. If the bomb is destroyed, it detonates as described below.<br>At any time before the spell ends, you can set the bomb’s timer, causing it to explode at a time you specify. The time can be from 1 round to 24 hours. The explosion has three effects: blast, heat, and poison, each of which are described below.<br><b>Blast:</b> The explosion is so forceful that it annihilates everything within its immediate environs and delivers appalling damage to everything around it.<br>• Everything within a 200-yard-radius sphere centered on the bomb’s space takes 20d6 damage.<br>• Everything more than 200 yards from the bomb’s space but within 600 yards of it takes 10d6 damage. A creature that would take this damage can make an Agility challenge roll with 3 banes and takes half the damage on a success.<br>• Everything more than 600 yards away from the bomb’s space but within 1 mile of it takes 5d6 damage. A creature that would take this damage can make an Agility challenge roll with 1 bane and takes half the damage on a success.<br><b>Heat:</b> Intense heat radiates from the explosion.<br>• Every creature and flammable object inside a 500-yard-radius sphere centered on the bomb’s space takes 20d6 damage from fire and catches fire. A creature that catches fire takes 1d6 damage from the flames at the end of each round until the fire is extinguished.<br>• Everything more than 500 yards from the bomb’s space but within 600 yards of it takes 10d6 damage. A creature in the area must make an Agility challenge roll with 3 banes. The creature takes half the damage on a success, or also catches fire on a failure.<br>• Everything more than 600 yards away from the bomb’s space but within 1/2 mile of it takes 5d6 damage. A creature in this area must make an Agility challenge roll with 1 bane and takes half the damage on a success.<br><b>Poison:</b> The explosion blankets the area around it with lethal toxins.<br>• All living creatures within 1 mile of the bomb’s space take 10d6 damage from the poison and become poisoned. When poisoned in this way, a creature takes 1d6 damage at the end of each minute until it dies.<br>• Each living creature within 1-1/2 miles of the bomb’s space takes 5d6 damage from the poison and must make a Strength challenge roll with 3 banes. A creature takes half the damage on a success, or also becomes poisoned on a failure. When poisoned in this way, the creature must get a success on a Strength challenge roll with 3 banes at the end of each hour or take 1d6 damage from the poison. After three successes, the creature removes the poisoned affliction from itself.<br><b>Aftereffect:</b> You must make a Strength challenge roll with 5 banes. On a success, you take 5d6 damage and become impaired for 3d6 weeks. When impaired in this way, you cannot heal damage, and each time you complete a rest, you must get a success on a Strength challenge roll with 2 banes or take 3d6 damage. On a failure, you take damage equal to your Health, and your body dissolves into a stinking puddle that never, ever dries."
+  },
+          {
+    "name": "Drench",
+    "tradition": "Storm",
+    "rank": 0,
+    "type": "Utility",
+    "targetArea": "A cylinder, 10 yards tall with a 5-yard radius, centered on a point within medium range",
+    "duration": "1 round",
+    "desc": "A heavy rain falls in the area for the duration. The rain heavily obscures the area and extinguishes all unprotected, natural flames. The rain might have other effects at the GM’s discretion."
+  },
+  {
+    "name": "Electric Eel Skin",
+    "tradition": "Storm",
+    "rank": 0,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "1 minute",
+    "desc": "For the duration, when a creature that touches you or deals damage to you with a melee weapon made of metal, the creature must get a success on an Agility challenge roll or take 1d6 damage and drop whatever it is holding. That object slides 1d6 yards away in a direction you choose.<br><b>Triggered:</b> When a creature touches you or deals damage to you with a melee weapon made of metal, you can use a triggered action to cast this spell. The triggering creature must get a success on an Agility challenge roll with 3 banes or take 1d3 + 1 damage and become dazed for 1 round. The spell then ends."
+  },
+  {
+    "name": "Jolt",
+    "tradition": "Storm",
+    "rank": 1,
+    "type": "Attack",
+    "targetArea": "One creature you can reach",
+    "duration": "",
+    "desc": "Lightning crackles over your hand as you reach out to touch the target. Make a Will attack roll against the target’s Agility. If the target is made of metal or wears metal armor, you make the attack roll with 1 boon. On a success, you touch the target, shocking it for 1d6 + 3 damage. The target then flies 1d3 yards away from you and falls prone.<br><b>Attack Roll 20+:</b> The target takes 1d6 extra damage."
+  },
+  {
+    "name": "Sleet",
+    "tradition": "Storm",
+    "rank": 1,
+    "type": "Utility",
+    "targetArea": "A cylinder, 20 yards tall with a 10-yard radius, centered on a point within long range",
+    "duration": "1 hour",
+    "desc": "Sleet falls from the top of the area to blanket the ground under it. The area becomes partially obscured for the duration. At the start of the next round, surfaces covered by the sleet become slippery. Any creature that moves at least 2 yards across such a surface must get a success on an Agility challenge roll or fall prone and stop moving for that turn.<br>Finally, the spell empowers Storm and Water attack spells cast from the area or into it. When a creature casts an attack spell from either of these traditions, the spell grants 1 boon on the attack roll or imposes 1 bane on challenge rolls made to resist the spell."
+  },
+  {
+    "name": "Ride the Lightning",
+    "tradition": "Storm",
+    "rank": 2,
+    "type": "Attack",
+    "targetArea": "Two points, one in your space and the other on a flat surface within medium range",
+    "duration": "",
+    "desc": "Requirement You must be outdoors<br>A bolt of lightning erupts at the point in your space and streaks up into the sky, carrying you with it. The lightning deals 1d6 + 3 damage to everything within 2 yards of it. A creature that gets a success on an Agility challenge roll takes half the damage.<br>Then, a second bolt of lightning drops from the sky to strike the second point, dealing 2d6 damage to everything within 2 yards of it. A creature that gets a success on an Agility challenge roll takes half the damage. You then reappear safely in an open space within 2 yards of the second point.<br><b>Sacrifice:</b> You can use an action and expend a casting of this spell to cast the <b>Forked Lightning</b> spell."
+  },
+  {
+    "name": "Storm Blessing",
+    "tradition": "Storm",
+    "rank": 2,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "1 hour",
+    "desc": "For the duration, you have a +4 bonus to Speed and you take half damage from cold, lightning, and thunder. Unless you choose otherwise, normal precipitation does not touch you, light wind does not affect you, and you are not discomfited by minor cold or heat.<br><b>Triggered:</b> On your turn, you can use a triggered action to cast this spell. The duration becomes 1 minute.<br><b>Sacrifice:</b> You can use an action and expend a casting of this spell to cast the <b>Jolt</b> spell."
+  },
+  {
+    "name": "Deluge",
+    "tradition": "Storm",
+    "rank": 3,
+    "type": "Utility",
+    "targetArea": "A cylinder with a 1/2-mile radius that reaches up to the sky, centered on a point on the ground you can reach",
+    "duration": "1 hour",
+    "desc": "Requirement You must be outdoors<br>Black clouds gather above the area and release a torrential downpour that lasts for the duration. The area becomes heavily obscured and difficult terrain. The rain extinguishes all flames, natural and magical, in the area. The spell might have additional effects at the GM’s discretion.<br>Finally, the spell empowers Storm and Water attack spells cast from the area or into it. When a creature casts an attack spell from either of these traditions, the spell grants 1 boon on the attack roll or imposes 1 bane on challenge rolls made to resist the spell.<br><b>Sacrifice:</b> You can use an action and expend a casting of this spell to cast the <b>Poisonous Fog</b> spell."
+  },
+  {
+    "name": "Thunderbolt",
+    "tradition": "Storm",
+    "rank": 3,
+    "type": "Attack",
+    "targetArea": "A 3-yard-radius sphere centered on a point within medium range",
+    "duration": "",
+    "desc": "A deafening noise erupts from the center of the area that can be heard from up to 1 mile away. Each creature in the area that can hear the noise must make a Strength challenge roll with 2 banes. A creature falls prone, becomes stunned for 1 round, and becomes deafened for 1 hour on a failure, or impaired for 1 round on a success. Each creature within 20 yards of the area must get a success on a Strength challenge roll or become deafened for 1 minute."
+  },
+  {
+    "name": "Cloud Chariot",
+    "tradition": "Storm",
+    "rank": 4,
+    "type": "Utility",
+    "targetArea": "A cube of space, 5 yards on a side, originating from a point within short range",
+    "duration": "1 hour",
+    "desc": "Clouds gather inside the area until they take the shape of a chariot drawn by four winged horses. The chariot and horses count as one object with Health 50. The chariot can hold creatures and objects whose total Size does not exceed 8. The maximum Speed for this vehicle is 24 (acceleration 6/deceleration 6) in combat or 60 miles per hour out of combat. The vehicle can move by flying. The chariot moves as you direct it using spoken commands, and the vehicle follows your most recent command until you give it a new one.<br>The chariot provides cover to all its occupants, and its space is partially obscured by the clouds. If the spell ends while the chariot is airborne, its occupants fall.<br><b>Sacrifice:</b> You can use an action and expend a casting of this spell to cast the <b>Hailstorm</b> spell."
+  },
+  {
+    "name": "Smog",
+    "tradition": "Storm",
+    "rank": 4,
+    "type": "Attack",
+    "targetArea": "A 12-yard-long cone originating from a point you can reach",
+    "duration": "1 minute; see the effect",
+    "desc": "Thick, billowing clouds of foul-smelling smoke come pouring out from your hand to fill the area. At the end of each round until the spell ends, the smoke spreads 1d3 yards out from the area. The smoke heavily obscures its area and makes the area difficult terrain.<br>When you cast the spell and at the end of each round thereafter, each living and breathing creature in the area must make a Strength challenge roll with 1 bane. A creature takes 2d6 + 1 damage from the poisonous vapors and becomes poisoned for 1 minute on a failure. When poisoned in this way, a creature is also fatigued. If the creature is already poisoned, it instead takes 2d6 extra damage. On a success, the creature takes just half the damage.<br><b>Aftereffect:</b> All ordinary plants in the area wither and die."
+  },
+  {
+    "name": "Dancing Lightning",
+    "tradition": "Storm",
+    "rank": 5,
+    "type": "Attack",
+    "targetArea": "A 20-yard-long cone originating from a point you can reach",
+    "duration": "",
+    "desc": "You release a flood of crackling lightning that deals 6d6 damage to everything in the area. Any creature wearing metal armor takes double damage. A creature in the area can make a Strength challenge roll; it takes half the damage on a success, or it also falls prone and becomes defenseless for 1 round on a failure."
+  },
+  {
+    "name": "Bind Storm Genie",
+    "tradition": "Storm",
+    "rank": 5,
+    "type": "Utility",
+    "targetArea": "A cube filled with smoke, vapor, or mist, 2 yards on a side, originating from a point within long range",
+    "duration": "1 minute",
+    "desc": "At the end of the round in which you cast this spell, the target becomes a Size 2 <b>Storm Genie</b>. You cannot voluntarily end this spell. When the genie appears, make a Will attack roll against its Will. The genie becomes compelled for the duration on a success, or becomes hostile to you on a failure."
+  },
+  {
+    "name": "Summon Storm",
+    "tradition": "Storm",
+    "rank": 6,
+    "type": "Utility",
+    "targetArea": "A point in the sky within 1 mile directly above you",
+    "duration": "1d6 hours",
+    "desc": "<b>Requirement:</b> You must be outdoors, able to see the sky, and concentrate for 10 minutes.<br>When you finish concentrating, powerful winds push heavy clouds into the sky above you. The clouds form a line, 10 miles long and 2 miles wide. Heavy rain (or snow, depending on the current air temperature) falls on the ground below the clouds for the duration, after which time the storm dissipates. The falling precipitation heavily obscures the area below the storm.<br>Strong winds blow through the area below the clouds. The winds impose 3 banes on attack rolls made using ranged weapons other than those that fire bullets. Furthermore, any creature that tries to cast a spell in the area must get a success on a Will challenge roll, or the spell fails and the casting is wasted.<br>After 1 hour, the ground below the clouds turns to mud (or is blanketed with snow), becoming difficult terrain until the mud dries. The storm might also cause flooding and other damage as the GM decides.<br><b>Lightning Strike:</b> If you can see the storm, you can use an action to call down a bolt of lightning to strike a point on the ground under the storm within extreme range. The bolt hits the point, dealing 3d6 damage to everything within 2 yards of it. A creature must make a Strength challenge roll; it takes half the damage on a success, or also falls prone and becomes stunned for 1 round on a failure.<br><b>Eye of the Storm:</b> You can use a triggered action on your turn to create an area of calm below the storm. The eye is a 10-yard-radius sphere centered on a point in your space. The eye renders its area excluded from the spell’s effects for 1 minute."
+  },
+  {
+    "name": "Power of the Storm",
+    "tradition": "Storm",
+    "rank": 6,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "1 hour",
+    "desc": "You harness the energy of the storm, adding it to your own. For the duration, you have a +2 bonus to Speed, and you can move by flying. When you cast a Storm attack spell, you make the attack roll with 2 boons and you impose 2 banes on rolls made by creatures to resist those spells. In addition, your Storm attack spells deal 2d6 extra damage."
+  },
+  {
+    "name": "Lightning Storm",
+    "tradition": "Storm",
+    "rank": 7,
+    "type": "Attack",
+    "targetArea": "Up to 10 creatures or objects within long range of you",
+    "duration": "",
+    "desc": "Bolts of lightning explode from your body, racing toward the targets. Targeted objects take 8d6 damage. Each targeted creature must make an Agility challenge roll with 1 bane, or 3 banes if it is wearing metal or is made from metal. The creature takes 8d6 damage, falls prone, and becomes stunned for 1 minute on a failure. On a success, the creature just falls prone and takes half the damage. A target stunned by this spell can make a Will challenge roll at the end of each round and removes the affliction from itself on a success.<br>Thunder then booms from you. Each creature within medium range must get a success on a Strength challenge roll with 1 bane or fall prone and become deafened for 1 minute."
+  },
+  {
+    "name": "Heart of Winter",
+    "tradition": "Storm",
+    "rank": 8,
+    "type": "Attack",
+    "targetArea": "A cylinder with a 10-mile radius that reaches up to the sky, centered on a point on the ground you can reach",
+    "duration": "3d6 days",
+    "desc": "<b>Requirement:</b> You must be outdoors, must be able to see the sky, and must concentrate for 10 minutes.<br>When you finish concentrating, the air temperature plunges to far below freezing. Dark clouds gather overhead, blotting out the sun, and release heavy snow to fall to the ground in the area, causing 1d3 + 2 feet of snow to accumulate each day until the spell ends. The blizzard conditions totally obscure the area, and all surfaces covered in snow are difficult terrain. The strong winds prevent flying and attacking with ranged weapons that do not use bullets.<br>Exposed creatures in the area that are not wearing some sort of protective clothing take 1d6 damage at the end of each round. Exposed creatures wearing protective clothing must make a Strength challenge roll at the end of each minute they are out in the open. On a failure, the creature takes 1d3 damage.<br><b>Aftereffect:</b> You must make a Will challenge roll with 4 banes. On a failure, you take 6d6 damage and you cannot cast this spell again for 1 month and 1 day."
+  },
+  {
+    "name": "Name of the Storm",
+    "tradition": "Storm",
+    "rank": 9,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "1 hour",
+    "desc": "You speak the secret name of storms. For the duration, you can cast Storm spells of rank 3 and lower that you have learned without expending a casting. In addition, you can cast any rank 0 Storm spell, whether you have learned it or not."
+  },
+  {
+    "name": "Hurricane",
+    "tradition": "Storm",
+    "rank": 10,
+    "type": "Utility",
+    "targetArea": "A point in the sky that you can see",
+    "duration": "3d6 hours",
+    "desc": "<b>Requirement:</b> You must be able to see the sky and concentrate for 1 hour.<br>When you finish concentrating, a rotating mass of black, seething clouds spill out from the target until they reach a 200-mile radius, at which point the mass becomes a hurricane. The storm moves 50 miles per hour in a direction you choose.<br>Heavy rain (or snow, depending on the current air temperature) falls on the ground below the clouds for the duration. The falling precipitation heavily obscures the area below the hurricane.<br>Severe winds of up to 175 miles per hour savage the area under the clouds. Attack rolls made using thrown or ranged weapons automatically result in failures. Attack rolls made using siege weapons are made with 5 banes. Flying creatures and vehicles are blown about and fall.<br>Given the scope of this spell’s effects, much is left to the GM to describe; the hurricane flattens structures, causes widespread flooding, uproots trees, tosses unsecured objects about, and generally wreaks havoc until the storm subsides. The storm’s severity also means that some significant loss of life is likely—people might drown, be caught in collapsed buildings, or be struck by flying debris. Again, the GM decides exactly what happens based on where the storm strikes.<br>Creatures in the storm must contend with the winds. At the end of each round, an unprotected creature in the area must make a Strength challenge roll. A Size 1 or smaller creature makes the roll with 3 banes. On a failure, a creature cannot move against the wind; in addition, Size 1 and smaller creatures fall prone and are moved 3d6 yards in the direction the wind is blowing.<br>Also at the end of the round, flying debris might strike creatures in your vicinity. Assume that 1d6 pieces of debris fly into the area at randomly determined creatures. A creature threatened by flying debris must get a success on an Agility challenge roll or take 4d6 damage and fall prone.<br><b>Aftereffect:</b> You must get a success on a Will challenge roll with 5 banes, or you gain 3d6 Insanity and take 10d6 damage. If you are incapacitated by this damage, you explode and die. You must wait at least 1 year and 1 day before you can cast this spell again."
+  }
+          {
+    "name": "Frightful Spirit",
+    "tradition": "Spiritualism",
+    "rank": 0,
+    "type": "Utility",
+    "targetArea": "A cube of space, 1 yard on a side, originating from a point within short range",
+    "duration": "1 round",
+    "desc": "A ghostly figure appears inside the area and remains for the duration. Any creature within 1 yard of the area and that can see it makes attack rolls and challenge rolls with 1 bane. A creature immune to the frightened affliction is immune to this effect."
+  },
+  {
+    "name": "Peer into the Spirit World",
+    "tradition": "Spiritualism",
+    "rank": 0,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "1 minute",
+    "desc": "You can see all invisible creatures and objects within short range as if those creatures and objects were visible."
+  },
+  {
+    "name": "Call Poltergeist",
+    "tradition": "Spiritualism",
+    "rank": 1,
+    "type": "Utility",
+    "targetArea": "A cube of space, 1 yard on a side, originating from a point within short range",
+    "duration": "1 minute",
+    "desc": "You cause a <b>Poltergeist</b> to appear in the area and then force it to use its Manifestation special action. The poltergeist remains for the duration or until it is incapacitated, at which point it returns to whatever place it came from. When the poltergeist appears, make a Will attack roll against the poltergeist’s Will. On a success, the poltergeist becomes compelled for the duration. On a failure, the poltergeist acts in accordance with its nature."
+  },
+  {
+    "name": "Vexing Spirit",
+    "tradition": "Spiritualism",
+    "rank": 1,
+    "type": "Attack",
+    "targetArea": "One creature you can see within short range",
+    "duration": "",
+    "desc": "Make a Will attack roll against the target’s Will. On a success, a shadowy spirit appears and plunges into the target’s body, where it remains for 1 minute. Until the effect ends, the target is frightened, and whenever it gets a failure on an attack roll or challenge roll, you can move the target up to 3 yards in any direction the target can ordinarily move.<br><b>Attack Roll 20+:</b> The target also gains 1d3 Insanity."
+  },
+  {
+    "name": "Lion Spirit",
+    "tradition": "Spiritualism",
+    "rank": 2,
+    "type": "Utility",
+    "targetArea": "One creature you can see within short range",
+    "duration": "1 minute",
+    "desc": "A ghostly lion appears in the air and leaps into the target’s body, where it remains for the duration. The spirit grants the target a +5 bonus to Health, a +2 bonus to Speed, and a +2 bonus to weapon damage rolls. In addition, when the target uses an action to charge, it can use a triggered action at any point before the end of its turn to attack with a weapon."
+  },
+  {
+    "name": "Spirit Thrall",
+    "tradition": "Spiritualism",
+    "rank": 2,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "1 hour; see the effect",
+    "desc": "A ghostly spirit appears in your space and is tethered to you by a wispy cord. The spirit has Defense 10, Health 20, and is immune to gaining Insanity and to all afflictions. The spirit moves with you, remaining in your space. It remains for the duration or until its damage total equals its Health. Whenever you take damage, you apply half the damage to the spirit created by this spell.<br>If the spell ends because the spirit’s damage total equals its Health, it screams and disappears. You and each creature within short range of you that can hear the scream must each make a Will challenge roll, gaining 1 Insanity on a failure."
+  },
+  {
+    "name": "Call Phantom",
+    "tradition": "Spiritualism",
+    "rank": 3,
+    "type": "Utility",
+    "targetArea": "A cube of space, 1 yard on a side, originating from a point within medium range",
+    "duration": "1 minute",
+    "desc": "You cause a </b>Phantom<b> to appear in the area and then force it to use its Manifestation special action. The phantom remains for the duration or until it is incapacitated, at which point it returns to whatever place it came from. When the phantom appears, make a Will attack roll against the phantom’s Will. On a success, the phantom becomes compelled for the duration. On a failure, the phantom acts in accordance with its nature."
+  },
+  {
+    "name": "Horrifying Spirits",
+    "tradition": "Spiritualism",
+    "rank": 3,
+    "type": "Attack",
+    "targetArea": "A 5-yard-radius sphere centered on a point within medium range",
+    "duration": "1 round",
+    "desc": "Hideous spirits loosed from the Underworld spread out and fly through the area for the duration. Each creature in the area or that enters it must make a Will challenge roll. A creature takes 3d6 damage and gains 1d3 Insanity on a failure, or just takes half the damage on a success. When a creature is frightened from gaining Insanity in this way, it must use its action to rush and move away from the spell’s origin point by the safest available route on each of its turns."
+  },
+  {
+    "name": "Host of Spirits",
+    "tradition": "Spiritualism",
+    "rank": 4,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "Until you complete a rest or you expend the last spirit",
+    "desc": "You call out to the spirit world and 2d6 spirits move into your body and remain for the duration or until you cast this spell again. When a creature you can see attacks you, you can expend a spirit to impose 1 bane on the triggering attack roll or to grant 1 boon on your challenge roll to resist the attack.<br>In addition, when you would become incapacitated, you can expend a spirit to heal damage equal to your healing rate.<br>Finally, you can use a triggered action to expend a spirit and send that spirit to attack one creature you can see within medium range. Make a Will attack roll against the creature’s Will. On a success, the creature takes 2d6 damage, gains 1 Insanity, and becomes frightened for 1 minute."
+  },
+  {
+    "name": "Horror of the Spirit World",
+    "tradition": "Spiritualism",
+    "rank": 4,
+    "type": "Attack",
+    "targetArea": "One creature you can see within medium range",
+    "duration": "",
+    "desc": "Spectral hands reach out and around the target to grasp its body. Make a Will attack roll against the target’s Agility. On a success, the target is dragged into the Underworld, where it remains for 1d6 rounds. On a failure, the target takes 2d6 damage as it tears free from the grasping hands.<br>A target dragged into the Underworld gains 1d3 Insanity each round it spends there. At the end of each round, the target can make a Strength challenge roll with 2 banes. On a success, the target ends the effect. When the time is up or when the target ends the effect, it returns to the space it vacated and suffers the effects of gaining Insanity from that point. When it is frightened from gaining Insanity in this way, the target is also impaired."
+  },
+  {
+    "name": "Call Specter",
+    "tradition": "Spiritualism",
+    "rank": 5,
+    "type": "Utility",
+    "targetArea": "A cube of space, 1 yard on a side, originating from a point within short range",
+    "duration": "1 minute",
+    "desc": "You cause a <b>Specter</b> to appear inside the area and force it to use its Manifestation ability. The specter remains for the duration or until it is incapacitated, at which point it returns to whatever place it came from. When the specter appears, make a Will attack roll against the specter’s Will. On a success, the specter becomes compelled for the duration. On a failure, the specter acts in accordance with its nature."
+  },
+  {
+    "name": "Tormenting Spirit",
+    "tradition": "Spiritualism",
+    "rank": 5,
+    "type": "Attack",
+    "targetArea": "One creature you can see within medium range",
+    "duration": "",
+    "desc": "You call up a vicious spirit and send it to harry the target. Make a Will attack roll against the target’s Will. On a success, the spirit sinks partly into the target’s body. The spirit imposes 2 banes on all attack rolls and challenge rolls the target makes and causes the target to take 4d6 damage at the end of each round until the spell ends. A target affected by this spell can make a Will challenge roll at the end of each round. After two successful rolls, the spell ends.<br>If you got a failure on the attack roll, the spirit becomes a <b>Wraith</b> that appears in an open space within 2 yards of the target. The wraith takes the next available turn and acts in accordance with its nature. It remains until it’s destroyed."
+  },
+  {
+    "name": "Spirit Bind",
+    "tradition": "Spiritualism",
+    "rank": 6,
+    "type": "Attack",
+    "targetArea": "One living, mortal creature you can see within short range",
+    "duration": "",
+    "desc": "A random spirit from the Underworld answers your call and tries to invade the target’s body. Make a Will attack roll against the target’s Will. On a success, the target becomes charmed. When it is charmed in this way, the spirit you called dominates the target’s soul, with effects as described below. On a failure, the spirit becomes a <b>Specter</b> that appears in an open space within 2 yards of the target. The specter acts in accordance to its nature and remains until it is destroyed.<br>A charmed target becomes possessed by the spirit. The spirit has complete control over the host body and decides when it acts, what actions it takes, and how it moves. The spirit can draw upon the host body’s memories and experiences, so it can use any talent or trait the host possesses. Make the following changes to the host’s statistics box:<br>• Roll 2d6 + 3 twice; replace the target’s Intellect with one result and its Will with the other.<br>• Give the target two random professions.<br>Once the spirit possesses the target, the target becomes friendly to you. The target can take the next available turn, fights on your side, and tries to help you.<br>At the end of each round, the target can make a Will challenge roll, using its original Will modifier. On a success, the spell’s effect becomes suppressed for 1 round. After the third success, the spell ends, and the spirit returns to the Underworld. If the target gets three failures, its original soul is displaced from its body and sent to the Underworld, which makes the effect of the spell permanent."
+  },
+  {
+    "name": "Guiding Spirits",
+    "tradition": "Spiritualism",
+    "rank": 6,
+    "type": "Utility",
+    "targetArea": "",
+    "duration": "Until you complete a rest; see the effect",
+    "desc": "Rushing up from the ground all around you are 2d6 + 3 spirits called forth from the Underworld. Each spirit plunges into your body by way of your mouth, one at a time. Each creature within short range of you that can see this happening must get a success on a Will challenge roll or gain 1 Insanity. While you have at least one spirit inside you, you make all Perception rolls with 2 boons. In addition, you can expend a spirit, causing it to emerge from your mouth and return to the Underworld, to gain certain benefits, as described below.<br><b>Maddening Spirit:</b> You can use an action to expend a spirit and send it to attack one creature you choose within medium range. Make a Will attack roll against the creature’s Will. On a success, the creature gains 1d6 Insanity.<br><b>Mauling Spirit:</b> You can use an action to expend a spirit and send it to attack one creature you choose within medium range. Make a Will attack roll against the creature’s Strength. On a success, the creature takes 3d6 damage.<br><b>Scouting Spirit:</b> You can use an action to expend a spirit and instruct it to travel up to 100 yards away from you and return. One minute later, the spirit returns and tells you what it saw. The spirit can perceive creatures, doors, traps, hazards, and any other details, hidden or otherwise. The spirit then disappears.<br><b>Spiritual Aid:</b> When you make an attack roll or a challenge roll, you can use a Triggered action to expend a spirit and make the roll with 1d3 boons.<br><b>Aftereffect:</b> You must make a Strength challenge roll with 3 banes. On a failure, you become fatigued for 1 hour."
+  },
+  {
+    "name": "Hero Spirit",
+    "tradition": "Spiritualism",
+    "rank": 7,
+    "type": "Utility",
+    "targetArea": "One creature you can see within medium range",
+    "duration": "1 hour",
+    "desc": "The spirit of a dead hero appears nearby and plunges into the target’s body, where it remains for the duration. The target gains a +2 bonus to Defense and a +20 bonus to Health; it makes attack rolls and challenge rolls with 3 boons; its weapon attacks deal 2d6 extra damage; and it cannot be charmed, compelled, or frightened.<br>When the spell ends, the target must get a success on a Will challenge roll with 3 banes or gain 1d6 Insanity."
+  },
+  {
+    "name": "Vision of the Underworld",
+    "tradition": "Spiritualism",
+    "rank": 8,
+    "type": "Attack",
+    "targetArea": "A cube of space, 5 yards on a side, originating from a point within long range",
+    "duration": "10 minutes",
+    "desc": "You open a window to the Underworld inside the area that remains open for the duration. Each living, mortal creature that can see the area, other than you and members of your group, must get a success on a Will challenge roll with 2 banes or gain 1d6 Insanity. Furthermore, any creature that got a failure on the roll is frightened for as long as it can see the area.<br>Any creature that moves into the area is dragged into the Underworld. A creature dragged into the Underworld gains 1d3 Insanity each round it spends there. At the end of each round, the creature can make a Strength challenge roll with 2 banes. On a success, the creature ends the effect. When the time is up or when the creature ends the effect, it returns to the space it vacated and suffers the effects of gaining Insanity from that point. When it is frightened from gaining Insanity in this way, the creature is also impaired.<br>While you are within medium range of the area, you can use a triggered action on your turn to cast any Spiritualism spell you have learned that normally requires an action to cast. In addition, when you cast a Spiritualism attack spell, you make the attack roll with 2 boons, and you impose 2 banes on challenge rolls made to resist your Spiritualism attack spells.<br>Finally, spirits within medium range of the area make attack rolls with 2 boons, and their attacks deal 2d6 extra damage."
+  },
+  {
+    "name": "Dragon Spirit",
+    "tradition": "Spiritualism",
+    "rank": 9,
+    "type": "Utility",
+    "targetArea": "One creature you can see within long range",
+    "duration": "10 minutes",
+    "desc": "The spirit of a dead dragon appears nearby and plunges into the target’s body, where it remains for the duration. The spirit confers all of the following benefits to the target.<br>• The target gains the frightening trait (Shadow, page 214).<br>• The target gains a +5 bonus to Perception.<br>• The target gains truesight. It can see in areas obscured by shadows and darkness as if those areas were lit. It can also see invisible creatures and objects, and it automatically recognizes illusions it sees for what they are.<br>• The target gains a +6 bonus to Speed and can move by flying.<br>• When the target moves by flying after making an attack, the target’s movement does not trigger free attacks.<br>• The target takes half damage from spells and makes challenge rolls to resist attack spells with 1 boon. In addition, the target imposes 1 bane on rolls made to attack it with spells.<br>• The target’s melee attacks deal 2d6 extra damage.<br>• The target can use an action to spew fire into a 10-yard long cone originating from a point it can reach. The flames deal 4d6 + 5 damage to everything in the area. A creature in the area can make an Agility challenge roll with 2 banes. A creature takes 4d6 + 5 extra damage and catches fire on a failure. A creature that catches fire takes 1d6 damage from the flames at the end of each round until the fire is extinguished. Once the target spews fire, it must wait 1 round before it can use it again.<br>When the spell ends, the target must get a success on a Will challenge roll with 4 banes or gain 1d6 Insanity."
+  },
+  {
+    "name": "Open the Underworld's Gates",
+    "tradition": "Spiritualism",
+    "rank": 10,
+    "type": "Attack",
+    "targetArea": " A cube of space, 3 yards on a side, originating from  a point you can see within long range",
+    "duration": "1 hour",
+    "desc": "A great iron gate appears inside the area and remains for the duration. When the gate appears, it opens, revealing a shadowy road that twists and turns down into the Underworld. Each living and mortal creature that can see  the gate must get a success on a Will challenge roll with  3 banes or gain 1d6 Insanity.<br>When the gate appears and at the end of each minute thereafter, roll a d6 to see what emerges from the opened portal.<br>1- 1d6 <b>Manes</b>, <br>2- 1d6 <b>Mobs of Manes</b>, <br>3- 2d6 <b>Mobs of Manes</b> <br>4- 1d6 <b>Mobs of Phantoms</b>, <br>5- 2d6 <b>Mobs of Phantoms</b>, <br>6- 1 <b>Grim Reaper</b>, <br>In addition, all spirits within 1 mile of the area gain a +2 bonus to Defense and a +20 bonus to Health, make attack rolls and challenge rolls with 3 boons, and deal 2d6 extra damage on their attacks. <br>Living creatures within 1 mile of the area that are or become incapacitated, diseased, or poisoned die immediately.<br><b>Aftereffect:</b> You must make a Will challenge roll with 5 banes On a success, you gain 1 Corruption and become stunned for 1 hour. On a failure, you gain 1d3 Corruption and 2d6 Insanity, and you cannot cast this spell again for 1 year and 1 day."
+  },
 {
     "name": "Feat of Will",
     "tradition": "Soul",
