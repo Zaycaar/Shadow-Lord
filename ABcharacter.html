@@ -82,9 +82,26 @@ createApp({
             search: '',
             filterCat: 'All',
             filterMode: 'IN', // Default to showing results
-            categories: ['Ancestry', 'Novice Path', 'Expert Path', 'Master Path', 'Tradition'],
+            categories: ['Ancestry', 'Novice Path', 'Power', 'Faction'],
             database: [
-    { cat: 'Ancestry', name: 'Human', desc: '', tags: ['Mortal', 'Common'], src: 'WW Core', pg: 'N/A' },
+    { cat: 'Ancestry', name: 'Human', desc: 'A catch-all term for the thinking and self-aware residents of Sanctuary Spire. No set or assumed appearance.', tags: ['Mortal', 'Common'], src: 'Abaddon Core', pg: '9' },
+    { cat: 'Novice Path', name: 'Academic', desc: 'Sharp mind. Problem solver. Reader and engineer.', tags: ['Support', 'Intellect'], src: 'Abaddon Novice Guide', pg: '13' },
+    { cat: 'Novice Path', name: 'Fanatic', desc: 'Commited to a cause. Single minded focus and aggression.', tags: ['Will', 'Combat'], src: 'Abaddon Novice Guide', pg: '14' },
+    { cat: 'Novice Path', name: 'Fighter', desc: 'Trained in weapons and armor.', tags: ['Combat', 'Weapon'], src: 'Abaddon Novice Guide', pg: '15' },
+    { cat: 'Novice Path', name: 'Survivor', desc: 'Tricksy and nimble combatant.', tags: ['Combat', 'Weapon'], src: 'Abaddon Novice Guide', pg: '16' },
+    { cat: 'Power', name: 'Psychic', desc: 'Mental powers caused by mutation.', tags: [], src: 'Abaddon Novice Guide', pg: '18' },
+    { cat: 'Power', name: 'Magic', desc: 'Manipulate Aethyr, the natural energy fields of Abaddon.', tags: [], src: 'Abaddon Novice Guide', pg: '24' },
+    { cat: 'Faction', name: 'Arkanix', desc: 'Engineers and salvagers.', tags: ['Tech'], src: 'Abaddon Novice Guide', pg: '7' },
+    { cat: 'Faction', name: 'The august Chroniclery', desc: 'Historians and archaeologists.', tags: ['Knowledge'], src: 'Abaddon Novice Guide', pg: '7' },
+    { cat: 'Faction', name: 'Dogmatics', desc: 'Priests of The Authority.', tags: ['Magic'], src: 'Abaddon Novice Guide', pg: '7' },
+    { cat: 'Faction', name: 'Esoteric Order of Occult Ephemera', desc: 'Keepers of magic and arcane secrets.', tags: ['Magic'], src: 'Abaddon Novice Guide', pg: '8' },
+    { cat: 'Faction', name: 'Hegemony of the Golden Fist', desc: 'Combat trained separatists. Seek freedom from The Authority.', tags: ['Combat'], src: 'Abaddon Novice Guide', pg: '8' },
+    { cat: 'Faction', name: 'Physika', desc: 'Farmers and doctors. Make life better.', tags: ['Support'], src: 'Abaddon Novice Guide', pg: '9' },
+    { cat: 'Faction', name: 'Purist Crusade', desc: 'Enemies of evil, and the Voidsworn', tags: ['Combat'], src: 'Abaddon Novice Guide', pg: '9' },
+    { cat: 'Faction', name: 'Scions of OM', desc: 'Plug into an AI hivemind.', tags: ['OM'], src: 'Abaddon Novice Guide', pg: '10' },
+    { cat: 'Faction', name: 'Third Eye Society', desc: 'Group of Psykens', tags: ['Psychic'], src: 'Abaddon Novice Guide', pg: '10' },
+    { cat: 'Faction', name: 'Transcendance Initiative', desc: 'Building an ark to leave Abaddon.', tags: [], src: 'Abaddon Novice Guide', pg: '11' },
+    { cat: 'Faction', name: 'Ronin', desc: 'Unaffiliated, self-reliant.', tags: [], src: 'Abaddon Novice Guide', pg: '11' },
             ]
         }
     },
