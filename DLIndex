@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SotDL Compendium Hub</title>
+    <style>
+        body { font-family: sans-serif; background: #121212; color: #e0e0e0; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .menu { text-align: center; background: #1e1e1e; padding: 40px; border-radius: 12px; border-top: 5px solid #9b2226; box-shadow: 0 10px 30px rgba(0,0,0,0.5); width: 300px; }
+        h1 { margin-bottom: 30px; color: #fff; }
+        .btn { display: block; width: 250px; padding: 15px; margin: 10px auto; background: #333; color: white; text-decoration: none; border-radius: 6px; transition: 0.3s; font-weight: bold; border: 1px solid #444; cursor: pointer; font-size: 16px; }
+        .btn:hover { background: #9b2226; border-color: #9b2226; transform: translateY(-2px); }
+        
+        /* Modal Styles */
+        #wishlist { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #1e1e1e; padding: 20px; border-radius: 12px; border: 2px solid #9b2226; max-height: 70vh; overflow-y: auto; width: 320px; z-index: 10; }
+        #wishlist h2 { color: #9b2226; margin-top: 0; }
+        #wishlist ul { list-style: none; padding: 0; text-align: left; }
+        #wishlist li { padding: 8px 0; border-bottom: 1px solid #333; font-size: 0.9em; }
+        .close-btn { background: #9b2226; color: white; border: none; padding: 10px; width: 100%; border-radius: 6px; cursor: pointer; margin-top: 15px; }
+        .overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 5; }
+    </style>
+</head>
+<body>
+
+    <div class="menu">
+        <h1>SotDL Compendium</h1>
+        <a href="Character Options.html" class="btn">Character Options</a>
+        <a href="Spellbook.html" class="btn">Magical Index</a>
+        <a href="Items.html" class="btn">Items and Equipment</a>
+        <button class="btn" onclick="toggleWishlist()">Missing Supplements</button>
+    </div>
+
+    <div id="overlay" class="overlay" onclick="toggleWishlist()"></div>
+    <div id="wishlist">
+        <h2>Supplements to Add</h2>
+        <ul>
+            <li>A False Hope of Heaven</li>
+            <li>A Glorious Death</li>
+            <li>Adaptable Scavengers</li>
+            <li>Between Two Worlds</li>
+            <li>Blood Scions</li>
+            <li>Born to Kill</li>
+            <li>Brood of the Mother Spore</li>
+            <li>By the Gun</li>
+            <li>Children of the Earth</li>
+            <li>Children of the Hive</li>
+            <li>City of Chains</li>
+            <li>Curse of the Spider Wood</li>
+            <li>Do We Not Die</li>
+            <li>Exquisite Agony</li>
+            <li>Faerie Friends</li>
+            <li>Finduviel's Emporium</li>
+            <li>For Gold and Glory</li>
+            <li>Freeport</li>
+            <li>From the Deep</li>
+            <li>Ghosts in Machine</li>
+            <li>Grandma Ethel's Hearty Cookbook</li>
+            <li>Grim Journeys</li>
+            <li>Guardians of the Cosmic Egg</li>
+            <li>Hired Help</li>
+            <li>Kingdom of God</li>
+            <li>Magnum Opus</li>
+            <li>Masters of Arms</li>
+            <li>Nessus: City of Decay</li>
+            <li>Of Gears and Ghosts</li>
+            <li>Order of the Sacred Heart</li>
+            <li>Paragons of virtue</li>
+            <li>Paths of Battle</li>
+            <li>Paths of Darkness</li>
+            <li>Paths of Horror</li>
+            <li>Paths of Power</li>
+            <li>Paths of War</li>
+            <li>Power in a Name</li>
+            <li>Riders of the Wind</li>
+            <li>Scions of the Betrayer</li>
+            <li>Snot and Stitches</li>
+            <li>Song of the Woad</li>
+            <li>Soulbound Armor</li>
+            <li>Stolen Lives</li>
+            <li>The Coins of Aureus</li>
+            <li>The Great Mother's Brood</li>
+            <li>The Natural Conclusion</li>
+            <li>Tome of Horror and Madness</li>
+            <li>Uncertain Faith</li>
+            <li>Uncommon Courage</li>
+            <li>Insupposable Instruments</li>
+            <li>Vine and Willow</li>
+            <li>Way of the Transforming Blade</li>               
+        </ul>
+        <button class="close-btn" onclick="toggleWishlist()">Close</button>
+    </div>
+
+    <script>
+        function toggleWishlist() {
+            const list = document.getElementById('wishlist');
+            const overlay = document.getElementById('overlay');
+            const isVisible = list.style.display === 'block';
+            
+            list.style.display = isVisible ? 'none' : 'block';
+            overlay.style.display = isVisible ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
