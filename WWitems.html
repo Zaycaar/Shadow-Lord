@@ -5,7 +5,7 @@
     <title>SotDL: Item and Equipment Index</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <style>
-        :root { --dark: #121212; --card: #1e1e1e; --accent: #9b2226; --text: #e0e0e0; --grey: #888; --gold: #daa520; }
+        :root { --dark: #121212; --card: #1e1e1e; --accent: #752394; --text: #e0e0e0; --grey: #888; --gold: #daa520; }
         body { font-family: system-ui, -apple-system, sans-serif; background: var(--dark); color: var(--text); margin: 0; padding: 20px; line-height: 1.5; }
         .container { max-width: 1200px; margin: auto; }
         header { border-bottom: 2px solid var(--accent); margin-bottom: 20px; padding-bottom: 10px; }
@@ -76,7 +76,22 @@ createApp({
             filterCat: 'All',
             categories: [],
             database: [
-                { cat: 'Armor', rarity: 'Common', name: 'Clothing', desc: 'Defense: Agi.', cost: 'Varies', src: 'Core', pg: 101 },
+{ cat: 'Armor', rarity: 'Common', name: 'Padded', desc: 'Light Armor. Def: 11 or +0.', cost: '1 sp', src: 'WW Core', pg: 56 },
+{ cat: 'Armor', rarity: 'Common', name: 'Leather', desc: 'Light Armor. Def: 12 or +1', cost: '2 sp', src: 'WW Core', pg: 56 },
+{ cat: 'Armor', rarity: 'Common', name: 'Brigandine', desc: 'Medium Armor(Str:11, 1 bane to sneak). Def: 13 or +1. 2 items.', cost: '5 sp', src: 'WW Core', pg: 56 },
+{ cat: 'Armor', rarity: 'Common', name: 'Ring', desc: 'Medium Armor(Str:11, 1 bane to sneak). Def: 14 or +2. 2 items.', cost: '10 sp', src: 'WW Core', pg: 56 },
+{ cat: 'Armor', rarity: 'Uncommon', name: 'Mail', desc: 'Medium Armor(Str:11, 1 bane to sneak). Def: 15. 2 items.', cost: '15 sp', src: 'WW Core', pg: 56 },
+{ cat: 'Armor', rarity: 'Uncommon', name: 'Plate and Mail', desc: 'Medium Armor(Str:11, 1 bane to sneak). Def: 16. 2 items.', cost: '', src: 'WW Core', pg: 56 },
+{ cat: 'Armor', rarity: 'Uncommon', name: 'Breastplate.', desc: 'Heavy Armor(Str:13, 1 bane to sneak, cannot take initiative) Def: 16 or +3. 3 items.', cost: '5 gp', src: 'WW Core', pg: 56 },
+{ cat: 'Armor', rarity: 'Rare', name: 'Plate', desc: 'Heavy Armor(Str:13, 1 bane to sneak, cannot take initiative) Def: 17. 3 items.', cost: '10 gp', src: 'WW Core', pg: 56 },
+{ cat: 'Armor', rarity: 'Exotic', name: 'Full Plate', desc: 'Heavy Armor(Str:13, 1 bane to sneak, cannot take initiative) Def: 18. 3 items.', cost: '25 gp', src: 'WW Core', pg: 56 },
+{ cat: 'Armor', rarity: '', name: 'Inferior Armor', desc: 'Holds up until end of the quest. Def: -1 (minimum 10 or +0). ', cost: 'x0.5', src: 'WW Core', pg: 57 },
+{ cat: 'Armor', rarity: '', name: 'Inferior Medium/Heavy Armor', desc: 'Holds up until end of the quest. Def: -1 (minimum 10 or +0). +1 bane on agility rolls, +1 boon on rolls. vs your agility. ', cost: 'x0.5', src: 'WW Core', pg: 57 },
+{ cat: 'Armor', rarity: '', name: 'Superior Light Armor', desc: '+1 to defense bonus.', cost: 'x10, at least 1 gp', src: 'WW Core', pg: 57 },
+{ cat: 'Armor', rarity: '', name: 'Superior Medium Armor', desc: 'No strength requirement, no bane to sneak.', cost: 'x10, at least 1 gp', src: 'WW Core', pg: 57 },
+{ cat: 'Armor', rarity: '', name: 'Superior Heavy Armor', desc: 'No strength requirment,+1 defense.', cost: 'x10, at least 1 gp', src: 'WW Core', pg: 57 },
+{ cat: 'Shield', rarity: 'Common', name: 'Shield', desc: '+2 Defense. +3 if supperior.', cost: '2 sp, 2 gp if superior.', src: 'WW Core', pg: 57 },
+{ cat: 'Shield', rarity: 'Uncommon', name: 'Body Shield', desc: 'Tower shield or Pavise. Set up to provide cover.', cost: '4 sp', src: 'WW Core', pg: 57 },
             ]
         }
     },
