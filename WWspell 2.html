@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow of the Weird Wizard - Spell Database</title>
+    <style>
+        body { font-family: 'Georgia', serif; background-color: #121110; color: #e6e2dd; margin: 20px; }
+        h1 { color: #d4a373; margin-bottom: 5px; font-family: 'Times New Roman', serif; }
+        .subtitle { color: #a39e93; margin-top: 0; margin-bottom: 20px; font-style: italic; }
+        
+        /* Controls & Filters */
+        .controls { background: #1c1a18; padding: 20px; border-radius: 8px; margin-bottom: 20px; display: flex; gap: 15px; flex-wrap: wrap; position: sticky; top: 10px; z-index: 100; border: 1px solid #332f2b; }
+        input, select { padding: 10px; border-radius: 4px; border: 1px solid #4a443e; background: #292522; color: #fff; font-family: inherit; min-width: 160px; }
+        input:focus, select:focus { border-color: #d4a373; outline: none; }
+        
+        /* Spell Grid & Cards */
+        .spell-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 20px; }
+        .spell-card { background: #1c1a18; border-radius: 6px; padding: 18px; border-top: 5px solid var(--tradition-color, #777); box-shadow: 0 4px 10px rgba(0,0,0,0.6); border-left: 1px solid #2b2724; border-right: 1px solid #2b2724; border-bottom: 1px solid #2b2724; }
+        
+        /* Header Block */
+        .spell-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+        .spell-name { font-size: 1.3em; font-weight: bold; color: #f4ebe1; font-family: 'Times New Roman', serif; }
+        
+        /* Tags */
+        .tradition-tag { font-size: 0.75em; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; font-weight: bold; background: rgba(255,255,255,0.05); color: var(--tradition-color, #fff); border: 1px solid var(--tradition-color, #777); }
+        .tier-text { color: #a39e93; font-style: italic; font-size: 0.9em; }
+
+        /* Metadata Grid */
+        .spell-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #332f2b; font-size: 0.85em; color: #b5ae9f; }
+        .meta-item b { color: #d4a373; font-family: 'Times New Roman', serif; }
+        .meta-full-width { grid-column: span 2; }
+        
+        /* Description */
+        .spell-desc { font-size: 0.95em; line-height: 1.5; color: #cbc5ba; }
+    </style>
+</head>
+<body>
+
+    <h1>Shadow of the Weird Wizard</h1>
+    <p class="subtitle">Spell & Talent Repository</p>
+
+    <div class="controls">
+        <input type="text" id="searchInput" placeholder="Search by name..." onkeyup="filterSpells()">
+        
+        <select id="traditionFilter" onchange="filterSpells()">
+            <option value="All">All Traditions</option>
+        </select>
+
+        <select id="tierFilter" onchange="filterSpells()">
+            <option value="All">All Tiers</option>
+            <option value="Talent">Talent</option>
+            <option value="Novice">Novice</option>
+            <option value="Expert">Expert</option>
+            <option value="Master">Master</option>
+        </select>
+    </div>
+
+    <div class="spell-grid" id="spellGrid"></div>
+
+    <script>
+        // TRADITION COLOR PALETTE (32 Traditions)
+        const traditionColors = {
+            "Aeromancy": "#81d4fa",      // Sky Blue
+            "Alchemy": "#8d6e63",        // Amber / Potion Brown
+            "Alteration": "#ba68c8",     // Transmutation Magenta
+            "Animism": "#81c784",        // Soft Leaf Green
+            "Astromancy": "#3f51b5",     // Cosmic Deep Indigo
+            "Chaos": "#e91e63",          // Volatile Hot Pink
+            "Chronomancy": "#ffd54f",    // Hourglass Gold
+            "Conjuration": "#009688",    // Summoning Teal
+            "Cryomancy": "#4dd0e1",      // Ice Cyan
+            "Dark Arts": "#4a148c",      // Deep Void Purple
+            "Destruction": "#d32f2f",    // Crimson Ruin
+            "Divination": "#b388ff",     // Mystic Soft Lavender
+            "Eldritch": "#00e676",       // Alien Neon Green
+            "Evocation": "#ff9800",      // Raw Energy Amber
+            "Geomancy": "#795548",       // Earth Stone Brown
+            "Hydromancy": "#0288d1",     // Deep Ocean Blue
+            "Illusion": "#ab47bc",       // Prismatic Purple
+            "Invocation": "#fbc02d",     // Divine Gold
+            "Necromancy": "#546e7a",     // Deathly Slate Grey
+            "Oneiromancy": "#7e57c2",    // Dreamland Violet
+            "Order": "#29b6f6",          // Crystalline Silver Blue
+            "Primal": "#2e7d32",         // Deep Forest Green
+            "Protection": "#ffb74d",     // Shielding Warm Amber
+            "Psychomancy": "#ec407a",    // Psionic Pink
+            "Pyromancy": "#f4511e",      // Flame Orange
+            "Shadowmancy": "#37474f",    // Obsidian Charcoal
+            "Skullduggery": "#78909c",   // Rogue Steel
+            "Spiritualism": "#b2dfdb",   // Ghostly Ethereal Mint
+            "Symbolism": "#d4e157",      // Rune Parchment Yellow
+            "Technomancy": "#00e5ff",    // Electric Cyber Teal
+            "Teleportation": "#9c27b0",  // Rift Violet
+            "War": "#b71c1c"             // Blood Red
+        };
+
+        const defaultColor = "#8c7863";
+
+        // DATA ENTRIES (Add your full spell library here)
+        const spells = [
+            {
+                name: "Jolt",
+                tradition: "Aeromancy",
+                tier: "Talent",
+                castings: "",
+                target: "",
+                duration: "",
+                desc: "You can use an action to fling crackling lightning from your hand. Target one creature or object within 10 yards. Make a Will roll with 1 boon against its Agility. On a success, the target takes 1d6 damage, and becomes confused until the end of your next turn. The target takes 2d6 damage at level 3, and 5d6 damage at level 7. If the result of your roll is a critical success, the target takes an extra 1d6 damage."
+            },
+			{
+                name: "Soaring Leap",
+                tradition: "Aeromancy",
+                tier: "Talent",
+                castings: "",
+                target: "",
+                duration: "",
+                desc: "You can use this talent when you move at least 1 yard. You gain the Fly trait until the end of your turn. If you are still flying at the end of your turn, you gently descend until you reach a surface on which you can stand. Once you use this talent, you lose access to it (luck ends)."
+            },
+			{
+                name: "Wind Hammer",
+                tradition: "Aeromancy",
+                tier: "Talent",
+                castings: "",
+                target: "",
+                duration: "",
+                desc: "You can use an action to send a skirling wind out from your hand. Target one Size 5 space within 10 yards. Each unsecured object of Size 2 or smaller is pushed 5 yards. Each creature in the target space makes a Strength roll. A creature rolls with 1 boon for each point of Size it is larger than 2. On a failure, you push the creature 5 yards. Once you use this talent, you lose access to it (luck ends)."
+            },
+			{
+                name: "Words on the Wind",
+                tradition: "Aeromancy",
+                tier: "Talent",
+                castings: "",
+                target: "",
+                duration: "",
+                desc: " You can perform a ritual to speak to the wind, during which time you choose a place you have seen at least once. When you finish, you speak up to 30 words and wind carries them away, traveling 1 mile per minute until it reaches its destination, or the effect ends after 1 hour. If the wind reaches the destination, it repeats your words at the volume you used when you uttered them. "
+            },
+			{
+                name: "Cacophany",
+                tradition: "Aeromancy",
+                tier: "Novice",
+                castings: "1",
+                target: "One Size 5 space within 15 yards",
+                duration: "Instantaneous",
+                desc: "Thunder booms. Each creature in the target space takes 1d6 damage, while each object in it takes 3d6 damage. A creature also makes a Strength roll. On a failure, the creature takes an extra 2d6 damage and becomes deafened (luck ends). The noise of this spell carries 1 mile."
+            },
+			{
+                name: "Forked Lightning",
+                tradition: "Aeromancy",
+                tier: "Novice",
+                castings: "1",
+                target: "One or two creatures or objects within 15 yards",
+                duration: " Instantaneous",
+                desc: "A forked bolt of lightning leaps from your hand. For each target separately, make a Will roll with 1 boon against its Agility. On a success, the target takes 5d6 damage. On a critical success, the target takes an extra 1d6 damage. "
+            },
+			{
+                name: "Still the Air",
+                tradition: "Aeromancy",
+                tier: "Novice",
+                castings: "1",
+                target: "One Size 5 space within 15 yards",
+                duration: "1 hour",
+                desc: "Silence descends on the target space. No sound emanates from inside it and no sound from outside reaches into it. Any activity that requires vocalizations performed inside the target space, such as the casting of spells, has no effect. Alternatively, you can expend the casting of this spell to target up to three creatures in reach. Each gains the Silent trait for 1 hour."
+            },
+			{
+                name: "Wind Blast",
+                tradition: "Aeromancy",
+                tier: "Novice",
+                castings: "3",
+                target: "One creature or object within 10 yards",
+                duration: " Instantaneous",
+                desc: "You gather the wind and release it to go screaming away from you. If you target an object and the object is secured, it takes 2d6 damage. An On a success, the target takes 1d6 damage, is pushed 1d6 yards, and falls prone. On a critical success, the target takes an extra 1d6 damage."
+            },
+			{
+                name: "Wind Walk",
+                tradition: "Aeromancy",
+                tier: "Novice",
+                castings: "3",
+                target: "You",
+                duration: "1 minute",
+                desc: "You find purchase for your steps in the air. You can move in any direction and remain there. If you fail to stand on a solid surface that can support your weight when the spell ends, you fall."
+            },
+			{
+                name: "Wind Wall",
+                tradition: "Aeromancy",
+                tier: "Novice",
+                castings: "3",
+                target: "One line-shaped space, up to 10 yards wide, 10 yards tall, and 1 yard thick originating from a point within 10 yards",
+                duration: "1 minute",
+                desc: "Strong wind blows through the target space. The noise it creates drowns out all sounds quieter than a shout. A creature that would move through the space makes a Strength roll, rolling with 1 boon for each point of Size above 3. On a failure, the creature is pushed back to the nearest empty space and its Speed becomes 0 until the end of the round. Finally, the wind imposes 3 banes on rolls to attack targets behind the target space using ranged attacks."
+            },
+        ];
+
+        function populateTraditions() {
+            const traditionFilter = document.getElementById('traditionFilter');
+            
+            // Collect all traditions from the traditionColors mapping so the dropdown is full from the start
+            const allTraditions = Object.keys(traditionColors).sort();
+            
+            allTraditions.forEach(tradition => {
+                const option = document.createElement('option');
+                option.value = tradition;
+                option.textContent = tradition;
+                traditionFilter.appendChild(option);
+            });
+        }
+
+        function displaySpells(spellsToShow) {
+            const grid = document.getElementById('spellGrid');
+            grid.innerHTML = '';
+            
+            if(spellsToShow.length === 0) {
+                grid.innerHTML = '<p style="color: #a39e93; font-style: italic; padding: 10px;">No spells found matching those filters.</p>';
+                return;
+            }
+
+            spellsToShow.forEach(spell => {
+                const color = traditionColors[spell.tradition] || defaultColor;
+
+                const card = document.createElement('div');
+                card.className = 'spell-card';
+                card.style.setProperty('--tradition-color', color);
+                
+                card.innerHTML = `
+                    <div class="spell-header">
+                        <div>
+                            <div class="spell-name">${spell.name}</div>
+                            <div class="tier-text">${spell.tier}</div>
+                        </div>
+                        <span class="tradition-tag">${spell.tradition}</span>
+                    </div>
+                    <div class="spell-meta">
+                        <div class="meta-item"><b>Castings:</b> ${spell.castings}</div>
+                        <div class="meta-item"><b>Duration:</b> ${spell.duration}</div>
+                        <div class="meta-item meta-full-width"><b>Target:</b> ${spell.target}</div>
+                    </div>
+                    <div class="spell-desc">${spell.desc}</div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterSpells() {
+            const searchVal = document.getElementById('searchInput').value.toLowerCase();
+            const traditionVal = document.getElementById('traditionFilter').value;
+            const tierVal = document.getElementById('tierFilter').value;
+
+            const filtered = spells.filter(spell => {
+                const matchesSearch = spell.name.toLowerCase().includes(searchVal);
+                const matchesTradition = (traditionVal === 'All' || spell.tradition === traditionVal);
+                const matchesTier = (tierVal === 'All' || spell.tier === tierVal);
+                
+                return matchesSearch && matchesTradition && matchesTier;
+            });
+
+            displaySpells(filtered);
+        }
+
+        // Initialization
+        populateTraditions();
+        displaySpells(spells);
+    </script>
+</body>
+</html>
