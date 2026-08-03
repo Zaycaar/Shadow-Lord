@@ -100,6 +100,97 @@
 
         // DATA ENTRIES (Add your full spell library here)
         const spells = [
+			{
+name: "Forked Tongue",
+tradition: "Dark Arts",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: " Your tongue bifurcates. Whenever you would pass off a lie as the truth in a social situation, each creature that can hear you makes an Intellect roll with 1 bane. On a success, the creature becomes immune to this talent for 24 hours. On a failure, the creature believes what you say to be true, even if presented with evidence to the contrary, for 1 hour. On a critical failure, the creature believes anything you say to be the truth for 24 hours."
+},
+{
+name: "Hex",
+tradition: "Dark Arts",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use an action to draw a fiery red pentagram with your finger in the air and send it flying from you. Target one creature within 5 yards. The target becomes cursed until the end of your next turn. <br>At level 3, the target becomes cursed (luck ends). At level 7, the target becomes cursed and vulnerable (luck ends both)."
+},
+{
+name: "Pungent Stench",
+tradition: "Dark Arts",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use this talent when you cast a Dark Arts spell. From your body emanates a foul odor that sickens nearby creatures. For 1 minute, enemies inside a Size 3 space centered on you, and that moves with you, are Strength impaired. Creatures immune to the poisoned affliction ignore this effect. You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Construct Poppet",
+tradition: "Dark Arts",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "If you have a few strands of hair, a drop of blood, or a bit of nail all from the same creature, you can perform a ritual to construct a doll in that creature’s likeness. When you finish, you expend the required materials. The doll is Size 1/8, has Defense 0, and Health 5. The doll remains until it’s destroyed. <br>When you cast a spell that normally targets one creature, you can choose to lose 1 Health and target the doll instead. In doing so, you transfer the spell’s effects through the doll to the creature it represents provided that creature is within 100 miles of you.<br>In addition, if you deal damage directly to the poppet, the creature it represents becomes vulnerable (luck ends). If you destroy the poppet, the creature it represents makes a Will roll. On a failure, it becomes stunned (luck ends)."
+},
+{
+name: "All-Consuming Fires of Hell",
+tradition: "Dark Arts",
+tier: "Novice",
+castings: "3",
+target: "One creature within 15 yards",
+duration: "Instantaneous",
+desc: "Screams fill the air as the black fires gathered in your hands streak 
+toward the target. Make an Intellect roll against its Agility. On a success, the target takes 3d6 damage and catches fire (luck ends); it makes rolls to end this effect with 1 bane. If your Intellect roll results in a failure, either the target takes 1d6 damage or you can choose to lose 2 Health to turn the failure into a success. On a critical success, you also regain the expended casting of this spell"
+},
+{
+name: "Exquisite Agony",
+tradition: "Dark Arts",
+tier: "Novice",
+castings: "1",
+target: "One creature within 15 yards",
+duration: " Instantaneous",
+desc: "Pain grips the target. Make an Intellect roll against the target’s Will. You can choose to lose 2 Health to make the roll with 1 boon. On a success, the target becomes cursed for 1 minute. While cursed in this way, whenever the target falls prone, takes damage, or loses Health, it becomes weakened (luck ends). On a failure, you regain the expended casting of this spell after 1 minute. On a critical success, the effect lasts 1 hour instead of 1 minute."
+},
+{
+name: "Flesh Blight",
+tradition: "Dark Arts",
+tier: "Novice",
+castings: "1",
+target: "One flesh-and-blood creature within 10 yards",
+duration: " Instantaneous",
+desc: "Blisters appear all over the target’s body. Make a Will roll against the target’s Strength. You can choose to lose 2 Health to make the roll with 1 boon. On a success, the target takes 2d6 damage and becomes cursed for 1 minute. While cursed in this way, the target is also weakened.<br>If the target takes damage from an attack by a creature in its reach and the attacker’s weapon lacks the Long trait, a bubo on the target’s body bursts to spray the attacker. The attacker makes an Agility roll and, on a failure, becomes affected as if you had cast this spell on it.<br>If your Will roll results in a failure, you regain the expended casting of this spell after 1 minute."
+},
+{
+name: "Insidious Vexation",
+tradition: "Dark Arts",
+tier: "Novice",
+castings: "1",
+target: "One creature within 10 yards",
+duration: "1 minute",
+desc: "Dark splotches appear all over the target’s body and then fade. You can target additional creatures with this casting of the spell: lose 4 Health to target two creatures or 8 Health to target three. A target becomes cursed for the duration. While cursed in this way, each time the target gets a success on an attribute or luck roll, roll a d6 to see what happens:<br>1: The target falls prone. <br>2: The target takes 1d6 damage. <br>3: The target becomes weakened until the end of its next turn. <br>4: The target, or your choice of one of its allies within 5 yards of it, takes 2d6 damage. <br>5: The target, or your choice of one of its allies within 5 yards of it, becomes confused (luck ends). <br>6: The target, or your choice of one of its allies within 5 yards of it, takes 4d6 damage."
+},
+{
+name: "One True Love",
+tradition: "Dark Arts",
+tier: "Novice",
+castings: "1",
+target: "One creature within 5 yards",
+duration: " Instantaneous",
+desc: "The target’s eyes turn black and then return to normal a moment later. Make an Intellect roll against its Will. On a success, the target sees you as its one true love for 1 hour. The target is your ally until you harm it, its friends or loved ones, or its property. The spell also ends if the target learns it is affected by this spell or witnesses you perform an act it would find objectionable. On a failure, the target becomes your enemy if it is not already and, henceforth, makes rolls against you with 1 boon. After you cast this spell, you can choose to lose 2 Health and regain the expended casting."
+},
+{
+name: "Recall Soul",
+tradition: "Dark Arts",
+tier: "Novice",
+castings: "1, perform a ritual",
+target: "One dead creature within reach",
+duration: "Special (see the effect)",
+desc: "The soul belonging to the target returns to its body, causing it to animate and behave in a manner appropriate to someone that knows it has died and desperately wants to live. Each creature that can see the target, other than you, makes a Will roll. On a failure, the creature becomes frightened of the target until the spell ends or the creature overcomes the affliction with a successful Will roll.<br>When you cast the spell, and once each round on your turn, you can ask the soul one question. The soul answers truthfully by speaking with the target’s mouth, gesturing, or writing, and uses the knowledge it had in life. When not answering queries, it blubbers, complains, and begs for help.<br>At the end of each round, roll a d6. On any number other than 6, the spell ends unless you choose to lose 2 Health."
+},
             {
                 name: "Jolt",
                 tradition: "Aeromancy",
