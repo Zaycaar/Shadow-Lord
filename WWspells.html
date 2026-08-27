@@ -98,6 +98,13 @@
         };
 
         const defaultColor = "#8c7863";
+		
+		const tierOrder = {
+    "Talent": 1,
+    "Novice": 2,
+    "Expert": 3,
+    "Master": 4
+};
 
         // DATA ENTRIES (Add your full spell library here)
         const spells = [
@@ -1453,74 +1460,95 @@ desc: "A sudden urgency drives your audience to move. Until the end of your next
 },
         ];
 
-        function populateTraditions() {
-            const traditionFilter = document.getElementById('traditionFilter');
-            
-            // Collect all traditions from the traditionColors mapping so the dropdown is full from the start
-            const allTraditions = Object.keys(traditionColors).sort();
-            
-            allTraditions.forEach(tradition => {
-                const option = document.createElement('option');
-                option.value = tradition;
-                option.textContent = tradition;
-                traditionFilter.appendChild(option);
-            });
+     function populateTraditions() {
+    const traditionFilter = document.getElementById('traditionFilter');
+    const allTraditions = Object.keys(traditionColors).sort();
+    
+    allTraditions.forEach(tradition => {
+        const option = document.createElement('option');
+        option.value = tradition;
+        option.textContent = tradition;
+        traditionFilter.appendChild(option);
+    });
+}
+
+// MULTI-LEVEL SORT FUNCTION
+function sortSpells(spellList) {
+    return spellList.sort((a, b) => {
+        // Priority 1: Tradition (A-Z)
+        if (a.tradition !== b.tradition) {
+            return a.tradition.localeCompare(b.tradition);
         }
 
-        function displaySpells(spellsToShow) {
-            const grid = document.getElementById('spellGrid');
-            grid.innerHTML = '';
-            
-            if(spellsToShow.length === 0) {
-                grid.innerHTML = '<p style="color: #a39e93; font-style: italic; padding: 10px;">No spells found matching those filters.</p>';
-                return;
-            }
-
-            spellsToShow.forEach(spell => {
-                const color = traditionColors[spell.tradition] || defaultColor;
-
-                const card = document.createElement('div');
-                card.className = 'spell-card';
-                card.style.setProperty('--tradition-color', color);
-                
-                card.innerHTML = `
-                    <div class="spell-header">
-                        <div>
-                            <div class="spell-name">${spell.name}</div>
-                            <div class="tier-text">${spell.tier}</div>
-                        </div>
-                        <span class="tradition-tag">${spell.tradition}</span>
-                    </div>
-                    <div class="spell-meta">
-                        <div class="meta-item"><b>Castings:</b> ${spell.castings}</div>
-                        <div class="meta-item"><b>Duration:</b> ${spell.duration}</div>
-                        <div class="meta-item meta-full-width"><b>Target:</b> ${spell.target}</div>
-                    </div>
-                    <div class="spell-desc">${spell.desc}</div>
-                `;
-                grid.appendChild(card);
-            });
+        // Priority 2: Tier (Talent -> Novice -> Expert -> Master)
+        const tierA = tierOrder[a.tier] || 99;
+        const tierB = tierOrder[b.tier] || 99;
+        if (tierA !== tierB) {
+            return tierA - tierB;
         }
 
-        function filterSpells() {
-            const searchVal = document.getElementById('searchInput').value.toLowerCase();
-            const traditionVal = document.getElementById('traditionFilter').value;
-            const tierVal = document.getElementById('tierFilter').value;
+        // Priority 3: Name (A-Z)
+        return a.name.localeCompare(b.name);
+    });
+}
 
-            const filtered = spells.filter(spell => {
-                const matchesSearch = spell.name.toLowerCase().includes(searchVal);
-                const matchesTradition = (traditionVal === 'All' || spell.tradition === traditionVal);
-                const matchesTier = (tierVal === 'All' || spell.tier === tierVal);
-                
-                return matchesSearch && matchesTradition && matchesTier;
-            });
+function displaySpells(spellsToShow) {
+    const grid = document.getElementById('spellGrid');
+    grid.innerHTML = '';
+    
+    if (spellsToShow.length === 0) {
+        grid.innerHTML = '<p style="color: #a39e93; font-style: italic; padding: 10px;">No spells found matching those filters.</p>';
+        return;
+    }
 
-            displaySpells(filtered);
-        }
+    // Apply sorting hierarchy before rendering
+    const sortedSpells = sortSpells(spellsToShow);
 
-        // Initialization
-        populateTraditions();
-        displaySpells(spells);
+    sortedSpells.forEach(spell => {
+        const color = traditionColors[spell.tradition] || defaultColor;
+
+        const card = document.createElement('div');
+        card.className = 'spell-card';
+        card.style.setProperty('--tradition-color', color);
+        
+        card.innerHTML = `
+            <div class="spell-header">
+                <div>
+                    <div class="spell-name">${spell.name}</div>
+                    <div class="tier-text">${spell.tier}</div>
+                </div>
+                <span class="tradition-tag">${spell.tradition}</span>
+            </div>
+            <div class="spell-meta">
+                <div class="meta-item"><b>Castings:</b> ${spell.castings}</div>
+                <div class="meta-item"><b>Duration:</b> ${spell.duration}</div>
+                <div class="meta-item meta-full-width"><b>Target:</b> ${spell.target}</div>
+            </div>
+            <div class="spell-desc">${spell.desc}</div>
+        `;
+        grid.appendChild(card);
+    });
+}
+
+function filterSpells() {
+    const searchVal = document.getElementById('searchInput').value.toLowerCase();
+    const traditionVal = document.getElementById('traditionFilter').value;
+    const tierVal = document.getElementById('tierFilter').value;
+
+    const filtered = spells.filter(spell => {
+        const matchesSearch = spell.name.toLowerCase().includes(searchVal);
+        const matchesTradition = (traditionVal === 'All' || spell.tradition === traditionVal);
+        const matchesTier = (tierVal === 'All' || spell.tier === tierVal);
+        
+        return matchesSearch && matchesTradition && matchesTier;
+    });
+
+    displaySpells(filtered);
+}
+
+// Initialization
+populateTraditions();
+displaySpells(spells);
     </script>
 </body>
 </html>
