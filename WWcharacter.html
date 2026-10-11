@@ -394,22 +394,20 @@ createApp({
             ]
         }
     },
-    computed: {
-        filtered() {
+    filtered() {
+            const s = this.search.toLowerCase().trim();
+            
             return this.database.filter(i => {
-                const s = this.search.toLowerCase().trim();
                 const matchCat = this.filterCat === 'All' || i.cat === this.filterCat;
                 
-                // If search is empty, just filter by Category
+                // If search is empty, filter strictly by category dropdown
                 if (!s) return matchCat;
 
-                // Check if any tag or name matches the search
-                const hasMatch = i.name.toLowerCase().includes(s) || 
-                                i.tags.some(t => t.toLowerCase().includes(s)) ||
-                                i.src.toLowerCase().includes(s);
+                // Check matches explicitly (Name or Tags - avoiding loose source text matching)
+                const nameMatch = i.name.toLowerCase().includes(s);
+                const tagMatch = i.tags.some(t => t && t.toLowerCase().includes(s));
+                const hasMatch = nameMatch || tagMatch;
 
-                // LOGIC: If Mode is IN, return items that have the match.
-                // If Mode is OUT, return items that DO NOT have the match.
                 const matchSearch = this.filterMode === 'IN' ? hasMatch : !hasMatch;
 
                 return matchSearch && matchCat;
