@@ -46,10 +46,8 @@
         <select v-model="filterCat">
             <option value="All">All Categories</option>
             <option v-for="c in categories" :value="c">{{c}}</option>
-            <p>{{ filterCat }}</p>
         </select>
     </div>
-
     <table>
         <thead>
             <tr>
