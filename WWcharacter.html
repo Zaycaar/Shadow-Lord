@@ -58,7 +58,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr v-for="item in filtered" :key="item.name">
+            <tr v-for="item in filtered" :key="item.cat + '-' + item.name">
                 <td data-label="Category"><span class="cat-badge">{{item.cat}}</span></td>
                 <td data-label="Name"><strong>{{item.name}}</strong></td>
                 <td>
@@ -399,22 +399,22 @@ computed: {
             const query = this.search.toLowerCase().trim();
             
             return this.database.filter(item => {
-                // 1. Check category filter first. If a category is selected and doesn't match, drop it immediately.
+                // 1. Absolute category filter boundary
                 if (this.filterCat !== 'All' && item.cat !== this.filterCat) {
                     return false;
                 }
 
-                // 2. If the search bar is empty, keep the item (since it already matched the category).
+                // 2. If search is empty, show everything in this category
                 if (!query) {
                     return true;
                 }
 
-                // 3. Check if the item matches the search query (Name or Tags)
+                // 3. Search matching (Name or Tags)
                 const nameMatch = item.name && item.name.toLowerCase().includes(query);
                 const tagMatch = item.tags && Array.isArray(item.tags) && item.tags.some(t => t && t.toLowerCase().includes(query));
                 const hasMatch = nameMatch || tagMatch;
 
-                // 4. Apply Show (IN) vs Hide (OUT) search mode
+                // 4. Apply SHOW (IN) vs HIDE (OUT) search mode
                 return this.filterMode === 'IN' ? hasMatch : !hasMatch;
             }).sort((a, b) => a.name.localeCompare(b.name));
         }
