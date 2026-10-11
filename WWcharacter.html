@@ -394,7 +394,8 @@ createApp({
             ]
         }
     },
-    filtered() {
+computed: {
+        filtered() {
             const s = this.search.toLowerCase().trim();
             
             return this.database.filter(i => {
@@ -403,11 +404,12 @@ createApp({
                 // If search is empty, filter strictly by category dropdown
                 if (!s) return matchCat;
 
-                // Check matches explicitly (Name or Tags - avoiding loose source text matching)
-                const nameMatch = i.name.toLowerCase().includes(s);
-                const tagMatch = i.tags.some(t => t && t.toLowerCase().includes(s));
-                const hasMatch = nameMatch || tagMatch;
-
+                // Safely check name, tags, and description
+                const nameMatch = i.name && i.name.toLowerCase().includes(s);
+                const tagMatch = i.tags && Array.isArray(i.tags) && i.tags.some(t => t && t.toLowerCase().includes(s));
+                const descMatch = i.desc && i.desc.toLowerCase().includes(s);
+                
+                const hasMatch = nameMatch || tagMatch || descMatch;
                 const matchSearch = this.filterMode === 'IN' ? hasMatch : !hasMatch;
 
                 return matchSearch && matchCat;
