@@ -396,22 +396,25 @@ createApp({
     },
 computed: {
         filtered() {
-            const s = this.search.toLowerCase().trim();
+            const query = this.search.toLowerCase().trim();
             
-            return this.database.filter(i => {
-                // RULE 1: Category filter is absolute. If it doesn't match the category dropdown, drop it immediately.
-                const matchCat = (this.filterCat === 'All' || i.cat === this.filterCat);
-                if (!matchCat) return false;
+            return this.database.filter(item => {
+                // 1. Check category filter first. If a category is selected and doesn't match, drop it immediately.
+                if (this.filterCat !== 'All' && item.cat !== this.filterCat) {
+                    return false;
+                }
 
-                // RULE 2: If the search box is empty, display all items in this category.
-                if (!s) return true;
+                // 2. If the search bar is empty, keep the item (since it already matched the category).
+                if (!query) {
+                    return true;
+                }
 
-                // RULE 3: Check if the item matches the search term (Name or Tags)
-                const nameMatch = i.name && i.name.toLowerCase().includes(s);
-                const tagMatch = i.tags && Array.isArray(i.tags) && i.tags.some(t => t && t.toLowerCase().includes(s));
+                // 3. Check if the item matches the search query (Name or Tags)
+                const nameMatch = item.name && item.name.toLowerCase().includes(query);
+                const tagMatch = item.tags && Array.isArray(item.tags) && item.tags.some(t => t && t.toLowerCase().includes(query));
                 const hasMatch = nameMatch || tagMatch;
 
-                // RULE 4: Apply IN (Show) vs OUT (Hide) mode strictly within this category
+                // 4. Apply Show (IN) vs Hide (OUT) search mode
                 return this.filterMode === 'IN' ? hasMatch : !hasMatch;
             }).sort((a, b) => a.name.localeCompare(b.name));
         }
