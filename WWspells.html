@@ -114,6 +114,82 @@
 
         // DATA ENTRIES (Add your full spell library here)
         const spells = [
+{
+name: "Create Water",
+tradition: "Hydromancy",
+tier: "Talent",
+desc: "You can perform a ritual to create water. Target one Size 5 space within 10 yards. When you finish, you either fill empty containers in that space with fresh water or you cover the ground in the target space with water. The water is sufficient to extinguish ordinary flames in the space or to turn dirt in one Size 3 space into mud, creating challenging terrain for 1 hour. Once you use this talent, you lose access to it for 1 hour."
+},
+{
+name: "Fog Cloud",
+tradition: "Hydromancy",
+desc: "You can use an action to produce fog. Target one Size 10 space you can see within 30 yards. Fog fills the target space with heavy obscurement for 1 hour. You can use an action to move the fog to a different Size 10 space within 30 yards. You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Pressure Jet",
+tradition: "Hydromancy",
+desc: "You can use an action to release a jet of water with incredible force from your hand. Target one creature or object within 10 yards. Make a Will roll against the target’s Strength. On a success, the target takes 1d6 damage, and you push the target up to 5 yards. At level 3, the target takes 3d6 damage. At level 7, the target takes 7d6 damage. On a critical success, the target takes an extra 1d6 damage. "
+},
+{
+name: "Sea Heart",
+tradition: "Hydromancy",
+tier: "Talent",
+desc: "You have the Swimmer trait. If you have this trait already, increase your Speed by 2. In addition, you can breathe while submerged in water. "
+},
+{
+name: "Boiling Water",
+tradition: "Hydromancy",
+tier: "Novice",
+castings: "1",
+target: "One Size 5 space within 15 yards",
+duration: "Instantaneous",
+desc: "You form a seething, steaming ball of boiling water and hurl it to the center of the target space where it explodes. The water deals 1d6 damage to each creature in the target space. A creature makes an Agility roll with 1 boon. On a failure, it takes an extra 2d6 damage and becomes Strength impaired until the end of its next turn. Steam then creates moderate obscurement in the affected area until the end of your next turn."
+},
+{
+name: "Fluidity of Form",
+tradition: "Hydromancy",
+tier: "Novice",
+castings: "1, reaction when you move",
+target: "You",
+duration: "1 minute",
+desc: "Your body flows like liquid. You gain the Slippery, Strider, Squeeze (1 inch), and Swimmer traits if you don’t have them already. In addition, whenever you become held or slowed, you can use a reaction to end the affliction."
+},
+{
+name: "Flying Jellyfish",
+tradition: "Hydromancy",
+tier: "Novice",
+castings: "3",
+target: "One creature within 15 yards",
+duration: "Instantaneous",
+desc: "A jellyfish appears in the air and flies toward the target. Make a Will roll against the target’s Agility. On a success, the jellyfish hits the target and deals 5d6 damage. On a critical success, the target also becomes held and poisoned (luck ends both)."
+},
+{
+name: "Produce Clouds",
+tradition: "Hydromancy",
+tier: "Novice",
+castings: "1",
+target: "The Sky",
+duration: "1 hour",
+desc: "Thick clouds form in the air in the sky above you within half a mile and release rain, sleet, or snow, depending on the prevailing temperature, for the duration. The precipitation extinguishes all ordinary flames, disperses ordinary vapors, and washes away all tracks and other signs of passage. Any containers left open in the affected area fill with water. The precipitation creates moderate obscurement in the area.<br>When the spell would end, if you can see the falling precipitation, you can use an action to extend the duration by 1 hour, up to a maximum of 24 hours."
+},
+{
+name: "Tidal Influence",
+tradition: "Hydromancy",
+tier: "Novice",
+castings: "1, reaction at the start of your turn",
+target: "One Size 10 space centered on you",
+duration: "1 minute",
+desc: "An invisible tide rolls in and out through the target space. Whenever a creature other than you starts its turn in the target space, it makes a Strength roll. On a failure, the creature is pushed 5 yards away from you if it is within 5 yards, or pulled 5 yards toward you if it is more than 5 yards away. A target moved in this way, in either direction, becomes vulnerable until the start of its next turn."
+},
+{
+name: "Wall of Water",
+tradition: "Hydromancy",
+tier: "Novice",
+castings: "1",
+target: "One Size 10 space within 15 yards",
+duration: "1 hour",
+desc: "Along one side of the target space there appears a 1-yard thick wall of water. A creature can move through it, but when it does, it makes a Strength roll. On a failure, the water snatches the creature and carries it up toward the top of the wall, and then drops it prone in the space it attempted to leave. The barrier causes all rolls for ranged attacks against targets beyond it to fail."
+},
 		{
 name: "Grasping Hand",
 tradition: "Geomancy",
