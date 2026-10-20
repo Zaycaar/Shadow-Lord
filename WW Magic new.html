@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow of the Weird Wizard - Spell Database</title>
+    <style>
+        body { font-family: 'Georgia', serif; background-color: #121110; color: #e6e2dd; margin: 20px; }
+        h1 { color: #752394; margin-bottom: 5px; font-family: 'Times New Roman', serif; }
+        .subtitle { color: #a39e93; margin-top: 0; margin-bottom: 20px; font-style: italic; }
+        
+        /* Controls & Filters */
+        .controls { background: #1c1a18; padding: 20px; border-radius: 8px; margin-bottom: 20px; display: flex; gap: 15px; flex-wrap: wrap; position: sticky; top: 10px; z-index: 100; border: 1px solid #332f2b; }
+        input, select { padding: 10px; border-radius: 4px; border: 1px solid #4a443e; background: #292522; color: #fff; font-family: inherit; min-width: 160px; }
+        input:focus, select:focus { border-color: #d4a373; outline: none; }
+        
+        /* Spell Grid & Cards */
+        .spell-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 20px; }
+        .spell-card { background: #1c1a18; border-radius: 6px; padding: 18px; border-top: 5px solid var(--tradition-color, #777); box-shadow: 0 4px 10px rgba(0,0,0,0.6); border-left: 1px solid #2b2724; border-right: 1px solid #2b2724; border-bottom: 1px solid #2b2724; }
+        
+        /* Header Block */
+        .spell-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+        .spell-name { font-size: 1.3em; font-weight: bold; color: #f4ebe1; font-family: 'Times New Roman', serif; }
+        
+        /* Tags */
+        .tradition-tag { font-size: 0.75em; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; font-weight: bold; background: rgba(255,255,255,0.05); color: var(--tradition-color, #fff); border: 1px solid var(--tradition-color, #777); }
+        .tier-text { color: #a39e93; font-style: italic; font-size: 0.9em; }
+
+        /* Metadata Grid */
+        .spell-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #332f2b; font-size: 0.85em; color: #b5ae9f; }
+        .meta-item b { color: #d4a373; font-family: 'Times New Roman', serif; }
+        .meta-full-width { grid-column: span 2; }
+        
+        /* Description */
+        .spell-desc { font-size: 0.95em; line-height: 1.5; color: #cbc5ba; }
+    </style>
+</head>
+<body>
+
+    <h1>Shadow of the Weird Wizard</h1>
+    <p class="subtitle">Spell & Talent Repository</p>
+    <a href="WWindex.html" style="color: #888; text-decoration: none;">← Back to Main Menu</a>
+
+    <div class="controls">
+        <input type="text" id="searchInput" placeholder="Search by name..." onkeyup="filterSpells()">
+        
+        <select id="traditionFilter" onchange="filterSpells()">
+            <option value="All">All Traditions</option>
+        </select>
+
+        <select id="tierFilter" onchange="filterSpells()">
+            <option value="All">All Tiers & Types</option>
+            <option value="Talent">Talent</option>
+            <option value="Rite">Rite</option>
+            <option value="Novice">Novice</option>
+            <option value="Expert">Expert</option>
+            <option value="Master">Master</option>
+        </select>
+    </div>
+
+    <div class="spell-grid" id="spellGrid"></div>
+
+    <script>
+        // TRADITION COLOR PALETTE (32 Traditions)
+        const traditionColors = {
+            "Aeromancy": "#81d4fa",      // Sky Blue
+            "Alchemy": "#8d6e63",        // Amber / Potion Brown
+            "Alteration": "#ba68c8",     // Transmutation Magenta
+            "Animism": "#81c784",        // Soft Leaf Green
+            "Astromancy": "#3f51b5",     // Cosmic Deep Indigo
+            "Chaos": "#e91e63",          // Volatile Hot Pink
+            "Chronomancy": "#ffd54f",    // Hourglass Gold
+            "Conjuration": "#009688",    // Summoning Teal
+            "Cryomancy": "#4dd0e1",      // Ice Cyan
+            "Dark Arts": "#4a148c",      // Deep Void Purple
+            "Destruction": "#d32f2f",    // Crimson Ruin
+            "Divination": "#b388ff",     // Mystic Soft Lavender
+            "Eldritch": "#00e676",       // Alien Neon Green
+            "Enchantment": "#f06292",    // Charming Rose Pink
+            "Evocation": "#ff9800",      // Raw Energy Amber
+            "Geomancy": "#795548",       // Earth Stone Brown
+            "Hydromancy": "#0288d1",     // Deep Ocean Blue
+            "Illusion": "#ab47bc",       // Prismatic Purple
+            "Invocation": "#fbc02d",     // Divine Gold
+            "Necromancy": "#546e7a",     // Deathly Slate Grey
+            "Oneiromancy": "#7e57c2",    // Dreamland Violet
+            "Order": "#29b6f6",          // Crystalline Silver Blue
+            "Primal": "#2e7d32",         // Deep Forest Green
+            "Protection": "#ffb74d",     // Shielding Warm Amber
+            "Psychomancy": "#ec407a",    // Psionic Pink
+            "Pyromancy": "#f4511e",      // Flame Orange
+            "Shadowmancy": "#37474f",    // Obsidian Charcoal
+            "Skullduggery": "#78909c",   // Rogue Steel
+            "Spiritualism": "#b2dfdb",   // Ghostly Ethereal Mint
+            "Symbolism": "#d4e157",      // Rune Parchment Yellow
+            "Technomancy": "#00e5ff",    // Electric Cyber Teal
+            "Teleportation": "#9c27b0",  // Rift Violet
+            "War": "#b71c1c",             // Blood Red
+			"Hate": "#800000",        // Deep Blood Maroon
+			"Calamity": "#e65100",     // Volatile Ember Orange
+			"Want": "#9c27b0",         // Decadent Royal Plum
+			"The Pale Lady": "#8d99ae"  // Ashen Death Grey
+        };
+
+        const defaultColor = "#8c7863";
+        
+        const tierOrder = {
+            "Talent": 1,
+            "Rite": 2,
+            "Novice": 3,
+            "Expert": 4,
+            "Master": 5
+        };
+
+        // DATA ENTRIES (Add your full spell library here)
+        const spells = [
+		{
+name: "Grasping Hand",
+tradition: "Geomancy",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use an action to cause a fist made of earth and stone to form on the ground and strike. Target one creature or object on the ground within 10 yards. Make a Will roll against the target’s Agility. On a success, the target takes 2d6 damage. At level 3, the target takes 3d6 damage. At level 7, the target takes 7d6 damage. On a critical success, the target falls prone. "
+},
+{
+name: "Shape Earth",
+tradition: "Geomancy",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "Your damage-dealing Geomancy spells deal an extra 1d6 damage.<br>In addition, you can perform a ritual to reshape dirt, sand, or stone. Target one Size 5 or smaller object or surface of an object that you can see within 10 yards. When you finish, you change the target’s shape into any form you choose. You can create an opening through it, form it into a weapon, create a statue, or do something else. Once you use this aspect of the talent, you lose access to it for 1 hour."
+},
+{
+name: "Stone Stride",
+tradition: "Geomancy",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "If are not held, slowed, or weakened and you are in direct contact with a surface made of dirt, sand, or stone, you can use this talent at the start of your turn. Target an empty space of your Size resting on ground made from dirt, sand, or stone within 20 yards. You need not see the space; you can sense all eligible spaces when you use this talent. You teleport to that space. You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Tremors",
+tradition: "Geomancy",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use an action to target the ground in one Size 5 space you can see within 10 yards. The ground in that space shakes. Each creature standing on that ground makes an Agility roll. On a failure, the creature falls prone. You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Burrowing Claws",
+tradition: "Geomancy",
+tier: "Novice",
+castings: "1",
+target: "You",
+duration: "1 hour",
+desc: "Curled claws sprout from your fingers. You gain the Burrower, Climber, and Strider traits."
+},
+{
+name: "Heavy Metal",
+tradition: "Geomancy",
+tier: "Novice",
+castings: "1",
+target: " One Size 1 or smaller ordinary metal object, metal creature, or suit of medium or heavy armor worn by one creature, any of which is in contact with the ground and within 5 yards",
+duration: "1 minute",
+desc: "The target sinks into the ground, burdened by added weight. If you targeted a metal object, it sinks into the earthen surface on which it rests. If a creature could normally pick up or move the target, it must use an action to do so and make a Strength roll with 3 banes. On a success, the creature can move the target but drops it at the end of its turn.<br>If you target a metal creature or a creature wearing medium or heavy armor, it becomes held until it overcomes the effect with a success on a Strength roll. A creature also makes a Strength roll when it gains this affliction. On a failure, the target creature falls prone and can stand up only if it overcomes the affliction with a successful Strength roll."
+},
+{
+name: "Impaling Spike",
+tradition: "Geomancy",
+tier: "Novice",
+castings: "3",
+target: "One creature or object on the ground within 10 yards",
+duration: "Instantaneous",
+desc: "A rock spike erupts from the ground under the target and deals 3d6 damage to it, and the target becomes slowed until the end of your next turn."
+},
+{
+name: "Mountain Might",
+tradition: "Geomancy",
+tier: "Novice",
+castings: "1",
+target: "You",
+duration: "1 hour",
+desc: "Earth magic flows into you, bolstering your abilities for 1 hour. If you lose contact with an earth or stone surface, the spell ends early. You become slowed for the duration, but you make Strength rolls with 1 boon and impose 1 bane on rolls against your Strength. Your Health increases by 5, and your melee attacks deal an extra 1d6 damage."
+},
+{
+name: "Stone Fists",
+tradition: "Geomancy",
+tier: "Novice",
+castings: "3, reaction when you make an unarmed strike",
+target: "You",
+duration: "1 minute",
+desc: "Your hands close into stone fists, which become natural weapons that deal 4d6 damage and have the Bludgeoning trait. Your attacks with these fists deal an extra 2d6 damage to objects. The spell freezes your fingers, preventing their movement. When you end this effect, you can launch the stone fists from your hands at one creature or object within 10 yards. Make a Will roll against the target’s Agility. On a success, the target takes 4d6 damage and falls prone if it is your Size or smaller."
+},
+{
+name: "Violent Eruption",
+tradition: "Geomancy",
+tier: "Novice",
+castings: "1",
+target: "One Size 5 space on the ground within 15 yards",
+duration: " Instantaneous",
+desc: "The ground in the target space bulges and then bursts. Each creature and object in the space takes 3d6 damage. A creature makes an Agility roll. On a success, the creature takes no damage. On a failure, it also falls prone.<br>Rubble covers the ground in the target space with challenging terrain that lasts until cleared away."
+},
+            {
+                name: "Jolt",
+                tradition: "Aeromancy",
+                tier: "Talent",
+                castings: "",
+                target: "",
+                duration: "",
+                desc: "You can use an action to fling crackling lightning from your hand. Target one creature or object within 10 yards. Make a Will roll with 1 boon against its Agility. On a success, the target takes 1d6 damage, and becomes confused until the end of your next turn. The target takes 2d6 damage at level 3, and 5d6 damage at level 7. If the result of your roll is a critical success, the target takes an extra 1d6 damage."
+            },
+			{
+                name: "Soaring Leap",
+                tradition: "Aeromancy",
+                tier: "Talent",
+                castings: "",
+                target: "",
+                duration: "",
+                desc: "You can use this talent when you move at least 1 yard. You gain the Fly trait until the end of your turn. If you are still flying at the end of your turn, you gently descend until you reach a surface on which you can stand. Once you use this talent, you lose access to it (luck ends)."
+            },
+			{
+                name: "Wind Hammer",
+                tradition: "Aeromancy",
+                tier: "Talent",
+                castings: "",
+                target: "",
+                duration: "",
+                desc: "You can use an action to send a skirling wind out from your hand. Target one Size 5 space within 10 yards. Each unsecured object of Size 2 or smaller is pushed 5 yards. Each creature in the target space makes a Strength roll. A creature rolls with 1 boon for each point of Size it is larger than 2. On a failure, you push the creature 5 yards. Once you use this talent, you lose access to it (luck ends)."
+            },
+			{
+                name: "Words on the Wind",
+                tradition: "Aeromancy",
+                tier: "Talent",
+                castings: "",
+                target: "",
+                duration: "",
+                desc: " You can perform a ritual to speak to the wind, during which time you choose a place you have seen at least once. When you finish, you speak up to 30 words and wind carries them away, traveling 1 mile per minute until it reaches its destination, or the effect ends after 1 hour. If the wind reaches the destination, it repeats your words at the volume you used when you uttered them. "
+            },
+			{
+                name: "Cacophany",
+                tradition: "Aeromancy",
+                tier: "Novice",
+                castings: "1",
+                target: "One Size 5 space within 15 yards",
+                duration: "Instantaneous",
+                desc: "Thunder booms. Each creature in the target space takes 1d6 damage, while each object in it takes 3d6 damage. A creature also makes a Strength roll. On a failure, the creature takes an extra 2d6 damage and becomes deafened (luck ends). The noise of this spell carries 1 mile."
+            },
+			{
+                name: "Forked Lightning",
+                tradition: "Aeromancy",
+                tier: "Novice",
+                castings: "1",
+                target: "One or two creatures or objects within 15 yards",
+                duration: " Instantaneous",
+                desc: "A forked bolt of lightning leaps from your hand. For each target separately, make a Will roll with 1 boon against its Agility. On a success, the target takes 5d6 damage. On a critical success, the target takes an extra 1d6 damage. "
+            },
+			{
+                name: "Still the Air",
+                tradition: "Aeromancy",
+                tier: "Novice",
+                castings: "1",
+                target: "One Size 5 space within 15 yards",
+                duration: "1 hour",
+                desc: "Silence descends on the target space. No sound emanates from inside it and no sound from outside reaches into it. Any activity that requires vocalizations performed inside the target space, such as the casting of spells, has no effect. Alternatively, you can expend the casting of this spell to target up to three creatures in reach. Each gains the Silent trait for 1 hour."
+            },
+			{
+                name: "Wind Blast",
+                tradition: "Aeromancy",
+                tier: "Novice",
+                castings: "3",
+                target: "One creature or object within 10 yards",
+                duration: " Instantaneous",
+                desc: "You gather the wind and release it to go screaming away from you. If you target an object and the object is secured, it takes 2d6 damage. An On a success, the target takes 1d6 damage, is pushed 1d6 yards, and falls prone. On a critical success, the target takes an extra 1d6 damage."
+            },
+			{
+                name: "Wind Walk",
+                tradition: "Aeromancy",
+                tier: "Novice",
+                castings: "3",
+                target: "You",
+                duration: "1 minute",
+                desc: "You find purchase for your steps in the air. You can move in any direction and remain there. If you fail to stand on a solid surface that can support your weight when the spell ends, you fall."
+            },
+			{
+                name: "Wind Wall",
+                tradition: "Aeromancy",
+                tier: "Novice",
+                castings: "3",
+                target: "One line-shaped space, up to 10 yards wide, 10 yards tall, and 1 yard thick originating from a point within 10 yards",
+                duration: "1 minute",
+                desc: "Strong wind blows through the target space. The noise it creates drowns out all sounds quieter than a shout. A creature that would move through the space makes a Strength roll, rolling with 1 boon for each point of Size above 3. On a failure, the creature is pushed back to the nearest empty space and its Speed becomes 0 until the end of the round. Finally, the wind imposes 3 banes on rolls to attack targets behind the target space using ranged attacks."
+            },
+			{
+name: "Corrosive Globule",
+tradition: "Alchemy",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use an action to flick a globule of sticky acid from your hand. Target one creature or object within 5 yards. Make an Intellect roll against its Agility. On a success, the target takes 1d6 damage, 3d6 damage at level 3, or 6d6 at level 7. At the end of each round, the target takes 1d6 damage (luck ends). On a critical success, the target takes 2d6 damage at the end of each round. "
+},
+{
+name: "Esoteric Substance",
+tradition: "Alchemy",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: " You can perform a ritual using an alchemist’s kit and 5 sp of rare ingredients to produce an esoteric substance. When you finish, expend the ingredients and produce one vial of acid, one dose of antitoxin, or one dose of poison. The substance retains potency until used or consumed."
+},
+{
+name: "Rapid Remedy",
+tradition: "Alchemy",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can perform a ritual using an alchemist’s kit and 5 cp of common materials to produce an elixir. When you finish, expend the materials and fill one bottle with an Elixir of Healing. The consumable retains potency until consumed."
+},
+{
+name: "Transmutation",
+tradition: "Alchemy",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: " You can perform a ritual using an alchemist’s kit and 5 sp of exotic materials to make a material alteration. Target one Size 1/2 or smaller ordinary object in reach. When you finish, expend the exotic materials and apply one of the following effects to the target. <br>• The target regains 2d6 Health.<br>• The target loses 4d6 Health.<br>• The target becomes as hard as iron.<br>• The target becomes as soft as clay.<br>• You change the material of the target from one to another, provided the new material is of the same kind as the old. You could turn an iron bar into one of gold, or the oak of a haft into something soft as balsa. The change lasts for 1 hour."
+},
+{
+name: "Black Bile Poison",
+tradition: "Alchemy",
+tier: "Novice",
+castings: "3",
+target: "One creature within 5 yards",
+duration: "Instantaneous",
+desc: "You fling black, noxious fluid from your hand. Make an Intellect roll against the target’s Agility. On a success, the target loses 3d6 Health, and becomes poisoned (luck ends)."
+},
+{
+name: "Calamitous Rust",
+tradition: "Alchemy",
+tier: "Novice",
+castings: "1",
+target: "One Size 5 space within 5 yard",
+duration: "Instantaneous",
+desc: "You toss red flakes into the air. Any ordinary metal object in the target space that is neither worn nor carried drops to Health 0. A creature wearing or carrying such objects makes an Agility roll with 1 boon. On a failure, each ordinary metal object the creature wears or carries drops to Health 0."
+},
+{
+name: "Gooey Glue",
+tradition: "Alchemy",
+tier: "Novice",
+castings: "1",
+target: "One Size 5 space within 5 yards",
+duration: "1 Minute",
+desc: "Thick, viscous slime covers all exposed surfaces inside the target space. Such surfaces count as challenging terrain. Any creature in the space when you cast the spell, that enters it, or attempts to move through it makes a Strength roll. On a failure, the creature becomes held until the spell ends. A creature can overcome this effect with a successful Strength roll."
+},
+{
+name: "Minor Animation",
+tradition: "Alchemy",
+tier: "Novice",
+castings: "1",
+target: "One unsecured Size 1/4 to Size 1 object within 5 yards",
+duration: "1 Minute",
+desc: "The target twitches and shakes as the magic transforms it into a creation. The target becomes your controlled companion. The effect ends early if the target becomes incapacitated. See WW Core pg 79 for stats."
+},
+{
+name: "Neutralize Toxin",
+tradition: "Alchemy",
+tier: "Novice",
+castings: "1",
+target: "One Size 1 creature or object within 5 yards",
+duration: "Instantaneous",
+desc: "You dispatch any poisons, venoms, and infectious agents. If you target a creature, the creature can make a Strength roll. On a failure, it loses any trait that bestows the poisoned affliction or that would expose a creature to infection for 1 minute. If the creature suffers from the effects of infection, the infection ends. Finally, if you target an object, any ordinary poison, toxin, or infection it contains is destroyed."
+},
+{
+name: "Oil Slick",
+tradition: "Alchemy",
+tier: "Novice",
+castings: "1",
+target: "One Size 5 space within 5 yards",
+duration: "1 Minute",
+desc: "Slippery oil covers all exposed surfaces inside the target space. Such surfaces count as challenging terrain. Any creature in the space when you cast the spell, that enters it, or attempts to move through it makes an Agility roll. On a failure, the creature falls prone. The oil is flammable. Any prone creature or object in the target space that takes damage from fire catches fire (luck ends)."
+},
+{
+name: "Camouflage",
+tradition: "Alteration",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use this talent at the end of your turn if you are within reach of one object of your Size or larger. Your appearance changes to match your surroundings. You become invisible to all creatures more than 2 yards away from you. The effect ends if you move. You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest. "
+},
+{
+name: "Efficacious Disguise",
+tradition: "Alteration",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use an action to alter a creature’s appearance. Target one creature in reach. You touch the target and change as much or as little of the target’s physical appearance as you like. You can adjust the target’s height and weight, within limits for its Size, change coloration, apparent ancestry, and any other detail you decide. Objects worn and carried by the target are unchanged. The effect lasts 1 hour, but ends early if the target becomes unconscious or you cross running water. You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Unnerving Mask",
+tradition: "Alteration",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use a reaction when a creature you can see attacks you to make yourself appear hideous. The creature makes a Will roll. On a failure, you push the creature 1 yard and it becomes frightened of you until the start of your next turn. Once you use this talent you lose access to it (luck ends)."
+},
+{
+name: "Warp Flesh",
+tradition: "Alteration",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use an action to cause a creature’s body to undergo a brief, but painful transformation. Target one creature within 5 yards. Make a Will roll against its Strength. On a success, the target becomes weakened until the end of your next turn. On a critical success, the target takes 1d6 damage and becomes vulnerable (luck ends). At level 3, you can target two creatures. At level 7, you can target three creatures. "
+},
+{
+name: "bestow Might",
+tradition: "Alteration",
+tier: "Novice",
+castings: "3",
+target: "One creature within 5 yards",
+duration: "1 minute",
+desc: "The target grows a bit bigger and stronger. The target increases its Health by 5, makes Strength rolls with 1 boon, imposes 1 bane on rolls against its Strength, and its melee attacks deal an extra 1d6 damage. The spell ends early if the target becomes unconscious."
+},
+{
+name: "Light Healing",
+tradition: "Alteration",
+tier: "Novice",
+castings: "3",
+target: "One creature within 5 yards",
+duration: " Instantaneous",
+desc: "The target heals 2d6 damage. "
+},
+{
+name: "Minor Polymorph",
+tradition: "Alteration",
+tier: "Novice",
+castings: "1",
+target: "You",
+duration: "1 hour",
+desc: "You, along with everything you wear and carry, transform into a Size 1/4 harmless animal of your choice such as a bird, cat, or frog. The effect ends early if you are harmed. Your Speed is 4 and you have the Slippery trait and other movement traits appropriate to your form. You have no attacks and you lose the ability to speak."
+},
+{
+name: "Seeming",
+tradition: "Alteration",
+tier: "Novice",
+castings: "1",
+target: "Up to five creatures all inside a Size 5 space within 5 yards",
+duration: "8 hours",
+desc: "You change the appearance of each target. Each target is subjected to the effects of the Efficacious Disguise talent, with you making all decisions about their new appearance. Additionally, the effect ends early for a target if it enters running water."
+},
+{
+name: "Split the Skin",
+tradition: "Alteration",
+tier: "Novice",
+castings: "3",
+target: "One creature within 5 yards",
+duration: " Instantaneous",
+desc: "A bulge forms on the target’s body and breaks open. The target becomes vulnerable (luck ends). Each time the target makes a luck roll to end this effect, the target takes 1d6 damage."
+},
+{
+name: "Weigh You Down",
+tradition: "Alteration",
+tier: "Novice",
+castings: "1",
+target: "Up to five creatures all inside a Size 5 space within 10 yards",
+duration: " Instantaneous",
+desc: "You cause the targets to grow big and heavy, so that they move more slowly. Each target becomes slowed and vulnerable (luck ends both)."
+},
+{
+name: "Armor of the Ancient Oak",
+tradition: "Animism",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can perform a ritual to armor yourself with the bark of a tree. When you finish, brown, woody knobs and patches appear and spread across your entire body until you are covered in bark. The covering grants you armored Defense 15 and flakes away after you rest."
+},
+{
+name: "Beast Tongue",
+tradition: "Animism",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can make yourself understood by any ordinary animal that can see and hear you, and you can understand the gist of what an ordinary animal would convey through the sounds and gestures it makes. If you make the animal friendly, it might perform services for you at the Sage’s discretion. "
+},
+{
+name: "Cornucopia",
+tradition: "Animism",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can perform a ritual while outdoors to gain provisions for you and your allies. When you finish, animals deliver berries, nuts, roots, and other edible foodstuffs enough to feed up to five creatures for 1 day. Once you use this talent, you lose access to it for 24 hours."
+},
+{
+name: "Whip Vine",
+tradition: "Animism",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use an action to cause a long vine to erupt from the ground and lash a creature before the vine withers away. Target one creature within 5 yards. Make a Will roll against the target’s Agility. On a success, the target takes 1d6 damage and you can move the target up to 5 yards. At level 3, the target takes 3d6 damage. At level 7, the target takes 7d6 damage. On a critical success, the target also becomes held until the end of your next turn."
+},
+{
+name: "Clear a Path",
+tradition: "Animism",
+tier: "novice",
+castings: "3",
+target: "One space, 3 yards wide and 10 yards long, originating from a point you can reach",
+duration: " Instantaneous",
+desc: "The spirits pull aside all creatures and obstacles to give you a clear path. Each creature in the target space is pushed to the nearest empty space to the one it leaves. If there are two possible spaces, you choose. A creature moved in this way makes an Agility roll. On a failure, it falls prone. Each unsecured object in the target space moves to the nearest empty space to the one it leaves, with you choosing if there are multiple eligible destination spaces. Then, you increase your Speed by 3 until the end of your turn."
+},
+{
+name: "Fire Seeds",
+tradition: "Animism",
+tier: "novice",
+castings: "3",
+target: "You",
+duration: "1 Minute",
+desc: "You kindle the spirit of flame in a handful of seeds, nuts, and pinecones. When you cast this spell and when you use an action to do so, you can throw a seed at a creature or object within 10 yards. Make a Will roll against the target’s Agility. On a success, the target takes 4d6 damage. On a critical success, the target also catches fire (luck ends)."
+},
+{
+name: "Grasping Growth",
+tradition: "Animism",
+tier: "novice",
+castings: "1",
+target: "The ground inside a Size 5 space within 15 yards",
+duration: "1 Minute",
+desc: "A profusion of animated grasses, vines, and shrubbery spreads across the target surface turning it into challenging terrain. Each creature within 1 yard of the ground when you cast this spell or that moves to such a position makes an Agility roll. On a failure, the target becomes held (luck ends). A target can overcome this effect with a success on a Strength roll. If a target gets a failure on the roll to end the affliction, it falls prone and cannot stand up until the affliction ends. If the target is already prone, it takes 2d6 damage."
+},
+{
+name: "Plant The Seed",
+tradition: "Animism",
+tier: "novice",
+castings: "1",
+target: "One creature within 10 yards",
+duration: "Instantaneous",
+desc: "You awaken the spirit of the oak in an acorn you hold. Make a Will roll against the target’s Agility. On a success, the acorn disappears inside the target’s body and roots grow from it to anchor it in place. The target loses 1d6 Health and becomes held. The target can overcome this affliction with a success on a Strength roll with 1 bane. At the end of each round the target is held in this way, the target takes 2d6 damage. If the target becomes incapacitated, it dies and an oak tree grows out of its remains."
+},
+{
+name: "Protection From The Elements",
+tradition: "Animism",
+tier: "Novice",
+castings: "1",
+target: "You",
+duration: "Instantaneous",
+desc: "You beseech the spirits to protect you. You impose 1 bane on rolls to attack you, become immune to exposure, hunger, and thirst. You take half damage from cold, fire, and lightning. Finally, you ignore the harmful effects of wind. "
+},
+{
+name: "Through The Hedge",
+tradition: "Animism",
+tier: "Novice",
+castings: "1, reaction when you move at least 1 yard",
+target: "You",
+duration: "1 Minute",
+desc: "You can move from tree to tree, plant to plant. When you move, you can enter a space occupied by a plant and gain awareness of each other plant of the same size or larger within 10 yards. You can exit from any space occupied by one of these plants."
+},
+{
+name: "Beguiling Lights",
+tradition: "Astromancy",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use an action to create one or more lights. Target one Size 5 space within 30 yards. Up to five bobbing lights appear in the air of the space and remain for 1 minute. You can use an action to move the lights up to 10 yards. The lights shed dim light. From a distance, the lights look like lit torches. When an enemy starts its turn with line of sight to the light, the enemy makes a Will roll. On a success, the enemy becomes immune to Beguiling Lights for 24 hours. On a failure, the enemy becomes Intellect impaired for as long as it has line of sight to the lights. You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Dazzling Flash",
+tradition: "Astromancy",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use an action to cause a bright light to flash at a distance. Target one point you can see within 10 yards. Dazzling light flashes at that point. Each creature within 1 yard of it makes a luck roll. On a failure, the creature becomes confused until the end of your next turn. A creature immune to the blinded affliction ignores this effect. <br>At level 3, the flash affects creatures within 3 yards. At level 7, a creature also takes 4d6 damage on a failure. "
+},
+{
+name: "Glittering Nimbus ",
+tradition: "Astromancy",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "When you dodge an attack from an enemy that can see you, you can use this talent to cause your body to emit bright, dazzling light. If the roll to attack results in a success, the enemy becomes confused until the end of its next turn. You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Produce Light",
+tradition: "Astromancy",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use an action to cause a globe of light to appear in the palm of your hand. The globe emits bright light in a color you choose. You can touch the globe to an object, and the globe becomes attached to it until the effect ends or you use an action to remove it and touch it to another object in reach. The effect lasts 1 hour, but ends early when you use this talent again. The effect lasts 4 hours at level 3 or 8 hours at level 7. You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Captivating Lights",
+tradition: "Astromancy",
+tier: "Novice",
+castings: "1",
+target: " One Size 3 space within 10 yards",
+duration: "1 Minute",
+desc: "Lights appear and dance in the target space. When an enemy starts its turn with line of sight to the target space, the enemy makes a Will roll. On a success, the enemy becomes immune to this spell for 24 hours. On a failure, the enemy becomes confused until the spell ends or until the enemy is harmed. While confused in this way, the enemy must run toward the target space on each of its turns. Once it enters the space, it will not willingly leave it. The enemy is otherwise free to act as it chooses."
+},
+{
+name: "Colorful Flare",
+tradition: "Astromancy",
+tier: "Novice",
+castings: "3",
+target: "One Size 1/2 space within 500 yards",
+duration: "1 Minute",
+desc: "You launch from your fingertip a bright bead of light in any color you choose. The bead flies toward the target space and hangs there until the end of your next turn. It then gently falls to a surface below it, where it remains until the spell ends. The bead emits bright light."
+},
+{
+name: "Falling Star",
+tradition: "Astromancy",
+tier: "Novice",
+castings: "3",
+target: "One creature or object within 10 yards",
+duration: "Instantaneous",
+desc: "A miniature star appears and orbits your head, before streaking away. The target takes 1d6 damage. Then, make a Will roll against the target’s Agility. On a success, the target takes 2d6 damage and makes a luck roll. On a failure, the target becomes blinded until the end of your next turn. If your roll results in a critical success, the target takes an extra 1d6 damage."
+},
+{
+name: "Lasting Light",
+tradition: "Astromancy",
+tier: "Novice",
+castings: "1",
+target: "One Size 1/2 space within 5 yards",
+duration: "8 Hours",
+desc: "A ball of light appears in and fills the target space. It emits bright light. You can use an action to move the ball of light up to 5 yards in any direction and it remains there until you move it again or the spell ends. You can also touch the ball to an object, and the ball becomes attached to it until the effect ends or you use an action to remove it and touch it to another object in reach or release it to float in the air once more. While you are in the light created by this spell, you make rolls as a result of using Astromancy talents and casting Astromancy spells with 1 boon."
+},
+{
+name: "Scorching Ray",
+tradition: "Astromancy",
+tier: "Novice",
+castings: "3",
+target: "One creature or object within 20 yards",
+duration: "Instantaneous",
+desc: "Your hand glows as you launch from it a burning beam of radiance. Make a Will roll with 1 boon against the target’s Agility. On a success, the target takes 4d6 damage. On a critical success, the target also catches fire."
+},
+{
+name: "Wall of Radiance",
+tradition: "Astromancy",
+tier: "Novice",
+castings: "1",
+target: "One Size 10 space within 15 yards",
+duration: "1 Hour",
+desc: "Horizontal and vertical light beams form a lattice on one side of the target space. The lattice emits bright light. Any creature or object passing through it takes 3d6 damage. A flammable object catches fire. A creature makes a Strength roll. On a failure, the creature catches fire (luck ends) and becomes blinded until the end of its next turn. "
+},
+{
+name: "Last Ditch Effort",
+tradition: "Chaos",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use an action to make a luck roll. On a success, choose one novice spell from a tradition you have discovered. You cast it without expending a casting to do so. On a failure, roll a d20 and find the number rolled on the Wild Magic table to see what happens instead. You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Scintillating Shield",
+tradition: "Chaos",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use this talent when you use an action to cast a Chaos spell. A warbling shield appears in front of you for 1 minute. The effect ends early if you become controlled, stunned, or unconscious. <br>When you use this talent, and again at the start of each of your turns, make a luck roll. On a success, you impose 3 banes on rolls to attack you until the start of your next turn. On a critical success, a creature that attacks you takes 1d6 damage. On a failure, you become confused until the start of your next turn. On a critical failure, the effect ends early and you roll a d20, finding the number rolled on the Wild Magic table. You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Weird Orb",
+tradition: "Chaos",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: " You can use an action to form an orb in your hand and release it to fly where it will. Target one Size 5 space you can see within 10 yards. Then roll a d6 to see what happens. <br>1: The orb flies to the center of the space and pops, sending multicolored streamers into the air that disappear a few moments later.<br>2: The orb flies from you for a few yards and then veers back toward you. Make an Agility roll. On a failure, the orb strikes you and you take 1d6 damage.<br>3: The orb corkscrews into the air and implodes. Roll a d20 and find the number rolled on the Wild Magic table to see what happens instead.<br>4: The orb flies toward a randomly determined creature in the target space. The creature makes an Agility roll. On a failure, the creature is struck by the orb and takes 1d6 damage.<br>5: The orb flies toward a creature you choose in the target space. Make an Intellect or Will roll against the target’s Agility. On a success, the target takes 4d6 damage. On a failure, the orb disappears and you roll a d20. Find the number rolled on the Wild Magic table (pg 89) to see what happens instead.<br>6: The orb flies toward and strikes a creature you choose in the space. The creature takes 8d6 damage"
+},
+{
+name: "Wild Leap",
+tradition: "Chaos",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use this talent when you move at least 1 yard, but only if you lack the confused and controlled afflictions. Make a luck roll. On a success, you teleport to an empty space you can see within 2d6 yards. On a failure, you teleport to an empty space of the Sage’s choice within 2d6 yards. You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Anarchic Blast",
+tradition: "Chaos",
+tier: "Novice",
+castings: "1",
+target: "One creature within 5 yards",
+duration: "Instantaneous",
+desc: "From your open hand explodes multicolored light. Make an Intellect roll or Will roll against the target’s Agility. On a success, roll 2d6. The sum of this roll tells you how many dice you roll for damage. If the target becomes injured, roll a d6 to see what else happens. <br>1:You take the same amount of damage that the target took and then roll on the Wild Magic Effects table to determine additional effects. <br>2-5: Each creature within 1 yard of the target takes 1d6 damage and makes a Strength roll. On a failure, the creature takes an extra 1d6 damage.<br>6: Roll 1d6. The number rolled determines the number of dice you roll to determine the extra damage the target takes.<br>If you get a failure on your attribute roll, energy spills from you out to a distance of 1d6 × 5 yards. You and each creature and object in range takes 1d6 damage."
+},
+{
+name: "Chaos Sphere",
+tradition: "Chaos",
+tier: "Novice",
+castings: "1",
+target: "One Size 1 space within 5 yards",
+duration: "1 minute",
+desc: "A tumescent, nacreous sphere appears in the target space. At the end of each round, make a luck roll. On a success, the energy spreads out from the sphere to a range of 1d6 yards. Each creature and object in the area takes 1d6 damage and becomes confused until the end of the next round. If you get a failure, the spell ends early and you roll a d20 and find the result on the Wild Magic Effects table."
+},
+{
+name: "Cheat Death",
+tradition: "Chaos",
+tier: "Novice",
+castings: "1, reaction when you become injured or incapacitated",
+target: "You",
+duration: "Instantaneous",
+desc: "You heal 2d6 damage and make a luck roll. On a success, you teleport to an empty space of your choice within 50 yards. On a failure, you teleport to an empty space with a surface that can support you of the Sage’s choice within 1d20 × 5 yards. "
+},
+{
+name: "Flickering Form",
+tradition: "Chaos",
+tier: "Novice",
+castings: "1, reaction when a creature gets a success on a roll to attack you",
+target: "You",
+duration: "1 minute",
+desc: "You reduce the damage from the attack by 1d6. Then, until the spell ends, you have the Slippery trait and when a creature gets a success on a roll to attack you, the roll counts as a failure instead if the result is an even number."
+},
+{
+name: "Magical Wellspring",
+tradition: "Chaos",
+tier: "Novice",
+castings: "1, reaction when you cast a spell",
+target: "One Size 5 space centered on you",
+duration: "1 minute",
+desc: "The magic flooding into the target space fills the air with eerie noises, flashing colors, and other odd phenomena. When a creature in the target space produces a magical effect, the creature makes the attribute roll, if any, with 1 boon, and targets of the effect make the roll to resist the effect, if any, with 1 bane. Also, any magical effect that deals or heals damage in the space deals or heals an extra 1d6 damage. However, at the end of each round, you make a luck roll. On a failure, roll a d20 and find the result on the Wild Magic Effects table. The spell then ends"
+},
+{
+name: "Warped Space",
+tradition: "Chaos",
+tier: "Novice",
+castings: "1",
+target: "One Size 15 space centered on you",
+duration: "1 minute",
+desc: "Reality warps out of true in the target space. Whenever a creature in it moves, roll a d6 <br>1: The creature becomes confused and held until the start of its next turn.<br>2: The creature makes a luck roll. On a success, it teleports to an empty space of its choice anywhere in the target space. On a failure, it teleports to an empty space of your choice in the target space.<br>3: The creature moves normally.<br>4: A weird orb flies toward a randomly determined creature in the target space. The creature makes an Agility roll. On a failure, the creature is struck by the orb and takes 1d6 damage.<br>5: The creature makes a luck roll. On a success, the creature doubles its Speed until the end of its next turn. On a failure, it becomes slowed until the end of its next turn.<br>6: The creature disappears into the Void until the end of the round. When the creature returns, it makes a luck roll. On a success, it reappears in an empty space of its choice within 30 yards of the one it left. On a failure, you choose the space where the creature reappears. In either cases, the creature rolls a d20. On a 13, it becomes possessed by a <b>Formless Demon</b>. The Sage has rules for this creature.",
+},
+{
+name: "Borrow Against the Future",
+tradition: "Chronomancy",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use this talent at the start of your turn. Increase the number of actions you can use during your turn by one. At the end of your turn, make a Will roll. On a failure, you become confused (luck ends). You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Peer into the Past",
+tradition: "Chronomancy",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use an action to look back into the past. Make an Intellect roll. On a success, you, and you alone, see time in your vicinity flow in reverse for up to 1 hour. If you move more than 5 yards from where you cast this spell, the effect ends early. Each minute, you see events around you roll back 1 minute into the past, seeing creatures’ actions and events that recently occurred happen in reverse. For example, if you cast this spell in a room where a murder took place 10 minutes before, 10 minutes after you cast this spell, you would see the murder occur and then you would see the events leading up to the murder. On a failure, you cannot see more than 5 yards away. You can use this talent once. You regain the use of it after you rest."
+},
+{
+name: "Sudden, Horrid Aging",
+tradition: "Chronomancy",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use an action to briefly cause a creature to experience extreme aging. Target one creature within 5 yards. Make an Intellect roll against the target’s Strength. On a success, the target becomes weakened until the end of your next turn. On a critical success, the target also falls prone. Angels, demons, faeries, fiends, and spirits ignore this effect.<br>At level 3, you can target two creatures. At level 7, you can target three creatures."
+},
+{
+name: "Temporal Disjunction",
+tradition: "Chronomancy",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use a reaction immediately after you are harmed to step out of time. You become removed from existence until the end of the round. While so removed, you take no turns and you perceive nothing. When the effect ends, make a luck roll. On a success, you return to existence in an empty space of your choice within 5 yards of the space you left. On a failure, the effect extends until the end of the next round. You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "An Extra Moment",
+tradition: "Chronomancy",
+tier: "Novice",
+castings: "1, reaction when a creature within 5 yards ends its turn",
+target: "One creature within 5 yards",
+duration: " Instantaneous",
+desc: "Time speeds up for the target. The target gains one action that it must use immediately. The target makes any rolls from using this action with  1 boon. Then, the target makes a luck roll. On a failure, the target becomes confused and slowed (luck ends both)."
+},
+{
+name: "Displace from Time",
+tradition: "Chronomancy",
+tier: "Novice",
+castings: "1",
+target: "One creature within 10 yards",
+duration: "Instantaneous",
+desc: "Make a luck roll. On a success, the target winks out of existence. The target is removed from time (luck ends). While removed from time, the only thing the target can do is make the luck roll to end this effect. When the target gets a success on its luck roll, it reappears in the space it vacated or in an empty space of its choice nearest to that space. You then make a luck roll. On a failure, you become held (luck ends). If you get a failure on the initial luck roll, you become affected by the spell instead of the target."
+},
+{
+name: "Entangle Timeline",
+tradition: "Chronomancy",
+tier: "Novice",
+castings: "1",
+target: "One creature within 10 yards",
+duration: "1 minute",
+desc: "The target sees its future and past unspool around it and becomes surrounded by conflicting images of scenes that might have happened or not. The target becomes confused and vulnerable for the duration. While confused in this way, you trap the target in a Size 5 space centered on it. If the target attempts to move out of the space, it stops and its Speed drops to 0 until the start of its next turn. <br>At the end of each round, you and the target make an Intellect roll. If you get a failure, you become confused until the end of the next round. If the target gets a failure, it becomes stunned until the end of the next round. The spell ends early if the target is harmed by an effect other than this one."
+},
+{
+name: "Entrap in a Time Loop",
+tradition: "Chronomancy",
+tier: "Novice",
+castings: "1",
+target: "One creature within 10 yards",
+duration: "Instantaneous",
+desc: "You seize the target’s time line and wrap it around the target. The target becomes confused and held (luck ends both). While confused, the target must use an action on each of its turns to perform the same activity it performed during the previous round. If the target would be prevented from doing so—no eligible target for its attack, no uses remaining for its talent, and so on, the target does nothing on its turn and takes 2d6 damage. <br>After you cast this spell, make a luck roll. On a failure, you teleport to an empty space on a surface that can bear your weight of the Sage’s choice within 10 yards."
+},
+{
+name: "Fold Space",
+tradition: "Chronomancy",
+tier: "Novice",
+castings: "3",
+target: "One Size 5 space centered on you and one Size 5 space within 30 yards",
+duration: "1 round",
+desc: "Time and space warp so that creatures in each space can clearly see into and hear from the other space. Both spaces count as being adjacent to each other, such that when a creature moves out of one space it enters the other, and vice versa. When the spell ends, make a luck roll. On a failure, you become confused (luck ends)."
+},
+{
+name: "Temporal Distortion",
+tradition: "Chronomancy",
+tier: "Novice",
+castings: "3",
+target: " One enemy with 10 yards",
+duration: "1 minute",
+desc: "Time flows in an erratic fashion for the target. Make a luck roll. On a failure, you also target yourself for this spell’s effects. The target emits dim light and becomes Agility impaired and vulnerable (luck ends). Until the afflictions end, the target can use an action or move on each of its turns, but not both. "
+},
+{
+name: "Conjure Arrow",
+tradition: "Conjuration",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use an action to conjure an arrow and send it flying. Target one creature within 10 yards. Make an Intellect roll with 1 boon against the target’s Defense. On a success, the arrow hits and the target takes 2d6 damage. At level 3, the target takes 3d6 damage. At level 7, the target takes 7d6 damage. On a critical success, the target takes an extra 1d6 damage."
+},
+{
+name: "Conjure Caltrops",
+tradition: "Conjuration",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use an action to cause numerous sharp, barbed objects to appear. Target the ground in one Size 5 space within 10 yards. Caltrops (see Chapter 3) cover the ground in that space and remain for 1 minute. You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Conjure Useful Item",
+tradition: "Conjuration",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: " You can use an action to cause an ordinary piece of gear (see Chapter 3) worth 1 sp or less to appear in your hand or at your feet if your hands are full. The item remains for 1 hour, but disappears when you use this talent again. You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Hidden Route",
+tradition: "Conjuration",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use an action to cause an opening to appear. Target one surface on a Size 1 or larger object within reach. A Size 1/2 hole appears in the object centered on the point you touch. The hole extends up to 1 yard through the object. The object remains unharmed from the presence of the hole. The hole remains open for 1 minute. If anything is in the hole when the effect ends, it’s pushed out to the nearest empty space. You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest"
+},
+{
+name: "Conjure Helpful Servant",
+tradition: "Conjuration",
+tier: "Novice",
+castings: "1",
+target: "One Size 2 space within 5 yards",
+duration: "24 hours",
+desc: "or pack mule in the target space. (See Chapter 3 for their rules.) The creature is friendly to you and becomes your controlled companion. If the creature becomes incapacitated, the spell ends early.<br>If you have a drop of blood, few hairs, or a bit of nail from a creature, you can expend the object and cause the creature to which the object belongs to appear in the target space instead. An unwilling creature can make a Will roll. On a success, the creature ignores the effect, but the object is still expended. An unwilling creature summoned in this way retains its normal disposition to you and does not become your controlled companion."
+},
+{
+name: "Conjure Obstacle",
+tradition: "Conjuration",
+tier: "Novice",
+castings: "1",
+target: "One Size 2 space on the ground within 5 yards",
+duration: "1 hour",
+desc: "Rocks, dirt, trees, and detritus fill the space around any creatures and objects in it. A creature in the space can make an Agility roll with 1 boon. On a success, the creature moves to the empty space nearest to the target space and becomes vulnerable until the end of your next turn. On a failure, the creature becomes buried"
+},
+{
+name: "Produce Flame",
+tradition: "Conjuration",
+tier: "Novice",
+castings: "3",
+target: "One Size 2 space within reach",
+duration: " Instantaneous",
+desc: "You pluck flames from somewhere else and send them rushing out from your hands into the target space. The flames deal 3d6 damage to each object in the space, and 1d6 damage to each creature in the space. A creature makes an Agility roll. On a failure, the creature takes an extra 2d6 damage. On a critical failure, the creature catches fire (luck ends)."
+},
+{
+name: "Rain of Blades",
+tradition: "Conjuration",
+tier: "Novice",
+castings: "1",
+target: "One Size 5 space within 5 yards",
+duration: "Instantaneous",
+desc: "You snatch knives, daggers, forks, and other sharp things from all around and cause them to appear in the air above the target space. The blades fall and disappear after they land. Each creature and object in the space and not under hard shelter takes 2d6 damage. A creature makes a luck roll. On a failure, the creature takes an extra 1d6 damage."
+},
+{
+name: "Secret Chest",
+tradition: "Conjuration",
+tier: "Novice",
+castings: "1",
+target: "One container that can fit inside a Size 1 space within reach",
+duration: "Special",
+desc: "You touch the target container and leave behind your mark. You can use an action to cause the target and everything it holds to appear in an empty space on the ground within reach, which ends this spell. Otherwise, the spell lasts until you cast it on a different target."
+},
+{
+name: "Weighty Chains",
+tradition: "Conjuration",
+tier: "Novice",
+castings: "1",
+target: "One creature within 5 yards",
+duration: "1 minute",
+desc: "You reach for and retrieve heavy chains with which you can bind the target. Make an Intellect roll against the target’s Strength. On a success, the chains wrap around the target and cause it to become held and weakened for the duration. The target can overcome this effect with a success on a Strength or Agility roll. On a failure, a heap of chains, 50 yards long, appears in an empty space of your choice within 1 yard of the target. The chains disappear when the spell ends."
+},
+{
+name: "Freeze Ray",
+tradition: "Cryomancy",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use an action to launch a white-blue beam from your fingertip. Target one creature within 10 yards. Make a Will roll against the target’s Agility. On a success, the target takes 1d6 damage and becomes slowed until the end of your next turn. At level 3, the target takes 3d6 damage. At level 7, the target takes 7d6 damage. On a critical success, the target instead becomes slowed (luck ends)."
+},
+{
+name: "Freeze Water",
+tradition: "Cryomancy",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: " You can use an action to turn water into ice. Target one Size 5 space that you can see within 10 yards. All water in that space becomes ice. Any creature in the water can make an Agility roll with 1 boon. On a success, if the creature has a Speed greater than 0, the creature moves to the nearest empty space outside the target space. Otherwise, the creature becomes buried in ice and subject to suffocation. The ice melts away after 1 hour. You can use this talent once. You regain the use of it after you rest."
+},
+{
+name: "Shape Ice",
+tradition: "Cryomancy",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "Your damage-dealing Cryomancy spells deal an extra 1d6 damage.<br>In addition, you can perform a ritual to reshape ice. Target one Size 5 space you can see within 10 yards. When you finish, you change the shape of all ice in the target space. You could create an opening through it, steps, fanciful figures, or something else. Once you use this talent, you lose access to it for 1 hour."
+},
+{
+name: "Sleet Storm",
+tradition: "Cryomancy",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use an action to cause sleet to fall and make the ground slippery. Target one Size 5 space within 10 yards. Sleet falls through the target space for 1 minute, creating light obscurement within the space. In addition, the ground in the space becomes challenging terrain. You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Frostbite",
+tradition: "Cryomancy",
+tier: "Novice",
+castings: "3",
+target: "One creature within 15 yards",
+duration: "Instantaneous",
+desc: "Cold sinks its fangs into the target. It takes 1d6 damage. Then, make an Intellect or Will roll against the target’s Strength. On a success, the target becomes slowed (luck ends). On a critical success, the target takes an extra 1d6 damage."
+},
+{
+name: "Hoarfrost Weapon",
+tradition: "Cryomancy",
+tier: "Novice",
+castings: "3, reaction when you attack with a melee weapon",
+target: "One weapon you wield",
+duration: "1 minute",
+desc: "Ice spreads across your weapon and causes it to radiate deadly cold. When you attack with the weapon, you roll with 1 boon and you can use Intellect or Will in place of the attribute you would normally use. Your attacks with the weapon deal an extra 1d6 damage from the cold. While you carry the weapon, you are immune to damage from cold and you take half damage from fire. Finally, you can use an action to touch the weapon to a body of water and freeze solid a Size 1 cube of it. You can draw your weapon freely from the ice created."
+},
+{
+name: "Ice Barrier",
+tradition: "Cryomancy",
+tier: "Novice",
+castings: "3",
+target: "One Size 10 space within 15 yards",
+duration: "1 minute",
+desc: "Along one side of the target space there forms a 1-yard-thick barrier of ice. Each Size 1 cube of the barrier has Health 20 and takes double damage from fire."
+},
+{
+name: "Icicle fall",
+tradition: "Cryomancy",
+tier: "Novice",
+castings: "1",
+target: "One Size 3 space within 10 yards",
+duration: "Instantaneous",
+desc: "Long blades formed from ice appear above the target space and fall. Each creature and object in the space that is not under a hard surface takes 1d6 damage. A creature makes an Agility roll with 1 bane. On a failure, the creature also falls prone. Then, for 1 minute, the broken icicles cover the ground in the space with challenging terrain."
+},
+{
+name: "Rime",
+tradition: "Cryomancy",
+tier: "Novice",
+castings: "3",
+target: "One creature or object within 15 yards or all exposed surfaces inside one Size 5 space within 15 yards",
+duration: "Special (see the effect) ",
+desc: "Ice spreads with great rapidity over the target. A target creature takes 1d6 damage and makes a Strength roll. On a failure, it becomes held for 1 minute or until it overcomes the affliction with a successful Strength roll. At the end of each round the target is held in this way, it takes 1d6 damage.<br>A target object is covered in ice for 1 minute. If the target can normally be opened or closed, it cannot be opened or closed until the spell ends. A creature that touches the target takes 1d6 damage, but no more than once per round.<br>Ice covers a target surface with challenging terrain for 1 minute. Any creature that moves across the surface makes an Agility roll. On a failure, the creature takes 1d6 damage and falls prone."
+},
+{
+name: "Snowstorm",
+tradition: "Cryomancy",
+tier: "Novice",
+castings: "1",
+target: "One Size 50 space centered on you",
+duration: "1 hour",
+desc: "The air temperature plummets in the target space. Thick gray clouds form there and release heavy snow that falls throughout it. The falling snow creates light obscurement in the affected space and, after 1 minute, covers the ground in the space with challenging terrain.<br>If you cast this spell on an indoor space, the falling snow instead creates heavy obscurement.<br>While you are in the affected space, you make rolls from casting your Cryomancy spells with 1 boon and you impose 1 bane on rolls to resist your Cryomancy spells."
+},
+{
+name: "Forked Tongue",
+tradition: "Dark Arts",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: " Your tongue bifurcates. Whenever you would pass off a lie as the truth in a social situation, each creature that can hear you makes an Intellect roll with 1 bane. On a success, the creature becomes immune to this talent for 24 hours. On a failure, the creature believes what you say to be true, even if presented with evidence to the contrary, for 1 hour. On a critical failure, the creature believes anything you say to be the truth for 24 hours."
+},
+{
+name: "Hex",
+tradition: "Dark Arts",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use an action to draw a fiery red pentagram with your finger in the air and send it flying from you. Target one creature within 5 yards. The target becomes cursed until the end of your next turn. <br>At level 3, the target becomes cursed (luck ends). At level 7, the target becomes cursed and vulnerable (luck ends both)."
+},
+{
+name: "Pungent Stench",
+tradition: "Dark Arts",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use this talent when you cast a Dark Arts spell. From your body emanates a foul odor that sickens nearby creatures. For 1 minute, enemies inside a Size 3 space centered on you, and that moves with you, are Strength impaired. Creatures immune to the poisoned affliction ignore this effect. You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Construct Poppet",
+tradition: "Dark Arts",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "If you have a few strands of hair, a drop of blood, or a bit of nail all from the same creature, you can perform a ritual to construct a doll in that creature’s likeness. When you finish, you expend the required materials. The doll is Size 1/8, has Defense 0, and Health 5. The doll remains until it’s destroyed. <br>When you cast a spell that normally targets one creature, you can choose to lose 1 Health and target the doll instead. In doing so, you transfer the spell’s effects through the doll to the creature it represents provided that creature is within 100 miles of you.<br>In addition, if you deal damage directly to the poppet, the creature it represents becomes vulnerable (luck ends). If you destroy the poppet, the creature it represents makes a Will roll. On a failure, it becomes stunned (luck ends)."
+},
+{
+name: "All-Consuming Fires of Hell",
+tradition: "Dark Arts",
+tier: "Novice",
+castings: "3",
+target: "One creature within 15 yards",
+duration: "Instantaneous",
+desc: "Screams fill the air as the black fires gathered in your hands streak toward the target. Make an Intellect roll against its Agility. On a success, the target takes 3d6 damage and catches fire (luck ends); it makes rolls to end this effect with 1 bane. If your Intellect roll results in a failure, either the target takes 1d6 damage or you can choose to lose 2 Health to turn the failure into a success. On a critical success, you also regain the expended casting of this spell"
+},
+{
+name: "Exquisite Agony",
+tradition: "Dark Arts",
+tier: "Novice",
+castings: "1",
+target: "One creature within 15 yards",
+duration: " Instantaneous",
+desc: "Pain grips the target. Make an Intellect roll against the target’s Will. You can choose to lose 2 Health to make the roll with 1 boon. On a success, the target becomes cursed for 1 minute. While cursed in this way, whenever the target falls prone, takes damage, or loses Health, it becomes weakened (luck ends). On a failure, you regain the expended casting of this spell after 1 minute. On a critical success, the effect lasts 1 hour instead of 1 minute."
+},
+{
+name: "Flesh Blight",
+tradition: "Dark Arts",
+tier: "Novice",
+castings: "1",
+target: "One flesh-and-blood creature within 10 yards",
+duration: " Instantaneous",
+desc: "Blisters appear all over the target’s body. Make a Will roll against the target’s Strength. You can choose to lose 2 Health to make the roll with 1 boon. On a success, the target takes 2d6 damage and becomes cursed for 1 minute. While cursed in this way, the target is also weakened.<br>If the target takes damage from an attack by a creature in its reach and the attacker’s weapon lacks the Long trait, a bubo on the target’s body bursts to spray the attacker. The attacker makes an Agility roll and, on a failure, becomes affected as if you had cast this spell on it.<br>If your Will roll results in a failure, you regain the expended casting of this spell after 1 minute."
+},
+{
+name: "Insidious Vexation",
+tradition: "Dark Arts",
+tier: "Novice",
+castings: "1",
+target: "One creature within 10 yards",
+duration: "1 minute",
+desc: "Dark splotches appear all over the target’s body and then fade. You can target additional creatures with this casting of the spell: lose 4 Health to target two creatures or 8 Health to target three. A target becomes cursed for the duration. While cursed in this way, each time the target gets a success on an attribute or luck roll, roll a d6 to see what happens:<br>1: The target falls prone. <br>2: The target takes 1d6 damage. <br>3: The target becomes weakened until the end of its next turn. <br>4: The target, or your choice of one of its allies within 5 yards of it, takes 2d6 damage. <br>5: The target, or your choice of one of its allies within 5 yards of it, becomes confused (luck ends). <br>6: The target, or your choice of one of its allies within 5 yards of it, takes 4d6 damage."
+},
+{
+name: "One True Love",
+tradition: "Dark Arts",
+tier: "Novice",
+castings: "1",
+target: "One creature within 5 yards",
+duration: " Instantaneous",
+desc: "The target’s eyes turn black and then return to normal a moment later. Make an Intellect roll against its Will. On a success, the target sees you as its one true love for 1 hour. The target is your ally until you harm it, its friends or loved ones, or its property. The spell also ends if the target learns it is affected by this spell or witnesses you perform an act it would find objectionable. On a failure, the target becomes your enemy if it is not already and, henceforth, makes rolls against you with 1 boon. After you cast this spell, you can choose to lose 2 Health and regain the expended casting."
+},
+{
+name: "Recall Soul",
+tradition: "Dark Arts",
+tier: "Novice",
+castings: "1, perform a ritual",
+target: "One dead creature within reach",
+duration: "Special (see the effect)",
+desc: "The soul belonging to the target returns to its body, causing it to animate and behave in a manner appropriate to someone that knows it has died and desperately wants to live. Each creature that can see the target, other than you, makes a Will roll. On a failure, the creature becomes frightened of the target until the spell ends or the creature overcomes the affliction with a successful Will roll.<br>When you cast the spell, and once each round on your turn, you can ask the soul one question. The soul answers truthfully by speaking with the target’s mouth, gesturing, or writing, and uses the knowledge it had in life. When not answering queries, it blubbers, complains, and begs for help.<br>At the end of each round, roll a d6. On any number other than 6, the spell ends unless you choose to lose 2 Health."
+},
+{
+name: "Entropic Power",
+tradition: "Destruction",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: " You can use this talent when you cast a Destruction spell. Entropic power flows into you for 1 minute. The effect ends early if you become unconscious. When you deal damage from a spell you cast or a magical talent you use, the target takes an extra 1d6 damage. At the end of each round, the ground within 3 yards of you fractures to become challenging terrain until cleared away. When this effect ends, make a Strength roll. On a failure, you lose 1d6 Health. You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Rend the Flesh",
+tradition: "Destruction",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use an action to send tendrils of ruinous energy from your hand. Target one creature within 5 yards. Make a Will roll against its Strength. On a success, the target takes 1d6 damage and becomes vulnerable until the end of your next turn. At level 3, the target takes 3d6 damage. At level 7, the target takes 7d6 damage instead."
+},
+{
+name: "Ruinous Field",
+tradition: "Destruction",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use this talent when you cast a Destruction spell. You emanate a ruinous field for 1 minute. The effect ends early if you become confused, controlled, stunned, or unconscious. Creatures and objects that are neither worn nor carried within 1 yard of you are vulnerable for as long as they remain there. You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Shatter",
+tradition: "Destruction",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: " You can use an action to damage or destroy an object. Target one ordinary object you can see within  10 yards. Make an Intellect roll. On a success, the target loses 4d6 Health. On a critical success, the target loses 8d6 Health instead. If the loss destroys the object, it flies apart and each creature and object within 3 yards of it takes 1d6 damage. A creature can make a luck roll. On a success, the creature takes no damage. You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Break the Body",
+tradition: "Destruction",
+tier: "Novice",
+castings: "1",
+target: "Up to three creatures within 10 yards",
+duration: "1 minute",
+desc: "Fractures and fissures appear all over the targets’ bodies. Each becomes Agility impaired for the duration. At the end of each round, the target takes 1d6 damage."
+},
+{
+name: "Feed on Loss",
+tradition: "Destruction",
+tier: "Novice",
+castings: "1, reaction when a creature within 5 yards becomes incapacitated or a Size 1 or larger object within 5 yards is destroyed",
+target: "You",
+duration: "1 minute",
+desc: "The air shimmers around you, your will to ruin made manifest. Whenever a creature within 5 yards becomes incapacitated or a Size 1 or larger object within 5 yards is destroyed, you make attribute and luck rolls with 1 boon for 1 minute."
+},
+{
+name: "Hammer Down",
+tradition: "Destruction",
+tier: "Novice",
+castings: "3",
+target: "One creature within 10 yards",
+duration: "Instantaneous",
+desc: "You fling out your hand to release a wave of destructive force. The target takes 1d6 damage, and makes a Strength roll. On a failure, you push the target 5 yards. On a critical failure, the target also falls prone and cannot stand up (luck ends)."
+},
+{
+name: "Lesser Ruin",
+tradition: "Destruction",
+tier: "Novice",
+castings: "3",
+target: "One creature or object within 10 yards",
+duration: "Instantaneous",
+desc: "Minor wounds appear all over the target. It takes 3d6 damage."
+},
+{
+name: "Pain",
+tradition: "Destruction",
+tier: "Novice",
+castings: "3",
+target: "One flesh-and-blood creature within 10 yards",
+duration: "Instantaneous",
+desc: "The target lets loose a gasp as you send a jolt of pain through it. The target becomes weakened (luck ends)."
+},
+{
+name: "Rays of Dissolution",
+tradition: "Destruction",
+tier: "Novice",
+castings: "1",
+target: "Each creature and object within 5 yards",
+duration: "Instantaneous",
+desc: "You sweep a lime-colored beam around you. Whatever it touches begins to decay. The beam deals 3d6 damage to each target object. Each target creature makes an Agility roll. On a failure, the creature takes 3d6 damage."
+},
+{
+name: "Combat Precognition",
+tradition: "Divination",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "While you are not injured and you lack the confused, controlled, stunned, and unconscious afflictions, you roll to attack with 1 boon and you impose 1 bane on rolls to attack you."
+},
+{
+name: "Preview the Future",
+tradition: "Divination",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use this talent when you would make an attribute roll. Make a luck roll. On a success, you add 10 to the result of your attribute roll. On a failure, you make the attribute roll with 1 bane. You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Psychometry",
+tradition: "Divination",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can perform a ritual to divine secrets from an object. Target one object that you hold in your hands. When you finish, you learn all of the target’s traits and how to make use of them. If the target was a weapon, you make rolls to attack with it with 1 boon until after you rest. In addition, you can make an Intellect roll. On a success, you learn the identity of the last person to handle the target for 1 minute or longer, the amount of time since anyone has handled it, and one or more hints about its origins. You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Warning Sign",
+tradition: "Divination",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use a reaction when you would be harmed to make a luck roll with 1 bane. On a success, you ignore the harm. At level 3, you roll without the bane. At level 7, you roll with 1 boon. You can use this talent  once. You regain the use after you rest."
+},
+{
+name: "Eavesdrop",
+tradition: "Divination",
+tier: "Novice",
+castings: "3, you can cast without speaking",
+target: "One Size 1/2 space within 30 yards; you need neither line of effect nor line of sight to the target",
+duration: "1 hour",
+desc: "Your ears pop as they adjust to the spell’s effects. You hear from the target space as if you were there instead of wherever you happen to be."
+},
+{
+name: "Experience Revalations",
+tradition: "Divination",
+tier: "Novice",
+castings: "1, perform a ritual, you have dice, cards, tea leaves, or another implement of divination",
+target: "You",
+duration: "Special (see the effect)",
+desc: "You consult your implements of divination to gain insights about the future. When you finish the ritual, roll a d20 three times and note the number rolled on each die. At any time before you cast this spell again, you can expend one roll to replace the number rolled on a d20 with the number you expended. The spell ends when you expend the last roll or when you cast the spell again."
+},
+{
+name: "Interpret Omen",
+tradition: "Divination",
+tier: "Novice",
+castings: "3, reaction when a creature within 5 yards makes an attribute roll or a luck roll",
+target: "The creature that enabled the casting of this spell",
+duration: "Instantaneous",
+desc: "You caught a glimpse of the future and you use this knowledge to change fate. Either add 3 to or subtract 3 from the roll that enabled the casting of this spell."
+},
+{
+name: "Locate Quarry",
+tradition: "Divination",
+tier: "Novice",
+castings: "1, perform a ritual",
+target: "You",
+duration: "24 hours",
+desc: "Name one creature or object you have seen at least once. During the ritual, you close your eyes and fix your mind on the subject. When you finish, if the creature or object named is within 1 mile of you, you know where it is. If you have handled the object or have something from the creature, such as a drop of blood, a lock of hair, or bit of nail, then you know the location of the creature or object if it is within 100 miles.<br>The spell reveals the location of the creature or object at the time you cast it, and you retain the knowledge of the location indefinitely, though the information might no longer be accurate if the creature later leaves the space that it occupied or someone later moves the object."
+},
+{
+name: "Pronounce Doom",
+tradition: "Divination",
+tier: "Novice",
+castings: "1",
+target: "One creature within 5 yards",
+duration: "Instantaneous",
+desc: "You reveal some dreadful happening to befall the target. If the target can hear and understand you, it makes a Will roll with 1 bane. On a failure, the target becomes frightened of you for 1 minute or until it overcomes the affliction with a successful Will roll. In addition, while frightened in this way, the target subtracts 5 from the result of any attribute roll and luck rolls it makes."
+},
+{
+name: "Weal or Woe",
+tradition: "Divination",
+tier: "Novice",
+castings: "1, perform a ritual, you have dice, cards, tea leaves, or another implement of divination",
+target: "You",
+duration: "1 hour",
+desc: "You consult your implements of divination to discern the consequences of your next action. Describe a possible course of activity, such as “I open the door on the west wall,” “I pick the lock on the chest,” or “I talk to that man over there.” When you finish the ritual, make an Intellect roll. On a success, the Sage tells you truthfully if the activity is likely to have a good or bad outcome for you. If the Sage decides the chance for a good or bad outcome is more or less even, you receive an answer of “uncertain.” If you fail the roll, the Sage is free to answer truthfully, lie, or just give you an answer of uncertainty.<br>Regardless of the outcome of your roll, you make attribute rolls with 1 boon for the duration."
+},
+{
+name: "Defy Geometry",
+tradition: "Eldritch",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use this talent when you cast a spell that affects a target other than you. You can choose your target from among any you can see, regardless of the spell’s normal range. You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Disastrous Revelation",
+tradition: "Eldritch",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "If you lack the confused, controlled, stunned, or unconscious afflictions, you can use this talent at the start of your turn. Make an Intellect roll. On a success, you experience a disastrous revelation. You heal 2d6 damage and, until the end of your next turn, you make attribute rolls with 3 boons, but, after, you become confused (luck ends). On a failure, you make attribute rolls with 3 banes until the end of your next turn. You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Otherworldly Shrieks",
+tradition: "Eldritch",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: " You can use a reaction when you are harmed to cause horrible, shrieking noises to fill the air around you. Each creature inside a Size 5 space centered on you makes a Will roll. On a failure, the creature becomes confused (luck ends). A creature immune to the frightened affliction is immune to this effect. You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Unhinged Glare",
+tradition: "Eldritch",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use an action to level your gaze at your foe. Target one creature within 10 yards. If the creature can see you, make an Intellect roll against its Will. On a success, the target becomes frightened of you until the end of your next turn. At level 3, the target also takes 1d6 damage. At level 7, the target takes 3d6 damage, and becomes confused for as long as it remains frightened. On a critical success, the target becomes frightened of you (luck ends)."
+},
+{
+name: "Betrayal of Flesh",
+tradition: "Eldritch",
+tier: "Novice",
+castings: "1",
+target: "One creature within 15 yards",
+duration: "1 minute",
+desc: "One of the target’s limbs gains a mind of its own and becomes hostile to its owner. At the start of each of the target’s turns, it makes a Will roll with 1 bane. On a failure, the target’s own arm (or a similar limb) deals 1d6 damage to it and the target becomes weakened until the start of its next turn. The target can overcome this effect and end the spell early with a successful Will roll.<br>After you cast the spell, make a Will roll. On a failure, you take 1d6 damage."
+},
+{
+name: "Creeping Mist",
+tradition: "Eldritch",
+tier: "Novice",
+castings: "1",
+target: "One Size 5 space centered on you",
+duration: "1 minute",
+desc: "Gray mist with streaks of green rises from the ground around you and remains in place. The mist creates light obscurement in the target space. At the end of each round after the first, the mist spreads 5 yards farther in all directions, and each enemy in the mist makes a Strength roll. On a failure, the enemy takes 1d6 damage, falls prone, and is dragged  5 yards in a direction you choose. <br>After you cast the spell, make a Will roll. On a failure, you take 1d6 damage."
+},
+{
+name: "Hijack Corpse",
+tradition: "Eldritch",
+tier: "Novice",
+castings: "1",
+target: "One Size 2 or smaller dead creature within 5 yards",
+duration: "Special (see the effect)",
+desc: "You loosen your soul to find purchase in the target’s body. You fall prone and your body becomes insensate for the duration. Your soul migrates to and possesses the target until the target becomes destroyed. The target becomes a creation under your control. The target retains none of the talents it had when it was alive, but retains any traits it had, including natural weapons. While in the target body, its Defense and Agility equal your Intellect score and its Strength equals your Will score. The target has a Health score of 20. Since the target does not breathe, it cannot speak. When the spell ends, your soul returns to your body. If you do not end the spell early and the target is destroyed, you lose 1d6 Health and become stunned (luck ends)."
+},
+{
+name: "Rats in the Walls",
+tradition: "Eldritch",
+tier: "Novice",
+castings: "1",
+target: "One Size 5 space on the ground within 15 yards",
+duration: "1 minute",
+desc: "Human-faced rats crawl free from the ground to cover all surfaces in the target space. Such surfaces are challenging terrain. At the end of each round, each creature in the target space makes a Will roll. On a failure, the creature is frightened of the rats until it overcomes the affliction with a successful Will roll. While frightened of the rats, it cannot move from its space. Then, on each of your turns, the rats either move to another Size 5 space within 5 yards or force each enemy in their midst to make an Agility roll. On a failure, the enemy takes 2d6 damage.<br>After you cast the spell, make a Will roll. On a failure, you take 1d6 damage."
+},
+{
+name: "Summon Maggot of Sharzak-Ka",
+tradition: "Eldritch",
+tier: "Novice",
+castings: "1",
+target: "One empty Size 1 space on the ground within 5 yards",
+duration: "1 hour",
+desc: "From the fabled city of Sharzak-Ka, visible only in darkness of the new moon, comes a giant maggot that appears in the target space. The giant maggot becomes your controlled companion. The spell ends early if the maggot becomes incapacitated. When the spell ends, the maggot disappears.<br>After you cast the spell, make a Will roll. On a failure, you take 1d6 damage. <br>See Shadow pg 110 for more details."
+},
+{
+name: "Wild Beast of the Dark Woods",
+tradition: "Eldritch",
+tier: "Novice",
+castings: "1",
+target: "One creature within 15 yards",
+duration: "Special (see the effect)",
+desc: "The target’s body shifts and bends. If the target has a Health score of 20 or less, it transforms into a wild beast of the dark woods, appearing bestial and strange. Any creature, other than you, that sees this transformation makes a Will roll. On a failure, the creature becomes frightened of the target until the creature overcomes the affliction with a successful Will roll. <br>A target with a Health score greater than 20 takes 2d6 damage and makes a Will roll. On a failure, the target is frightened of you until it overcomes the affliction with a successful Will roll. <br>A transformed target uses its normal rules, but treats all creatures as enemies and must attack, if it can, on each of its turns. After 24 hours, the target can make a Will roll. On a success, the spell ends. On a failure, the spell is permanent. <br>After you cast the spell, make a Will roll. On a failure, you take 1d6 damage."
+},
+{
+name: "Compelled Violence",
+tradition: "Enchantment",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use an action to compel a creature to do violence to another. Target one creature within 10 yards. Make an Intellect roll against the target’s Will. On a success, the target or one creature within its reach takes 1d6 damage. At level 3, the damage increases to 3d6. At level 7, the damage increases to 7d6. On a critical success, the target also becomes vulnerable until the end of your next turn."
+},
+{
+name: "Lead into Peril",
+tradition: "Enchantment",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use an action to befuddle a person. Target one creature within 5 yards. Make an Intellect roll against the target’s Will. On a success, you move the target up to its Speed and the target becomes vulnerable until the start of your next turn. On a critical success, the target becomes vulnerable (luck ends). You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Majestic Presence",
+tradition: "Enchantment",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "If you are not injured and you lack the confused, controlled, stunned, and unconscious afflictions, you can use this talent at the start of your turn to seem majestic and dreadful, growing a bit larger and shining with terrible light. Until the end of your next turn, you impose 1 bane on rolls to attack you by creatures that can see you and you make rolls as a result of casting Enchantment spells with 1 boon. You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Seed of Delusion",
+tradition: "Enchantment",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use an action to plant a seed of delusion in your foe. Target one creature within 5 yards. Make an Intellect roll against the target’s Intellect. On a success, the target becomes confused until the end of your next turn. While confused in this way, the target rolls an additional d20 for any attribute roll it makes, and uses the lower roll. You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Charm",
+tradition: "Enchantment",
+tier: "Novice",
+castings: "3",
+target: "One creature within 5 yards",
+duration: "Instantaneous",
+desc: "For a moment, the target sees you in the best possible light. Make an Intellect roll against the target’s Will. On a success, a target with Health 20 or less becomes your controlled companion for 1 hour. On a critical success, a target with Health 30 or less becomes your controlled companion for 1 hour. Otherwise, the target becomes your ally for 1 minute. The effect ends early if you harm the target, its loved ones, or its property. "
+},
+{
+name: "Dreadful Presence",
+tradition: "Enchantment",
+tier: "Novice",
+castings: "1",
+target: "Up to three creatures within 5 yards",
+duration: "Instantaneous",
+desc: "A thrill of fear washes through the target, causing them to become vulnerable (luck ends). A creature immune to the frightened affliction ignores this effect. When a target vulnerable in this way ends its turn within 5 yards of you, it takes 1d6 damage."
+},
+{
+name: "Incandescent Rage",
+tradition: "Enchantment",
+tier: "Novice",
+castings: "1",
+target: "One creature within 10 yards",
+duration: "Instantaneous",
+desc: "Anger bubbles up in the target’s mind, threatening to overtake its self-control. Make an Intellect roll against the target’s Will. On a success, the target counts all creatures as enemies, makes rolls to attack with 1 boon, and its attacks deal an extra 2d6 damage for 1 minute. The target must use an action to attack on each of its turns, if it can. However, when it takes a turn, it makes a luck roll. On a success, it chooses the target of its attack. On a failure, you do.<br>If you fail the Intellect roll, you regain the expended casting of this spell after 1 minute."
+},
+{
+name: "Temper Emotions",
+tradition: "Enchantment",
+tier: "Novice",
+castings: "3",
+target: "One creature within 10 yards",
+duration: " Instantaneous",
+desc: "The target experiences a numbness that spreads throughout its body. Make an Intellect roll against the target’s Will. On a success, the target becomes confused and slowed for 1 minute or until it overcomes the afflictions with a successful Will roll. If the target takes damage or loses Health, the effect ends. While confused in this way, the target is indifferent to all creatures, is immune to the controlled, frightened, Intellect impaired, and Will impaired afflictions, and rolls to attack with 1 bane. On a failure, you regain the expended casting of this spell after 1 minute."
+},
+{
+name: "Uncontrollable Laughter",
+tradition: "Enchantment",
+tier: "Novice",
+castings: "1",
+target: "One creature within 10 yards",
+duration: "1 minute",
+desc: "The target explodes with laughter and becomes vulnerable for the duration. At the start of each of the target’s turns, it makes a Will roll. On a failure, the target becomes slowed and weakened until the start of its next turn."
+},
+{
+name: "Unhealthy Attraction",
+tradition: "Enchantment",
+tier: "Novice",
+castings: "1",
+target: "One creature or object within 10 yards",
+duration: "1 minute",
+desc: "You imbue the target with magic that attracts attention from those around it. When an enemy starts its turn within 10 yards of the target and can see it, the enemy makes a Will roll. On a success, the enemy becomes immune to this spell for 1 hour. On a failure, the enemy becomes confused (luck ends). While confused in this way, the enemy must end each of its turns within 5 yards of the target or take 4d6 damage."
+},
+{
+name: "Command",
+tradition: "Evocation",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "If you can speak and you lack the confused, controlled, stunned, and unconscious afflictions, you can use this talent at the start of your turn. Target one creature within 5 yards. The target makes a Will roll. On a failure, you can issue one command to the target. Choose one of the activities that normally require the use of an action from those described in Chapter 2. On the target’s next turn, it must use an action to perform this activity. If it cannot, the target becomes confused (luck ends). You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Numinous Benediction",
+tradition: "Evocation",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "The study of the uncanny has fortified your psyche. You can use a reaction when you would become confused, controlled, or stunned to make a luck roll. On a success, you do not gain the affliction."
+},
+{
+name: "Polyglot",
+tradition: "Evocation",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can speak, understand, read, and write in any language. "
+},
+{
+name: "Word of Breaking",
+tradition: "Evocation",
+tier: "Talent",
+castings: "",
+target: "",
+duration: "",
+desc: "You can use an action to speak the Word of Breaking. Target one creature or object within 5 yards. The target takes 1d6 damage. At level 3, the target takes 2d6 damage. At level 7, the target takes 4d6 damage."
+},
+{
+name: "Bolstering Syllable",
+tradition: "Evocation",
+tier: "Novice",
+castings: "1 at level 1, 2 at level 3, or 4 at level 7, on your turn, no action required when you lack the confused, controlled, stunned, and unconscious afflictions",
+target: "Each creature in a Size 3 space centered on you if you whisper,  a Size 10 space if you speak, or a Size 60 space if you shout",
+duration: "Instantaneous",
+desc: "The sound you make uplifts those who hear you. Until the end of your next turn, a target makes attribute rolls with 1 boon if you whispered,  2 boons if you spoke, or 3 boons if you shouted."
+},
+{
+name: "Harmful Syllable",
+tradition: "Evocation",
+tier: "Novice",
+castings: "1 at level 1, 2 at level 3, or 4 at level 7, on your turn, no action required when you lack the confused, controlled, stunned, and unconscious afflictions",
+target: "Each creature in a Size 3 space centered on you if you whisper,  a Size 10 space if you speak, or a Size 60 space if you shout",
+duration: "Instantaneous",
+desc: "You make a sound that sends painful ripples through those who hear it. A target takes 1d6 damage if you whisper, 2d6 damage if you speak, or 3d6 damage if you shout."
+},
+{
+name: "Hateful Syllable",
+tradition: "Evocation",
+tier: "Novice",
+castings: "1 at level 1, 2 at level 3, or 4 at level 7, on your turn, no action required when you lack the confused, controlled, stunned, and unconscious afflictions",
+target: "Each creature in a Size 3 space centered on you if you whisper,  a Size 10 space if you speak, or a Size 60 space if you shout",
+duration: "Instantaneous",
+desc: "The sound spilling from your lips awakens intense hatred in your audience. A target must use a reaction to attack the creature nearest to it. If there’s more than one eligible creature, determine the target at random. If the creature cannot use a reaction, it instead becomes confused until the end of your next turn. A target rolls to attack with 3 banes if you whispered, 2 banes if you spoke, or 1 bane if you shouted."
+},
+{
+name: "Healing Syllable",
+tradition: "Evocation",
+tier: "Novice",
+castings: "1 at level 1, 2 at level 3, or 4 at level 7, on your turn, no action required when you lack the confused, controlled, stunned, and unconscious afflictions",
+target: "Each creature in a Size 3 space centered on you if you whisper,  a Size 10 space if you speak, or a Size 60 space if you shout",
+duration: "Instantaneous",
+desc: "Pain washes away from people who hear your vocalization. A target heals 1d6 damage if you whisper, 2d6 damage if you speak, and 3d6 damage if you shout."
+},
+{
+name: "Hindering Syllable",
+tradition: "Evocation",
+tier: "Novice",
+castings: "1 at level 1, 2 at level 3, or 4 at level 7, on your turn, no action required when you lack the confused, controlled, stunned, and unconscious afflictions",
+target: "Each creature in a Size 3 space centered on you if you whisper,  a Size 10 space if you speak, or a Size 60 space if you shout",
+duration: "Instantaneous",
+desc: "Confidence drains out from people who hear the sound you make. Until the end of your next turn, a target makes attribute rolls with 1 bane if you whispered, 2 banes if you spoke, or 3 banes if you shouted."
+},
+{
+name: "Mobilizing Syllable",
+tradition: "Evocation",
+tier: "Novice",
+castings: "1 at level 1, 2 at level 3, or 4 at level 7, on your turn, no action required when you lack the confused, controlled, stunned, and unconscious afflictions",
+target: "Each creature in a Size 3 space centered on you if you whisper,  a Size 10 space if you speak, or a Size 60 space if you shout",
+duration: "Instantaneous",
+desc: "A sudden urgency drives your audience to move. Until the end of your next turn, a target increases its Speed by 2 if you whispered, 4 if you spoke, or 8 if you shouted."
+},
+{
+    name: "Rite of Hateful Arms",
+    tradition: "Hate",
+    tier: "Rite", // or type: "Rite"
+    requirements: " You spend 1 hour in prayer. You know one Hate spell and have all the castings for it. You have uncommon ingredients worth 1 sp. ",
+    castings: " Perform a ritual, expend all the castings of one Hate spell you have learned, lose 1d6 Health, and expend the required ingredients.",
+    target: " Up to three melee weapons in reach",
+    duration: "8 hours",
+    desc: "Your hands turn black and split until they ooze. You touch each target, causing it to assume a sinister appearance. Each target gains the Brutal weapon trait. If the target has this trait already, it instead grants 1 boon on rolls to attack with it. Finally, whenever a roll to attack with the affected weapon results in a critical success, the wielder can use a reaction to make another attack with it."
+},
+        ];
+
+    function populateTraditions() {
+        const traditionFilter = document.getElementById('traditionFilter');
+        const allTraditions = Object.keys(traditionColors).sort();
+        
+        allTraditions.forEach(tradition => {
+            const option = document.createElement('option');
+            option.value = tradition;
+            option.textContent = tradition;
+            traditionFilter.appendChild(option);
+        });
+    }
+
+    // MULTI-LEVEL SORT FUNCTION
+    function sortSpells(spellList) {
+        return spellList.sort((a, b) => {
+            // Priority 1: Tradition (A-Z)
+            if (a.tradition !== b.tradition) {
+                return a.tradition.localeCompare(b.tradition);
+            }
+
+            // Priority 2: Tier / Type
+            const tierA = tierOrder[a.tier] || 99;
+            const tierB = tierOrder[b.tier] || 99;
+            if (tierA !== tierB) {
+                return tierA - tierB;
+            }
+
+            // Priority 3: Name (A-Z)
+            return a.name.localeCompare(b.name);
+        });
+    }
+
+    function displaySpells(spellsToShow) {
+        const grid = document.getElementById('spellGrid');
+        grid.innerHTML = '';
+        
+        if (spellsToShow.length === 0) {
+            grid.innerHTML = '<p style="color: #a39e93; font-style: italic; padding: 10px;">No entries found matching those filters.</p>';
+            return;
+        }
+
+        // Apply sorting hierarchy before rendering
+        const sortedSpells = sortSpells(spellsToShow);
+
+        sortedSpells.forEach(spell => {
+            const color = traditionColors[spell.tradition] || defaultColor;
+
+            const card = document.createElement('div');
+            card.className = 'spell-card';
+            card.style.setProperty('--tradition-color', color);
+
+            const isTalent = spell.tier === 'Talent' || spell.type === 'Talent';
+            const isRite = spell.tier === 'Rite' || spell.type === 'Rite';
+
+            let metaHTML = '';
+
+            if (isTalent) {
+                // Talent: Name, Tradition, Description (No extra meta fields rendering required)
+                metaHTML = '';
+            } else if (isRite) {
+                // Rite: Name, Tradition, Requirements, Castings, Target, Duration, Description
+                metaHTML = `
+                    <div class="spell-meta">
+                        <div class="meta-item meta-full-width"><b>Requirements:</b> ${spell.requirements || spell.requirement || 'None'}</div>
+                        <div class="meta-item"><b>Castings:</b> ${spell.castings || '1'}</div>
+                        <div class="meta-item"><b>Duration:</b> ${spell.duration || 'Instant'}</div>
+                        <div class="meta-item meta-full-width"><b>Target:</b> ${spell.target || 'Self'}</div>
+                    </div>
+                `;
+            } else {
+                // Standard Spell: Name, Tradition, Tier, Castings, Target, Duration, Description
+                metaHTML = `
+                    <div class="spell-meta">
+                        <div class="meta-item"><b>Castings:</b> ${spell.castings || ''}</div>
+                        <div class="meta-item"><b>Duration:</b> ${spell.duration || ''}</div>
+                        <div class="meta-item meta-full-width"><b>Target:</b> ${spell.target || ''}</div>
+                    </div>
+                `;
+            }
+
+            card.innerHTML = `
+                <div class="spell-header">
+                    <div>
+                        <div class="spell-name">${spell.name}</div>
+                        <div class="tier-text">${spell.tier || (isTalent ? 'Talent' : isRite ? 'Rite' : '')}</div>
+                    </div>
+                    <span class="tradition-tag">${spell.tradition}</span>
+                </div>
+                ${metaHTML}
+                <div class="spell-desc">${spell.desc || spell.description}</div>
+            `;
+            grid.appendChild(card);
+        });
+    }
+
+    function filterSpells() {
+        const searchVal = document.getElementById('searchInput').value.toLowerCase();
+        const traditionVal = document.getElementById('traditionFilter').value;
+        const tierVal = document.getElementById('tierFilter').value;
+
+        const filtered = spells.filter(spell => {
+            const matchesSearch = spell.name.toLowerCase().includes(searchVal);
+            const matchesTradition = (traditionVal === 'All' || spell.tradition === traditionVal);
+            const matchesTier = (tierVal === 'All' || spell.tier === tierVal || spell.type === tierVal);
+            
+            return matchesSearch && matchesTradition && matchesTier;
+        });
+
+        displaySpells(filtered);
+    }
+
+    // Initialization
+    populateTraditions();
+    displaySpells(spells);
+    </script>
+</body>
+</html>
