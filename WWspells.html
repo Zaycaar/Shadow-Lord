@@ -115,6 +115,84 @@
         // DATA ENTRIES (Add your full spell library here)
         const spells = [
 {
+name: "Death’s Door",
+tradition: "Necromancy",
+tier: "Talent",
+desc: " You can use an action to target one incapacitated creature you can see within 5 yards. Either the target dies and you heal 1d6 damage or the target heals 1d6 damage. You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Enervation",
+tradition: "Necromancy",
+tier: "Talent",
+desc: "You can use an action to sap life force from a creature. Target one creature within 5 yards. If the creature has a Health score of 5 or more, make an Intellect roll against the target’s Strength. On a success, the target takes 1d6 damage and you heal 1d6 damage. At level 3, the target takes 2d6 damage and you heal 2d6 damage. At level 7, the target takes 4d6 damage and you heal 4d6 damage. On a critical success, the target also becomes weakened until the end of your next turn."
+},
+{
+name: "Preserve Corpse",
+tradition: "Necromancy",
+tier: "Talent",
+desc: "You can perform a ritual to safeguard a dead creature or repair an undead creature. Target one dead creature or one undead within 5 yards. When you finish, the target becomes immune to decay and emits no odor for 1d6 days. An undead target also heals 4d6 damage. You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Rouse Corpse",
+tradition: "Necromancy",
+tier: "Talent",
+desc: "You can use an action to animate a dead creature that is not already undead. Target one Size 1 dead creature. When you finish, the target stands up if it can and becomes undead for 1 minute. The undead is your controlled companion. <br>You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest. See page 129 for details."
+},
+{
+name: "Animate Corpse",
+tradition: "Necromancy",
+tier: "Novice",
+castings: "1, perform a ritual, you have a writing kit",
+target: "One dead creature within reach",
+duration: " Instantaneous",
+desc: "During the ritual, you paint profane runes on the target’s body. When you finish, the target becomes an animated corpse until it becomes incapacitated. The target is your controlled undead companion. You can have a number of animated corpses under your control equal to your level. The spell fails if you attempt to create more. <br>You can expend a casting of this spell totarget one undead within 15 yards. The target heals 3d6 damage. See page 130."
+},
+{
+name: "Bone Burst",
+tradition: "Necromancy",
+tier: "Novice",
+castings: "3",
+target: "One flesh-and-blood creature within 10 yards",
+duration: " Instantaneous",
+desc: "The bones in the target’s body swell and threaten to burst. The target takes 2d6 damage. Then, make an Intellect roll against the target’s Strength. On a success, the target takes an extra 1d6 damage and becomes weakened until the end of your next turn. A target incapacitated by this spell dies as the bones in its body burst apart."
+},
+{
+name: "Corpse Scream",
+tradition: "Necromancy",
+tier: "Novice",
+castings: "1",
+target: "One dead creature within 10 yards",
+duration: " Instantaneous",
+desc: "The spirit that once inhabited the target returns long enough to cause the body to let loose a blood-curdling scream and then depart. Each creature within 5 yards of the target takes 1d6 damage and makes a Will roll with 1 bane. On a failure, the creature takes an extra 3d6 damage and becomes frightened of you (luck ends)."
+},
+{
+name: "Grave Grasp",
+tradition: "Necromancy",
+tier: "Novice",
+castings: "1",
+target: "The ground in one Size 5 space within 10 yards",
+duration: "1 minute",
+desc: "Pale, rotting hands and skeletal claws reach up from the ground in the target space to snatch at anyone in their midst. The ground becomes challenging terrain until the spell ends. Each creature on the ground in the target space when you cast the spell, and at the start of each of your turns, makes an Agility roll with 1 boon. On a failure, the creature becomes held and frightened (luck ends both). A creature can overcome these afflictions with a success on a Strength roll. If the creature is held already, it takes 1d6 damage and falls prone."
+},
+{
+name: "Osseus Blade",
+tradition: "Necromancy",
+tier: "Novice",
+castings: "1, you have a small piece of bone",
+target: "You",
+duration: "8 hours",
+desc: "The bit of bone you hold in your hand grows, flowing like water until it becomes a long, thin blade. The Osseus Blade is a magical onehanded melee weapon that deals 3d6 damage and has the Slashing trait. When you attack with the weapon, you can use Intellect in place of the attribute you would normally use. Finally, when your attack with the weapon causes a living creature to become incapacitated, the creature dies and, at the end of the round, stands up as if you had used the Rouse Corpse talent on it."
+},
+{
+name: "Pieces and Parts",
+tradition: "Necromancy",
+tier: "Novice",
+castings: "1",
+target: "One creature within 5 yards",
+duration: "Instantaneous",
+desc: "You fling hands, feet, scraps of skin, and other body parts, infusing them all with dark magic. Make an Intellect roll against the target’s Agility. On a success, the parts hit the target, the target takes 1d6 damage, falls prone, and becomes held (luck ends). A target can overcome the affliction with a success on a Strength roll. Each time the target gets a failure to end the affliction, the target takes 2d6 damage."
+},
+{
 name: "Battle Blessing",
 tradition: "Invocation",
 tier: "Talent",
