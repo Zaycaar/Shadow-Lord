@@ -99,7 +99,7 @@
 			"Hate": "#800000",        // Deep Blood Maroon
 			"Calamity": "#e65100",     // Volatile Ember Orange
 			"Want": "#9c27b0",         // Decadent Royal Plum
-			"The Pale Lady": "#8d99ae"  // Ashen Death Grey
+			"Pale Lady": "#8d99ae"  // Ashen Death Grey
         };
 
         const defaultColor = "#8c7863";
@@ -114,6 +114,84 @@
 
         // DATA ENTRIES (Add your full spell library here)
         const spells = [
+{
+name: "Finger of Fire",
+tradition: "Pyromancy",
+tier: "Talent",
+desc: "You can use an action to cause flames to spill out from your fingertip. Target one creature within 10 yards. Make a Will roll against the target’s Agility. On a success, the target takes 2d6 damage, 3d6 damage at level 3, or 7d6 damage at level 7. On a critical success, the target also catches fire (luck ends). After you use this talent, a tongue of fire appears above the tip of your finger and remains for 1 minute. The fire sheds dim light."
+},
+{
+name: "Fire Cloak",
+tradition: "Pyromancy",
+tier: "Talent",
+desc: "You can use a reaction when you are attacked to sheathe your body in wild, dancing flames. You suffer no harm from these flames. They shed bright light. They remain for 1 minute, but the effect ends early if you are doused in water. When a creature in your reach rolls to attack you, the creature makes a luck roll. On a failure, the creature takes 1d6 damage. You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Light the Candle",
+tradition: "Pyromancy",
+tier: "Talent",
+desc: "You can use an action to light a creature on fire. Target one creature within 5 yards. Make a Will roll against the target’s Strength. On a success, the target catches fire (luck ends). You can use this talent once, twice at level 3, and three times at level 7. You regain expended uses after you rest."
+},
+{
+name: "Shape Fire",
+tradition: "Pyromancy",
+tier: "Talent",
+desc: "You can use an action to manipulate fires around you. When you use this talent, choose one of the following effects.<br><b>• Fan or Dampen Flame:</b> Target one ordinary Size 1 or smaller fire within 10 yards. Either you increase the intensity of the light the target sheds by one step, but the fire burns twice as fast, or you reduce the intensity of the light the target sheds by one step, but the fire burns twice as long.<br><b>• Extinguish Fire:</b> Target one Size 1 or smaller ordinary fire within 10 yards. You extinguish the target fire. Then, either you cause smoke to billow from it to fill a Size 5 space centered on the fire with light obscurement for 1 minute, or your damage-dealing Fire spells deal an extra 1d6 damage for 1 minute.<br><b>• Move Flames:</b> Target one Size 1 or smaller ordinary fire within 10 yards. You move the flames up to 5 yards. <br><b>• Form Fire:</b> Target one Size 1 or smaller ordinary fire within 10 yards. You shape the fire into a particular form such as a humanoid, a monstrous visage, or burning words. The effect lasts 1 minute.<br><b>• Ignite Flame:</b> Target one flammable, ordinary object within 10 yards. It catches fire."
+},
+{
+name: "Brilliant Display",
+tradition: "Pyromancy",
+tier: "Novice",
+castings: "3",
+target: "One point within 1 mile",
+duration: "Instantaneous",
+desc: "A pea-sized ball of flash launches itself from your fingertip. When it reaches its destination or can fly no further, the ball explodes in a pyrotechnic display that creates bright light until the end of the round. Any sighted creature within 5 yards of the explosion makes a luck roll with 1 boon. On a failure, the creature becomes blinded until the start of your next turn. "
+},
+{
+name: "Burning Weapon",
+tradition: "Pyromancy",
+tier: "Novice",
+castings: "3, reaction when you attack with a melee weapon",
+target: "One weapon you wield",
+duration: "1 minute",
+desc: "The target weapon erupts in flames. You handle the weapon without harm. The flames shed bright light. When you attack with the weapon, you roll with 1 boon and you can use Intellect or Will in place of the attribute you would normally use. Your attacks with the weapon deal an extra 1d6 damage from the flames. While you carry the weapon, you are immune to damage from fire and you take half damage from cold. Finally, you can use an action to touch the weapon to a flammable object and cause it to catch fire."
+},
+{
+name: "Fire Arrows",
+tradition: "Pyromancy",
+tier: "Novice",
+castings: "3",
+target: "Up to three creatures within 15 yards",
+duration: "Instantaneous",
+desc: "You fling fiery arrows from your hand. For each target, separately make a Will roll against its Agility. On a success, the target takes 3d6 damage. On a critical success, the target takes an extra 1d6 damage. On a failure, you have 1 boon on all rolls you make against the target until the end of your next turn."
+},
+{
+name: "Jet of Flames",
+tradition: "Pyromancy",
+tier: "Novice",
+castings: "3",
+target: "One creature within 15 yards",
+duration: "Instantaneous",
+desc: "You fan your hand to release a jet of flames from your palm. The target takes 2d6 damage. Then, make a Will roll against the target’s Agility. On a success, the target catches fire (luck ends). On a critical success, the target takes an extra 2d6 damage."
+},
+{
+name: "Fire Stride",
+tradition: "Pyromancy",
+tier: "Novice",
+castings: "3, reaction when you move 1 yard",
+target: "You",
+duration: "Instantaneous",
+desc: "Sparks fly from your feet. Until the end of your turn, you have the Slippery and Strider traits. In addition, when you move to within 1 yard of a creature or object, the object takes 1d6 damage and the creature makes an Agility roll. On a failure, the creature takes 1d6 damage. A creature can be affected in this way just once."
+},
+{
+name: "Spray of Cinders",
+tradition: "Pyromancy",
+tier: "Novice",
+castings: "1, reaction when a creature within 5 yards attacks you",
+target: "The creature that enabled the casting of this spell",
+duration: "Instantaneous",
+desc: "Cinders spray from your body and swirl toward the target. The target takes 2d6 damage and makes an Agility roll. On a failure, it becomes blinded until the start of your next turn."
+},
 {
 name: "Mental Anguish",
 tradition: "Psychomancy",
