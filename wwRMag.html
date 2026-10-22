@@ -1,1 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow of the Weird Wizard - Spell Database</title>
+    <style>
+        body { font-family: 'Georgia', serif; background-color: #121110; color: #e6e2dd; margin: 20px; }
+        h1 { color: #752394; margin-bottom: 5px; font-family: 'Times New Roman', serif; }
+        .subtitle { color: #a39e93; margin-top: 0; margin-bottom: 20px; font-style: italic; }
+        
+        /* Controls & Filters */
+        .controls { background: #1c1a18; padding: 20px; border-radius: 8px; margin-bottom: 20px; display: flex; gap: 15px; flex-wrap: wrap; position: sticky; top: 10px; z-index: 100; border: 1px solid #332f2b; }
+        input, select { padding: 10px; border-radius: 4px; border: 1px solid #4a443e; background: #292522; color: #fff; font-family: inherit; min-width: 160px; }
+        input:focus, select:focus { border-color: #d4a373; outline: none; }
+        
+        /* Spell Grid & Cards */
+        .spell-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 20px; }
+        .spell-card { background: #1c1a18; border-radius: 6px; padding: 18px; border-top: 5px solid var(--tradition-color, #777); box-shadow: 0 4px 10px rgba(0,0,0,0.6); border-left: 1px solid #2b2724; border-right: 1px solid #2b2724; border-bottom: 1px solid #2b2724; }
+        
+        /* Header Block */
+        .spell-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+        .spell-name { font-size: 1.3em; font-weight: bold; color: #f4ebe1; font-family: 'Times New Roman', serif; }
+        
+        /* Tags */
+        .tradition-tag { font-size: 0.75em; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; font-weight: bold; background: rgba(255,255,255,0.05); color: var(--tradition-color, #fff); border: 1px solid var(--tradition-color, #777); }
+        .tier-text { color: #a39e93; font-style: italic; font-size: 0.9em; }
 
+        /* Metadata Grid */
+        .spell-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #332f2b; font-size: 0.85em; color: #b5ae9f; }
+        .meta-item b { color: #d4a373; font-family: 'Times New Roman', serif; }
+        .meta-full-width { grid-column: span 2; }
+        
+        /* Description */
+        .spell-desc { font-size: 0.95em; line-height: 1.5; color: #cbc5ba; }
+    </style>
+</head>
+<body>
+
+    <h1>Shadow of the Weird Wizard</h1>
+    <p class="subtitle">Spell & Talent Repository</p>
+    <a href="WWindex.html" style="color: #888; text-decoration: none;">← Back to Main Menu</a>
+
+    <div class="controls">
+        <input type="text" id="searchInput" placeholder="Search by name..." onkeyup="filterSpells()">
+        
+        <select id="traditionFilter" onchange="filterSpells()">
+            <option value="All">All Traditions</option>
+        </select>
+
+        <select id="tierFilter" onchange="filterSpells()">
+            <option value="All">All Tiers & Types</option>
+            <option value="Rite">Rite</option>
+            <option value="Novice">Novice</option>
+            <option value="Expert">Expert</option>
+            <option value="Master">Master</option>
+        </select>
+    </div>
+
+    <div class="spell-grid" id="spellGrid"></div>
+
+    <script>
+        // TRADITION COLOR PALETTE (32 Traditions)
+        const traditionColors = {
+            "Abraxus": "#7c4dff",       // Arcane Violet / Pure Magic
+"Blind": "#b0bec5",         // Blindfold Slate / Unbiased Justice
+"Draconus": "#4a0e17",     // Coiled Serpent Crimson
+"Fates": "#78909c",         // Loom Thread Grey-Blue
+"Fetch": "#4e342e",         // Shadowy Thief Brown
+"Grandfather Tree": "#33691e", // Ancient Forest Bark Green
+"Grandmother Spore": "#827717", // Fungal Moss Olive
+"High One": "#fff59d",      // Radiantly Pure Soft Gold
+"Horned Lord": "#4e3629",   // Beast Horn Oak Brown
+"Kaen": "#ff6f00",          // Smelting Forge Amber
+"Lord Death": "#212121",    // Obsidian Grave Black
+"Mother Sun": "#ffab00",    // Solar Flare Yellow
+"Revel": "#e91e63",         // Wild Bacchanal Magenta
+"Sister Moon": "#e0e7ff",   // Lunar Soft Silver-White
+"Sky Father": "#448aff",    // Open Firmament Blue
+"Urbanus": "#708090",       // Cobblestone & Steel Slate
+"Wild Woman": "#a0522d"    // Hearth & Ash Sienna
+"Hate": "#800000",        // Deep Blood Maroon
+			"Calamity": "#e65100",     // Volatile Ember Orange
+			"Want": "#9c27b0",         // Decadent Royal Plum
+			"Pale Lady": "#8d99ae",  // Ashen Death Grey
+        };
+
+        const defaultColor = "#8c7863";
+        
+        const tierOrder = {
+            "Talent": 1,
+            "Rite": 2,
+            "Novice": 3,
+            "Expert": 4,
+            "Master": 5
+        };
+
+        // DATA ENTRIES (Add your full spell library here)
+        const spells = [
+		{
+    name: "Rite of Hateful Arms",
+    tradition: "Hate",
+    tier: "Rite",
+    requirements: " You spend 1 hour in prayer. You know one Hate spell and have all the castings for it. You have uncommon ingredients worth 1 sp. ",
+    castings: " Perform a ritual, expend all the castings of one Hate spell you have learned, lose 1d6 Health, and expend the required ingredients.",
+    target: " Up to three melee weapons in reach",
+    duration: "8 hours",
+    desc: "Your hands turn black and split until they ooze. You touch each target, causing it to assume a sinister appearance. Each target gains the Brutal weapon trait. If the target has this trait already, it instead grants 1 boon on rolls to attack with it. Finally, whenever a roll to attack with the affected weapon results in a critical success, the wielder can use a reaction to make another attack with it."
+},
+		];
+
+    function populateTraditions() {
+        const traditionFilter = document.getElementById('traditionFilter');
+        const allTraditions = Object.keys(traditionColors).sort();
+        
+        allTraditions.forEach(tradition => {
+            const option = document.createElement('option');
+            option.value = tradition;
+            option.textContent = tradition;
+            traditionFilter.appendChild(option);
+        });
+    }
+
+    // MULTI-LEVEL SORT FUNCTION
+    function sortSpells(spellList) {
+        return spellList.sort((a, b) => {
+            // Priority 1: Tradition (A-Z)
+            if (a.tradition !== b.tradition) {
+                return a.tradition.localeCompare(b.tradition);
+            }
+
+            // Priority 2: Tier / Type
+            const tierA = tierOrder[a.tier] || 99;
+            const tierB = tierOrder[b.tier] || 99;
+            if (tierA !== tierB) {
+                return tierA - tierB;
+            }
+
+            // Priority 3: Name (A-Z)
+            return a.name.localeCompare(b.name);
+        });
+    }
+
+    function displaySpells(spellsToShow) {
+        const grid = document.getElementById('spellGrid');
+        grid.innerHTML = '';
+        
+        if (spellsToShow.length === 0) {
+            grid.innerHTML = '<p style="color: #a39e93; font-style: italic; padding: 10px;">No entries found matching those filters.</p>';
+            return;
+        }
+
+        // Apply sorting hierarchy before rendering
+        const sortedSpells = sortSpells(spellsToShow);
+
+        sortedSpells.forEach(spell => {
+            const color = traditionColors[spell.tradition] || defaultColor;
+
+            const card = document.createElement('div');
+            card.className = 'spell-card';
+            card.style.setProperty('--tradition-color', color);
+
+            const isTalent = spell.tier === 'Talent' || spell.type === 'Talent';
+            const isRite = spell.tier === 'Rite' || spell.type === 'Rite';
+
+            let metaHTML = '';
+
+            if (isTalent) {
+                // Talent: Name, Tradition, Description (No extra meta fields rendering required)
+                metaHTML = '';
+            } else if (isRite) {
+                // Rite: Name, Tradition, Requirements, Castings, Target, Duration, Description
+                metaHTML = `
+                    <div class="spell-meta">
+                        <div class="meta-item meta-full-width"><b>Requirements:</b> ${spell.requirements || spell.requirement || 'None'}</div>
+                        <div class="meta-item"><b>Castings:</b> ${spell.castings || '1'}</div>
+                        <div class="meta-item"><b>Duration:</b> ${spell.duration || 'Instant'}</div>
+                        <div class="meta-item meta-full-width"><b>Target:</b> ${spell.target || 'Self'}</div>
+                    </div>
+                `;
+            } else {
+                // Standard Spell: Name, Tradition, Tier, Castings, Target, Duration, Description
+                metaHTML = `
+                    <div class="spell-meta">
+                        <div class="meta-item"><b>Castings:</b> ${spell.castings || ''}</div>
+                        <div class="meta-item"><b>Duration:</b> ${spell.duration || ''}</div>
+                        <div class="meta-item meta-full-width"><b>Target:</b> ${spell.target || ''}</div>
+                    </div>
+                `;
+            }
+
+            card.innerHTML = `
+                <div class="spell-header">
+                    <div>
+                        <div class="spell-name">${spell.name}</div>
+                        <div class="tier-text">${spell.tier || (isTalent ? 'Talent' : isRite ? 'Rite' : '')}</div>
+                    </div>
+                    <span class="tradition-tag">${spell.tradition}</span>
+                </div>
+                ${metaHTML}
+                <div class="spell-desc">${spell.desc || spell.description}</div>
+            `;
+            grid.appendChild(card);
+        });
+    }
+
+    function filterSpells() {
+        const searchVal = document.getElementById('searchInput').value.toLowerCase();
+        const traditionVal = document.getElementById('traditionFilter').value;
+        const tierVal = document.getElementById('tierFilter').value;
+
+        const filtered = spells.filter(spell => {
+            const matchesSearch = spell.name.toLowerCase().includes(searchVal);
+            const matchesTradition = (traditionVal === 'All' || spell.tradition === traditionVal);
+            const matchesTier = (tierVal === 'All' || spell.tier === tierVal || spell.type === tierVal);
+            
+            return matchesSearch && matchesTradition && matchesTier;
+        });
+
+        displaySpells(filtered);
+    }
+
+    // Initialization
+    populateTraditions();
+    displaySpells(spells);
+    </script>
+</body>
+</html>
