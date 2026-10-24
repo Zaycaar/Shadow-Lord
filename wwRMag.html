@@ -98,6 +98,94 @@
         // DATA ENTRIES (Add your full spell library here)
         const spells = [
 {
+name: "Bind Cat-Sith",
+tradition: "Calamity",
+tier: "Rite",
+requirements: "You spend 1 hour in prayer. You know a Calamity spell and have all the castings for it. You have uncommon ingredients worth 1 sp. You have a drop of blood, a few hairs, or a bit of nail from a creature.",
+castings: "Perform a ritual, expend all the castings of one Calamity spell you know, lose 1d6 Health, and expend the required ingredients, including the blood, hair, or nail."
+target: "The creature whose blood, hair, or nail you expended.",
+duration: "24 hours",
+desc: "Everywhere the target goes, they see a black cat with a white spot on its chest. So long as the target has line of sight to the cat, the target remains Cursed. Whenever the target fails a luck roll, it falls Prone or drops something held or worn, which causes the cat to move 1d6 yards away. <br>If the target attacks the cat or tries to harm it, the cat ignores the effort, and the target becomes Frightened of the cat for as long as they remain Cursed.<br>A target can end this effect early by spending 1 hour in prayer inside a temple dedicated to any god but Calamity. At the end of this time, the effect ends, and the vision of the cat disappears."
+},
+{
+name: "Dice With Calmity",
+tradition: "Calamity",
+tier: "Rite",
+requirements: "You spend 1 hour in prayer. You know a Calamity 
+spell and have all the castings for it. You have rare ingredients worth 
+5 gp.",
+castings: "Perform a ritual, expend all the castings of one Calamity 
+spell you know, and expend the required ingredients."
+target: "An empty Size 1 space within reach",
+duration: "1 minute",
+desc: "A shimmering image of Calamity appears in the target space and remains for the duration. She opens her hand, and two solid gold dice appear in her palm. She invites you to play a game. You and the Sage (acting as Calamity) take turns rolling the dice. You do this three times. The one with the higher total wins. Calamity, though, doesn’t play fair. Before each throw, make a luck roll. On a success, you prevent her from cheating. On a failure, she can replace one die roll with a 6.<br>Each time you win, choose one of the following benefits:<br>• Heal 4d6 damage.<br>• Regain 2d6 Health.• Regain one casting of a spell you know.• Ask a question that can be answered with a yes or no; Calamity answers truthfully. If there is no answer, she doesn’t provide one.<br>• End one infection affecting you.<br>• End the Cursed affliction.<br>Each time Calamity wins, the Sage chooses one of the following options:<br>• You or an ally within 5 yards gains one of the following afflictions for 24 hours: Confused, Cursed, Vulnerable, or Weakened.<br>• You lose an object you wear or carry worth 1 gp or less. It disappears.<br>• The next time you enter combat within 24 hours, the Sage doubles the number of enemies present. The Sage keeps this effect from you.• The next time you interact socially with another creature within 24 hours, the creature becomes unfriendly to you. The Sage keeps this result a secret.<br>After the third exchange, Calamity disappears. 
+"
+},
+{
+name: "Unlucky Town",
+tradition: "Calamity",
+tier: "Rite",
+requirements: "You spend 8 hours in prayer. You know a Calamity spell and have all the castings for it. You have rare ingredients worth 5 gp.",
+castings: "Perform a ritual, expend all the castings of one Calamity spell you know, become Cursed for 24 hours, and expend the required ingredients."
+target: "One community you can see with a population of 500 or less.",
+duration: "30 Days",
+desc: "Each creature in the community becomes Cursed for the duration. In addition, the town becomes subject to unlucky happenings. Milk spoils, pictures drop from the walls, glass breaks, and similar effects occur. Some of these effects might harm the people living in the community, at the Sage’s discretion."
+},
+{
+name: "An Unfortunate Series of Events",
+tradition: "Calamity",
+tier: "Novice",
+castings: "1",
+target: "One Size 10 space you can see",
+duration: "1 minute",
+desc: "Everything in the space gleams, only to return to normal a moment later. The target space becomes afflicted with misfortune for the duration. Whenever a creature in the target space—or one that enters it before the spell ends—gets a failure on an attribute roll or a luck roll, roll a d6 to see what happens.<br>1 The creature falls Prone and cannot stand up until the end of its next turn<br>2 The creature becomes Confused until the end of its next turn.<br>3 The creature steps in something and becomes Slowed until the end of its next turn.<br>4 Something unexpected strikes the creature; it takes 1d6 damage.<br>5 An ordinary object the creature wears or carries drops to 0 Health.<br>6 Move the creature up to 5 yards. The creature then trips, falls Prone, takes 1d6 damage, and becomes Confused and Slowed until the end of its next turn.",
+},
+{
+name: "Doomed to Fail",
+tradition: "Calamity",
+tier: "Novice",
+castings: "3",
+target: "Up to three creatures within 5 yards",
+duration: "1 minute (see the effect)",
+desc: "The target experiences momentary unease as it becomes Cursed until the spell ends. The target can end the affliction early by voluntarily turning a successful roll into a failed one. ",
+},
+{
+name: "Load the Dice",
+tradition: "Calamity",
+tier: "Novice",
+castings: "1, reaction when you make a luck roll",
+target: "You",
+duration: "1 minute",
+desc: "You hear the sound of dice rattling in a cup. Until the spell ends, the target number for your luck rolls is 5.",
+},
+{
+name: "Stumble Tongue",
+tradition: "Calamity",
+tier: "Novice",
+castings: "1",
+target: "One creature within 5 yards",
+duration: "1 minute",
+desc: "The target’s tongue twists in its mouth as it becomes Cursed for the duration. While it has this affliction, whenever the target speaks while within 5 yards of you, it says what you want it to say.",
+},
+{
+name: "Try Your Luck",
+tradition: "Calamity",
+tier: "Novice",
+castings: "3, reaction when you make an attribute roll",
+target: "You",
+duration: "Instantaneous",
+desc: "You call on Calamity for help. Make a luck roll along with the attribute roll. If the luck roll succeeds, the attribute roll result counts as a critical success. If the luck roll fails, the attribute roll result counts as a critical failure, and you become Confused until the end of your next turn.",
+},
+{
+name: "Two Left Feet",
+tradition: "Calamity",
+tier: "Novice",
+castings: "1",
+target: "One creature within 5 yards",
+duration: "1 minute",
+desc: "The target becomes Cursed for the duration. If the target moves more than 2 yards on its turn, it must make an Agility roll with 1 bane. On a failure, the target falls Prone.",
+},
+{
 name: "Rite of the Blood Eagle",
 tradition: "Hate",
 tier: "Rite",
