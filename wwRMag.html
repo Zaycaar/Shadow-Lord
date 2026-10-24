@@ -38,7 +38,7 @@
 <body>
 
     <h1>Shadow of the Weird Wizard</h1>
-    <p class="subtitle">Spell & Talent Repository</p>
+    <p class="subtitle">Rites and Spells of the Gods</p>
     <a href="WWindex.html" style="color: #888; text-decoration: none;">← Back to Main Menu</a>
 
     <div class="controls">
@@ -97,6 +97,70 @@
 
         // DATA ENTRIES (Add your full spell library here)
         const spells = [
+{
+name: "Rite of the Blood Eagle",
+tradition: "Hate",
+tier: "Rite",
+requirements: "You spend 1 hour in prayer. You know one Hate spell and have all the castings for it. You have rare ingredients worth 5 gp. You have an enemy prisoner.",
+castings: "Perform a ritual, sacrifice the enemy prisoner, expend the castings of one Hate spell you have learned, and expend the required ingredients.",
+target: "Up to five creatures in reach",
+duration: "4 hour",
+desc: "You cover your hands in sacrificial blood, then place them on the face of each target. In response, the targets’ eyes fill with blood that spills down their cheeks. For the duration, targets make rolls to attack with 1 boon, deal an extra 1d6 damage when they get a critical success on a roll to attack, and treat anyone not affected by this rite, other than the one who performed it, as an enemy. The targets must make free attacks whenever the opportunity arises. Finally, targets do not become Unconscious when incapacitated, though they resolve the effects of being incapacitated as normal. When the effect ends, each target loses 2d6 Health due to trauma and ravages to their bodies."
+},
+{
+name: "Hateful Guardian",
+tradition: "Hate",
+tier: "Novice",
+castings: "1",
+target: "One empty Size 1 space within reach",
+duration: "1 minute",
+desc: "A mist of blood droplets appears in the target space and thickens until it becomes a solid humanoid shape of semi-coagulated blood. The thing moves with you to stay in your reach and grants you partial cover. Whenever an enemy starts its turn with line of sight to the hateful guardian, that enemy makes a Will roll. On a failure, the enemy becomes Frightened of you (luck ends); on a success, the enemy becomes immune to this aspect of the effect.",
+},
+{
+name: "Mask of Hate",
+tradition: "Hate",
+tier: "Novice",
+castings: "3, reaction at the start of your turn",
+target: "You",
+duration: "Instantaneous",
+desc: "Your face contorts into a mask of naked hatred. Each enemy within 5 yards that has line of sight to you makes a Will roll with 1 bane. On a failure, you push the enemy up to 3 yards from you, and the enemy becomes Strength Impaired until the start of your next turn.",
+},
+{
+name: "On Eagles Wings",
+tradition: "Hate",
+tier: "Novice",
+castings: "3, reaction at the start of your turn",
+target: "You",
+duration: "Instantaneous",
+desc: "The skin on your back rips free and forms into two bloody wings. Choose an empty space within 10 yards. You fly to that space, provided you have a line of effect to it; you stop moving if something blocks the way. When you reach your destination or stop before then, the skin on your back knits itself back together. Make a Will roll. On a failure, you are Weakened until the start of your next turn.",
+},
+{
+name: "Spill the Blood",
+tradition: "Hate",
+tier: "Novice",
+castings: "3",
+target: "You",
+duration: "Instantaneous",
+desc: "<b>Requirment:</b> You wield a melee weapon.<br>Make a melee attack. You roll to attack with 1 boon, and the attack deals an extra 3d6 damage if you get a success. Should the attack cause the target to become injured, the target takes an extra 2d6 damage and becomes Vulnerable until the end of your next turn. <br>If you get a failure on the roll to attack, you can make a luck roll. On a success, you regain the casting you expended; on a failure, you become Vulnerable until the start of your next turn.",
+},
+{
+name: "Surge of Violence",
+tradition: "Hate",
+tier: "Novice",
+castings: "q",
+target: "You and each creature inside a Size 10 space centered on you",
+duration: "Instantaneous",
+desc: "A powerful, violent impulse overwhelms you and everyone around you. Each target must use a reaction to make a melee attack. If out of reactions, the target takes 1d6 damage instead.",
+},
+{
+name: "With Your Own Blade",
+tradition: "Hate",
+tier: "Novice",
+castings: "1",
+target: "One creature wielding a weapon you can reach",
+duration: "Instantaneous",
+desc: "<b>Requirment:</b>You have one free hand.<br>Your hand shoots forward to wrench the target’s weapon from its grip. You then use that weapon to attack the target; you ignore any requirements for using this weapon. You roll to attack with 1 boon; if the roll to attack results in a success, the attack deals an extra 2d6 damage, and the weapon becomes stuck in the target’s body—the target can use an action to pull it free, losing 1d6 Health as a result. If the roll to attack results in a failure, you drop the weapon, which bounces to an empty space of your choice within 5 yards of you.",
+},
 		{
     name: "Rite of Hateful Arms",
     tradition: "Hate",
