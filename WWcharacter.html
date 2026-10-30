@@ -425,7 +425,9 @@ computed: {
                 // 3. Search matching (Name or Tags)
                 const nameMatch = item.name && item.name.toLowerCase().includes(query);
                 const tagMatch = item.tags && Array.isArray(item.tags) && item.tags.some(t => t && t.toLowerCase().includes(query));
+                const descMatch = item.desc && item.desc.toLowerCase().includes(query);
                 const hasMatch = nameMatch || tagMatch;
+            
 
                 // 4. Apply SHOW (IN) vs HIDE (OUT) search mode
                 return this.filterMode === 'IN' ? hasMatch : !hasMatch;
