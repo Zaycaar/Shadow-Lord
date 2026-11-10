@@ -68,6 +68,7 @@
 "Pale Lady": "#7cb342",         // Sickly Green
 "Lord Death": "#212121",    // Obsidian Grave Black
 "Mother Sun": "#ffab00",    // Solar Flare Yellow
+"Sister Moon": "#e0e7ff",   // Lunar Soft Silver-White
         };
 
         const defaultColor = "#8c7863";
@@ -82,6 +83,45 @@
 
         // DATA ENTRIES (Add your full spell library here)
         const spells = [
+{
+name: "Rite of Fleeting Rebirth",
+tradition: "Sister Moon",
+tier: "Rite",
+requirements: "You spend 1 hour in prayer at night. You know one expert or master Sister Moon spell and have all the castings for it. You have rare ingredients worth 5 gp. You have a cauldron (ordinary object worth 1 sp).",
+casting: " Perform a ritual, expend all the castings of one Sister Moon spell you know, and expend the required ingredients.",
+target: "One dead creature you place inside the cauldron",duration: "24 hours",
+desc: "The target returns to life and becomes Confused for 1 hour. It regains half the Health it lost; its damage total starts at 0. When the duration runs out and if the target has a Health score of 1 or higher, its Health score drops to 0. "
+},
+{
+name: "Rite of Lunar Consecration",
+tradition: "Sister Moon",
+tier: "Rite",
+requirements: "You spend 8 hours in prayer and finish when it’s night. You know one master Sister Moon spell and have all the castings for it. You have rare ingredients worth 5 gp.",
+casting: "Perform a ritual, expend all the castings of one master Sister Moon spell you have learned, and expend the required ingredients.",
+target: "One structure or part of a structure that can fit inside a Size 30 space",
+duration: "1 year and 1 day",
+desc: "Sister Moon blesses the target. The place counts as holy ground (see page 10). Any spirit, undead, beastman, or transformed creature that starts its turn inside the target makes a Will roll with 2 banes; angels and gods ignore this effect. On a success, the creature becomes immune to this effect for 24 hours. On a failure, it loses 1d6 Health and becomes Cursed (luck ends). A creature Cursed in this way also becomes Vulnerable and Weakened. If transformed, the creature also becomes Confused for 24 hours."
+},
+{
+name: "Rite of Spiritual Banishment",
+tradition: "Sister Moon",
+tier: "Rite",
+requirements: "You spend 1 hour in prayer at night. You know one Sister Moon spell and have all the castings for it. You have rare ingredients worth 5 gp. ",
+casting: "Perform a ritual, expend all the castings of one Sister Moon spell you have learned, and expend the required ingredients.",
+target: "One Size 50 space centered on you",
+duration: "See Effect",
+desc: "Ghostly light spills from your body to spread through the target space, then dissipates. The effect lasts until dawn. A spirit destroyed in this space during that time instantly returns to the realm to which it belongs, where it heals all damage and regains all Health. Most spirits belong in the Underworld, while those of wicked natures belong to the Netherworld. Others might, at the Sage’s discretion, return to the paradise of the High One, the spirit world, or some other realm. Any attempt it makes to leave that realm fails for 1 year and 1 day."
+},
+{
+name: "Rite of the Fateful Owl",
+tradition: "Sister Moon",
+tier: "Rite",
+requirements: "You spend 1 hour in prayer at night. You know one expert or master Sister Moon spell and have all the castings for it. You have rare ingredients worth 5 gp. ",
+casting: "Perform a ritual, expend all the castings of one expert or master Sister Moon spell you have learned, and expend the required ingredients.",
+target: "One Size 1 space within 5 yards",
+duration: "See Effect",
+desc: "A beam of moonlight shines down upon the target space, and an enormous owl materializes in it. The owl becomes your Controlled companion until dawn or its damage total reaches its Health score. The owl disappears when the effect ends. See Sister Moon, Page 25."
+},
 {
 name: "Bright Idea",
 tradition: "Mother Sun",
