@@ -81,7 +81,7 @@ createApp({
             search: '',
             filterCat: 'All',
             filterMode: 'IN', // Default to showing results
-            categories: ['Ancestry', 'Ancestral Path', 'Novice Path', 'Expert Path', 'Master Path', 'Tradition', 'Fighting Style', 'Rogue Technique', 'Religion'],
+            categories: ['Ancestry', 'Ancestral Path', 'Novice Path', 'Expert Path', 'Master Path', 'Tradition', 'Fighting Style', 'Rogue Technique', 'Religion', 'Patron'],
             database: [
                 // Check for weapon compatibility with traditions
     { cat: 'Ancestry', name: 'Human', desc: 'Varied in appearance. Can look <b>however you want</b>. If you are not something else, you are human.', tags: ['Mortal', 'Common'], src: 'WW Core', pg: '10' },
@@ -429,6 +429,14 @@ createApp({
 { cat: 'Master Path', name: 'Transmuter', desc: 'Forcibly transform foes into degraded forms. ', tags: ['Magic'], src: 'With a Faerie', pg: '' },
 { cat: 'Master Path', name: 'Unimpeached', desc: 'Virtuous warrior. Pure of heart.', tags: ['Invocation', 'Magic', 'Combat'], src: 'With a Faerie', pg: '' },
 { cat: 'Master Path', name: 'Vision', desc: 'Perfectly beautiful. Enrapturing visage.', tags: ['Magic', 'Enchantment', 'Social', 'Will'], src: 'With a Faerie', pg: '' },
+{ cat: 'Ancestry', name: 'Faerie Kith', desc: 'Human touched by the Fae. Choose from a few abilities.', tags: ['Mortal', 'Faerie'], src: 'With a Faerie', pg: '' },
+{ cat: 'Novice Path', name: 'Avowed', desc: 'Pledged to a faerie lord as a <b>Patron</b>. ', tags: ['Magic'], src: 'With a Faerie', pg: '' },
+{ cat: 'Patron', name: 'Beauty', desc: 'Beautiful and charismatic.', tags: ['Enchantment'], src: 'With a Faerie', pg: '' },
+{ cat: 'Patron', name: 'Guardian', desc: 'Protector. Bodyguard an ally.', tags: ['Protection', 'Support'], src: 'With a Faerie', pg: '' },
+{ cat: 'Patron', name: 'Purity', desc: 'Dedicate to good deeds. Healer.', tags: ['Invocation', 'Support'], src: 'With a Faerie', pg: '' },
+{ cat: 'Patron', name: 'Spite', desc: 'Frightening Visage.', tags: ['Int', 'Dark Arts'], src: 'With a Faerie', pg: '' },
+{ cat: 'Patron', name: 'Trickery', desc: 'A trickster. I got nothing. Its pretty straight forward.', tags: ['Skullduggery', 'Int'], src: 'With a Faerie', pg: '' },
+{ cat: 'Patron', name: 'Vengeance', desc: 'Attack when harmed.', tags: ['Combat', 'War'], src: 'With a Faerie', pg: '' },
             ]
         }
     },
