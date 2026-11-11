@@ -470,7 +470,7 @@ createApp({
             ]
         }
     },
-    computed: {
+computed: {
         filtered() {
             return this.database.filter(i => {
                 const s = this.search.toLowerCase().trim();
@@ -478,15 +478,22 @@ createApp({
                 
                 if (!s) return matchCat;
 
+                // Safely convert properties to strings (handles missing fields without crashing)
+                const name = (i.name || '').toLowerCase();
+                const desc = (i.desc || '').toLowerCase();
+                const rarity = (i.rarity || '').toLowerCase();
+                const cat = (i.cat || '').toLowerCase();
+                const src = (i.src || '').toLowerCase();
+
                 return matchCat && (
-                    i.name.toLowerCase().includes(s) || 
-                    i.desc.toLowerCase().includes(s) ||
-                    i.rarity.toLowerCase().includes(s) ||
-                    i.src.toLowerCase().includes(s)
+                    name.includes(s) || 
+                    desc.includes(s) ||
+                    rarity.includes(s) ||
+                    cat.includes(s) ||
+                    src.includes(s)
                 );
-            }).sort((a, b) => a.name.localeCompare(b.name));
+            }).sort((a, b) => (a.name || '').localeCompare(b.name || ''));
         }
-    }
 }).mount('#app')
 </script>
 
