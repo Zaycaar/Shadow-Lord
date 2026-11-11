@@ -494,6 +494,7 @@ computed: {
                 );
             }).sort((a, b) => (a.name || '').localeCompare(b.name || ''));
         }
+    } // <--- This closing brace was missing
 }).mount('#app')
 </script>
 
