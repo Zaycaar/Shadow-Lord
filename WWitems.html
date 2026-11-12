@@ -55,7 +55,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr v-for="item in filtered" :key="item.name">
+           <tr v-for="item in filtered" :key="item.name + '-' + item.cat + '-' + item.src">
                 <td><span class="cat-badge">{{item.cat}}</span></td>
                 <td class="rarity-text">{{item.rarity}}</td>
                 <td><strong>{{item.name}}</strong></td>
