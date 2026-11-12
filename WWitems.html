@@ -473,28 +473,30 @@ createApp({
 computed: {
         filtered() {
             return this.database.filter(i => {
-                const s = this.search.toLowerCase().trim();
+                const query = this.search.toLowerCase().trim();
                 const matchCat = this.filterCat === 'All' || i.cat === this.filterCat;
                 
-                if (!s) return matchCat;
+                if (!query) return matchCat;
 
-                // Safely convert properties to strings (handles missing fields without crashing)
+                // Split search into individual words so multi-word searches work cleanly
+                const searchTerms = query.split(/\s+/);
+
                 const name = (i.name || '').toLowerCase();
                 const desc = (i.desc || '').toLowerCase();
                 const rarity = (i.rarity || '').toLowerCase();
                 const cat = (i.cat || '').toLowerCase();
                 const src = (i.src || '').toLowerCase();
 
-                return matchCat && (
-                    name.includes(s) || 
-                    desc.includes(s) ||
-                    rarity.includes(s) ||
-                    cat.includes(s) ||
-                    src.includes(s)
-                );
+                // Combine searchable text fields into one target string
+                const searchableText = `${name} ${desc} ${rarity} ${cat} ${src}`;
+
+                // Ensure ALL typed search words exist somewhere in the item's text
+                const matchesSearch = searchTerms.every(term => searchableText.includes(term));
+
+                return matchCat && matchesSearch;
             }).sort((a, b) => (a.name || '').localeCompare(b.name || ''));
         }
-    } // <--- This closing brace was missing
+    }
 }).mount('#app')
 </script>
 
